@@ -63,7 +63,7 @@ O repositório deverá conter evidências de:
 - Testes de comportamento e dimensões, além de validação de exportação do modelo.
 - Issues atualizadas, diffs revisados, commits e documentação.
 
-**Não utilize as nove imagens do desafio para ajuste do modelo.** Elas serão processadas na Parte 4, pela interface do site.
+**Não utilize os dez PNGs CAPTCHA do desafio oficial para ajustar o modelo.** Eles serão avaliados somente na Parte 4, pela interface pública do site.
 
 ## Entregável da parte 2
 
