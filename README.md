@@ -12,7 +12,7 @@
 ![Dia 1 — Microsoft Copilot](https://img.shields.io/badge/DIA%201-MICROSOFT%20COPILOT-0078D4?style=for-the-badge)
 ![Dia 2 — GitHub Copilot](https://img.shields.io/badge/DIA%202-GITHUB%20COPILOT-6E40C9?style=for-the-badge)
 
-**[Começar pelo Dia 1](Dia1/README.md)** · **[Explorar o Dia 2](Dia2/README.md)** · **[Ver o desafio final](Dia2/Exercicio-03-Desenvolvimento-Issues.md)**
+**[Começar pelo Dia 1](Dia1/README.md)** · **[Explorar o Dia 2](Dia2/README.md)** · **[Apresentações](#apresentações-dos-módulos-pdf)** · **[Ver o desafio final](Dia2/Exercicio-03-Desenvolvimento-Issues.md)**
 
 </div>
 
@@ -72,6 +72,32 @@ Projetar um ambiente de trabalho reutilizável para agentes, desenvolver uma ski
 </td>
 </tr>
 </table>
+
+## Apresentações dos módulos (PDF)
+
+Os slides da formação estão organizados por dia, na sequência dos módulos. Os arquivos foram otimizados para ter **menos de 20 MB cada**, mantendo todas as páginas. Os nomes dos PDFs contêm somente o nome da apresentação.
+
+### Dia 1 · Fundamentos de IA e LLMs
+
+| Ordem | Apresentação |
+| :---: | --- |
+| 0 | [Whoami](Dia1/Whoami.pdf) |
+| 1 | [The Basics](Dia1/The%20Basics.pdf) |
+| 2 | [LLM Anatomy](Dia1/LLM%20Anatomy.pdf) |
+| 3 | [From LLM to Chatbot](Dia1/From%20LLM%20to%20Chatbot.pdf) |
+| 4 | [Context Eng](Dia1/Context%20Eng.pdf) |
+| 5 | [Model Chosing](Dia1/Model%20Chosing.pdf) |
+
+### Dia 2 · Agentes e engenharia de software
+
+| Ordem | Apresentação |
+| :---: | --- |
+| 2 | [Coding Agents](Dia2/Coding%20Agents.pdf) |
+| 3 | [Agentic Context Eng](Dia2/Agentic%20Context%20Eng.pdf) |
+| 4 | [Task eng](Dia2/Task%20eng.pdf) |
+| 5 | [VDD and Autonomy](Dia2/VDD%20and%20Autonomy.pdf) |
+
+> **Disponibilidade:** os links acima apontam para os destinos previstos em `Dia1/` e `Dia2/`. Eles passarão a funcionar depois que os PDFs forem enviados ao repositório.
 
 ## Dia 1 · Pesquisa, análise e pensamento crítico
 
@@ -182,7 +208,8 @@ As **Agent Skills em Markdown não exigem `npx` ou bibliotecas especiais para se
 Formacao-de-IA/
 ├── Dia1/
 │   ├── README.md                      # Percurso de pesquisa
-│   └── Exercicio-*.md                 # Quatro exercícios
+│   ├── Exercicio-*.md                 # Quatro exercícios
+│   └── *.pdf                          # Seis apresentações
 ├── Dia2/
 │   ├── README.md                      # Percurso com agentes
 │   ├── Exercicio-01-Starter-Repo.md
@@ -193,7 +220,8 @@ Formacao-de-IA/
 │   ├── Dataset-MNIST/                 # Dataset e verificação de integridade
 │   ├── Desafio/                       # Nove imagens + 10 exemplos avançados
 │   ├── Referencia-Starter-Repo/       # Exemplo para análise seletiva
-│   └── Guia-Skills-Copilot.md
+│   ├── Guia-Skills-Copilot.md
+│   └── *.pdf                          # Quatro apresentações
 ├── LICENSE.md
 └── CITATION.cff
 ```
