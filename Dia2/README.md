@@ -27,6 +27,8 @@ As nove imagens são reservadas para a **verificação final**: não servem para
 
 **Material de referência disponível:** [Starter Repo para análise](Referencia-Starter-Repo/LEIA-PRIMEIRO.md) e [arquivos do exemplo](Referencia-Starter-Repo/Starter-Repo/). É permitido — e recomendado — **copiar, adaptar e reutilizar o que for útil**, sem recriar trabalho que já esteja bem resolvido. **Purgar documentos, procedimentos e dependências que não atendam às necessidades do aluno.** O material não é um repositório pronto para entrega: cada aluno deverá construir **o seu próprio starter repo**, com escolhas justificadas.
 
+**Issue de referência para o Exercício 3:** [Issue #1 — Planejamento e especificação da rede MNIST](https://github.com/vcanonici/Formacao-de-IA/issues/1). Os participantes devem analisar os critérios de aceitação e **criar Issues próprias nos seus repositórios**; esta Issue é um exemplo, não uma tarefa a implementar no repositório da formação.
+
 **Material de apoio:** [Guia de criação de skills no VS Code e referências externas](Guia-Skills-Copilot.md).
 
 ## O que significa Ask Me?
