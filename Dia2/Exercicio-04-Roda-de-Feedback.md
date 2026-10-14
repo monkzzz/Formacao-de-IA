@@ -14,7 +14,7 @@ Cada participante deverá ter disponível:
 - A skill de bootstrap criada no Exercício 2 e o contexto do projeto registrado por ela.
 - As GitHub Issues e o histórico das alterações realizadas com o agente.
 - A rede treinada, as evidências de avaliação no MNIST e os pesos utilizados no site.
-- A **URL do GitHub Pages**, com desenho e upload de imagens, e o registro das previsões das nove imagens do desafio.
+- A **URL do GitHub Pages**, com desenho e upload de imagens, e o registro das previsões dos dez PNGs CAPTCHA do desafio oficial.
 
 Se algo não estiver pronto, **apresente a situação real** e identifique o que falta. Uma pendência assumida e investigada também faz parte da aprendizagem.
 
@@ -25,11 +25,11 @@ Cada participante disponibiliza a URL pública e mostra o funcionamento de sua a
 A avaliação deve considerar:
 
 - A interface permite desenhar dígitos, limpar o desenho e classificá-lo?
-- É possível **carregar imagens locais**, inclusive as nove imagens do desafio, e obter uma previsão para cada uma?
+- É possível **carregar imagens locais**, inclusive os dez PNGs CAPTCHA do desafio, e obter uma previsão para cada uma?
 - A classificação é produzida pela rede **realmente treinada pelo participante**, executando no navegador sem API de inferência?
 - As pontuações e a visualização apresentada correspondem a informações reais do modelo?
 - O site publicado funciona adequadamente, ou existem falhas de carregamento, de interação ou de pré-processamento?
-- O resultado reportado para o **teste oficial do MNIST** está separado do resultado das **nove imagens do desafio**?
+- O resultado reportado para o **teste oficial do MNIST** está separado do resultado dos **dez dígitos CAPTCHA**?
 
 **Perguntas para orientar a observação:** o que acontece quando uma imagem diferente é carregada? A previsão acompanha o conteúdo visual? O app consegue mostrar limitações, em vez de apenas aparentar funcionar?
 
@@ -67,12 +67,12 @@ Nem todas as pendências precisam desaparecer durante a roda. O essencial é **s
 
 ## 4. Preservar a honestidade da avaliação
 
-Se uma correção alterar o modelo, o pré-processamento ou o site **depois de conhecer os resultados das nove imagens**, ela constitui uma **nova iteração**.
+Se uma correção alterar o modelo, o pré-processamento ou o site **depois de conhecer os resultados dos dez PNGs CAPTCHA**, ela constitui uma **nova iteração**.
 
 - Conservar o resultado original e a versão em que ele foi obtido.
 - Registrar separadamente o resultado após as correções, caso as imagens sejam testadas novamente.
 - Não substituir previsões anteriores nem apresentar uma melhoria posterior como se fosse a primeira avaliação independente.
-- Não confundir **9/9 no desafio** com garantia de generalização em outros dados.
+- Não confundir **acertos em dez casos CAPTCHA** com garantia de generalização em outros dados.
 
 ## Resultado da atividade
 
