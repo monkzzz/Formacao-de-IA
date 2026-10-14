@@ -23,7 +23,7 @@ As nove imagens são reservadas para a **verificação final**: não servem para
 1. [Exercício 1 — Construir seu próprio starter repo](Exercicio-01-Starter-Repo.md): a partir dos conceitos vistos em aula e da **análise crítica de um starter repo de referência**, reaproveitar o que funcionar, adaptar às próprias preferências e eliminar o que não for útil.
 2. [Exercício 2 — Criar uma skill de bootstrap](Exercicio-02-Skill-Bootstrap.md): **compreender a lógica do padrão Ask Me e construir uma skill própria**, que entreviste o usuário e alimente o starter repo com o contexto do desafio.
 3. [Exercício 3 — Rede neural, agente, site e desafio](Exercicio-03-Desenvolvimento-Issues.md): dividido em **quatro partes** — [planejamento da rede e criação de Issues](Exercicio-03/Parte-01-Planejamento-da-Rede.md), [coding com o agente](Exercicio-03/Parte-02-Coding-com-o-Agente.md), [site no GitHub Pages inspirado na demonstração, com upload de imagens](Exercicio-03/Parte-03-Site-GitHub-Pages.md) e [teste com as nove imagens](Exercicio-03/Parte-04-Teste-do-Desafio.md).
-4. [Exercício 4 — Apresentação final](Exercicio-04-Apresentacao.md): demonstrar ao professor o produto funcionando e as evidências do trabalho com o agente.
+4. [Exercício 4 — Roda de feedback](Exercicio-04-Roda-de-Feedback.md): o professor testa os aplicativos, discute dúvidas com a turma, aponta pendências e orienta correções verificáveis com o agente.
 
 **Material de referência disponível:** [Starter Repo para análise](Referencia-Starter-Repo/LEIA-PRIMEIRO.md) e [arquivos do exemplo](Referencia-Starter-Repo/Starter-Repo/). É permitido — e recomendado — **copiar, adaptar e reutilizar o que for útil**, sem recriar trabalho que já esteja bem resolvido. **Purgar documentos, procedimentos e dependências que não atendam às necessidades do aluno.** O material não é um repositório pronto para entrega: cada aluno deverá construir **o seu próprio starter repo**, com escolhas justificadas.
 
@@ -37,6 +37,6 @@ As nove imagens são reservadas para a **verificação final**: não servem para
 
 ## Entrega do Dia 2
 
-Um **único repositório próprio** com starter, skill criada pelo aluno, contexto obtido no bootstrap, especificação, Issues, código, modelo treinado, avaliação, testes, site público, commits e evidências; além da apresentação ao professor.
+Um **único repositório próprio** com starter, skill criada pelo aluno, contexto obtido no bootstrap, especificação, Issues, código, modelo treinado, avaliação, testes, site público, commits e evidências; além da avaliação coletiva e do registro de feedback e correções do Exercício 4.
 
 **Referência pedagógica:** Engenharia de Agentes de IA — Cadernos 01 a 05.

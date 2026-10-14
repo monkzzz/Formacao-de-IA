@@ -60,4 +60,4 @@ Para cada ponto, registrar **PASS, FAIL, BLOCKED ou NOT RUN**, acompanhado de ev
 
 **Relatório de validação conciso** com URL pública, versão Git, versão dos pesos, métricas no MNIST, resultados das nove imagens, quantidade real de acertos, diagnóstico de falhas e evidências de que o upload e a inferência funcionaram no navegador.
 
-**Próximo exercício:** apresentar ao professor o projeto, o repositório, o funcionamento da interface, as Issues e os aprendizados sobre a colaboração com o agente.
+**Próximo exercício:** participar da [roda de feedback com o professor](../Exercicio-04-Roda-de-Feedback.md), submeter o app à avaliação, esclarecer dúvidas, registrar pendências e realizar correções com o agente.
