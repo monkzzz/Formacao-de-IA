@@ -1,117 +1,77 @@
-# Exercício 1 — Criar seu próprio starter repository para coding agents
+# Exercício 1 — Criar o próprio starter repository
 
-## Objetivo da atividade
+## Objetivo
 
-**Construir do zero, com a ajuda do GitHub Copilot no VS Code, um starter repository próprio e reutilizável**, preparado para receber projetos de software desenvolvidos por agentes de IA.
+Com base **nos conceitos de starter repository e de engenharia de contexto estudados em aula**, cada participante deverá **projetar e construir do zero o seu próprio starter repo**, utilizando o **GitHub Copilot no VS Code (modo agente)**.
 
-O professor forneceu um exemplo de **Starter Repo** para mostrar o tipo de infraestrutura esperado. **O exemplo não é uma solução para copiar, clonar ou simplesmente adaptar.** Cada participante deverá investigar sua organização, compreender por que os componentes existem, decidir como estruturar o seu repositório e **pedir ao Copilot que o construa**.
+**Não será fornecido um starter repo, um template, uma estrutura de pastas para reproduzir nem um repositório-modelo.** O desafio é transformar o que foi aprendido em aula em uma estrutura funcional, com o auxílio do agente.
 
-Neste exercício, a tarefa é **criar o ambiente de trabalho do agente**, não desenvolver o classificador de dígitos.
+O starter repo deverá ser **genérico e reutilizável**: um ambiente preparado para receber diferentes projetos de desenvolvimento com IA. **Ainda não é para desenvolver o classificador de dígitos.**
 
-## O que é um starter repository neste exercício?
+## O problema que o starter repo deve resolver
 
-É um repositório que funciona como **ponto de partida para diferentes projetos futuros**. Ele contém instruções e mecanismos de organização para que um coding agent consiga:
+Imagine que um coding agent começa a trabalhar em um repositório novo. Como ele descobrirá:
 
-- Compreender seu papel e as regras gerais do repositório.
-- Descobrir onde procurar o contexto relevante de uma tarefa.
-- Consultar procedimentos especializados somente quando necessários.
-- Registrar decisões, documentação e conhecimento reutilizável.
-- Identificar skills, ferramentas e integrações disponíveis ou desejadas, sem presumir que já estejam instaladas.
-- Planejar, executar, verificar e registrar alterações de forma rastreável.
-- Retomar o trabalho em uma nova conversa sem depender de todo o histórico do chat.
+- Qual é a finalidade do repositório e que regras de trabalho deve seguir?
+- Onde encontrar o contexto de um projeto e como saber se uma informação está atualizada?
+- Como localizar procedimentos, habilidades e ferramentas relevantes, sem carregar tudo indiscriminadamente?
+- O que pode executar por conta própria e quais ações precisam de aprovação humana?
+- Como planejar alterações, testar resultados, registrar decisões e manter o histórico?
+- Como continuar um projeto em outra sessão, sem depender da conversa anterior?
 
-**O repositório deve estar pronto para receber um projeto, mas ainda não deve conter a solução desse projeto.**
-
-## Material de referência
-
-Analisar o exemplo de Starter Repo apresentado pelo professor. Nele, dois elementos têm papéis diferentes:
-
-- **`AGENTS.md`** atua como um contrato operacional do agente: regras sempre relevantes, prioridades e indicação de onde localizar instruções mais detalhadas.
-- **`AgentDATA/`** organiza informações e recursos que não precisam ocupar permanentemente o contexto do agente: documentação, procedimentos, conhecimento, referências, registros, skills e ferramentas.
-
-Observar também como o exemplo distingue **procedures**, **skills**, **MCP servers** e **CLI tools**, e como propõe consultar apenas os recursos relevantes para cada tarefa.
-
-Não é obrigatório reproduzir exatamente os mesmos nomes, a mesma quantidade de diretórios ou todos os procedimentos do exemplo. É obrigatório, porém, **construir uma estrutura própria que resolva esses problemas de organização** e conseguir justificar as decisões.
+O participante deverá usar essas perguntas para **conceber o funcionamento do próprio starter repo**, não apenas criar diretórios.
 
 ## Ficha de requisitos
 
-Com o GitHub Copilot no **VS Code em modo agente**, os participantes deverão:
+### 1. Projetar a organização
 
-### 1. Investigar e planejar a estrutura
+- Criar **um repositório GitHub próprio e inicialmente vazio** e abri-lo no VS Code.
+- Discutir com o Copilot que responsabilidades um starter repo deve assumir.
+- Decidir **quais arquivos e diretórios criar, como nomeá-los e por que eles são necessários**.
+- Evitar gerar automaticamente uma solução inteira sem compreender e aprovar a organização proposta.
 
-- Criar um **novo repositório GitHub próprio**, inicialmente vazio.
-- Examinar o exemplo apresentado e identificar quais problemas cada componente procura resolver.
-- Discutir com o Copilot quais componentes são necessários para um starter repo genérico e quais seriam excessivos.
-- Definir uma organização coerente de arquivos, pastas, documentos e índices **antes de solicitar sua criação**.
+### 2. Preparar o agente para trabalhar
 
-### 2. Criar o contrato de trabalho do agente
+- Definir instruções persistentes que expliquem o propósito do repositório, as regras de atuação, como localizar contexto e como executar e validar tarefas.
+- Decidir como separar orientações gerais de procedimentos consultados apenas quando forem necessários.
+- Estabelecer limites de autonomia e as situações em que o agente deverá consultar o participante.
 
-- Construir um arquivo de instruções para o agente, como `AGENTS.md`.
-- Estabelecer como o agente deve iniciar uma tarefa, consultar o repositório e identificar o contexto relevante.
-- Definir como planejar alterações, verificar resultados e registrar trabalho concluído.
-- Distinguir **regras gerais** de **procedimentos específicos**, evitando concentrar tudo em um único documento extenso.
-- Determinar quais ações precisam de revisão ou autorização humana.
+### 3. Organizar contexto e recursos reutilizáveis
 
-### 3. Organizar a base de contexto e conhecimento
+O starter repo deverá prever uma forma compreensível de organizar:
 
-Criar uma estrutura própria, inspirada nas finalidades presentes no exemplo, que permita organizar:
+- **Contexto de projetos:** objetivos, requisitos, restrições e decisões.
+- **Conhecimento e documentação:** referências e informações relevantes para outras sessões.
+- **Procedimentos:** métodos reutilizáveis para realizar e verificar tarefas.
+- **Skills:** como registrar, localizar e utilizar capacidades especializadas.
+- **Ferramentas e integrações:** inventário de recursos, incluindo CLI e MCP, diferenciando o que está realmente disponível do que é apenas uma possibilidade.
+- **Registros:** decisões, modificações, resultados e problemas que mereçam persistir.
 
-- **Contexto:** objetivos, informações operacionais e decisões de projetos que venham a utilizar o starter repo.
-- **Documentação e referências:** materiais que o agente poderá consultar.
-- **Conhecimento e memória de trabalho:** aprendizados e informações relevantes para sessões futuras.
-- **Procedimentos:** instruções de execução e verificação que possam ser carregadas quando uma tarefa exigir.
-- **Registros:** histórico útil de decisões, mudanças, execuções e problemas.
-- **Skills:** local de documentação e descoberta das capacidades especializadas do agente.
-- **Ferramentas e MCPs:** inventário de capacidades disponíveis, dependências, limitações e condições de uso.
-- **Informações sensíveis:** regras para impedir que segredos e credenciais reais sejam versionados.
+**A escolha da estrutura é do aluno.** Essas categorias são necessidades a resolver, não nomes obrigatórios de pastas.
 
-A organização pode utilizar uma pasta como `AgentDATA/`, tal como o exemplo, ou outra solução justificada pelo participante. **Não basta criar pastas vazias:** os arquivos de orientação devem explicar a finalidade de cada parte e como o agente a utiliza.
+### 4. Tornar o starter repo utilizável
 
-### 4. Definir procedimentos reutilizáveis
+- Pedir ao Copilot que **crie efetivamente** a estrutura aprovada, com documentação e instruções coerentes entre si.
+- Definir pelo menos um procedimento genérico útil para o trabalho com agentes, incluindo uma maneira de conferir resultados.
+- Criar documentação para que outra pessoa ou sessão do agente compreenda como utilizar e evoluir o starter repo.
+- Evitar arquivos sem finalidade, comandos que não foram verificados e segredos versionados.
+- Versionar o resultado com Git e realizar um commit identificável.
 
-Com a ajuda do Copilot, criar procedimentos genéricos que façam sentido num repositório destinado ao desenvolvimento com agentes, considerando, por exemplo:
+## Verificação
 
-- Como iniciar uma tarefa e reunir contexto.
-- Como planejar modificações antes de executá-las.
-- Como validar mudanças e lidar com falhas.
-- Como revisar diffs e realizar commits.
-- Como documentar decisões e registrar conhecimentos úteis.
-- Como descobrir e utilizar recursos especializados, sem presumir sua disponibilidade.
+Após a construção, **iniciar uma nova conversa** com o Copilot no VS Code e verificar se ele consegue, consultando somente o repositório:
 
-O participante deverá decidir **quais procedimentos efetivamente incluir, como documentá-los e quando o agente deve consultá-los**.
+1. Explicar para que serve o starter repo e como está organizado.
+2. Localizar as instruções e o contexto necessários para começar uma tarefa.
+3. Identificar onde guardar informações e decisões de um projeto futuro.
+4. Reconhecer suas regras de atuação e como validar alterações.
 
-### 5. Preparar o repositório para as próximas atividades
-
-- Criar um `README.md` que explique o que é o starter repo, como utilizá-lo e como está organizado.
-- Deixar claro quais informações ainda precisarão ser fornecidas quando um projeto concreto começar.
-- Considerar como o starter repo poderá receber **uma skill de bootstrap baseada em perguntas**, que será criada **no Exercício 2**.
-- Verificar se as instruções da estrutura criada são compatíveis com o GitHub Copilot no VS Code, distinguindo um **catálogo de skills** da localização que o Copilot reconhece para executar skills nativas.
-- Versionar a estrutura criada e registrar um commit identificável.
-
-**Não criar agora a skill de bootstrap, a rede neural, o treinamento, o dataset, as Issues do classificador nem o site.** Essas são atividades seguintes.
-
-## Como verificar o resultado
-
-Após criar o starter repo:
-
-1. Examinar com o Copilot se a documentação e a organização são coerentes e se há instruções contraditórias ou arquivos sem função clara.
-2. **Encerrar a conversa e abrir outra** no VS Code, com o repositório disponível.
-3. Verificar se o agente consegue entender **a finalidade do starter repo**, suas regras, a organização dos recursos e como deverá iniciar um futuro projeto.
-4. Identificar informações que não foram recuperadas, dependências presumidas ou procedimentos confusos e **refinar a estrutura**, se necessário.
-
-A verificação não consiste apenas em contar arquivos e diretórios: é preciso comprovar que **o agente consegue utilizar o repositório como infraestrutura de trabalho**.
+Se não conseguir, **refinar a estrutura com o agente** e repetir a verificação.
 
 ## Entregável
 
-**Um starter repository próprio, criado do zero com o GitHub Copilot, publicado no GitHub e versionado**, contendo:
+**Um starter repository original, criado pelos próprios participantes com o GitHub Copilot e publicado em seu GitHub**, com organização justificada, instruções persistentes, mecanismos para contexto e recursos, procedimentos reutilizáveis, documentação e histórico de commits.
 
-- Contrato operacional do agente.
-- README com explicação da organização.
-- Estrutura para contexto, documentação, conhecimento, procedures, registros, skills e ferramentas.
-- Procedimentos reutilizáveis e critérios de verificação.
-- Orientações para uso e evolução da estrutura.
-- Evidência de que o agente compreende o repositório em uma nova conversa.
+**Critério central:** demonstrar que a estrutura realmente ajuda um agente a iniciar e continuar trabalho em projetos distintos.
 
-**Resultado esperado:** um starter repo de propósito geral, comparável **em função e organização** ao exemplo mostrado pelo professor, mas projetado e construído pelos próprios participantes.
-
-**Próximo exercício:** criar uma skill de bootstrap no estilo **Ask Me** para entrevistar o usuário sobre o projeto de classificação de dígitos e **popular esse starter repo com contexto específico**, sem recriá-lo do zero.
+**Próximo exercício:** os participantes criarão sua **própria skill de bootstrap baseada na lógica Ask Me**, capaz de entrevistar o usuário e **popular o starter repo que acabaram de construir** com o contexto do projeto de classificação de dígitos.

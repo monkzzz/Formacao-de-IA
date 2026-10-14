@@ -37,7 +37,7 @@ Estrutura de localização (apenas o caminho, **não é uma skill pronta**):
             └── nome-escolhido-pelo-aluno/
                 └── SKILL.md
 
-As pastas de documentação ou de catálogo, como `AgentDATA/skills/` no starter repo de referência, **não são automaticamente equivalentes ao caminho de descoberta de skills nativas**. O aluno deverá distinguir o **catálogo de capacidades** do **local em que o Copilot realmente reconhece a skill**. Outras localizações podem ser reconhecidas conforme a versão do VS Code e suas configurações.
+O starter repo será **criado integralmente pelo aluno no Exercício 1**. Se ele optar por manter um catálogo próprio de skills na sua estrutura, deverá distinguir esse catálogo do **local em que o Copilot realmente reconhece as skills nativas**. Outras localizações podem ser reconhecidas conforme a versão do VS Code e suas configurações.
 
 **A skill é escrita em Markdown:** não é necessário executar `npx skills add`, instalar um gerenciador de skills ou usar bibliotecas específicas. Isso não significa que o **futuro classificador** dispensará dependências de treinamento ou inferência.
 

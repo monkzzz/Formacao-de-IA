@@ -20,10 +20,12 @@ As nove imagens são reservadas para a **verificação final**: não servem para
 
 ## Sequência obrigatória
 
-1. [Exercício 1 — Construir seu próprio starter repo](Exercicio-01-Starter-Repo.md): criar uma estrutura **genérica**, inspirada no exemplo fornecido pelo professor, mas projetada e construída pelos alunos.
+1. [Exercício 1 — Construir seu próprio starter repo](Exercicio-01-Starter-Repo.md): a partir dos **conceitos vistos em aula**, projetar e construir **do zero** uma estrutura genérica para trabalho com agentes, sem template fornecido.
 2. [Exercício 2 — Criar uma skill de bootstrap](Exercicio-02-Skill-Bootstrap.md): **compreender a lógica do padrão Ask Me e construir uma skill própria**, que entreviste o usuário e alimente o starter repo com o contexto do desafio.
 3. [Exercício 3 — Planejar em Issues e desenvolver](Exercicio-03-Desenvolvimento-Issues.md): **primeiro** fazer o agente planejar o projeto completo por Issues e aprová-las; **depois** implementar e verificar cada etapa.
 4. [Exercício 4 — Apresentação final](Exercicio-04-Apresentacao.md): demonstrar ao professor o produto funcionando e as evidências do trabalho com o agente.
+
+**Não existe starter repo disponibilizado pela formação.** O repositório desta formação contém apenas os enunciados e o material conceitual; o starter será criado no GitHub de cada aluno.
 
 **Material de apoio:** [Guia de criação de skills no VS Code e referências externas](Guia-Skills-Copilot.md).
 
