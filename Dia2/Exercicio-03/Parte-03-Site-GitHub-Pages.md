@@ -35,9 +35,9 @@ A rede do exemplo tem uma topologia específica e um formato particular de pesos
 - Uma imagem enviada pode ter fundo colorido, dimensões diferentes, margens ou dígitos em cores variadas. O que deve acontecer no pré-processamento?
 - Como garantir que **o desenho e o upload atravessem um fluxo de preparação coerente** antes de chegar à mesma rede neural?
 - Como lidar com arquivo inválido, imagem vazia, formato não suportado ou falha de leitura?
-- Os nomes dos arquivos do [desafio](../Desafio/) indicam a classe verdadeira. Como garantir que **somente os pixels**, e nunca o nome ou um rótulo fornecido externamente, determinem a previsão?
+- Como garantir que, ao classificar os [dez PNGs CAPTCHA](../Desafio/Avancado/), **somente os pixels** determinam a previsão, nunca o nome do arquivo, os rótulos nem o gerador?
 
-**Requisito mínimo:** aceitar imagens locais de modo utilizável e permitir processar as **nove imagens do desafio** (individualmente ou em seleção múltipla), mostrando **uma previsão verificável para cada arquivo**, com pré-visualização, classe prevista e pontuações do modelo.
+**Requisito mínimo:** aceitar imagens locais e permitir processar **os dez PNGs CAPTCHA oficiais** (um a um ou em seleção múltipla), mostrando **uma previsão verificável por arquivo**, com pré-visualização, classe prevista e pontuações do modelo.
 
 O upload pode ser realizado por um controle de seleção de arquivos; arrastar e soltar é opcional. **O arquivo não deve ser enviado para um servidor de inferência.**
 
