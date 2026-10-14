@@ -39,6 +39,8 @@ Nesta parte você **não deve pedir a implementação integral**. O objetivo é 
 
 **Sua tarefa:** discutir essas questões com o agente, investigar alternativas e **registrar os requisitos, as decisões aprovadas, os pressupostos e as dúvidas pendentes**. Não existe uma arquitetura obrigatória a reproduzir.
 
+> **Veja como uma Issue deve ser escrita:** [Issue #1 — Especificar a rede neural MNIST e a estratégia de validação](https://github.com/vcanonici/Formacao-de-IA/issues/1). É um **exemplo didático** publicado no repositório da formação: contém contexto, dependências, limites, entregáveis, critérios de aceitação e evidências. **Não é para resolver essa Issue aqui.** Examine a estrutura, reaproveite o que for útil e crie as Issues **no seu próprio projeto**, ajustadas às suas decisões. Não copie automaticamente a arquitetura de outro projeto.
+
 ## Transforme todo o projeto em GitHub Issues
 
 Antes de pedir ao Copilot que programe, faça-o organizar **todas as fases do trabalho** em Issues reais no GitHub do seu projeto: preparação do MNIST, design da rede, treinamento, testes e avaliação, exportação, aplicação web, upload de imagens, visualização da rede, publicação e validação final.
