@@ -10,7 +10,7 @@ A IA deve ajudar a especificar, criar Issues, programar, treinar, testar, integr
 
 ## Desafio integrador
 
-O desafio oficial é classificar **[dez imagens de dígitos problemáticos em estilo CAPTCHA](Desafio/Avancado/)**, contendo as classes **0–9** uma vez cada, usando **uma rede neural treinada pelos participantes com o Copilot**.
+O desafio oficial é classificar **[dez imagens de dígitos problemáticos em estilo CAPTCHA](Desafio/)**, contendo as classes **0–9** uma vez cada, usando **uma rede neural treinada pelos participantes com o Copilot**.
 
 Criar também uma aplicação pública no **GitHub Pages**: qualquer pessoa deverá poder desenhar um número, receber a classificação e observar uma visualização com **informações reais da rede neural**. A inferência deverá acontecer **no próprio navegador**, sem API remota de classificação.
 
