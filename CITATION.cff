@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: >-
+  Se utilizar este material, cite-o usando os metadados deste arquivo.
+title: Formacao de IA
+type: software
+authors:
+  - given-names: Vinicius
+    family-names: Canonici
+    orcid: https://orcid.org/0009-0006-8269-9004
+    website: https://github.com/vcanonici
+  - given-names: Hugo
+    family-names: Gomes
+repository-code: https://github.com/vcanonici/Formacao-de-IA
+url: https://github.com/vcanonici/Formacao-de-IA
+license: CC-BY-4.0

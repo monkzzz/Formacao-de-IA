@@ -19,3 +19,8 @@ A IA deve executar a pesquisa, a análise e a redação. O papel dos participant
 4. [Exercício 4 — Auditoria e refinamento](Exercicio-04-Auditoria-e-Refinamento.md)
 
 Cada exercício aproveita os materiais produzidos no anterior. Os enunciados definem **o que deve ser feito**; cabe aos participantes decidir **como pedir ao Copilot que o faça**. Não há prompts-modelo nem respostas pré-elaboradas.
+
+## Licença
+Salvo indicação em contrário, este material é de autoria de **Vinicius Canonici e Hugo Gomes** e está licenciado sob a [Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)](../LICENSE.md).
+
+Para citar este repositório, consulte [CITATION.cff](../CITATION.cff).
