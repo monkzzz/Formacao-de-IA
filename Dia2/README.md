@@ -1,45 +1,38 @@
-# Dia 2 — Prática integradora: do problema ao classificador publicado
+# Dia 2 — Do starter repo à aplicação publicada
 
 ## Objetivo
 
-Aprender a trabalhar com **GitHub Copilot no Visual Studio Code como coding agent**: preparar o ambiente, construir contexto persistente, transformar um problema aberto em especificações, delegar tarefas de implementação, verificar resultados e publicar uma aplicação funcional.
+Aprender a construir um ambiente para coding agents, criar uma **skill de bootstrap baseada em perguntas**, transformar um desafio de programação em **GitHub Issues** e desenvolver e apresentar uma solução com o **GitHub Copilot no VS Code (modo agente)**.
 
-Ao contrário do Dia 1, centrado no Microsoft Copilot no navegador para produção de relatórios, **o Dia 2 utiliza o GitHub Copilot no VS Code**, além de Git, GitHub, terminal, testes e GitHub Pages, conforme os recursos disponíveis no ambiente.
+A IA deve ajudar a fazer o trabalho de engenharia: especificar, criar Issues, programar, treinar, testar, integrar e documentar. O aluno é responsável por orientar o agente, decidir, supervisionar e verificar. **Não há prompts prontos, código de solução nem tempos estipulados.**
 
-A IA deverá participar ativamente da investigação, do planejamento, da escrita do código, da execução dos testes e da documentação. Os participantes deverão **dirigir e supervisionar** esse trabalho, não programar toda a solução manualmente nem executar instruções que não compreendem.
-
-**Referência pedagógica:** *Engenharia de Agentes de IA* — Cadernos 01 a 05.
+**Ferramentas:** VS Code, GitHub Copilot em modo agente, Git, GitHub, terminal e GitHub Pages. Recursos dependem das permissões da conta e do ambiente. As **skills em Markdown não exigem npx**, mas as dependências que vierem a ser escolhidas para treinar o modelo são outra questão.
 
 ## Desafio integrador
 
-Um repositório disponibilizará **nove imagens de dígitos manuscritos**. O objetivo é desenvolver um sistema capaz de identificar os dígitos, treinando uma rede neural e disponibilizando uma aplicação web pública na qual qualquer pessoa possa desenhar um número, observar a classificação e inspecionar o comportamento real da rede.
+Um repositório do professor disponibiliza **nove imagens de dígitos manuscritos**. Construir, com auxílio do agente, um sistema que identifique os dígitos por meio de **uma rede neural treinada no projeto**.
 
-A aplicação deverá executar a **inferência diretamente no navegador**, sem recorrer a uma API ou servidor remoto de classificação, e deverá ser publicada no **GitHub Pages**.
+A solução deverá incluir uma aplicação pública no **GitHub Pages**, em que qualquer pessoa desenhe um número, receba a classificação e observe uma visualização baseada em **informações reais da rede neural**. A inferência deverá executar no **próprio navegador**, sem API remota de classificação.
 
-**Repositório das nove imagens:** endereço a ser fornecido pelo instrutor.
+**Link das nove imagens:** a ser informado pelo professor.
 
-As nove imagens são um **desafio final**, não dados para treino ou ajuste. Os participantes deverão investigar fontes adicionais de dados e escolher justificadamente dataset, arquitetura, linguagem, framework, pré-processamento e formato de exportação do modelo.
+As nove imagens são reservadas para a **verificação final**. Não são um dataset de treinamento e não devem ser utilizadas no treino nem na escolha de hiperparâmetros. Os alunos investigarão dados adequados, arquitetura, métricas, framework e métodos de exportação; nenhuma solução específica está prescrita. O objetivo do desafio é **9 acertos em 9 imagens**, relatando o resultado real, sem correções manuais. Isso não substitui métricas em um conjunto de teste independente.
 
-## Como trabalhar
+## Sequência obrigatória
 
-- Cada participante criará **seu próprio repositório GitHub** e desenvolverá a solução progressivamente. Não há starter repo nem arquitetura prontos para copiar.
-- Os enunciados especificam **o que precisa ser alcançado**, mas não fornecem prompts, código, comandos de instalação nem decisões técnicas resolvidas. Cabe ao participante conversar com o agente e orientar sua execução.
-- Cada exercício parte dos artefatos produzidos nos anteriores. O repositório deverá evoluir conforme a especificação e os testes justificarem novas necessidades.
-- Mudanças relevantes exigem aprovação humana. Um resultado descrito pelo agente não substitui evidências reais, como saídas de testes, diffs, métricas ou a aplicação publicada.
-- Trabalhar por pequenas unidades verificáveis, seguindo o ciclo **Plan → Exec → Verify → Review → Commit**. Documentar falhas e limitações sem declará-las resolvidas.
+1. [Exercício 1 — Construir o starter repo](Exercicio-01-Starter-Repo.md). Criar uma estrutura genérica para trabalho com agentes.
+2. [Exercício 2 — Criar e testar a skill de bootstrap](Exercicio-02-Skill-Bootstrap.md). Desenvolver uma skill própria, baseada no conceito Ask Me, para entrevistar o usuário e popular o starter repo com contexto do desafio.
+3. [Exercício 3 — Planejar em Issues e desenvolver](Exercicio-03-Desenvolvimento-Issues.md). **Primeiro** fazer o agente propor e criar as Issues do projeto inteiro, revisar e aprovar; **depois** implementar por Issue.
+4. [Exercício 4 — Apresentação final](Exercicio-04-Apresentacao.md). Demonstrar o produto, os resultados e a colaboração com o agente.
 
-## Sequência de exercícios
+**Material de apoio:** [Guia de skills nativas para VS Code e catálogos públicos](Guia-Skills-Copilot.md).
 
-1. [Exercício 1 — Bootstrap do starter repository](Exercicio-01-Bootstrap-do-Repositorio.md)
-2. [Exercício 2 — Investigação e especificação](Exercicio-02-Investigacao-e-Especificacao.md)
-3. [Exercício 3 — Implementação, treinamento e avaliação](Exercicio-03-Implementacao-e-Treinamento.md)
-4. [Exercício 4 — Delegação do desenvolvimento do site](Exercicio-04-Desenvolvimento-do-Site.md)
-5. [Exercício 5 — Inferência no navegador e publicação](Exercicio-05-Inferencia-e-Publicacao.md)
-6. [Exercício 6 — Auditoria e desafio das nove imagens](Exercicio-06-Validacao-Final.md)
-7. [Exercício 7 — Retrospectiva dos coding agents](Exercicio-07-Retrospectiva.md)
+## Skill de referência incluída
 
-## Entrega integradora
+Este repositório contém uma skill didática Ask Me em [`.github/skills/ask-me/SKILL.md`](../.github/skills/ask-me/SKILL.md). Ela permite experimentar a técnica de entrevista **sem npx, Node.js ou pacotes adicionais**. Trata-se de uma referência genérica; no Exercício 2 o aluno criará **sua própria skill de bootstrap**, não apenas copiará a referência.
 
-Ao concluir, apresentar **um repositório próprio** com especificação, Issues, código, testes, processo reproduzível de treinamento, pesos, avaliação, aplicação web, histórico de mudanças e documentação; **uma URL pública** no GitHub Pages; e evidências do desafio das nove imagens.
+## Entrega do Dia 2
 
-> O objetivo não é descobrir um prompt mágico nem copiar uma solução. É aprender a construir um contexto operacional no qual um agente possa executar tarefas reais, com decisões humanas e resultados verificáveis.
+Um **único repositório próprio** evoluído durante os exercícios, com starter, skill criada pelo aluno, contexto, especificação, Issues, código, modelo treinado, resultados, testes, site público, commits e evidências; além de demonstração ao professor.
+
+**Referência pedagógica:** Engenharia de Agentes de IA — Cadernos 01 a 05.
