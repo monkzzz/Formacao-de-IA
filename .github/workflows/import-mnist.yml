@@ -1,0 +1,38 @@
+name: Importar MNIST para o repositório
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/import-mnist.yml
+
+permissions:
+  contents: write
+
+jobs:
+  import-mnist:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obter repositório
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Baixar e verificar os quatro arquivos MNIST
+        run: python3 Dia2/Dataset-MNIST/download_mnist.py
+      - name: Versionar arquivos originais compactados
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Dia2/Dataset-MNIST/data/train-images-idx3-ubyte.gz
+          git add Dia2/Dataset-MNIST/data/train-labels-idx1-ubyte.gz
+          git add Dia2/Dataset-MNIST/data/t10k-images-idx3-ubyte.gz
+          git add Dia2/Dataset-MNIST/data/t10k-labels-idx1-ubyte.gz
+          if git diff --cached --quiet; then
+            echo "MNIST já está versionado."
+          else
+            git commit -m "data(mnist): include verified original IDX archives"
+            git push origin HEAD:main
+          fi

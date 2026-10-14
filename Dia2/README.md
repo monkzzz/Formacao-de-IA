@@ -10,19 +10,19 @@ A IA deve ajudar a especificar, criar Issues, programar, treinar, testar, integr
 
 ## Desafio integrador
 
-O professor disponibilizará **nove imagens de dígitos manuscritos**. Desenvolver, com auxílio do agente, um sistema que as classifique usando **uma rede neural treinada pelos participantes com o Copilot**.
+O repositório disponibiliza **[nove imagens de dígitos manuscritos](Desafio/)**. Desenvolver, com auxílio do agente, um sistema que as classifique usando **uma rede neural treinada pelos participantes com o Copilot**.
 
 Criar também uma aplicação pública no **GitHub Pages**: qualquer pessoa deverá poder desenhar um número, receber a classificação e observar uma visualização com **informações reais da rede neural**. A inferência deverá acontecer **no próprio navegador**, sem API remota de classificação.
 
-**Link das nove imagens:** a ser informado pelo professor.
+**Imagens do desafio:** [Dia2/Desafio/](Desafio/). **Dataset de treino e teste:** [MNIST](Dataset-MNIST/README.md), com 60.000 imagens de treino e 10.000 de teste, disponibilizadas em formato IDX original.
 
-As nove imagens são reservadas para a **verificação final**: não servem para treinamento nem ajuste de hiperparâmetros. Dataset, arquitetura, framework, métricas e exportação serão investigados e decididos pelos alunos. O objetivo do desafio é **9 acertos em 9 imagens**, com resultados reais e sem correções manuais; isso não substitui avaliação em conjunto de teste independente.
+As nove imagens são reservadas para a **verificação final**: não servem para treinamento nem ajuste de hiperparâmetros. O dataset **MNIST é obrigatório**; arquitetura, framework, métricas complementares e exportação serão investigados e decididos pelos alunos. O objetivo do desafio é **9 acertos em 9 imagens**, com resultados reais e sem correções manuais; isso não substitui avaliação em conjunto de teste independente.
 
 ## Sequência obrigatória
 
 1. [Exercício 1 — Construir seu próprio starter repo](Exercicio-01-Starter-Repo.md): a partir dos conceitos vistos em aula e da **análise crítica de um starter repo de referência**, reaproveitar o que funcionar, adaptar às próprias preferências e eliminar o que não for útil.
 2. [Exercício 2 — Criar uma skill de bootstrap](Exercicio-02-Skill-Bootstrap.md): **compreender a lógica do padrão Ask Me e construir uma skill própria**, que entreviste o usuário e alimente o starter repo com o contexto do desafio.
-3. [Exercício 3 — Planejar em Issues e desenvolver](Exercicio-03-Desenvolvimento-Issues.md): **primeiro** fazer o agente planejar o projeto completo por Issues e aprová-las; **depois** implementar e verificar cada etapa.
+3. [Exercício 3 — Planejar em Issues e desenvolver](Exercicio-03-Desenvolvimento-Issues.md): utilizar o [MNIST](Dataset-MNIST/README.md), responder às perguntas de investigação, **primeiro** fazer o agente organizar o projeto em Issues aprovadas; **depois** implementar, treinar, testar e publicar por etapas.
 4. [Exercício 4 — Apresentação final](Exercicio-04-Apresentacao.md): demonstrar ao professor o produto funcionando e as evidências do trabalho com o agente.
 
 **Material de referência disponível:** [Starter Repo para análise](Referencia-Starter-Repo/LEIA-PRIMEIRO.md) e [arquivos do exemplo](Referencia-Starter-Repo/Starter-Repo/). É permitido — e recomendado — **copiar, adaptar e reutilizar o que for útil**, sem recriar trabalho que já esteja bem resolvido. **Purgar documentos, procedimentos e dependências que não atendam às necessidades do aluno.** O material não é um repositório pronto para entrega: cada aluno deverá construir **o seu próprio starter repo**, com escolhas justificadas.
