@@ -12,6 +12,17 @@ A IA deve executar a pesquisa, a análise e a redação. O papel dos participant
 - A seleção de modelos, funcionalidades avançadas e leitura de anexos depende da conta e da configuração. Não presumir que um modelo nomeado especificamente esteja disponível.
 - Não é necessário instalar skillsets. Caso existam recursos adicionais autorizados, sua utilização é opcional.
 
+## Apresentações teóricas
+
+Os seis PDFs da formação estão disponíveis em [`Dia1/Teorico/`](Teorico/):
+
+- [Whoami](Teorico/Whoami.pdf)
+- [The Basics](Teorico/The%20Basics.pdf)
+- [LLM Anatomy](Teorico/LLM%20Anatomy.pdf)
+- [From LLM to Chatbot](Teorico/From%20LLM%20to%20Chatbot.pdf)
+- [Context Eng](Teorico/Context%20Eng.pdf)
+- [Model Chosing](Teorico/Model%20Chosing.pdf)
+
 ## Sequência
 1. [Exercício 1 — Pesquisa orientada](Exercicio-01-Pesquisa-Orientada.md)
 2. [Exercício 2 — Talk to a Paper](Exercicio-02-Talk-to-a-Paper.md)
