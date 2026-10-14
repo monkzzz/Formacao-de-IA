@@ -2,6 +2,17 @@
 
 **Dez imagens PNG de 192 × 192 pixels**, uma de cada dígito de **0 a 9**, produzidas para testar os limites de uma rede treinada em imagens MNIST limpas. Trata-se de um desafio **visual**, não uma questão de nomenclatura de arquivos: cada previsão deve depender apenas dos pixels apresentados ao modelo.
 
+## Resultado medido na aplicação de referência
+
+Uma execução automatizada carregou **os dez PNGs pelo campo de upload do site público** [Image-classifier-demo](https://vcanonici.github.io/Image-classifier-demo/) e comparou as saídas com os rótulos dos dígitos. O resultado observado foi:
+
+- **3 acertos em 10 imagens (30%)**;
+- **7 erros de classificação (70%)**.
+
+**[Consultar a execução e baixar o relatório bruto](https://github.com/vcanonici/Formacao-de-IA/actions/runs/38550708626)**.
+
+Isso mede a versão da aplicação e do modelo em uso durante essa execução, **não uma taxa de erro garantida para outras redes**. A medição ocorreu no navegador, usando o mesmo upload e a mesma inferência do produto publicado. Os rótulos só foram consultados na etapa de comparação das previsões.
+
 ## Por que estes exemplos são difíceis?
 
 Um classificador MNIST normalmente vê **um único dígito isolado, centralizado e praticamente sem interferência**, em 28 × 28 pixels. Aqui, o algarismo aparece misturado a elementos que imitam a mesma tinta e prejudicam o pré-processamento:
