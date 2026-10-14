@@ -110,6 +110,15 @@ O projeto utiliza o **MNIST** e culmina num site em que qualquer pessoa poderá:
 
 Toda a inferência deverá acontecer **no navegador**, usando os pesos de uma rede **efetivamente treinada pelo participante**, sem API remota de classificação.
 
+### Veja o produto final de referência
+
+> [!TIP]
+> **[Image-classifier-demo — abrir o repositório com a aplicação completa](https://github.com/vcanonici/Image-classifier-demo)**
+>
+> Projeto de referência desenvolvido por **Vinicius Canonici**: uma rede neural treinada com MNIST, integrada a uma interface interativa para desenhar dígitos, acompanhar previsões e visualizar pixels, ativações e conexões da rede. Os pesos são utilizados para **inferência diretamente no navegador**, sem backend.
+>
+> **O desafio dos participantes vai além desse exemplo:** cada aplicação deverá também permitir **carregar imagens locais** para classificar as nove imagens do test set. Analise a implementação, reutilize o que for útil, adapte ao seu projeto e descarte o que não for necessário — **não é obrigatório reproduzir sua arquitetura ou tecnologias**.
+
 <div align="center">
 
 **60.000 imagens de treino** &nbsp;·&nbsp; **10.000 imagens de teste** &nbsp;·&nbsp; **9 imagens no desafio final**
