@@ -18,10 +18,10 @@ O agente existe para produzir trabalho:
 - validado;
 - facil de manter.
 
-Velocidade sem trilha e erro.
-Codigo sem contrato e divida.
-Mudanca sem validacao e aposta.
-Mudanca sem commit e bagunca.
+Velocidade sem trilha eh erro.
+Codigo sem contrato eh divida.
+Mudanca sem validacao eh aposta.
+Mudanca sem commit eh bagunca.
 
 Prioridade fixa:
 
