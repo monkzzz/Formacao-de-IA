@@ -1,75 +1,60 @@
-# Exercício 3 · Parte 4 — Funciona com o test set do desafio?
+# Exercício 3 · Parte 4 — A rede funciona com os dez dígitos CAPTCHA?
 
 ## Objetivo
 
-Aprender a **avaliar uma aplicação de IA em condições reais**, diferenciando a qualidade medida no MNIST do comportamento obtido com imagens externas, e comprovando os resultados com evidências — não apenas com a afirmação do agente de que a solução funciona.
+Avaliar **o sistema inteiro**, e não apenas a acurácia no MNIST: carregar imagens visualmente difíceis na aplicação pública, registrar as previsões reais e compreender os erros de inferência, pré-processamento e integração.
 
-### Ponto de partida
+## Qual é o test set oficial?
 
-A rede treinada e avaliada na Parte 2 e a **aplicação pública do GitHub Pages com upload de imagens** criada na Parte 3.
+O conjunto oficial é composto **exclusivamente pelos dez arquivos `caso_01.png` a `caso_10.png`** em **[Dia2/Desafio/](../Desafio/)**, com uma imagem de cada dígito **0 a 9**. Eles contêm linhas cruzadas, traços partidos, fragmentos, deformações, oclusões e ruído ao estilo CAPTCHA. Não são exemplos do MNIST.
 
-## Dois testes diferentes, duas conclusões diferentes
+**Há duas avaliações diferentes:**
 
-**Teste oficial do MNIST:** os 10.000 exemplos reservados servem para avaliar a generalização dentro desse conjunto de dados. Não devem ser usados para ajuste de hiperparâmetros.
+- **Teste MNIST:** 10.000 exemplos reservados, não utilizados para escolher hiperparâmetros. Mede a generalização dentro do conjunto MNIST.
+- **Desafio CAPTCHA:** dez imagens externas ao MNIST que testam também o upload, a preparação dos pixels, a inferência no navegador e a robustez da rede.
 
-**Desafio independente:** as [nove imagens disponibilizadas aqui](../Desafio/) têm características que podem diferir do MNIST. Elas servem para verificar se o **sistema completo**, incluindo upload, pré-processamento, inferência e interface, consegue classificá-las.
+O objetivo é registrar **quantos dos dez casos** o modelo realmente acerta. **10/10 é desejável, mas não obrigatório.** Uma previsão incorreta ou um caso ambíguo deve ser relatado sem manipular resultados.
 
-O objetivo do desafio é **9 acertos em 9 imagens**. Um resultado inferior deve ser registrado como tal, com diagnóstico. Acertar 9/9, isoladamente, **não comprova generalização**.
+## Perguntas socráticas
 
-## Perguntas socráticas antes do teste
+- Por que uma rede eficaz em dígitos limpos pode errar quando linhas cruzam um algarismo?
+- O que acontece com recorte, normalização e centro de massa quando há fragmentos de tinta fora do dígito?
+- Como diferenciar um erro causado pelo modelo de um erro causado pelo pré-processamento no navegador?
+- Como comprovar que as previsões vêm dos pixels e dos **pesos realmente treinados**, não de regras fixas?
+- Por que retreinar após conhecer o resultado dessas dez imagens invalida uma segunda tentativa como avaliação independente?
+- E quando a própria imagem é ambígua até para uma pessoa?
 
-- Como comprovar que estamos avaliando os **pesos e a versão do site realmente publicados**?
-- O teste deve começar **antes ou depois** de conhecer os rótulos das imagens? Por quê?
-- Uma imagem pode ser interpretada de forma diferente se o navegador alterar seu tamanho, fundo, contraste ou orientação?
-- Por que obter bons resultados no MNIST não garante o mesmo resultado nessas imagens?
-- Como evitar que o agente use o nome `digito_*.png` ou o código gerador do desafio como se fossem a resposta da rede?
-- Que evidência mostraria que a previsão veio do **conteúdo visual processado pelo modelo**, e não de uma regra especial?
-- Se a imagem carregada produzir um resultado diferente do desenho manual equivalente, o que deve ser investigado?
+## Procedimento
 
-## Procedimento de avaliação
-
-1. **Fixar a versão:** registrar o commit, os pesos do modelo e a URL publicada **antes de observar e utilizar os rótulos para avaliar o desempenho**.
-2. **Abrir o site público:** conferir que está usando a versão pretendida, sem servidor remoto de inferência.
-3. **Carregar as nove imagens** do [diretório do desafio](../Desafio/) pela funcionalidade de upload. Pode ser uma a uma ou em conjunto.
-4. **Registrar os resultados brutos**: identificador da imagem, previsão e escores que a aplicação apresentou. Guardar evidências de que a previsão veio da interface pública.
-5. **Comparar com os rótulos** somente depois que as previsões estiverem registradas. Os arquivos possuem nomes que indicam o dígito; o algoritmo **não pode ler o nome para determinar a classe**. O script gerador também não pode ser usado como oráculo de inferência.
-6. **Contabilizar os acertos e erros**, sem sobrescrever previsões nem ajustar manualmente os resultados após a comparação.
-7. **Investigar as falhas** com o Copilot: o problema decorre do treinamento, do conjunto de dados, da preparação da imagem, da exportação, da inferência no navegador ou da interface?
-8. **Documentar o resultado real** e a relação entre Issues, commits, testes e observações.
-
-Se quiser aprimorar a solução depois de verificar os nove exemplos, registre essa nova iteração separadamente e **não a apresente como se fosse o teste independente original**.
-
-## Desafio adicional — dez imagens problemáticas
-
-Depois de concluir e documentar as previsões das nove imagens originais, há uma segunda bateria: **[dez dígitos difíceis](../Desafio/Avancado/README.md)**.
-
-As dez imagens representam as classes **0–9 uma vez cada**, em ordem embaralhada, com fundos coloridos, traços desviantes, riscos distratores, variação de orientação e oclusões. Não são exemplos do MNIST nem fazem parte das suas 10.000 imagens oficiais de teste.
-
-- **Congele e registre** o modelo/site antes da primeira classificação do conjunto avançado.
-- **Faça upload** das dez imagens na página publicada, individualmente ou em conjunto; registre as previsões brutas e pontuações antes da comparação com o gabarito do professor.
-- **Investigue o pré-processamento**: uma falha pode surgir da separação entre fundo e tinta, e não apenas da capacidade da rede.
-- **Reportar separadamente:** acurácia do MNIST, resultado das nove imagens originais e acertos nos dez casos avançados. Não retreinar ou selecionar modelos a partir do conjunto avançado e ainda chamá-lo de teste independente.
-- **Não há obrigação de acertar as dez**: elas são intencionalmente confusas. O objetivo é identificar limites e apresentar evidências reais, sem ajustar previsões manualmente.
+1. **Fixar a versão antes do teste:** registrar commit, identificação dos pesos e URL pública do GitHub Pages. Não escolher arquitetura, modelo ou hiperparâmetros com base nas dez imagens.
+2. **Abrir o app publicado:** verificar que a inferência acontece no navegador, sem API remota de classificação.
+3. **Carregar os dez PNGs** de [Dia2/Desafio/](../Desafio/) pelo recurso de upload; individualmente ou em seleção múltipla.
+4. **Registrar dez previsões brutas:** identificador do arquivo, classe prevista, pontuações e evidências da interface **antes de consultar qualquer rótulo**.
+5. **Comparar com o gabarito numa etapa separada**, de preferência com o professor. Os nomes `caso_XX.png` são neutros; não utilizar o gerador de imagens para fornecer respostas ao agente.
+6. **Calcular acertos e erros**, mantendo as previsões originais e investigando o processamento das imagens, as ativações e o modelo.
+7. **Documentar resultados e hipóteses** com Issues, commits e evidências de testes.
+8. Se modificar o modelo ou a aplicação depois de conhecer o gabarito, registrar uma **nova iteração**, sem substituir a avaliação inicial.
 
 ## Matriz de verificação
 
-Para cada ponto, registrar **PASS, FAIL, BLOCKED ou NOT RUN**, acompanhado de evidência:
+Registrar **PASS, FAIL, BLOCKED ou NOT RUN**, com evidências.
 
-| O que verificar | Evidência esperada |
+| Verificação | Evidência |
 | --- | --- |
-| Rede treinada e avaliação MNIST | Código, pesos, logs, métricas e testes reais |
-| Equivalência entre ambientes | Comparações documentadas das saídas sobre as mesmas entradas |
-| Desenho no navegador | Previsão e pontuações exibidas a partir do modelo treinado |
-| Upload de imagens | Seleção, pré-visualização e previsão para cada imagem |
-| Inferência sem backend | Funcionamento client-side e ausência de chamada para classificação remota |
+| Treinamento e teste MNIST | Pesos, logs, métricas reais e testes reproduzíveis |
+| Paridade entre ambientes | Previsões compatíveis com o modelo de origem sobre a mesma entrada |
+| Desenho no site | Área interativa e previsões produzidas pela rede |
+| Upload das dez imagens | Dez miniaturas e dez classificações do modelo |
+| Execução local | Inferência no navegador, sem backend de classificação |
+| Visualização da rede | Valores e ativações reais, não animação decorativa |
 | GitHub Pages | URL pública funcional |
-| Nove imagens do desafio | Nove previsões registradas antes de comparar com os rótulos |
-| Rastreabilidade | Commit, Issues concluídas, resultados e limitações |
+| Integridade do desafio | Dez previsões registradas antes de comparar com rótulos |
+| Rastreabilidade | Versão Git, pesos, Issues e registro de erros |
 
-**Não declare aprovado o que não foi executado.**
+**Não declarar como concluído o que não foi executado.**
 
-## Entregável da parte 4
+## Entregável
 
-**Relatório de validação conciso** com URL pública, versão Git, versão dos pesos, métricas no MNIST, resultados das nove imagens, quantidade real de acertos, diagnóstico de falhas e evidências de que o upload e a inferência funcionaram no navegador.
+**Relatório de validação** com URL pública, commit, identificação dos pesos, resultados do MNIST, **dez previsões CAPTCHA**, total de acertos, análise de erros e evidências de que upload e inferência funcionaram.
 
-**Próximo exercício:** participar da [roda de feedback com o professor](../Exercicio-04-Roda-de-Feedback.md), submeter o app à avaliação, esclarecer dúvidas, registrar pendências e realizar correções com o agente.
+**Próximo exercício:** [roda de feedback](../Exercicio-04-Roda-de-Feedback.md) com avaliação do professor, esclarecimento de dúvidas, pendências e correções com o agente.
