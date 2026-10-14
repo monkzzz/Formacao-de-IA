@@ -2,7 +2,7 @@
 
 ## O desafio
 
-Ao longo da formação, você aprendeu o conceito de **starter repository**. Agora deverá **conceber e construir o seu próprio**, utilizando o **GitHub Copilot no VS Code, em modo agente**.
+Ao longo da formação, você aprendeu o conceito de **starter repository**. Agora deverá **conceber e construir o seu próprio**, utilizando o **GitHub Copilot no VS Code, em modo agente**, com liberdade para **reaproveitar e adaptar os componentes úteis de um exemplo real**, em vez de reinventar soluções que já funcionam.
 
 Pense nesta situação: amanhã você inicia um projeto completamente diferente do atual. Você quer abrir um repositório e começar a trabalhar com um agente que **já conheça sua forma preferida de desenvolver software** — como investigar, planejar, modificar código, validar resultados, usar Git, documentar decisões e retomar trabalho de sessões anteriores.
 
@@ -10,9 +10,26 @@ Pense nesta situação: amanhã você inicia um projeto completamente diferente 
 
 Este é o problema do exercício.
 
-**Não será fornecido um starter repo, uma árvore de diretórios para copiar, um template ou um arquivo de instruções pronto.** A arquitetura do repositório, os documentos e as regras serão decididos por você, em colaboração com o Copilot.
+Você terá acesso a [um starter repo de referência, disponibilizado para análise](Referencia-Starter-Repo/LEIA-PRIMEIRO.md), com [seus arquivos originais](Referencia-Starter-Repo/Starter-Repo/). **Ele não é uma solução obrigatória ou um trabalho pronto para entregar.** Você deverá selecionar o que serve ao seu modo de trabalhar, copiar e adaptar componentes úteis e eliminar o que for desnecessário. A estrutura final e as regras do seu repositório serão decididas por você, com o Copilot.
 
 > As perguntas a seguir são **perguntas socráticas para orientar suas decisões**, não prompts prontos para copiar e colar no agente. Use-as para investigar os problemas, discutir alternativas com o Copilot e construir sua própria solução.
+
+## Antes de construir: examine, selecione, adapte e elimine
+
+Abra a [pasta com o starter repo de referência](Referencia-Starter-Repo/Starter-Repo/) e investigue com o Copilot como os componentes se relacionam. Não é obrigatório analisar cada linha com o mesmo detalhe; concentre-se na função dos arquivos e nos problemas que resolvem.
+
+- **Contrato operacional:** o que o `AGENTS.md` determina que o agente faça em toda tarefa? Quais regras refletem as preferências de outra pessoa, e quais fazem sentido para você?
+- **Carregamento seletivo de contexto:** por que as procedures ficam fora do contrato principal? Quando seria melhor carregar uma delas apenas se necessária?
+- **Rastreabilidade:** como o exemplo orienta mudanças no Git, validações, registros e a recuperação de conhecimentos de sessões anteriores?
+- **Capacidades externas:** por que existem catálogos separados de skills, MCP servers e CLI tools? Uma ferramenta documentada ali está necessariamente instalada?
+- **Bootstrap:** o que o exemplo já faz para preparar um novo projeto, e o que ainda dependeria de uma skill própria de entrevista como a que você criará no Exercício 2?
+- **Especialização excessiva:** existem procedures, regras de publicação, exigências de linguagem ou referências a outros projetos que não fazem sentido para os projetos que você pretende desenvolver?
+
+**Não reinvente a roda:** se um arquivo ou procedimento resolve bem um problema seu, **copie e adapte**. Se só parte dele interessa, **extraia apenas essa parte**. Se não oferece utilidade, **elimine-o do seu starter repo**. Não mantenha arquivos vazios, índices redundantes, dependências, integrações, procedimentos de publicação ou regras pessoais do autor apenas por estarem no exemplo.
+
+**Purgar não é apagar o exemplo disponibilizado neste repositório da formação.** É evitar que material desnecessário entre no seu repositório pessoal. Revise sempre as instruções e caminhos copiados para garantir que não apontem para arquivos que você removeu.
+
+**Sua tarefa:** decidir, em colaboração com o Copilot, o que **reutilizar, adaptar, substituir e descartar**, justificando escolhas de forma breve. Seu starter repo deve expressar sua forma de trabalhar, não reproduzir automaticamente a do autor.
 
 ## 1. Descubra o que deve sobreviver de um projeto para outro
 
@@ -155,7 +172,7 @@ Se alguma resposta não corresponder ao comportamento desejado, **revisite suas 
 
 ## Entregável
 
-**Um starter repository original, genérico e reutilizável**, construído do zero pelos participantes com GitHub Copilot, publicado em seu próprio GitHub e contendo:
+**Um starter repository próprio, genérico e reutilizável**, construído pelos participantes com GitHub Copilot **a partir de escolhas conscientes**, podendo reutilizar e adaptar componentes do exemplo, publicado em seu próprio GitHub e contendo:
 
 - Uma forma clara de comunicar ao agente **como o participante quer trabalhar**.
 - Uma organização de contexto persistente e procedimentos consultáveis conforme a necessidade.
@@ -164,6 +181,7 @@ Se alguma resposta não corresponder ao comportamento desejado, **revisite suas 
 - Uma forma de documentar capacidades do ambiente, como skills, CLI tools e MCPs.
 - Documentação que permita usar e evoluir o starter repo.
 - Evidências dos testes de **nova sessão, reutilização e comportamento do agente**.
+- **Registro breve do que foi copiado, adaptado ou descartado da referência e por quê.**
 
 **Critério de sucesso:** o starter repo não deve ser avaliado pela quantidade de pastas, mas por sua capacidade de fazer o agente **trabalhar de maneira consistente com as regras escolhidas pelo aluno, em diferentes projetos e conversas**.
 

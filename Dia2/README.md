@@ -20,12 +20,12 @@ As nove imagens são reservadas para a **verificação final**: não servem para
 
 ## Sequência obrigatória
 
-1. [Exercício 1 — Construir seu próprio starter repo](Exercicio-01-Starter-Repo.md): a partir dos **conceitos vistos em aula**, projetar e construir **do zero** uma estrutura genérica para trabalho com agentes, sem template fornecido.
+1. [Exercício 1 — Construir seu próprio starter repo](Exercicio-01-Starter-Repo.md): a partir dos conceitos vistos em aula e da **análise crítica de um starter repo de referência**, reaproveitar o que funcionar, adaptar às próprias preferências e eliminar o que não for útil.
 2. [Exercício 2 — Criar uma skill de bootstrap](Exercicio-02-Skill-Bootstrap.md): **compreender a lógica do padrão Ask Me e construir uma skill própria**, que entreviste o usuário e alimente o starter repo com o contexto do desafio.
 3. [Exercício 3 — Planejar em Issues e desenvolver](Exercicio-03-Desenvolvimento-Issues.md): **primeiro** fazer o agente planejar o projeto completo por Issues e aprová-las; **depois** implementar e verificar cada etapa.
 4. [Exercício 4 — Apresentação final](Exercicio-04-Apresentacao.md): demonstrar ao professor o produto funcionando e as evidências do trabalho com o agente.
 
-**Não existe starter repo disponibilizado pela formação.** O repositório desta formação contém apenas os enunciados e o material conceitual; o starter será criado no GitHub de cada aluno.
+**Material de referência disponível:** [Starter Repo para análise](Referencia-Starter-Repo/LEIA-PRIMEIRO.md) e [arquivos do exemplo](Referencia-Starter-Repo/Starter-Repo/). É permitido — e recomendado — **copiar, adaptar e reutilizar o que for útil**, sem recriar trabalho que já esteja bem resolvido. **Purgar documentos, procedimentos e dependências que não atendam às necessidades do aluno.** O material não é um repositório pronto para entrega: cada aluno deverá construir **o seu próprio starter repo**, com escolhas justificadas.
 
 **Material de apoio:** [Guia de criação de skills no VS Code e referências externas](Guia-Skills-Copilot.md).
 
