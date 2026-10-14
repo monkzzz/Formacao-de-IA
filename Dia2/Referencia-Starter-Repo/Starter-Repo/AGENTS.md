@@ -160,7 +160,7 @@ Evitar arquivos genericos como `helpers`, `misc`, `tempFix` ou `newCode2` para e
 - Se nao houver convencao clara, preferir camelCase para nomes internos.
 - Funcoes devem usar verbo e indicar acao real.
 - Argumentos devem descrever o papel do dado.
-- Booleanos devem preferencialmente comecar `is`, `has`, `can` ou `should`.
+- Booleanos devem preferencialmente comecar com `is`, `has`, `can` ou `should`.
 - Tipos, interfaces e classes devem seguir o padrao idiomatico da linguagem.
 
 ### Tamanho e responsabilidade
