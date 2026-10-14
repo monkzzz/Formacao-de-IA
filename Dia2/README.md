@@ -10,20 +10,24 @@ A IA deve ajudar a especificar, criar Issues, programar, treinar, testar, integr
 
 ## Desafio integrador
 
-O repositório disponibiliza **[nove imagens de dígitos manuscritos](Desafio/)**. Desenvolver, com auxílio do agente, um sistema que as classifique usando **uma rede neural treinada pelos participantes com o Copilot**.
+O desafio oficial é classificar **[dez imagens de dígitos problemáticos em estilo CAPTCHA](Desafio/Avancado/)**, contendo as classes **0–9** uma vez cada, usando **uma rede neural treinada pelos participantes com o Copilot**.
 
 Criar também uma aplicação pública no **GitHub Pages**: qualquer pessoa deverá poder desenhar um número, receber a classificação e observar uma visualização com **informações reais da rede neural**. A inferência deverá acontecer **no próprio navegador**, sem API remota de classificação.
 
-**Imagens do desafio:** [nove imagens originais](Desafio/) e [dez imagens problemáticas — desafio avançado](Desafio/Avancado/). **Dataset de treino e teste:** [MNIST](Dataset-MNIST/README.md), com 60.000 imagens de treino e 10.000 de teste, disponibilizadas em formato IDX original.
+**Desafio oficial:** [dez PNGs CAPTCHA](Desafio/Avancado/) e [guia de avaliação](Desafio/README.md). **Dataset obrigatório:** [MNIST](Dataset-MNIST/README.md), com 60.000 imagens de treino e 10.000 de teste, no formato IDX original.
 
-As nove imagens originais e as dez imagens avançadas são reservadas para a **verificação final**: não servem para treinamento nem ajuste de hiperparâmetros. O dataset **MNIST é obrigatório**; arquitetura, framework, métricas complementares e exportação serão investigados e decididos pelos alunos. O objetivo do desafio é **9 acertos em 9 imagens**, com resultados reais e sem correções manuais; isso não substitui avaliação em conjunto de teste independente. **Bônus:** testar o [conjunto avançado de dez dígitos](Desafio/Avancado/README.md), com ruído, oclusões e traços distratores, registrando seus resultados separadamente.
+Os dez PNGs CAPTCHA são reservados para a **verificação final**. Não podem ser usados para treinamento, validação, seleção de arquitetura ou ajuste de hiperparâmetros. O objetivo é investigar **quantos dos dez casos a rede classifica corretamente**, documentando previsões e causas dos erros; **10/10 não é condição para aprovação**. Os resultados do MNIST e do desafio são avaliações diferentes. Os nove arquivos antigos que ainda aparecem na raiz de `Desafio/` **não integram a atividade atual**.
 
 ## Sequência obrigatória
 
 1. [Exercício 1 — Construir seu próprio starter repo](Exercicio-01-Starter-Repo.md): a partir dos conceitos vistos em aula e da **análise crítica de um starter repo de referência**, reaproveitar o que funcionar, adaptar às próprias preferências e eliminar o que não for útil.
 2. [Exercício 2 — Criar uma skill de bootstrap](Exercicio-02-Skill-Bootstrap.md): **compreender a lógica do padrão Ask Me e construir uma skill própria**, que entreviste o usuário e alimente o starter repo com o contexto do desafio.
-3. [Exercício 3 — Rede neural, agente, site e desafio](Exercicio-03-Desenvolvimento-Issues.md): dividido em **quatro partes** — [planejamento da rede e criação de Issues](Exercicio-03/Parte-01-Planejamento-da-Rede.md), [coding com o agente](Exercicio-03/Parte-02-Coding-com-o-Agente.md), [site no GitHub Pages inspirado na demonstração, com upload de imagens](Exercicio-03/Parte-03-Site-GitHub-Pages.md) e [teste com as nove imagens](Exercicio-03/Parte-04-Teste-do-Desafio.md).
+3. [Exercício 3 — Rede neural, agente, site e desafio](Exercicio-03-Desenvolvimento-Issues.md): dividido em **quatro partes** — [planejamento da rede e criação de Issues](Exercicio-03/Parte-01-Planejamento-da-Rede.md), [coding com o agente](Exercicio-03/Parte-02-Coding-com-o-Agente.md), [site no GitHub Pages inspirado na demonstração, com upload de imagens](Exercicio-03/Parte-03-Site-GitHub-Pages.md) e [teste com dez imagens CAPTCHA](Exercicio-03/Parte-04-Teste-do-Desafio.md).
 4. [Exercício 4 — Roda de feedback](Exercicio-04-Roda-de-Feedback.md): o professor testa os aplicativos, discute dúvidas com a turma, aponta pendências e orienta correções verificáveis com o agente.
+
+## Apresentações teóricas
+
+Estão disponíveis em [`Dia2/Teorico/`](Teorico/): [Coding Agents](Teorico/Coding%20Agents.pdf), [Agentic Context Eng](Teorico/Agentic%20Context%20Eng.pdf), [Task eng](Teorico/Task%20eng.pdf) e [VDD and Autonomy](Teorico/VDD%20and%20Autonomy.pdf).
 
 **Material de referência disponível:** [Starter Repo para análise](Referencia-Starter-Repo/LEIA-PRIMEIRO.md) e [arquivos do exemplo](Referencia-Starter-Repo/Starter-Repo/). É permitido — e recomendado — **copiar, adaptar e reutilizar o que for útil**, sem recriar trabalho que já esteja bem resolvido. **Purgar documentos, procedimentos e dependências que não atendam às necessidades do aluno.** O material não é um repositório pronto para entrega: cada aluno deverá construir **o seu próprio starter repo**, com escolhas justificadas.
 
