@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Desenvolver, com o GitHub Copilot, uma **demonstração interativa da rede neural treinada na Parte 2**, semelhante em finalidade ao [Image-classifier-demo](https://github.com/vcanonici/Image-classifier-demo), mas com uma funcionalidade adicional **obrigatória: carregar imagens do computador para classificá-las**.
+Desenvolver, com o GitHub Copilot, uma **demonstração interativa da rede neural treinada na Parte 2**, semelhante em finalidade ao [Image-classifier-demo](https://github.com/vcanonici/Image-classifier-demo), incluindo a funcionalidade **obrigatória de carregar imagens do computador para classificá-las**. O repositório de referência já oferece upload; a solução do participante deve ser própria e utilizar os pesos que ele treinou.
 
 A aplicação deverá ser publicada no **GitHub Pages** e executar a inferência **inteiramente no navegador**, utilizando os pesos do modelo realmente treinado. Nenhuma imagem poderá depender de uma API de classificação ou backend remoto durante a inferência.
 
