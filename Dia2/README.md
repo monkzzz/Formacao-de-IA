@@ -14,9 +14,9 @@ O desafio oficial é classificar **[dez imagens de dígitos problemáticos em es
 
 Criar também uma aplicação pública no **GitHub Pages**: qualquer pessoa deverá poder desenhar um número, receber a classificação e observar uma visualização com **informações reais da rede neural**. A inferência deverá acontecer **no próprio navegador**, sem API remota de classificação.
 
-**Desafio oficial:** [dez PNGs CAPTCHA](Desafio/Avancado/) e [guia de avaliação](Desafio/README.md). **Dataset obrigatório:** [MNIST](Dataset-MNIST/README.md), com 60.000 imagens de treino e 10.000 de teste, no formato IDX original.
+**Desafio oficial:** [dez PNGs CAPTCHA](Desafio/) e [guia de avaliação](Desafio/README.md). **Dataset obrigatório:** [MNIST](Dataset-MNIST/README.md), com 60.000 imagens de treino e 10.000 de teste, no formato IDX original.
 
-Os dez PNGs CAPTCHA são reservados para a **verificação final**. Não podem ser usados para treinamento, validação, seleção de arquitetura ou ajuste de hiperparâmetros. O objetivo é investigar **quantos dos dez casos a rede classifica corretamente**, documentando previsões e causas dos erros; **10/10 não é condição para aprovação**. Os resultados do MNIST e do desafio são avaliações diferentes. Os nove arquivos antigos que ainda aparecem na raiz de `Desafio/` **não integram a atividade atual**.
+Os dez PNGs CAPTCHA são reservados para a **verificação final**. Não podem ser usados para treinamento, validação, seleção de arquitetura ou ajuste de hiperparâmetros. O objetivo é investigar **quantos dos dez casos a rede classifica corretamente**, documentando previsões e causas dos erros; **10/10 não é condição para aprovação**. Os resultados do MNIST e do desafio são avaliações diferentes. Os dez arquivos estão diretamente em `Desafio/`, como `caso_01.png` a `caso_10.png`.
 
 ## Sequência obrigatória
 
