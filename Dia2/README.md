@@ -2,37 +2,39 @@
 
 ## Objetivo
 
-Aprender a construir um ambiente para coding agents, criar uma **skill de bootstrap baseada em perguntas**, transformar um desafio de programação em **GitHub Issues** e desenvolver e apresentar uma solução com o **GitHub Copilot no VS Code (modo agente)**.
+Aprender a construir um ambiente para coding agents, criar **do zero uma skill de bootstrap baseada em perguntas**, transformar um desafio em **GitHub Issues** e desenvolver e apresentar uma solução com o **GitHub Copilot no VS Code (modo agente)**.
 
-A IA deve ajudar a fazer o trabalho de engenharia: especificar, criar Issues, programar, treinar, testar, integrar e documentar. O aluno é responsável por orientar o agente, decidir, supervisionar e verificar. **Não há prompts prontos, código de solução nem tempos estipulados.**
+A IA deve ajudar a especificar, criar Issues, programar, treinar, testar, integrar e documentar. O aluno dirige o agente, decide e verifica. **Os exercícios não fornecem prompts prontos, skills implementadas, código de solução nem estimativas de tempo.**
 
-**Ferramentas:** VS Code, GitHub Copilot em modo agente, Git, GitHub, terminal e GitHub Pages. Recursos dependem das permissões da conta e do ambiente. As **skills em Markdown não exigem npx**, mas as dependências que vierem a ser escolhidas para treinar o modelo são outra questão.
+**Ferramentas:** VS Code, GitHub Copilot em modo agente, Git, GitHub, terminal e GitHub Pages. Os recursos efetivamente disponíveis dependem das permissões da conta e do ambiente. Skills nativas escritas em Markdown **não exigem npx nem bibliotecas extras para serem carregadas**; o projeto de machine learning poderá ter outras dependências.
 
 ## Desafio integrador
 
-Um repositório do professor disponibiliza **nove imagens de dígitos manuscritos**. Construir, com auxílio do agente, um sistema que identifique os dígitos por meio de **uma rede neural treinada no projeto**.
+O professor disponibilizará **nove imagens de dígitos manuscritos**. Desenvolver, com auxílio do agente, um sistema que as classifique usando **uma rede neural treinada pelos participantes com o Copilot**.
 
-A solução deverá incluir uma aplicação pública no **GitHub Pages**, em que qualquer pessoa desenhe um número, receba a classificação e observe uma visualização baseada em **informações reais da rede neural**. A inferência deverá executar no **próprio navegador**, sem API remota de classificação.
+Criar também uma aplicação pública no **GitHub Pages**: qualquer pessoa deverá poder desenhar um número, receber a classificação e observar uma visualização com **informações reais da rede neural**. A inferência deverá acontecer **no próprio navegador**, sem API remota de classificação.
 
 **Link das nove imagens:** a ser informado pelo professor.
 
-As nove imagens são reservadas para a **verificação final**. Não são um dataset de treinamento e não devem ser utilizadas no treino nem na escolha de hiperparâmetros. Os alunos investigarão dados adequados, arquitetura, métricas, framework e métodos de exportação; nenhuma solução específica está prescrita. O objetivo do desafio é **9 acertos em 9 imagens**, relatando o resultado real, sem correções manuais. Isso não substitui métricas em um conjunto de teste independente.
+As nove imagens são reservadas para a **verificação final**: não servem para treinamento nem ajuste de hiperparâmetros. Dataset, arquitetura, framework, métricas e exportação serão investigados e decididos pelos alunos. O objetivo do desafio é **9 acertos em 9 imagens**, com resultados reais e sem correções manuais; isso não substitui avaliação em conjunto de teste independente.
 
 ## Sequência obrigatória
 
-1. [Exercício 1 — Construir o starter repo](Exercicio-01-Starter-Repo.md). Criar uma estrutura genérica para trabalho com agentes.
-2. [Exercício 2 — Criar e testar a skill de bootstrap](Exercicio-02-Skill-Bootstrap.md). Desenvolver uma skill própria, baseada no conceito Ask Me, para entrevistar o usuário e popular o starter repo com contexto do desafio.
-3. [Exercício 3 — Planejar em Issues e desenvolver](Exercicio-03-Desenvolvimento-Issues.md). **Primeiro** fazer o agente propor e criar as Issues do projeto inteiro, revisar e aprovar; **depois** implementar por Issue.
-4. [Exercício 4 — Apresentação final](Exercicio-04-Apresentacao.md). Demonstrar o produto, os resultados e a colaboração com o agente.
+1. [Exercício 1 — Construir seu próprio starter repo](Exercicio-01-Starter-Repo.md): criar uma estrutura **genérica**, inspirada no exemplo fornecido pelo professor, mas projetada e construída pelos alunos.
+2. [Exercício 2 — Criar uma skill de bootstrap](Exercicio-02-Skill-Bootstrap.md): **compreender a lógica do padrão Ask Me e construir uma skill própria**, que entreviste o usuário e alimente o starter repo com o contexto do desafio.
+3. [Exercício 3 — Planejar em Issues e desenvolver](Exercicio-03-Desenvolvimento-Issues.md): **primeiro** fazer o agente planejar o projeto completo por Issues e aprová-las; **depois** implementar e verificar cada etapa.
+4. [Exercício 4 — Apresentação final](Exercicio-04-Apresentacao.md): demonstrar ao professor o produto funcionando e as evidências do trabalho com o agente.
 
-**Material de apoio:** [Guia de skills nativas para VS Code e catálogos públicos](Guia-Skills-Copilot.md).
+**Material de apoio:** [Guia de criação de skills no VS Code e referências externas](Guia-Skills-Copilot.md).
 
-## Skill de referência incluída
+## O que significa Ask Me?
 
-Este repositório contém uma skill didática Ask Me em [`.github/skills/ask-me/SKILL.md`](../.github/skills/ask-me/SKILL.md). Ela permite experimentar a técnica de entrevista **sem npx, Node.js ou pacotes adicionais**. Trata-se de uma referência genérica; no Exercício 2 o aluno criará **sua própria skill de bootstrap**, não apenas copiará a referência.
+É uma **estratégia de interação**, não uma skill já entregue: o agente identifica informações que faltam, faz perguntas relevantes, esclarece ambiguidades e registra decisões aprovadas **antes de começar a desenvolver**. No Exercício 2, cada aluno transforma essa lógica em uma skill de bootstrap capaz de popular **seu próprio starter repo**.
+
+**Não há uma skill Ask Me incluída neste repositório.** Os catálogos externos são material para pesquisar, compreender o padrão e projetar uma solução própria.
 
 ## Entrega do Dia 2
 
-Um **único repositório próprio** evoluído durante os exercícios, com starter, skill criada pelo aluno, contexto, especificação, Issues, código, modelo treinado, resultados, testes, site público, commits e evidências; além de demonstração ao professor.
+Um **único repositório próprio** com starter, skill criada pelo aluno, contexto obtido no bootstrap, especificação, Issues, código, modelo treinado, avaliação, testes, site público, commits e evidências; além da apresentação ao professor.
 
 **Referência pedagógica:** Engenharia de Agentes de IA — Cadernos 01 a 05.

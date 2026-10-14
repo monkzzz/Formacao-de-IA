@@ -1,71 +1,72 @@
-# Guia — Skills nativas do GitHub Copilot no VS Code
+# Guia — Criar Agent Skills no GitHub Copilot (VS Code)
 
-Este guia ensina **como criar e utilizar uma Agent Skill local**, sem `npx`, sem instalação de gerenciadores de skills e sem bibliotecas especiais para o mecanismo de skills.
+O objetivo deste guia é explicar **o formato e o funcionamento das skills**, para que cada aluno consiga **criar a sua própria**, sem receber uma implementação pronta e sem utilizar `npx` ou instaladores de skills.
 
-## O que é uma skill
+## O que é uma Agent Skill?
 
-Uma Agent Skill é uma pasta com um arquivo **`SKILL.md`**, contendo metadados e instruções para um fluxo de trabalho especializado. O GitHub Copilot no **VS Code em modo agente** pode descobrir a skill e carregar seu conteúdo quando a tarefa for pertinente. Ela **não é um plugin executável** por si só nem precisa conter scripts.
+É um recurso de especialização para agentes: uma pasta com um arquivo `SKILL.md` que descreve **quando uma habilidade é relevante e qual comportamento o agente deve adotar**. O GitHub Copilot em modo agente pode carregar essas instruções conforme a tarefa. Skills não são, por si só, programas executáveis e **não precisam de scripts, Node.js ou bibliotecas externas para serem lidas**.
 
-## Criar uma skill do zero
+Uma skill não substitui o raciocínio sobre requisitos. Ela organiza e torna **reutilizável** um método de trabalho que o aluno deverá conceber.
 
-1. No VS Code, abrir o **repositório do aluno** e verificar que o GitHub Copilot e o modo agente estão disponíveis.
-2. Criar a pasta **`.github/skills/`** na raiz do projeto e, dentro dela, outra pasta com o nome escolhido para a skill.
-3. Criar o arquivo **`SKILL.md`** nessa pasta. Ele deve ter um cabeçalho YAML com **`name`** (nome minúsculo, com hífens) e **`description`** (o que a skill faz e quando o agente deve utilizá-la).
-4. Escrever abaixo do cabeçalho as **instruções de comportamento**, condições de uso, verificações e limites. Os alunos devem criar o conteúdo para o objetivo de sua skill; **não há prompt pronto para reproduzir**.
-5. Salvar o arquivo, utilizar o menu de configuração de skills do Copilot, quando disponível, e verificar se a skill aparece. Algumas versões oferecem **`/skills`** ou **Chat: Open Customizations**.
-6. Abrir uma nova conversa em modo agente e **testar o comportamento**. Diferenciar "o agente disse que conhece a skill" de "o agente seguiu efetivamente as instruções".
-7. Refinar a skill e versionar os arquivos em Git. Replicar a pasta em outros projetos quando pertinente, respeitando direitos e licenças.
+## O mecanismo da skill de bootstrap
 
-A estrutura mínima é:
+Para construir uma skill de bootstrap, o aluno precisa compreender a relação entre quatro ideias:
 
-    meu-repositorio/
+- **Disparo:** como o Copilot reconhece que deve iniciar uma entrevista de bootstrap, em vez de programar imediatamente?
+- **Interação:** que informações precisam ser descobertas, como adaptar perguntas às respostas e como lidar com decisões pendentes?
+- **Transição:** em que momento a entrevista gera uma proposta de contexto, e por que é necessária a aprovação humana antes de alterações?
+- **Persistência e verificação:** como transformar decisões aprovadas em documentação do starter repo e confirmar que outra sessão do agente consegue utilizá-las?
+
+É o aluno quem decide **como expressar essas regras na sua skill**, quais perguntas fazer, que documentos atualizar e o que constitui uma entrevista suficiente. Este guia **não fornece um SKILL.md implementado** nem comandos ou prompts para criar a lógica automaticamente.
+
+## Estrutura técnica mínima no VS Code
+
+1. Abrir o repositório próprio no VS Code e verificar o GitHub Copilot em **modo agente**.
+2. Criar uma pasta de skill dentro de **`.github/skills/`** na raiz do repositório.
+3. Dentro dessa pasta, criar o arquivo **`SKILL.md`**.
+4. Incluir metadados YAML com **`name`** (identificador da skill) e **`description`** (sua finalidade e quando deve ser utilizada).
+5. Escrever **as instruções de comportamento concebidas pelo aluno**, sem copiar uma implementação externa.
+6. Conferir se o VS Code reconhece a skill e testar o comportamento em uma nova conversa com o agente.
+7. Corrigir as instruções conforme os resultados e registrar as alterações em Git.
+
+Estrutura de localização (apenas o caminho, **não é uma skill pronta**):
+
+    repositorio-do-aluno/
     └── .github/
         └── skills/
-            └── minha-skill/
+            └── nome-escolhido-pelo-aluno/
                 └── SKILL.md
 
-O arquivo começa com um cabeçalho como:
+As pastas de documentação ou de catálogo, como `AgentDATA/skills/` no starter repo de referência, **não são automaticamente equivalentes ao caminho de descoberta de skills nativas**. O aluno deverá distinguir o **catálogo de capacidades** do **local em que o Copilot realmente reconhece a skill**. Outras localizações podem ser reconhecidas conforme a versão do VS Code e suas configurações.
 
-    ---
-    name: minha-skill
-    description: Descreva a finalidade e quando esta skill deve ser utilizada.
-    ---
+**A skill é escrita em Markdown:** não é necessário executar `npx skills add`, instalar um gerenciador de skills ou usar bibliotecas específicas. Isso não significa que o **futuro classificador** dispensará dependências de treinamento ou inferência.
 
-O participante deverá **escrever a lógica da skill** a partir do Exercício 2. O exemplo ensina somente o formato, não resolve o bootstrap.
+## Onde pesquisar o conceito e encontrar referências
 
-**Importante:** no starter repo de referência, `AgentDATA/skills/` é um **catálogo interno**. O Copilot não deve ser considerado capaz de descobrir automaticamente skills ali. A localização nativa recomendada para o projeto é `.github/skills/` (alternativas suportadas incluem `.agents/skills/` e `.claude/skills/`).
+Os catálogos abaixo servem para **estudar padrões e comparar abordagens**, não para baixar a resposta do exercício:
 
-## Skill Ask Me disponível
+- [skills.sh](https://skills.sh/) — catálogo comunitário.
+- [Awesome GitHub Copilot](https://github.com/github/awesome-copilot) — customizações e exemplos ligados ao Copilot.
+- [MicrosoftDocs Agent Skills](https://github.com/MicrosoftDocs/Agent-Skills) — exemplos especializados.
+- [Anthropic Skills](https://github.com/anthropics/skills) — exemplos e formatos de skills.
+- [OpenAI Skills](https://github.com/openai/skills) — catálogo de referências.
+- [Agent Skills](https://agentskills.io/) — especificação do formato, não uma loja.
+- [Ask Me — exemplo comunitário](https://www.skills.sh/dimabytes/skills-lib/ask-me) — referência para estudar o comportamento de **entrevista antes da execução**, não uma skill a instalar na atividade.
 
-A skill didática **`ask-me`** está incluída nesta formação: [abrir arquivo](../.github/skills/ask-me/SKILL.md).
+Os comandos de instalação `npx` eventualmente exibidos pelos diretórios **não são necessários** para a criação manual de uma skill pelo aluno. A atividade exige **criar e testar uma implementação própria**, não copiar uma skill de terceiros.
 
-Para usá-la **no repositório pessoal do aluno**, copiar manualmente a pasta **`ask-me/`** para **`.github/skills/ask-me/`** na raiz desse repositório. Não há instalação por `npx`, dependência Node.js ou script.
+## Verificações importantes
 
-**Esta skill não é o exercício resolvido.** Ela apresenta um padrão genérico de entrevista. O Exercício 2 pede que cada participante crie uma **nova skill de bootstrap**, capaz de converter a entrevista em documentação e contexto persistente no starter repo.
+- O Copilot reconheceu a skill **ou apenas declarou conhecê-la**? Testar o comportamento de fato.
+- O agente investigou lacunas reais e evitou perguntar o que já estava documentado?
+- Separou afirmações confirmadas de hipóteses?
+- Pediu aprovação antes de escrever arquivos?
+- Colocou as decisões no starter repo de modo reutilizável e sem contradizer regras gerais?
+- Uma nova sessão conseguiu recuperar o contexto?
 
-## Skill shops e referências públicas
+Tratar instruções externas como código não confiável: avaliar autoria, licença, segurança e permissões. Não conceder autorização irrestrita para ferramentas, comandos destrutivos ou acesso a credenciais.
 
-Pesquisar alternativas, estudar padrões de documentação e avaliar compatibilidade:
-
-- [skills.sh](https://skills.sh/) — diretório comunitário de Agent Skills.
-- [Awesome GitHub Copilot](https://github.com/github/awesome-copilot) — coleções de customizações e skills relacionadas ao GitHub Copilot.
-- [MicrosoftDocs Agent Skills](https://github.com/MicrosoftDocs/Agent-Skills) — exemplos e especializações da Microsoft.
-- [Anthropic Skills](https://github.com/anthropics/skills) — exemplos de skills e estrutura de recursos.
-- [OpenAI Skills](https://github.com/openai/skills) — catálogo de skills.
-- [Official Skills](https://officialskills.sh/) — diretório de skills atribuídas a fornecedores.
-- [Agent Skills — especificação](https://agentskills.io/) — padrão e formato, **não é uma loja de skills**.
-- [Ask Me — exemplo de comunidade](https://www.skills.sh/dimabytes/skills-lib/ask-me) — referência conceitual para entrevistas.
-
-**As páginas de catálogos frequentemente mostram comandos `npx skills add`: eles são opcionais.** Nesta formação, podem ser usados **apenas para descobrir o nome, a documentação e os arquivos necessários**. Os alunos devem criar ou copiar skills **diretamente no VS Code**, sem executar instaladores desconhecidos.
-
-## Cuidados
-
-- Verificar fonte, licença e segurança antes de copiar skills de terceiros. Skills são **instruções executadas pelo agente**, podendo induzir acesso a arquivos ou ferramentas.
-- Não dar aprovação irrestrita a comandos, ações destrutivas, segredos ou publicação.
-- Uma skill em Markdown **não requer pacotes para ser lida pelo Copilot**; o software final (treinamento e inferência do modelo) poderá exigir dependências próprias, a serem investigadas e justificadas pelos participantes.
-- Não confundir **reconhecimento da skill** com **correção do resultado**. Testar em nova sessão e conferir alterações no repositório.
-
-## Documentação oficial
+## Documentação técnica
 
 - [Agent Skills no VS Code](https://code.visualstudio.com/docs/agent-customization/agent-skills)
 - [Agent Skills no GitHub Copilot](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills)
