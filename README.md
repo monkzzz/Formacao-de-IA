@@ -82,11 +82,11 @@ Os slides da formação estão organizados por dia, na sequência dos módulos. 
 | Ordem | Apresentação |
 | :---: | --- |
 | 0 | [Whoami](Dia1/Teorico/Whoami.pdf) |
-| 1 | [The Basics](Dia1/Teorico/The%20Basics.pdf) |
-| 2 | [LLM Anatomy](Dia1/Teorico/LLM%20Anatomy.pdf) |
-| 3 | [From LLM to Chatbot](Dia1/Teorico/From%20LLM%20to%20Chatbot.pdf) |
-| 4 | [Context Eng](Dia1/Teorico/Context%20Eng.pdf) |
-| 5 | [Model Chosing](Dia1/Teorico/Model%20Chosing.pdf) |
+| 3 | [The Basics](Dia1/Teorico/The%20Basics.pdf) |
+| 4 | [LLM Anatomy](Dia1/Teorico/LLM%20Anatomy.pdf) |
+| 5 | [From LLM to Chatbot](Dia1/Teorico/From%20LLM%20to%20Chatbot.pdf) |
+| 6 | [Context Eng](Dia1/Teorico/Context%20Eng.pdf) |
+| 7 | [Model Chosing](Dia1/Teorico/Model%20Chosing.pdf) |
 
 ### Dia 2 · Agentes e engenharia de software
 
