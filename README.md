@@ -81,23 +81,23 @@ Os slides da formação estão organizados por dia, na sequência dos módulos. 
 
 | Ordem | Apresentação |
 | :---: | --- |
-| 0 | [Whoami](Dia1/Whoami.pdf) |
-| 1 | [The Basics](Dia1/The%20Basics.pdf) |
-| 2 | [LLM Anatomy](Dia1/LLM%20Anatomy.pdf) |
-| 3 | [From LLM to Chatbot](Dia1/From%20LLM%20to%20Chatbot.pdf) |
-| 4 | [Context Eng](Dia1/Context%20Eng.pdf) |
-| 5 | [Model Chosing](Dia1/Model%20Chosing.pdf) |
+| 0 | [Whoami](Dia1/Teorico/Whoami.pdf) |
+| 1 | [The Basics](Dia1/Teorico/The%20Basics.pdf) |
+| 2 | [LLM Anatomy](Dia1/Teorico/LLM%20Anatomy.pdf) |
+| 3 | [From LLM to Chatbot](Dia1/Teorico/From%20LLM%20to%20Chatbot.pdf) |
+| 4 | [Context Eng](Dia1/Teorico/Context%20Eng.pdf) |
+| 5 | [Model Chosing](Dia1/Teorico/Model%20Chosing.pdf) |
 
 ### Dia 2 · Agentes e engenharia de software
 
 | Ordem | Apresentação |
 | :---: | --- |
-| 2 | [Coding Agents](Dia2/Coding%20Agents.pdf) |
-| 3 | [Agentic Context Eng](Dia2/Agentic%20Context%20Eng.pdf) |
-| 4 | [Task eng](Dia2/Task%20eng.pdf) |
-| 5 | [VDD and Autonomy](Dia2/VDD%20and%20Autonomy.pdf) |
+| 2 | [Coding Agents](Dia2/Teorico/Coding%20Agents.pdf) |
+| 3 | [Agentic Context Eng](Dia2/Teorico/Agentic%20Context%20Eng.pdf) |
+| 4 | [Task eng](Dia2/Teorico/Task%20eng.pdf) |
+| 5 | [VDD and Autonomy](Dia2/Teorico/VDD%20and%20Autonomy.pdf) |
 
-> **Disponibilidade:** os links acima apontam para os destinos previstos em `Dia1/` e `Dia2/`. Eles passarão a funcionar depois que os PDFs forem enviados ao repositório.
+> **Materiais já disponíveis:** os PDFs estão nas pastas [`Dia1/Teorico/`](Dia1/Teorico/) e [`Dia2/Teorico/`](Dia2/Teorico/).
 
 ## Dia 1 · Pesquisa, análise e pensamento crítico
 
@@ -143,18 +143,18 @@ Toda a inferência deverá acontecer **no navegador**, usando os pesos de uma re
 >
 > Projeto de referência desenvolvido por **Vinicius Canonici**: uma rede neural treinada com MNIST, integrada a uma interface interativa para desenhar dígitos, acompanhar previsões e visualizar pixels, ativações e conexões da rede. Os pesos são utilizados para **inferência diretamente no navegador**, sem backend.
 >
-> **O desafio dos participantes vai além desse exemplo:** cada aplicação deverá também permitir **carregar imagens locais** para classificar as nove imagens do test set. Analise a implementação, reutilize o que for útil, adapte ao seu projeto e descarte o que não for necessário — **não é obrigatório reproduzir sua arquitetura ou tecnologias**.
+> **A demonstração já permite desenho e upload de imagens.** Cabe aos participantes criar e verificar **sua própria rede e aplicação**, capaz de classificar os dez PNGs CAPTCHA do desafio. Analise, reutilize e adapte apenas componentes úteis, sem impor a arquitetura do exemplo.
 
 <div align="center">
 
-**60.000 imagens de treino** &nbsp;·&nbsp; **10.000 imagens de teste** &nbsp;·&nbsp; **9 imagens no desafio final**
+**60.000 imagens de treino** &nbsp;·&nbsp; **10.000 imagens de teste MNIST** &nbsp;·&nbsp; **10 imagens CAPTCHA no desafio final**
 
-**[Acessar o MNIST](Dia2/Dataset-MNIST/README.md)** &nbsp;·&nbsp; **[Ver as nove imagens](Dia2/Desafio/)** &nbsp;·&nbsp; **[Novo: 10 dígitos problemáticos](Dia2/Desafio/Avancado/README.md)**
+**[Acessar o MNIST](Dia2/Dataset-MNIST/README.md)** &nbsp;·&nbsp; **[Desafio oficial: 10 PNGs CAPTCHA](Dia2/Desafio/Avancado/README.md)** &nbsp;·&nbsp; **[Guia do desafio](Dia2/Desafio/README.md)**
 
 </div>
 
 > [!CAUTION]
-> As **nove imagens do desafio** são reservadas para a verificação final; **não devem ser utilizadas para treinar ou ajustar o modelo**. Seus nomes revelam os dígitos, mas a classificação deverá depender **somente dos pixels da imagem**. Os resultados devem ser reportados como ocorreram, sem correção manual de previsões.
+> O **único conjunto oficial do desafio** são os **dez PNGs CAPTCHA** em `Dia2/Desafio/Avancado/`. Não devem ser utilizados para treino, validação ou escolha de hiperparâmetros. Registre as dez previsões antes de comparar com os rótulos, sem ajustar manualmente os resultados. Os nove arquivos antigos que ainda estão na raiz de `Dia2/Desafio/` **não fazem parte da atividade atual**.
 
 #### Exercício 3, em quatro partes
 
@@ -163,7 +163,7 @@ Toda a inferência deverá acontecer **no navegador**, usando os pesos de uma re
 | **3.1** | [Planejamento da rede neural](Dia2/Exercicio-03/Parte-01-Planejamento-da-Rede.md) | Especificação, decisões e **GitHub Issues criadas e aprovadas antes do código**. |
 | **3.2** | [Coding com o agente](Dia2/Exercicio-03/Parte-02-Coding-com-o-Agente.md) | Rede implementada e treinada, testes, métricas e pesos exportáveis. |
 | **3.3** | [Demonstração no GitHub Pages](Dia2/Exercicio-03/Parte-03-Site-GitHub-Pages.md) | Site interativo com desenho, **upload de imagens**, inferência local e visualização real da rede. |
-| **3.4** | [Funciona com o test set?](Dia2/Exercicio-03/Parte-04-Teste-do-Desafio.md) | Previsões documentadas para as nove imagens, resultado real e análise de erros. |
+| **3.4** | [Funciona com o test set?](Dia2/Exercicio-03/Parte-04-Teste-do-Desafio.md) | Dez previsões CAPTCHA documentadas, diagnóstico e avaliação honesta. |
 
 O modelo de trabalho incentivado em todas as etapas é **Plan → Exec → Verify → Review → Commit**.
 
@@ -176,7 +176,7 @@ Os materiais de referência não são respostas para entregar. São oportunidade
 | **[Starter Repo de referência](Dia2/Referencia-Starter-Repo/LEIA-PRIMEIRO.md)** | Como um agente recebe regras persistentes, carrega procedimentos sob demanda, registra conhecimento e localiza skills, CLI tools e MCPs. |
 | **[Arquivos do Starter Repo](Dia2/Referencia-Starter-Repo/Starter-Repo/)** | Examine a implementação, **reutilize e adapte** componentes úteis e **elimine** dependências e regras desnecessárias. |
 | **[Guia de Agent Skills](Dia2/Guia-Skills-Copilot.md)** | Formato e descoberta de skills nativas do Copilot, fontes para pesquisa e criação manual **sem `npx`**. |
-| **[Image-classifier-demo](https://github.com/vcanonici/Image-classifier-demo)** | Referência de experiência interativa: desenho, inferência client-side e visualização da rede. O projeto do aluno **deve acrescentar upload de imagens**. |
+| **[Image-classifier-demo](https://github.com/vcanonici/Image-classifier-demo)** | Referência com desenho, **upload de imagens**, inferência local e visualização real da rede. A solução dos alunos deve ser própria. |
 | **[Issue #1 — Exemplo didático](https://github.com/vcanonici/Formacao-de-IA/issues/1)** | Como especificar **contexto, objetivo, dependências, escopo, critérios de aceitação e evidências**. |
 | **[PR #2 — Exemplo didático](https://github.com/vcanonici/Formacao-de-IA/pull/2)** | Como apresentar código, testes e CI para revisão. Usa um **classificador Python por centroides**, não uma rede neural; o PR é mantido aberto para estudo. |
 
@@ -209,7 +209,7 @@ Formacao-de-IA/
 ├── Dia1/
 │   ├── README.md                      # Percurso de pesquisa
 │   ├── Exercicio-*.md                 # Quatro exercícios
-│   └── *.pdf                          # Seis apresentações
+│   └── Teorico/                       # Seis apresentações em PDF
 ├── Dia2/
 │   ├── README.md                      # Percurso com agentes
 │   ├── Exercicio-01-Starter-Repo.md
@@ -218,10 +218,10 @@ Formacao-de-IA/
 │   ├── Exercicio-03/                  # Quatro partes do projeto
 │   ├── Exercicio-04-Roda-de-Feedback.md
 │   ├── Dataset-MNIST/                 # Dataset e verificação de integridade
-│   ├── Desafio/                       # Nove imagens + 10 exemplos avançados
+│   ├── Desafio/                       # Dez PNGs CAPTCHA oficiais em Avancado/
 │   ├── Referencia-Starter-Repo/       # Exemplo para análise seletiva
 │   ├── Guia-Skills-Copilot.md
-│   └── *.pdf                          # Quatro apresentações
+│   └── Teorico/                       # Quatro apresentações em PDF
 ├── LICENSE.md
 └── CITATION.cff
 ```
