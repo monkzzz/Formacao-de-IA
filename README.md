@@ -149,12 +149,12 @@ Toda a inferência deverá acontecer **no navegador**, usando os pesos de uma re
 
 **60.000 imagens de treino** &nbsp;·&nbsp; **10.000 imagens de teste MNIST** &nbsp;·&nbsp; **10 imagens CAPTCHA no desafio final**
 
-**[Acessar o MNIST](Dia2/Dataset-MNIST/README.md)** &nbsp;·&nbsp; **[Desafio oficial: 10 PNGs CAPTCHA](Dia2/Desafio/Avancado/README.md)** &nbsp;·&nbsp; **[Guia do desafio](Dia2/Desafio/README.md)**
+**[Acessar o MNIST](Dia2/Dataset-MNIST/README.md)** &nbsp;·&nbsp; **[Desafio oficial: 10 PNGs CAPTCHA](Dia2/Desafio/)** &nbsp;·&nbsp; **[Guia de avaliação](Dia2/Desafio/README.md)**
 
 </div>
 
 > [!CAUTION]
-> O **único conjunto oficial do desafio** são os **dez PNGs CAPTCHA** em `Dia2/Desafio/Avancado/`. Não devem ser utilizados para treino, validação ou escolha de hiperparâmetros. Registre as dez previsões antes de comparar com os rótulos, sem ajustar manualmente os resultados. Os nove arquivos antigos que ainda estão na raiz de `Dia2/Desafio/` **não fazem parte da atividade atual**.
+> O **único conjunto oficial do desafio** são os **dez PNGs CAPTCHA** em `Dia2/Desafio/`. Não devem ser utilizados para treino, validação ou escolha de hiperparâmetros. Registre as dez previsões antes de comparar com os rótulos, sem ajustar manualmente os resultados. Os dez arquivos estão diretamente nessa pasta, de `caso_01.png` a `caso_10.png`.
 
 #### Exercício 3, em quatro partes
 
@@ -218,7 +218,7 @@ Formacao-de-IA/
 │   ├── Exercicio-03/                  # Quatro partes do projeto
 │   ├── Exercicio-04-Roda-de-Feedback.md
 │   ├── Dataset-MNIST/                 # Dataset e verificação de integridade
-│   ├── Desafio/                       # Dez PNGs CAPTCHA oficiais em Avancado/
+│   ├── Desafio/                       # Dez PNGs CAPTCHA oficiais
 │   ├── Referencia-Starter-Repo/       # Exemplo para análise seletiva
 │   ├── Guia-Skills-Copilot.md
 │   └── Teorico/                       # Quatro apresentações em PDF
