@@ -29,6 +29,8 @@ As nove imagens são reservadas para a **verificação final**: não servem para
 
 **Issue de referência para o Exercício 3:** [Issue #1 — Planejamento e especificação da rede MNIST](https://github.com/vcanonici/Formacao-de-IA/issues/1). Os participantes devem analisar os critérios de aceitação e **criar Issues próprias nos seus repositórios**; esta Issue é um exemplo, não uma tarefa a implementar no repositório da formação.
 
+**PR de referência para o Exercício 3:** [PR #2 — Classificador simples em Python, com testes e CI](https://github.com/vcanonici/Formacao-de-IA/pull/2). Examine **Conversation**, **Files changed** e **Checks**: o exemplo ensina a submeter e revisar mudanças verificáveis. **Não é uma rede neural nem uma solução para copiar no projeto final; o PR permanece aberto, sem merge.**
+
 **Material de apoio:** [Guia de criação de skills no VS Code e referências externas](Guia-Skills-Copilot.md).
 
 ## O que significa Ask Me?
