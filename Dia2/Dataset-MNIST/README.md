@@ -13,7 +13,7 @@ Os arquivos originais são distribuídos em formato **IDX compactado com gzip**,
 | `t10k-images-idx3-ubyte.gz` | Imagens de teste | 10.000 |
 | `t10k-labels-idx1-ubyte.gz` | Rótulos de teste | 10.000 |
 
-**Os arquivos binários serão versionados em `data/` pelo workflow de importação do repositório**, quando o GitHub Actions estiver autorizado para gravar na branch principal. Em qualquer ambiente, pode-se obtê-los usando o procedimento abaixo, mesmo que o diretório `data/` ainda não esteja preenchido.
+**Os quatro arquivos binários já estão versionados em [`data/`](data/) na branch `main`.** O workflow de importação executou com sucesso. O downloader abaixo permanece disponível para conferir a integridade dos arquivos e recuperá-los localmente, se necessário.
 
 ## Disponibilização reproduzível, sem pacotes adicionais
 
