@@ -39,6 +39,18 @@ O objetivo do desafio é **9 acertos em 9 imagens**. Um resultado inferior deve 
 
 Se quiser aprimorar a solução depois de verificar os nove exemplos, registre essa nova iteração separadamente e **não a apresente como se fosse o teste independente original**.
 
+## Desafio adicional — dez imagens problemáticas
+
+Depois de concluir e documentar as previsões das nove imagens originais, há uma segunda bateria: **[dez dígitos difíceis](../Desafio/Avancado/README.md)**.
+
+As dez imagens representam as classes **0–9 uma vez cada**, em ordem embaralhada, com fundos coloridos, traços desviantes, riscos distratores, variação de orientação e oclusões. Não são exemplos do MNIST nem fazem parte das suas 10.000 imagens oficiais de teste.
+
+- **Congele e registre** o modelo/site antes da primeira classificação do conjunto avançado.
+- **Faça upload** das dez imagens na página publicada, individualmente ou em conjunto; registre as previsões brutas e pontuações antes da comparação com o gabarito do professor.
+- **Investigue o pré-processamento**: uma falha pode surgir da separação entre fundo e tinta, e não apenas da capacidade da rede.
+- **Reportar separadamente:** acurácia do MNIST, resultado das nove imagens originais e acertos nos dez casos avançados. Não retreinar ou selecionar modelos a partir do conjunto avançado e ainda chamá-lo de teste independente.
+- **Não há obrigação de acertar as dez**: elas são intencionalmente confusas. O objetivo é identificar limites e apresentar evidências reais, sem ajustar previsões manualmente.
+
 ## Matriz de verificação
 
 Para cada ponto, registrar **PASS, FAIL, BLOCKED ou NOT RUN**, acompanhado de evidência:

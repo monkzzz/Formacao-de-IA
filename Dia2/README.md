@@ -14,9 +14,9 @@ O repositório disponibiliza **[nove imagens de dígitos manuscritos](Desafio/)*
 
 Criar também uma aplicação pública no **GitHub Pages**: qualquer pessoa deverá poder desenhar um número, receber a classificação e observar uma visualização com **informações reais da rede neural**. A inferência deverá acontecer **no próprio navegador**, sem API remota de classificação.
 
-**Imagens do desafio:** [Dia2/Desafio/](Desafio/). **Dataset de treino e teste:** [MNIST](Dataset-MNIST/README.md), com 60.000 imagens de treino e 10.000 de teste, disponibilizadas em formato IDX original.
+**Imagens do desafio:** [nove imagens originais](Desafio/) e [dez imagens problemáticas — desafio avançado](Desafio/Avancado/). **Dataset de treino e teste:** [MNIST](Dataset-MNIST/README.md), com 60.000 imagens de treino e 10.000 de teste, disponibilizadas em formato IDX original.
 
-As nove imagens são reservadas para a **verificação final**: não servem para treinamento nem ajuste de hiperparâmetros. O dataset **MNIST é obrigatório**; arquitetura, framework, métricas complementares e exportação serão investigados e decididos pelos alunos. O objetivo do desafio é **9 acertos em 9 imagens**, com resultados reais e sem correções manuais; isso não substitui avaliação em conjunto de teste independente.
+As nove imagens originais e as dez imagens avançadas são reservadas para a **verificação final**: não servem para treinamento nem ajuste de hiperparâmetros. O dataset **MNIST é obrigatório**; arquitetura, framework, métricas complementares e exportação serão investigados e decididos pelos alunos. O objetivo do desafio é **9 acertos em 9 imagens**, com resultados reais e sem correções manuais; isso não substitui avaliação em conjunto de teste independente. **Bônus:** testar o [conjunto avançado de dez dígitos](Desafio/Avancado/README.md), com ruído, oclusões e traços distratores, registrando seus resultados separadamente.
 
 ## Sequência obrigatória
 

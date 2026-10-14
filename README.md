@@ -123,7 +123,7 @@ Toda a inferência deverá acontecer **no navegador**, usando os pesos de uma re
 
 **60.000 imagens de treino** &nbsp;·&nbsp; **10.000 imagens de teste** &nbsp;·&nbsp; **9 imagens no desafio final**
 
-**[Acessar o MNIST](Dia2/Dataset-MNIST/README.md)** &nbsp;·&nbsp; **[Ver as nove imagens](Dia2/Desafio/)**
+**[Acessar o MNIST](Dia2/Dataset-MNIST/README.md)** &nbsp;·&nbsp; **[Ver as nove imagens](Dia2/Desafio/)** &nbsp;·&nbsp; **[Novo: 10 dígitos problemáticos](Dia2/Desafio/Avancado/README.md)**
 
 </div>
 
@@ -191,7 +191,7 @@ Formacao-de-IA/
 │   ├── Exercicio-03/                  # Quatro partes do projeto
 │   ├── Exercicio-04-Roda-de-Feedback.md
 │   ├── Dataset-MNIST/                 # Dataset e verificação de integridade
-│   ├── Desafio/                       # Nove imagens para avaliação
+│   ├── Desafio/                       # Nove imagens + 10 exemplos avançados
 │   ├── Referencia-Starter-Repo/       # Exemplo para análise seletiva
 │   └── Guia-Skills-Copilot.md
 ├── LICENSE.md
