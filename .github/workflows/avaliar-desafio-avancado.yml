@@ -1,0 +1,34 @@
+name: Testar dígitos difíceis na aplicação publicada
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/avaliar-desafio-avancado.yml
+      - Dia2/Desafio/avaliar_captcha_no_site.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Preparar navegador automatizado
+        run: |
+          python -m pip install playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Classificar os 10 dígitos no site real
+        run: |
+          python Dia2/Desafio/avaliar_captcha_no_site.py --output /tmp/resultado-captcha.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: resultado-captcha-avancado
+          path: /tmp/resultado-captcha.json
