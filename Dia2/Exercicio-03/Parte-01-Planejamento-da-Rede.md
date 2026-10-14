@@ -19,7 +19,7 @@ Nesta parte você **não deve pedir a implementação integral**. O objetivo é 
 - Qual a diferença entre **treinar**, **validar** e **testar** uma rede?
 - Como utilizar o conjunto de teste do MNIST sem deixá-lo influenciar a escolha da arquitetura ou dos hiperparâmetros?
 - Como um desenho criado no navegador pode diferir das imagens usadas no treino?
-- Por que os [dez PNGs CAPTCHA do desafio oficial](../Desafio/Avancado/README.md) precisam ficar fora do treino, da escolha de arquitetura e do ajuste do modelo?
+- Por que os [dez PNGs CAPTCHA do desafio oficial](../Desafio/README.md) precisam ficar fora do treino, da escolha de arquitetura e do ajuste do modelo?
 
 ### Arquitetura e treinamento
 
