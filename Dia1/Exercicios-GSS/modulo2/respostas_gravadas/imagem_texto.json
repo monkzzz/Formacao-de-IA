@@ -1,0 +1,42 @@
+{
+ "modelo": "zai-org/glm-4.6v-flash",
+ "data": "2026-10-13",
+ "respostas": {
+  "peca|Descrever": {
+   "text": "A imagem mostra um bloco retangular cinzento com duas furos circulares na face frontal. O bloco apresenta uma fissura irregular que se estende entre os dois furos. O fundo é branco e o bloco exibe uma sombra, indicando a luz proveniente da esquerda.",
+   "seconds": 45.8
+  },
+  "peca|Pergunta": {
+   "text": "Há uma anomalia visível: uma fissura na superfície entre os dois buracos. A fissura está localizada no centro do bloco, entre as duas aberturas circulares. O que se observa é a presença da fissura; hipóteses sobre sua causa (ex: fratura) não são evidentes na imagem.",
+   "seconds": 15.7
+  },
+  "peca|Limites": {
+   "text": "Não se pode determinar o material do bloco (ex: concreto ou metal) apenas pela imagem. Não se consegue saber a causa da fenda (como estresse, choque ou mudança de temperatura). As dimensões ou peso do objeto não são inferíveis a partir desta representação gráfica.",
+   "seconds": 13.4
+  },
+  "grafico|Descrever": {
+   "text": "A imagem é um gráfico de barras com o título \"Minutos de paragem por linha (dados fictícios)\". Ele compara três linhas, onde Linha 1 tem aproximadamente 5 minutos, Linha 2 tem cerca de 20 minutos (o valor mais alto) e Linha 3 tem cerca de 8 minutos.",
+   "seconds": 12.0
+  },
+  "grafico|Pergunta": {
+   "text": "A linha que teve mais minutos de paragem foi a Linha 2. Foram cerca de 20 minutos.",
+   "seconds": 8.1
+  },
+  "grafico|Limites": {
+   "text": "Não se pode inferir os motivos das paragens (ex: falhas técnicas ou congestionamento). Não se consegue saber se os dados representam um único dia ou uma média de múltiplos dias. Não é possível determinar a frequência de paradas por hora ou o número total de paradas na linha.",
+   "seconds": 9.9
+  },
+  "foto|Descrever": {
+   "text": "A imagem mostra uma placa metálica retangular com bordas arredondadas. Possui dois buracos redondos em cada extremidade e uma fenda que atravessa o centro. Está sobre uma superfície de metal com marcas e manchas, indicando uso.",
+   "seconds": 22.4
+  },
+  "foto|Pergunta": {
+   "text": "Há uma anomalia visível na placa metálica. A anomalia é uma fissura que se estende entre os dois buracos centrais da peça. Observo a fissura; não há hipótese sobre sua causa, apenas a detecção da falha.",
+   "seconds": 24.0
+  },
+  "foto|Limites": {
+   "text": "Não se pode inferir o material exato (ex: tipo de aço) apenas pela imagem.  \nNão se consegue saber a causa da fenda (se foi por choque, calor ou outro fator), pois a imagem não mostra o contexto de sua formação.  \nNão é possível determinar a função ou aplicação do objeto sem informações adicionais, já que a imagem só mostra a forma e defeito.",
+   "seconds": 23.7
+  }
+ }
+}

@@ -1,0 +1,8012 @@
+{
+ "model": "amalia-9b-0626-dpo",
+ "recorded_on": "2026-10-12",
+ "note": "Probabilidades devolvidas pelo LM Studio (top_logprobs) para cada contexto.",
+ "steps": {
+  "A produção foi retomada após": {
+   "is_end": false,
+   "options": [
+    [
+     " uma",
+     0.298801
+    ],
+    [
+     " a",
+     0.287535
+    ],
+    [
+     " um",
+     0.191151
+    ],
+    [
+     " det",
+     0.069244
+    ],
+    [
+     " o",
+     0.05068
+    ],
+    [
+     " resolver",
+     0.01425
+    ],
+    [
+     " ",
+     0.008278
+    ],
+    [
+     " corrig",
+     0.00778
+    ],
+    [
+     " identificar",
+     0.003554
+    ],
+    [
+     " ter",
+     0.003221
+    ]
+   ]
+  },
+  "A produção foi retomada após uma": {
+   "is_end": false,
+   "options": [
+    [
+     " fal",
+     0.282453
+    ],
+    [
+     " breve",
+     0.24555
+    ],
+    [
+     " par",
+     0.073488
+    ],
+    [
+     " pequena",
+     0.065761
+    ],
+    [
+     " interrup",
+     0.052453
+    ],
+    [
+     " av",
+     0.043558
+    ],
+    [
+     " pausa",
+     0.041355
+    ],
+    [
+     " lige",
+     0.037241
+    ],
+    [
+     " queda",
+     0.020152
+    ],
+    [
+     " curta",
+     0.00815
+    ]
+   ]
+  },
+  "A produção foi retomada após uma fal": {
+   "is_end": false,
+   "options": [
+    [
+     "ha",
+     0.999721
+    ],
+    [
+     "ência",
+     6.5e-05
+    ],
+    [
+     "pa",
+     2.6e-05
+    ],
+    [
+     "ácia",
+     2.4e-05
+    ],
+    [
+     "har",
+     1.3e-05
+    ],
+    [
+     "he",
+     1.1e-05
+    ],
+    [
+     "has",
+     9e-06
+    ],
+    [
+     "ia",
+     9e-06
+    ],
+    [
+     "ésia",
+     7e-06
+    ],
+    [
+     "ci",
+     7e-06
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falha": {
+   "is_end": false,
+   "options": [
+    [
+     " de",
+     0.216554
+    ],
+    [
+     " tempor",
+     0.171094
+    ],
+    [
+     " no",
+     0.138404
+    ],
+    [
+     " na",
+     0.078133
+    ],
+    [
+     " inesper",
+     0.053423
+    ],
+    [
+     " técnica",
+     0.047965
+    ],
+    [
+     " mec",
+     0.041302
+    ],
+    [
+     " do",
+     0.037719
+    ],
+    [
+     " moment",
+     0.025599
+    ],
+    [
+     " breve",
+     0.020956
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falha de": {
+   "is_end": false,
+   "options": [
+    [
+     " energia",
+     0.392268
+    ],
+    [
+     " equipamento",
+     0.140678
+    ],
+    [
+     " corrente",
+     0.047148
+    ],
+    [
+     " um",
+     0.043479
+    ],
+    [
+     " sensor",
+     0.018129
+    ],
+    [
+     " segurança",
+     0.015502
+    ],
+    [
+     " curto",
+     0.014713
+    ],
+    [
+     " alimentação",
+     0.013843
+    ],
+    [
+     " fornec",
+     0.013836
+    ],
+    [
+     " ar",
+     0.011888
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falha de energia": {
+   "is_end": false,
+   "options": [
+    [
+     " tempor",
+     0.34312
+    ],
+    [
+     " de",
+     0.111896
+    ],
+    [
+     ",",
+     0.103597
+    ],
+    [
+     " que",
+     0.080869
+    ],
+    [
+     " inesper",
+     0.032625
+    ],
+    [
+     " na",
+     0.028664
+    ],
+    [
+     ".",
+     0.025083
+    ],
+    [
+     " breve",
+     0.020651
+    ],
+    [
+     " causada",
+     0.01968
+    ],
+    [
+     " moment",
+     0.015785
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falha de energia tempor": {
+   "is_end": false,
+   "options": [
+    [
+     "ária",
+     0.999745
+    ],
+    [
+     "ário",
+     0.000116
+    ],
+    [
+     "ariamente",
+     5.6e-05
+    ],
+    [
+     "árias",
+     1.9e-05
+    ],
+    [
+     "ar",
+     1.1e-05
+    ],
+    [
+     "izada",
+     9e-06
+    ],
+    [
+     "aria",
+     8e-06
+    ],
+    [
+     "ary",
+     5e-06
+    ],
+    [
+     "ários",
+     5e-06
+    ],
+    [
+     "ória",
+     3e-06
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falha de energia temporária": {
+   "is_end": false,
+   "options": [
+    [
+     ".",
+     0.275939
+    ],
+    [
+     ",",
+     0.269646
+    ],
+    [
+     " na",
+     0.10437
+    ],
+    [
+     " ter",
+     0.084402
+    ],
+    [
+     " que",
+     0.073822
+    ],
+    [
+     " no",
+     0.026384
+    ],
+    [
+     " ser",
+     0.015223
+    ],
+    [
+     " num",
+     0.015159
+    ],
+    [
+     " devido",
+     0.014267
+    ],
+    [
+     " resolver",
+     0.013032
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falha de energia temporária.": {
+   "is_end": true,
+   "options": []
+  },
+  "A produção foi retomada após a": {
+   "is_end": false,
+   "options": [
+    [
+     " resolução",
+     0.375905
+    ],
+    [
+     " dete",
+     0.096681
+    ],
+    [
+     " elim",
+     0.082548
+    ],
+    [
+     " rep",
+     0.054624
+    ],
+    [
+     " identificação",
+     0.051068
+    ],
+    [
+     " corre",
+     0.05053
+    ],
+    [
+     " par",
+     0.030746
+    ],
+    [
+     " máquina",
+     0.024628
+    ],
+    [
+     " fal",
+     0.020713
+    ],
+    [
+     " detec",
+     0.017817
+    ]
+   ]
+  },
+  "A produção foi retomada após a resolução": {
+   "is_end": false,
+   "options": [
+    [
+     " de",
+     0.794491
+    ],
+    [
+     " rápida",
+     0.071015
+    ],
+    [
+     " do",
+     0.049945
+    ],
+    [
+     " imedi",
+     0.028009
+    ],
+    [
+     " da",
+     0.021877
+    ],
+    [
+     ",",
+     0.005518
+    ],
+    [
+     " tempor",
+     0.002893
+    ],
+    [
+     " urgente",
+     0.002435
+    ],
+    [
+     " rep",
+     0.002324
+    ],
+    [
+     " inesper",
+     0.001765
+    ]
+   ]
+  },
+  "A produção foi retomada após a resolução de": {
+   "is_end": false,
+   "options": [
+    [
+     " um",
+     0.587204
+    ],
+    [
+     " uma",
+     0.401861
+    ],
+    [
+     " problemas",
+     0.002604
+    ],
+    [
+     " fal",
+     0.001068
+    ],
+    [
+     " av",
+     0.000596
+    ],
+    [
+     " det",
+     0.000293
+    ],
+    [
+     " des",
+     0.000289
+    ],
+    [
+     " erros",
+     0.000261
+    ],
+    [
+     " anom",
+     0.000237
+    ],
+    [
+     " dois",
+     0.000223
+    ]
+   ]
+  },
+  "A produção foi retomada após a resolução de um": {
+   "is_end": false,
+   "options": [
+    [
+     " problema",
+     0.270807
+    ],
+    [
+     " curto",
+     0.185271
+    ],
+    [
+     " atras",
+     0.087513
+    ],
+    [
+     " erro",
+     0.049127
+    ],
+    [
+     " pequeno",
+     0.04618
+    ],
+    [
+     " des",
+     0.04354
+    ],
+    [
+     " at",
+     0.033727
+    ],
+    [
+     " bloque",
+     0.027964
+    ],
+    [
+     " lige",
+     0.024073
+    ],
+    [
+     " breve",
+     0.016774
+    ]
+   ]
+  },
+  "A produção foi retomada após a resolução de um problema": {
+   "is_end": false,
+   "options": [
+    [
+     " de",
+     0.492679
+    ],
+    [
+     " técnico",
+     0.097599
+    ],
+    [
+     " com",
+     0.09414
+    ],
+    [
+     " no",
+     0.089988
+    ],
+    [
+     " na",
+     0.054795
+    ],
+    [
+     " mec",
+     0.025358
+    ],
+    [
+     " inesper",
+     0.019145
+    ],
+    [
+     " tempor",
+     0.010952
+    ],
+    [
+     " rec",
+     0.008016
+    ],
+    [
+     " num",
+     0.007295
+    ]
+   ]
+  },
+  "A produção foi retomada após a resolução de um problema de": {
+   "is_end": false,
+   "options": [
+    [
+     " av",
+     0.127348
+    ],
+    [
+     " sobre",
+     0.106778
+    ],
+    [
+     " ma",
+     0.066055
+    ],
+    [
+     " calib",
+     0.040807
+    ],
+    [
+     " rut",
+     0.037591
+    ],
+    [
+     " al",
+     0.030595
+    ],
+    [
+     " des",
+     0.0244
+    ],
+    [
+     " fal",
+     0.021751
+    ],
+    [
+     " vib",
+     0.014583
+    ],
+    [
+     " alimentação",
+     0.013301
+    ]
+   ]
+  },
+  "A produção foi retomada após a resolução de um problema de av": {
+   "is_end": false,
+   "options": [
+    [
+     "aria",
+     0.988779
+    ],
+    [
+     "arias",
+     0.0102
+    ],
+    [
+     "iação",
+     0.000169
+    ],
+    [
+     "ari",
+     0.000158
+    ],
+    [
+     "ast",
+     0.000155
+    ],
+    [
+     "are",
+     7.3e-05
+    ],
+    [
+     "ária",
+     5.9e-05
+    ],
+    [
+     "aría",
+     4.5e-05
+    ],
+    [
+     "c",
+     3.5e-05
+    ],
+    [
+     "ario",
+     2.6e-05
+    ]
+   ]
+  },
+  "A produção foi retomada após a resolução de um problema de avaria": {
+   "is_end": false,
+   "options": [
+    [
+     " no",
+     0.272607
+    ],
+    [
+     " na",
+     0.141165
+    ],
+    [
+     " de",
+     0.139559
+    ],
+    [
+     " do",
+     0.083894
+    ],
+    [
+     " num",
+     0.06434
+    ],
+    [
+     " mec",
+     0.045349
+    ],
+    [
+     " numa",
+     0.036361
+    ],
+    [
+     " inesper",
+     0.025482
+    ],
+    [
+     ".",
+     0.024672
+    ],
+    [
+     " nos",
+     0.024579
+    ]
+   ]
+  },
+  "A produção foi retomada após a resolução de um problema de avaria no": {
+   "is_end": false,
+   "options": [
+    [
+     " equipamento",
+     0.45591
+    ],
+    [
+     " sistema",
+     0.175932
+    ],
+    [
+     " sensor",
+     0.089742
+    ],
+    [
+     " rob",
+     0.063117
+    ],
+    [
+     " dispositivo",
+     0.012253
+    ],
+    [
+     " motor",
+     0.011684
+    ],
+    [
+     " transport",
+     0.010341
+    ],
+    [
+     " aliment",
+     0.010193
+    ],
+    [
+     " rol",
+     0.007983
+    ],
+    [
+     " componente",
+     0.006864
+    ]
+   ]
+  },
+  "A produção foi retomada após a resolução de um problema de avaria no equipamento": {
+   "is_end": false,
+   "options": [
+    [
+     ".",
+     0.573045
+    ],
+    [
+     " de",
+     0.209342
+    ],
+    [
+     ",",
+     0.068779
+    ],
+    [
+     " sens",
+     0.015315
+    ],
+    [
+     " principal",
+     0.012575
+    ],
+    [
+     " num",
+     0.012571
+    ],
+    [
+     " da",
+     0.011236
+    ],
+    [
+     " durante",
+     0.008897
+    ],
+    [
+     " na",
+     0.006828
+    ],
+    [
+     " mec",
+     0.004162
+    ]
+   ]
+  },
+  "A produção foi retomada após a resolução de um problema de avaria no equipamento.": {
+   "is_end": true,
+   "options": []
+  },
+  "A produção foi retomada após um": {
+   "is_end": false,
+   "options": [
+    [
+     " breve",
+     0.220491
+    ],
+    [
+     " atras",
+     0.154177
+    ],
+    [
+     " curto",
+     0.141533
+    ],
+    [
+     " pequeno",
+     0.099237
+    ],
+    [
+     " problema",
+     0.068511
+    ],
+    [
+     " lige",
+     0.053216
+    ],
+    [
+     " des",
+     0.025414
+    ],
+    [
+     " tempor",
+     0.0198
+    ],
+    [
+     " tempo",
+     0.016689
+    ],
+    [
+     " período",
+     0.010321
+    ]
+   ]
+  },
+  "A produção foi retomada após um breve": {
+   "is_end": false,
+   "options": [
+    [
+     " atras",
+     0.761548
+    ],
+    [
+     " intervalo",
+     0.023703
+    ],
+    [
+     " des",
+     0.022427
+    ],
+    [
+     " tempo",
+     0.022151
+    ],
+    [
+     " imp",
+     0.012809
+    ],
+    [
+     " par",
+     0.012398
+    ],
+    [
+     " interrup",
+     0.009422
+    ],
+    [
+     " contrat",
+     0.008382
+    ],
+    [
+     " período",
+     0.008188
+    ],
+    [
+     " problema",
+     0.007129
+    ]
+   ]
+  },
+  "A produção foi retomada após um breve atras": {
+   "is_end": false,
+   "options": [
+    [
+     "o",
+     0.999995
+    ],
+    [
+     "amento",
+     2e-06
+    ],
+    [
+     "os",
+     2e-06
+    ],
+    [
+     "io",
+     0.0
+    ],
+    [
+     "a",
+     0.0
+    ],
+    [
+     "u",
+     0.0
+    ],
+    [
+     " devido",
+     0.0
+    ],
+    [
+     ",",
+     0.0
+    ],
+    [
+     "ado",
+     0.0
+    ],
+    [
+     "о",
+     0.0
+    ]
+   ]
+  },
+  "A produção foi retomada após um breve atraso": {
+   "is_end": false,
+   "options": [
+    [
+     " devido",
+     0.577504
+    ],
+    [
+     " causado",
+     0.281432
+    ],
+    [
+     ",",
+     0.059225
+    ],
+    [
+     " dec",
+     0.010031
+    ],
+    [
+     " na",
+     0.00865
+    ],
+    [
+     " por",
+     0.007422
+    ],
+    [
+     " caus",
+     0.006519
+    ],
+    [
+     " no",
+     0.004508
+    ],
+    [
+     " resultante",
+     0.003977
+    ],
+    [
+     " provoc",
+     0.003647
+    ]
+   ]
+  },
+  "A produção foi retomada após um breve atraso devido": {
+   "is_end": false,
+   "options": [
+    [
+     " a",
+     0.950278
+    ],
+    [
+     " à",
+     0.029013
+    ],
+    [
+     " ao",
+     0.0191
+    ],
+    [
+     " às",
+     0.000747
+    ],
+    [
+     " aos",
+     0.000558
+    ],
+    [
+     " um",
+     3.4e-05
+    ],
+    [
+     " uma",
+     2.6e-05
+    ],
+    [
+     " de",
+     2.2e-05
+    ],
+    [
+     " al",
+     1.2e-05
+    ],
+    [
+     ",",
+     1.2e-05
+    ]
+   ]
+  },
+  "A produção foi retomada após um breve atraso devido a": {
+   "is_end": false,
+   "options": [
+    [
+     " um",
+     0.499067
+    ],
+    [
+     " uma",
+     0.47023
+    ],
+    [
+     " fal",
+     0.003369
+    ],
+    [
+     " problemas",
+     0.003351
+    ],
+    [
+     " peças",
+     0.001967
+    ],
+    [
+     " equipamento",
+     0.001626
+    ],
+    [
+     " des",
+     0.001091
+    ],
+    [
+     " det",
+     0.001044
+    ],
+    [
+     " av",
+     0.001003
+    ],
+    [
+     " sobre",
+     0.000612
+    ]
+   ]
+  },
+  "A produção foi retomada após um breve atraso devido a um": {
+   "is_end": false,
+   "options": [
+    [
+     " problema",
+     0.217905
+    ],
+    [
+     " des",
+     0.069936
+    ],
+    [
+     " ma",
+     0.058627
+    ],
+    [
+     " curto",
+     0.058269
+    ],
+    [
+     " erro",
+     0.058102
+    ],
+    [
+     " pequeno",
+     0.050902
+    ],
+    [
+     " sensor",
+     0.044171
+    ],
+    [
+     " de",
+     0.042989
+    ],
+    [
+     " der",
+     0.01955
+    ],
+    [
+     " equipamento",
+     0.016734
+    ]
+   ]
+  },
+  "A produção foi retomada após um breve atraso devido a um problema": {
+   "is_end": false,
+   "options": [
+    [
+     " de",
+     0.347548
+    ],
+    [
+     " técnico",
+     0.126901
+    ],
+    [
+     " com",
+     0.12074
+    ],
+    [
+     " no",
+     0.112634
+    ],
+    [
+     " mec",
+     0.087102
+    ],
+    [
+     " na",
+     0.073879
+    ],
+    [
+     " elét",
+     0.029079
+    ],
+    [
+     " inesper",
+     0.018704
+    ],
+    [
+     " menor",
+     0.014154
+    ],
+    [
+     " num",
+     0.007766
+    ]
+   ]
+  },
+  "A produção foi retomada após um breve atraso devido a um problema de": {
+   "is_end": false,
+   "options": [
+    [
+     " calib",
+     0.088241
+    ],
+    [
+     " av",
+     0.057414
+    ],
+    [
+     " al",
+     0.054393
+    ],
+    [
+     " sobre",
+     0.045733
+    ],
+    [
+     " lub",
+     0.037644
+    ],
+    [
+     " equipamento",
+     0.037015
+    ],
+    [
+     " ma",
+     0.031144
+    ],
+    [
+     " alimentação",
+     0.029275
+    ],
+    [
+     " log",
+     0.026586
+    ],
+    [
+     " abaste",
+     0.024797
+    ]
+   ]
+  },
+  "A produção foi retomada após um breve atraso devido a um problema de calib": {
+   "is_end": false,
+   "options": [
+    [
+     "ração",
+     0.989714
+    ],
+    [
+     "ragem",
+     0.009659
+    ],
+    [
+     "ramento",
+     0.000203
+    ],
+    [
+     "rado",
+     0.000163
+    ],
+    [
+     "rador",
+     7.7e-05
+    ],
+    [
+     "rar",
+     5.2e-05
+    ],
+    [
+     "re",
+     2.1e-05
+    ],
+    [
+     "ra",
+     1.8e-05
+    ],
+    [
+     "ria",
+     8e-06
+    ],
+    [
+     "ib",
+     8e-06
+    ]
+   ]
+  },
+  "A produção foi retomada após um breve atraso devido a um problema de calibração": {
+   "is_end": false,
+   "options": [
+    [
+     " do",
+     0.400523
+    ],
+    [
+     ".",
+     0.182037
+    ],
+    [
+     " de",
+     0.115214
+    ],
+    [
+     " no",
+     0.073323
+    ],
+    [
+     " na",
+     0.04775
+    ],
+    [
+     " da",
+     0.028822
+    ],
+    [
+     " dos",
+     0.020218
+    ],
+    [
+     " num",
+     0.019905
+    ],
+    [
+     " inesper",
+     0.013241
+    ],
+    [
+     " numa",
+     0.012132
+    ]
+   ]
+  },
+  "A produção foi retomada após um breve atraso devido a um problema de calibração do": {
+   "is_end": false,
+   "options": [
+    [
+     " equipamento",
+     0.762603
+    ],
+    [
+     " sensor",
+     0.10894
+    ],
+    [
+     " rob",
+     0.031269
+    ],
+    [
+     " maquin",
+     0.019055
+    ],
+    [
+     " sistema",
+     0.016928
+    ],
+    [
+     " forno",
+     0.006604
+    ],
+    [
+     " dispositivo",
+     0.004056
+    ],
+    [
+     " motor",
+     0.003434
+    ],
+    [
+     " material",
+     0.002456
+    ],
+    [
+     " sens",
+     0.002132
+    ]
+   ]
+  },
+  "A produção foi retomada após uma breve": {
+   "is_end": false,
+   "options": [
+    [
+     " interrup",
+     0.555008
+    ],
+    [
+     " par",
+     0.126182
+    ],
+    [
+     " fal",
+     0.125329
+    ],
+    [
+     " pausa",
+     0.046159
+    ],
+    [
+     " av",
+     0.028745
+    ],
+    [
+     " rut",
+     0.025456
+    ],
+    [
+     " queda",
+     0.005089
+    ],
+    [
+     " anomal",
+     0.004869
+    ],
+    [
+     " parada",
+     0.004384
+    ],
+    [
+     " susp",
+     0.004324
+    ]
+   ]
+  },
+  "A produção foi retomada após uma breve interrup": {
+   "is_end": false,
+   "options": [
+    [
+     "ção",
+     0.999963
+    ],
+    [
+     "cão",
+     9e-06
+    ],
+    [
+     "ição",
+     8e-06
+    ],
+    [
+     "ão",
+     5e-06
+    ],
+    [
+     "ação",
+     4e-06
+    ],
+    [
+     "ción",
+     2e-06
+    ],
+    [
+     " devido",
+     2e-06
+    ],
+    [
+     "cao",
+     1e-06
+    ],
+    [
+     "c",
+     1e-06
+    ],
+    [
+     "çao",
+     1e-06
+    ]
+   ]
+  },
+  "A produção foi retomada após uma breve interrupção": {
+   "is_end": false,
+   "options": [
+    [
+     " devido",
+     0.502354
+    ],
+    [
+     " causada",
+     0.340918
+    ],
+    [
+     ",",
+     0.044918
+    ],
+    [
+     " por",
+     0.01833
+    ],
+    [
+     " na",
+     0.007948
+    ],
+    [
+     " para",
+     0.007211
+    ],
+    [
+     " dec",
+     0.006117
+    ],
+    [
+     " de",
+     0.005217
+    ],
+    [
+     " do",
+     0.004819
+    ],
+    [
+     " no",
+     0.00471
+    ]
+   ]
+  },
+  "A produção foi retomada após uma breve interrupção devido": {
+   "is_end": false,
+   "options": [
+    [
+     " a",
+     0.950819
+    ],
+    [
+     " à",
+     0.028027
+    ],
+    [
+     " ao",
+     0.019922
+    ],
+    [
+     " às",
+     0.000532
+    ],
+    [
+     " aos",
+     0.000484
+    ],
+    [
+     " um",
+     2.4e-05
+    ],
+    [
+     " uma",
+     1.5e-05
+    ],
+    [
+     " de",
+     1.4e-05
+    ],
+    [
+     ",",
+     1.1e-05
+    ],
+    [
+     " al",
+     1e-05
+    ]
+   ]
+  },
+  "A produção foi retomada após uma breve interrupção devido a": {
+   "is_end": false,
+   "options": [
+    [
+     " um",
+     0.530438
+    ],
+    [
+     " uma",
+     0.436343
+    ],
+    [
+     " fal",
+     0.004328
+    ],
+    [
+     " problemas",
+     0.003583
+    ],
+    [
+     " peças",
+     0.002754
+    ],
+    [
+     " av",
+     0.0018
+    ],
+    [
+     " equipamento",
+     0.001483
+    ],
+    [
+     " des",
+     0.001435
+    ],
+    [
+     " sobre",
+     0.000959
+    ],
+    [
+     " det",
+     0.000902
+    ]
+   ]
+  },
+  "A produção foi retomada após uma breve interrupção devido a um": {
+   "is_end": false,
+   "options": [
+    [
+     " problema",
+     0.196063
+    ],
+    [
+     " des",
+     0.09796
+    ],
+    [
+     " ma",
+     0.076376
+    ],
+    [
+     " erro",
+     0.058351
+    ],
+    [
+     " curto",
+     0.048908
+    ],
+    [
+     " de",
+     0.045441
+    ],
+    [
+     " sensor",
+     0.043768
+    ],
+    [
+     " atras",
+     0.025007
+    ],
+    [
+     " pequeno",
+     0.02196
+    ],
+    [
+     " der",
+     0.014483
+    ]
+   ]
+  },
+  "A produção foi retomada após uma breve interrupção devido a um problema": {
+   "is_end": false,
+   "options": [
+    [
+     " de",
+     0.377094
+    ],
+    [
+     " no",
+     0.133739
+    ],
+    [
+     " com",
+     0.114847
+    ],
+    [
+     " técnico",
+     0.097503
+    ],
+    [
+     " mec",
+     0.093185
+    ],
+    [
+     " na",
+     0.069771
+    ],
+    [
+     " elét",
+     0.030236
+    ],
+    [
+     " inesper",
+     0.015015
+    ],
+    [
+     " num",
+     0.008736
+    ],
+    [
+     " menor",
+     0.006127
+    ]
+   ]
+  },
+  "A produção foi retomada após uma breve interrupção devido a um problema de": {
+   "is_end": false,
+   "options": [
+    [
+     " calib",
+     0.098967
+    ],
+    [
+     " al",
+     0.072536
+    ],
+    [
+     " av",
+     0.057342
+    ],
+    [
+     " sobre",
+     0.054838
+    ],
+    [
+     " ma",
+     0.039018
+    ],
+    [
+     " lub",
+     0.038853
+    ],
+    [
+     " equipamento",
+     0.032483
+    ],
+    [
+     " alimentação",
+     0.031604
+    ],
+    [
+     " software",
+     0.024916
+    ],
+    [
+     " log",
+     0.024173
+    ]
+   ]
+  },
+  "A produção foi retomada após uma breve interrupção devido a um problema de calib": {
+   "is_end": false,
+   "options": [
+    [
+     "ração",
+     0.990339
+    ],
+    [
+     "ragem",
+     0.008944
+    ],
+    [
+     "ramento",
+     0.000203
+    ],
+    [
+     "rado",
+     0.000191
+    ],
+    [
+     "rador",
+     0.000114
+    ],
+    [
+     "rar",
+     4.7e-05
+    ],
+    [
+     "re",
+     2.7e-05
+    ],
+    [
+     "ib",
+     1.9e-05
+    ],
+    [
+     "ra",
+     1.9e-05
+    ],
+    [
+     "reb",
+     1.1e-05
+    ]
+   ]
+  },
+  "A produção foi retomada após uma breve interrupção devido a um problema de calibração": {
+   "is_end": false,
+   "options": [
+    [
+     " do",
+     0.434271
+    ],
+    [
+     ".",
+     0.193262
+    ],
+    [
+     " de",
+     0.095248
+    ],
+    [
+     " no",
+     0.073717
+    ],
+    [
+     " na",
+     0.037667
+    ],
+    [
+     " dos",
+     0.025102
+    ],
+    [
+     " da",
+     0.02286
+    ],
+    [
+     " num",
+     0.02092
+    ],
+    [
+     " nos",
+     0.014298
+    ],
+    [
+     " inesper",
+     0.011111
+    ]
+   ]
+  },
+  "A produção foi retomada após uma breve interrupção devido a um problema de calibração do": {
+   "is_end": false,
+   "options": [
+    [
+     " equipamento",
+     0.747103
+    ],
+    [
+     " sensor",
+     0.122866
+    ],
+    [
+     " rob",
+     0.030824
+    ],
+    [
+     " maquin",
+     0.020192
+    ],
+    [
+     " sistema",
+     0.01854
+    ],
+    [
+     " forno",
+     0.006297
+    ],
+    [
+     " dispositivo",
+     0.00397
+    ],
+    [
+     " motor",
+     0.003151
+    ],
+    [
+     " sens",
+     0.002593
+    ],
+    [
+     " material",
+     0.002348
+    ]
+   ]
+  },
+  "A produção foi retomada após uma par": {
+   "is_end": false,
+   "options": [
+    [
+     "agem",
+     0.984862
+    ],
+    [
+     "alis",
+     0.010988
+    ],
+    [
+     "ança",
+     0.000468
+    ],
+    [
+     "ação",
+     0.000335
+    ],
+    [
+     "cação",
+     0.000277
+    ],
+    [
+     "ição",
+     0.000272
+    ],
+    [
+     "alização",
+     0.000159
+    ],
+    [
+     "ênt",
+     0.000116
+    ],
+    [
+     "ala",
+     0.000115
+    ],
+    [
+     "ada",
+     0.000111
+    ]
+   ]
+  },
+  "A produção foi retomada após uma paragem": {
+   "is_end": false,
+   "options": [
+    [
+     " inesper",
+     0.224955
+    ],
+    [
+     " tempor",
+     0.136582
+    ],
+    [
+     " não",
+     0.08662
+    ],
+    [
+     " de",
+     0.081791
+    ],
+    [
+     " devido",
+     0.074416
+    ],
+    [
+     " imp",
+     0.066175
+    ],
+    [
+     " breve",
+     0.053915
+    ],
+    [
+     " técnica",
+     0.043092
+    ],
+    [
+     " causada",
+     0.038715
+    ],
+    [
+     " sú",
+     0.035795
+    ]
+   ]
+  },
+  "A produção foi retomada após uma paragem inesper": {
+   "is_end": false,
+   "options": [
+    [
+     "ada",
+     0.999858
+    ],
+    [
+     "ado",
+     8.7e-05
+    ],
+    [
+     "ida",
+     1.9e-05
+    ],
+    [
+     "adamente",
+     1.3e-05
+    ],
+    [
+     "ad",
+     7e-06
+    ],
+    [
+     "da",
+     4e-06
+    ],
+    [
+     "adas",
+     3e-06
+    ],
+    [
+     "ável",
+     2e-06
+    ],
+    [
+     "ados",
+     1e-06
+    ],
+    [
+     "ar",
+     1e-06
+    ]
+   ]
+  },
+  "A produção foi retomada após uma paragem inesperada": {
+   "is_end": false,
+   "options": [
+    [
+     " devido",
+     0.383491
+    ],
+    [
+     " causada",
+     0.160707
+    ],
+    [
+     " do",
+     0.082426
+    ],
+    [
+     " na",
+     0.067745
+    ],
+    [
+     ",",
+     0.064855
+    ],
+    [
+     " de",
+     0.051502
+    ],
+    [
+     " da",
+     0.046407
+    ],
+    [
+     " no",
+     0.026985
+    ],
+    [
+     " por",
+     0.0169
+    ],
+    [
+     " para",
+     0.014963
+    ]
+   ]
+  },
+  "A produção foi retomada após uma paragem inesperada devido": {
+   "is_end": false,
+   "options": [
+    [
+     " a",
+     0.944396
+    ],
+    [
+     " à",
+     0.034231
+    ],
+    [
+     " ao",
+     0.020094
+    ],
+    [
+     " às",
+     0.000599
+    ],
+    [
+     " aos",
+     0.000415
+    ],
+    [
+     " um",
+     2.5e-05
+    ],
+    [
+     " uma",
+     1.6e-05
+    ],
+    [
+     " fal",
+     1.5e-05
+    ],
+    [
+     " de",
+     1.5e-05
+    ],
+    [
+     " al",
+     1.3e-05
+    ]
+   ]
+  },
+  "A produção foi retomada após uma paragem inesperada devido a": {
+   "is_end": false,
+   "options": [
+    [
+     " um",
+     0.522782
+    ],
+    [
+     " uma",
+     0.420838
+    ],
+    [
+     " fal",
+     0.005794
+    ],
+    [
+     " av",
+     0.005043
+    ],
+    [
+     " peças",
+     0.005015
+    ],
+    [
+     " problemas",
+     0.003904
+    ],
+    [
+     " sobre",
+     0.003335
+    ],
+    [
+     " det",
+     0.002153
+    ],
+    [
+     " des",
+     0.00203
+    ],
+    [
+     " equipamento",
+     0.001858
+    ]
+   ]
+  },
+  "A produção foi retomada após uma paragem inesperada devido a um": {
+   "is_end": false,
+   "options": [
+    [
+     " problema",
+     0.167966
+    ],
+    [
+     " curto",
+     0.147026
+    ],
+    [
+     " de",
+     0.083869
+    ],
+    [
+     " ma",
+     0.076209
+    ],
+    [
+     " erro",
+     0.067214
+    ],
+    [
+     " des",
+     0.058093
+    ],
+    [
+     " sensor",
+     0.045324
+    ],
+    [
+     " componente",
+     0.020298
+    ],
+    [
+     " sobre",
+     0.018324
+    ],
+    [
+     " av",
+     0.015523
+    ]
+   ]
+  },
+  "A produção foi retomada após uma paragem inesperada devido a um problema": {
+   "is_end": false,
+   "options": [
+    [
+     " de",
+     0.355535
+    ],
+    [
+     " no",
+     0.202804
+    ],
+    [
+     " com",
+     0.110196
+    ],
+    [
+     " na",
+     0.08784
+    ],
+    [
+     " mec",
+     0.065555
+    ],
+    [
+     " técnico",
+     0.06532
+    ],
+    [
+     " elét",
+     0.053648
+    ],
+    [
+     " num",
+     0.011081
+    ],
+    [
+     " nos",
+     0.008849
+    ],
+    [
+     " numa",
+     0.004971
+    ]
+   ]
+  },
+  "A produção foi retomada após uma paragem inesperada devido a um problema de": {
+   "is_end": false,
+   "options": [
+    [
+     " sobre",
+     0.09663
+    ],
+    [
+     " av",
+     0.074012
+    ],
+    [
+     " lub",
+     0.072602
+    ],
+    [
+     " calib",
+     0.072061
+    ],
+    [
+     " al",
+     0.053847
+    ],
+    [
+     " software",
+     0.033089
+    ],
+    [
+     " alimentação",
+     0.031282
+    ],
+    [
+     " ma",
+     0.023106
+    ],
+    [
+     " vib",
+     0.022205
+    ],
+    [
+     " qualidade",
+     0.022156
+    ]
+   ]
+  },
+  "A produção foi retomada após uma paragem inesperada devido a um problema de sobre": {
+   "is_end": false,
+   "options": [
+    [
+     "aqu",
+     0.957048
+    ],
+    [
+     "car",
+     0.029824
+    ],
+    [
+     "temper",
+     0.003637
+    ],
+    [
+     "press",
+     0.003628
+    ],
+    [
+     "posição",
+     0.000811
+    ],
+    [
+     "cal",
+     0.000612
+    ],
+    [
+     "qu",
+     0.000555
+    ],
+    [
+     "-",
+     0.000337
+    ],
+    [
+     "vel",
+     0.000291
+    ],
+    [
+     "he",
+     0.000234
+    ]
+   ]
+  },
+  "A produção foi retomada após uma paragem inesperada devido a um problema de sobreaqu": {
+   "is_end": false,
+   "options": [
+    [
+     "ecimento",
+     0.995358
+    ],
+    [
+     "imento",
+     0.004419
+    ],
+    [
+     "cimento",
+     4.9e-05
+    ],
+    [
+     "amento",
+     3.3e-05
+    ],
+    [
+     "ecido",
+     3e-05
+    ],
+    [
+     "ecer",
+     2.3e-05
+    ],
+    [
+     "ência",
+     1.6e-05
+    ],
+    [
+     "ec",
+     1.1e-05
+    ],
+    [
+     "ecimiento",
+     9e-06
+    ],
+    [
+     "ecimentos",
+     8e-06
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falência": {
+   "is_end": false,
+   "options": [
+    [
+     " tempor",
+     0.148323
+    ],
+    [
+     " de",
+     0.144166
+    ],
+    [
+     " no",
+     0.133582
+    ],
+    [
+     " do",
+     0.115708
+    ],
+    [
+     " na",
+     0.092835
+    ],
+    [
+     " inesper",
+     0.065651
+    ],
+    [
+     " moment",
+     0.026593
+    ],
+    [
+     " breve",
+     0.024108
+    ],
+    [
+     " técnica",
+     0.017924
+    ],
+    [
+     " mec",
+     0.015567
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falência tempor": {
+   "is_end": false,
+   "options": [
+    [
+     "ária",
+     0.999651
+    ],
+    [
+     "ário",
+     0.000143
+    ],
+    [
+     "árias",
+     4.3e-05
+    ],
+    [
+     "ariamente",
+     3.5e-05
+    ],
+    [
+     "ória",
+     2.1e-05
+    ],
+    [
+     "ânea",
+     1.9e-05
+    ],
+    [
+     "ã",
+     1.7e-05
+    ],
+    [
+     "aria",
+     9e-06
+    ],
+    [
+     "ada",
+     7e-06
+    ],
+    [
+     "ary",
+     6e-06
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falência temporária": {
+   "is_end": false,
+   "options": [
+    [
+     " do",
+     0.254853
+    ],
+    [
+     " no",
+     0.138209
+    ],
+    [
+     " de",
+     0.124061
+    ],
+    [
+     " devido",
+     0.112997
+    ],
+    [
+     " na",
+     0.107677
+    ],
+    [
+     " causada",
+     0.060128
+    ],
+    [
+     " da",
+     0.043755
+    ],
+    [
+     ",",
+     0.042987
+    ],
+    [
+     " num",
+     0.025866
+    ],
+    [
+     " que",
+     0.011002
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falência temporária do": {
+   "is_end": false,
+   "options": [
+    [
+     " sistema",
+     0.282436
+    ],
+    [
+     " equipamento",
+     0.203255
+    ],
+    [
+     " sensor",
+     0.198323
+    ],
+    [
+     " rob",
+     0.081894
+    ],
+    [
+     " motor",
+     0.035355
+    ],
+    [
+     " control",
+     0.012333
+    ],
+    [
+     " fornec",
+     0.007544
+    ],
+    [
+     " dispositivo",
+     0.006884
+    ],
+    [
+     " circuito",
+     0.006356
+    ],
+    [
+     " mecanismo",
+     0.006327
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falência temporária do sistema": {
+   "is_end": false,
+   "options": [
+    [
+     " de",
+     0.576217
+    ],
+    [
+     ".",
+     0.078725
+    ],
+    [
+     " devido",
+     0.064947
+    ],
+    [
+     ",",
+     0.063941
+    ],
+    [
+     " durante",
+     0.017748
+    ],
+    [
+     " num",
+     0.016278
+    ],
+    [
+     " det",
+     0.015814
+    ],
+    [
+     " causada",
+     0.012723
+    ],
+    [
+     " elét",
+     0.009658
+    ],
+    [
+     " que",
+     0.009424
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falência temporária do sistema de": {
+   "is_end": false,
+   "options": [
+    [
+     " contro",
+     0.193977
+    ],
+    [
+     " enc",
+     0.070053
+    ],
+    [
+     " rob",
+     0.062209
+    ],
+    [
+     " mistura",
+     0.040996
+    ],
+    [
+     " sold",
+     0.030711
+    ],
+    [
+     " lub",
+     0.024982
+    ],
+    [
+     " transporte",
+     0.022242
+    ],
+    [
+     " ar",
+     0.022112
+    ],
+    [
+     " alimentação",
+     0.021404
+    ],
+    [
+     " mon",
+     0.019094
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falência temporária do sistema de contro": {
+   "is_end": false,
+   "options": [
+    [
+     "lo",
+     0.999967
+    ],
+    [
+     "lag",
+     1.7e-05
+    ],
+    [
+     " de",
+     4e-06
+    ],
+    [
+     "io",
+     3e-06
+    ],
+    [
+     "le",
+     2e-06
+    ],
+    [
+     "ção",
+     1e-06
+    ],
+    [
+     "lação",
+     1e-06
+    ],
+    [
+     "loe",
+     1e-06
+    ],
+    [
+     "lem",
+     1e-06
+    ],
+    [
+     "o",
+     1e-06
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falência temporária do sistema de controlo": {
+   "is_end": false,
+   "options": [
+    [
+     " de",
+     0.345566
+    ],
+    [
+     ".",
+     0.179381
+    ],
+    [
+     " devido",
+     0.086214
+    ],
+    [
+     ",",
+     0.076942
+    ],
+    [
+     " num",
+     0.075035
+    ],
+    [
+     " da",
+     0.042698
+    ],
+    [
+     " do",
+     0.030782
+    ],
+    [
+     " automat",
+     0.025178
+    ],
+    [
+     " autom",
+     0.023817
+    ],
+    [
+     " por",
+     0.011435
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falência temporária do sistema de controlo de": {
+   "is_end": false,
+   "options": [
+    [
+     " qualidade",
+     0.799165
+    ],
+    [
+     " temperatura",
+     0.11593
+    ],
+    [
+     " fluxo",
+     0.012848
+    ],
+    [
+     " processos",
+     0.005166
+    ],
+    [
+     " pressão",
+     0.004768
+    ],
+    [
+     " rob",
+     0.004412
+    ],
+    [
+     " acesso",
+     0.003664
+    ],
+    [
+     " peças",
+     0.002325
+    ],
+    [
+     " velocidade",
+     0.002301
+    ],
+    [
+     " processo",
+     0.001861
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falência temporária do sistema de controlo de qualidade": {
+   "is_end": false,
+   "options": [
+    [
+     ".",
+     0.715043
+    ],
+    [
+     ",",
+     0.156354
+    ],
+    [
+     " devido",
+     0.045989
+    ],
+    [
+     " na",
+     0.016592
+    ],
+    [
+     " durante",
+     0.012648
+    ],
+    [
+     " que",
+     0.01216
+    ],
+    [
+     " da",
+     0.005669
+    ],
+    [
+     " det",
+     0.003433
+    ],
+    [
+     " no",
+     0.003116
+    ],
+    [
+     " causada",
+     0.002832
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falpa": {
+   "is_end": false,
+   "options": [
+    [
+     " no",
+     0.226326
+    ],
+    [
+     " na",
+     0.176531
+    ],
+    [
+     " de",
+     0.130306
+    ],
+    [
+     " tempor",
+     0.125023
+    ],
+    [
+     " técnica",
+     0.031576
+    ],
+    [
+     " breve",
+     0.026984
+    ],
+    [
+     " num",
+     0.025947
+    ],
+    [
+     " moment",
+     0.019653
+    ],
+    [
+     " mec",
+     0.017828
+    ],
+    [
+     " inesper",
+     0.016419
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falpa no": {
+   "is_end": false,
+   "options": [
+    [
+     " sistema",
+     0.266114
+    ],
+    [
+     " sensor",
+     0.247379
+    ],
+    [
+     " equipamento",
+     0.056356
+    ],
+    [
+     " rob",
+     0.054942
+    ],
+    [
+     " fornec",
+     0.045248
+    ],
+    [
+     " motor",
+     0.020376
+    ],
+    [
+     " aliment",
+     0.016424
+    ],
+    [
+     " al",
+     0.014235
+    ],
+    [
+     " mecanismo",
+     0.010275
+    ],
+    [
+     " transport",
+     0.009094
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falpa no sistema": {
+   "is_end": false,
+   "options": [
+    [
+     " de",
+     0.771088
+    ],
+    [
+     ",",
+     0.050911
+    ],
+    [
+     " automat",
+     0.022007
+    ],
+    [
+     ".",
+     0.019999
+    ],
+    [
+     " pneum",
+     0.019998
+    ],
+    [
+     " devido",
+     0.013419
+    ],
+    [
+     " autom",
+     0.008078
+    ],
+    [
+     " rob",
+     0.00758
+    ],
+    [
+     " que",
+     0.007257
+    ],
+    [
+     " hid",
+     0.006984
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falpa no sistema de": {
+   "is_end": false,
+   "options": [
+    [
+     " contro",
+     0.173195
+    ],
+    [
+     " enc",
+     0.091496
+    ],
+    [
+     " rob",
+     0.04471
+    ],
+    [
+     " lub",
+     0.039168
+    ],
+    [
+     " alimentação",
+     0.03613
+    ],
+    [
+     " calib",
+     0.032668
+    ],
+    [
+     " mistura",
+     0.025985
+    ],
+    [
+     " mon",
+     0.025042
+    ],
+    [
+     " ar",
+     0.024017
+    ],
+    [
+     " sold",
+     0.020272
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falpa no sistema de contro": {
+   "is_end": false,
+   "options": [
+    [
+     "lo",
+     0.999954
+    ],
+    [
+     "lag",
+     2e-05
+    ],
+    [
+     "io",
+     7e-06
+    ],
+    [
+     " de",
+     6e-06
+    ],
+    [
+     "le",
+     2e-06
+    ],
+    [
+     "ção",
+     2e-06
+    ],
+    [
+     "lação",
+     1e-06
+    ],
+    [
+     "o",
+     1e-06
+    ],
+    [
+     "loe",
+     1e-06
+    ],
+    [
+     "la",
+     0.0
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falpa no sistema de controlo": {
+   "is_end": false,
+   "options": [
+    [
+     " de",
+     0.381654
+    ],
+    [
+     ",",
+     0.136
+    ],
+    [
+     ".",
+     0.125536
+    ],
+    [
+     " devido",
+     0.059476
+    ],
+    [
+     " autom",
+     0.057408
+    ],
+    [
+     " automat",
+     0.046026
+    ],
+    [
+     " da",
+     0.042492
+    ],
+    [
+     " num",
+     0.027861
+    ],
+    [
+     " do",
+     0.020272
+    ],
+    [
+     " que",
+     0.018703
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falpa no sistema de controlo de": {
+   "is_end": false,
+   "options": [
+    [
+     " qualidade",
+     0.842433
+    ],
+    [
+     " temperatura",
+     0.106641
+    ],
+    [
+     " fluxo",
+     0.005917
+    ],
+    [
+     " pressão",
+     0.003577
+    ],
+    [
+     " processos",
+     0.002309
+    ],
+    [
+     " rob",
+     0.001879
+    ],
+    [
+     " acesso",
+     0.001875
+    ],
+    [
+     " velocidade",
+     0.001828
+    ],
+    [
+     " peças",
+     0.001331
+    ],
+    [
+     " tensão",
+     0.001105
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falpa no sistema de controlo de qualidade": {
+   "is_end": false,
+   "options": [
+    [
+     ".",
+     0.602698
+    ],
+    [
+     ",",
+     0.207776
+    ],
+    [
+     " devido",
+     0.041016
+    ],
+    [
+     " ter",
+     0.034233
+    ],
+    [
+     " que",
+     0.030771
+    ],
+    [
+     " det",
+     0.014935
+    ],
+    [
+     " durante",
+     0.009181
+    ],
+    [
+     " da",
+     0.007578
+    ],
+    [
+     " por",
+     0.004717
+    ],
+    [
+     " na",
+     0.00418
+    ]
+   ]
+  },
+  "A produção foi retomada após uma falpa no sistema de controlo de qualidade.": {
+   "is_end": true,
+   "options": []
+  },
+  "A linha 2 parou devido a uma falha no": {
+   "is_end": false,
+   "options": [
+    [
+     " sensor",
+     0.371202
+    ],
+    [
+     " sistema",
+     0.194534
+    ],
+    [
+     " equipamento",
+     0.052878
+    ],
+    [
+     " rob",
+     0.04441
+    ],
+    [
+     " rol",
+     0.042242
+    ],
+    [
+     " motor",
+     0.017687
+    ],
+    [
+     " aliment",
+     0.013782
+    ],
+    [
+     " transport",
+     0.01259
+    ],
+    [
+     " dispositivo",
+     0.010854
+    ],
+    [
+     " componente",
+     0.010437
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no sensor": {
+   "is_end": false,
+   "options": [
+    [
+     " de",
+     0.54618
+    ],
+    [
+     ",",
+     0.202264
+    ],
+    [
+     ".",
+     0.08995
+    ],
+    [
+     " durante",
+     0.030119
+    ],
+    [
+     " que",
+     0.027478
+    ],
+    [
+     " do",
+     0.02077
+    ],
+    [
+     " da",
+     0.017197
+    ],
+    [
+     " por",
+     0.005994
+    ],
+    [
+     " principal",
+     0.005376
+    ],
+    [
+     " após",
+     0.003715
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no sensor de": {
+   "is_end": false,
+   "options": [
+    [
+     " temperatura",
+     0.253782
+    ],
+    [
+     " pressão",
+     0.131752
+    ],
+    [
+     " qualidade",
+     0.112674
+    ],
+    [
+     " vib",
+     0.041448
+    ],
+    [
+     " contro",
+     0.030312
+    ],
+    [
+     " dete",
+     0.028896
+    ],
+    [
+     " fluxo",
+     0.02347
+    ],
+    [
+     " al",
+     0.02305
+    ],
+    [
+     " velocidade",
+     0.022234
+    ],
+    [
+     " tensão",
+     0.020293
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no sensor de temperatura": {
+   "is_end": false,
+   "options": [
+    [
+     ".",
+     0.535925
+    ],
+    [
+     ",",
+     0.280205
+    ],
+    [
+     " durante",
+     0.075664
+    ],
+    [
+     " na",
+     0.013133
+    ],
+    [
+     " que",
+     0.011596
+    ],
+    [
+     " no",
+     0.008109
+    ],
+    [
+     " a",
+     0.007826
+    ],
+    [
+     " crítica",
+     0.006598
+    ],
+    [
+     " da",
+     0.006374
+    ],
+    [
+     " do",
+     0.005962
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no sensor de temperatura.": {
+   "is_end": true,
+   "options": []
+  },
+  "A linha 2 parou devido a uma falha no sistema": {
+   "is_end": false,
+   "options": [
+    [
+     " de",
+     0.773682
+    ],
+    [
+     " pneum",
+     0.048297
+    ],
+    [
+     ",",
+     0.047305
+    ],
+    [
+     ".",
+     0.020355
+    ],
+    [
+     " hid",
+     0.015422
+    ],
+    [
+     " durante",
+     0.012273
+    ],
+    [
+     " que",
+     0.008195
+    ],
+    [
+     " det",
+     0.006541
+    ],
+    [
+     " num",
+     0.005265
+    ],
+    [
+     " elét",
+     0.004261
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no sistema de": {
+   "is_end": false,
+   "options": [
+    [
+     " contro",
+     0.136947
+    ],
+    [
+     " lub",
+     0.085364
+    ],
+    [
+     " enc",
+     0.082211
+    ],
+    [
+     " alimentação",
+     0.060941
+    ],
+    [
+     " ar",
+     0.039056
+    ],
+    [
+     " transporte",
+     0.036335
+    ],
+    [
+     " refr",
+     0.031584
+    ],
+    [
+     " dete",
+     0.029409
+    ],
+    [
+     " sens",
+     0.026117
+    ],
+    [
+     " vá",
+     0.023227
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no sistema de contro": {
+   "is_end": false,
+   "options": [
+    [
+     "lo",
+     0.999967
+    ],
+    [
+     "lag",
+     9e-06
+    ],
+    [
+     "io",
+     6e-06
+    ],
+    [
+     " de",
+     5e-06
+    ],
+    [
+     "le",
+     3e-06
+    ],
+    [
+     "ção",
+     2e-06
+    ],
+    [
+     "lação",
+     1e-06
+    ],
+    [
+     "loe",
+     1e-06
+    ],
+    [
+     "o",
+     1e-06
+    ],
+    [
+     "lem",
+     1e-06
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no sistema de controlo": {
+   "is_end": false,
+   "options": [
+    [
+     " de",
+     0.370011
+    ],
+    [
+     ",",
+     0.201158
+    ],
+    [
+     ".",
+     0.199026
+    ],
+    [
+     " num",
+     0.042501
+    ],
+    [
+     " da",
+     0.035083
+    ],
+    [
+     " do",
+     0.025233
+    ],
+    [
+     " autom",
+     0.01859
+    ],
+    [
+     " durante",
+     0.016769
+    ],
+    [
+     " que",
+     0.012277
+    ],
+    [
+     " automat",
+     0.010001
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no sistema de controlo de": {
+   "is_end": false,
+   "options": [
+    [
+     " temperatura",
+     0.504027
+    ],
+    [
+     " qualidade",
+     0.345687
+    ],
+    [
+     " pressão",
+     0.022864
+    ],
+    [
+     " fluxo",
+     0.016983
+    ],
+    [
+     " velocidade",
+     0.012666
+    ],
+    [
+     " tensão",
+     0.008216
+    ],
+    [
+     " vib",
+     0.007278
+    ],
+    [
+     " nível",
+     0.004104
+    ],
+    [
+     " movimento",
+     0.003905
+    ],
+    [
+     " processos",
+     0.003151
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no sistema de controlo de temperatura": {
+   "is_end": false,
+   "options": [
+    [
+     ".",
+     0.584428
+    ],
+    [
+     ",",
+     0.311746
+    ],
+    [
+     " durante",
+     0.05039
+    ],
+    [
+     " da",
+     0.006951
+    ],
+    [
+     " que",
+     0.005156
+    ],
+    [
+     " na",
+     0.004906
+    ],
+    [
+     " do",
+     0.003299
+    ],
+    [
+     " no",
+     0.003181
+    ],
+    [
+     " a",
+     0.002695
+    ],
+    [
+     " e",
+     0.001952
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no sistema de controlo de temperatura.": {
+   "is_end": true,
+   "options": []
+  },
+  "A linha 2 parou devido a uma falha no equipamento": {
+   "is_end": false,
+   "options": [
+    [
+     ",",
+     0.290817
+    ],
+    [
+     " de",
+     0.227662
+    ],
+    [
+     ".",
+     0.156667
+    ],
+    [
+     " durante",
+     0.127076
+    ],
+    [
+     " que",
+     0.024701
+    ],
+    [
+     " a",
+     0.023965
+    ],
+    [
+     " na",
+     0.010316
+    ],
+    [
+     " às",
+     0.008153
+    ],
+    [
+     " num",
+     0.00648
+    ],
+    [
+     " det",
+     0.006277
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no equipamento,": {
+   "is_end": false,
+   "options": [
+    [
+     " interromp",
+     0.358905
+    ],
+    [
+     " causando",
+     0.178007
+    ],
+    [
+     " exig",
+     0.14831
+    ],
+    [
+     " resultando",
+     0.052845
+    ],
+    [
+     " afet",
+     0.050726
+    ],
+    [
+     " atras",
+     0.048634
+    ],
+    [
+     " necess",
+     0.022744
+    ],
+    [
+     " levando",
+     0.017985
+    ],
+    [
+     " o",
+     0.011773
+    ],
+    [
+     " obrig",
+     0.009744
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no equipamento, interromp": {
+   "is_end": false,
+   "options": [
+    [
+     "endo",
+     0.987307
+    ],
+    [
+     "indo",
+     0.012387
+    ],
+    [
+     "ando",
+     0.000175
+    ],
+    [
+     "ida",
+     5.4e-05
+    ],
+    [
+     "ido",
+     5.3e-05
+    ],
+    [
+     "idas",
+     7e-06
+    ],
+    [
+     "ecendo",
+     4e-06
+    ],
+    [
+     "idos",
+     3e-06
+    ],
+    [
+     "end",
+     2e-06
+    ],
+    [
+     "ento",
+     1e-06
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no equipamento, interrompendo": {
+   "is_end": false,
+   "options": [
+    [
+     " a",
+     0.416644
+    ],
+    [
+     " tempor",
+     0.392528
+    ],
+    [
+     " o",
+     0.147461
+    ],
+    [
+     " brevemente",
+     0.009708
+    ],
+    [
+     " moment",
+     0.005937
+    ],
+    [
+     " toda",
+     0.004228
+    ],
+    [
+     " parcialmente",
+     0.004067
+    ],
+    [
+     " as",
+     0.003584
+    ],
+    [
+     " os",
+     0.001855
+    ],
+    [
+     " ",
+     0.001111
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no equipamento, interrompendo a": {
+   "is_end": false,
+   "options": [
+    [
+     " produção",
+     0.884926
+    ],
+    [
+     " linha",
+     0.006785
+    ],
+    [
+     " sequência",
+     0.006603
+    ],
+    [
+     " fabricação",
+     0.006099
+    ],
+    [
+     " saída",
+     0.005359
+    ],
+    [
+     " mon",
+     0.005003
+    ],
+    [
+     " entrega",
+     0.00313
+    ],
+    [
+     " progress",
+     0.002919
+    ],
+    [
+     " sua",
+     0.002578
+    ],
+    [
+     " eficiência",
+     0.002359
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no equipamento, interrompendo a produção": {
+   "is_end": false,
+   "options": [
+    [
+     " por",
+     0.241909
+    ],
+    [
+     " durante",
+     0.222028
+    ],
+    [
+     ".",
+     0.195504
+    ],
+    [
+     " em",
+     0.086405
+    ],
+    [
+     " tempor",
+     0.075978
+    ],
+    [
+     " de",
+     0.073107
+    ],
+    [
+     " e",
+     0.02052
+    ],
+    [
+     " para",
+     0.00841
+    ],
+    [
+     " no",
+     0.005864
+    ],
+    [
+     " do",
+     0.005809
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no equipamento, interrompendo a produção por": {
+   "is_end": false,
+   "options": [
+    [
+     " duas",
+     0.177424
+    ],
+    [
+     " cerca",
+     0.107294
+    ],
+    [
+     " uma",
+     0.10053
+    ],
+    [
+     " mais",
+     0.097845
+    ],
+    [
+     " três",
+     0.090425
+    ],
+    [
+     " ",
+     0.07874
+    ],
+    [
+     " quase",
+     0.058385
+    ],
+    [
+     " algumas",
+     0.052185
+    ],
+    [
+     " várias",
+     0.051843
+    ],
+    [
+     " aproximadamente",
+     0.039178
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no equipamento, interrompendo a produção por duas": {
+   "is_end": false,
+   "options": [
+    [
+     " horas",
+     0.999249
+    ],
+    [
+     " semanas",
+     0.000169
+    ],
+    [
+     " man",
+     7.8e-05
+    ],
+    [
+     " a",
+     6.9e-05
+    ],
+    [
+     " unidades",
+     5.4e-05
+    ],
+    [
+     " hora",
+     4.1e-05
+    ],
+    [
+     " das",
+     2.7e-05
+    ],
+    [
+     " dezenas",
+     1.2e-05
+    ],
+    [
+     " hours",
+     1e-05
+    ],
+    [
+     " hor",
+     1e-05
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no equipamento, interrompendo a produção por duas horas": {
+   "is_end": false,
+   "options": [
+    [
+     ".",
+     0.927922
+    ],
+    [
+     " e",
+     0.025461
+    ],
+    [
+     " até",
+     0.013944
+    ],
+    [
+     " antes",
+     0.009383
+    ],
+    [
+     ",",
+     0.007988
+    ],
+    [
+     " enquanto",
+     0.004002
+    ],
+    [
+     " durante",
+     0.002113
+    ],
+    [
+     " segu",
+     0.001752
+    ],
+    [
+     " para",
+     0.00117
+    ],
+    [
+     " a",
+     0.000826
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no equipamento, interrompendo a produção por duas horas.": {
+   "is_end": true,
+   "options": []
+  },
+  "A linha 2 parou devido a uma falha no sensor,": {
+   "is_end": false,
+   "options": [
+    [
+     " interromp",
+     0.311436
+    ],
+    [
+     " exig",
+     0.278081
+    ],
+    [
+     " causando",
+     0.112581
+    ],
+    [
+     " resultando",
+     0.045807
+    ],
+    [
+     " atras",
+     0.041674
+    ],
+    [
+     " necess",
+     0.031903
+    ],
+    [
+     " afet",
+     0.028272
+    ],
+    [
+     " levando",
+     0.016535
+    ],
+    [
+     " o",
+     0.01248
+    ],
+    [
+     " obrig",
+     0.011669
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no sensor, interromp": {
+   "is_end": false,
+   "options": [
+    [
+     "endo",
+     0.993763
+    ],
+    [
+     "indo",
+     0.005981
+    ],
+    [
+     "ando",
+     0.000152
+    ],
+    [
+     "ida",
+     4.6e-05
+    ],
+    [
+     "ido",
+     3.5e-05
+    ],
+    [
+     "idas",
+     5e-06
+    ],
+    [
+     "ecendo",
+     3e-06
+    ],
+    [
+     "end",
+     3e-06
+    ],
+    [
+     "idos",
+     2e-06
+    ],
+    [
+     "ento",
+     1e-06
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no sensor, interrompendo": {
+   "is_end": false,
+   "options": [
+    [
+     " tempor",
+     0.523653
+    ],
+    [
+     " a",
+     0.299884
+    ],
+    [
+     " o",
+     0.121445
+    ],
+    [
+     " brevemente",
+     0.0175
+    ],
+    [
+     " moment",
+     0.009757
+    ],
+    [
+     " toda",
+     0.00465
+    ],
+    [
+     " parcialmente",
+     0.004186
+    ],
+    [
+     " as",
+     0.002336
+    ],
+    [
+     " os",
+     0.001362
+    ],
+    [
+     " totalmente",
+     0.00126
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no sensor, interrompendo tempor": {
+   "is_end": false,
+   "options": [
+    [
+     "ariamente",
+     0.998619
+    ],
+    [
+     "almente",
+     0.001227
+    ],
+    [
+     "aneamente",
+     7.4e-05
+    ],
+    [
+     "ária",
+     5.9e-05
+    ],
+    [
+     "ar",
+     6e-06
+    ],
+    [
+     "ário",
+     3e-06
+    ],
+    [
+     "ari",
+     3e-06
+    ],
+    [
+     "ários",
+     2e-06
+    ],
+    [
+     "ativamente",
+     1e-06
+    ],
+    [
+     "ári",
+     1e-06
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no sensor, interrompendo temporariamente": {
+   "is_end": false,
+   "options": [
+    [
+     " a",
+     0.635021
+    ],
+    [
+     " o",
+     0.329382
+    ],
+    [
+     " as",
+     0.010093
+    ],
+    [
+     " os",
+     0.007433
+    ],
+    [
+     " toda",
+     0.007145
+    ],
+    [
+     " todo",
+     0.005155
+    ],
+    [
+     " uma",
+     0.001102
+    ],
+    [
+     " ",
+     0.001013
+    ],
+    [
+     " um",
+     0.000508
+    ],
+    [
+     " todas",
+     0.000195
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no sensor, interrompendo temporariamente a": {
+   "is_end": false,
+   "options": [
+    [
+     " produção",
+     0.874189
+    ],
+    [
+     " fabricação",
+     0.011216
+    ],
+    [
+     " saída",
+     0.010384
+    ],
+    [
+     " mon",
+     0.010315
+    ],
+    [
+     " linha",
+     0.008659
+    ],
+    [
+     " sequência",
+     0.004971
+    ],
+    [
+     " embal",
+     0.004464
+    ],
+    [
+     " operação",
+     0.003791
+    ],
+    [
+     " formação",
+     0.002166
+    ],
+    [
+     " confe",
+     0.002046
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no sensor, interrompendo temporariamente a produção": {
+   "is_end": false,
+   "options": [
+    [
+     ".",
+     0.795876
+    ],
+    [
+     " de",
+     0.123159
+    ],
+    [
+     " em",
+     0.01802
+    ],
+    [
+     " e",
+     0.010918
+    ],
+    [
+     " durante",
+     0.010404
+    ],
+    [
+     ",",
+     0.006772
+    ],
+    [
+     " por",
+     0.005195
+    ],
+    [
+     " do",
+     0.002873
+    ],
+    [
+     " até",
+     0.002572
+    ],
+    [
+     " para",
+     0.002242
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no sensor, interrompendo temporariamente a produção.": {
+   "is_end": true,
+   "options": []
+  },
+  "A linha 2 parou devido a uma falha no sensor.": {
+   "is_end": true,
+   "options": []
+  },
+  "A linha 2 parou devido a uma falha no sensor de pressão": {
+   "is_end": false,
+   "options": [
+    [
+     ".",
+     0.590897
+    ],
+    [
+     ",",
+     0.244915
+    ],
+    [
+     " durante",
+     0.041214
+    ],
+    [
+     " na",
+     0.010882
+    ],
+    [
+     " a",
+     0.009961
+    ],
+    [
+     " por",
+     0.008684
+    ],
+    [
+     " às",
+     0.008313
+    ],
+    [
+     " do",
+     0.007909
+    ],
+    [
+     " que",
+     0.007097
+    ],
+    [
+     " no",
+     0.006371
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no sensor de pressão.": {
+   "is_end": true,
+   "options": []
+  },
+  "A linha 2 parou devido a uma falha no sensor de qualidade": {
+   "is_end": false,
+   "options": [
+    [
+     ".",
+     0.395666
+    ],
+    [
+     ",",
+     0.31171
+    ],
+    [
+     " do",
+     0.065413
+    ],
+    [
+     " que",
+     0.051648
+    ],
+    [
+     " de",
+     0.03656
+    ],
+    [
+     " durante",
+     0.033154
+    ],
+    [
+     " no",
+     0.013554
+    ],
+    [
+     " a",
+     0.007992
+    ],
+    [
+     " dos",
+     0.007659
+    ],
+    [
+     " após",
+     0.006753
+    ]
+   ]
+  },
+  "A linha 2 parou devido a uma falha no sensor de qualidade.": {
+   "is_end": true,
+   "options": []
+  },
+  "O sensor da linha 2": {
+   "is_end": false,
+   "options": [
+    [
+     " det",
+     0.57444
+    ],
+    [
+     " regist",
+     0.172688
+    ],
+    [
+     " report",
+     0.036983
+    ],
+    [
+     " indic",
+     0.028877
+    ],
+    [
+     " par",
+     0.027641
+    ],
+    [
+     " dete",
+     0.01204
+    ],
+    [
+     " apresentou",
+     0.011997
+    ],
+    [
+     " identific",
+     0.011044
+    ],
+    [
+     " fal",
+     0.010624
+    ],
+    [
+     " interrom",
+     0.008103
+    ]
+   ]
+  },
+  "O sensor da linha 2 det": {
+   "is_end": false,
+   "options": [
+    [
+     "et",
+     0.99856
+    ],
+    [
+     "ete",
+     0.000853
+    ],
+    [
+     "eta",
+     0.000133
+    ],
+    [
+     "etar",
+     8e-05
+    ],
+    [
+     "etor",
+     6.8e-05
+    ],
+    [
+     "eto",
+     4.9e-05
+    ],
+    [
+     "etet",
+     4.6e-05
+    ],
+    [
+     "eted",
+     2.2e-05
+    ],
+    [
+     "etim",
+     2.1e-05
+    ],
+    [
+     "ou",
+     1.4e-05
+    ]
+   ]
+  },
+  "O sensor da linha 2 detet": {
+   "is_end": false,
+   "options": [
+    [
+     "ou",
+     0.999688
+    ],
+    [
+     "ava",
+     9.8e-05
+    ],
+    [
+     "ada",
+     4.1e-05
+    ],
+    [
+     "aram",
+     4e-05
+    ],
+    [
+     "ado",
+     2.5e-05
+    ],
+    [
+     "ando",
+     1.8e-05
+    ],
+    [
+     "ara",
+     1.7e-05
+    ],
+    [
+     "ámos",
+     1.7e-05
+    ],
+    [
+     "ará",
+     1.5e-05
+    ],
+    [
+     "iou",
+     5e-06
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetou": {
+   "is_end": false,
+   "options": [
+    [
+     " uma",
+     0.531677
+    ],
+    [
+     " um",
+     0.327641
+    ],
+    [
+     " a",
+     0.019353
+    ],
+    [
+     " partículas",
+     0.013493
+    ],
+    [
+     ",",
+     0.009572
+    ],
+    [
+     " fug",
+     0.005928
+    ],
+    [
+     " material",
+     0.004885
+    ],
+    [
+     " anom",
+     0.003242
+    ],
+    [
+     " peças",
+     0.003177
+    ],
+    [
+     " det",
+     0.002449
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetou uma": {
+   "is_end": false,
+   "options": [
+    [
+     " fal",
+     0.378278
+    ],
+    [
+     " anomal",
+     0.158333
+    ],
+    [
+     " sobre",
+     0.04907
+    ],
+    [
+     " queda",
+     0.040236
+    ],
+    [
+     " ob",
+     0.027
+    ],
+    [
+     " interrup",
+     0.022961
+    ],
+    [
+     " fuga",
+     0.019241
+    ],
+    [
+     " peça",
+     0.019142
+    ],
+    [
+     " partícul",
+     0.015818
+    ],
+    [
+     " irregular",
+     0.013849
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetou uma fal": {
+   "is_end": false,
+   "options": [
+    [
+     "ha",
+     0.999231
+    ],
+    [
+     "ência",
+     0.000115
+    ],
+    [
+     "has",
+     9.4e-05
+    ],
+    [
+     "ange",
+     7.5e-05
+    ],
+    [
+     "ácia",
+     4.6e-05
+    ],
+    [
+     "har",
+     4.3e-05
+    ],
+    [
+     "ci",
+     4.1e-05
+    ],
+    [
+     "ca",
+     3e-05
+    ],
+    [
+     "pa",
+     3e-05
+    ],
+    [
+     "he",
+     2.9e-05
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetou uma falha": {
+   "is_end": false,
+   "options": [
+    [
+     " no",
+     0.263692
+    ],
+    [
+     " na",
+     0.179183
+    ],
+    [
+     " de",
+     0.151864
+    ],
+    [
+     ",",
+     0.048505
+    ],
+    [
+     " durante",
+     0.037704
+    ],
+    [
+     " inesper",
+     0.037344
+    ],
+    [
+     " nos",
+     0.027608
+    ],
+    [
+     " num",
+     0.025071
+    ],
+    [
+     " e",
+     0.022415
+    ],
+    [
+     " crítica",
+     0.016012
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetou uma falha no": {
+   "is_end": false,
+   "options": [
+    [
+     " sistema",
+     0.075611
+    ],
+    [
+     " rol",
+     0.075226
+    ],
+    [
+     " componente",
+     0.061883
+    ],
+    [
+     " processo",
+     0.051554
+    ],
+    [
+     " material",
+     0.043003
+    ],
+    [
+     " fornec",
+     0.038213
+    ],
+    [
+     " rob",
+     0.030995
+    ],
+    [
+     " aliment",
+     0.027391
+    ],
+    [
+     " ro",
+     0.023743
+    ],
+    [
+     " ench",
+     0.022061
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetou uma falha no sistema": {
+   "is_end": false,
+   "options": [
+    [
+     " de",
+     0.560806
+    ],
+    [
+     " durante",
+     0.143966
+    ],
+    [
+     ",",
+     0.134486
+    ],
+    [
+     " pneum",
+     0.023054
+    ],
+    [
+     " hid",
+     0.019562
+    ],
+    [
+     " e",
+     0.015749
+    ],
+    [
+     ".",
+     0.012
+    ],
+    [
+     " devido",
+     0.007467
+    ],
+    [
+     " a",
+     0.006554
+    ],
+    [
+     " após",
+     0.004695
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetou uma falha no sistema de": {
+   "is_end": false,
+   "options": [
+    [
+     " enc",
+     0.220165
+    ],
+    [
+     " lub",
+     0.062476
+    ],
+    [
+     " alimentação",
+     0.045859
+    ],
+    [
+     " contro",
+     0.040986
+    ],
+    [
+     " mistura",
+     0.033567
+    ],
+    [
+     " calib",
+     0.027919
+    ],
+    [
+     " in",
+     0.021671
+    ],
+    [
+     " ved",
+     0.020768
+    ],
+    [
+     " ench",
+     0.018065
+    ],
+    [
+     " ar",
+     0.016768
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetou uma falha no sistema de enc": {
+   "is_end": false,
+   "options": [
+    [
+     "aps",
+     0.772208
+    ],
+    [
+     "aix",
+     0.167328
+    ],
+    [
+     "od",
+     0.01576
+    ],
+    [
+     "rava",
+     0.009304
+    ],
+    [
+     "amis",
+     0.008014
+    ],
+    [
+     "ader",
+     0.0073
+    ],
+    [
+     "rav",
+     0.005736
+    ],
+    [
+     "arp",
+     0.002148
+    ],
+    [
+     "ade",
+     0.002129
+    ],
+    [
+     "rip",
+     0.000891
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetou uma falha no sistema de encaps": {
+   "is_end": false,
+   "options": [
+    [
+     "ul",
+     0.983242
+    ],
+    [
+     "ulação",
+     0.0095
+    ],
+    [
+     "ulado",
+     0.006563
+    ],
+    [
+     "ulada",
+     0.000355
+    ],
+    [
+     "ula",
+     0.000119
+    ],
+    [
+     "ular",
+     2.4e-05
+    ],
+    [
+     "ulat",
+     2.2e-05
+    ],
+    [
+     "ulant",
+     1.8e-05
+    ],
+    [
+     "ulation",
+     1.5e-05
+    ],
+    [
+     "ulho",
+     1.4e-05
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetou uma falha no sistema de encapsul": {
+   "is_end": false,
+   "options": [
+    [
+     "amento",
+     0.970339
+    ],
+    [
+     "agem",
+     0.018332
+    ],
+    [
+     "ados",
+     0.003386
+    ],
+    [
+     "adora",
+     0.001367
+    ],
+    [
+     "ante",
+     0.001309
+    ],
+    [
+     "ação",
+     0.001182
+    ],
+    [
+     "ado",
+     0.000686
+    ],
+    [
+     "antes",
+     0.000397
+    ],
+    [
+     "ização",
+     0.000392
+    ],
+    [
+     "ador",
+     0.000342
+    ]
+   ]
+  },
+  "O sensor da linha 2 regist": {
+   "is_end": false,
+   "options": [
+    [
+     "ou",
+     0.99649
+    ],
+    [
+     "rou",
+     0.003334
+    ],
+    [
+     "ara",
+     3.3e-05
+    ],
+    [
+     "ado",
+     2.7e-05
+    ],
+    [
+     "aram",
+     2.6e-05
+    ],
+    [
+     "ará",
+     1.4e-05
+    ],
+    [
+     "aria",
+     1e-05
+    ],
+    [
+     "ando",
+     1e-05
+    ],
+    [
+     "ada",
+     9e-06
+    ],
+    [
+     "ar",
+     7e-06
+    ]
+   ]
+  },
+  "O sensor da linha 2 registou": {
+   "is_end": false,
+   "options": [
+    [
+     " uma",
+     0.566902
+    ],
+    [
+     " um",
+     0.357047
+    ],
+    [
+     ",",
+     0.00956
+    ],
+    [
+     " a",
+     0.008757
+    ],
+    [
+     " anom",
+     0.003976
+    ],
+    [
+     " brevemente",
+     0.003361
+    ],
+    [
+     " sub",
+     0.003104
+    ],
+    [
+     " interrup",
+     0.002105
+    ],
+    [
+     " fal",
+     0.001645
+    ],
+    [
+     " des",
+     0.001509
+    ]
+   ]
+  },
+  "O sensor da linha 2 registou uma": {
+   "is_end": false,
+   "options": [
+    [
+     " fal",
+     0.379435
+    ],
+    [
+     " queda",
+     0.092389
+    ],
+    [
+     " anomal",
+     0.085036
+    ],
+    [
+     " interrup",
+     0.067648
+    ],
+    [
+     " sobre",
+     0.062477
+    ],
+    [
+     " par",
+     0.02363
+    ],
+    [
+     " av",
+     0.01633
+    ],
+    [
+     " desc",
+     0.015901
+    ],
+    [
+     " fl",
+     0.014637
+    ],
+    [
+     " diminuição",
+     0.010905
+    ]
+   ]
+  },
+  "O sensor da linha 2 registou uma fal": {
+   "is_end": false,
+   "options": [
+    [
+     "ha",
+     0.999008
+    ],
+    [
+     "ência",
+     0.000592
+    ],
+    [
+     "has",
+     5.6e-05
+    ],
+    [
+     "ácia",
+     3.2e-05
+    ],
+    [
+     "he",
+     2.5e-05
+    ],
+    [
+     "h",
+     2.3e-05
+    ],
+    [
+     "har",
+     2e-05
+    ],
+    [
+     "ça",
+     1.9e-05
+    ],
+    [
+     "hou",
+     1.6e-05
+    ],
+    [
+     "ésia",
+     1.4e-05
+    ]
+   ]
+  },
+  "O sensor da linha 2 registou uma falha": {
+   "is_end": false,
+   "options": [
+    [
+     " durante",
+     0.146858
+    ],
+    [
+     " de",
+     0.103484
+    ],
+    [
+     ",",
+     0.094224
+    ],
+    [
+     " no",
+     0.086378
+    ],
+    [
+     " inter",
+     0.070713
+    ],
+    [
+     " inesper",
+     0.068645
+    ],
+    [
+     " na",
+     0.054032
+    ],
+    [
+     " sú",
+     0.046596
+    ],
+    [
+     " tempor",
+     0.044103
+    ],
+    [
+     " rep",
+     0.040745
+    ]
+   ]
+  },
+  "O sensor da linha 2 registou uma falha durante": {
+   "is_end": false,
+   "options": [
+    [
+     " a",
+     0.511496
+    ],
+    [
+     " o",
+     0.41302
+    ],
+    [
+     " uma",
+     0.029326
+    ],
+    [
+     " um",
+     0.019292
+    ],
+    [
+     " as",
+     0.013636
+    ],
+    [
+     " os",
+     0.006295
+    ],
+    [
+     " ",
+     0.001854
+    ],
+    [
+     " insp",
+     0.000598
+    ],
+    [
+     " três",
+     0.000267
+    ],
+    [
+     " mais",
+     0.000184
+    ]
+   ]
+  },
+  "O sensor da linha 2 registou uma falha durante a": {
+   "is_end": false,
+   "options": [
+    [
+     " produção",
+     0.203855
+    ],
+    [
+     " insp",
+     0.179473
+    ],
+    [
+     " operação",
+     0.087447
+    ],
+    [
+     " fase",
+     0.082504
+    ],
+    [
+     " noite",
+     0.056041
+    ],
+    [
+     " última",
+     0.040424
+    ],
+    [
+     " passagem",
+     0.034246
+    ],
+    [
+     " ver",
+     0.023557
+    ],
+    [
+     " calib",
+     0.016258
+    ],
+    [
+     " con",
+     0.014708
+    ]
+   ]
+  },
+  "O sensor da linha 2 registou uma falha durante a produção": {
+   "is_end": false,
+   "options": [
+    [
+     ",",
+     0.408615
+    ],
+    [
+     " de",
+     0.165145
+    ],
+    [
+     " em",
+     0.06904
+    ],
+    [
+     " da",
+     0.060469
+    ],
+    [
+     " do",
+     0.042425
+    ],
+    [
+     " mat",
+     0.03886
+    ],
+    [
+     ".",
+     0.034841
+    ],
+    [
+     " das",
+     0.034758
+    ],
+    [
+     " not",
+     0.033659
+    ],
+    [
+     " às",
+     0.020231
+    ]
+   ]
+  },
+  "O sensor da linha 2 registou uma falha durante a produção,": {
+   "is_end": false,
+   "options": [
+    [
+     " interromp",
+     0.451697
+    ],
+    [
+     " exig",
+     0.114618
+    ],
+    [
+     " causando",
+     0.108475
+    ],
+    [
+     " levando",
+     0.086022
+    ],
+    [
+     " resultando",
+     0.053759
+    ],
+    [
+     " o",
+     0.014066
+    ],
+    [
+     " par",
+     0.014054
+    ],
+    [
+     " obrig",
+     0.013194
+    ],
+    [
+     " necess",
+     0.010372
+    ],
+    [
+     " provocando",
+     0.009226
+    ]
+   ]
+  },
+  "O sensor da linha 2 registou uma falha durante a produção, interromp": {
+   "is_end": false,
+   "options": [
+    [
+     "endo",
+     0.974897
+    ],
+    [
+     "indo",
+     0.024655
+    ],
+    [
+     "ida",
+     0.000168
+    ],
+    [
+     "ando",
+     0.000148
+    ],
+    [
+     "ido",
+     9.4e-05
+    ],
+    [
+     "idas",
+     8e-06
+    ],
+    [
+     "end",
+     6e-06
+    ],
+    [
+     "idos",
+     5e-06
+    ],
+    [
+     "ecendo",
+     3e-06
+    ],
+    [
+     "endendo",
+     2e-06
+    ]
+   ]
+  },
+  "O sensor da linha 2 registou uma falha durante a produção, interrompendo": {
+   "is_end": false,
+   "options": [
+    [
+     " tempor",
+     0.811508
+    ],
+    [
+     " o",
+     0.089882
+    ],
+    [
+     " a",
+     0.056463
+    ],
+    [
+     " brevemente",
+     0.016532
+    ],
+    [
+     " moment",
+     0.011496
+    ],
+    [
+     " parcialmente",
+     0.00351
+    ],
+    [
+     " as",
+     0.001335
+    ],
+    [
+     " lige",
+     0.000897
+    ],
+    [
+     " os",
+     0.000846
+    ],
+    [
+     " totalmente",
+     0.000493
+    ]
+   ]
+  },
+  "O sensor da linha 2 registou uma falha durante a produção, interrompendo tempor": {
+   "is_end": false,
+   "options": [
+    [
+     "ariamente",
+     0.997296
+    ],
+    [
+     "almente",
+     0.002546
+    ],
+    [
+     "aneamente",
+     6.6e-05
+    ],
+    [
+     "ária",
+     6.5e-05
+    ],
+    [
+     "ari",
+     5e-06
+    ],
+    [
+     "ar",
+     5e-06
+    ],
+    [
+     "ário",
+     4e-06
+    ],
+    [
+     "ários",
+     2e-06
+    ],
+    [
+     "ativamente",
+     2e-06
+    ],
+    [
+     "ári",
+     1e-06
+    ]
+   ]
+  },
+  "O sensor da linha 2 report": {
+   "is_end": false,
+   "options": [
+    [
+     "ou",
+     0.999724
+    ],
+    [
+     "aram",
+     6.4e-05
+    ],
+    [
+     "ará",
+     4e-05
+    ],
+    [
+     "ado",
+     3.6e-05
+    ],
+    [
+     "ada",
+     2.5e-05
+    ],
+    [
+     "ar",
+     2.4e-05
+    ],
+    [
+     "ara",
+     1.4e-05
+    ],
+    [
+     "ando",
+     1e-05
+    ],
+    [
+     "aria",
+     9e-06
+    ],
+    [
+     "ámos",
+     5e-06
+    ]
+   ]
+  },
+  "O sensor da linha 2 reportou": {
+   "is_end": false,
+   "options": [
+    [
+     " uma",
+     0.606647
+    ],
+    [
+     " um",
+     0.285924
+    ],
+    [
+     " a",
+     0.011381
+    ],
+    [
+     ",",
+     0.010105
+    ],
+    [
+     " anom",
+     0.006541
+    ],
+    [
+     " brevemente",
+     0.003871
+    ],
+    [
+     " fal",
+     0.003466
+    ],
+    [
+     " sub",
+     0.002977
+    ],
+    [
+     " des",
+     0.002406
+    ],
+    [
+     " fug",
+     0.002123
+    ]
+   ]
+  },
+  "O sensor da linha 2 reportou uma": {
+   "is_end": false,
+   "options": [
+    [
+     " fal",
+     0.425802
+    ],
+    [
+     " anomal",
+     0.113808
+    ],
+    [
+     " interrup",
+     0.063755
+    ],
+    [
+     " queda",
+     0.06171
+    ],
+    [
+     " sobre",
+     0.059758
+    ],
+    [
+     " av",
+     0.015218
+    ],
+    [
+     " par",
+     0.014503
+    ],
+    [
+     " fl",
+     0.011792
+    ],
+    [
+     " desc",
+     0.010846
+    ],
+    [
+     " perda",
+     0.010274
+    ]
+   ]
+  },
+  "O sensor da linha 2 reportou uma fal": {
+   "is_end": false,
+   "options": [
+    [
+     "ha",
+     0.999343
+    ],
+    [
+     "ência",
+     0.000284
+    ],
+    [
+     "has",
+     4.8e-05
+    ],
+    [
+     "ácia",
+     3.4e-05
+    ],
+    [
+     "he",
+     2.8e-05
+    ],
+    [
+     "har",
+     2.2e-05
+    ],
+    [
+     "h",
+     2.2e-05
+    ],
+    [
+     "ça",
+     1.8e-05
+    ],
+    [
+     "ta",
+     1.4e-05
+    ],
+    [
+     "hou",
+     1.2e-05
+    ]
+   ]
+  },
+  "O sensor da linha 2 reportou uma falha": {
+   "is_end": false,
+   "options": [
+    [
+     " durante",
+     0.149354
+    ],
+    [
+     " no",
+     0.123693
+    ],
+    [
+     " de",
+     0.121371
+    ],
+    [
+     " na",
+     0.081518
+    ],
+    [
+     ",",
+     0.076337
+    ],
+    [
+     " inesper",
+     0.071591
+    ],
+    [
+     " inter",
+     0.06054
+    ],
+    [
+     " tempor",
+     0.029861
+    ],
+    [
+     " sú",
+     0.028811
+    ],
+    [
+     " rep",
+     0.025911
+    ]
+   ]
+  },
+  "O sensor da linha 2 reportou uma falha durante": {
+   "is_end": false,
+   "options": [
+    [
+     " a",
+     0.490497
+    ],
+    [
+     " o",
+     0.445221
+    ],
+    [
+     " uma",
+     0.02619
+    ],
+    [
+     " um",
+     0.014106
+    ],
+    [
+     " as",
+     0.012803
+    ],
+    [
+     " os",
+     0.006121
+    ],
+    [
+     " insp",
+     0.000853
+    ],
+    [
+     " ",
+     0.000627
+    ],
+    [
+     " p",
+     0.000157
+    ],
+    [
+     " toda",
+     0.000125
+    ]
+   ]
+  },
+  "O sensor da linha 2 reportou uma falha durante a": {
+   "is_end": false,
+   "options": [
+    [
+     " insp",
+     0.221694
+    ],
+    [
+     " produção",
+     0.181311
+    ],
+    [
+     " operação",
+     0.08755
+    ],
+    [
+     " fase",
+     0.078152
+    ],
+    [
+     " última",
+     0.044651
+    ],
+    [
+     " noite",
+     0.042893
+    ],
+    [
+     " passagem",
+     0.031122
+    ],
+    [
+     " ver",
+     0.029502
+    ],
+    [
+     " calib",
+     0.015582
+    ],
+    [
+     " con",
+     0.012304
+    ]
+   ]
+  },
+  "O sensor da linha 2 reportou uma falha durante a insp": {
+   "is_end": false,
+   "options": [
+    [
+     "e",
+     0.999819
+    ],
+    [
+     "ec",
+     5e-05
+    ],
+    [
+     "ção",
+     5e-05
+    ],
+    [
+     "ei",
+     2.1e-05
+    ],
+    [
+     "ração",
+     9e-06
+    ],
+    [
+     "ección",
+     8e-06
+    ],
+    [
+     "E",
+     7e-06
+    ],
+    [
+     "etor",
+     5e-06
+    ],
+    [
+     "ição",
+     5e-06
+    ],
+    [
+     "ação",
+     3e-06
+    ]
+   ]
+  },
+  "O sensor da linha 2 reportou uma falha durante a inspe": {
+   "is_end": false,
+   "options": [
+    [
+     "ção",
+     0.999996
+    ],
+    [
+     "ç",
+     3e-06
+    ],
+    [
+     "ções",
+     0.0
+    ],
+    [
+     "zione",
+     0.0
+    ],
+    [
+     " final",
+     0.0
+    ],
+    [
+     "ÇÃO",
+     0.0
+    ],
+    [
+     "çao",
+     0.0
+    ],
+    [
+     "Ç",
+     0.0
+    ],
+    [
+     "C",
+     0.0
+    ],
+    [
+     " inicial",
+     0.0
+    ]
+   ]
+  },
+  "O sensor da linha 2 reportou uma falha durante a inspeção": {
+   "is_end": false,
+   "options": [
+    [
+     " de",
+     0.187005
+    ],
+    [
+     ",",
+     0.159894
+    ],
+    [
+     " mat",
+     0.144475
+    ],
+    [
+     " da",
+     0.102458
+    ],
+    [
+     " final",
+     0.074114
+    ],
+    [
+     " not",
+     0.068143
+    ],
+    [
+     " das",
+     0.044951
+    ],
+    [
+     " do",
+     0.030558
+    ],
+    [
+     " di",
+     0.027442
+    ],
+    [
+     " rot",
+     0.022033
+    ]
+   ]
+  },
+  "O sensor da linha 2 reportou uma falha durante a inspeção de": {
+   "is_end": false,
+   "options": [
+    [
+     " rotina",
+     0.648973
+    ],
+    [
+     " qualidade",
+     0.124506
+    ],
+    [
+     " saída",
+     0.049726
+    ],
+    [
+     " contro",
+     0.025108
+    ],
+    [
+     " rut",
+     0.01391
+    ],
+    [
+     " am",
+     0.011624
+    ],
+    [
+     " terça",
+     0.00969
+    ],
+    [
+     " segunda",
+     0.009287
+    ],
+    [
+     " entrada",
+     0.006244
+    ],
+    [
+     " hoje",
+     0.006066
+    ]
+   ]
+  },
+  "O sensor da linha 2 reportou uma falha durante a inspeção de rotina": {
+   "is_end": false,
+   "options": [
+    [
+     ",",
+     0.460036
+    ],
+    [
+     ".",
+     0.313992
+    ],
+    [
+     " da",
+     0.05113
+    ],
+    [
+     " às",
+     0.045737
+    ],
+    [
+     " das",
+     0.021338
+    ],
+    [
+     " do",
+     0.017047
+    ],
+    [
+     " ao",
+     0.016576
+    ],
+    [
+     " na",
+     0.013646
+    ],
+    [
+     " a",
+     0.007178
+    ],
+    [
+     " de",
+     0.006566
+    ]
+   ]
+  },
+  "O sensor da linha 2 detete": {
+   "is_end": false,
+   "options": [
+    [
+     "u",
+     0.903633
+    ],
+    [
+     " uma",
+     0.026698
+    ],
+    [
+     "i",
+     0.023759
+    ],
+    [
+     " um",
+     0.013082
+    ],
+    [
+     "ou",
+     0.01069
+    ],
+    [
+     "ve",
+     0.003738
+    ],
+    [
+     " a",
+     0.002105
+    ],
+    [
+     " e",
+     0.001075
+    ],
+    [
+     " que",
+     0.00063
+    ],
+    [
+     " o",
+     0.000552
+    ]
+   ]
+  },
+  "O sensor da linha 2 deteteu": {
+   "is_end": false,
+   "options": [
+    [
+     " uma",
+     0.505911
+    ],
+    [
+     " um",
+     0.352563
+    ],
+    [
+     " a",
+     0.025482
+    ],
+    [
+     " partículas",
+     0.011673
+    ],
+    [
+     ",",
+     0.007661
+    ],
+    [
+     " fug",
+     0.004204
+    ],
+    [
+     " anom",
+     0.003706
+    ],
+    [
+     " que",
+     0.003587
+    ],
+    [
+     " o",
+     0.003472
+    ],
+    [
+     " material",
+     0.003205
+    ]
+   ]
+  },
+  "O sensor da linha 2 deteteu uma": {
+   "is_end": false,
+   "options": [
+    [
+     " fal",
+     0.37928
+    ],
+    [
+     " anomal",
+     0.164436
+    ],
+    [
+     " queda",
+     0.039432
+    ],
+    [
+     " sobre",
+     0.038114
+    ],
+    [
+     " interrup",
+     0.025236
+    ],
+    [
+     " ob",
+     0.023049
+    ],
+    [
+     " peça",
+     0.018172
+    ],
+    [
+     " irregular",
+     0.017158
+    ],
+    [
+     " partícul",
+     0.016566
+    ],
+    [
+     " fuga",
+     0.015161
+    ]
+   ]
+  },
+  "O sensor da linha 2 deteteu uma fal": {
+   "is_end": false,
+   "options": [
+    [
+     "ha",
+     0.998958
+    ],
+    [
+     "ência",
+     0.000165
+    ],
+    [
+     "has",
+     0.000111
+    ],
+    [
+     "har",
+     8.1e-05
+    ],
+    [
+     "ange",
+     7.6e-05
+    ],
+    [
+     "ácia",
+     5.5e-05
+    ],
+    [
+     "he",
+     5.2e-05
+    ],
+    [
+     "ci",
+     4.8e-05
+    ],
+    [
+     "hou",
+     4.1e-05
+    ],
+    [
+     "ca",
+     3.7e-05
+    ]
+   ]
+  },
+  "O sensor da linha 2 deteteu uma falha": {
+   "is_end": false,
+   "options": [
+    [
+     " no",
+     0.254516
+    ],
+    [
+     " na",
+     0.183676
+    ],
+    [
+     " de",
+     0.156193
+    ],
+    [
+     ",",
+     0.047769
+    ],
+    [
+     " durante",
+     0.037252
+    ],
+    [
+     " inesper",
+     0.034473
+    ],
+    [
+     " nos",
+     0.025324
+    ],
+    [
+     " num",
+     0.024855
+    ],
+    [
+     " e",
+     0.02051
+    ],
+    [
+     " crítica",
+     0.018059
+    ]
+   ]
+  },
+  "O sensor da linha 2 deteteu uma falha no": {
+   "is_end": false,
+   "options": [
+    [
+     " rol",
+     0.088041
+    ],
+    [
+     " sistema",
+     0.083191
+    ],
+    [
+     " componente",
+     0.064001
+    ],
+    [
+     " processo",
+     0.051575
+    ],
+    [
+     " fornec",
+     0.040377
+    ],
+    [
+     " material",
+     0.035662
+    ],
+    [
+     " rob",
+     0.033121
+    ],
+    [
+     " aliment",
+     0.026353
+    ],
+    [
+     " ro",
+     0.023154
+    ],
+    [
+     " ench",
+     0.021168
+    ]
+   ]
+  },
+  "O sensor da linha 2 deteteu uma falha no rol": {
+   "is_end": false,
+   "options": [
+    [
+     "amento",
+     0.862941
+    ],
+    [
+     "ete",
+     0.089319
+    ],
+    [
+     "ador",
+     0.035271
+    ],
+    [
+     "ante",
+     0.004932
+    ],
+    [
+     "amentos",
+     0.00202
+    ],
+    [
+     "lo",
+     0.000383
+    ],
+    [
+     "mento",
+     0.000372
+    ],
+    [
+     "ame",
+     0.000324
+    ],
+    [
+     "ado",
+     0.000301
+    ],
+    [
+     "ão",
+     0.00027
+    ]
+   ]
+  },
+  "O sensor da linha 2 deteteu uma falha no rolamento": {
+   "is_end": false,
+   "options": [
+    [
+     ",",
+     0.366125
+    ],
+    [
+     " durante",
+     0.248569
+    ],
+    [
+     " do",
+     0.072705
+    ],
+    [
+     " principal",
+     0.045882
+    ],
+    [
+     " e",
+     0.030859
+    ],
+    [
+     ".",
+     0.027759
+    ],
+    [
+     " de",
+     0.025592
+    ],
+    [
+     " da",
+     0.02551
+    ],
+    [
+     " após",
+     0.011311
+    ],
+    [
+     " dos",
+     0.009903
+    ]
+   ]
+  },
+  "O sensor da linha 2 deteteu uma falha no rolamento,": {
+   "is_end": false,
+   "options": [
+    [
+     " interromp",
+     0.453155
+    ],
+    [
+     " levando",
+     0.12877
+    ],
+    [
+     " causando",
+     0.095647
+    ],
+    [
+     " resultando",
+     0.051096
+    ],
+    [
+     " o",
+     0.048349
+    ],
+    [
+     " exig",
+     0.046308
+    ],
+    [
+     " par",
+     0.015583
+    ],
+    [
+     " for",
+     0.015119
+    ],
+    [
+     " provocando",
+     0.014951
+    ],
+    [
+     " ativ",
+     0.012136
+    ]
+   ]
+  },
+  "O sensor da linha 2 deteteu uma falha no rolamento, interromp": {
+   "is_end": false,
+   "options": [
+    [
+     "endo",
+     0.998613
+    ],
+    [
+     "indo",
+     0.001231
+    ],
+    [
+     "ando",
+     7.8e-05
+    ],
+    [
+     "ida",
+     4.3e-05
+    ],
+    [
+     "ido",
+     2.1e-05
+    ],
+    [
+     "end",
+     4e-06
+    ],
+    [
+     "idas",
+     1e-06
+    ],
+    [
+     "endendo",
+     1e-06
+    ],
+    [
+     "ia",
+     1e-06
+    ],
+    [
+     "idos",
+     1e-06
+    ]
+   ]
+  },
+  "O sensor da linha 2 deteteu uma falha no rolamento, interrompendo": {
+   "is_end": false,
+   "options": [
+    [
+     " tempor",
+     0.497934
+    ],
+    [
+     " a",
+     0.291872
+    ],
+    [
+     " o",
+     0.092552
+    ],
+    [
+     " brevemente",
+     0.03823
+    ],
+    [
+     " moment",
+     0.02158
+    ],
+    [
+     " sub",
+     0.009881
+    ],
+    [
+     " parcialmente",
+     0.008872
+    ],
+    [
+     " imediatamente",
+     0.00489
+    ],
+    [
+     " assim",
+     0.003138
+    ],
+    [
+     " abrupt",
+     0.003037
+    ]
+   ]
+  },
+  "O sensor da linha 2 deteta": {
+   "is_end": false,
+   "options": [
+    [
+     " uma",
+     0.482816
+    ],
+    [
+     " um",
+     0.375856
+    ],
+    [
+     " a",
+     0.025792
+    ],
+    [
+     " partículas",
+     0.008885
+    ],
+    [
+     " anom",
+     0.007754
+    ],
+    [
+     ",",
+     0.006565
+    ],
+    [
+     " material",
+     0.004939
+    ],
+    [
+     " o",
+     0.00455
+    ],
+    [
+     " irregular",
+     0.003921
+    ],
+    [
+     " sub",
+     0.002678
+    ]
+   ]
+  },
+  "O sensor da linha 2 deteta uma": {
+   "is_end": false,
+   "options": [
+    [
+     " fal",
+     0.316432
+    ],
+    [
+     " anomal",
+     0.203983
+    ],
+    [
+     " sobre",
+     0.05564
+    ],
+    [
+     " queda",
+     0.046273
+    ],
+    [
+     " ob",
+     0.023474
+    ],
+    [
+     " interrup",
+     0.020755
+    ],
+    [
+     " peça",
+     0.019391
+    ],
+    [
+     " fuga",
+     0.018963
+    ],
+    [
+     " acum",
+     0.017193
+    ],
+    [
+     " irregular",
+     0.015949
+    ]
+   ]
+  },
+  "O sensor da linha 2 deteta uma fal": {
+   "is_end": false,
+   "options": [
+    [
+     "ha",
+     0.999099
+    ],
+    [
+     "ência",
+     0.000152
+    ],
+    [
+     "ange",
+     9.1e-05
+    ],
+    [
+     "has",
+     9e-05
+    ],
+    [
+     "ácia",
+     5.9e-05
+    ],
+    [
+     "har",
+     5.6e-05
+    ],
+    [
+     "he",
+     4.5e-05
+    ],
+    [
+     "ci",
+     3.7e-05
+    ],
+    [
+     "hou",
+     3.4e-05
+    ],
+    [
+     "ça",
+     3.4e-05
+    ]
+   ]
+  },
+  "O sensor da linha 2 deteta uma falha": {
+   "is_end": false,
+   "options": [
+    [
+     " no",
+     0.26002
+    ],
+    [
+     " de",
+     0.178082
+    ],
+    [
+     " na",
+     0.172146
+    ],
+    [
+     ",",
+     0.057949
+    ],
+    [
+     " e",
+     0.037689
+    ],
+    [
+     " inesper",
+     0.027464
+    ],
+    [
+     " nos",
+     0.023936
+    ],
+    [
+     " durante",
+     0.022234
+    ],
+    [
+     " num",
+     0.019844
+    ],
+    [
+     " crítica",
+     0.017436
+    ]
+   ]
+  },
+  "O sensor da linha 2 deteta uma falha no": {
+   "is_end": false,
+   "options": [
+    [
+     " sistema",
+     0.07432
+    ],
+    [
+     " rol",
+     0.070898
+    ],
+    [
+     " componente",
+     0.056338
+    ],
+    [
+     " processo",
+     0.051238
+    ],
+    [
+     " fornec",
+     0.049157
+    ],
+    [
+     " material",
+     0.039782
+    ],
+    [
+     " rob",
+     0.029657
+    ],
+    [
+     " fluxo",
+     0.029244
+    ],
+    [
+     " ench",
+     0.026319
+    ],
+    [
+     " ro",
+     0.022911
+    ]
+   ]
+  },
+  "O sensor da linha 2 deteta uma falha no sistema": {
+   "is_end": false,
+   "options": [
+    [
+     " de",
+     0.572595
+    ],
+    [
+     ",",
+     0.153881
+    ],
+    [
+     " durante",
+     0.090137
+    ],
+    [
+     " pneum",
+     0.033009
+    ],
+    [
+     " hid",
+     0.031919
+    ],
+    [
+     " e",
+     0.023966
+    ],
+    [
+     ".",
+     0.021636
+    ],
+    [
+     " devido",
+     0.006996
+    ],
+    [
+     " após",
+     0.005811
+    ],
+    [
+     " a",
+     0.004784
+    ]
+   ]
+  },
+  "O sensor da linha 2 deteta uma falha no sistema de": {
+   "is_end": false,
+   "options": [
+    [
+     " enc",
+     0.20011
+    ],
+    [
+     " lub",
+     0.066654
+    ],
+    [
+     " alimentação",
+     0.041146
+    ],
+    [
+     " mistura",
+     0.04048
+    ],
+    [
+     " contro",
+     0.035762
+    ],
+    [
+     " calib",
+     0.024777
+    ],
+    [
+     " ar",
+     0.024412
+    ],
+    [
+     " in",
+     0.024289
+    ],
+    [
+     " ved",
+     0.02228
+    ],
+    [
+     " refr",
+     0.020138
+    ]
+   ]
+  },
+  "O sensor da linha 2 deteta uma falha no sistema de enc": {
+   "is_end": false,
+   "options": [
+    [
+     "aps",
+     0.777704
+    ],
+    [
+     "aix",
+     0.164912
+    ],
+    [
+     "od",
+     0.014188
+    ],
+    [
+     "rava",
+     0.008999
+    ],
+    [
+     "amis",
+     0.00836
+    ],
+    [
+     "ader",
+     0.006907
+    ],
+    [
+     "rav",
+     0.004844
+    ],
+    [
+     "ade",
+     0.002315
+    ],
+    [
+     "arp",
+     0.001809
+    ],
+    [
+     "rip",
+     0.000919
+    ]
+   ]
+  },
+  "O sensor da linha 2 deteta uma falha no sistema de encaps": {
+   "is_end": false,
+   "options": [
+    [
+     "ul",
+     0.981559
+    ],
+    [
+     "ulado",
+     0.009319
+    ],
+    [
+     "ulação",
+     0.008362
+    ],
+    [
+     "ulada",
+     0.000439
+    ],
+    [
+     "ula",
+     9.2e-05
+    ],
+    [
+     "ular",
+     2.2e-05
+    ],
+    [
+     "ulat",
+     1.9e-05
+    ],
+    [
+     "ulho",
+     1.6e-05
+    ],
+    [
+     "ilh",
+     1.5e-05
+    ],
+    [
+     "lag",
+     1.5e-05
+    ]
+   ]
+  },
+  "O sensor da linha 2 deteta uma falha no sistema de encapsul": {
+   "is_end": false,
+   "options": [
+    [
+     "amento",
+     0.97409
+    ],
+    [
+     "agem",
+     0.016685
+    ],
+    [
+     "ados",
+     0.002698
+    ],
+    [
+     "adora",
+     0.001373
+    ],
+    [
+     "ação",
+     0.000954
+    ],
+    [
+     "ante",
+     0.000922
+    ],
+    [
+     "ado",
+     0.00045
+    ],
+    [
+     "ador",
+     0.000393
+    ],
+    [
+     "ização",
+     0.000297
+    ],
+    [
+     "adeira",
+     0.000254
+    ]
+   ]
+  },
+  "O sensor da linha 2 deteta uma falha no sistema de encapsulamento": {
+   "is_end": false,
+   "options": [
+    [
+     ",",
+     0.453323
+    ],
+    [
+     ".",
+     0.220572
+    ],
+    [
+     " durante",
+     0.184786
+    ],
+    [
+     " e",
+     0.020524
+    ],
+    [
+     " às",
+     0.015509
+    ],
+    [
+     " devido",
+     0.011304
+    ],
+    [
+     " de",
+     0.009785
+    ],
+    [
+     " a",
+     0.007102
+    ],
+    [
+     " ao",
+     0.004525
+    ],
+    [
+     " por",
+     0.004485
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetava": {
+   "is_end": false,
+   "options": [
+    [
+     " um",
+     0.160522
+    ],
+    [
+     " uma",
+     0.132553
+    ],
+    [
+     " partículas",
+     0.076178
+    ],
+    [
+     " peças",
+     0.039204
+    ],
+    [
+     ",",
+     0.037334
+    ],
+    [
+     " frequentemente",
+     0.033269
+    ],
+    [
+     " a",
+     0.032331
+    ],
+    [
+     " regularmente",
+     0.028993
+    ],
+    [
+     " irregular",
+     0.027598
+    ],
+    [
+     " incons",
+     0.027249
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetava um": {
+   "is_end": false,
+   "options": [
+    [
+     " vaz",
+     0.162711
+    ],
+    [
+     " excesso",
+     0.127278
+    ],
+    [
+     " des",
+     0.123624
+    ],
+    [
+     " de",
+     0.063116
+    ],
+    [
+     " erro",
+     0.033678
+    ],
+    [
+     " lige",
+     0.026014
+    ],
+    [
+     " fluxo",
+     0.021375
+    ],
+    [
+     " material",
+     0.019019
+    ],
+    [
+     " atras",
+     0.016256
+    ],
+    [
+     " problema",
+     0.0162
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetava um vaz": {
+   "is_end": false,
+   "options": [
+    [
+     "amento",
+     0.997931
+    ],
+    [
+     "io",
+     0.000717
+    ],
+    [
+     "ão",
+     0.000272
+    ],
+    [
+     "ado",
+     0.000242
+    ],
+    [
+     "ad",
+     0.000196
+    ],
+    [
+     "or",
+     0.000146
+    ],
+    [
+     "ador",
+     0.000137
+    ],
+    [
+     "ios",
+     0.000124
+    ],
+    [
+     "ido",
+     4.7e-05
+    ],
+    [
+     "ia",
+     2.9e-05
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetava um vazamento": {
+   "is_end": false,
+   "options": [
+    [
+     " de",
+     0.498805
+    ],
+    [
+     ",",
+     0.055957
+    ],
+    [
+     " no",
+     0.033321
+    ],
+    [
+     " inter",
+     0.029035
+    ],
+    [
+     " na",
+     0.026709
+    ],
+    [
+     " durante",
+     0.026547
+    ],
+    [
+     " lige",
+     0.015409
+    ],
+    [
+     " constante",
+     0.011493
+    ],
+    [
+     " menor",
+     0.01149
+    ],
+    [
+     " numa",
+     0.011345
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetava um vazamento de": {
+   "is_end": false,
+   "options": [
+    [
+     " material",
+     0.2379
+    ],
+    [
+     " óleo",
+     0.138031
+    ],
+    [
+     " res",
+     0.074005
+    ],
+    [
+     " fluido",
+     0.055635
+    ],
+    [
+     " tinta",
+     0.035482
+    ],
+    [
+     " plástico",
+     0.03202
+    ],
+    [
+     " ar",
+     0.030255
+    ],
+    [
+     " líquido",
+     0.027483
+    ],
+    [
+     " matéria",
+     0.024092
+    ],
+    [
+     " lub",
+     0.023629
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetava um vazamento de material": {
+   "is_end": false,
+   "options": [
+    [
+     ",",
+     0.256937
+    ],
+    [
+     " durante",
+     0.241542
+    ],
+    [
+     ".",
+     0.039229
+    ],
+    [
+     " no",
+     0.036005
+    ],
+    [
+     " plástico",
+     0.027511
+    ],
+    [
+     " que",
+     0.02696
+    ],
+    [
+     " e",
+     0.02367
+    ],
+    [
+     " na",
+     0.021841
+    ],
+    [
+     " não",
+     0.019277
+    ],
+    [
+     " logo",
+     0.015298
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetava um vazamento de material,": {
+   "is_end": false,
+   "options": [
+    [
+     " interromp",
+     0.556667
+    ],
+    [
+     " levando",
+     0.08004
+    ],
+    [
+     " exig",
+     0.053734
+    ],
+    [
+     " causando",
+     0.040976
+    ],
+    [
+     " o",
+     0.040378
+    ],
+    [
+     " par",
+     0.03693
+    ],
+    [
+     " resultando",
+     0.02645
+    ],
+    [
+     " for",
+     0.017055
+    ],
+    [
+     " obrig",
+     0.013493
+    ],
+    [
+     " ativ",
+     0.012453
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetava um vazamento de material, interromp": {
+   "is_end": false,
+   "options": [
+    [
+     "endo",
+     0.997984
+    ],
+    [
+     "indo",
+     0.001887
+    ],
+    [
+     "ando",
+     7.4e-05
+    ],
+    [
+     "ido",
+     2.5e-05
+    ],
+    [
+     "ida",
+     2e-05
+    ],
+    [
+     "end",
+     4e-06
+    ],
+    [
+     "idas",
+     1e-06
+    ],
+    [
+     "endendo",
+     1e-06
+    ],
+    [
+     "idos",
+     1e-06
+    ],
+    [
+     "ento",
+     1e-06
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetava um vazamento de material, interrompendo": {
+   "is_end": false,
+   "options": [
+    [
+     " tempor",
+     0.425405
+    ],
+    [
+     " a",
+     0.309107
+    ],
+    [
+     " o",
+     0.146607
+    ],
+    [
+     " brevemente",
+     0.026216
+    ],
+    [
+     " moment",
+     0.021866
+    ],
+    [
+     " imediatamente",
+     0.012684
+    ],
+    [
+     " sub",
+     0.007943
+    ],
+    [
+     " parcialmente",
+     0.007184
+    ],
+    [
+     " as",
+     0.00438
+    ],
+    [
+     " instant",
+     0.00426
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetava um vazamento de material, interrompendo tempor": {
+   "is_end": false,
+   "options": [
+    [
+     "ariamente",
+     0.998334
+    ],
+    [
+     "almente",
+     0.001384
+    ],
+    [
+     "aneamente",
+     0.000138
+    ],
+    [
+     "ária",
+     9.7e-05
+    ],
+    [
+     "ar",
+     1.3e-05
+    ],
+    [
+     "ari",
+     8e-06
+    ],
+    [
+     "ário",
+     5e-06
+    ],
+    [
+     "ários",
+     4e-06
+    ],
+    [
+     "ativamente",
+     3e-06
+    ],
+    [
+     "amente",
+     2e-06
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetada": {
+   "is_end": false,
+   "options": [
+    [
+     " uma",
+     0.583427
+    ],
+    [
+     " um",
+     0.256773
+    ],
+    [
+     " a",
+     0.018408
+    ],
+    [
+     " anom",
+     0.017073
+    ],
+    [
+     " fal",
+     0.007901
+    ],
+    [
+     " que",
+     0.005821
+    ],
+    [
+     " irregular",
+     0.005753
+    ],
+    [
+     ",",
+     0.005614
+    ],
+    [
+     "u",
+     0.005465
+    ],
+    [
+     " sub",
+     0.004085
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetada uma": {
+   "is_end": false,
+   "options": [
+    [
+     " fal",
+     0.37943
+    ],
+    [
+     " anomal",
+     0.217676
+    ],
+    [
+     " queda",
+     0.028209
+    ],
+    [
+     " irregular",
+     0.026324
+    ],
+    [
+     " interrup",
+     0.024346
+    ],
+    [
+     " sobre",
+     0.023906
+    ],
+    [
+     " variação",
+     0.022688
+    ],
+    [
+     " peça",
+     0.017544
+    ],
+    [
+     " ob",
+     0.014659
+    ],
+    [
+     " partícul",
+     0.012522
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetada uma fal": {
+   "is_end": false,
+   "options": [
+    [
+     "ha",
+     0.999177
+    ],
+    [
+     "ência",
+     0.000143
+    ],
+    [
+     "has",
+     0.000134
+    ],
+    [
+     "ácia",
+     5.9e-05
+    ],
+    [
+     "har",
+     4.9e-05
+    ],
+    [
+     "ange",
+     4.3e-05
+    ],
+    [
+     "he",
+     3.7e-05
+    ],
+    [
+     "hou",
+     3.5e-05
+    ],
+    [
+     "ci",
+     3.1e-05
+    ],
+    [
+     "ca",
+     2.5e-05
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetada uma falha": {
+   "is_end": false,
+   "options": [
+    [
+     " no",
+     0.221851
+    ],
+    [
+     " na",
+     0.142316
+    ],
+    [
+     " de",
+     0.135338
+    ],
+    [
+     ",",
+     0.098888
+    ],
+    [
+     " durante",
+     0.057006
+    ],
+    [
+     " inesper",
+     0.027478
+    ],
+    [
+     " nos",
+     0.025361
+    ],
+    [
+     " e",
+     0.021784
+    ],
+    [
+     " crítica",
+     0.021231
+    ],
+    [
+     " inter",
+     0.018202
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetada uma falha no": {
+   "is_end": false,
+   "options": [
+    [
+     " sistema",
+     0.078882
+    ],
+    [
+     " rol",
+     0.070419
+    ],
+    [
+     " componente",
+     0.05767
+    ],
+    [
+     " processo",
+     0.056748
+    ],
+    [
+     " fornec",
+     0.041398
+    ],
+    [
+     " material",
+     0.040057
+    ],
+    [
+     " rob",
+     0.035582
+    ],
+    [
+     " aliment",
+     0.027275
+    ],
+    [
+     " ench",
+     0.022664
+    ],
+    [
+     " sensor",
+     0.01978
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetada uma falha no sistema": {
+   "is_end": false,
+   "options": [
+    [
+     " de",
+     0.480133
+    ],
+    [
+     ",",
+     0.195859
+    ],
+    [
+     " durante",
+     0.159763
+    ],
+    [
+     ".",
+     0.019552
+    ],
+    [
+     " pneum",
+     0.015321
+    ],
+    [
+     " e",
+     0.015255
+    ],
+    [
+     " hid",
+     0.012458
+    ],
+    [
+     " devido",
+     0.01194
+    ],
+    [
+     " após",
+     0.009221
+    ],
+    [
+     " a",
+     0.006546
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetada uma falha no sistema de": {
+   "is_end": false,
+   "options": [
+    [
+     " enc",
+     0.18338
+    ],
+    [
+     " lub",
+     0.060621
+    ],
+    [
+     " contro",
+     0.050569
+    ],
+    [
+     " alimentação",
+     0.042013
+    ],
+    [
+     " mistura",
+     0.038926
+    ],
+    [
+     " calib",
+     0.03171
+    ],
+    [
+     " in",
+     0.022668
+    ],
+    [
+     " ved",
+     0.020899
+    ],
+    [
+     " ar",
+     0.016662
+    ],
+    [
+     " ench",
+     0.016276
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetada uma falha no sistema de enc": {
+   "is_end": false,
+   "options": [
+    [
+     "aps",
+     0.787575
+    ],
+    [
+     "aix",
+     0.145069
+    ],
+    [
+     "od",
+     0.016882
+    ],
+    [
+     "ader",
+     0.009747
+    ],
+    [
+     "rava",
+     0.009502
+    ],
+    [
+     "amis",
+     0.008615
+    ],
+    [
+     "rav",
+     0.005365
+    ],
+    [
+     "arp",
+     0.003176
+    ],
+    [
+     "ade",
+     0.002278
+    ],
+    [
+     "rip",
+     0.000982
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetada uma falha no sistema de encaps": {
+   "is_end": false,
+   "options": [
+    [
+     "ul",
+     0.986156
+    ],
+    [
+     "ulação",
+     0.007901
+    ],
+    [
+     "ulado",
+     0.0052
+    ],
+    [
+     "ulada",
+     0.000355
+    ],
+    [
+     "ula",
+     0.000129
+    ],
+    [
+     "lag",
+     3e-05
+    ],
+    [
+     "ular",
+     2.5e-05
+    ],
+    [
+     "ulat",
+     2.4e-05
+    ],
+    [
+     "ilh",
+     1.7e-05
+    ],
+    [
+     "ulho",
+     1.6e-05
+    ]
+   ]
+  },
+  "O sensor da linha 2 detetada uma falha no sistema de encapsul": {
+   "is_end": false,
+   "options": [
+    [
+     "amento",
+     0.966169
+    ],
+    [
+     "agem",
+     0.021151
+    ],
+    [
+     "ados",
+     0.003456
+    ],
+    [
+     "adora",
+     0.002374
+    ],
+    [
+     "ante",
+     0.001365
+    ],
+    [
+     "ação",
+     0.001074
+    ],
+    [
+     "ado",
+     0.000575
+    ],
+    [
+     "ador",
+     0.000526
+    ],
+    [
+     "antes",
+     0.00036
+    ],
+    [
+     "ização",
+     0.000347
+    ]
+   ]
+  }
+ }
+}

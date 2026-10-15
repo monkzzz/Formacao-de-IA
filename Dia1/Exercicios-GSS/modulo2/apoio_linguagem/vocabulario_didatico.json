@@ -1,0 +1,13 @@
+{
+ "descricao": "Vocabulário WordPiece didático do módulo 2. Os IDs são números de catálogo escolhidos para o slide «Tokens e IDs» (A 37, pe 905, ##ça 2210, par 518, ##ou 77, e 9, a 12, ##tiu 3120, . 4). ## marca a continuação de uma palavra. Distingue maiúsculas.",
+ "pecas": {
+  "[UNK]": 0, ".": 4, ",": 5, "!": 6, "?": 7, ":": 8, "e": 9, "a": 12, "o": 14, "de": 16, "às": 21,
+  "no": 23, "na": 24, "da": 25, "do": 27, "2": 30, "A": 37, "O": 41, "##s": 52, "##h": 66,
+  "##ou": 77, "##a": 81, "##o": 83, "##ção": 95, "##ões": 98, "##ada": 130, "##ado": 131, "10": 140,
+  "foi": 210, "após": 388, "par": 518, "##ten": 640, "##ição": 702, "pe": 905, "Pe": 906, "linha": 1290,
+  "##15": 1415, "##35": 1435, "qualidade": 1555, "falha": 1777, "produ": 1840, "motor": 1904,
+  "máquina": 2015, "##ça": 2210, "atras": 2240, "caixa": 2450, "retom": 2561, "##trega": 2711,
+  "manu": 2830, "sensor": 2875, "Sensor": 2876, "##tiu": 3120, "avari": 3307, "substitu": 3412,
+  "en": 3530, "En": 3531
+ }
+}

@@ -1,0 +1,4 @@
+# Preserve the imported bytes recorded by the SHA-256 hashes in origem.json.
+* -text
+# Imported text includes CRLF; keep checking actual trailing spaces and tabs.
+* whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

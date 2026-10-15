@@ -1,0 +1,10 @@
+{
+ "modelo": "amalia-9b-0626-dpo",
+ "data": "2026-10-12",
+ "contagens": {
+  "A peça parou e a peça partiu.": 10,
+  "A linha 2 parou às 10h15.": 14,
+  "A produção foi retomada após a substituição do sensor.": 12,
+  "Rolamento sobreaquecido!": 7
+ }
+}

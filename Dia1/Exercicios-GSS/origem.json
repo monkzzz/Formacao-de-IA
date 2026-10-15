@@ -1,0 +1,386 @@
+{
+  "repositorio": "https://github.com/PIEP-Portugal/formacao_gss",
+  "commit": "d53f1884a51f9a3056cf850475264237b410bd7d",
+  "data_importacao": "2026-10-15",
+  "ambito": "Dia 1, módulos 1 e 2; seis exercícios ativos por módulo",
+  "ficheiros": [
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/01_paradigmas_aprendizagem.py",
+      "destino": "modulo1/dia1_modulo1_01_paradigmas_aprendizagem.py",
+      "sha256_origem": "5c39e43b5fc95331cc3c9122790c2aa4b0bfce7c0bc245028c687651cb5f2e8e",
+      "sha256_destino": "5c39e43b5fc95331cc3c9122790c2aa4b0bfce7c0bc245028c687651cb5f2e8e"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/02_forward_pass_mlp.py",
+      "destino": "modulo1/dia1_modulo1_02_forward_pass_mlp.py",
+      "sha256_origem": "469c3d4be3d0959135b69f4c477d292c646e863681a65ba32f5828eaa11a6461",
+      "sha256_destino": "469c3d4be3d0959135b69f4c477d292c646e863681a65ba32f5828eaa11a6461"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/03_perda_backpropagation_otimizacao.py",
+      "destino": "modulo1/dia1_modulo1_03_perda_backpropagation_otimizacao.py",
+      "sha256_origem": "33444830bbd0c25b62e36f4f5e988af95b3716c9bea15c7c84099e17e526e8d1",
+      "sha256_destino": "33444830bbd0c25b62e36f4f5e988af95b3716c9bea15c7c84099e17e526e8d1"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/04_metricas_avaliacao.py",
+      "destino": "modulo1/dia1_modulo1_04_metricas_avaliacao.py",
+      "sha256_origem": "627aa2ead791ca78e6c5a98d9eb40a9fdff4284eac84189869bc40503f814faf",
+      "sha256_destino": "627aa2ead791ca78e6c5a98d9eb40a9fdff4284eac84189869bc40503f814faf"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/05_mlp_digitos.py",
+      "destino": "modulo1/dia1_modulo1_05_mlp_digitos.py",
+      "sha256_origem": "19ebabfe52b3940663930937b6b4231018854ee1b28bfd7dfd5cf90f54863d3b",
+      "sha256_destino": "19ebabfe52b3940663930937b6b4231018854ee1b28bfd7dfd5cf90f54863d3b"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/06_visao_computacional_yolo.py",
+      "destino": "modulo1/dia1_modulo1_06_visao_computacional_yolo.py",
+      "sha256_origem": "a54054aac5942acc6cb97ec744ce49766bd3fdae9c7edff6d302c3ce76901378",
+      "sha256_destino": "a54054aac5942acc6cb97ec744ce49766bd3fdae9c7edff6d302c3ce76901378"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/apoio/__init__.py",
+      "destino": "modulo1/apoio/__init__.py",
+      "sha256_origem": "da0abc39b8d32d73e51dbb7b9c4e79369c31ed834427b584bda0694d3cf3d08d",
+      "sha256_destino": "da0abc39b8d32d73e51dbb7b9c4e79369c31ed834427b584bda0694d3cf3d08d"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/apoio/ajuste_janela.py",
+      "destino": "modulo1/apoio/ajuste_janela.py",
+      "sha256_origem": "024c45098ac9ebc9e29c4efdefc01e2ed4f32fc697c345aa01afe507320d0b89",
+      "sha256_destino": "024c45098ac9ebc9e29c4efdefc01e2ed4f32fc697c345aa01afe507320d0b89"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/apoio/dataset_cache.py",
+      "destino": "modulo1/apoio/dataset_cache.py",
+      "sha256_origem": "bfe961b4ef3bcc3202dfd72cd715f38d7d60a7cea5a5e126df77b3dbb7874a82",
+      "sha256_destino": "a831c4389cd37b753a010ba940437f8ca64f08d59c8589af55b7a62f6f47e7de"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/apoio/digit_dataset.py",
+      "destino": "modulo1/apoio/digit_dataset.py",
+      "sha256_origem": "ff454fb74aa3bcc779e89004e9208e8939c3f8f551567193ef2dac8215825adc",
+      "sha256_destino": "ff454fb74aa3bcc779e89004e9208e8939c3f8f551567193ef2dac8215825adc"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/apoio/digit_training_demo.py",
+      "destino": "modulo1/apoio/digit_training_demo.py",
+      "sha256_origem": "199142cb7fda9536f6a1ec55f0c2d45b39b7104d2430d7f3233e1ac81d50834b",
+      "sha256_destino": "199142cb7fda9536f6a1ec55f0c2d45b39b7104d2430d7f3233e1ac81d50834b"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/apoio/digit_training_ui.py",
+      "destino": "modulo1/apoio/digit_training_ui.py",
+      "sha256_origem": "cb22327c139620a06a89f650362c6b51dddd17673d371fbde660bf6693f190e5",
+      "sha256_destino": "cb22327c139620a06a89f650362c6b51dddd17673d371fbde660bf6693f190e5"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/apoio/evaluation_metrics.py",
+      "destino": "modulo1/apoio/evaluation_metrics.py",
+      "sha256_origem": "c549a32c2cb360f2ee6541ab3407e847d8c48840129814468f0af09a8427f610",
+      "sha256_destino": "c549a32c2cb360f2ee6541ab3407e847d8c48840129814468f0af09a8427f610"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/apoio/flappy_bird.py",
+      "destino": "modulo1/apoio/flappy_bird.py",
+      "sha256_origem": "ac44266b7be5ee9ac94cdcb96de64d2a5edc2095f4478469f9cd7c3f74857c1c",
+      "sha256_destino": "ac44266b7be5ee9ac94cdcb96de64d2a5edc2095f4478469f9cd7c3f74857c1c"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/apoio/flappy_bird_ui.py",
+      "destino": "modulo1/apoio/flappy_bird_ui.py",
+      "sha256_origem": "cdd3f341389dfedb97906625489c39b9603e967ff2041cde1dd8600933ae6b6c",
+      "sha256_destino": "cdd3f341389dfedb97906625489c39b9603e967ff2041cde1dd8600933ae6b6c"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/apoio/formato_pt.py",
+      "destino": "modulo1/apoio/formato_pt.py",
+      "sha256_origem": "f689eacdfb24aba34e36e396290670059f51a50edb14062e146aa462142b457b",
+      "sha256_destino": "f689eacdfb24aba34e36e396290670059f51a50edb14062e146aa462142b457b"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/apoio/forward_pass_demo.py",
+      "destino": "modulo1/apoio/forward_pass_demo.py",
+      "sha256_origem": "7d55b1a274c3cb23b56eacb6f81c2f2691d7b584755c23efb03ede956eacec7f",
+      "sha256_destino": "7d55b1a274c3cb23b56eacb6f81c2f2691d7b584755c23efb03ede956eacec7f"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/apoio/forward_pass_ui.py",
+      "destino": "modulo1/apoio/forward_pass_ui.py",
+      "sha256_origem": "99214c2b2517db9a5f755010987b9780dd5449795591f47bedb68b8a096b7881",
+      "sha256_destino": "99214c2b2517db9a5f755010987b9780dd5449795591f47bedb68b8a096b7881"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/apoio/learning_demo.py",
+      "destino": "modulo1/apoio/learning_demo.py",
+      "sha256_origem": "01100464c4480094066055572527db1e4c36473d4ad6bfab96b55abc6ff492d2",
+      "sha256_destino": "01100464c4480094066055572527db1e4c36473d4ad6bfab96b55abc6ff492d2"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/apoio/learning_ui.py",
+      "destino": "modulo1/apoio/learning_ui.py",
+      "sha256_origem": "b1c9460e0187b37a7d1afbcbca16859deab0ecd17ea2345e2285fb1ac197aadc",
+      "sha256_destino": "b1c9460e0187b37a7d1afbcbca16859deab0ecd17ea2345e2285fb1ac197aadc"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/apoio/metrics_ui.py",
+      "destino": "modulo1/apoio/metrics_ui.py",
+      "sha256_origem": "007919bbdd01b34846e560a411590c3b3d95d9f9ce7047616591bb10aded4d55",
+      "sha256_destino": "007919bbdd01b34846e560a411590c3b3d95d9f9ce7047616591bb10aded4d55"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/apoio/vision_sources.py",
+      "destino": "modulo1/apoio/vision_sources.py",
+      "sha256_origem": "5c0cfe30a9a6284434a5c75192c95851a1fa1f8d8a0f8382cc0b2ac1f76e48fa",
+      "sha256_destino": "5c0cfe30a9a6284434a5c75192c95851a1fa1f8d8a0f8382cc0b2ac1f76e48fa"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/apoio/vision_ui.py",
+      "destino": "modulo1/apoio/vision_ui.py",
+      "sha256_origem": "3390f276eb40a50280ba7dc0e394d4593a9a6d9bbc9c829285f87ea506bdfc95",
+      "sha256_destino": "3390f276eb40a50280ba7dc0e394d4593a9a6d9bbc9c829285f87ea506bdfc95"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/machine_learning/apoio/vision_yolo.py",
+      "destino": "modulo1/apoio/vision_yolo.py",
+      "sha256_origem": "6916129ded9fb04e9f087df4fbf638b3aa3e3fbe90b79e84e95d2776d16d7f12",
+      "sha256_destino": "257f93b00aa8c2d349a5148516acf80359406efaff884607b450d66fbc638888"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/01_tokens_ids.py",
+      "destino": "modulo2/dia1_modulo2_01_tokens_ids.py",
+      "sha256_origem": "b5f8a55594bd118a42f621a4362124b1371c3e803783b8009da3875e944178e7",
+      "sha256_destino": "b5f8a55594bd118a42f621a4362124b1371c3e803783b8009da3875e944178e7"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/02_mapa_embeddings.py",
+      "destino": "modulo2/dia1_modulo2_02_mapa_embeddings.py",
+      "sha256_origem": "6d39c7aabe4c20d91b066565da9b1c96222df57f5733d31546940d1754ad2d23",
+      "sha256_destino": "6d39c7aabe4c20d91b066565da9b1c96222df57f5733d31546940d1754ad2d23"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/03_attention.py",
+      "destino": "modulo2/dia1_modulo2_03_attention.py",
+      "sha256_origem": "b55c5bf561625754f691dd06e931d787cec7f3f8fd9ab0183e049b42128ce6da",
+      "sha256_destino": "b55c5bf561625754f691dd06e931d787cec7f3f8fd9ab0183e049b42128ce6da"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/04_proximo_token.py",
+      "destino": "modulo2/dia1_modulo2_04_proximo_token.py",
+      "sha256_origem": "53dd23b19acc8007cb6e3a02763cbbceb94456c4d437583d4b08af0e75de2ef5",
+      "sha256_destino": "53dd23b19acc8007cb6e3a02763cbbceb94456c4d437583d4b08af0e75de2ef5"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/05_laboratorio_prompts.py",
+      "destino": "modulo2/dia1_modulo2_05_laboratorio_prompts.py",
+      "sha256_origem": "95cea89f49c21f57f2c215523263789583cabfe26d359d0aebd8cbfa2ed0514e",
+      "sha256_destino": "95cea89f49c21f57f2c215523263789583cabfe26d359d0aebd8cbfa2ed0514e"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/06_imagem_texto.py",
+      "destino": "modulo2/dia1_modulo2_06_imagem_texto.py",
+      "sha256_origem": "a39d0ae8b4c283621fe60ce719a90db55df8e10a7f78931f814b8ebb43c32556",
+      "sha256_destino": "a39d0ae8b4c283621fe60ce719a90db55df8e10a7f78931f814b8ebb43c32556"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/apoio_linguagem/__init__.py",
+      "destino": "modulo2/apoio_linguagem/__init__.py",
+      "sha256_origem": "c74ddfb3225f7b3b4cef6273058d7475dc1497e2163e7c03ad3c275a960afa0a",
+      "sha256_destino": "c74ddfb3225f7b3b4cef6273058d7475dc1497e2163e7c03ad3c275a960afa0a"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/apoio_linguagem/ajuste_janela.py",
+      "destino": "modulo2/apoio_linguagem/ajuste_janela.py",
+      "sha256_origem": "024c45098ac9ebc9e29c4efdefc01e2ed4f32fc697c345aa01afe507320d0b89",
+      "sha256_destino": "024c45098ac9ebc9e29c4efdefc01e2ed4f32fc697c345aa01afe507320d0b89"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/apoio_linguagem/imagem_texto.py",
+      "destino": "modulo2/apoio_linguagem/imagem_texto.py",
+      "sha256_origem": "b72626b25f71f9b73ce4e919bd891b377e39683a37618203d435e308e0e7b47d",
+      "sha256_destino": "b72626b25f71f9b73ce4e919bd891b377e39683a37618203d435e308e0e7b47d"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/apoio_linguagem/interface_base.py",
+      "destino": "modulo2/apoio_linguagem/interface_base.py",
+      "sha256_origem": "9f2cc8ee5b43532f93aa2fc2e7bac07bbd8b21fa40e5a1bb2b529fcf3aaca8d1",
+      "sha256_destino": "cad47a5f84e02bdda94712963e2b4b5e47bd9de96cd40722e36843dc75ffb102"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/apoio_linguagem/laboratorio_prompts.py",
+      "destino": "modulo2/apoio_linguagem/laboratorio_prompts.py",
+      "sha256_origem": "898ac8cd6e60eab96730c8c4b4744d73a5f2f33aac48d059cb6e776ea0d484f9",
+      "sha256_destino": "898ac8cd6e60eab96730c8c4b4744d73a5f2f33aac48d059cb6e776ea0d484f9"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/apoio_linguagem/lm_studio.py",
+      "destino": "modulo2/apoio_linguagem/lm_studio.py",
+      "sha256_origem": "1e176eecfa8a38da8e6ccd9bc1d72bf4e0636a9a782ce9bfbcab9d717dfb979e",
+      "sha256_destino": "1e176eecfa8a38da8e6ccd9bc1d72bf4e0636a9a782ce9bfbcab9d717dfb979e"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/apoio_linguagem/mapa_embeddings.py",
+      "destino": "modulo2/apoio_linguagem/mapa_embeddings.py",
+      "sha256_origem": "c35759b989692f422acc9cd7393772769010bb526dbef05fe47d28e036ad6d6b",
+      "sha256_destino": "c35759b989692f422acc9cd7393772769010bb526dbef05fe47d28e036ad6d6b"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/apoio_linguagem/proximo_token.py",
+      "destino": "modulo2/apoio_linguagem/proximo_token.py",
+      "sha256_origem": "cdafe2de801a8f5d2d7e58a25899159188b1b4bed42d0dfe777e8815cee25d5b",
+      "sha256_destino": "cdafe2de801a8f5d2d7e58a25899159188b1b4bed42d0dfe777e8815cee25d5b"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/apoio_linguagem/tokenizador_didatico.py",
+      "destino": "modulo2/apoio_linguagem/tokenizador_didatico.py",
+      "sha256_origem": "698eec282ed524900b173189a44d477043eea50b1d982343cba58011fc28fde3",
+      "sha256_destino": "698eec282ed524900b173189a44d477043eea50b1d982343cba58011fc28fde3"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/apoio_linguagem/vocabulario_didatico.json",
+      "destino": "modulo2/apoio_linguagem/vocabulario_didatico.json",
+      "sha256_origem": "6d8ab52d3232cb61544d7ce38b6444babd5cfc0bc17b815f8f680776abc45c5d",
+      "sha256_destino": "6d8ab52d3232cb61544d7ce38b6444babd5cfc0bc17b815f8f680776abc45c5d"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/imagens/grafico_paragens.png",
+      "destino": "modulo2/imagens/grafico_paragens.png",
+      "sha256_origem": "a62e71255f95d24afefe2be3245718a007e4c018b8d08dcb769264ea95a0ba1c",
+      "sha256_destino": "a62e71255f95d24afefe2be3245718a007e4c018b8d08dcb769264ea95a0ba1c"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/imagens/peca_fissura_esquema.png",
+      "destino": "modulo2/imagens/peca_fissura_esquema.png",
+      "sha256_origem": "f01d6ea5b66585f705a2f24516cb7f30699e38f9f3b325f00871b62bbee3faa8",
+      "sha256_destino": "f01d6ea5b66585f705a2f24516cb7f30699e38f9f3b325f00871b62bbee3faa8"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/respostas_gravadas/contagem_tokens.json",
+      "destino": "modulo2/respostas_gravadas/contagem_tokens.json",
+      "sha256_origem": "c0ca032460927b6e746f50f36436df90275e81a6bbefe933f5bb795ccbd814c2",
+      "sha256_destino": "c0ca032460927b6e746f50f36436df90275e81a6bbefe933f5bb795ccbd814c2"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/respostas_gravadas/embeddings.json",
+      "destino": "modulo2/respostas_gravadas/embeddings.json",
+      "sha256_origem": "361d299e7eca3b41ef4da00dc207aae318206cbca4ae91b6ee6307d782367ba3",
+      "sha256_destino": "361d299e7eca3b41ef4da00dc207aae318206cbca4ae91b6ee6307d782367ba3"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/respostas_gravadas/imagem_texto.json",
+      "destino": "modulo2/respostas_gravadas/imagem_texto.json",
+      "sha256_origem": "02998a28fb080e31185a4c9570ea90341d22c1d237eb0f1d90f31d8226a04ee2",
+      "sha256_destino": "02998a28fb080e31185a4c9570ea90341d22c1d237eb0f1d90f31d8226a04ee2"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/respostas_gravadas/laboratorio_prompts.json",
+      "destino": "modulo2/respostas_gravadas/laboratorio_prompts.json",
+      "sha256_origem": "44dcff8fa24a2a7c10ff97d81a1b45f11de18210ac72694f388d4b1933931e96",
+      "sha256_destino": "44dcff8fa24a2a7c10ff97d81a1b45f11de18210ac72694f388d4b1933931e96"
+    },
+    {
+      "origem": "dia_1/fundamentos_ia/redes_neuronais_modelos_linguagem/respostas_gravadas/proximo_token.json",
+      "destino": "modulo2/respostas_gravadas/proximo_token.json",
+      "sha256_origem": "16dd45005fa79c9006d16fb278475e66881aecde243813da8f896f0023461621",
+      "sha256_destino": "16dd45005fa79c9006d16fb278475e66881aecde243813da8f896f0023461621"
+    },
+    {
+      "origem": "materiais/recursos_visuais/visao_computacional/exemplos/boats.jpg",
+      "destino": "recursos/visao_computacional/boats.jpg",
+      "sha256_origem": "8c5ada657cf8110a9f8aaac954c1dd96cde0187315b581276c32b0d1863e756f",
+      "sha256_destino": "8c5ada657cf8110a9f8aaac954c1dd96cde0187315b581276c32b0d1863e756f"
+    },
+    {
+      "origem": "materiais/recursos_visuais/visao_computacional/exemplos/bus.jpg",
+      "destino": "recursos/visao_computacional/bus.jpg",
+      "sha256_origem": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
+      "sha256_destino": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63"
+    },
+    {
+      "origem": "materiais/recursos_visuais/visao_computacional/exemplos/dog.jpg",
+      "destino": "recursos/visao_computacional/dog.jpg",
+      "sha256_origem": "f3f87bb8ab3c26c7ecfd3ac60421d7f32b0503d1d6c5baf8bac42ed93d86351a",
+      "sha256_destino": "f3f87bb8ab3c26c7ecfd3ac60421d7f32b0503d1d6c5baf8bac42ed93d86351a"
+    },
+    {
+      "origem": "materiais/recursos_visuais/visao_computacional/exemplos/zidane.jpg",
+      "destino": "recursos/visao_computacional/zidane.jpg",
+      "sha256_origem": "16d73869e3267a7d4ed00de8e860833bd1657c1b252e94c0c348277adc7b6edb",
+      "sha256_destino": "16d73869e3267a7d4ed00de8e860833bd1657c1b252e94c0c348277adc7b6edb"
+    },
+    {
+      "origem": "materiais/recursos_visuais/modulo2/imagens_geradas/banco_dois_sentidos.png",
+      "destino": "recursos/modulo2/banco_dois_sentidos.png",
+      "sha256_origem": "de4bf5e9249a91b153010f6fd2915c01c729956d77e783a87ca877400cb6a3b9",
+      "sha256_destino": "de4bf5e9249a91b153010f6fd2915c01c729956d77e783a87ca877400cb6a3b9"
+    },
+    {
+      "origem": "materiais/recursos_visuais/modulo2/imagens_geradas/peca_fissura_foto.png",
+      "destino": "recursos/modulo2/peca_fissura_foto.png",
+      "sha256_origem": "c303924b918c2cbdf1f87078c8a2ea9df5135cbd46ce6fcaed699c5d6f5deca7",
+      "sha256_destino": "c303924b918c2cbdf1f87078c8a2ea9df5135cbd46ce6fcaed699c5d6f5deca7"
+    },
+    {
+      "origem": "tests/test_ml_core_exercises.py",
+      "destino": "tests/test_ml_core_exercises.py",
+      "sha256_origem": "499ce1cbc875f71fbac73605ecab65e29c023bef0a36562b2f770ba96375276d",
+      "sha256_destino": "fc190a07e120ef50f3a7c64297ea900b13d2b2325c0e2cb4f2b5393dca5d2781"
+    },
+    {
+      "origem": "tests/test_ml_exercises.py",
+      "destino": "tests/test_ml_exercises.py",
+      "sha256_origem": "af93f3c1916d9a8cc64a94a5e185d7507681d475539b4dfeea6d9cd2407784e8",
+      "sha256_destino": "ff4b15d9f20e34b0ee00593babd4c79f864af73282afe7bfd416aa78d7ac8a41"
+    },
+    {
+      "origem": "tests/test_ml_forward_interface.py",
+      "destino": "tests/test_ml_forward_interface.py",
+      "sha256_origem": "0539af58e2000ae55361401272b932432b27bb29a014d2839c675fdfe1449405",
+      "sha256_destino": "0539af58e2000ae55361401272b932432b27bb29a014d2839c675fdfe1449405"
+    },
+    {
+      "origem": "tests/test_ml_learning_interface.py",
+      "destino": "tests/test_ml_learning_interface.py",
+      "sha256_origem": "6db530ef062f5ef7579e0aa80233453f7af45bb1310d62c738298c0a561aacfe",
+      "sha256_destino": "6db530ef062f5ef7579e0aa80233453f7af45bb1310d62c738298c0a561aacfe"
+    },
+    {
+      "origem": "tests/test_ml_evaluation_training_gui.py",
+      "destino": "tests/test_ml_evaluation_training_gui.py",
+      "sha256_origem": "d7a96940e943b65e8c41f7e94bfb3f2dabf3daf3a720634699ab6b508e419531",
+      "sha256_destino": "d7a96940e943b65e8c41f7e94bfb3f2dabf3daf3a720634699ab6b508e419531"
+    },
+    {
+      "origem": "tests/test_ml_vision_yolo.py",
+      "destino": "tests/test_ml_vision_yolo.py",
+      "sha256_origem": "6b1001f1aeb47ed3c745e6d2b5db673e285ca391035982752d3b47ba3aa278a8",
+      "sha256_destino": "c9f79be8dd0562bb29fc769d08b9d10e4536e83db4061b698759808177a4a777"
+    },
+    {
+      "origem": "tests/test_paradigms_interaction.py",
+      "destino": "tests/test_paradigms_interaction.py",
+      "sha256_origem": "319f336c33cc6a9d59cd55bb2dbeed0f7064a13883a2797815202adab1c23efe",
+      "sha256_destino": "319f336c33cc6a9d59cd55bb2dbeed0f7064a13883a2797815202adab1c23efe"
+    },
+    {
+      "origem": "tests/test_language_model_exercises.py",
+      "destino": "tests/test_language_model_exercises.py",
+      "sha256_origem": "044ae55f5809154d605467b712ceb5d5729f0bd93a4254f23afaa37b18458bac",
+      "sha256_destino": "4dc859f7d3c6a2f2a7a2d470a01fdf119907f105fa332907259b187526793280"
+    },
+    {
+      "origem": "requirements.txt",
+      "destino": "requirements.txt",
+      "sha256_origem": "758f11e6c145dbe1614bc2588f61e496b13264d9433d93919a0e912bf0afd098",
+      "sha256_destino": "68467c82d655e84ee3aa8ebb12af8f161c1140070cfff53cbe70a6f1c41c6883"
+    },
+    {
+      "origem": "requirements-visao.txt",
+      "destino": "requirements-visao.txt",
+      "sha256_origem": "b5299347cf816a13d89d58529a9a87763c3caaeccc126a93144bc966d8b19023",
+      "sha256_destino": "b5299347cf816a13d89d58529a9a87763c3caaeccc126a93144bc966d8b19023"
+    }
+  ]
+}

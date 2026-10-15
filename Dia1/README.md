@@ -31,6 +31,14 @@ Os seis PDFs da formação estão disponíveis em [`Dia1/Teorico/`](Teorico/):
 
 Cada exercício aproveita os materiais produzidos no anterior. Os enunciados definem **o que deve ser feito**; cabe aos participantes decidir **como pedir ao Copilot que o faça**. Não há prompts-modelo nem respostas pré-elaboradas.
 
+## Demonstrações Python GSS
+
+Os [exercícios dos módulos 1 e 2](Exercicios-GSS/README.md) complementam este
+percurso com seis demonstrações de Machine Learning e redes neuronais e seis
+de modelos de linguagem. Estes exercícios usam Python; consultar o guia
+para instalar as dependências e executar os ficheiros
+`dia1_modulo1_…py` e `dia1_modulo2_…py`.
+
 ## Licença
 Salvo indicação em contrário, este material é de autoria de **Vinicius Canonici e Hugo Gomes** e está licenciado sob a [Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)](../LICENSE.md).
 

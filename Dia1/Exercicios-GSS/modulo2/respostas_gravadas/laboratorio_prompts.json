@@ -1,0 +1,1770 @@
+{
+ "modelo": "amalia-9b-0626-dpo",
+ "data": "2026-10-12",
+ "respostas": {
+  "0.0|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 99,
+   "completion_tokens": 4,
+   "seconds": 0.2
+  },
+  "0.0|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 99,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 99,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 99,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 99,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 99,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 99,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 99,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 99,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 99,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 99,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 99,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 99,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 99,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 99,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 99,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 99,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 99,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 114,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 129,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 129,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 129,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 129,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 129,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 129,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 129,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 129,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 129,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 129,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 129,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 129,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 129,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 129,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 129,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 129,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 129,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 129,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 146,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 146,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 146,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 146,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 146,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 146,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 146,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 146,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 146,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 146,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 146,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 146,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 146,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 146,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 146,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 146,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 146,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 146,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 107,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 107,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 107,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 107,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 107,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 107,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 107,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 107,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 107,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 107,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 107,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 107,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 107,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 107,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 107,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 107,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 107,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 107,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 122,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.7|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "1.2|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Manutenção",
+   "finish_reason": "stop",
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "seconds": 0.1
+  },
+  "0.0|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "0.0|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 3,
+   "seconds": 0.0
+  },
+  "0.0|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "0.0|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "0.0|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "0.0|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "0.7|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "0.7|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "0.7|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "0.7|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "0.7|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "0.7|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "1.2|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "1.2|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "1.2|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "1.2|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "1.2|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "1.2|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 3,
+   "seconds": 0.0
+  },
+  "0.0|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 154,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "0.0|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 154,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "0.0|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 154,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "0.0|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 154,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "0.0|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 154,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "0.0|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 154,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "0.7|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 154,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "0.7|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 154,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "0.7|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 154,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "0.7|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 154,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "0.7|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 154,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "0.7|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 154,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "1.2|120|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 154,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "1.2|120|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 154,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "1.2|120|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 154,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "1.2|8|0|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 154,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "1.2|8|1|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 154,
+   "completion_tokens": 3,
+   "seconds": 0.1
+  },
+  "1.2|8|2|Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.": {
+   "text": "Qualidade",
+   "finish_reason": "stop",
+   "prompt_tokens": 154,
+   "completion_tokens": 3,
+   "seconds": 0.0
+  },
+  "0.0|120|0|Resume a ocorrência numa frase. Usa apenas informação do texto.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "A linha 2 parou às 10h15 devido a uma falha no sensor e retomou a produção às 10h35 após a sua substituição.",
+   "finish_reason": "stop",
+   "prompt_tokens": 124,
+   "completion_tokens": 39,
+   "seconds": 0.5
+  },
+  "0.0|120|1|Resume a ocorrência numa frase. Usa apenas informação do texto.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "A linha 2 parou às 10h15 devido a uma falha no sensor e retomou a produção às 10h35 após a sua substituição.",
+   "finish_reason": "stop",
+   "prompt_tokens": 124,
+   "completion_tokens": 39,
+   "seconds": 0.5
+  },
+  "0.0|120|2|Resume a ocorrência numa frase. Usa apenas informação do texto.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "A linha 2 parou às 10h15 devido a uma falha no sensor e retomou a produção às 10h35 após a sua substituição.",
+   "finish_reason": "stop",
+   "prompt_tokens": 124,
+   "completion_tokens": 39,
+   "seconds": 0.5
+  },
+  "0.0|8|0|Resume a ocorrência numa frase. Usa apenas informação do texto.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "A linha 2 parou às",
+   "finish_reason": "length",
+   "prompt_tokens": 124,
+   "completion_tokens": 8,
+   "seconds": 0.1
+  },
+  "0.0|8|1|Resume a ocorrência numa frase. Usa apenas informação do texto.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "A linha 2 parou às",
+   "finish_reason": "length",
+   "prompt_tokens": 124,
+   "completion_tokens": 8,
+   "seconds": 0.1
+  },
+  "0.0|8|2|Resume a ocorrência numa frase. Usa apenas informação do texto.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "A linha 2 parou às",
+   "finish_reason": "length",
+   "prompt_tokens": 124,
+   "completion_tokens": 8,
+   "seconds": 0.1
+  },
+  "0.7|120|0|Resume a ocorrência numa frase. Usa apenas informação do texto.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "A linha 2 parou às 10h15 devido a uma falha no sensor, sendo reiniciada às 10h35 após a sua substituição.",
+   "finish_reason": "stop",
+   "prompt_tokens": 124,
+   "completion_tokens": 39,
+   "seconds": 0.5
+  },
+  "0.7|120|1|Resume a ocorrência numa frase. Usa apenas informação do texto.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "A linha 2 ficou parada às 10h15 por causa de um problema no sensor, sendo depois retomada às 10h35 após a sua substituição.",
+   "finish_reason": "stop",
+   "prompt_tokens": 124,
+   "completion_tokens": 39,
+   "seconds": 0.5
+  },
+  "0.7|120|2|Resume a ocorrência numa frase. Usa apenas informação do texto.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "A linha 2 interrompeu-se às 10h15 devido a uma falha no sensor e retomou a produção às 10h35 após a sua substituição.",
+   "finish_reason": "stop",
+   "prompt_tokens": 124,
+   "completion_tokens": 42,
+   "seconds": 0.5
+  },
+  "0.7|8|0|Resume a ocorrência numa frase. Usa apenas informação do texto.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "A linha 2 interrompeu-",
+   "finish_reason": "length",
+   "prompt_tokens": 124,
+   "completion_tokens": 8,
+   "seconds": 0.1
+  },
+  "0.7|8|1|Resume a ocorrência numa frase. Usa apenas informação do texto.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "A linha 2 teve uma interrupção",
+   "finish_reason": "length",
+   "prompt_tokens": 124,
+   "completion_tokens": 8,
+   "seconds": 0.1
+  },
+  "0.7|8|2|Resume a ocorrência numa frase. Usa apenas informação do texto.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "A linha 2 interrompeu a",
+   "finish_reason": "length",
+   "prompt_tokens": 124,
+   "completion_tokens": 8,
+   "seconds": 0.1
+  },
+  "1.2|120|0|Resume a ocorrência numa frase. Usa apenas informação do texto.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "A linha 2 esteve parada às 10h15 e retomou a produção às 10h35 após a falha e a substituição de um sensor.",
+   "finish_reason": "stop",
+   "prompt_tokens": 124,
+   "completion_tokens": 38,
+   "seconds": 0.5
+  },
+  "1.2|120|1|Resume a ocorrência numa frase. Usa apenas informação do texto.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "A Linha 2 parou às 10h15 devido a uma falha no sensor e foi reposta às 10h35 com a sua substituição.",
+   "finish_reason": "stop",
+   "prompt_tokens": 124,
+   "completion_tokens": 38,
+   "seconds": 0.5
+  },
+  "1.2|120|2|Resume a ocorrência numa frase. Usa apenas informação do texto.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "A linha 2 ficou parada entre as 10h15 e as 10h35 devido a uma falha no sensor, sendo que a produção foi retomada posteriormente após a sua substituição.",
+   "finish_reason": "stop",
+   "prompt_tokens": 124,
+   "completion_tokens": 45,
+   "seconds": 0.6
+  },
+  "1.2|8|0|Resume a ocorrência numa frase. Usa apenas informação do texto.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "A linha 2 parou às",
+   "finish_reason": "length",
+   "prompt_tokens": 124,
+   "completion_tokens": 8,
+   "seconds": 0.1
+  },
+  "1.2|8|1|Resume a ocorrência numa frase. Usa apenas informação do texto.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "A Linha 2 sofreu uma paragem",
+   "finish_reason": "length",
+   "prompt_tokens": 124,
+   "completion_tokens": 8,
+   "seconds": 0.1
+  },
+  "1.2|8|2|Resume a ocorrência numa frase. Usa apenas informação do texto.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "A linha 2 sofreu uma paragem",
+   "finish_reason": "length",
+   "prompt_tokens": 124,
+   "completion_tokens": 8,
+   "seconds": 0.1
+  },
+  "0.0|120|0|Extrai linha, hora de paragem, hora de retoma e duração em minutos. Se um campo faltar, indica não informado.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "- Linha: 2  \n- Hora de Paragem: 10:15  \n- Hora de Retoma: 10:35  \n- Duração (em minutos): 20",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 46,
+   "seconds": 0.6
+  },
+  "0.0|120|1|Extrai linha, hora de paragem, hora de retoma e duração em minutos. Se um campo faltar, indica não informado.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "- Linha: 2  \n- Hora de Paragem: 10:15  \n- Hora de Retoma: 10:35  \n- Duração (em minutos): 20",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 46,
+   "seconds": 0.6
+  },
+  "0.0|120|2|Extrai linha, hora de paragem, hora de retoma e duração em minutos. Se um campo faltar, indica não informado.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "- Linha: 2  \n- Hora de Paragem: 10:15  \n- Hora de Retoma: 10:35  \n- Duração (em minutos): 20",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 46,
+   "seconds": 0.6
+  },
+  "0.0|8|0|Extrai linha, hora de paragem, hora de retoma e duração em minutos. Se um campo faltar, indica não informado.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "- Linha: 2  \n-",
+   "finish_reason": "length",
+   "prompt_tokens": 139,
+   "completion_tokens": 8,
+   "seconds": 0.1
+  },
+  "0.0|8|1|Extrai linha, hora de paragem, hora de retoma e duração em minutos. Se um campo faltar, indica não informado.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "- Linha: 2  \n-",
+   "finish_reason": "length",
+   "prompt_tokens": 139,
+   "completion_tokens": 8,
+   "seconds": 0.1
+  },
+  "0.0|8|2|Extrai linha, hora de paragem, hora de retoma e duração em minutos. Se um campo faltar, indica não informado.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "- Linha: 2  \n-",
+   "finish_reason": "length",
+   "prompt_tokens": 139,
+   "completion_tokens": 8,
+   "seconds": 0.1
+  },
+  "0.7|120|0|Extrai linha, hora de paragem, hora de retoma e duração em minutos. Se um campo faltar, indica não informado.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "- Linha: 2  \n- Linha de Paragem: 10h15  \n- Hora de Retoma: 10h35  \n- Duração (em minutos): 20",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 46,
+   "seconds": 0.6
+  },
+  "0.7|120|1|Extrai linha, hora de paragem, hora de retoma e duração em minutos. Se um campo faltar, indica não informado.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "- Linha: 2  \n- Hora de Paragem: 10:15  \n- Hora de Retoma: 10:35  \n- Duração (em minutos): 20",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 46,
+   "seconds": 0.6
+  },
+  "0.7|120|2|Extrai linha, hora de paragem, hora de retoma e duração em minutos. Se um campo faltar, indica não informado.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "- Linha: 2  \n- Hora de Paragem: 10:15  \n- Hora de Retoma: 10:35  \n- Duração (em minutos): 20",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 46,
+   "seconds": 0.6
+  },
+  "0.7|8|0|Extrai linha, hora de paragem, hora de retoma e duração em minutos. Se um campo faltar, indica não informado.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "- Linha: 2  \n-",
+   "finish_reason": "length",
+   "prompt_tokens": 139,
+   "completion_tokens": 8,
+   "seconds": 0.1
+  },
+  "0.7|8|1|Extrai linha, hora de paragem, hora de retoma e duração em minutos. Se um campo faltar, indica não informado.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "- Linha: 2  \n-",
+   "finish_reason": "length",
+   "prompt_tokens": 139,
+   "completion_tokens": 8,
+   "seconds": 0.1
+  },
+  "0.7|8|2|Extrai linha, hora de paragem, hora de retoma e duração em minutos. Se um campo faltar, indica não informado.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "- Linha: 2  \n-",
+   "finish_reason": "length",
+   "prompt_tokens": 139,
+   "completion_tokens": 8,
+   "seconds": 0.1
+  },
+  "1.2|120|0|Extrai linha, hora de paragem, hora de retoma e duração em minutos. Se um campo faltar, indica não informado.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "- Linha: Linha 2  \n- Hora de Paragem: 10:15  \n- Hora de Retoma: 10:35  \n- Duração (em minutos): 20",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 47,
+   "seconds": 0.6
+  },
+  "1.2|120|1|Extrai linha, hora de paragem, hora de retoma e duração em minutos. Se um campo faltar, indica não informado.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "- Linha: 2  \n- Linha de Paragem: 10:15  \n- Hora de Retoma: 10:35  \n- Duração (em minutos): 20",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 46,
+   "seconds": 0.6
+  },
+  "1.2|120|2|Extrai linha, hora de paragem, hora de retoma e duração em minutos. Se um campo faltar, indica não informado.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "- Linha: 2  \n- Hora de Paragem: 10h15  \n- Hora de Retoma: 10h35  \n- Duração (em minutos): 20",
+   "finish_reason": "stop",
+   "prompt_tokens": 139,
+   "completion_tokens": 46,
+   "seconds": 0.6
+  },
+  "1.2|8|0|Extrai linha, hora de paragem, hora de retoma e duração em minutos. Se um campo faltar, indica não informado.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "- Linha: 2  \n-",
+   "finish_reason": "length",
+   "prompt_tokens": 139,
+   "completion_tokens": 8,
+   "seconds": 0.1
+  },
+  "1.2|8|1|Extrai linha, hora de paragem, hora de retoma e duração em minutos. Se um campo faltar, indica não informado.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "- **Linha:** Linha",
+   "finish_reason": "length",
+   "prompt_tokens": 139,
+   "completion_tokens": 8,
+   "seconds": 0.1
+  },
+  "1.2|8|2|Extrai linha, hora de paragem, hora de retoma e duração em minutos. Se um campo faltar, indica não informado.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.": {
+   "text": "- Linha: Linha 2",
+   "finish_reason": "length",
+   "prompt_tokens": 139,
+   "completion_tokens": 8,
+   "seconds": 0.1
+  }
+ }
+}

@@ -99,6 +99,13 @@ Os slides da formação estão organizados por dia, na sequência dos módulos. 
 
 > **Materiais já disponíveis:** os PDFs estão nas pastas [`Dia1/Teorico/`](Dia1/Teorico/) e [`Dia2/Teorico/`](Dia2/Teorico/).
 
+## Demonstrações Python GSS — Dia 1
+
+Os [12 exercícios dos módulos 1 e 2](Dia1/Exercicios-GSS/README.md) acrescentam
+demonstrações de Machine Learning, redes neuronais e modelos de linguagem.
+Estão numa pasta própria e usam nomes `dia1_modulo<N>_<ordem>_<nome>.py`.
+O guia inclui a preparação do ambiente, os recursos e os testes.
+
 ## Dia 1 · Pesquisa, análise e pensamento crítico
 
 O trabalho do primeiro dia é realizado com o **Microsoft Copilot na web**. Não exige VS Code nem programação. Cada exercício utiliza resultados da etapa anterior.
@@ -209,6 +216,7 @@ Formacao-de-IA/
 ├── Dia1/
 │   ├── README.md                      # Percurso de pesquisa
 │   ├── Exercicio-*.md                 # Quatro exercícios
+│   ├── Exercicios-GSS/               # 12 demonstrações Python dos módulos 1 e 2
 │   └── Teorico/                       # Seis apresentações em PDF
 ├── Dia2/
 │   ├── README.md                      # Percurso com agentes
