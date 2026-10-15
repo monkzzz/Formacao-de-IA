@@ -14,7 +14,7 @@ A IA deve executar a pesquisa, a análise e a redação. O papel dos participant
 
 ## Apresentações teóricas
 
-Os seis PDFs da formação estão disponíveis em [`Dia1/Teorico/`](Teorico/):
+Os sete PDFs da formação estão disponíveis em [`Dia1/Teorico/`](Teorico/):
 
 - [Whoami](Teorico/Whoami.pdf)
 - [The Basics](Teorico/The%20Basics.pdf)
@@ -22,6 +22,8 @@ Os seis PDFs da formação estão disponíveis em [`Dia1/Teorico/`](Teorico/):
 - [From LLM to Chatbot](Teorico/From%20LLM%20to%20Chatbot.pdf)
 - [Context Eng](Teorico/Context%20Eng.pdf)
 - [Model Chosing](Teorico/Model%20Chosing.pdf)
+
+- [Apresentação conjunta GSS — Dia 1, módulos 1 e 2](Teorico/20261012--forma%C3%A7%C3%A3o_gss_modulos_1.1_1.2-HCG-v_conjunta_dia1.pdf)
 
 ## Sequência
 1. [Exercício 1 — Pesquisa orientada](Exercicio-01-Pesquisa-Orientada.md)

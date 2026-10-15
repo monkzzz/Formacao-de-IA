@@ -75,7 +75,7 @@ Projetar um ambiente de trabalho reutilizável para agentes, desenvolver uma ski
 
 ## Apresentações dos módulos (PDF)
 
-Os slides da formação estão organizados por dia, na sequência dos módulos. Os arquivos foram otimizados para ter **menos de 20 MB cada**, mantendo todas as páginas. Os nomes dos PDFs contêm somente o nome da apresentação.
+Os slides da formação estão organizados por dia, na sequência dos módulos. Os arquivos foram otimizados para ter **menos de 20 MB cada**, mantendo todas as páginas. A apresentação conjunta GSS mantém o nome original do ficheiro.
 
 ### Dia 1 · Fundamentos de IA e LLMs
 
@@ -87,6 +87,8 @@ Os slides da formação estão organizados por dia, na sequência dos módulos. 
 | 5 | [From LLM to Chatbot](Dia1/Teorico/From%20LLM%20to%20Chatbot.pdf) |
 | 6 | [Context Eng](Dia1/Teorico/Context%20Eng.pdf) |
 | 7 | [Model Chosing](Dia1/Teorico/Model%20Chosing.pdf) |
+
+**[Apresentação conjunta GSS — Dia 1, módulos 1 e 2](Dia1/Teorico/20261012--forma%C3%A7%C3%A3o_gss_modulos_1.1_1.2-HCG-v_conjunta_dia1.pdf)**
 
 ### Dia 2 · Agentes e engenharia de software
 
@@ -217,7 +219,7 @@ Formacao-de-IA/
 │   ├── README.md                      # Percurso de pesquisa
 │   ├── Exercicio-*.md                 # Quatro exercícios
 │   ├── Exercicios-GSS/               # 12 demonstrações Python dos módulos 1 e 2
-│   └── Teorico/                       # Seis apresentações em PDF
+│   └── Teorico/                       # Sete apresentações em PDF
 ├── Dia2/
 │   ├── README.md                      # Percurso com agentes
 │   ├── Exercicio-01-Starter-Repo.md
