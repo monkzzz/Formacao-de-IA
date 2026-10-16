@@ -13,10 +13,17 @@ The header logo, footer logo, and favicon use the supplied `65474617.jpg`, publi
 From this directory in PowerShell:
 
 ```powershell
-python serve.py
+python serve.py --download-models
 ```
 
 Open **http://127.0.0.1:8765**. Keep the terminal running; press Ctrl+C to stop it. Only `dist/` is served. Python serves static files; the browser computes every classification.
+
+A fresh Git clone does not include the trained weight binaries. On first start,
+`--download-models` downloads the missing digit and letter robustness weights from
+the public application and verifies them against the SHA-256 hashes in the local
+manifests. This requires internet access but no training or extra Python packages.
+Subsequent starts can use `python serve.py` offline. If the public weights no longer
+match this checkout, setup stops rather than loading a different model.
 
 **Original measured results:** 9,928/10,000 correct on official MNIST (**99.28%**); 2/10 correct on the independent Desafio run (**20%**). See the [validation report](reports/validation.md) for predictions, limitations, curves, and parity checks. These are separate evaluations.
 
