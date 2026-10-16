@@ -1,0 +1,13 @@
+:root { color-scheme: dark; font: 16px system-ui, sans-serif; background: #14251d; color: #f5f5ef; }
+body { margin: 0; padding: 16px; text-align: center; }
+#picker { max-width: 600px; margin: auto; }
+h1 { font-size: clamp(24px, 5vw, 36px); }
+p { line-height: 1.6; }
+.eyebrow, a { color: #b6ed7c; }
+label { display: block; font-weight: 700; margin: 20px 0 12px; }
+input { max-width: 100%; }
+button { display: block; margin: 18px auto; padding: 12px 22px; border: 0; border-radius: 24px; background: #b6ed7c; color: #14251d; font: inherit; font-weight: 700; cursor: pointer; }
+button:disabled { opacity: .45; cursor: default; }
+:focus-visible { outline: 3px solid white; outline-offset: 4px; }
+#game { width: 100%; height: min(480px, 52dvh); background: #000; }
+[hidden] { display: none !important; }

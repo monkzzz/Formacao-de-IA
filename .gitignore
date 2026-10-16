@@ -1,3 +1,5 @@
 # Keep the local exercise repository's Git metadata private to this checkout.
 /dia2-local/.git/
 /dia2-local/.git-local-history/
+/dia2-local/roms/
+/dia2-local/dist/roms/

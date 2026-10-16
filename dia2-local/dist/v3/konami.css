@@ -1,5 +1,5 @@
 .konami-dialog {
-  width: min(640px, 90vw);
+  width: min(1000px, 96vw);
   max-height: 90dvh;
   box-sizing: border-box;
   padding: 0 0 22px;
@@ -12,6 +12,8 @@
   box-shadow: 0 24px 90px #0008;
 }
 .konami-dialog::backdrop { background: #0a1713cc; }
+.konami-dialog h2 { font: 700 22px system-ui, sans-serif; padding: 0 20px; }
+.konami-dialog iframe { display: block; width: 100%; height: min(680px, 68dvh); border: 0; margin-top: 18px; }
 .konami-dialog img { display: block; width: 100%; height: auto; }
 .konami-dialog button {
   padding: 12px 24px;

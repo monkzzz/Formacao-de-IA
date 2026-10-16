@@ -1,5 +1,9 @@
 # Digit Lab — Local Desafio Project
 
+**Current application release: v3.4.0.** Enter the Konami code to open the secret
+SNES arcade. The supplied Zelda ROM is a separate deployment asset excluded from
+Git. See [arcade setup, controls and validation](docs/snes-arcade.md).
+
 Two CNNs trained from scratch on MNIST and EMNIST Letters, with a static browser application for drawing, multi-image upload, real feature maps, and raw prediction export. Choose **Digits (0–9)** or **Letters (A–Z)** before classifying one character; uppercase and lowercase handwriting share a letter class. The additional **Words** mode uses a separate pretrained handwriting model to transcribe a word or short English line into editable text. Images are never submitted to an inference API.
 
 **Public application:** [Digit Lab](https://naoquerosaber.pt/AI/index.html). All nine [digit regression groups](reports/public-browser-qa-v2.json) and ten [letter verification groups](reports/public-letters-browser-qa.json) passed on the updated HTTPS site. See the [hosting guide](docs/hosting.md). Original digit-only public verification is retained in [its historical report](reports/public-browser-qa.json).
@@ -51,7 +55,7 @@ The trained weights already exist locally in `dist/model/weights.bin`. They and 
 
 ## Words mode
 
-The footer displays the application release, currently **v3.3.0**. Character
+The footer displays the application release, currently **v3.4.0**. Character
 prediction JSON includes `application_version`; Words result metadata also keeps
 that version alongside the model identity. This release number identifies the
 website, separately from model weight hashes and preprocessing versions.

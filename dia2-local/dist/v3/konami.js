@@ -1,20 +1,31 @@
 const sequence = ["arrowup", "arrowup", "arrowdown", "arrowdown", "arrowleft", "arrowright", "arrowleft", "arrowright", "b", "a"];
 let entered = [];
 let lastKeyAt = 0;
+let previousFocus;
 
 const dialog = document.createElement("dialog");
 dialog.className = "konami-dialog";
-dialog.setAttribute("aria-label", "Congratulations! You found the secret!");
-const image = document.createElement("img");
-image.src = new URL("../assets/konami-congratulations.svg", import.meta.url).href;
-image.alt = "Congratulations! You found the secret! Konami code unlocked. Stay curious, keep exploring. Digit Lab.";
-image.width = 800;
-image.height = 560;
+dialog.setAttribute("aria-label", "Secret SNES arcade");
+const heading = document.createElement("h2");
+heading.textContent = "You found the secret SNES arcade!";
+const frame = document.createElement("iframe");
+frame.title = "SNES emulator and local ROM picker";
+frame.allow = "autoplay; fullscreen; gamepad";
+frame.setAttribute("allowfullscreen", "");
 const close = document.createElement("button");
 close.type = "button";
 close.textContent = "Back to the lab";
 close.addEventListener("click", () => dialog.close());
-dialog.append(image, close);
+dialog.append(heading, close, frame);
+dialog.addEventListener("close", () => {
+  // Destroy the frame to stop CPU use, audio and game input on exit.
+  frame.src = "about:blank";
+  frame.blur();
+  previousFocus?.focus({preventScroll: true});
+});
+window.addEventListener("message", event => {
+  if (event.origin === location.origin && event.source === frame.contentWindow && event.data === "snes-close") dialog.close();
+});
 document.body.append(dialog);
 dialog.addEventListener("click", event => {
   if (event.target === dialog) {
@@ -38,6 +49,8 @@ document.addEventListener("keydown", event => {
   while (entered.length && !entered.every((key, index) => key === sequence[index])) entered.shift();
   if (entered.length === sequence.length) {
     entered = [];
+    previousFocus = document.activeElement;
     dialog.showModal();
+    frame.src = new URL("./snes.html", import.meta.url).href;
   }
 });

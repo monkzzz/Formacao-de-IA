@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Secret SNES arcade</title>
+  <link rel="stylesheet" href="./snes.css?v=1">
+  <script type="module" src="./snes.js?v=2"></script>
+</head>
+<body>
+  <section id="picker">
+    <p class="eyebrow">BONUS LEVEL UNLOCKED</p>
+    <h1>A little SNES nostalgia.</h1>
+    <p>Load your copy of Zelda: A Link to the Past, or another SNES game.</p>
+    <label for="rom">Choose a local SNES ROM (.sfc or .smc)</label>
+    <input id="rom" type="file" accept=".sfc,.smc">
+    <button id="play" type="button" disabled>Play game</button>
+    <p>Files selected here stay in your browser. Use a ROM you are authorized to use.</p>
+    <p>Emulator files download when you press Play. Internet access is required.</p>
+    <p><a href="https://emulatorjs.org/" target="_blank" rel="noopener noreferrer">Powered by EmulatorJS / Snes9x</a></p>
+  </section>
+  <p id="status" role="status" aria-live="polite"></p>
+  <div id="game" hidden></div>
+  <button id="reset" type="button" hidden>Stop / choose another ROM</button>
+</body>
+</html>

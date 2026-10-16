@@ -1,5 +1,17 @@
 # Application releases
 
+## v3.4.0 — Secret SNES arcade
+
+- The Konami code opens an isolated EmulatorJS / Snes9x arcade and automatically
+  starts the separately supplied Zelda ROM. A local ROM picker remains available.
+- Closing the arcade stops emulation and restores keyboard focus. Emulator
+  downloads begin only after unlocking the arcade.
+- Original and serving ROM directories are excluded from Git; deployment transfers
+  the serving copy separately. See [setup and validation](snes-arcade.md).
+
+Local Edge checks verified the supplied ROM boots, creates a visible game canvas,
+and stops on close. Extended gameplay and save persistence remain untested.
+
 ## v3.3.0 — Larger word evaluation and visible percentages
 
 - Adds a third homepage benchmark: **67.89% word accuracy (1 − WER)** for Full

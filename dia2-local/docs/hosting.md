@@ -1,5 +1,12 @@
 # Website Hosting
 
+## v3.4.0 arcade deployment
+
+Deploy `v3/snes.html`, `v3/snes.js`, `v3/snes.css`, `v3/konami.js`,
+`v3/konami.css` and the separately supplied `roms/zelda.sfc` before switching
+`index.html`. ROM folders are Git-ignored; restore the serving copy manually
+on a fresh checkout. See [arcade setup and validation](snes-arcade.md).
+
 Public URL: https://naoquerosaber.pt/AI/index.html
 
 Static application assets and both trained models are served by the hosting account. Inference remains in the browser; no Python service is deployed. Use HTTPS because the model-integrity and upload-record APIs use secure browser capabilities.
