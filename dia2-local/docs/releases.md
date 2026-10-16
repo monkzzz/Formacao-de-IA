@@ -1,5 +1,14 @@
 # Application releases
 
+## Independent benchmark publication — classifier remains v3.6.0
+
+A new 10,000-image development / 20,000-image synthetic test comparison evaluated
+the frozen 28px and 64px models and fixed weighted ensembles. The best ensemble
+missed the development improvement gate and scored 96.55% on test, compared
+with 96.58% for the current 64px baseline. The classifier remains unchanged.
+Aggregate results are added to the digit evaluation download; the original
+v3.6.0 summary is preserved separately. See [the protocol and evidence](ensemble-benchmark.md).
+
 ## v3.6.0 — Higher-resolution digits and broader noise training
 
 Digit inputs increase to 64 x 64, with larger real feature maps and a separate

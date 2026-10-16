@@ -1,0 +1,25 @@
+{
+  "uploaded_at": "2026-10-16T17:56:46.124920+00:00",
+  "destination": "/",
+  "tls": true,
+  "files": [
+    {
+      "file": "evaluation/digits-captcha-v2-original.json",
+      "bytes": 1279,
+      "sha256": "e8403ec95a3e5962086683c6c9590c8efe068885a514ae1c7092ea41417a82f6"
+    },
+    {
+      "file": "evaluation/digits-captcha-v2.json",
+      "bytes": 1609,
+      "sha256": "859a9aecdd5437666502488f16b1bbeab678e690b8ad9e34f5f8ecc55f50445d"
+    },
+    {
+      "file": "evaluation/independent-captcha-benchmark.json",
+      "bytes": 1837,
+      "sha256": "8c58c97ee30996fff6da77dee0939ac3264adb4a24331b1c3ed8b5d5462fad02"
+    }
+  ],
+  "backup_directory": "artifacts\\ftp-backup-20261016T175640Z",
+  "application_version": "3.6.0",
+  "scope": "selected-files"
+}

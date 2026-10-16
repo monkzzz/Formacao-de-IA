@@ -1,0 +1,414 @@
+{
+  "status": "PASS",
+  "scope": "One frozen diagnostic ensemble, scored from the single untouched test cache; not used for model selection",
+  "freeze_sha256": "ff3e569491e08cad422faf3b1d69d085027737140470a1de658cab8f7e96a5b4",
+  "model_identities": {
+    "captcha-v1": "9531ae35882aa8ba348911f41e506bc00bb359d8110116ce98a2c6c1f8e04b13",
+    "captcha-v2": "c415bceb885677c1f57c800f22feaf1659ea184f7cf39c2bca462cde4e1f5c9c"
+  },
+  "candidate": {
+    "high_resolution_weight": 0.9,
+    "overall": {
+      "count": 20000,
+      "correct": 19310,
+      "accuracy": 0.9655,
+      "loss": 0.12147329187383753
+    },
+    "by_source": {
+      "printed": {
+        "count": 10000,
+        "correct": 9623,
+        "accuracy": 0.9623,
+        "loss": 0.12950355839516675
+      },
+      "handwritten": {
+        "count": 10000,
+        "correct": 9687,
+        "accuracy": 0.9687,
+        "loss": 0.11344302535250826
+      }
+    },
+    "by_severity": {
+      "0": {
+        "count": 6667,
+        "correct": 6617,
+        "accuracy": 0.992500374981251,
+        "loss": 0.02431516509281787
+      },
+      "1": {
+        "count": 6667,
+        "correct": 6386,
+        "accuracy": 0.9578521073946302,
+        "loss": 0.14763985835160637
+      },
+      "2": {
+        "count": 6666,
+        "correct": 6307,
+        "accuracy": 0.9461446144614462,
+        "loss": 0.19247550197611368
+      }
+    },
+    "complementarity": {
+      "both_correct": 17751,
+      "only_28_correct": 180,
+      "only_64_correct": 1564,
+      "both_wrong": 505,
+      "ensemble_fixes_baseline": 21,
+      "ensemble_breaks_baseline": 26
+    }
+  },
+  "baseline": {
+    "high_resolution_weight": 1,
+    "overall": {
+      "count": 20000,
+      "correct": 19315,
+      "accuracy": 0.96575,
+      "loss": 0.1119590664493232
+    },
+    "by_source": {
+      "printed": {
+        "count": 10000,
+        "correct": 9626,
+        "accuracy": 0.9626,
+        "loss": 0.11712343061857028
+      },
+      "handwritten": {
+        "count": 10000,
+        "correct": 9689,
+        "accuracy": 0.9689,
+        "loss": 0.10679470228007618
+      }
+    },
+    "by_severity": {
+      "0": {
+        "count": 6667,
+        "correct": 6618,
+        "accuracy": 0.9926503674816259,
+        "loss": 0.02392997672072875
+      },
+      "1": {
+        "count": 6667,
+        "correct": 6395,
+        "accuracy": 0.9592020398980051,
+        "loss": 0.1362253588223592
+      },
+      "2": {
+        "count": 6666,
+        "correct": 6302,
+        "accuracy": 0.9453945394539454,
+        "loss": 0.17573142918102266
+      }
+    },
+    "complementarity": {
+      "both_correct": 17751,
+      "only_28_correct": 180,
+      "only_64_correct": 1564,
+      "both_wrong": 505,
+      "ensemble_fixes_baseline": 0,
+      "ensemble_breaks_baseline": 0
+    }
+  },
+  "deployment_ensemble_selected": false,
+  "fixture_predictions": [
+    {
+      "expected": 0,
+      "baseline": 0,
+      "candidate": 0
+    },
+    {
+      "expected": 3,
+      "baseline": 3,
+      "candidate": 3
+    },
+    {
+      "expected": 1,
+      "baseline": 1,
+      "candidate": 1
+    },
+    {
+      "expected": 5,
+      "baseline": 5,
+      "candidate": 5
+    },
+    {
+      "expected": 2,
+      "baseline": 2,
+      "candidate": 2
+    },
+    {
+      "expected": 1,
+      "baseline": 1,
+      "candidate": 1
+    },
+    {
+      "expected": 3,
+      "baseline": 3,
+      "candidate": 3
+    },
+    {
+      "expected": 5,
+      "baseline": 5,
+      "candidate": 5
+    },
+    {
+      "expected": 4,
+      "baseline": 4,
+      "candidate": 4
+    },
+    {
+      "expected": 3,
+      "baseline": 3,
+      "candidate": 3
+    },
+    {
+      "expected": 5,
+      "baseline": 5,
+      "candidate": 5
+    },
+    {
+      "expected": 5,
+      "baseline": 5,
+      "candidate": 5
+    },
+    {
+      "expected": 6,
+      "baseline": 6,
+      "candidate": 6
+    },
+    {
+      "expected": 3,
+      "baseline": 3,
+      "candidate": 3
+    },
+    {
+      "expected": 7,
+      "baseline": 7,
+      "candidate": 7
+    },
+    {
+      "expected": 8,
+      "baseline": 8,
+      "candidate": 8
+    },
+    {
+      "expected": 8,
+      "baseline": 8,
+      "candidate": 8
+    },
+    {
+      "expected": 1,
+      "baseline": 1,
+      "candidate": 1
+    },
+    {
+      "expected": 9,
+      "baseline": 9,
+      "candidate": 9
+    },
+    {
+      "expected": 4,
+      "baseline": 4,
+      "candidate": 4
+    },
+    {
+      "expected": 0,
+      "baseline": 0,
+      "candidate": 0
+    },
+    {
+      "expected": 0,
+      "baseline": 0,
+      "candidate": 0
+    },
+    {
+      "expected": 1,
+      "baseline": 1,
+      "candidate": 1
+    },
+    {
+      "expected": 5,
+      "baseline": 5,
+      "candidate": 5
+    },
+    {
+      "expected": 2,
+      "baseline": 2,
+      "candidate": 2
+    },
+    {
+      "expected": 3,
+      "baseline": 3,
+      "candidate": 3
+    },
+    {
+      "expected": 3,
+      "baseline": 3,
+      "candidate": 3
+    },
+    {
+      "expected": 5,
+      "baseline": 5,
+      "candidate": 5
+    },
+    {
+      "expected": 4,
+      "baseline": 4,
+      "candidate": 4
+    },
+    {
+      "expected": 9,
+      "baseline": 9,
+      "candidate": 9
+    },
+    {
+      "expected": 5,
+      "baseline": 5,
+      "candidate": 5
+    },
+    {
+      "expected": 0,
+      "baseline": 0,
+      "candidate": 0
+    },
+    {
+      "expected": 6,
+      "baseline": 6,
+      "candidate": 6
+    },
+    {
+      "expected": 5,
+      "baseline": 5,
+      "candidate": 5
+    },
+    {
+      "expected": 7,
+      "baseline": 3,
+      "candidate": 3
+    },
+    {
+      "expected": 6,
+      "baseline": 6,
+      "candidate": 6
+    },
+    {
+      "expected": 8,
+      "baseline": 8,
+      "candidate": 8
+    },
+    {
+      "expected": 0,
+      "baseline": 0,
+      "candidate": 0
+    },
+    {
+      "expected": 9,
+      "baseline": 9,
+      "candidate": 9
+    },
+    {
+      "expected": 3,
+      "baseline": 3,
+      "candidate": 3
+    },
+    {
+      "expected": 0,
+      "baseline": 0,
+      "candidate": 0
+    },
+    {
+      "expected": 1,
+      "baseline": 1,
+      "candidate": 1
+    },
+    {
+      "expected": 1,
+      "baseline": 1,
+      "candidate": 1
+    },
+    {
+      "expected": 5,
+      "baseline": 5,
+      "candidate": 5
+    },
+    {
+      "expected": 2,
+      "baseline": 2,
+      "candidate": 2
+    },
+    {
+      "expected": 3,
+      "baseline": 3,
+      "candidate": 3
+    },
+    {
+      "expected": 3,
+      "baseline": 3,
+      "candidate": 3
+    },
+    {
+      "expected": 9,
+      "baseline": 9,
+      "candidate": 9
+    },
+    {
+      "expected": 4,
+      "baseline": 4,
+      "candidate": 4
+    },
+    {
+      "expected": 6,
+      "baseline": 4,
+      "candidate": 4
+    },
+    {
+      "expected": 5,
+      "baseline": 5,
+      "candidate": 5
+    },
+    {
+      "expected": 5,
+      "baseline": 5,
+      "candidate": 5
+    },
+    {
+      "expected": 6,
+      "baseline": 6,
+      "candidate": 6
+    },
+    {
+      "expected": 1,
+      "baseline": 1,
+      "candidate": 1
+    },
+    {
+      "expected": 7,
+      "baseline": 7,
+      "candidate": 7
+    },
+    {
+      "expected": 7,
+      "baseline": 7,
+      "candidate": 7
+    },
+    {
+      "expected": 8,
+      "baseline": 8,
+      "candidate": 8
+    },
+    {
+      "expected": 2,
+      "baseline": 2,
+      "candidate": 2
+    },
+    {
+      "expected": 9,
+      "baseline": 9,
+      "candidate": 9
+    },
+    {
+      "expected": 2,
+      "baseline": 2,
+      "candidate": 2
+    }
+  ]
+}

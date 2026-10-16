@@ -1,0 +1,14 @@
+{
+  "frozen_at": "2026-10-16T17:53:27.932436+00:00",
+  "model_identities": {
+    "captcha-v1": "9531ae35882aa8ba348911f41e506bc00bb359d8110116ce98a2c6c1f8e04b13",
+    "captcha-v2": "c415bceb885677c1f57c800f22feaf1659ea184f7cf39c2bca462cde4e1f5c9c"
+  },
+  "deployment_high_resolution_weight": 1,
+  "diagnostic_ensemble_weight": 0.9,
+  "ensemble_selected": false,
+  "development_report_sha256": "2bbae1c5e192d3c01bde6e33db24661ff5ef2524cc09e57a5f7f6509a288dd3d",
+  "selection_sha256": "ab28f2aee1259098b8788d65fb8acf5742d1b5a2357fb3bb67d442b1a68c1237",
+  "scope": "Deployment choice and best development ensemble frozen before test data; diagnostic test cannot change deployment selection",
+  "test_inputs_loaded": false
+}

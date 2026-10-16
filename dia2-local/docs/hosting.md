@@ -1,5 +1,15 @@
 # Website Hosting
 
+## Independent benchmark metadata publication
+
+The `ensemble-v1` experiment rejected its diagnostic ensemble and retains the
+v3.6.0 classifier. Its publication transfers only
+`evaluation/independent-captcha-benchmark.json`,
+`evaluation/digits-captcha-v2-original.json` and
+`evaluation/digits-captcha-v2.json`. No application source or weights change.
+All three uploads and all 46 HTTPS asset hashes passed verification. See
+[the experiment and publication evidence](ensemble-benchmark.md).
+
 ## v3.6.0 higher-resolution digits
 
 Digits use `model/captcha-v2/digits/`; Letters keep `model/robust/letters/`.

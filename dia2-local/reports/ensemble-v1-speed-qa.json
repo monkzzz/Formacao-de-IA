@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "model_identities": {
+    "captcha-v1": "9531ae35882aa8ba348911f41e506bc00bb359d8110116ce98a2c6c1f8e04b13",
+    "captcha-v2": "c415bceb885677c1f57c800f22feaf1659ea184f7cf39c2bca462cde4e1f5c9c"
+  },
+  "high_resolution_weight": 0.9,
+  "selected_deployment_weight": 1,
+  "p95_ms": 69.8999999910593,
+  "baseline_latency": {
+    "count": 40,
+    "median_ms": 54.20000000298023,
+    "p95_ms": 89
+  },
+  "ensemble_latency": {
+    "count": 40,
+    "median_ms": 64,
+    "p95_ms": 69.8999999910593
+  },
+  "parity_count": 60,
+  "maximum_score_error": 1.8331571038920913e-07,
+  "scope": "Headless desktop Edge, inference only; preprocessing parity checked separately; physical phone NOT RUN"
+}

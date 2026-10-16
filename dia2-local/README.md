@@ -14,6 +14,14 @@ The header logo, footer logo, and favicon use the supplied `65474617.jpg`, publi
 
 ## Higher-resolution digits (v3.6.0)
 
+**Independent ensemble experiment completed:** a new 10,000-image development
+set and 20,000-image synthetic test use separate, previously unused font families
+and a new renderer. The best development ensemble failed the preset improvement
+gate. On the frozen test it scored **96.55%**, versus **96.58%** for the current
+64px model. The current classifier remains deployed. These figures describe a
+different synthetic benchmark from the v3.6.0 training evaluation below.
+See the [protocol, results and decision](docs/ensemble-benchmark.md).
+
 Digits now use **64 x 64 inputs** and broader independent synthetic training,
 including 31 font faces, short stroke gaps, shear and denser interference.
 Epoch 12 was selected using separate validation data before loading test data.

@@ -1,0 +1,41 @@
+{
+  "application_version": "3.6.0",
+  "model_sha256": "c415bceb885677c1f57c800f22feaf1659ea184f7cf39c2bca462cde4e1f5c9c",
+  "input_side": 64,
+  "preprocessing": "border-gray-bilinear-com-64-v1",
+  "selection_epoch": 12,
+  "clean_mnist": {
+    "count": 10000,
+    "correct": 9891,
+    "accuracy": 0.9891
+  },
+  "raw_synthetic": {
+    "count": 10000,
+    "correct": 9790,
+    "accuracy": 0.979
+  },
+  "previous_clean_mnist": {
+    "count": 10000,
+    "correct": 9920,
+    "accuracy": 0.992
+  },
+  "previous_model_on_same_raw_synthetic": {
+    "count": 10000,
+    "correct": 9509,
+    "accuracy": 0.9509
+  },
+  "official_challenge": {
+    "count": 10,
+    "correct": 9,
+    "accuracy": 0.9
+  },
+  "previous_challenge": {
+    "count": 10,
+    "correct": 7,
+    "accuracy": 0.7
+  },
+  "scope": "Follow-up evaluation; prior challenge outcomes known, not a fresh blind test. Raw synthetic data is broader than the v3.5.0 benchmark. Synthetic and clean scores do not establish real CAPTCHA population accuracy.",
+  "challenge_used_for_training_or_selection": false,
+  "challenge_raw_sha256": "6c374710becf785c9e397f7aaf310c7e79802a1a5f24525c9cde4eb005c422dd",
+  "freeze_sha256": "351d57b1a2cb3fdeb8aa712595b25852f868d89bef4c34e6c5447d8673b2cee3"
+}

@@ -25,6 +25,7 @@ The course requirements are in [the official challenge](../Dia2/Desafio/README.m
 - Report MNIST accuracy and challenge results separately. The original recorded results are 99.28% on MNIST and 2/10 on the challenge; the robustness release reports 99.32% and 2/10. These are historical measurements, not promises about future changes.
 - The v3.5.0 CAPTCHA-style digit release reports 99.20% clean MNIST, 96.97% raw synthetic accuracy and 7/10 on its frozen challenge follow-up. Preserve `reports/captcha-v1-challenge-*.json`; do not tune against or overwrite that completed evaluation.
 - The v3.6.0 64px digit release reports 98.91% clean MNIST, 97.90% on its broader raw synthetic test (previous model: 95.09% on identical images), and 9/10 on its frozen challenge follow-up. Preserve `reports/captcha-v2-challenge-*.json` and keep these measurements separate from the earlier synthetic benchmark.
+- The completed `ensemble-v1` experiment retained the 64px baseline. Its separate 20,000-image synthetic test measured 96.575% for the baseline and 96.55% for the pre-frozen 90%/10% ensemble. Preserve `reports/ensemble-v1-*.json` and the frozen selection; do not tune weights from the completed test cache or present it as real CAPTCHA population accuracy.
 - Mark checks `PASS`, `FAIL`, `BLOCKED` or `NOT RUN` according to actual execution. Do not claim deployment, teacher review or accuracy without evidence.
 
 ## Implementation rules

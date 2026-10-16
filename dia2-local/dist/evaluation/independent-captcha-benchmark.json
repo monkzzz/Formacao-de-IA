@@ -1,0 +1,49 @@
+{
+  "application_version": "3.6.0",
+  "experiment": "ensemble-v1",
+  "classifier_changed": false,
+  "deployment_model": "captcha-v2",
+  "model_identities": {
+    "captcha-v1": "9531ae35882aa8ba348911f41e506bc00bb359d8110116ce98a2c6c1f8e04b13",
+    "captcha-v2": "c415bceb885677c1f57c800f22feaf1659ea184f7cf39c2bca462cde4e1f5c9c"
+  },
+  "development_count": 10000,
+  "test_count": 20000,
+  "candidate_high_resolution_weight": 0.9,
+  "ensemble_selected": false,
+  "selection_reason": "Only six additional correct development images; below the predeclared minimum of fifteen. Decision frozen before test data.",
+  "baseline_test": {
+    "count": 20000,
+    "correct": 19315,
+    "accuracy": 0.96575,
+    "loss": 0.1119590664493232
+  },
+  "candidate_test": {
+    "count": 20000,
+    "correct": 19310,
+    "accuracy": 0.9655,
+    "loss": 0.12147329187383753
+  },
+  "candidate_complementarity": {
+    "both_correct": 17751,
+    "only_28_correct": 180,
+    "only_64_correct": 1564,
+    "both_wrong": 505,
+    "ensemble_fixes_baseline": 21,
+    "ensemble_breaks_baseline": 26
+  },
+  "baseline_latency": {
+    "count": 40,
+    "median_ms": 54.20000000298023,
+    "p95_ms": 89
+  },
+  "candidate_latency": {
+    "count": 40,
+    "median_ms": 64,
+    "p95_ms": 69.8999999910593
+  },
+  "scope": "New independent synthetic renderer and separate unseen font families. Handwriting uses historical held-out MNIST sources. This is not a real-world CAPTCHA population accuracy estimate. Official challenge images and generator were not used.",
+  "development_sha256": "2bbae1c5e192d3c01bde6e33db24661ff5ef2524cc09e57a5f7f6509a288dd3d",
+  "test_sha256": "abc39721fe152acbdc6e3d23d936cbbc52b5798cdded33ae1d6d7a572857ff21",
+  "freeze_sha256": "ff3e569491e08cad422faf3b1d69d085027737140470a1de658cab8f7e96a5b4"
+}

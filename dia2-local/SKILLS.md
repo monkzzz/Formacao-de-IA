@@ -11,6 +11,10 @@ do not rerun the official challenge to tune this release. Older examples below
 describe their named workflows and original robustness experiments.
 The `captcha-v2-challenge-*.json` evaluation is also complete and must be
 preserved. `digitlab.deployed_challenge` writes separate live verification.
+The completed independent ensemble comparison retained v3.6.0. Its renderer,
+frozen development decision, 20,000-image test and rejected candidate are
+documented in [the ensemble benchmark](docs/ensemble-benchmark.md). Preserve
+those reports; do not rerun or retune the completed test as fresh evidence.
 
 This is a project workflow reference loaded from [AGENTS.md](AGENTS.md). It is not an automatically installed Codex skill package. Run commands from `dia2-local/`; consult each module's `--help` before using unfamiliar options.
 

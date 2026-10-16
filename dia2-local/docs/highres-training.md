@@ -145,3 +145,10 @@ and [raw live export](../reports/release-3.6.0-public-challenge-verification-raw
 
 The [public aggregate summary](../dist/evaluation/digits-captcha-v2.json)
 contains metrics and provenance without the challenge answer key or image pixels.
+
+A subsequent user-requested live-site recheck again scored 9/10, with all inputs,
+scores and predictions matching the frozen result. Its separate
+[verification report](../reports/release-3.6.0-public-challenge-recheck.json) and
+[raw export](../reports/release-3.6.0-public-challenge-recheck-raw.json) are preserved.
+This recheck preceded the independent ensemble benchmark and was not used to
+construct that benchmark or select its weights.
