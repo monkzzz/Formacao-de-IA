@@ -11,6 +11,8 @@
 
 Local Edge checks verified the supplied ROM boots, creates a visible game canvas,
 and stops on close. Extended gameplay and save persistence remain untested.
+Public Edge verification also passed startup and teardown; all 38 public static
+asset hashes matched. See the [deployment evidence](../reports/release-3.4.0-ftp-deployment.json).
 
 ## v3.3.0 — Larger word evaluation and visible percentages
 

@@ -28,3 +28,10 @@ assets and `index.html`, with the entry page transferred last. Automatic Zelda
 startup also requires the separate `roms/zelda.sfc` serving asset. Deployment
 and public verification evidence is recorded separately under `reports/`,
 preserving earlier release reports.
+
+Release v3.4.0 is live. The [FTPS deployment record](../reports/release-3.4.0-ftp-deployment.json)
+records seven verified uploads, with replaced assets backed up. Public Edge
+verification passed automatic Zelda startup, the game-start event, visible canvas,
+runtime teardown and the v3.4.0 footer. All 38 public static asset hashes matched
+the local files, including the separately deployed ROM. This was a boot smoke
+test; extended gameplay and save persistence remain untested.
