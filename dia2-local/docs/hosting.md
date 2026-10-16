@@ -35,6 +35,30 @@ The [public helper checks](../reports/public-helper-qa.json) and
 [recognition checks](../reports/public-helper-recognition-qa.json) pass on the
 deployed release. The latest FTPS deployment record covers all 26 assets.
 
+## Words release preparation
+
+Words is implemented and verified locally. **Public deployment is NOT RUN.**
+The deployment records above describe earlier releases and do not establish that
+Words is available at the public URL.
+
+The release adds `v3/words.js`, `v3/words-worker.js` and `v3/words.css`, and updates
+`v3/app.js`, `v3/helper.js`, `v3/helper-knowledge.js` and `index.html`. Transfer the
+dependencies before the entry page. The deployment utility discovers these assets
+automatically; preserve the earlier versioned assets and model exports.
+
+The optional word reader downloads its pinned pretrained weights from Hugging Face
+and Transformers.js/WebAssembly from jsDelivr on first use. These are separate
+from the digit/letter weights uploaded to this host. First use requires internet
+access, and browser caching does not guarantee offline operation. Inference stays
+in a browser worker; no server-side recognition service is required.
+
+Use HTTPS and serve `.js` as JavaScript. If hosting enforces a Content Security
+Policy, allow same-origin module workers, the pinned jsDelivr runtime, and Hugging
+Face model downloads including file-delivery redirects. See [Words notes](words.md)
+for the model identity, limitations and validation commands. Run the real-model
+smoke test on the deployed origin after any requested deployment, using a fresh
+report destination and a non-challenge fixture; local evidence alone is insufficient.
+
 ## Credentials and directory mapping
 
 Copy the structure in `ftp.example.json` into the ignored `ftp.local.json`. Never commit real credentials. FTPS verifies the server certificate; `tls_hostname` can identify the provider's canonical certificate hostname when it resolves to the same server as the configured host.

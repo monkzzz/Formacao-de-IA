@@ -1,10 +1,25 @@
 import {loadModel, predict} from "./inference.js?v=robust-1";
 import {prepareCanvas, PREPROCESS_VERSION} from "./preprocess.js";
+import {createWordsWorkspace} from "./words.js?v=words-1";
 
 const $ = id => document.getElementById(id);
 const state = {model: null, models: {}, mode: "digits", uploads: [], busy: false, loading: false, ready: false};
 const canvas = $("drawing"), ctx = canvas.getContext("2d", {willReadFrequently: true});
 let drawing = false, previousPoint = null;
+const words = createWordsWorkspace();
+const MODES = ["digits", "letters", "words"];
+
+function displayMode(mode) {
+  const wordMode = mode === "words";
+  for (const name of MODES) $("mode-" + name).setAttribute("aria-pressed", String(name === mode));
+  $("words-workspace").hidden = !wordMode;
+  for (const id of ["character-workspace", "mode-hint", "status", "network", "model"]) $(id).hidden = wordMode;
+  $("uploads-section").hidden = wordMode || !state.uploads.length;
+  const modelLink = document.querySelector("nav a:last-child");
+  modelLink.href = wordMode ? "#word-about" : "#network";
+  modelLink.textContent = wordMode ? "About the word reader" : "Inside the model";
+  words.activate(wordMode);
+}
 
 function status(message, error = false) {
   $("status").textContent = message;
@@ -47,11 +62,16 @@ function setControls() {
   $("classify").disabled = $("files").disabled = !state.ready || state.busy || state.loading;
   $("clear").disabled = state.busy || state.loading;
   $("export").disabled = !state.uploads.length || state.busy || state.loading;
-  for (const mode of ["digits", "letters"]) $("mode-" + mode).disabled = state.busy || state.loading;
+  for (const mode of MODES) $("mode-" + mode).disabled = state.busy || state.loading;
 }
 
 async function activateMode(mode) {
   if (state.busy || state.loading) return false;
+  if (mode === "words") {
+    state.mode = mode; state.ready = false;
+    displayMode(mode); setControls();
+    return true;
+  }
   state.loading = true; setControls();
   status(`Loading and verifying the ${mode} model…`);
   try {
@@ -70,12 +90,13 @@ async function activateMode(mode) {
     $("data-split").textContent = `${manifest.training.split.train.toLocaleString()} / ${manifest.training.split.validation.toLocaleString()} · no challenge inputs`;
     $("hash").textContent = manifest.sha256;
     renderScores(model.labels); resetOutput();
+    displayMode(mode);
     status(`${letters ? "Letters A–Z" : "Digits 0–9"} ready. Draw one character or choose an image to begin.`);
     return true;
   } catch (error) {status(error.message, true); return false;}
   finally {state.loading = false; setControls();}
 }
-for (const mode of ["digits", "letters"]) $("mode-" + mode).addEventListener("click", () => activateMode(mode));
+for (const mode of MODES) $("mode-" + mode).addEventListener("click", () => activateMode(mode));
 
 function resetDrawing() {
   drawing = false; previousPoint = null;
@@ -215,7 +236,7 @@ async function uploadFile(file, batch) {
 
 function exportRecord() {
   return {schema: 2, exported_at: new Date().toISOString(), origin: location.origin,
-    application: "Digit Lab digits-and-letters v3 robustness-1", mode: state.mode, model_sha256: state.model.manifest.sha256,
+    application: "Digit Lab v3 words-1", mode: state.mode, model_sha256: state.mode === "words" ? null : state.model.manifest.sha256,
     preprocessing: PREPROCESS_VERSION, labels_consulted_by_app: false,
     note: "Raw model outputs only; each record identifies its own mode, class labels and model hash. No answer key is loaded or used.",
     predictions: state.uploads};
@@ -243,9 +264,11 @@ $("export").addEventListener("click", () => {
 });
 
 initializeViews(); resetDrawing();
-document.querySelector('a[href="#network"]').addEventListener("click", () => {$("network").open = true;});
+document.querySelector('nav a:last-child').addEventListener("click", () => {
+  $(state.mode === "words" ? "word-about" : "network").open = true;
+});
 await activateMode("digits");
 
 // A narrow QA surface invokes the same functions and weights as the interface.
 window.digitLab = {state, predict: input => predict(state.model, Float32Array.from(input)),
-  prepareCanvas, exportRecord, activateMode, version: PREPROCESS_VERSION};
+  prepareCanvas, exportRecord, activateMode, wordsContext: words.context, version: PREPROCESS_VERSION};

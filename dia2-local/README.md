@@ -1,6 +1,6 @@
 # Digit Lab — Local Desafio Project
 
-Two CNNs trained from scratch on MNIST and EMNIST Letters, with a static browser application for drawing, multi-image upload, real feature maps, and raw prediction export. Choose **Digits (0–9)** or **Letters (A–Z)** before classifying one character. Uppercase and lowercase handwriting share a letter class; the app does not read words or distinguish case. Training runs locally; images are never submitted to an inference API.
+Two CNNs trained from scratch on MNIST and EMNIST Letters, with a static browser application for drawing, multi-image upload, real feature maps, and raw prediction export. Choose **Digits (0–9)** or **Letters (A–Z)** before classifying one character; uppercase and lowercase handwriting share a letter class. The additional **Words** mode uses a separate pretrained handwriting model to transcribe a word or short English line into editable text. Images are never submitted to an inference API.
 
 **Public application:** [Digit Lab](https://naoquerosaber.pt/AI/index.html). All nine [digit regression groups](reports/public-browser-qa-v2.json) and ten [letter verification groups](reports/public-letters-browser-qa.json) passed on the updated HTTPS site. See the [hosting guide](docs/hosting.md). Original digit-only public verification is retained in [its historical report](reports/public-browser-qa.json).
 
@@ -48,6 +48,48 @@ See the [training and evaluation protocol](docs/robustness.md), [digit metrics](
 To reproduce additional training from the original checkpoints, use `python -m digitlab.robust --epochs 10 --threads 4` in the existing environment. It refuses to overwrite existing robustness experiments. Model binaries are ignored by Git and are deployed separately; copy `dist/model/robust/` with the app.
 
 The trained weights already exist locally in `dist/model/weights.bin`. They and intermediate checkpoints are ignored by Git. Preserve them if moving the project, or reproduce training using the commands below.
+
+## Words mode
+
+Choose **Words** to write one word or a short English handwriting line on a wider
+canvas, or upload one cropped PNG, JPEG or WebP image. Select **Read my words**
+after drawing; image selection starts reading automatically. Review and edit the
+transcription, then **Copy text** or **Download .txt**. The original model output
+remains available under **Original model transcription**. Cancel stops loading
+or inference, and leaving Words mode cancels an active read.
+
+This optional mode uses the pretrained [TrOCR Small handwriting model](https://huggingface.co/microsoft/trocr-small-handwritten),
+fine-tuned on IAM English handwriting, through [Xenova's ONNX conversion](https://huggingface.co/Xenova/trocr-small-handwritten)
+at revision `2432e24d184b1d964d07ed04f5d9e21d31a59141` and Transformers.js 2.17.2.
+The first read downloads approximately 65 MB of quantized weights from Hugging Face
+plus the JavaScript/WebAssembly runtime from jsDelivr. The browser may cache these
+files; offline use is not guaranteed. No account, API key, Python inference server
+or additional local training is needed. Image pixels and text stay on the device.
+
+Words has **no measured accuracy claim** on this website. It can add, omit or
+misread text; full pages, multiple lines and other languages are outside this
+mode's scope. Digit/letter benchmark scores and CNN activation displays do not
+apply to this separate sequence model. Existing character inference is unchanged.
+
+See [the Words implementation and validation notes](docs/words.md).
+
+**Release status:** implemented and verified locally; Words has not been deployed
+to the public website. All 14 [Words browser checks](reports/words-release-qa.json),
+the [digit/letter regression](reports/words-character-regression.json), and all six
+[Scopedog regression groups](reports/words-helper-qa.json) passed. The real model
+transcribed the publisher's example as `Mr. Brown commented icily.`; this single
+smoke test is not an accuracy benchmark. The Python unit suite passed all 14 tests.
+
+With a local server running, check Words without downloading its model:
+
+```powershell
+.\.venv\Scripts\python.exe -m digitlab.words_qa --url http://127.0.0.1:8765/ --report words-ui-followup.json
+```
+
+This checks the interface with an explicitly identified worker double and checks
+real digit/letter activation parity. Add `--live-image <handwriting-image.jpg>`
+to exercise the real word reader. Use a new report name for each run; the Words
+collector refuses to overwrite previous evidence.
 
 ## Scopedog page guide
 
@@ -140,7 +182,7 @@ python -m pip --python .\.venv\Scripts\python.exe install -r requirements-report
 ## Project structure
 
 - `digitlab/`: strict IDX loading, shared preprocessing, CNN, training/export, browser QA, and first-run challenge recording.
-- `dist/`: entry page, retained v1/v2 assets, current interface in `v3/`, and digit/letter inference models.
+- `dist/`: entry page, retained v1/v2 assets, current interface in `v3/`, and digit/letter inference models. `v3/words.js`, `words-worker.js` and `words.css` provide the optional word reader; its pretrained weights download separately in the browser.
 - `tests/`: data separation, preprocessing, gradients, learning, and export checks.
 - `reports/`: real metrics, runtime parity results, and evaluation evidence.
 - `artifacts/`: ignored checkpoint, split indices, and frozen application archive.

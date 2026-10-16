@@ -59,6 +59,19 @@ For classifier-facing UI changes, also run `digitlab.robust_qa`. Inspect collect
 
 **Output:** actual browser results and screenshots. Helper responses must stay consistent with the current application and acknowledge unsupported questions.
 
+For Words changes, read [the Words notes](docs/words.md) and run
+`python -m digitlab.words_qa --url http://127.0.0.1:8765/ --report <new-report.json>`.
+The default checks distinguish worker doubles from real inference. Supply
+`--live-image <non-challenge-handwriting.jpg>` for a real TrOCR smoke test and
+optionally `--expected-text` for an exact comparison. Preserve the model revision,
+lazy downloads, worker cancellation/retry, original versus edited transcription,
+and local-only image processing. No word accuracy is established by a smoke test.
+Keep digit/letter scores and activation displays specific to their CNNs.
+
+Use `digitlab.robust_qa --report <new-report.json>` and
+`digitlab.helper_qa --report-prefix <new-prefix>` for follow-up regressions without
+replacing historical reports. The Words collector refuses existing report paths.
+
 ## 5. Document a challenge evaluation
 
 **Use when:** reviewing existing challenge evidence or recording a separately identified follow-up evaluation.

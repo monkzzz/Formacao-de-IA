@@ -14,8 +14,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--url", default="http://127.0.0.1:8766/")
     parser.add_argument("--public", action="store_true")
+    parser.add_argument("--report-prefix", help="Use a separate report and screenshot prefix for follow-up checks")
     args = parser.parse_args()
-    name = "public-helper" if args.public else "helper"
+    name = args.report_prefix or ("public-helper" if args.public else "helper")
     report = {"url": args.url, "checks": {}}
     original = ROOT / "scopedog-asset.jpg"
     asset = ROOT / "dist/assets/scopedog.jpg"

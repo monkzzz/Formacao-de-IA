@@ -20,6 +20,8 @@ from .train import ROOT, write_json
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--url", default="http://127.0.0.1:8766/")
+    parser.add_argument("--report", default="robust-browser-qa.json",
+                        help="Report filename under reports; use a new name for follow-up checks")
     args = parser.parse_args()
     torch.set_num_threads(2)
     report = {"url": args.url, "checks": {}}
@@ -124,7 +126,7 @@ def main():
         report["checks"]["page_errors"] = errors
         browser.close()
     report["status"] = "PASS"
-    write_json(ROOT / "reports/robust-browser-qa.json", report)
+    write_json(ROOT / "reports" / args.report, report)
     print("PASS: digit/letter activations, 36 uploads, mixed export and frozen model integrity")
 
 

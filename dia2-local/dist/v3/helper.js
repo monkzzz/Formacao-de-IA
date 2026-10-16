@@ -1,4 +1,4 @@
-import {answerQuestion} from "./helper-knowledge.js?v=scopedog-1";
+import {answerQuestion} from "./helper-knowledge.js?v=words-1";
 
 const launcher = document.getElementById("helper-launcher");
 const panel = document.getElementById("scopedog");
@@ -32,7 +32,12 @@ function appendMessage(speaker, text, suggestions = []) {
       const button = document.createElement("button"); button.type = "button"; button.textContent = title;
       button.addEventListener("click", () => {
         const target = document.getElementById(id);
-        if (target.hidden) {appendMessage("Scopedog", "Choose an image first to start your collection."); return;}
+        if (target.hidden) {
+          appendMessage("Scopedog", id === "network" || id === "model"
+            ? "Switch to Digits or Letters to inspect the CNN models and their real activations. Words has its own model details below the writing workspace."
+            : "Choose an image first to start your collection.");
+          return;
+        }
         if (target instanceof HTMLDetailsElement) target.open = true;
         setOpen(false);
         target.scrollIntoView({block: "start", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
@@ -56,7 +61,7 @@ function ask(question) {
   const state = window.digitLab?.state;
   const response = answerQuestion(question, {
     mode: state?.mode || "digits",
-    predicted: document.getElementById("predicted").textContent.trim(),
+    predicted: state?.mode === "words" ? window.digitLab.wordsContext().predicted : document.getElementById("predicted").textContent.trim(),
     confidence: document.getElementById("confidence").textContent.trim(),
   });
   appendMessage("Scopedog", response.text, response.actions);
