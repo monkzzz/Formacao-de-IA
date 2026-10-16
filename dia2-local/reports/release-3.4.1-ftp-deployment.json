@@ -1,0 +1,25 @@
+{
+  "uploaded_at": "2026-10-16T15:06:56.662665+00:00",
+  "destination": "/",
+  "tls": true,
+  "files": [
+    {
+      "file": "v3/helper.js",
+      "bytes": 5290,
+      "sha256": "784cf2304e92d57ade3f10ca4a64ef3b1d1351f6142e03fab8119efcd0bb66b8"
+    },
+    {
+      "file": "v3/konami.js",
+      "bytes": 2599,
+      "sha256": "b2d07af9cc925ea02d57b068586e970270209166998161901cd436930c42aa9d"
+    },
+    {
+      "file": "index.html",
+      "bytes": 17756,
+      "sha256": "4db1d38b562386662a329468f69c15b6be470fef41f00e4fa82c2f81b2755c65"
+    }
+  ],
+  "backup_directory": "artifacts\\ftp-backup-20261016T150635Z",
+  "application_version": "3.4.1",
+  "scope": "selected-files"
+}

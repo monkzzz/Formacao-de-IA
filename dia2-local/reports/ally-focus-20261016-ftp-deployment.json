@@ -1,0 +1,30 @@
+{
+  "uploaded_at": "2026-10-16T14:52:00.864342+00:00",
+  "destination": "/",
+  "tls": true,
+  "files": [
+    {
+      "file": "v3/konami.js",
+      "bytes": 2528,
+      "sha256": "3920dcae00bc54e5854809d410997f8904c25dc17e031bc9bfab6841bac4a508"
+    },
+    {
+      "file": "v3/snes.html",
+      "bytes": 1150,
+      "sha256": "6f26a4b2240434d49f66b0c1063b36e10b8a39993aeafb549bafc15b4700538b"
+    },
+    {
+      "file": "v3/snes.js",
+      "bytes": 2745,
+      "sha256": "447dac376a38d49a1c9f78a4ee007708f4a3beef7e8b02229f43f048cc84abcc"
+    },
+    {
+      "file": "index.html",
+      "bytes": 17756,
+      "sha256": "ebe8731d45c92a1374bab7ffe7f1f4b8bd2001eb99693e0ac9a6dcb535b639b1"
+    }
+  ],
+  "backup_directory": "artifacts\\ftp-backup-20261016T145151Z",
+  "application_version": "3.4.0",
+  "scope": "selected-files"
+}

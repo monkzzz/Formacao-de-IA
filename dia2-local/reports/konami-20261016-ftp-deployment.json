@@ -1,0 +1,30 @@
+{
+  "uploaded_at": "2026-10-16T14:30:34.872331+00:00",
+  "destination": "/",
+  "tls": true,
+  "files": [
+    {
+      "file": "assets/konami-congratulations.svg",
+      "bytes": 1433,
+      "sha256": "c60ca44891d54c80de9ce4e35c3fd2348f5d1951899c4d028e76333f39277071"
+    },
+    {
+      "file": "v3/konami.css",
+      "bytes": 666,
+      "sha256": "f707ce734f5d9c93a58e096ce2ea57c1fd5f8ee25244171408f2ba1e0fd84c5e"
+    },
+    {
+      "file": "v3/konami.js",
+      "bytes": 1823,
+      "sha256": "f7b98293d07d632157518b333e675acd51a1550b89e40bd4c71fc140cc9c37b3"
+    },
+    {
+      "file": "index.html",
+      "bytes": 17756,
+      "sha256": "dcd3b05fd2cdbc51e78f8e41a65566360378231d1e7d91a784c934f2a97b81ea"
+    }
+  ],
+  "backup_directory": "artifacts\\ftp-backup-20261016T143026Z",
+  "application_version": "3.3.0",
+  "scope": "selected-files"
+}
