@@ -1,0 +1,59 @@
+{
+  "schema": 2,
+  "exported_at": "2026-10-16T21:03:01.185Z",
+  "origin": "https://naoquerosaber.pt",
+  "application": "Digit Lab 3.9.0",
+  "application_version": "3.9.0",
+  "mode": "digits",
+  "reader": "ddddocr",
+  "model_sha256": "33b5cd351ee94e73a6bf8fa18c415ed8b819b3ffd342e267c30d8ad8334e34e8",
+  "preprocessing": "ddddocr-browser64-v1",
+  "labels_consulted_by_app": false,
+  "note": "Raw model outputs only; each record identifies its own mode, class labels and model hash. No answer key is loaded or used.",
+  "predictions": [
+    {
+      "file": "sample-000.png",
+      "bytes": 4740,
+      "batch": "2fb89042-dc44-431f-86ec-241de862f3f9",
+      "recorded_at": "2026-10-16T21:01:57.684Z",
+      "mode": "digits",
+      "model_sha256": "33b5cd351ee94e73a6bf8fa18c415ed8b819b3ffd342e267c30d8ad8334e34e8",
+      "labels": null,
+      "input_side": null,
+      "preprocessing": "ddddocr-browser64-v1",
+      "architecture": "captcha-ctc",
+      "reader": "ddddocr",
+      "model": "sml2h3/ddddocr/common.onnx",
+      "revision": "c40f56f95412e10bcb9bd0bd24411e92f896d238",
+      "trained_by_project": false,
+      "profile": "standard",
+      "precision": "float32",
+      "decoding": "greedy-full-charset-ctc",
+      "file_sha256": "d350eb992a75c02d3371c4594bcf7a29bcbc833846fa3290f14d8c9fa3b541c6",
+      "width": 158,
+      "height": 117,
+      "raw_text": "0",
+      "accepted": true,
+      "prepared_width": 86,
+      "prepared_height": 64,
+      "input_sha256": "f9931d1df2207b5a4793593807ee80000f707b2bdd44decd35d134f49b0629db",
+      "predicted": 0,
+      "predicted_label": "0",
+      "class_index": 0,
+      "scores": null,
+      "logits": null,
+      "inference_ms": 79.69999998807907
+    }
+  ],
+  "scope": "Fresh synthetic browser integration screening, not real CAPTCHA population accuracy",
+  "url": "https://naoquerosaber.pt/AI/",
+  "freeze_sha256": "e8b4c17369f34fa88025a11643537d77111b403430c8c24c094e41a672716563",
+  "page_errors": [],
+  "request_methods": [
+    "GET"
+  ],
+  "request_body_count": 0,
+  "input_file_sha256": {
+    "sample-000.png": "d350eb992a75c02d3371c4594bcf7a29bcbc833846fa3290f14d8c9fa3b541c6"
+  }
+}

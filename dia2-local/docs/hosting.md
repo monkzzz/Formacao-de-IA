@@ -1,5 +1,36 @@
 # Website Hosting
 
+## v3.9.0 CAPTCHA-specific readers
+
+Release v3.9.0 is published at [Digit Lab](https://naoquerosaber.pt/AI/).
+It adds selectable DdddOCR and DdddOCR Legacy models, with pinned, SHA-256-verified
+weights downloaded from `raw.githubusercontent.com`. Allow that origin alongside
+the existing jsDelivr runtime origin if a hosting Content Security Policy is added.
+Both run on-device using ONNX Runtime Web `1.20.1` and fixed FP32 weights; model
+binaries are not uploaded to this host or committed to Git.
+
+The scoped deployment transferred eight assets, with backups, verified hashes
+and HTML last: `assets/ddddocr-LICENSE.txt`, `v3/ddddocr-charsets.json`,
+`v3/digit-reader-worker.js`, `v3/digit-readers.js`, `v3/helper-knowledge.js`,
+`v3/helper.js`, `v3/app.js` and `index.html`. All 54 public assets match their
+local SHA-256 hashes; JavaScript MIME types passed. All 15 public selector/UI
+groups passed. Existing model folders and arcade assets remain preserved.
+
+- [Eight verified uploads](../reports/release-3.9.0-ftp-deployment.json).
+- [All 54 public asset hashes and MIME types](../reports/release-3.9.0-http-assets.json).
+- [Public selector and interface checks](../reports/release-3.9.0-public-ui-qa.json).
+- [Both actual public model downloads and synthetic inference](../reports/release-3.9.0-public-download-smoke.json).
+- [Model identities, independent screening and frozen follow-up results](captcha-readers.md).
+
+No official images were sent to the public site during this release's evaluation.
+The local frozen follow-up measured 8/10 and 9/10 for the two external candidates;
+neither is presented as perfect, and the existing project CNN remains the default.
+Both actual GitHub weight downloads, hash verification and WASM inference passed
+on the public origin, each transcribing a newly generated synthetic `0` correctly.
+These are download/integration smoke checks, not accuracy benchmarks. All observed
+requests were GET with no bodies. The release's frozen runtime sources remained
+unchanged after the official follow-up.
+
 ## v3.8.0 selectable digit readers
 
 Release v3.8.0 is published at [Digit Lab](https://naoquerosaber.pt/AI/).

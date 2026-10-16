@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "scope": "Fresh synthetic browser integration screening, not real CAPTCHA population accuracy",
+  "models": [
+    {
+      "reader": "ddddocr",
+      "correct": 1,
+      "count": 1,
+      "raw_report": "release-3.9.0-public-download-smoke-ddddocr-raw.json",
+      "raw_sha256": "557c7856d28e2ae5a477562b2ccbc8e9b483e550f2339752fafbbf2fb3ff35ba",
+      "cases": [
+        {
+          "file": "sample-000.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        }
+      ],
+      "errors": 0,
+      "page_errors": [],
+      "request_body_count": 0,
+      "request_methods": [
+        "GET"
+      ]
+    },
+    {
+      "reader": "ddddocr-old",
+      "correct": 1,
+      "count": 1,
+      "raw_report": "release-3.9.0-public-download-smoke-ddddocr-old-raw.json",
+      "raw_sha256": "e0dbb5fd749c93d8299a13e62bb2c7bb1fd4b53d1fc8a703eed59e36d312b9e8",
+      "cases": [
+        {
+          "file": "sample-000.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        }
+      ],
+      "errors": 0,
+      "page_errors": [],
+      "request_body_count": 0,
+      "request_methods": [
+        "GET"
+      ]
+    }
+  ],
+  "sources_unchanged": true,
+  "application_version": "3.9.0"
+}

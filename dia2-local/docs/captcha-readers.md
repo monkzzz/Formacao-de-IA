@@ -114,3 +114,12 @@ Local checks:
 - [Digit/letter regression](../reports/ddddocr-character-regression-20261016.json): PASS.
 - [Words regression](../reports/ddddocr-words-regression-20261016.json): PASS.
 - [Helper regression](../reports/ddddocr-helper-20261016-qa.json): PASS.
+
+## Public deployment
+
+v3.9.0 is live at [Digit Lab](https://naoquerosaber.pt/AI/). All eight changed
+uploads were backed up and hash-verified, all 54 public assets matched local
+hashes, and all 15 public selector/interface groups passed. Actual remote model
+downloads and browser inference also passed for both models, each returning `0`
+for one synthetic digit. No official CAPTCHA images were used on the public
+origin. See [deployment and public checks](hosting.md#v390-captcha-specific-readers).
