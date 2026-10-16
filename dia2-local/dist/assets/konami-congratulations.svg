@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560">
+  <rect width="800" height="560" fill="#14251d"/>
+  <g fill="#b6ed7c">
+    <path d="m110 100 5 15 15 5-15 5-5 15-5-15-15-5 15-5Zm570 35 5 15 15 5-15 5-5 15-5-15-15-5 15-5ZM145 360l4 12 12 4-12 4-4 12-4-12-12-4 12-4Zm515-15 4 12 12 4-12 4-4 12-4-12-12-4 12-4Z"/>
+    <circle cx="205" cy="155" r="4"/><circle cx="600" cy="100" r="5"/><circle cx="720" cy="300" r="4"/><circle cx="80" cy="270" r="5"/>
+  </g>
+  <circle cx="400" cy="170" r="70" fill="#213c2b" stroke="#b6ed7c" stroke-width="2"/>
+  <g fill="none" stroke="#b6ed7c" stroke-width="7" stroke-linejoin="round">
+    <path d="M374 135h52v30c0 35-52 35-52 0Zm0 7h-19v16c0 18 19 19 23 19m48-35h19v16c0 18-19 19-23 19m-22 14v23m-23 0h46"/>
+  </g>
+  <g text-anchor="middle" font-family="system-ui, sans-serif">
+    <text x="400" y="290" fill="#b6ed7c" font-size="15" letter-spacing="4">KONAMI CODE UNLOCKED</text>
+    <text x="400" y="349" fill="#f5f5ef" font-size="48" font-weight="800">Congratulations!</text>
+    <text x="400" y="392" fill="#f5f5ef" font-size="25">You found the secret!</text>
+    <text x="400" y="446" fill="#b6ed7c" font-size="25">↑ ↑ ↓ ↓ ← → ← → B A</text>
+    <text x="400" y="495" fill="#bbc9bb" font-size="18">Stay curious. Keep exploring.</text>
+    <text x="400" y="533" fill="#bbc9bb" font-size="12" letter-spacing="3">DIGIT LAB</text>
+  </g>
+</svg>

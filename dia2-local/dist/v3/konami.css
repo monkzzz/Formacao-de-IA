@@ -1,0 +1,26 @@
+.konami-dialog {
+  width: min(640px, 90vw);
+  max-height: 90dvh;
+  box-sizing: border-box;
+  padding: 0 0 22px;
+  overflow: auto;
+  border: 2px solid #b6ed7c;
+  border-radius: 20px;
+  background: #14251d;
+  color: #f5f5ef;
+  text-align: center;
+  box-shadow: 0 24px 90px #0008;
+}
+.konami-dialog::backdrop { background: #0a1713cc; }
+.konami-dialog img { display: block; width: 100%; height: auto; }
+.konami-dialog button {
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 999px;
+  background: #b6ed7c;
+  color: #14251d;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.konami-dialog button:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
