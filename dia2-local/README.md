@@ -73,8 +73,14 @@ apply to this separate sequence model. Existing character inference is unchanged
 
 See [the Words implementation and validation notes](docs/words.md).
 
-**Release status:** implemented and verified locally; Words has not been deployed
-to the public website. All 14 [Words browser checks](reports/words-release-qa.json),
+**Release status:** Words is live on the [public website](https://naoquerosaber.pt/AI/).
+All 14 [public Words browser checks](reports/public-words-release-qa.json), the
+[public digit/letter regression](reports/public-words-character-regression.json),
+and all six [public helper groups](reports/public-words-helper-qa.json) passed.
+All 29 deployed files passed [FTPS upload verification](reports/words-ftp-deployment.json)
+and independent [HTTPS hash checks](reports/public-words-http-assets.json).
+
+Local verification also passed all 14 [Words browser checks](reports/words-release-qa.json),
 the [digit/letter regression](reports/words-character-regression.json), and all six
 [Scopedog regression groups](reports/words-helper-qa.json) passed. The real model
 transcribed the publisher's example as `Mr. Brown commented icily.`; this single

@@ -28,6 +28,7 @@ def main():
                         help="Run actual browser TrOCR on this non-challenge handwriting image")
     parser.add_argument("--expected-text", help="Optional exact expected live transcription")
     parser.add_argument("--report", default="words-browser-qa.json")
+    parser.add_argument("--screenshot-prefix", default="words")
     args = parser.parse_args()
     report_path = ROOT / "reports" / args.report
     if report_path.exists():
@@ -147,9 +148,9 @@ def main():
         assert page.evaluate("document.activeElement.id") == "word-copy"
         screenshots = ROOT / "reports/screenshots"
         screenshots.mkdir(exist_ok=True)
-        page.screenshot(path=str(screenshots / "words-mobile.png"), full_page=True)
+        page.screenshot(path=str(screenshots / (args.screenshot_prefix + "-mobile.png")), full_page=True)
         page.set_viewport_size({"width": 1440, "height": 1100})
-        page.screenshot(path=str(screenshots / "words-desktop.png"), full_page=True)
+        page.screenshot(path=str(screenshots / (args.screenshot_prefix + "-desktop.png")), full_page=True)
         checks["responsive_layout_and_keyboard"] = {"status": "PASS"}
 
         # A fresh page must recover after a worker/module load fails.
@@ -194,7 +195,7 @@ def main():
             checks["real_trocr_smoke"] = {"status": "PASS", "text": text,
                 "expected": args.expected_text, "metadata": live.evaluate("digitLab.wordsContext().metadata"),
                 "note": "One fixture smoke test; not a word accuracy benchmark."}
-            live.screenshot(path=str(screenshots / "words-live-desktop.png"), full_page=True)
+            live.screenshot(path=str(screenshots / (args.screenshot_prefix + "-live-desktop.png")), full_page=True)
             live.close()
         else:
             checks["real_trocr_smoke"] = {"status": "NOT RUN"}

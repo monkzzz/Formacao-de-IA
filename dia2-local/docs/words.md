@@ -20,8 +20,9 @@ from corrections; neither corrections nor drawings retrain a model.
 The [model card](https://huggingface.co/microsoft/trocr-small-handwritten) describes
 single-text-line OCR; this release does not segment pages or multiple lines.
 Its English handwriting training does not establish multilingual performance.
-Do not apply the MNIST/EMNIST metrics to this model. Word accuracy, teacher review
-and public deployment of this feature are **NOT RUN**.
+Do not apply the MNIST/EMNIST metrics to this model. A word accuracy benchmark and
+teacher review are **NOT RUN**. Public deployment and browser verification passed;
+see [the hosting record](hosting.md#words-release).
 
 ## Implementation
 
@@ -57,13 +58,23 @@ Recorded local checks for this release:
 | Scopedog routing, keyboard/focus, safe rendering, live context and responsive layout, 6 groups | PASS | [Helper regression](../reports/words-helper-qa.json) |
 | Python unit suite, 14 tests | PASS | `python -m unittest discover -s tests -v` |
 | Relative documentation links and whitespace checks | PASS | Local checks |
-| Word accuracy benchmark, public deployment and teacher review | NOT RUN | No claims made |
+| Word accuracy benchmark and teacher review | NOT RUN | No claims made |
 
 The real model transcribed the publisher's example as `Mr. Brown commented icily.`,
 matching the expected text. Requests observed during the checked workflows used
 GET only; no image upload endpoint was called. Desktop and mobile screenshots
 were captured and visually inspected. Earlier challenge and release evidence
 was retained separately.
+
+Public verification also passed all 14
+[Words checks](../reports/public-words-release-qa.json), the
+[digit/letter regression](../reports/public-words-character-regression.json), and
+all six [helper groups](../reports/public-words-helper-qa.json). All 29 deployed
+files matched their recorded hashes over both FTPS and
+[public HTTPS](../reports/public-words-http-assets.json). The real public model
+returned the same expected transcription as the local smoke test. Separate
+public screenshots were captured, and the live desktop result was visually
+inspected. These are integration checks rather than an accuracy benchmark.
 
 Start a separate local server:
 
@@ -115,5 +126,6 @@ Content Security Policy must permit same-origin module workers and the pinned
 runtime/model download hosts, including Hugging Face's file-delivery redirects.
 No new server endpoint or Python inference dependency is required.
 
-Follow [the hosting guide](hosting.md) when deployment is requested. Local checks
-do not establish that Words is available on the public website.
+Follow [the hosting guide](hosting.md) for subsequent deployments. Use new report
+and screenshot names for each verification so the recorded local and public
+release evidence remains intact.

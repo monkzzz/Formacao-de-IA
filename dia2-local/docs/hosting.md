@@ -35,11 +35,21 @@ The [public helper checks](../reports/public-helper-qa.json) and
 [recognition checks](../reports/public-helper-recognition-qa.json) pass on the
 deployed release. The latest FTPS deployment record covers all 26 assets.
 
-## Words release preparation
+## Words release
 
-Words is implemented and verified locally. **Public deployment is NOT RUN.**
-The deployment records above describe earlier releases and do not establish that
-Words is available at the public URL.
+Words is deployed at [the public application](https://naoquerosaber.pt/AI/).
+All 29 files passed [FTPS verification](../reports/words-ftp-deployment.json),
+with replaced files backed up, and independent
+[HTTPS hash and JavaScript MIME checks](../reports/public-words-http-assets.json).
+The deployment records above remain evidence for their earlier releases.
+
+All 14 [public Words checks](../reports/public-words-release-qa.json) passed,
+including real-model transcription of the publisher's handwriting example,
+editing, copy/download, cancellation, failure recovery and responsive layouts.
+The [public character regression](../reports/public-words-character-regression.json)
+passed both models' activation parity, 36 uploads, mixed-mode export and invalid
+input checks. All six [public helper groups](../reports/public-words-helper-qa.json)
+also passed. This smoke test does not establish word accuracy.
 
 The release adds `v3/words.js`, `v3/words-worker.js` and `v3/words.css`, and updates
 `v3/app.js`, `v3/helper.js`, `v3/helper-knowledge.js` and `index.html`. Transfer the
@@ -58,6 +68,11 @@ Face model downloads including file-delivery redirects. See [Words notes](words.
 for the model identity, limitations and validation commands. Run the real-model
 smoke test on the deployed origin after any requested deployment, using a fresh
 report destination and a non-challenge fixture; local evidence alone is insufficient.
+
+For future uploads, `python -m digitlab.ftp_deploy --upload --report <new-deployment.json>`
+preserves the earlier deployment record. For follow-up browser checks, use a fresh
+`--report` and `--screenshot-prefix` with `digitlab.words_qa` and
+`digitlab.robust_qa`, and a fresh `--report-prefix` with `digitlab.helper_qa`.
 
 ## Credentials and directory mapping
 

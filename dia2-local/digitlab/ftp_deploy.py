@@ -65,6 +65,8 @@ def enter_directory(client, directory, create=False, allow_root=False):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--upload", action="store_true")
+    parser.add_argument("--report", default="ftp-deployment.json",
+                        help="Deployment report filename under reports")
     args = parser.parse_args()
     config = json.loads((ROOT / "ftp.local.json").read_text(encoding="utf-8-sig"))
     if not all(config.get(key) for key in ["host", "username", "password"]):
@@ -124,7 +126,7 @@ def main():
         report = {"uploaded_at": datetime.now(timezone.utc).isoformat(), "destination": target,
                   "tls": config.get("tls", True), "files": uploaded,
                   "backup_directory": str(backup.relative_to(ROOT))}
-        (ROOT / "reports/ftp-deployment.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
+        (ROOT / "reports" / args.report).write_text(json.dumps(report, indent=2), encoding="utf-8")
     except Exception as error:
         # Server text can echo authentication data; print only its category/code.
         code = str(error)[:3] if isinstance(error, ftplib.Error) else ""

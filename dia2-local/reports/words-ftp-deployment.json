@@ -1,0 +1,153 @@
+{
+  "uploaded_at": "2026-10-16T10:20:48.092520+00:00",
+  "destination": "/",
+  "tls": true,
+  "files": [
+    {
+      "file": "app.js",
+      "bytes": 11250,
+      "sha256": "3a5d231eeab5ba244fbc6a3a1521c525cb35bdfc34263c2dfbf06639459bc309"
+    },
+    {
+      "file": "assets/65474617.jpg",
+      "bytes": 14707,
+      "sha256": "20408bf697201912289abc7aa92ea4177908d492965131f58c6c2796bfcf83af"
+    },
+    {
+      "file": "assets/scopedog.jpg",
+      "bytes": 234376,
+      "sha256": "9caaffdfbdc25c550c601d1fe07d24b9bb7d3ce331e6f97fdb8a2b6e0ce7a179"
+    },
+    {
+      "file": "inference.js",
+      "bytes": 4355,
+      "sha256": "12a41ae50ad566417652be21baeb96278e558d46c4b310bc70c97323b6bcb6ab"
+    },
+    {
+      "file": "model/letters/manifest.json",
+      "bytes": 336931,
+      "sha256": "5ec7f6c41bec294eb83d61be815fb0b476bb32ec65f824f3c28f0c8567b6bd0c"
+    },
+    {
+      "file": "model/letters/weights.bin",
+      "bytes": 835944,
+      "sha256": "c35d6fece31dbbacb37d684d3c256fbf634bf90751195fff8238f28e884f0ad5"
+    },
+    {
+      "file": "model/manifest.json",
+      "bytes": 50243,
+      "sha256": "71247af8e6e04330462d64f210f588c6652f68033802ab0598bfcfd2993ebaa6"
+    },
+    {
+      "file": "model/robust/digits/manifest.json",
+      "bytes": 66288,
+      "sha256": "4028c77a64ee4174895bb6da1403712459427e9d49e981432f01e76168f81fff"
+    },
+    {
+      "file": "model/robust/digits/weights.bin",
+      "bytes": 827688,
+      "sha256": "d2b9a1430a98fda5df41e27ca214ab1b57ef83508926f9eeb84967757300eb62"
+    },
+    {
+      "file": "model/robust/letters/manifest.json",
+      "bytes": 359633,
+      "sha256": "7b3e6995d90bb03549605059fb80a5c68d3dd09fa8fca822f7cd11820ff7ca95"
+    },
+    {
+      "file": "model/robust/letters/weights.bin",
+      "bytes": 835944,
+      "sha256": "0fef4b3155457eb1be91547590b48ebc61823c68b79fd414b406835cbfe1b101"
+    },
+    {
+      "file": "model/weights.bin",
+      "bytes": 827688,
+      "sha256": "8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338"
+    },
+    {
+      "file": "preprocess.js",
+      "bytes": 3150,
+      "sha256": "eaa43a89d27d90b1d08e49ab62baee982c0c108f044b2b71a19a68a9e133d988"
+    },
+    {
+      "file": "style.css",
+      "bytes": 7652,
+      "sha256": "82d862ccce0f259cdbfd2769195f3ccd832e22119610da10a94a4d911c7bff39"
+    },
+    {
+      "file": "v2/app.js",
+      "bytes": 14034,
+      "sha256": "2122258114ea61f867523b0f5260510904534c899f7e35bbda20369225197b67"
+    },
+    {
+      "file": "v2/inference.js",
+      "bytes": 5169,
+      "sha256": "d43c67ba415ff594fed329ddd06392a704ad15dace033d4fe2d9044c38bbae38"
+    },
+    {
+      "file": "v2/preprocess.js",
+      "bytes": 3150,
+      "sha256": "eaa43a89d27d90b1d08e49ab62baee982c0c108f044b2b71a19a68a9e133d988"
+    },
+    {
+      "file": "v2/style.css",
+      "bytes": 8555,
+      "sha256": "b554914a88d30baa558d7063e15805d6c713fed74ca26f1c42f7e5937d55e319"
+    },
+    {
+      "file": "v3/app.js",
+      "bytes": 15223,
+      "sha256": "81f74ca112c42afa041625522515f9b9896ff4afc93dbd22b647725cafb77041"
+    },
+    {
+      "file": "v3/helper-knowledge.js",
+      "bytes": 13745,
+      "sha256": "a39fbdc9d294b04218daa7b2332a48ca47095422cf9aafb658f921fdb53b53ae"
+    },
+    {
+      "file": "v3/helper.css",
+      "bytes": 4525,
+      "sha256": "3ee870b102fc425df898c3b50b9aef9f0a7ea56476744f702a5cefad0482f99d"
+    },
+    {
+      "file": "v3/helper.js",
+      "bytes": 4296,
+      "sha256": "1a6dfc62215b19a4fb24ffb75d6e81d93dfceea16976de4d032d0de061f23bcb"
+    },
+    {
+      "file": "v3/inference.js",
+      "bytes": 5141,
+      "sha256": "fbc79abe5a66106ee5b0845cba4930edd79b007e45978109a31f63e935155010"
+    },
+    {
+      "file": "v3/preprocess.js",
+      "bytes": 3150,
+      "sha256": "eaa43a89d27d90b1d08e49ab62baee982c0c108f044b2b71a19a68a9e133d988"
+    },
+    {
+      "file": "v3/style.css",
+      "bytes": 24264,
+      "sha256": "8a49480a64e2390cd1941152e774c0b9bd11e7918a7a65f944c30b3f38613bda"
+    },
+    {
+      "file": "v3/words-worker.js",
+      "bytes": 1452,
+      "sha256": "1f7638d462ae663e79f4c49b4e16efe1f8ec5fd3b164314a788c53e2705209b4"
+    },
+    {
+      "file": "v3/words.css",
+      "bytes": 1964,
+      "sha256": "301a613316168eeed1ceea303cd221f2c45a53534b4ca34357758f853efd64d8"
+    },
+    {
+      "file": "v3/words.js",
+      "bytes": 10098,
+      "sha256": "8cae6d154a032b860810b2427873f5b00fac2cd2703a6e87848186615ffa9b80"
+    },
+    {
+      "file": "index.html",
+      "bytes": 14652,
+      "sha256": "7baa42502bc04d0e12844a0130d5a70cafbcde7567b930487d3e1fe4e56fe7f0"
+    }
+  ],
+  "backup_directory": "artifacts\\ftp-backup-20261016T101921Z"
+}

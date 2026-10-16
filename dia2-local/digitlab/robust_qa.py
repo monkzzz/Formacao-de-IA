@@ -22,6 +22,7 @@ def main():
     parser.add_argument("--url", default="http://127.0.0.1:8766/")
     parser.add_argument("--report", default="robust-browser-qa.json",
                         help="Report filename under reports; use a new name for follow-up checks")
+    parser.add_argument("--screenshot-prefix", default="robust")
     args = parser.parse_args()
     torch.set_num_threads(2)
     report = {"url": args.url, "checks": {}}
@@ -117,7 +118,7 @@ def main():
         assert page.evaluate("document.documentElement.scrollWidth <= innerWidth")
         screenshots = ROOT / "reports/screenshots"
         screenshots.mkdir(exist_ok=True)
-        page.screenshot(path=str(screenshots / "robust-mobile.png"), full_page=True)
+        page.screenshot(path=str(screenshots / (args.screenshot_prefix + "-mobile.png")), full_page=True)
         report["checks"]["mobile_layout"] = True
         assert not errors, errors
         assert all(request["method"] == "GET" and (request["url"].startswith(args.url)
