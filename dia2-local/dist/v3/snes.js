@@ -3,6 +3,15 @@ const play = document.getElementById("play");
 const status = document.getElementById("status");
 const reset = document.getElementById("reset");
 let romUrl;
+function focusGame() {
+  const canvas = document.querySelector("#game canvas");
+  if (canvas) {
+    canvas.tabIndex = 0;
+    canvas.focus({preventScroll: true});
+  }
+  window.parent.postMessage("snes-focus", location.origin);
+}
+document.getElementById("game").addEventListener("pointerdown", focusGame);
 input.addEventListener("change", () => {
   const file = input.files[0];
   const valid = file && /\.(sfc|smc)$/i.test(file.name) && file.size > 0 && file.size <= 16 * 1024 * 1024;
@@ -23,7 +32,10 @@ function startGame(url, name) {
     EJS_pathtodata: "https://cdn.emulatorjs.org/stable/data/",
     EJS_startOnLoaded: true,
     EJS_threads: false,
-    EJS_onGameStart: () => { status.textContent = "Playing. Use the emulator menu for controls and save states. Escape returns to the lab."; }
+    EJS_onGameStart: () => {
+      status.textContent = "Playing. On ROG Ally, select Gamepad mode in Command Center, tap the game, then press Menu / Start. Use the emulator menu to configure controls.";
+      focusGame();
+    }
   });
   const loader = document.createElement("script");
   loader.src = window.EJS_pathtodata + "loader.js";

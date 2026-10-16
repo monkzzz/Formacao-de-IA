@@ -1,5 +1,12 @@
 # Secret SNES arcade
 
+On ROG Ally, set Command Center's Control Mode to **Gamepad**, tap the game,
+then press **Menu / Start**. In Auto/Desktop mode the browser may receive mouse
+and keyboard actions instead of gamepad input. Configure player 1 in the emulator
+menu if necessary. The game receives focus on startup and when tapped. The
+Konami unlock currently requires keyboard arrow keys, B and A; physical
+controller buttons do not enter the unlock sequence.
+
 Enter Up, Up, Down, Down, Left, Right, Left, Right, B, A outside text
 fields to open the arcade. It automatically starts the supplied Zelda ROM at
 `dist/roms/zelda.sfc`. Both ROM directories are ignored by Git. The original

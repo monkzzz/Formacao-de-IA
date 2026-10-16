@@ -24,7 +24,12 @@ dialog.addEventListener("close", () => {
   previousFocus?.focus({preventScroll: true});
 });
 window.addEventListener("message", event => {
-  if (event.origin === location.origin && event.source === frame.contentWindow && event.data === "snes-close") dialog.close();
+  if (event.origin !== location.origin || event.source !== frame.contentWindow) return;
+  if (event.data === "snes-close") dialog.close();
+  if (event.data === "snes-focus" && dialog.open) {
+    frame.focus({preventScroll: true});
+    frame.contentDocument?.querySelector("#game canvas")?.focus({preventScroll: true});
+  }
 });
 document.body.append(dialog);
 dialog.addEventListener("click", event => {
