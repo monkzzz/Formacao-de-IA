@@ -1,6 +1,6 @@
 # Digit Lab — Local Desafio Project
 
-**Current application release: v3.4.0.** Enter the Konami code to open the secret
+**Current application release: v3.4.1.** Enter the Konami code to open the secret
 SNES arcade. The supplied Zelda ROM is a separate deployment asset excluded from
 Git. See [arcade setup, controls and validation](docs/snes-arcade.md).
 
@@ -55,7 +55,7 @@ The trained weights already exist locally in `dist/model/weights.bin`. They and 
 
 ## Words mode
 
-The footer displays the application release, currently **v3.4.0**. Character
+The footer displays the application release, currently **v3.4.1**. Character
 prediction JSON includes `application_version`; Words result metadata also keeps
 that version alongside the model identity. This release number identifies the
 website, separately from model weight hashes and preprocessing versions.

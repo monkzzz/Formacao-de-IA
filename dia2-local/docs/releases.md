@@ -1,5 +1,16 @@
 # Application releases
 
+## v3.4.1 — Typed arcade unlock in Scopedog
+
+Send `up up down down left right left right b a` to Scopedog to open the arcade
+from a phone keyboard. Case and repeated whitespace are accepted. The shared
+arcade entry point preserves keyboard activation and avoids duplicate dialogs.
+The helper closes and dismisses text input before opening the game.
+
+Mobile Edge emulation passed complete and incomplete codes, normal questions,
+real Zelda startup, repeated unlock, close focus and absence of script errors.
+This release also includes the previously deployed game-input focus fix.
+
 ## v3.4.0 — Secret SNES arcade
 
 - The Konami code opens an isolated EmulatorJS / Snes9x arcade and automatically

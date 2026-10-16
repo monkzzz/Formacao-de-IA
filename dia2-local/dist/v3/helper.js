@@ -1,4 +1,5 @@
 import {answerQuestion} from "./helper-knowledge.js?v=3.3.0";
+import {openArcade} from "./konami.js?v=4";
 
 const launcher = document.getElementById("helper-launcher");
 const panel = document.getElementById("scopedog");
@@ -60,6 +61,13 @@ function ask(question) {
   question = question.trim().slice(0, 400);
   if (!question) return;
   appendMessage("You", question);
+  if (question.toLowerCase().replace(/\s+/g, " ") === "up up down down left right left right b a") {
+    appendMessage("Scopedog", "Secret unlocked! Tap the game to play. Use the emulator menu for touch controls.");
+    input.blur();
+    setOpen(false);
+    openArcade();
+    return true;
+  }
   const state = window.digitLab?.state;
   const benchmark = document.getElementById("benchmark-words");
   const response = answerQuestion(question, {
@@ -80,7 +88,10 @@ document.addEventListener("keydown", event => {
   if (event.key === "Escape" && !panel.hidden) {event.preventDefault(); setOpen(false);}
 });
 document.getElementById("helper-form").addEventListener("submit", event => {
-  event.preventDefault(); ask(input.value); input.value = ""; input.focus();
+  event.preventDefault();
+  const question = input.value;
+  input.value = "";
+  if (!ask(question)) input.focus();
 });
 for (const [label, question] of [["Get started", "How do I use the page?"], ["How it works", "How does it work?"],
   ["My prediction", "Explain this prediction"], ["Model scores", "What do model scores mean?"]]) {

@@ -3,6 +3,14 @@ let entered = [];
 let lastKeyAt = 0;
 let previousFocus;
 
+export function openArcade() {
+  if (dialog.open) return;
+  entered = [];
+  previousFocus = document.activeElement;
+  dialog.showModal();
+  frame.src = new URL("./snes.html", import.meta.url).href;
+}
+
 const dialog = document.createElement("dialog");
 dialog.className = "konami-dialog";
 dialog.setAttribute("aria-label", "Secret SNES arcade");
@@ -53,9 +61,6 @@ document.addEventListener("keydown", event => {
   // Retain the longest suffix that is also a prefix, including overlapping starts.
   while (entered.length && !entered.every((key, index) => key === sequence[index])) entered.shift();
   if (entered.length === sequence.length) {
-    entered = [];
-    previousFocus = document.activeElement;
-    dialog.showModal();
-    frame.src = new URL("./snes.html", import.meta.url).href;
+    openArcade();
   }
 });

@@ -5,7 +5,10 @@ then press **Menu / Start**. In Auto/Desktop mode the browser may receive mouse
 and keyboard actions instead of gamepad input. Configure player 1 in the emulator
 menu if necessary. The game receives focus on startup and when tapped. The
 Konami unlock currently requires keyboard arrow keys, B and A; physical
-controller buttons do not enter the unlock sequence.
+controller buttons do not enter the unlock sequence. On a phone, open Scopedog,
+type `up up down down left right left right b a` and send it. Capitalization and
+extra whitespace are accepted. Scopedog closes and opens the same arcade, with
+the keyboard dismissed. Normal questions keep their existing answers.
 
 Enter Up, Up, Down, Down, Left, Right, Left, Right, B, A outside text
 fields to open the arcade. It automatically starts the supplied Zelda ROM at
