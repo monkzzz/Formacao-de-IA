@@ -1,0 +1,33 @@
+{
+  "url": "https://naoquerosaber.pt/AI/",
+  "status": "PASS",
+  "evaluation": "words-1000-evaluation.json",
+  "checks": {
+    "three_measured_scores_match_sources": {
+      "status": "PASS",
+      "word_accuracy_percent": "67.89"
+    },
+    "keyboard_details_show_rates_counts_and_definition": {
+      "status": "PASS"
+    },
+    "helper_uses_displayed_metrics_and_opens_details": {
+      "status": "PASS"
+    },
+    "mode_switches_preserve_score_scope_and_controls": {
+      "status": "PASS"
+    },
+    "desktop_mobile_and_landscape_layouts": {
+      "status": "PASS"
+    },
+    "no_model_prefetch_uploads_or_script_errors": {
+      "status": "PASS"
+    },
+    "release_version_matches_exports": {
+      "status": "PASS"
+    },
+    "downloadable_summary_matches_evaluation": {
+      "status": "PASS"
+    }
+  },
+  "application_version": "3.3.0"
+}

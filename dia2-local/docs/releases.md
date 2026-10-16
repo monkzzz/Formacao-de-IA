@@ -1,5 +1,26 @@
 # Application releases
 
+## v3.3.0 — Larger word evaluation and visible percentages
+
+- Adds a third homepage benchmark: **67.89% word accuracy (1 − WER)** for Full
+  precision on 1,000 real English IAM test lines, with 8,912 reference word tokens.
+- Expandable, keyboard-accessible details show word error rate (32.11%), character
+  error rate (9.60%), exact whole-line accuracy (15.30%), and the metric definition.
+- Publishes a downloadable summary and keeps Scopedog's explanation consistent
+  with the displayed values. Digit/letter scores and inference remain unchanged.
+
+The [frozen larger evaluation](words-large-evaluation.md) excludes all 16 earlier
+test rows and performs no training or model selection. This is English line OCR;
+the word percentage is not an isolated-word classification score. The evaluated
+reader is from v3.2.0; byte-identical inference sources are retained in v3.3.0.
+
+This release is live. All eight [local display checks](../reports/release-3.3.0-local-final-metrics-qa.json),
+all eight [public display checks](../reports/release-3.3.0-public-metrics-qa.json),
+all six [public helper groups](../reports/release-3.3.0-public-helper-qa.json), and
+[all 31 public asset hashes](../reports/release-3.3.0-http-assets.json) passed.
+The recorded 1,000 predictions and edit counts were independently checked against
+the frozen source manifest before publication.
+
 ## v3.2.0 — Eraser, drawing history and full-precision words
 
 - Adds a paint-style square eraser, adjustable size and cursor, Pen selection,

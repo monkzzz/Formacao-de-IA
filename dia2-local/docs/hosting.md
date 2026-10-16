@@ -35,11 +35,31 @@ The [public helper checks](../reports/public-helper-qa.json) and
 [recognition checks](../reports/public-helper-recognition-qa.json) pass on the
 deployed release. The latest FTPS deployment record covers all 26 assets.
 
-## Current release: v3.2.0
+## Current release: v3.3.0
 
-The [public application](https://naoquerosaber.pt/AI/) now displays **v3.2.0** and
-includes a paint-style eraser, adjustable size, Undo/Redo, and full-precision
-Words reading by default. Standard remains available for a smaller download.
+The [public application](https://naoquerosaber.pt/AI/) displays **v3.3.0** and adds
+**67.89% word accuracy (1 − WER)** alongside the digit and letter percentages.
+The frozen evaluation used 1,000 real English test lines with 8,912 reference word
+tokens. Expandable details show the other error rates and a downloadable summary.
+See [the evaluation method and results](words-large-evaluation.md).
+
+All eight [public display checks](../reports/release-3.3.0-public-metrics-qa.json)
+and all six [public helper groups](../reports/release-3.3.0-public-helper-qa.json)
+passed. All 31 site assets passed [HTTPS hash verification](../reports/release-3.3.0-http-assets.json).
+Five changed files were [uploaded with backups and verified hashes](../reports/release-3.3.0-ftp-deployment.json):
+`index.html`, `v3/style.css`, `v3/helper.js`, `v3/helper-knowledge.js` and
+`evaluation/words-1000.json`. Earlier assets and model binaries remain present.
+
+The downloadable JSON contains metrics and provenance hashes, not dataset images
+or the reference-label manifest. The inference sources are byte-identical to the
+evaluated v3.2.0 reader. This release performs no additional training or model selection.
+
+<a id="current-release-v320"></a>
+
+## Release v3.2.0
+
+Release **v3.2.0** added a paint-style eraser, adjustable size, Undo/Redo, and
+full-precision Words reading by default. Standard remains available for a smaller download.
 
 All 19 [final public UI checks](../reports/release-3.2.0-final-public-ui-qa.json)
 passed, including the default quality selection and pixel-exact drawing history.

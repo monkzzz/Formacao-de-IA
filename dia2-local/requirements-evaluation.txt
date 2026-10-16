@@ -1,0 +1,2 @@
+# Optional: prepares the frozen larger handwriting evaluation from source Parquet.
+pyarrow==26.0.0

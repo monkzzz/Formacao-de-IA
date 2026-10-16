@@ -1,4 +1,4 @@
-import {answerQuestion} from "./helper-knowledge.js?v=3.2.0";
+import {answerQuestion} from "./helper-knowledge.js?v=3.3.0";
 
 const launcher = document.getElementById("helper-launcher");
 const panel = document.getElementById("scopedog");
@@ -9,6 +9,7 @@ const actions = {
   network: ["Explore the real feature maps", "network"],
   model: ["See model details", "model"],
   uploads: ["Go to image results", "uploads-section"],
+  wordMetrics: ["See word test details", "word-benchmark-details"],
 };
 
 function setOpen(open) {
@@ -32,6 +33,7 @@ function appendMessage(speaker, text, suggestions = []) {
       const button = document.createElement("button"); button.type = "button"; button.textContent = title;
       button.addEventListener("click", () => {
         const target = document.getElementById(id);
+        if (!target) {appendMessage("Scopedog", "Refresh this page to see the latest benchmark details."); return;}
         if (target.hidden) {
           appendMessage("Scopedog", id === "network" || id === "model"
             ? "Switch to Digits or Letters to inspect the CNN models and their real activations. Words has its own model details below the writing workspace."
@@ -59,10 +61,14 @@ function ask(question) {
   if (!question) return;
   appendMessage("You", question);
   const state = window.digitLab?.state;
+  const benchmark = document.getElementById("benchmark-words");
   const response = answerQuestion(question, {
     mode: state?.mode || "digits",
     predicted: state?.mode === "words" ? window.digitLab.wordsContext().predicted : document.getElementById("predicted").textContent.trim(),
     confidence: document.getElementById("confidence").textContent.trim(),
+    wordBenchmark: benchmark ? {score: document.getElementById("word-accuracy").textContent.trim(),
+      lines: benchmark.dataset.lines, words: benchmark.dataset.words, wer: benchmark.dataset.wer,
+      cer: benchmark.dataset.cer, exact: benchmark.dataset.exact} : null,
   });
   appendMessage("Scopedog", response.text, response.actions);
 }

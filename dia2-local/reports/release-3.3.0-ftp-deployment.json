@@ -1,0 +1,35 @@
+{
+  "uploaded_at": "2026-10-16T11:44:47.205491+00:00",
+  "destination": "/",
+  "tls": true,
+  "files": [
+    {
+      "file": "evaluation/words-1000.json",
+      "bytes": 1711,
+      "sha256": "4b641719dbec554d0accb35e6483ed22058b591f826c35b0891305cd5054fe2b"
+    },
+    {
+      "file": "v3/helper-knowledge.js",
+      "bytes": 15897,
+      "sha256": "ab73632177eb678425d178890ff75c8840b74eff3f62b2f9bd647acaac1886d0"
+    },
+    {
+      "file": "v3/helper.js",
+      "bytes": 4904,
+      "sha256": "e4cacc6b0337411926629da76b6d7074ba0190b81e1171c250551ffb2d639ada"
+    },
+    {
+      "file": "v3/style.css",
+      "bytes": 26007,
+      "sha256": "9262b3256e0b8db585492b45216acb2799c4f0a41dd18987d5a92500ec06a17f"
+    },
+    {
+      "file": "index.html",
+      "bytes": 17642,
+      "sha256": "4e5bcde8e02007b3ccb9003215cec442cc5ec97ba652edea51acc912fbde81cf"
+    }
+  ],
+  "backup_directory": "artifacts\\ftp-backup-20261016T114434Z",
+  "application_version": "3.3.0",
+  "scope": "selected-files"
+}

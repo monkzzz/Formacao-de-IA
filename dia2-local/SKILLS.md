@@ -74,6 +74,14 @@ identify pretrained models separately from locally trained CNNs. Do not treat a
 small line sample or synthetic font words as general recognition accuracy. The
 browser collector checks both quality profiles and pixel-exact eraser/undo/redo.
 
+For the homepage word percentage, use the [larger frozen evaluation](docs/words-large-evaluation.md)
+and `digitlab.word_metrics_qa --report <new-report.json>`. Keep the visible value,
+metric definition, sample counts, helper answer and downloadable summary aligned
+with the measured report. Word accuracy here is `1 − WER` on English lines;
+do not present it as exact whole-line accuracy or isolated-word classification.
+The larger evaluator is resumable and keeps reference labels/images in ignored
+storage. Do not tune the reader against the finished benchmark or replace earlier evidence.
+
 Use `digitlab.robust_qa --report <new-report.json>` and
 `digitlab.helper_qa --report-prefix <new-prefix>` for follow-up regressions without
 replacing historical reports. The Words collector refuses existing report paths.

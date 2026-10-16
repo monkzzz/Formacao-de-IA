@@ -1,5 +1,11 @@
 # Word recognition precision study
 
+This page preserves the small experiments used to select the reader. The current
+website word percentage comes from the later
+[1,000-line frozen evaluation](words-large-evaluation.md), using the same released
+reader without further tuning. Do not substitute these older eight-line scores
+for the larger result.
+
 Words uses Microsoft's pretrained TrOCR Small through Xenova's browser conversion.
 **This project did not train or fine-tune the word model.** The digit and individual
 letter CNNs were trained locally, independently of this optional reader.

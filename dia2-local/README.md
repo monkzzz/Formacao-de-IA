@@ -51,7 +51,7 @@ The trained weights already exist locally in `dist/model/weights.bin`. They and 
 
 ## Words mode
 
-The footer displays the application release, currently **v3.2.0**. Character
+The footer displays the application release, currently **v3.3.0**. Character
 prediction JSON includes `application_version`; Words result metadata also keeps
 that version alongside the model identity. This release number identifies the
 website, separately from model weight hashes and preprocessing versions.
@@ -62,7 +62,7 @@ Use **Eraser** to remove individual marks, adjust **Eraser size**, and select
 including after Clear. With the canvas focused, use Ctrl+Z and Ctrl+Shift+Z
 (or Ctrl+Y). Read the handwriting again after editing it.
 
-**v3.2.0 is live.** The [final public interface checks](reports/release-3.2.0-final-public-ui-qa.json),
+**v3.2.0 deployment evidence:** the [final public interface checks](reports/release-3.2.0-final-public-ui-qa.json),
 [real reading-profile checks](reports/release-3.2.0-public-qa.json),
 [digit/letter regression](reports/release-3.2.0-public-character-qa.json),
 [helper checks](reports/release-3.2.0-public-helper-qa.json) and
@@ -92,6 +92,17 @@ This does not establish general word accuracy. It can add, omit or
 misread text; full pages, multiple lines and other languages are outside this
 mode's scope. Digit/letter benchmark scores and CNN activation displays do not
 apply to this separate sequence model. Existing character inference is unchanged.
+
+The homepage now adds **67.89% word accuracy (1 − WER)** beside the digit and letter
+percentages. The fixed Full precision reader was evaluated on **1,000 real English
+IAM test lines**, containing **8,912 reference word tokens**. Word error rate is
+32.11%, character error rate 9.60%, and exact whole-line accuracy 15.30%. These
+measurements have different units from digit/letter image classification.
+See [the larger evaluation protocol and results](docs/words-large-evaluation.md).
+
+**v3.3.0 is live.** All eight [public metric-display checks](reports/release-3.3.0-public-metrics-qa.json),
+all six [public helper groups](reports/release-3.3.0-public-helper-qa.json), and
+[all 31 public asset hashes](reports/release-3.3.0-http-assets.json) passed.
 
 See [the Words implementation and validation notes](docs/words.md).
 

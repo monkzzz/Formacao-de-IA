@@ -1,5 +1,11 @@
 # Words mode
 
+The homepage's current word percentage is **67.89% word accuracy (1 − WER)**,
+measured on [1,000 real English test lines](words-large-evaluation.md). It is
+separate from the earlier small experiments below, from isolated-word accuracy,
+and from correctness confidence for a current upload. The evaluated v3.2.0
+reader's inference sources are retained unchanged in the v3.3.0 metrics release.
+
 Words adds a separate browser handwriting transcription pipeline alongside the
 existing Digits and Letters modes. It accepts a canvas drawing or one cropped
 image containing a word or short English line. Results are editable and can be
