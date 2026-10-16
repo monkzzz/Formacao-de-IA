@@ -8,7 +8,9 @@
   <title>Digit Lab · Your handwriting, decoded</title>
   <link rel="icon" type="image/jpeg" href="./assets/65474617.jpg">
   <link rel="stylesheet" href="./v3/style.css?v=logo-1">
+  <link rel="stylesheet" href="./v3/helper.css?v=scopedog-1">
   <script type="module" src="./v3/app.js?v=robust-1"></script>
+  <script type="module" src="./v3/helper.js?v=scopedog-1"></script>
 </head>
 <body>
   <a class="skip-link" href="#workspace">Skip to the workspace</a>
@@ -20,7 +22,7 @@
   <main>
     <section class="hero" aria-labelledby="page-title">
       <div class="intro"><p class="eyebrow"><span class="eyebrow-line"></span> A LITTLE HUMAN. A LITTLE MACHINE.</p><h1 id="page-title">Your handwriting,<br><em>decoded.</em></h1><p>Make your mark. Draw a digit or a letter and see a real neural network turn your strokes into a prediction.</p><div class="hero-tags"><span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2 16 5v5c0 4-6 7-6 7s-6-3-6-7V5Z"/><path d="m7 9 2 2 4-4"/></svg>No image leaves your device</span><span>Built for curious minds</span></div></div>
-      <aside class="benchmarks" aria-label="Measured model performance"><p class="eyebrow">SMALL MODELS. REAL RESULTS.</p><div class="benchmark"><span class="benchmark-symbol">7</span><div><strong>99.28<small>%</small></strong><span>Digit recognition <small>MNIST test · 10,000 examples</small></span></div></div><div class="benchmark"><span class="benchmark-symbol letter">Aa</span><div><strong>93.79<small>%</small></strong><span>Letter recognition <small>EMNIST test · 20,800 examples</small></span></div></div><p class="benchmark-note">Measured on clean handwriting. Unfamiliar shapes and noisy images can still fool the models.</p></aside>
+      <aside class="benchmarks" aria-label="Measured model performance"><p class="eyebrow">SMALL MODELS. REAL RESULTS.</p><div class="benchmark"><span class="benchmark-symbol">7</span><div><strong>99.32<small>%</small></strong><span>Digit recognition <small>MNIST test · 10,000 examples</small></span></div></div><div class="benchmark"><span class="benchmark-symbol letter">Aa</span><div><strong>93.86<small>%</small></strong><span>Letter recognition <small>EMNIST test · 20,800 examples</small></span></div></div><p class="benchmark-note">Measured on clean handwriting. Unfamiliar shapes and noisy images can still fool the models.</p></aside>
     </section>
     <section id="workspace" class="lab" aria-label="Character classification workspace" tabindex="-1">
       <div class="workspace-toolbar"><div><p class="eyebrow">THE PLAYGROUND</p><h2>What will you draw?</h2></div><div class="mode-switch" role="group" aria-label="Recognition mode"><button id="mode-digits" type="button" aria-pressed="true">Digits <span>0–9</span></button><button id="mode-letters" type="button" aria-pressed="false">Letters <span>A–Z</span></button></div></div>
@@ -46,5 +48,13 @@
     <section id="model" class="model-card"><div class="model-story"><p class="eyebrow">A LITTLE TRANSPARENCY</p><h2>Trained. Tested.<br><em>Open to inspection.</em></h2><p>Numbers and letters have their own trained models. Letter recognition treats uppercase and lowercase as the same A–Z class. Try one character at a time, and remember: clean handwriting and noisy CAPTCHA images are different challenges.</p></div><div class="model-facts"><div class="facts-heading"><span class="live-dot"></span> THE MODEL YOU’RE USING</div><dl><div><dt id="test-dataset">Official MNIST test</dt><dd id="test-accuracy">Not loaded</dd></div><div><dt>Network architecture</dt><dd id="architecture">Conv 16 → Conv 32 → Dense 128 → 10</dd></div><div><dt>Training / validation</dt><dd id="data-split">55,000 / 5,000 · no challenge inputs</dd></div></dl><details class="model-identity"><summary>Model fingerprint <span aria-hidden="true">+</span></summary><p id="hash" class="hash">Not loaded</p></details></div></section>
   </main>
   <footer><a class="footer-brand" href="#page-title" aria-label="Digit Lab, back to top"><img src="./assets/65474617.jpg" width="28" height="28" alt=""><span>DIGIT LAB</span></a><p>A small experiment in understanding handwriting.</p><span>Trained locally. Yours to explore.</span></footer>
+  <button id="helper-launcher" class="helper-launcher" type="button" aria-controls="scopedog" aria-expanded="false" aria-label="Open Scopedog, your Digit Lab guide" hidden><img src="./assets/scopedog.jpg" alt="" width="56" height="64"><span>Need a hand?<strong>Ask Scopedog</strong></span><span class="helper-spark" aria-hidden="true">✦</span></button>
+  <section id="scopedog" class="helper-panel" role="dialog" aria-labelledby="helper-title" aria-describedby="helper-description" hidden>
+    <div class="helper-heading"><img src="./assets/scopedog.jpg" alt="" width="44" height="48"><div><h2 id="helper-title">Scopedog</h2><p>Your lab companion</p></div><button id="helper-close" type="button" aria-label="Close Scopedog">×</button></div>
+    <p id="helper-description" class="helper-description">A built-in guide. Answers stay in your browser.</p>
+    <div id="helper-messages" class="helper-messages" role="log" aria-label="Conversation with Scopedog" aria-live="polite" aria-relevant="additions" tabindex="0"></div>
+    <div id="helper-topics" class="helper-topics" aria-label="Suggested questions"></div>
+    <form id="helper-form" class="helper-form"><label for="helper-question">Ask about the page or the technology</label><div><input id="helper-question" type="text" maxlength="400" autocomplete="off" placeholder="How does the network work?" required><button type="submit" aria-label="Send question">↑</button></div></form>
+  </section>
 </body>
 </html>

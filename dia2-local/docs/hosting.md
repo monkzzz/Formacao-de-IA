@@ -7,7 +7,7 @@ Static application assets and both trained models are served by the hosting acco
 ## Current robustness release
 
 The public app now loads the improved digit and letter models from
-`model/robust/digits/` and `model/robust/letters/`. All 22 uploaded assets passed
+`model/robust/digits/` and `model/robust/letters/`. All 26 uploaded assets passed
 SHA-256 verification by downloading them over FTPS. Replaced files were backed
 up locally; unrelated remote files were retained. See the
 [deployment record](../reports/ftp-deployment.json).
@@ -22,6 +22,18 @@ The verification commands below describe the earlier original-model releases.
 Use `digitlab.robust_qa` for the current models. Its default report target is
 `reports/robust-browser-qa.json`; the public run was saved separately to
 `reports/public-robust-browser-qa.json` to preserve local evidence.
+
+## Scopedog helper release
+
+The Scopedog helper adds `assets/scopedog.jpg`, `v3/helper.js`,
+`v3/helper-knowledge.js` and `v3/helper.css`. Deploy these before the updated
+`index.html`. The helper uses authored local answers and needs no backend or
+API secret. Verify it with `python -m digitlab.helper_qa --url
+https://naoquerosaber.pt/AI/ --public`; this writes a separate public report.
+The trained weights are unchanged by this interface release.
+The [public helper checks](../reports/public-helper-qa.json) and
+[recognition checks](../reports/public-helper-recognition-qa.json) pass on the
+deployed release. The latest FTPS deployment record covers all 26 assets.
 
 ## Credentials and directory mapping
 

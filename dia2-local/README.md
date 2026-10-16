@@ -24,7 +24,7 @@ Open **http://127.0.0.1:8765**. Keep the terminal running; press Ctrl+C to stop 
 
 ## Improved recognition release
 
-The local and public `v3/` apps now load separately trained robustness models from `dist/model/robust/`. Additional training varies handwriting shape, stroke width, noise and short occlusions while retaining clean examples. Selection uses the original validation splits, with no challenge images. The [public release verification](reports/public-robust-browser-qa.json) confirms both new weight identities, Python/JavaScript activation parity, 36 uploads, mixed-mode results and failure recovery. All 22 deployed assets passed SHA-256 download verification; replaced files were backed up.
+The local and public `v3/` apps now load separately trained robustness models from `dist/model/robust/`. Additional training varies handwriting shape, stroke width, noise and short occlusions while retaining clean examples. Selection uses the original validation splits, with no challenge images. The [public release verification](reports/public-robust-browser-qa.json) confirms both new weight identities, Python/JavaScript activation parity, 36 uploads, mixed-mode results and failure recovery. All 26 deployed assets passed SHA-256 download verification; replaced files were backed up.
 
 | Held-out evaluation | Original | Updated |
 | --- | ---: | ---: |
@@ -41,6 +41,36 @@ See the [training and evaluation protocol](docs/robustness.md), [digit metrics](
 To reproduce additional training from the original checkpoints, use `python -m digitlab.robust --epochs 10 --threads 4` in the existing environment. It refuses to overwrite existing robustness experiments. Model binaries are ignored by Git and are deployed separately; copy `dist/model/robust/` with the app.
 
 The trained weights already exist locally in `dist/model/weights.bin`. They and intermediate checkpoints are ignored by Git. Preserve them if moving the project, or reproduce training using the commands below.
+
+## Scopedog page guide
+
+Select **Ask Scopedog** in the lower-right corner for help using the page or
+understanding the technology. Type a question or choose a suggested topic.
+Scopedog covers drawing, uploads, modes, preprocessing, CNN layers, training,
+datasets, scores, privacy, result exports and the Desafio. Navigation buttons
+open the relevant page section; questions about the current prediction use
+the displayed result without changing the classifier.
+
+This is a browser-only guide with authored answers and keyword/phrase matching,
+not a generative AI chatbot. It makes no chat API requests, requires no API key
+and keeps no conversation after a reload. Unknown questions get an explicit
+fallback rather than an invented answer. The supplied mascot is included
+unchanged as `dist/assets/scopedog.jpg`.
+
+With `serve.py --port 8766` running, verify the helper using:
+
+```powershell
+.\.venv\Scripts\python.exe -m digitlab.helper_qa
+```
+
+The browser checks cover question routing, live prediction context, navigation,
+keyboard/focus behavior, safe text rendering, portrait/landscape layouts and
+absence of remote chat requests. Screenshots are saved in `reports/screenshots/`.
+See the captured [desktop](docs/images/scopedog-desktop.png) and
+[mobile](docs/images/scopedog-mobile.png) interfaces.
+The helper is deployed on the public website: all six
+[public helper checks](reports/public-helper-qa.json) and the
+[digit/letter regression checks](reports/public-helper-recognition-qa.json) pass.
 
 ## Reproduce the environment
 

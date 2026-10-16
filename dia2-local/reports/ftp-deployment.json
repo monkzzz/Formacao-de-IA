@@ -1,5 +1,5 @@
 {
-  "uploaded_at": "2026-10-16T02:54:14.327078+00:00",
+  "uploaded_at": "2026-10-16T03:10:38.161319+00:00",
   "destination": "/",
   "tls": true,
   "files": [
@@ -12,6 +12,11 @@
       "file": "assets/65474617.jpg",
       "bytes": 14707,
       "sha256": "20408bf697201912289abc7aa92ea4177908d492965131f58c6c2796bfcf83af"
+    },
+    {
+      "file": "assets/scopedog.jpg",
+      "bytes": 234376,
+      "sha256": "9caaffdfbdc25c550c601d1fe07d24b9bb7d3ce331e6f97fdb8a2b6e0ce7a179"
     },
     {
       "file": "inference.js",
@@ -94,6 +99,21 @@
       "sha256": "d171cc79426c97fb233ce069fbff5ef79ef4c7a5bbb949abb43c636b04608f57"
     },
     {
+      "file": "v3/helper-knowledge.js",
+      "bytes": 11824,
+      "sha256": "f829ae5bb1e60a4763e5fc2b022201c32393147b2754e58c2cbe964d80fc26d3"
+    },
+    {
+      "file": "v3/helper.css",
+      "bytes": 4525,
+      "sha256": "3ee870b102fc425df898c3b50b9aef9f0a7ea56476744f702a5cefad0482f99d"
+    },
+    {
+      "file": "v3/helper.js",
+      "bytes": 3992,
+      "sha256": "d1b306062751a3011507959d1020dd8ccf65257f797703b47fc323eb4d2a6cbf"
+    },
+    {
       "file": "v3/inference.js",
       "bytes": 5141,
       "sha256": "fbc79abe5a66106ee5b0845cba4930edd79b007e45978109a31f63e935155010"
@@ -110,9 +130,9 @@
     },
     {
       "file": "index.html",
-      "bytes": 9106,
-      "sha256": "1a7df7bf44e169d88df3e7259af5a1b04b49b31bd19ef371a98dab291c113b06"
+      "bytes": 10748,
+      "sha256": "099cfd73fb3fc18308901a2711a0bdb1c04133d58b3446b71d8b13ab3ba1dd61"
     }
   ],
-  "backup_directory": "artifacts\\ftp-backup-20261016T025332Z"
+  "backup_directory": "artifacts\\ftp-backup-20261016T030947Z"
 }
