@@ -1,0 +1,4044 @@
+{
+  "scope": "Independent synthetic printed-digit development screening, not population accuracy; no official images or generator used",
+  "seed": 2026101609,
+  "count": 200,
+  "summary": {
+    "baseline": {
+      "correct": 200,
+      "count": 200,
+      "clean": 100,
+      "noisy": 100
+    },
+    "ddddocr": {
+      "correct": 200,
+      "count": 200,
+      "clean": 100,
+      "noisy": 100
+    },
+    "ddddocr-old": {
+      "correct": 196,
+      "count": 200,
+      "clean": 96,
+      "noisy": 100
+    }
+  },
+  "models": {
+    "ddddocr": {
+      "revision": "c40f56f95412e10bcb9bd0bd24411e92f896d238",
+      "url": "https://raw.githubusercontent.com/sml2h3/ddddocr/c40f56f95412e10bcb9bd0bd24411e92f896d238/ddddocr/common.onnx",
+      "file": "common.onnx",
+      "bytes": 54088400,
+      "sha256": "33b5cd351ee94e73a6bf8fa18c415ed8b819b3ffd342e267c30d8ad8334e34e8"
+    },
+    "ddddocr-old": {
+      "revision": "c40f56f95412e10bcb9bd0bd24411e92f896d238",
+      "url": "https://raw.githubusercontent.com/sml2h3/ddddocr/c40f56f95412e10bcb9bd0bd24411e92f896d238/ddddocr/common_old.onnx",
+      "file": "common_old.onnx",
+      "bytes": 13606051,
+      "sha256": "b8f2ad9cbc1f2e3922a6cb9459e30824e7e2467f3fb4fd61420640e34ea0bf68"
+    }
+  },
+  "preprocessing": "Reference 64px-height Lanczos, grayscale, [-1,1]; greedy full-charset CTC",
+  "records": [
+    {
+      "index": 0,
+      "expected": 0,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 14.412299991818145
+        },
+        "ddddocr-old": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 7.73099999059923
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 1,
+      "expected": 1,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 7.48209998710081
+        },
+        "ddddocr-old": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 5.862599995452911
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 2,
+      "expected": 2,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 12.017100001685321
+        },
+        "ddddocr-old": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 7.383699994534254
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 3,
+      "expected": 3,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 8.52209998993203
+        },
+        "ddddocr-old": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 6.942700012587011
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 4,
+      "expected": 4,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 12.686199974268675
+        },
+        "ddddocr-old": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 7.143199996789917
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 5,
+      "expected": 5,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 8.345399983227253
+        },
+        "ddddocr-old": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 7.31019998784177
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 6,
+      "expected": 6,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 8.017700019991025
+        },
+        "ddddocr-old": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 9.391100000357255
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 7,
+      "expected": 7,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 15.46950000920333
+        },
+        "ddddocr-old": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 7.743399997707456
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 8,
+      "expected": 8,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 7.359000010183081
+        },
+        "ddddocr-old": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 6.137999997008592
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 9,
+      "expected": 9,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 7.891599991125986
+        },
+        "ddddocr-old": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 6.312900019111112
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 10,
+      "expected": 0,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 9.722799994051456
+        },
+        "ddddocr-old": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 7.367600017460063
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 11,
+      "expected": 1,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 10.104400018462911
+        },
+        "ddddocr-old": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 6.69979999656789
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 12,
+      "expected": 2,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 9.262800012947991
+        },
+        "ddddocr-old": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 6.8786999909207225
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 13,
+      "expected": 3,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 8.509800012689084
+        },
+        "ddddocr-old": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 6.695499992929399
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 14,
+      "expected": 4,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 8.07630000053905
+        },
+        "ddddocr-old": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 6.846999982371926
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 15,
+      "expected": 5,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 10.349800024414435
+        },
+        "ddddocr-old": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 6.873699981952086
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 16,
+      "expected": 6,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 9.730399993713945
+        },
+        "ddddocr-old": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 7.395399996312335
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 17,
+      "expected": 7,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 9.630100015783682
+        },
+        "ddddocr-old": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 6.098399986512959
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 18,
+      "expected": 8,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 8.38579999981448
+        },
+        "ddddocr-old": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 6.105300009949133
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 19,
+      "expected": 9,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 8.530699997209013
+        },
+        "ddddocr-old": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 6.447100022342056
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 20,
+      "expected": 0,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 9.969000006094575
+        },
+        "ddddocr-old": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 7.61539998347871
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 21,
+      "expected": 1,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 8.481099997879937
+        },
+        "ddddocr-old": {
+          "text": "马",
+          "correct": false,
+          "elapsed_ms": 6.695799995213747
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 22,
+      "expected": 2,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 11.083599994890392
+        },
+        "ddddocr-old": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 6.45089999306947
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 23,
+      "expected": 3,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 8.959600003436208
+        },
+        "ddddocr-old": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 6.144899991340935
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 24,
+      "expected": 4,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 9.53549999394454
+        },
+        "ddddocr-old": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 6.582300004083663
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 25,
+      "expected": 5,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 11.661199998343363
+        },
+        "ddddocr-old": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 8.28820001333952
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 26,
+      "expected": 6,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 10.262900002999231
+        },
+        "ddddocr-old": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 7.603000005474314
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 27,
+      "expected": 7,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 8.155999996233732
+        },
+        "ddddocr-old": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 9.024800005136058
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 28,
+      "expected": 8,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 8.495099988067523
+        },
+        "ddddocr-old": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 7.656699977815151
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 29,
+      "expected": 9,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 7.667799975024536
+        },
+        "ddddocr-old": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 6.761399999959394
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 30,
+      "expected": 0,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 7.409899990307167
+        },
+        "ddddocr-old": {
+          "text": "o",
+          "correct": false,
+          "elapsed_ms": 6.751900014933199
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 31,
+      "expected": 1,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 8.340500004123896
+        },
+        "ddddocr-old": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 6.7094000114593655
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 32,
+      "expected": 2,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 6.961400009458885
+        },
+        "ddddocr-old": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 5.333100009011105
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 33,
+      "expected": 3,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 11.813799996161833
+        },
+        "ddddocr-old": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 7.4680999969132245
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 34,
+      "expected": 4,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 10.96690000849776
+        },
+        "ddddocr-old": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 7.973600004334003
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 35,
+      "expected": 5,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 7.947099977172911
+        },
+        "ddddocr-old": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 5.944500007899478
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 36,
+      "expected": 6,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 8.670899987919256
+        },
+        "ddddocr-old": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 7.869099994422868
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 37,
+      "expected": 7,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 8.27469999785535
+        },
+        "ddddocr-old": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 7.208499999251217
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 38,
+      "expected": 8,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 9.52959997812286
+        },
+        "ddddocr-old": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 8.2434999931138
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 39,
+      "expected": 9,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 14.711900003021583
+        },
+        "ddddocr-old": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 7.331100001465529
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 40,
+      "expected": 0,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 11.575299984542653
+        },
+        "ddddocr-old": {
+          "text": "o",
+          "correct": false,
+          "elapsed_ms": 8.25690000783652
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 41,
+      "expected": 1,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 12.022699986118823
+        },
+        "ddddocr-old": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 8.012699981918558
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 42,
+      "expected": 2,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 10.913300007814541
+        },
+        "ddddocr-old": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 7.163100002799183
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 43,
+      "expected": 3,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 13.871600007405505
+        },
+        "ddddocr-old": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 9.513099998002872
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 44,
+      "expected": 4,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 10.329300013836473
+        },
+        "ddddocr-old": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 6.2439000175800174
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 45,
+      "expected": 5,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 7.055800000671297
+        },
+        "ddddocr-old": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 7.129999983590096
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 46,
+      "expected": 6,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 9.970599989173934
+        },
+        "ddddocr-old": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 7.121100003132597
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 47,
+      "expected": 7,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 7.573299983050674
+        },
+        "ddddocr-old": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 6.297799991443753
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 48,
+      "expected": 8,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 10.751800000434741
+        },
+        "ddddocr-old": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 6.755600014002994
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 49,
+      "expected": 9,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 10.234399989712983
+        },
+        "ddddocr-old": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 7.338800001889467
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 50,
+      "expected": 0,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 12.205300008645281
+        },
+        "ddddocr-old": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 7.137100008549169
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 51,
+      "expected": 1,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 7.0838000101502985
+        },
+        "ddddocr-old": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 7.5542999838944525
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 52,
+      "expected": 2,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 11.211700009880587
+        },
+        "ddddocr-old": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 7.359900017036125
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 53,
+      "expected": 3,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 13.500700006261468
+        },
+        "ddddocr-old": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 8.379400009289384
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 54,
+      "expected": 4,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 11.519899999257177
+        },
+        "ddddocr-old": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 7.372899999609217
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 55,
+      "expected": 5,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 11.102399992523715
+        },
+        "ddddocr-old": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 7.090200000675395
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 56,
+      "expected": 6,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 11.509599979035556
+        },
+        "ddddocr-old": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 8.615999977337196
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 57,
+      "expected": 7,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 11.500399996293709
+        },
+        "ddddocr-old": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 8.040300017455593
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 58,
+      "expected": 8,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 12.621300003957003
+        },
+        "ddddocr-old": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 10.46609997865744
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 59,
+      "expected": 9,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 13.258199993288144
+        },
+        "ddddocr-old": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 7.9916999966371804
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 60,
+      "expected": 0,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 11.248700000578538
+        },
+        "ddddocr-old": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 7.06430000718683
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 61,
+      "expected": 1,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 12.296000000787899
+        },
+        "ddddocr-old": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 8.520000003045425
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 62,
+      "expected": 2,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 12.371999997412786
+        },
+        "ddddocr-old": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 8.69250000687316
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 63,
+      "expected": 3,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 11.498400010168552
+        },
+        "ddddocr-old": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 7.654200016986579
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 64,
+      "expected": 4,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 11.779399996157736
+        },
+        "ddddocr-old": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 7.920899981399998
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 65,
+      "expected": 5,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 12.957700004335493
+        },
+        "ddddocr-old": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 7.251999981235713
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 66,
+      "expected": 6,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 11.781000008340925
+        },
+        "ddddocr-old": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 7.232999982079491
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 67,
+      "expected": 7,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 12.696799996774644
+        },
+        "ddddocr-old": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 7.736100000329316
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 68,
+      "expected": 8,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 11.179900000570342
+        },
+        "ddddocr-old": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 7.113800005754456
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 69,
+      "expected": 9,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 6.930300005478784
+        },
+        "ddddocr-old": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 6.7334999912418425
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 70,
+      "expected": 0,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 8.289899997180328
+        },
+        "ddddocr-old": {
+          "text": "o",
+          "correct": false,
+          "elapsed_ms": 7.089899998391047
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 71,
+      "expected": 1,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 8.221199997933581
+        },
+        "ddddocr-old": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 7.635599991772324
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 72,
+      "expected": 2,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 9.87050001276657
+        },
+        "ddddocr-old": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 8.075499994447455
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 73,
+      "expected": 3,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 9.279600024456158
+        },
+        "ddddocr-old": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 6.534099986311048
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 74,
+      "expected": 4,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 8.799000002909452
+        },
+        "ddddocr-old": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 6.587400013813749
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 75,
+      "expected": 5,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 7.929400017019361
+        },
+        "ddddocr-old": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 6.532800005516037
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 76,
+      "expected": 6,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 9.740700013935566
+        },
+        "ddddocr-old": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 7.617199997184798
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 77,
+      "expected": 7,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 7.506900001317263
+        },
+        "ddddocr-old": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 6.377699988661334
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 78,
+      "expected": 8,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 8.800499985227361
+        },
+        "ddddocr-old": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 7.193400000687689
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 79,
+      "expected": 9,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 8.944100001826882
+        },
+        "ddddocr-old": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 8.35180000285618
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 80,
+      "expected": 0,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 7.053499983157963
+        },
+        "ddddocr-old": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 5.969999998342246
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 81,
+      "expected": 1,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 13.273199991090223
+        },
+        "ddddocr-old": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 7.8742999758105725
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 82,
+      "expected": 2,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 9.133899991866201
+        },
+        "ddddocr-old": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 7.796900026733056
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 83,
+      "expected": 3,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 8.56649997876957
+        },
+        "ddddocr-old": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 7.770700001856312
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 84,
+      "expected": 4,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 13.546600006520748
+        },
+        "ddddocr-old": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 7.265899999765679
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 85,
+      "expected": 5,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 12.494599999627098
+        },
+        "ddddocr-old": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 7.552600000053644
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 86,
+      "expected": 6,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 7.119399990187958
+        },
+        "ddddocr-old": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 6.909799994900823
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 87,
+      "expected": 7,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 8.196799986762926
+        },
+        "ddddocr-old": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 5.953599989879876
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 88,
+      "expected": 8,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 7.542999985162169
+        },
+        "ddddocr-old": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 6.334499979857355
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 89,
+      "expected": 9,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 8.137400000123307
+        },
+        "ddddocr-old": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 7.846699998481199
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 90,
+      "expected": 0,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 10.449299996253103
+        },
+        "ddddocr-old": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 7.26279997616075
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 91,
+      "expected": 1,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 11.97870000032708
+        },
+        "ddddocr-old": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 7.085899997036904
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 92,
+      "expected": 2,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 8.40960000641644
+        },
+        "ddddocr-old": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 6.71760001569055
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 93,
+      "expected": 3,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 9.589699999196455
+        },
+        "ddddocr-old": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 6.091299990657717
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 94,
+      "expected": 4,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 7.328999985475093
+        },
+        "ddddocr-old": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 7.144000002881512
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 95,
+      "expected": 5,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 14.655500010121614
+        },
+        "ddddocr-old": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 8.791700005531311
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 96,
+      "expected": 6,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 12.42019998608157
+        },
+        "ddddocr-old": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 8.573700004490092
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 97,
+      "expected": 7,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 11.012999981176108
+        },
+        "ddddocr-old": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 7.323400001041591
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 98,
+      "expected": 8,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 11.004700005287305
+        },
+        "ddddocr-old": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 7.307000021683052
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 99,
+      "expected": 9,
+      "severity": 0,
+      "predictions": {
+        "ddddocr": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 11.259099992457777
+        },
+        "ddddocr-old": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 8.886199997505173
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 100,
+      "expected": 0,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 12.101500004064292
+        },
+        "ddddocr-old": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 8.553599996957928
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 101,
+      "expected": 1,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 11.661900003673509
+        },
+        "ddddocr-old": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 8.241899980930611
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 102,
+      "expected": 2,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 11.212199984584004
+        },
+        "ddddocr-old": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 8.06880000163801
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 103,
+      "expected": 3,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 10.70300000719726
+        },
+        "ddddocr-old": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 7.977200002642348
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 104,
+      "expected": 4,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 12.144399981480092
+        },
+        "ddddocr-old": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 9.098899987293407
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 105,
+      "expected": 5,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 8.310100005473942
+        },
+        "ddddocr-old": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 6.870499986689538
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 106,
+      "expected": 6,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 9.893499984173104
+        },
+        "ddddocr-old": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 7.638499984750524
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 107,
+      "expected": 7,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 12.192599999252707
+        },
+        "ddddocr-old": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 6.099499994888902
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 108,
+      "expected": 8,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 10.600400011753663
+        },
+        "ddddocr-old": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 6.8094999878667295
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 109,
+      "expected": 9,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 16.49460001499392
+        },
+        "ddddocr-old": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 10.556799999903888
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 110,
+      "expected": 0,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 11.251200019614771
+        },
+        "ddddocr-old": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 7.466699986252934
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 111,
+      "expected": 1,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 11.839099985081702
+        },
+        "ddddocr-old": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 8.392600022489205
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 112,
+      "expected": 2,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 14.182599988998845
+        },
+        "ddddocr-old": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 7.66140001360327
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 113,
+      "expected": 3,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 14.328800025396049
+        },
+        "ddddocr-old": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 10.266600002069026
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 114,
+      "expected": 4,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 12.382499990053475
+        },
+        "ddddocr-old": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 8.676800003740937
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 115,
+      "expected": 5,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 10.277699999278411
+        },
+        "ddddocr-old": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 7.152300007874146
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 116,
+      "expected": 6,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 10.439700010465458
+        },
+        "ddddocr-old": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 7.401400012895465
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 117,
+      "expected": 7,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 11.14310001139529
+        },
+        "ddddocr-old": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 7.033999980194494
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 118,
+      "expected": 8,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 10.23049998912029
+        },
+        "ddddocr-old": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 8.713699993677437
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 119,
+      "expected": 9,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 10.14020000002347
+        },
+        "ddddocr-old": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 7.514199998695403
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 120,
+      "expected": 0,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 9.771899989573285
+        },
+        "ddddocr-old": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 6.433700007619336
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 121,
+      "expected": 1,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 9.056799986865371
+        },
+        "ddddocr-old": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 6.863299990072846
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 122,
+      "expected": 2,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 7.643699995242059
+        },
+        "ddddocr-old": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 7.198600011179224
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 123,
+      "expected": 3,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 12.272499996470287
+        },
+        "ddddocr-old": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 7.0582999906037
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 124,
+      "expected": 4,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 8.550900005502626
+        },
+        "ddddocr-old": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 6.5064999798778445
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 125,
+      "expected": 5,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 9.819800005061552
+        },
+        "ddddocr-old": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 5.834400013554841
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 126,
+      "expected": 6,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 10.3503999998793
+        },
+        "ddddocr-old": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 6.402700004400685
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 127,
+      "expected": 7,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 10.863700008485466
+        },
+        "ddddocr-old": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 6.685200001811609
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 128,
+      "expected": 8,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 10.16679999884218
+        },
+        "ddddocr-old": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 6.6430000006221235
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 129,
+      "expected": 9,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 9.591500012902543
+        },
+        "ddddocr-old": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 6.087200017645955
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 130,
+      "expected": 0,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 10.386699985247105
+        },
+        "ddddocr-old": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 6.085200002416968
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 131,
+      "expected": 1,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 9.50310000916943
+        },
+        "ddddocr-old": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 6.955600023502484
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 132,
+      "expected": 2,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 10.555599990766495
+        },
+        "ddddocr-old": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 7.3890000057872385
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 133,
+      "expected": 3,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 10.799900017445907
+        },
+        "ddddocr-old": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 7.021999976132065
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 134,
+      "expected": 4,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 10.655500023858622
+        },
+        "ddddocr-old": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 6.893699988722801
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 135,
+      "expected": 5,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 9.289299981901422
+        },
+        "ddddocr-old": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 7.5511999893933535
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 136,
+      "expected": 6,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 11.180900008184835
+        },
+        "ddddocr-old": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 7.22430000314489
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 137,
+      "expected": 7,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 12.127499998314306
+        },
+        "ddddocr-old": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 6.668200017884374
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 138,
+      "expected": 8,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 8.72380001237616
+        },
+        "ddddocr-old": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 7.429399993270636
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 139,
+      "expected": 9,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 11.22009998653084
+        },
+        "ddddocr-old": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 7.099599984940141
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 140,
+      "expected": 0,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 8.487399987643585
+        },
+        "ddddocr-old": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 6.0153000231366605
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 141,
+      "expected": 1,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 10.292899998603389
+        },
+        "ddddocr-old": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 7.599700009450316
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 142,
+      "expected": 2,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 11.226400005398318
+        },
+        "ddddocr-old": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 7.126399985281751
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 143,
+      "expected": 3,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 17.92909999494441
+        },
+        "ddddocr-old": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 7.923800003482029
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 144,
+      "expected": 4,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 15.289500006474555
+        },
+        "ddddocr-old": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 9.09119998686947
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 145,
+      "expected": 5,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 9.848699992289767
+        },
+        "ddddocr-old": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 6.644799985224381
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 146,
+      "expected": 6,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 7.948499987833202
+        },
+        "ddddocr-old": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 6.146400002762675
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 147,
+      "expected": 7,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 10.250300023471937
+        },
+        "ddddocr-old": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 7.879699987825006
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 148,
+      "expected": 8,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 11.720699985744432
+        },
+        "ddddocr-old": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 7.79470000998117
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 149,
+      "expected": 9,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 10.059699998237193
+        },
+        "ddddocr-old": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 7.074399996781722
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 150,
+      "expected": 0,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 11.072499997681007
+        },
+        "ddddocr-old": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 6.208300008438528
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 151,
+      "expected": 1,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 10.361499997088686
+        },
+        "ddddocr-old": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 6.372800009557977
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 152,
+      "expected": 2,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 12.068599986378103
+        },
+        "ddddocr-old": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 6.2172999896574765
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 153,
+      "expected": 3,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 10.181799996644258
+        },
+        "ddddocr-old": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 6.273999984841794
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 154,
+      "expected": 4,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 10.054000013042241
+        },
+        "ddddocr-old": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 8.438500022748485
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 155,
+      "expected": 5,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 10.250600025756285
+        },
+        "ddddocr-old": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 6.660799990640953
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 156,
+      "expected": 6,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 10.018400003900751
+        },
+        "ddddocr-old": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 6.237900000996888
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 157,
+      "expected": 7,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 10.669700015569106
+        },
+        "ddddocr-old": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 7.245799992233515
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 158,
+      "expected": 8,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 10.24689999758266
+        },
+        "ddddocr-old": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 6.197799986694008
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 159,
+      "expected": 9,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 12.269400001969188
+        },
+        "ddddocr-old": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 8.518599992385134
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 160,
+      "expected": 0,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 8.373199991183355
+        },
+        "ddddocr-old": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 6.304000009549782
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 161,
+      "expected": 1,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 9.555900003761053
+        },
+        "ddddocr-old": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 6.3624999893363565
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 162,
+      "expected": 2,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 8.611400000518188
+        },
+        "ddddocr-old": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 7.264200015924871
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 163,
+      "expected": 3,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 9.863700019195676
+        },
+        "ddddocr-old": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 6.6605999891180545
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 164,
+      "expected": 4,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 16.960500011919066
+        },
+        "ddddocr-old": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 7.41990000824444
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 165,
+      "expected": 5,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 11.25270000193268
+        },
+        "ddddocr-old": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 6.597800005692989
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 166,
+      "expected": 6,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 11.139699985506013
+        },
+        "ddddocr-old": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 7.838499994250014
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 167,
+      "expected": 7,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 11.31639999221079
+        },
+        "ddddocr-old": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 8.128899993607774
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 168,
+      "expected": 8,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 10.922599991317838
+        },
+        "ddddocr-old": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 5.6674999941606075
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 169,
+      "expected": 9,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 10.49859999329783
+        },
+        "ddddocr-old": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 8.44080001115799
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 170,
+      "expected": 0,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 7.654300017748028
+        },
+        "ddddocr-old": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 6.476300011854619
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 171,
+      "expected": 1,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 7.901500008301809
+        },
+        "ddddocr-old": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 6.386399996699765
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 172,
+      "expected": 2,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 10.252300009597093
+        },
+        "ddddocr-old": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 6.350100011331961
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 173,
+      "expected": 3,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 11.709599988535047
+        },
+        "ddddocr-old": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 8.069300005445257
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 174,
+      "expected": 4,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 12.229999992996454
+        },
+        "ddddocr-old": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 11.089499981608242
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 175,
+      "expected": 5,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 11.442599992733449
+        },
+        "ddddocr-old": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 7.056200003717095
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 176,
+      "expected": 6,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 10.002600000007078
+        },
+        "ddddocr-old": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 5.994799983454868
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 177,
+      "expected": 7,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 12.147400004323572
+        },
+        "ddddocr-old": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 8.784600009676069
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 178,
+      "expected": 8,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 12.606800009962171
+        },
+        "ddddocr-old": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 8.55619998765178
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 179,
+      "expected": 9,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 21.03430000715889
+        },
+        "ddddocr-old": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 7.258700003148988
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 180,
+      "expected": 0,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 9.929199994076043
+        },
+        "ddddocr-old": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 6.831499980762601
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 181,
+      "expected": 1,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 7.577900018077344
+        },
+        "ddddocr-old": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 6.3968000176828355
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 182,
+      "expected": 2,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 8.06290001492016
+        },
+        "ddddocr-old": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 6.351500021992251
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 183,
+      "expected": 3,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 9.020999976200983
+        },
+        "ddddocr-old": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 8.170699991751462
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 184,
+      "expected": 4,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 10.035500017693266
+        },
+        "ddddocr-old": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 6.321199994999915
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 185,
+      "expected": 5,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 13.02019998547621
+        },
+        "ddddocr-old": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 6.158599979244173
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 186,
+      "expected": 6,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 12.385599984554574
+        },
+        "ddddocr-old": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 9.329399996204302
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 187,
+      "expected": 7,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 10.218999988865107
+        },
+        "ddddocr-old": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 5.511399998795241
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 188,
+      "expected": 8,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 10.915399994701147
+        },
+        "ddddocr-old": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 6.93390000378713
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 189,
+      "expected": 9,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 14.125899993814528
+        },
+        "ddddocr-old": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 8.631300006527454
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 190,
+      "expected": 0,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 11.919900018256158
+        },
+        "ddddocr-old": {
+          "text": "0",
+          "correct": true,
+          "elapsed_ms": 6.437400006689131
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 191,
+      "expected": 1,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 10.060300002805889
+        },
+        "ddddocr-old": {
+          "text": "1",
+          "correct": true,
+          "elapsed_ms": 6.401500024367124
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 192,
+      "expected": 2,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 9.48519998928532
+        },
+        "ddddocr-old": {
+          "text": "2",
+          "correct": true,
+          "elapsed_ms": 7.605399994645268
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 193,
+      "expected": 3,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 11.663799989037216
+        },
+        "ddddocr-old": {
+          "text": "3",
+          "correct": true,
+          "elapsed_ms": 7.900399999925867
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 194,
+      "expected": 4,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 10.705699998652562
+        },
+        "ddddocr-old": {
+          "text": "4",
+          "correct": true,
+          "elapsed_ms": 8.307100011734292
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 195,
+      "expected": 5,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 12.054799997713417
+        },
+        "ddddocr-old": {
+          "text": "5",
+          "correct": true,
+          "elapsed_ms": 7.299699995201081
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 196,
+      "expected": 6,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 11.002199986251071
+        },
+        "ddddocr-old": {
+          "text": "6",
+          "correct": true,
+          "elapsed_ms": 6.130399997346103
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 197,
+      "expected": 7,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 8.131400012644008
+        },
+        "ddddocr-old": {
+          "text": "7",
+          "correct": true,
+          "elapsed_ms": 6.914099998539314
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 198,
+      "expected": 8,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 8.167799998773262
+        },
+        "ddddocr-old": {
+          "text": "8",
+          "correct": true,
+          "elapsed_ms": 5.990500008920208
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    },
+    {
+      "index": 199,
+      "expected": 9,
+      "severity": 2,
+      "predictions": {
+        "ddddocr": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 12.239100004080683
+        },
+        "ddddocr-old": {
+          "text": "9",
+          "correct": true,
+          "elapsed_ms": 8.682599989697337
+        },
+        "baseline": {
+          "correct": true
+        }
+      }
+    }
+  ]
+}

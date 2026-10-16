@@ -87,7 +87,7 @@ def main():
         assert page.locator("#digit-ocr-preview").is_visible()
         checks["drawing_uses_selected_ocr_reader"] = "PASS"
         acceptance = page.evaluate("""async () => {
-          const {digitResult} = await import('./v3/digit-readers.js?v=1');
+          const {digitResult} = await import('./v3/digit-readers.js?v=2');
           return ['0','9','O','12','7.',' 7','7 ',''].map(text=>digitResult(text).accepted);
         }""")
         assert acceptance == [True, True, False, False, False, False, False, False]
@@ -131,7 +131,7 @@ def main():
         checks["batch_cancellation_and_download_error_recovery"] = "PASS"
         page.route("**/digit-reader-worker.js*", lambda route: route.fulfill(body="self.onmessage=()=>{};", content_type="text/javascript"))
         timeout_message = page.evaluate("""async () => {
-          const {createDigitReader} = await import('./v3/digit-readers.js?v=1');
+          const {createDigitReader} = await import('./v3/digit-readers.js?v=2');
           const reader=createDigitReader(()=>{},20);
           try {await reader.read(document.getElementById('drawing'),'printed','standard');}
           catch(error) {return error.message;}
@@ -157,7 +157,22 @@ def main():
         assert page.locator("#scores").is_visible() and page.locator("#network").is_visible()
         assert len(page.evaluate("digitLab.exportRecord().predictions.at(-1).scores")) == 10
         checks["cnn_upload_after_ocr"] = "PASS"
-        page.locator("#digit-reader").select_option("printed")
+        page.unroute("**/digit-reader-worker.js*")
+        page.route("**/digit-reader-worker.js*", lambda route: route.fulfill(body=STUB, content_type="text/javascript"))
+        for reader in ("ddddocr", "ddddocr-old"):
+            page.locator("#digit-reader").select_option(reader)
+            assert page.locator("#digit-quality-options").is_hidden()
+            page.locator("#files").set_input_files(fixture())
+            wait_idle(page)
+            record = page.evaluate("digitLab.exportRecord().predictions.at(-1)")
+            assert record["predicted"] == 7 and record["precision"] == "float32"
+            assert len(record["model_sha256"]) == 64 and record["architecture"] == "captcha-ctc"
+            assert record["preprocessing"] == "ddddocr-browser64-v1"
+            assert record["decoding"] == "greedy-full-charset-ctc" and record["scores"] is None
+            page.locator("#uploads .upload-result").last.click()
+            assert page.locator("#digit-reader").input_value() == reader
+        checks["captcha_reader_choices_fixed_precision_metadata_and_gallery"] = "PASS"
+        page.locator("#digit-reader").select_option("ddddocr")
         screenshots = ROOT / "reports/screenshots"
         screenshots.mkdir(exist_ok=True)
         prefix = Path(args.report).stem

@@ -1,0 +1,45 @@
+{
+  "frozen_at": "2026-10-16T20:36:57.020425+00:00",
+  "url": "http://127.0.0.1:8782/",
+  "configurations": [
+    [
+      "local",
+      "standard"
+    ],
+    [
+      "printed",
+      "standard"
+    ],
+    [
+      "printed",
+      "precise"
+    ],
+    [
+      "handwritten",
+      "standard"
+    ],
+    [
+      "handwritten",
+      "precise"
+    ]
+  ],
+  "sources": {
+    "dist/index.html": "f6a36eda57422dbaa935b7b3926c04f26f9217c4ff0e5139d130061cc9ca3614",
+    "dist/v3/app.js": "89140739f1dd8140a2ea1a41e20761076252594f6f38c085e30f0f1aae98336b",
+    "dist/v3/canvas-tools.js": "d07532ea11f2101ec84aa6126ca2580be1a940782dab0cf181bb862d551685fe",
+    "dist/v3/digit-reader-worker.js": "33504e07936a8347f0e6b6dab98bf36444d3f15bb72350a97edbf820cd7e4ac9",
+    "dist/v3/digit-readers.js": "1fd7ca64d63ee5b06d5e8b72e3b7622a851997d13c140e765fafaa2e89d9a485",
+    "dist/v3/helper-knowledge.js": "b2fb0a47711b90c3a483dd178eab7a9e339ec1e084e54974c86ca7ae1631253a",
+    "dist/v3/helper.js": "e23c21a925129a02e4e705627920501183df1b9b62b9bce22edd7810496af507",
+    "dist/v3/inference.js": "98755d4b758326c16ab179c13eb725630cefd5ee9673061b2ef6359560e43dc4",
+    "dist/v3/konami.js": "0b8d48b711b85c3b2687064514c48e4731cdaf9d0b2aaf8461003cfb10ad35b5",
+    "dist/v3/preprocess.js": "170ad3280aa835bb0ad0efd5d65cd2ea507c1c3cd680b092cfc0e95537db3e3c",
+    "dist/v3/residual.js": "1b454e6acd7b97d7a8f1904ea97c4f382f0b97a6b9d924981e459a8bd972353a",
+    "dist/v3/snes.js": "dcb4e58382d349ea98acd7a29d7ac8be537f2dd496b895f1d16d0f1e9a0f8fb2",
+    "dist/v3/words-worker.js": "289712ffd1bb65c517def0c9b53fe0d2713775bf0db409b3f39cafbe495245c0",
+    "dist/v3/words.js": "bf13e41c41c27c5049607040c12bdc3139e63b0f408cce8e27ad054be34813b9",
+    "dist/model/captcha-v3/digits/manifest.json": "549f44ecf1fcf01a763917bbff3db1624f455aa4ae3bd908472efc2f648ac99f"
+  },
+  "scope": "User-requested local-browser follow-up using source verified against the public deployment; previously evaluated official images, not blind; no tuning or model changes",
+  "further_tuning_permitted": false
+}

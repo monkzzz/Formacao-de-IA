@@ -1,0 +1,3238 @@
+{
+  "status": "PASS",
+  "scope": "Fresh synthetic browser integration screening, not real CAPTCHA population accuracy",
+  "models": [
+    {
+      "reader": "ddddocr",
+      "correct": 200,
+      "count": 200,
+      "raw_report": "ddddocr-browser-development-20261016-ddddocr-raw.json",
+      "raw_sha256": "70c4878d69bd8d0427a94a05e49a36f442f89f58778fa09e88757398a100eba1",
+      "cases": [
+        {
+          "file": "sample-000.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-001.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-002.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-003.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-004.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-005.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-006.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-007.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-008.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-009.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-010.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-011.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-012.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-013.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-014.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-015.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-016.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-017.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-018.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-019.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-020.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-021.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-022.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-023.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-024.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-025.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-026.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-027.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-028.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-029.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-030.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-031.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-032.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-033.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-034.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-035.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-036.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-037.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-038.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-039.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-040.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-041.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-042.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-043.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-044.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-045.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-046.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-047.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-048.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-049.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-050.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-051.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-052.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-053.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-054.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-055.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-056.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-057.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-058.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-059.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-060.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-061.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-062.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-063.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-064.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-065.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-066.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-067.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-068.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-069.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-070.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-071.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-072.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-073.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-074.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-075.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-076.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-077.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-078.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-079.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-080.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-081.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-082.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-083.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-084.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-085.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-086.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-087.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-088.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-089.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-090.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-091.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-092.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-093.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-094.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-095.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-096.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-097.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-098.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-099.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-100.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-101.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-102.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-103.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-104.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-105.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-106.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-107.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-108.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-109.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-110.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-111.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-112.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-113.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-114.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-115.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-116.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-117.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-118.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-119.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-120.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-121.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-122.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-123.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-124.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-125.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-126.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-127.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-128.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-129.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-130.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-131.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-132.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-133.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-134.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-135.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-136.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-137.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-138.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-139.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-140.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-141.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-142.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-143.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-144.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-145.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-146.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-147.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-148.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-149.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-150.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-151.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-152.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-153.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-154.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-155.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-156.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-157.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-158.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-159.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-160.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-161.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-162.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-163.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-164.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-165.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-166.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-167.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-168.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-169.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-170.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-171.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-172.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-173.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-174.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-175.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-176.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-177.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-178.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-179.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-180.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-181.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-182.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-183.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-184.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-185.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-186.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-187.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-188.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-189.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-190.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-191.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-192.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-193.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-194.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-195.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-196.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-197.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-198.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-199.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        }
+      ],
+      "errors": 0,
+      "page_errors": [],
+      "request_body_count": 0,
+      "request_methods": [
+        "GET"
+      ]
+    },
+    {
+      "reader": "ddddocr-old",
+      "correct": 196,
+      "count": 200,
+      "raw_report": "ddddocr-browser-development-20261016-ddddocr-old-raw.json",
+      "raw_sha256": "ccdb7d26996ca4638acd488ac64494467d1322bcd6f9b49adf21ae5cbb7a6c4b",
+      "cases": [
+        {
+          "file": "sample-000.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-001.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-002.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-003.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-004.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-005.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-006.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-007.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-008.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-009.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-010.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-011.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-012.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-013.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-014.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-015.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-016.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-017.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-018.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-019.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-020.png",
+          "expected": 0,
+          "predicted": null,
+          "raw_text": "o",
+          "correct": false,
+          "error": null
+        },
+        {
+          "file": "sample-021.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-022.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-023.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-024.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-025.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-026.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-027.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-028.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-029.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-030.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-031.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-032.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-033.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-034.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-035.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-036.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-037.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-038.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-039.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-040.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-041.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-042.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-043.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-044.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-045.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-046.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-047.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-048.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-049.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-050.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-051.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-052.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-053.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-054.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-055.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-056.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-057.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-058.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-059.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-060.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-061.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-062.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-063.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-064.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-065.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-066.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-067.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-068.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-069.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-070.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-071.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-072.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-073.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-074.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-075.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-076.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-077.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-078.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-079.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-080.png",
+          "expected": 0,
+          "predicted": null,
+          "raw_text": "o",
+          "correct": false,
+          "error": null
+        },
+        {
+          "file": "sample-081.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-082.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-083.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-084.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-085.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-086.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-087.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-088.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-089.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-090.png",
+          "expected": 0,
+          "predicted": null,
+          "raw_text": "o",
+          "correct": false,
+          "error": null
+        },
+        {
+          "file": "sample-091.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-092.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-093.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-094.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-095.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-096.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-097.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-098.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-099.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-100.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-101.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-102.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-103.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-104.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-105.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-106.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-107.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-108.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-109.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-110.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-111.png",
+          "expected": 1,
+          "predicted": null,
+          "raw_text": "l",
+          "correct": false,
+          "error": null
+        },
+        {
+          "file": "sample-112.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-113.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-114.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-115.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-116.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-117.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-118.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-119.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-120.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-121.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-122.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-123.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-124.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-125.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-126.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-127.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-128.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-129.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-130.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-131.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-132.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-133.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-134.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-135.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-136.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-137.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-138.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-139.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-140.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-141.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-142.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-143.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-144.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-145.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-146.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-147.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-148.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-149.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-150.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-151.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-152.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-153.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-154.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-155.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-156.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-157.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-158.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-159.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-160.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-161.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-162.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-163.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-164.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-165.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-166.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-167.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-168.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-169.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-170.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-171.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-172.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-173.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-174.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-175.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-176.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-177.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-178.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-179.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-180.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-181.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-182.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-183.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-184.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-185.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-186.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-187.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-188.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-189.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-190.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-191.png",
+          "expected": 1,
+          "predicted": 1,
+          "raw_text": "1",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-192.png",
+          "expected": 2,
+          "predicted": 2,
+          "raw_text": "2",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-193.png",
+          "expected": 3,
+          "predicted": 3,
+          "raw_text": "3",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-194.png",
+          "expected": 4,
+          "predicted": 4,
+          "raw_text": "4",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-195.png",
+          "expected": 5,
+          "predicted": 5,
+          "raw_text": "5",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-196.png",
+          "expected": 6,
+          "predicted": 6,
+          "raw_text": "6",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-197.png",
+          "expected": 7,
+          "predicted": 7,
+          "raw_text": "7",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-198.png",
+          "expected": 8,
+          "predicted": 8,
+          "raw_text": "8",
+          "correct": true,
+          "error": null
+        },
+        {
+          "file": "sample-199.png",
+          "expected": 9,
+          "predicted": 9,
+          "raw_text": "9",
+          "correct": true,
+          "error": null
+        }
+      ],
+      "errors": 0,
+      "page_errors": [],
+      "request_body_count": 0,
+      "request_methods": [
+        "GET"
+      ]
+    }
+  ],
+  "sources_unchanged": true,
+  "application_version": "3.9.0"
+}

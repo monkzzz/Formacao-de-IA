@@ -1,6 +1,14 @@
 # Digit Lab — Local Desafio Project
 
-**Current application release: v3.8.0.** Digits adds selectable pretrained
+**Current local application release: v3.9.0.** Digits adds the pretrained
+CAPTCHA-specific DdddOCR (54 MB) and DdddOCR Legacy (14 MB), with verified weights
+and browser-only inference. Independent browser screening scored 200/200 and
+196/200 on fresh synthetic digits; their frozen official follow-up scored 8/10
+and 9/10. They improve on the TrOCR alternatives, but neither achieved 10/10.
+The project CNN remains the default and scored 10/10 in its separate follow-up.
+See [models, measured results and validation](docs/captcha-readers.md).
+
+**Public release before this update: v3.8.0.** Digits adds selectable pretrained
 TrOCR Printed and Handwritten readers, downloaded on demand and executed in the
 browser, with Standard and Full precision options. The trained residual CNN remains
 the default. These OCR alternatives have no established CAPTCHA accuracy; all

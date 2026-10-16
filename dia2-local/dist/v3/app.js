@@ -2,7 +2,7 @@ import {loadModel, predict} from "./inference.js?v=captcha-3";
 import {prepareCanvas, PREPROCESS_VERSION} from "./preprocess.js?v=3.6.0";
 import {createWordsWorkspace} from "./words.js?v=3.2.0";
 import {createDrawingTools} from "./canvas-tools.js?v=3.2.0";
-import {createDigitReader, DIGIT_READERS} from "./digit-readers.js?v=1";
+import {createDigitReader, DIGIT_READERS} from "./digit-readers.js?v=2";
 
 const $ = id => document.getElementById(id);
 const state = {model: null, models: {}, mode: "digits", uploads: [], busy: false, loading: false, ready: false};
@@ -18,7 +18,7 @@ const externalReader = () => selectedReader() !== "local";
 function readerViews() {
   const external = externalReader(), wordMode = state.mode === "words";
   $("digit-reader-options").hidden = state.mode !== "digits";
-  $("digit-quality-options").hidden = !external;
+  $("digit-quality-options").hidden = !external || DIGIT_READERS[selectedReader()].engine === "ddddocr";
   $("digit-reader-about").hidden = !external;
   for (const id of ["network", "model"]) $(id).hidden = wordMode || external;
   $("scores").hidden = external;
@@ -34,6 +34,7 @@ function readerViews() {
 
 function changeReader(reader, profile = $("digit-quality").value) {
   digitReader.stop();
+  if (DIGIT_READERS[reader].engine === "ddddocr") profile = "standard";
   $("digit-reader").value = reader; $("digit-quality").value = profile;
   resetOutput(); readerViews();
 }
@@ -284,6 +285,9 @@ async function uploadFile(file, batch) {
     preprocessing: "word-crop-display-v1", architecture: "vision-encoder-decoder", labels: null,
     model: DIGIT_READERS[reader].model, revision: DIGIT_READERS[reader].revision,
     trained_by_project: false, profile, precision: profile === "precise" ? "float32" : "int8", decoding: "greedy"});
+  if (DIGIT_READERS[reader].engine === "ddddocr") Object.assign(record, {
+    model_sha256: DIGIT_READERS[reader].sha256, preprocessing: DIGIT_READERS[reader].preprocessing,
+    architecture: "captcha-ctc", precision: "float32", decoding: DIGIT_READERS[reader].decoding});
   const card = document.createElement("button"); card.type = "button"; card.className = "upload-result";
   const name = document.createElement("strong"); name.textContent = file.name;
   const summary = document.createElement("span"); summary.textContent = "Processing…";
@@ -312,7 +316,7 @@ async function uploadFile(file, batch) {
     previewURL = URL.createObjectURL(file);
     const preview = document.createElement("img"); preview.src = previewURL; preview.alt = `Uploaded image: ${file.name}`;
     preview.onload = () => URL.revokeObjectURL(previewURL); card.prepend(preview);
-    summary.textContent = result.ocr ? `${result.accepted ? result.label : "No single digit"} · ${DIGIT_READERS[reader].name} · ${profile}`
+    summary.textContent = result.ocr ? `${result.accepted ? result.label : "No single digit"} · ${DIGIT_READERS[reader].name} · ${DIGIT_READERS[reader].engine === "ddddocr" ? "FP32" : profile}`
       : `${result.label} · ${(result.scores[result.digit] * 100).toFixed(2)}% model score · ${mode}`;
     const select = async (automatic = false) => {
       if (!automatic && (state.busy || state.loading)) return;
@@ -333,8 +337,8 @@ async function uploadFile(file, batch) {
 function exportRecord() {
   return {schema: 2, exported_at: new Date().toISOString(), origin: location.origin,
     application: "Digit Lab " + APPLICATION_VERSION, application_version: APPLICATION_VERSION,
-    mode: state.mode, reader: selectedReader(), model_sha256: state.mode === "words" || externalReader() ? null : state.model.manifest.sha256,
-    preprocessing: state.mode === "words" ? null : externalReader() ? "word-crop-display-v1" : state.model.manifest.preprocessing, labels_consulted_by_app: false,
+    mode: state.mode, reader: selectedReader(), model_sha256: state.mode === "words" ? null : externalReader() ? DIGIT_READERS[selectedReader()].sha256 || null : state.model.manifest.sha256,
+    preprocessing: state.mode === "words" ? null : externalReader() ? DIGIT_READERS[selectedReader()].preprocessing || "word-crop-display-v1" : state.model.manifest.preprocessing, labels_consulted_by_app: false,
     note: "Raw model outputs only; each record identifies its own mode, class labels and model hash. No answer key is loaded or used.",
     predictions: state.uploads};
 }

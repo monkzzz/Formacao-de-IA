@@ -1,5 +1,8 @@
 # Selectable digit readers (v3.8.0)
 
+The v3.9.0 update adds [CAPTCHA-specific DdddOCR readers](captcha-readers.md).
+This document retains the original TrOCR integration details and evidence.
+
 Digits retains the project-trained residual CNN as its default and adds two
 pretrained OCR alternatives. Select **Digit model**, choose Standard or Full
 precision, and read the drawing or choose images. Re-upload an image to compare
