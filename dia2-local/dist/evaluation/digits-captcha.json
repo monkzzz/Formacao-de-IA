@@ -1,0 +1,31 @@
+{
+  "application_version": "3.5.0",
+  "model_sha256": "9531ae35882aa8ba348911f41e506bc00bb359d8110116ce98a2c6c1f8e04b13",
+  "preprocessing": "border-gray-bilinear-com-v1",
+  "selection_epoch": 11,
+  "clean_mnist": {
+    "count": 10000,
+    "correct": 9920,
+    "accuracy": 0.992
+  },
+  "raw_synthetic": {
+    "count": 10000,
+    "correct": 9697,
+    "accuracy": 0.9697
+  },
+  "previous_raw_synthetic": {
+    "count": 10000,
+    "correct": 8727,
+    "accuracy": 0.8727
+  },
+  "official_challenge": {
+    "count": 10,
+    "correct": 7,
+    "accuracy": 0.7
+  },
+  "previous_challenge_correct": 2,
+  "scope": "Follow-up evaluation; prior outcomes known, not a fresh blind test. Synthetic and clean scores do not establish real CAPTCHA population accuracy.",
+  "challenge_used_for_training_or_selection": false,
+  "challenge_raw_sha256": "73682c6032ea519bd18010d69fa08c139504ced6319ad122419100e735ab2c84",
+  "freeze_sha256": "ae0b32ce005bb6f5642815c2be121d3540e373663d21aff0c2af4648a4a5c315"
+}

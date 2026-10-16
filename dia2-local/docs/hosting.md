@@ -1,5 +1,26 @@
 # Website Hosting
 
+## v3.5.0 digit release
+
+Digits now load `model/captcha-v1/digits/`; Letters still load
+`model/robust/letters/`. Preserve the earlier model directories for cached pages.
+Deploy the new manifest and weights, `evaluation/digits-captcha.json`,
+`v3/inference.js`, `v3/app.js`, `v3/helper-knowledge.js` and `v3/helper.js`
+before switching `index.html`. The entry page and changed module imports use new
+version queries. The selected digit weight hash is recorded in the
+[training/evaluation protocol](captcha-training.md).
+
+Use `digitlab.robust_qa --digit-experiment captcha-v1` for current-model checks,
+with new report and screenshot prefixes. `digitlab.captcha_qa` checks raw
+synthetic uploads. Do not rerun the completed official challenge for deployment
+verification: match the deployed weight hash and verify independent inputs.
+
+Historical sections below describe the named earlier releases.
+
+The v3.5.0 deployment passed all eight upload hash checks, all 41 HTTPS asset
+hashes and live character/raw-upload/helper browser checks. See the
+[deployment evidence](captcha-training.md#public-deployment).
+
 For v3.4.2, deploy both Konami assets, `v3/helper.js` and all three SNES frame
 assets before `index.html`. This updates the shared module import and frame CSS
 for expanded mobile layouts. The separate ROM is unchanged.

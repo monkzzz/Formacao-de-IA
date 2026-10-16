@@ -10,8 +10,9 @@ export async function loadModel(mode = "digits") {
   if (!["digits", "letters"].includes(mode)) throw new Error("Unknown recognition mode.");
   if (!globalThis.crypto?.subtle) throw new Error("Open the HTTPS version of this page to load the verified model.");
   const labels = mode === "letters" ? Array.from("ABCDEFGHIJKLMNOPQRSTUVWXYZ") : Array.from("0123456789");
-  const base = `./model/robust/${mode}/`;
-  const response = await fetch(base + "manifest.json?v=robust-1", {cache: "no-store"});
+  const experiment = mode === "digits" ? "captcha-v1" : "robust";
+  const base = `./model/${experiment}/${mode}/`;
+  const response = await fetch(base + "manifest.json?v=captcha-1", {cache: "no-store"});
   if (!response.ok) throw new Error(`Cannot load the ${mode} model. Check that its model folder was uploaded.`);
   const manifest = await response.json();
   if (manifest.schema !== 1 || manifest.architecture !== "cnn16-32-128"

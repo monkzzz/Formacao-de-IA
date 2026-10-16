@@ -1,4 +1,4 @@
-import {answerQuestion} from "./helper-knowledge.js?v=3.3.0";
+import {answerQuestion} from "./helper-knowledge.js?v=3.5.0";
 import {openArcade} from "./konami.js?v=5";
 
 const launcher = document.getElementById("helper-launcher");

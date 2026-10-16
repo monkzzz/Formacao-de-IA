@@ -1,6 +1,6 @@
 # Digit Lab — Local Desafio Project
 
-**Current application release: v3.4.2.** Enter the Konami code to open the secret
+**Current application release: v3.5.0.** Enter the Konami code to open the secret
 SNES arcade. The supplied Zelda ROM is a separate deployment asset excluded from
 Git. See [arcade setup, controls and validation](docs/snes-arcade.md).
 
@@ -11,6 +11,42 @@ Two CNNs trained from scratch on MNIST and EMNIST Letters, with a static browser
 **Design release:** the `v3/` interface adds a clearer workspace, readable prediction cards, a bounded image gallery with two columns on phones, and keyboard-accessible expandable model details. All 25 [design and recognition verification groups](reports/design-validation.md) passed locally and on the public website at that release. Those reports describe the original models.
 
 The header logo, footer logo, and favicon use the supplied `65474617.jpg`, published unchanged as `dist/assets/65474617.jpg`. [Live logo verification](reports/logo-verification.json) confirms the image checksum, loading, mobile layout, and model readiness.
+
+## CAPTCHA-style digit release (v3.5.0)
+
+The digit model now trains on independent printed and handwritten images with
+clutter rendered **before** upload preprocessing. Epoch 11 was selected from a
+fixed 12-epoch run. Validation uses separate handwriting samples and four
+held-out font families. Official challenge images and their generator are
+excluded from training and selection.
+
+| Held-out evaluation | Previous robustness digits | CAPTCHA-style digits |
+| --- | ---: | ---: |
+| Clean MNIST, 10,000 images | 99.32% | **99.20%** |
+| Raw synthetic noisy images, 10,000 | 87.27% | **96.97%** |
+| Official Desafio, 10 images | 2/10 | **7/10** |
+
+The synthetic benchmark includes the whole upload preprocessing pipeline and
+differs from the earlier normalized-noise benchmark. The final challenge was
+uploaded once after freezing the model and runtime. Prior challenge outcomes
+were known: this is a follow-up evaluation, not a fresh blind test. No training
+or inference changes followed that result. Seven of ten is a small sample
+result, not a general CAPTCHA accuracy guarantee.
+
+Digits load from `dist/model/captcha-v1/digits/`; Letters retain the robustness
+model and Words retains its pretrained reader. Earlier models and reports remain
+preserved. Weight binaries are ignored by Git and deployed separately; fresh
+checkouts can restore verified release weights with `python serve.py --download-models`.
+
+See the [protocol and validation](docs/captcha-training.md),
+[training/test results](reports/captcha-v1.json),
+[browser parity and regression](reports/captcha-v1-browser-qa.json),
+[raw upload checks](reports/captcha-v1-raw-browser-qa.json), and
+[final challenge comparison](reports/captcha-v1-challenge-comparison.json).
+
+**v3.5.0 is live.** All eight changed uploads, all 41 public asset hashes,
+character regression, 40 raw synthetic uploads and six helper groups passed.
+See the [public deployment evidence](docs/captcha-training.md#public-deployment).
 
 ## Start the application
 
@@ -35,6 +71,9 @@ match this checkout, setup stops rather than loading a different model.
 
 ## Improved recognition release
 
+This section records the earlier robustness release. Current digit results and
+model paths are documented in the v3.5.0 section above.
+
 The local and public `v3/` apps now load separately trained robustness models from `dist/model/robust/`. Additional training varies handwriting shape, stroke width, noise and short occlusions while retaining clean examples. Selection uses the original validation splits, with no challenge images. The [public release verification](reports/public-robust-browser-qa.json) confirms both new weight identities, Python/JavaScript activation parity, 36 uploads, mixed-mode results and failure recovery. All 26 deployed assets passed SHA-256 download verification; replaced files were backed up.
 
 | Held-out evaluation | Original | Updated |
@@ -55,7 +94,7 @@ The trained weights already exist locally in `dist/model/weights.bin`. They and 
 
 ## Words mode
 
-The footer displays the application release, currently **v3.4.2**. Character
+The footer displays the application release, currently **v3.5.0**. Character
 prediction JSON includes `application_version`; Words result metadata also keeps
 that version alongside the model identity. This release number identifies the
 website, separately from model weight hashes and preprocessing versions.

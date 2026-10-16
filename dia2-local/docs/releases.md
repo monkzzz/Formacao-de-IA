@@ -1,5 +1,26 @@
 # Application releases
 
+## v3.5.0 — Raw-image CAPTCHA-style digit training
+
+Digit training now includes independent printed and handwritten images with
+clutter rendered before the unchanged upload preprocessing. The selected model
+scored **7/10** on the frozen official challenge follow-up, up from **2/10**.
+Clean MNIST changed from 99.32% to **99.20%**; the separate raw synthetic test
+improved from 87.27% to **96.97%**. These are different evaluation distributions.
+
+The model lives in a separate `model/captcha-v1/digits/` directory. Earlier
+models remain available; Letters and Words retain their existing weights.
+The homepage and authored guide distinguish clean scores from CAPTCHA results,
+and offer an aggregate digit evaluation download without the answer key.
+
+All 18 Python tests, character parity/regression, 40 raw upload checks and six
+helper groups passed locally. See the [protocol and evidence](captcha-training.md).
+No inference changes followed the final challenge result.
+
+The release is live. All eight changed uploads and all 41 HTTPS static asset
+hashes passed verification. Public character regression, 40 raw noisy uploads,
+drawing and six helper groups passed; see [deployment evidence](captcha-training.md#public-deployment).
+
 ## v3.4.2 — Expanded arcade on phones
 
 Phones open the arcade across the available browser viewport. **Expand game**

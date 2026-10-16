@@ -1,0 +1,296 @@
+{
+  "status": "PASS",
+  "url": "https://naoquerosaber.pt/AI/",
+  "application_version": "3.5.0",
+  "count": 41,
+  "frozen_sources_unchanged": true,
+  "files": [
+    {
+      "file": "app.js",
+      "bytes": 11250,
+      "sha256": "3a5d231eeab5ba244fbc6a3a1521c525cb35bdfc34263c2dfbf06639459bc309",
+      "mime": "text/javascript",
+      "status": "PASS"
+    },
+    {
+      "file": "assets/65474617.jpg",
+      "bytes": 14707,
+      "sha256": "20408bf697201912289abc7aa92ea4177908d492965131f58c6c2796bfcf83af",
+      "mime": "image/jpeg",
+      "status": "PASS"
+    },
+    {
+      "file": "assets/konami-congratulations.svg",
+      "bytes": 1433,
+      "sha256": "c60ca44891d54c80de9ce4e35c3fd2348f5d1951899c4d028e76333f39277071",
+      "mime": "image/svg+xml",
+      "status": "PASS"
+    },
+    {
+      "file": "assets/scopedog.jpg",
+      "bytes": 234376,
+      "sha256": "9caaffdfbdc25c550c601d1fe07d24b9bb7d3ce331e6f97fdb8a2b6e0ce7a179",
+      "mime": "image/jpeg",
+      "status": "PASS"
+    },
+    {
+      "file": "evaluation/digits-captcha.json",
+      "bytes": 1018,
+      "sha256": "d204fcfc111ed534f1c8d7cd55609e15fa7ba07655c343e29ac58a987a46d73d",
+      "mime": "application/json",
+      "status": "PASS"
+    },
+    {
+      "file": "evaluation/words-1000.json",
+      "bytes": 1711,
+      "sha256": "4b641719dbec554d0accb35e6483ed22058b591f826c35b0891305cd5054fe2b",
+      "mime": "application/json",
+      "status": "PASS"
+    },
+    {
+      "file": "index.html",
+      "bytes": 17907,
+      "sha256": "367f266cbfc5ec88c5b8d430c58f4776abbd5738ac2b44e90e3eb4e581dd0183",
+      "mime": "text/html",
+      "status": "PASS"
+    },
+    {
+      "file": "inference.js",
+      "bytes": 4355,
+      "sha256": "12a41ae50ad566417652be21baeb96278e558d46c4b310bc70c97323b6bcb6ab",
+      "mime": "text/javascript",
+      "status": "PASS"
+    },
+    {
+      "file": "model/captcha-v1/digits/manifest.json",
+      "bytes": 78401,
+      "sha256": "324bfb26a18922af88f3f0dad6eaa6561e966ec22b5a80ba98e085d167ae02fb",
+      "mime": "application/json",
+      "status": "PASS"
+    },
+    {
+      "file": "model/captcha-v1/digits/weights.bin",
+      "bytes": 827688,
+      "sha256": "9531ae35882aa8ba348911f41e506bc00bb359d8110116ce98a2c6c1f8e04b13",
+      "mime": "application/octet-stream",
+      "status": "PASS"
+    },
+    {
+      "file": "model/letters/manifest.json",
+      "bytes": 336931,
+      "sha256": "5ec7f6c41bec294eb83d61be815fb0b476bb32ec65f824f3c28f0c8567b6bd0c",
+      "mime": "application/json",
+      "status": "PASS"
+    },
+    {
+      "file": "model/letters/weights.bin",
+      "bytes": 835944,
+      "sha256": "c35d6fece31dbbacb37d684d3c256fbf634bf90751195fff8238f28e884f0ad5",
+      "mime": "application/octet-stream",
+      "status": "PASS"
+    },
+    {
+      "file": "model/manifest.json",
+      "bytes": 50243,
+      "sha256": "71247af8e6e04330462d64f210f588c6652f68033802ab0598bfcfd2993ebaa6",
+      "mime": "application/json",
+      "status": "PASS"
+    },
+    {
+      "file": "model/robust/digits/manifest.json",
+      "bytes": 66288,
+      "sha256": "4028c77a64ee4174895bb6da1403712459427e9d49e981432f01e76168f81fff",
+      "mime": "application/json",
+      "status": "PASS"
+    },
+    {
+      "file": "model/robust/digits/weights.bin",
+      "bytes": 827688,
+      "sha256": "d2b9a1430a98fda5df41e27ca214ab1b57ef83508926f9eeb84967757300eb62",
+      "mime": "application/octet-stream",
+      "status": "PASS"
+    },
+    {
+      "file": "model/robust/letters/manifest.json",
+      "bytes": 359633,
+      "sha256": "7b3e6995d90bb03549605059fb80a5c68d3dd09fa8fca822f7cd11820ff7ca95",
+      "mime": "application/json",
+      "status": "PASS"
+    },
+    {
+      "file": "model/robust/letters/weights.bin",
+      "bytes": 835944,
+      "sha256": "0fef4b3155457eb1be91547590b48ebc61823c68b79fd414b406835cbfe1b101",
+      "mime": "application/octet-stream",
+      "status": "PASS"
+    },
+    {
+      "file": "model/weights.bin",
+      "bytes": 827688,
+      "sha256": "8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+      "mime": "application/octet-stream",
+      "status": "PASS"
+    },
+    {
+      "file": "preprocess.js",
+      "bytes": 3150,
+      "sha256": "eaa43a89d27d90b1d08e49ab62baee982c0c108f044b2b71a19a68a9e133d988",
+      "mime": "text/javascript",
+      "status": "PASS"
+    },
+    {
+      "file": "roms/zelda.sfc",
+      "bytes": 1048576,
+      "sha256": "66871d66be19ad2c34c927d6b14cd8eb6fc3181965b6e517cb361f7316009cfb",
+      "mime": "application/octet-stream",
+      "status": "PASS"
+    },
+    {
+      "file": "style.css",
+      "bytes": 7652,
+      "sha256": "82d862ccce0f259cdbfd2769195f3ccd832e22119610da10a94a4d911c7bff39",
+      "mime": "text/css",
+      "status": "PASS"
+    },
+    {
+      "file": "v2/app.js",
+      "bytes": 14034,
+      "sha256": "2122258114ea61f867523b0f5260510904534c899f7e35bbda20369225197b67",
+      "mime": "text/javascript",
+      "status": "PASS"
+    },
+    {
+      "file": "v2/inference.js",
+      "bytes": 5169,
+      "sha256": "d43c67ba415ff594fed329ddd06392a704ad15dace033d4fe2d9044c38bbae38",
+      "mime": "text/javascript",
+      "status": "PASS"
+    },
+    {
+      "file": "v2/preprocess.js",
+      "bytes": 3150,
+      "sha256": "eaa43a89d27d90b1d08e49ab62baee982c0c108f044b2b71a19a68a9e133d988",
+      "mime": "text/javascript",
+      "status": "PASS"
+    },
+    {
+      "file": "v2/style.css",
+      "bytes": 8555,
+      "sha256": "b554914a88d30baa558d7063e15805d6c713fed74ca26f1c42f7e5937d55e319",
+      "mime": "text/css",
+      "status": "PASS"
+    },
+    {
+      "file": "v3/app.js",
+      "bytes": 16489,
+      "sha256": "04557f451f69e00b5e8d94e19048c6c5d460f6f1365c7fb62dc7350377223901",
+      "mime": "text/javascript",
+      "status": "PASS"
+    },
+    {
+      "file": "v3/canvas-tools.js",
+      "bytes": 3845,
+      "sha256": "d07532ea11f2101ec84aa6126ca2580be1a940782dab0cf181bb862d551685fe",
+      "mime": "text/javascript",
+      "status": "PASS"
+    },
+    {
+      "file": "v3/helper-knowledge.js",
+      "bytes": 16203,
+      "sha256": "b752ce68c1d9cc3fd61ab3c62852440ac8488834ecaa2fa10bacf8d5fc538370",
+      "mime": "text/javascript",
+      "status": "PASS"
+    },
+    {
+      "file": "v3/helper.css",
+      "bytes": 4525,
+      "sha256": "3ee870b102fc425df898c3b50b9aef9f0a7ea56476744f702a5cefad0482f99d",
+      "mime": "text/css",
+      "status": "PASS"
+    },
+    {
+      "file": "v3/helper.js",
+      "bytes": 5290,
+      "sha256": "b68f3fafa5307e0c09f32c089ecf06bdf360abab4b35fdcd04b3499a5391ffb1",
+      "mime": "text/javascript",
+      "status": "PASS"
+    },
+    {
+      "file": "v3/inference.js",
+      "bytes": 5215,
+      "sha256": "6d04019db3f540101a94191fd21a55ffd3af199a88344bbed7339a3eec05e738",
+      "mime": "text/javascript",
+      "status": "PASS"
+    },
+    {
+      "file": "v3/konami.css",
+      "bytes": 1833,
+      "sha256": "7150d0da026b16c6b82c31745c0283b20e6fe22d360eb6df219f2e80a3c77c95",
+      "mime": "text/css",
+      "status": "PASS"
+    },
+    {
+      "file": "v3/konami.js",
+      "bytes": 3666,
+      "sha256": "0b8d48b711b85c3b2687064514c48e4731cdaf9d0b2aaf8461003cfb10ad35b5",
+      "mime": "text/javascript",
+      "status": "PASS"
+    },
+    {
+      "file": "v3/preprocess.js",
+      "bytes": 3150,
+      "sha256": "eaa43a89d27d90b1d08e49ab62baee982c0c108f044b2b71a19a68a9e133d988",
+      "mime": "text/javascript",
+      "status": "PASS"
+    },
+    {
+      "file": "v3/snes.css",
+      "bytes": 1242,
+      "sha256": "411fca619c6fb167b9dbab616c5688ab57474968f02ebad0a15bd618aab43d12",
+      "mime": "text/css",
+      "status": "PASS"
+    },
+    {
+      "file": "v3/snes.html",
+      "bytes": 1150,
+      "sha256": "7519acc6656f208b23adea653ef6350025f58a134ede9085108bbedc4219eff2",
+      "mime": "text/html",
+      "status": "PASS"
+    },
+    {
+      "file": "v3/snes.js",
+      "bytes": 2846,
+      "sha256": "dcb4e58382d349ea98acd7a29d7ac8be537f2dd496b895f1d16d0f1e9a0f8fb2",
+      "mime": "text/javascript",
+      "status": "PASS"
+    },
+    {
+      "file": "v3/style.css",
+      "bytes": 26007,
+      "sha256": "9262b3256e0b8db585492b45216acb2799c4f0a41dd18987d5a92500ec06a17f",
+      "mime": "text/css",
+      "status": "PASS"
+    },
+    {
+      "file": "v3/words-worker.js",
+      "bytes": 1827,
+      "sha256": "289712ffd1bb65c517def0c9b53fe0d2713775bf0db409b3f39cafbe495245c0",
+      "mime": "text/javascript",
+      "status": "PASS"
+    },
+    {
+      "file": "v3/words.css",
+      "bytes": 2392,
+      "sha256": "f2411b623df2dbd0a1b04086eb8093ef788efc1f9e993d04c8564451178be926",
+      "mime": "text/css",
+      "status": "PASS"
+    },
+    {
+      "file": "v3/words.js",
+      "bytes": 11457,
+      "sha256": "bf13e41c41c27c5049607040c12bdc3139e63b0f408cce8e27ad054be34813b9",
+      "mime": "text/javascript",
+      "status": "PASS"
+    }
+  ]
+}

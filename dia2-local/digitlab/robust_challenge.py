@@ -27,20 +27,26 @@ def create_json(path, value):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--url", default="http://127.0.0.1:8766/")
+    parser.add_argument("--experiment", default="robust")
+    parser.add_argument("--qa-report", default="robust-browser-qa.json")
     args = parser.parse_args()
+    if not args.experiment.replace("-", "").isalnum():
+        parser.error("Invalid experiment name")
     reports = ROOT / "reports"
-    freeze_path = reports / "robust-challenge-freeze.json"
-    raw_path = reports / "robust-challenge-raw.json"
-    comparison_path = reports / "robust-challenge-comparison.json"
+    freeze_path = reports / f"{args.experiment}-challenge-freeze.json"
+    raw_path = reports / f"{args.experiment}-challenge-raw.json"
+    comparison_path = reports / f"{args.experiment}-challenge-comparison.json"
     if any(path.exists() for path in [freeze_path, raw_path, comparison_path]):
         raise SystemExit("Follow-up evaluation already started. Preserve its records.")
-    qa = json.loads((reports / "robust-browser-qa.json").read_text(encoding="utf-8"))
+    qa = json.loads((reports / args.qa_report).read_text(encoding="utf-8"))
     assert qa["status"] == "PASS"
-    manifest = json.loads((ROOT / "dist/model/robust/digits/manifest.json").read_text(encoding="utf-8"))
+    model_directory = ROOT / "dist/model" / args.experiment / "digits"
+    manifest = json.loads((model_directory / "manifest.json").read_text(encoding="utf-8"))
+    assert qa["checks"]["digits_activation_parity"]
     sources = {str(path.relative_to(ROOT)).replace("\\", "/"): digest(path)
         for path in sorted([*ROOT.glob("digitlab/*.py"), *ROOT.glob("dist/v3/*.js"),
-            ROOT / "dist/index.html", ROOT / "dist/model/robust/digits/manifest.json",
-            ROOT / "dist/model/robust/digits/weights.bin"])}
+            ROOT / "dist/index.html", model_directory / "manifest.json",
+            model_directory / "weights.bin"])}
     create_json(freeze_path, {"frozen_at": datetime.now(timezone.utc).isoformat(),
         "model_sha256": manifest["sha256"], "sources": sources,
         "selection": "Clean and synthetic noisy validation only; no challenge input",
@@ -64,7 +70,7 @@ def main():
         raw["input_sha256"] = {path.name: digest(path) for path in paths}
         raw["evaluation_scope"] = "Follow-up final evaluation, not a new blind first run"
         create_json(raw_path, raw)
-        page.screenshot(path=str(reports / "screenshots/robust-challenge.png"), full_page=True)
+        page.screenshot(path=str(reports / f"screenshots/{args.experiment}-challenge.png"), full_page=True)
         browser.close()
     assert all(digest(ROOT / name) == value for name, value in sources.items())
     # Durable predictions are saved before reading the historical answer key.

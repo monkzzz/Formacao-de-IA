@@ -1,0 +1,50 @@
+{
+  "uploaded_at": "2026-10-16T16:46:13.199167+00:00",
+  "destination": "/",
+  "tls": true,
+  "files": [
+    {
+      "file": "evaluation/digits-captcha.json",
+      "bytes": 1018,
+      "sha256": "d204fcfc111ed534f1c8d7cd55609e15fa7ba07655c343e29ac58a987a46d73d"
+    },
+    {
+      "file": "model/captcha-v1/digits/manifest.json",
+      "bytes": 78401,
+      "sha256": "324bfb26a18922af88f3f0dad6eaa6561e966ec22b5a80ba98e085d167ae02fb"
+    },
+    {
+      "file": "model/captcha-v1/digits/weights.bin",
+      "bytes": 827688,
+      "sha256": "9531ae35882aa8ba348911f41e506bc00bb359d8110116ce98a2c6c1f8e04b13"
+    },
+    {
+      "file": "v3/app.js",
+      "bytes": 16489,
+      "sha256": "04557f451f69e00b5e8d94e19048c6c5d460f6f1365c7fb62dc7350377223901"
+    },
+    {
+      "file": "v3/helper-knowledge.js",
+      "bytes": 16203,
+      "sha256": "b752ce68c1d9cc3fd61ab3c62852440ac8488834ecaa2fa10bacf8d5fc538370"
+    },
+    {
+      "file": "v3/helper.js",
+      "bytes": 5290,
+      "sha256": "b68f3fafa5307e0c09f32c089ecf06bdf360abab4b35fdcd04b3499a5391ffb1"
+    },
+    {
+      "file": "v3/inference.js",
+      "bytes": 5215,
+      "sha256": "6d04019db3f540101a94191fd21a55ffd3af199a88344bbed7339a3eec05e738"
+    },
+    {
+      "file": "index.html",
+      "bytes": 17907,
+      "sha256": "367f266cbfc5ec88c5b8d430c58f4776abbd5738ac2b44e90e3eb4e581dd0183"
+    }
+  ],
+  "backup_directory": "artifacts\\ftp-backup-20261016T164554Z",
+  "application_version": "3.5.0",
+  "scope": "selected-files"
+}

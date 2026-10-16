@@ -1,4 +1,4 @@
-import {loadModel, predict} from "./inference.js?v=robust-1";
+import {loadModel, predict} from "./inference.js?v=captcha-1";
 import {prepareCanvas, PREPROCESS_VERSION} from "./preprocess.js";
 import {createWordsWorkspace} from "./words.js?v=3.2.0";
 import {createDrawingTools} from "./canvas-tools.js?v=3.2.0";

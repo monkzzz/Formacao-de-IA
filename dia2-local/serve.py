@@ -13,7 +13,8 @@ def prepare_models(root, download=False):
     """Check current release weights; optionally restore verified public copies."""
     missing = []
     for mode in ("digits", "letters"):
-        folder = root / "model" / "robust" / mode
+        experiment = "captcha-v1" if mode == "digits" else "robust"
+        folder = root / "model" / experiment / mode
         manifest = json.loads((folder / "manifest.json").read_text(encoding="utf-8"))
         target = folder / "weights.bin"
         if target.exists():
@@ -21,7 +22,7 @@ def prepare_models(root, download=False):
         if not download:
             missing.append(str(target.relative_to(root)))
             continue
-        url = f"https://naoquerosaber.pt/AI/model/robust/{mode}/weights.bin"
+        url = f"https://naoquerosaber.pt/AI/model/{experiment}/{mode}/weights.bin"
         print(f"Downloading {mode} weights...", flush=True)
         with urlopen(url, timeout=60) as response:
             data = response.read(manifest["bytes"] + 1)

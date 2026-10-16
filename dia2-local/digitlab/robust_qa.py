@@ -23,7 +23,13 @@ def main():
     parser.add_argument("--report", default="robust-browser-qa.json",
                         help="Report filename under reports; use a new name for follow-up checks")
     parser.add_argument("--screenshot-prefix", default="robust")
+    parser.add_argument("--digit-experiment", default="robust",
+                        help="Digit model/checkpoint experiment folder; letters remain robust")
     args = parser.parse_args()
+    if (ROOT / "reports" / args.report).exists():
+        parser.error("Report exists; use a new --report to preserve historical evidence")
+    if not args.digit_experiment.replace("-", "").isalnum():
+        parser.error("Invalid digit experiment name")
     torch.set_num_threads(2)
     report = {"url": args.url, "checks": {}}
     frozen = json.loads((ROOT / "reports/challenge-freeze.json").read_text(encoding="utf-8"))
@@ -41,9 +47,11 @@ def main():
         page.wait_for_function("window.digitLab?.state.ready", timeout=60000)
         count = 0
         for task in ["digits", "letters"]:
-            directory = ROOT / "dist/model/robust" / task
+            experiment = args.digit_experiment if task == "digits" else "robust"
+            directory = ROOT / "dist/model" / experiment / task
             manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
-            original_checkpoint = ROOT / ("artifacts/letters/best.pt" if task == "letters" else "artifacts/best.pt")
+            original_checkpoint = ROOT / ("artifacts/letters/best.pt" if task == "letters" else
+                ("artifacts/best.pt" if experiment == "robust" else "artifacts/robust/digits/best.pt"))
             assert hashlib.sha256(original_checkpoint.read_bytes()).hexdigest() == manifest["training"]["baseline_checkpoint_sha256"]
             assert hashlib.sha256((directory / "weights.bin").read_bytes()).hexdigest() == manifest["sha256"]
             page.evaluate("task => digitLab.activateMode(task)", task)
@@ -61,7 +69,9 @@ def main():
             assert all(abs(row["score_sum"] - 1) < 1e-10 for row in parity)
             report["checks"][task + "_activation_parity"] = parity
             model = LetterCNN() if task == "letters" else DigitCNN()
-            model.load_state_dict(torch.load(ROOT / "artifacts/robust" / task / "best.pt", weights_only=True, map_location="cpu"))
+            checkpoint = ROOT / "artifacts" / experiment
+            checkpoint = checkpoint / task / "best.pt" if experiment == "robust" else checkpoint / "best.pt"
+            model.load_state_dict(torch.load(checkpoint, weights_only=True, map_location="cpu"))
             model.eval()
             fixtures = ROOT / "reports" / ("letter-fixtures" if task == "letters" else "mnist-fixtures")
             paths = sorted(fixtures.glob("*.png"))

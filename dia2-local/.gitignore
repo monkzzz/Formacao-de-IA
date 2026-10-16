@@ -13,3 +13,5 @@ dist/model/letters/*.bin
 dist/model/letters/parity.json
 dist/model/robust/*/*.bin
 dist/model/robust/*/parity.json
+dist/model/captcha-*/*/*.bin
+dist/model/captcha-*/*/parity.json
