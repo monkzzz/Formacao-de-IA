@@ -114,3 +114,13 @@ Evidence: [FTPS deployment](../reports/release-3.5.0-ftp-deployment.json),
 [live character regression](../reports/release-3.5.0-public-character-qa.json),
 [live raw uploads](../reports/release-3.5.0-public-raw-qa.json), and
 [live helper checks](../reports/release-3.5.0-public-helper-qa.json).
+
+At the user's subsequent request, all ten official images were uploaded through
+the live HTTPS website in a fresh Edge session. This separate deployment
+verification scored **7/10**, with every prediction, prepared input and class
+score matching the frozen local evaluation. Cases 04, 05 and 08 remain incorrect.
+There were no browser errors or model changes. This verifies the deployed model;
+it is not another independent accuracy evaluation or a tuning run.
+
+See the [live challenge verification](../reports/release-3.5.0-public-challenge-verification.json)
+and its [raw browser export](../reports/release-3.5.0-public-challenge-verification-raw.json).
