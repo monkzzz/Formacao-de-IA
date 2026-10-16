@@ -1,6 +1,14 @@
 # Digit Lab — Local Desafio Project
 
-**Current application release: v3.7.0.** Enter the Konami code to open the secret
+**Current local application release: v3.8.0.** Digits adds selectable pretrained
+TrOCR Printed and Handwritten readers, downloaded on demand and executed in the
+browser, with Standard and Full precision options. The trained residual CNN remains
+the default. These OCR alternatives have no established CAPTCHA accuracy; all
+historical model measurements below retain their original scope. See
+[digit reader options and validation](docs/digit-readers.md). Public deployment
+of this local change is separate from earlier deployment evidence.
+
+Enter the Konami code to open the secret
 SNES arcade. The supplied Zelda ROM is a separate deployment asset excluded from
 Git. See [arcade setup, controls and validation](docs/snes-arcade.md).
 

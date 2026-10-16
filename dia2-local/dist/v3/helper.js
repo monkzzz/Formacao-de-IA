@@ -1,4 +1,4 @@
-import {answerQuestion} from "./helper-knowledge.js?v=3.7.0";
+import {answerQuestion} from "./helper-knowledge.js?v=3.8.0";
 import {openArcade} from "./konami.js?v=5";
 
 const launcher = document.getElementById("helper-launcher");
@@ -72,6 +72,7 @@ function ask(question) {
   const benchmark = document.getElementById("benchmark-words");
   const response = answerQuestion(question, {
     mode: state?.mode || "digits",
+    digitReader: document.getElementById("digit-reader")?.value || "local",
     predicted: state?.mode === "words" ? window.digitLab.wordsContext().predicted : document.getElementById("predicted").textContent.trim(),
     confidence: document.getElementById("confidence").textContent.trim(),
     wordBenchmark: benchmark ? {score: document.getElementById("word-accuracy").textContent.trim(),

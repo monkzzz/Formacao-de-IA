@@ -2,6 +2,7 @@ import {loadModel, predict} from "./inference.js?v=captcha-3";
 import {prepareCanvas, PREPROCESS_VERSION} from "./preprocess.js?v=3.6.0";
 import {createWordsWorkspace} from "./words.js?v=3.2.0";
 import {createDrawingTools} from "./canvas-tools.js?v=3.2.0";
+import {createDigitReader, DIGIT_READERS} from "./digit-readers.js?v=1";
 
 const $ = id => document.getElementById(id);
 const state = {model: null, models: {}, mode: "digits", uploads: [], busy: false, loading: false, ready: false};
@@ -9,6 +10,39 @@ const canvas = $("drawing"), ctx = canvas.getContext("2d", {willReadFrequently: 
 let drawing = false, previousPoint = null;
 const APPLICATION_VERSION = $("app-version").textContent.trim().slice(1);
 const words = createWordsWorkspace(APPLICATION_VERSION);
+const digitReader = createDigitReader(message => status(message));
+let cancelled = false;
+const selectedReader = () => state.mode === "digits" ? $("digit-reader").value : "local";
+const externalReader = () => selectedReader() !== "local";
+
+function readerViews() {
+  const external = externalReader(), wordMode = state.mode === "words";
+  $("digit-reader-options").hidden = state.mode !== "digits";
+  $("digit-quality-options").hidden = !external;
+  $("digit-reader-about").hidden = !external;
+  for (const id of ["network", "model"]) $(id).hidden = wordMode || external;
+  $("scores").hidden = external;
+  document.querySelector(".scores-heading").hidden = external;
+  document.querySelector(".input-preview").hidden = external;
+  $("digit-ocr-output").hidden = !external;
+  $("uncertainty").textContent = external ? "An OCR transcription can be wrong. Review the original output below."
+    : "A model score is a prediction, not a promise. Ambiguous handwriting can be misread.";
+  const link = document.querySelector("nav a:last-child");
+  link.href = wordMode ? "#word-about" : external ? "#digit-reader-about" : "#network";
+  link.textContent = wordMode ? "About the word reader" : external ? "About the digit reader" : "Inside the model";
+}
+
+function changeReader(reader, profile = $("digit-quality").value) {
+  digitReader.stop();
+  $("digit-reader").value = reader; $("digit-quality").value = profile;
+  resetOutput(); readerViews();
+}
+for (const id of ["digit-reader", "digit-quality"]) $(id).addEventListener("change", () => {
+  changeReader($("digit-reader").value);
+  status(selectedReader() === "local" ? "Digit Lab CNN selected. Read your drawing or choose images."
+    : `${DIGIT_READERS[selectedReader()].name} selected. Downloads start only when you read a drawing or image.`);
+});
+$("digit-cancel").addEventListener("click", () => {cancelled = true; digitReader.stop();});
 const drawingTools = createDrawingTools(canvas, {prefix: "drawing", background: "#14251d", penWidth: 20, eraserWidth: 36,
   onRestore: () => {drawing = false; previousPoint = null; resetOutput(); status("Drawing restored. Read it again when ready.");}});
 const MODES = ["digits", "letters", "words"];
@@ -23,6 +57,7 @@ function displayMode(mode) {
   modelLink.href = wordMode ? "#word-about" : "#network";
   modelLink.textContent = wordMode ? "About the word reader" : "Inside the model";
   words.activate(wordMode);
+  readerViews();
 }
 
 function status(message, error = false) {
@@ -69,16 +104,20 @@ function setControls() {
   $("clear").disabled = state.busy || state.loading;
   $("export").disabled = !state.uploads.length || state.busy || state.loading;
   for (const mode of MODES) $("mode-" + mode).disabled = state.busy || state.loading;
+  $("digit-reader").disabled = $("digit-quality").disabled = state.busy || state.loading;
+  $("digit-cancel").hidden = !state.busy || !externalReader();
 }
 
 async function activateMode(mode) {
   if (state.busy || state.loading) return false;
+  if (mode !== "digits") digitReader.stop();
   if (mode === "words") {
     state.mode = mode; state.ready = false;
     displayMode(mode); setControls();
     return true;
   }
   state.loading = true; setControls();
+  $("status").hidden = false;
   status(`Loading and verifying the ${mode} model…`);
   try {
     const model = state.models[mode] || await loadModel(mode);
@@ -121,6 +160,14 @@ function showPrediction(result, input, title, elapsed, model = state.model) {
   $("prediction").classList.remove("is-empty");
   $("predicted").textContent = result.label;
   $("prediction-label").textContent = title;
+  if (result.ocr) {
+    $("confidence").textContent = result.accepted ? "OCR transcription · no class score" : "No single digit recognized";
+    $("digit-raw").textContent = result.rawText || "(empty output)";
+    $("digit-ocr-preview").src = input.toDataURL("image/png");
+    $("digit-ocr-preview").hidden = false;
+    $("timing").textContent = `${elapsed.toFixed(1)} MS / INFERENCE`;
+    return;
+  }
   $("confidence").textContent = `${(result.scores[result.digit] * 100).toFixed(2)}% model score`;
   $("timing").textContent = `${elapsed.toFixed(1)} MS / INFERENCE`;
   const rows = $("scores").children;
@@ -183,6 +230,8 @@ canvas.addEventListener("pointermove", event => {
 });
 for (const name of ["pointerup", "pointercancel", "lostpointercapture"]) canvas.addEventListener(name, () => {drawing = false; previousPoint = null;});
 function resetOutput() {
+  $("digit-raw").textContent = "No transcription yet.";
+  $("digit-ocr-preview").hidden = true; $("digit-ocr-preview").removeAttribute("src");
   $("prediction").classList.add("is-empty");
   $("predicted").textContent = "—"; $("prediction-label").textContent = state.mode === "letters" ? "Waiting for a letter" : "Waiting for a digit";
   $("confidence").textContent = "Your next mark goes here"; $("timing").textContent = "READY WHEN YOU ARE";
@@ -200,24 +249,41 @@ $("clear").addEventListener("click", () => {
   resetDrawing(); resetOutput();
   status(`Canvas cleared. Draw one ${state.mode === "letters" ? "letter" : "digit"} or choose local images.`);
 });
-$("classify").addEventListener("click", () => {
+$("classify").addEventListener("click", async () => {
+  if (state.busy || !state.ready) return;
+  state.busy = true; cancelled = false; setControls();
   try {
-    const input = prepareCanvas(canvas, state.model.inputSide), {result, elapsed} = run(input);
+    const {result, input, elapsed} = await readSource(canvas);
     showPrediction(result, input, "Your drawing", elapsed);
-    status("Prediction ready. Explore the scores or try another character.");
+    status(result.ocr && !result.accepted ? "The reader did not return exactly one digit. Review its original output or try another model."
+      : "Prediction ready. Review the result or try another character.", result.ocr && !result.accepted);
   } catch (error) { status(error.message, true); }
+  finally {state.busy = false; setControls();}
 });
+
+async function readSource(source) {
+  if (!externalReader()) {
+    const input = prepareCanvas(source, state.model.inputSide);
+    return {...run(input), input, identity: null};
+  }
+  const output = await digitReader.read(source, selectedReader(), $("digit-quality").value);
+  return {...output, input: output.prepared};
+}
 
 async function sha256(bytes) {
   return Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256", bytes)), b => b.toString(16).padStart(2, "0")).join("");
 }
 
 async function uploadFile(file, batch) {
-  const model = state.model, mode = state.mode;
+  const model = state.model, mode = state.mode, reader = selectedReader(), profile = $("digit-quality").value;
   const record = {file: file.name, bytes: file.size, batch, recorded_at: new Date().toISOString(),
     mode, model_sha256: model.manifest.sha256, labels: model.labels,
     input_side: model.inputSide, preprocessing: model.manifest.preprocessing,
-    architecture: model.manifest.architecture};
+    architecture: model.manifest.architecture, reader};
+  if (reader !== "local") Object.assign(record, {model_sha256: null, input_side: null,
+    preprocessing: "word-crop-display-v1", architecture: "vision-encoder-decoder", labels: null,
+    model: DIGIT_READERS[reader].model, revision: DIGIT_READERS[reader].revision,
+    trained_by_project: false, profile, precision: profile === "precise" ? "float32" : "int8", decoding: "greedy"});
   const card = document.createElement("button"); card.type = "button"; card.className = "upload-result";
   const name = document.createElement("strong"); name.textContent = file.name;
   const summary = document.createElement("span"); summary.textContent = "Processing…";
@@ -231,20 +297,27 @@ async function uploadFile(file, batch) {
     if (bitmap.width * bitmap.height > 16000000) {bitmap.close(); throw new Error("Image exceeds 16 million pixels.");}
     const imageCanvas = document.createElement("canvas"); imageCanvas.width = bitmap.width; imageCanvas.height = bitmap.height;
     imageCanvas.getContext("2d").drawImage(bitmap, 0, 0); bitmap.close();
-    const input = prepareCanvas(imageCanvas, model.inputSide), {result, elapsed} = run(input);
+    if (cancelled) throw new Error("Digit reading cancelled.");
+    const {input, result, elapsed} = await readSource(imageCanvas);
     record.width = imageCanvas.width; record.height = imageCanvas.height;
-    record.input = Array.from(input); record.input_sha256 = await sha256(input.buffer);
+    if (result.ocr) {
+      record.raw_text = result.rawText; record.accepted = result.accepted;
+      record.prepared_width = input.width; record.prepared_height = input.height;
+      record.input_sha256 = await sha256(input.getContext("2d").getImageData(0, 0, input.width, input.height).data.buffer);
+    } else {record.input = Array.from(input); record.input_sha256 = await sha256(input.buffer);}
     record.predicted = mode === "digits" ? result.digit : result.label;
-    record.predicted_label = result.label; record.class_index = result.digit;
+    record.predicted_label = result.ocr && !result.accepted ? null : result.label; record.class_index = result.digit;
     record.scores = result.scores; record.logits = result.logits;
     record.inference_ms = elapsed;
     previewURL = URL.createObjectURL(file);
     const preview = document.createElement("img"); preview.src = previewURL; preview.alt = `Uploaded image: ${file.name}`;
     preview.onload = () => URL.revokeObjectURL(previewURL); card.prepend(preview);
-    summary.textContent = `${result.label} · ${(result.scores[result.digit] * 100).toFixed(2)}% model score · ${mode}`;
+    summary.textContent = result.ocr ? `${result.accepted ? result.label : "No single digit"} · ${DIGIT_READERS[reader].name} · ${profile}`
+      : `${result.label} · ${(result.scores[result.digit] * 100).toFixed(2)}% model score · ${mode}`;
     const select = async (automatic = false) => {
       if (!automatic && (state.busy || state.loading)) return;
       if (state.mode !== mode && !await activateMode(mode)) return;
+      if (mode === "digits" && (selectedReader() !== reader || $("digit-quality").value !== profile)) changeReader(reader, profile);
       for (const item of $("uploads").children) item.classList.remove("active");
       card.classList.add("active"); showPrediction(result, input, file.name, elapsed, model);
     };
@@ -260,8 +333,8 @@ async function uploadFile(file, batch) {
 function exportRecord() {
   return {schema: 2, exported_at: new Date().toISOString(), origin: location.origin,
     application: "Digit Lab " + APPLICATION_VERSION, application_version: APPLICATION_VERSION,
-    mode: state.mode, model_sha256: state.mode === "words" ? null : state.model.manifest.sha256,
-    preprocessing: state.mode === "words" ? null : state.model.manifest.preprocessing, labels_consulted_by_app: false,
+    mode: state.mode, reader: selectedReader(), model_sha256: state.mode === "words" || externalReader() ? null : state.model.manifest.sha256,
+    preprocessing: state.mode === "words" ? null : externalReader() ? "word-crop-display-v1" : state.model.manifest.preprocessing, labels_consulted_by_app: false,
     note: "Raw model outputs only; each record identifies its own mode, class labels and model hash. No answer key is loaded or used.",
     predictions: state.uploads};
 }
@@ -269,17 +342,19 @@ $("files").addEventListener("change", async event => {
   if (!state.ready || state.busy) return;
   const files = Array.from(event.target.files); if (!files.length) return;
   state.busy = true; setControls();
+  cancelled = false;
   $("uploads-section").hidden = false;
   const batch = crypto.randomUUID();
-  for (let i = 0; i < files.length; i++) {
+  try {for (let i = 0; i < files.length; i++) {
+    if (cancelled) break;
     status(`Processing image ${i + 1} of ${files.length} locally…`);
     await new Promise(resolve => requestAnimationFrame(resolve));
     await uploadFile(files[i], batch);
   }
-  state.busy = false; setControls();
-  event.target.value = "";
-  const errors = state.uploads.filter(r => r.batch === batch && r.error).length;
-  status(`${files.length - errors} of ${files.length} images ready. Select a result to explore it, or export your session.`, errors > 0);
+  const records = state.uploads.filter(r => r.batch === batch), errors = records.filter(r => r.error || r.accepted === false).length;
+  status(`${cancelled ? "Reading cancelled. " : ""}${records.length - errors} of ${files.length} images ready. Select a result to explore it, or export your session.`, errors > 0);
+  } catch (error) {status(error.message, true);}
+  finally {state.busy = false; setControls(); event.target.value = "";}
 });
 $("export").addEventListener("click", () => {
   const url = URL.createObjectURL(new Blob([JSON.stringify(exportRecord(), null, 2)], {type: "application/json"}));
@@ -289,7 +364,7 @@ $("export").addEventListener("click", () => {
 
 initializeViews(); drawingTools.reset();
 document.querySelector('nav a:last-child').addEventListener("click", () => {
-  $(state.mode === "words" ? "word-about" : "network").open = true;
+  $(state.mode === "words" ? "word-about" : externalReader() ? "digit-reader-about" : "network").open = true;
 });
 await activateMode("digits");
 
