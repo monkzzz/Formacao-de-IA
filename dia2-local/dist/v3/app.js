@@ -2,7 +2,7 @@ import {loadModel, predict} from "./inference.js?v=captcha-3";
 import {prepareCanvas, PREPROCESS_VERSION} from "./preprocess.js?v=3.6.0";
 import {createWordsWorkspace} from "./words.js?v=3.2.0";
 import {createDrawingTools} from "./canvas-tools.js?v=3.2.0";
-import {createDigitReader, DIGIT_READERS} from "./digit-readers.js?v=2";
+import {createDigitReader, DIGIT_READERS} from "./digit-readers.js?v=3";
 
 const $ = id => document.getElementById(id);
 const state = {model: null, models: {}, mode: "digits", uploads: [], busy: false, loading: false, ready: false};
@@ -25,8 +25,14 @@ function readerViews() {
   document.querySelector(".scores-heading").hidden = external;
   document.querySelector(".input-preview").hidden = external;
   $("digit-ocr-output").hidden = !external;
-  $("uncertainty").textContent = external ? "An OCR transcription can be wrong. Review the original output below."
+  const singleDigit = DIGIT_READERS[selectedReader()].single_digit;
+  $("uncertainty").textContent = singleDigit ? "Assumes exactly one digit. A conditional digit score is not a calibrated correctness probability."
+    : external ? "An OCR transcription can be wrong. Review the original output below."
     : "A model score is a prediction, not a promise. Ambiguous handwriting can be misread.";
+  $("digit-ocr-output").querySelector(".word-note").textContent = singleDigit
+    ? "Rates the ten single-digit hypotheses directly from the model. The unrestricted character transcription is preserved below for comparison."
+    : "OCR transcription, without a correctness score. Review the original output before using it.";
+  $("digit-ocr-output").querySelector("summary").textContent = singleDigit ? "Unrestricted character transcription" : "Original digit reader output";
   const link = document.querySelector("nav a:last-child");
   link.href = wordMode ? "#word-about" : external ? "#digit-reader-about" : "#network";
   link.textContent = wordMode ? "About the word reader" : external ? "About the digit reader" : "Inside the model";
@@ -162,7 +168,8 @@ function showPrediction(result, input, title, elapsed, model = state.model) {
   $("predicted").textContent = result.label;
   $("prediction-label").textContent = title;
   if (result.ocr) {
-    $("confidence").textContent = result.accepted ? "OCR transcription · no class score" : "No single digit recognized";
+    $("confidence").textContent = result.singleDigit ? `${(result.scores[result.digit] * 100).toFixed(2)}% conditional digit score`
+      : result.accepted ? "OCR transcription · no class score" : "No single digit recognized";
     $("digit-raw").textContent = result.rawText || "(empty output)";
     $("digit-ocr-preview").src = input.toDataURL("image/png");
     $("digit-ocr-preview").hidden = false;
@@ -288,6 +295,9 @@ async function uploadFile(file, batch) {
   if (DIGIT_READERS[reader].engine === "ddddocr") Object.assign(record, {
     model_sha256: DIGIT_READERS[reader].sha256, preprocessing: DIGIT_READERS[reader].preprocessing,
     architecture: "captcha-ctc", precision: "float32", decoding: DIGIT_READERS[reader].decoding});
+  if (DIGIT_READERS[reader].single_digit) Object.assign(record, {architecture: "captcha-ctc-single-digit",
+    labels: Array.from("0123456789"), configuration: DIGIT_READERS[reader].configuration,
+    output_constraint: "exactly one ASCII digit", score_scope: "conditional on one of ten single-digit CTC targets"});
   const card = document.createElement("button"); card.type = "button"; card.className = "upload-result";
   const name = document.createElement("strong"); name.textContent = file.name;
   const summary = document.createElement("span"); summary.textContent = "Processing…";

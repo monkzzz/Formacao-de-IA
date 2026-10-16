@@ -1,0 +1,30 @@
+{
+  "name": "ctc-digits-v1",
+  "selected_before_test": true,
+  "official_challenge_used": false,
+  "decoding": "exact-single-digit-ctc-v1",
+  "current_model_weight": 0,
+  "development": {
+    "count": 1000,
+    "correct": 1000,
+    "accuracy": 1.0,
+    "loss": 0.0009352420850710589,
+    "current_model_weight": 0
+  },
+  "models": {
+    "ddddocr": {
+      "revision": "c40f56f95412e10bcb9bd0bd24411e92f896d238",
+      "url": "https://raw.githubusercontent.com/sml2h3/ddddocr/c40f56f95412e10bcb9bd0bd24411e92f896d238/ddddocr/common.onnx",
+      "file": "common.onnx",
+      "bytes": 54088400,
+      "sha256": "33b5cd351ee94e73a6bf8fa18c415ed8b819b3ffd342e267c30d8ad8334e34e8"
+    },
+    "ddddocr-old": {
+      "revision": "c40f56f95412e10bcb9bd0bd24411e92f896d238",
+      "url": "https://raw.githubusercontent.com/sml2h3/ddddocr/c40f56f95412e10bcb9bd0bd24411e92f896d238/ddddocr/common_old.onnx",
+      "file": "common_old.onnx",
+      "bytes": 13606051,
+      "sha256": "b8f2ad9cbc1f2e3922a6cb9459e30824e7e2467f3fb4fd61420640e34ea0bf68"
+    }
+  }
+}

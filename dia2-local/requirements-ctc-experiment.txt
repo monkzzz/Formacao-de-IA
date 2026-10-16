@@ -1,0 +1,2 @@
+# Optional native parity and independent CTC experiments; browser inference needs no Python ONNX runtime.
+onnxruntime==1.20.1

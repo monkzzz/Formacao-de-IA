@@ -1,4 +1,5 @@
-import {DIGIT_READERS} from "./digit-readers.js?v=2";
+import {DIGIT_READERS} from "./digit-readers.js?v=3";
+import {singleDigitScores} from "./ctc-digits.js?v=1";
 
 let recognizer, loaded;
 let captchaSession, ort, captchaReader, charsets;
@@ -19,6 +20,7 @@ export function decodeCTC(data, dimensions, charset) {
 
 async function captcha(data, identity) {
   const {id, reader, pixels, width} = data;
+  const sourceReader = identity.charset_reader || reader;
   if (!ort) {
     ort = await import("https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.1/dist/ort.wasm.min.mjs");
     ort.env.wasm.numThreads = 1;
@@ -33,7 +35,7 @@ async function captcha(data, identity) {
     if (captchaSession) await captchaSession.release();
     captchaSession = null;
     self.postMessage({id, type: "progress", message: `Downloading ${identity.name} (${identity.download_mb} MB)…`});
-    const response = await fetch(`https://raw.githubusercontent.com/sml2h3/ddddocr/${identity.revision}/ddddocr/${reader === "ddddocr" ? "common.onnx" : "common_old.onnx"}`);
+    const response = await fetch(`https://raw.githubusercontent.com/sml2h3/ddddocr/${identity.revision}/ddddocr/${sourceReader === "ddddocr" ? "common.onnx" : "common_old.onnx"}`);
     if (!response.ok) throw new Error("Could not download the CAPTCHA model. Check your connection and try again.");
     const bytes = await response.arrayBuffer();
     const hash = Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256", bytes)), b => b.toString(16).padStart(2, "0")).join("");
@@ -46,7 +48,12 @@ async function captcha(data, identity) {
   const start = performance.now();
   const outputs = await captchaSession.run({[captchaSession.inputNames[0]]: new ort.Tensor("float32", pixels, [1, 1, 64, width])});
   const output = outputs[captchaSession.outputNames[0]];
-  return {text: decodeCTC(output.data, output.dims, charsets[reader]), elapsed: performance.now() - start};
+  const raw_text = decodeCTC(output.data, output.dims, charsets[sourceReader]);
+  if (identity.single_digit) {
+    const scores = singleDigitScores(output.data, output.dims, charsets[sourceReader]);
+    return {text: String(scores.indexOf(Math.max(...scores))), raw_text, scores, elapsed: performance.now() - start};
+  }
+  return {text: raw_text, elapsed: performance.now() - start};
 }
 self.onmessage = async ({data}) => {
   const {id, image, reader, profile} = data;

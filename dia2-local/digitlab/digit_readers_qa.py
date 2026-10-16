@@ -15,6 +15,11 @@ from .train import ROOT, write_json
 STUB = """
 self.onmessage = ({data}) => {
   self.postMessage({id:data.id,type:'progress',message:'Test digit reader loading'});
+  if(data.reader==='captcha-digits') {
+    setTimeout(()=>self.postMessage({id:data.id,type:'result',text:'7',raw_text:'X',
+      scores:Array.from({length:10},(_,i)=>i===7?.91:.01),elapsed:12}),300);
+    return;
+  }
   const text = data.reader === 'handwritten' ? '<b>7</b>' : data.profile === 'precise' ? 'O' : '7';
   setTimeout(() => self.postMessage({id:data.id,type:'result',text,elapsed:12}), 300);
 };
@@ -87,7 +92,7 @@ def main():
         assert page.locator("#digit-ocr-preview").is_visible()
         checks["drawing_uses_selected_ocr_reader"] = "PASS"
         acceptance = page.evaluate("""async () => {
-          const {digitResult} = await import('./v3/digit-readers.js?v=2');
+          const {digitResult} = await import('./v3/digit-readers.js?v=3');
           return ['0','9','O','12','7.',' 7','7 ',''].map(text=>digitResult(text).accepted);
         }""")
         assert acceptance == [True, True, False, False, False, False, False, False]
@@ -131,7 +136,7 @@ def main():
         checks["batch_cancellation_and_download_error_recovery"] = "PASS"
         page.route("**/digit-reader-worker.js*", lambda route: route.fulfill(body="self.onmessage=()=>{};", content_type="text/javascript"))
         timeout_message = page.evaluate("""async () => {
-          const {createDigitReader} = await import('./v3/digit-readers.js?v=2');
+          const {createDigitReader} = await import('./v3/digit-readers.js?v=3');
           const reader=createDigitReader(()=>{},20);
           try {await reader.read(document.getElementById('drawing'),'printed','standard');}
           catch(error) {return error.message;}
@@ -172,7 +177,16 @@ def main():
             page.locator("#uploads .upload-result").last.click()
             assert page.locator("#digit-reader").input_value() == reader
         checks["captcha_reader_choices_fixed_precision_metadata_and_gallery"] = "PASS"
-        page.locator("#digit-reader").select_option("ddddocr")
+        page.locator("#digit-reader").select_option("captcha-digits")
+        page.locator("#files").set_input_files(fixture())
+        wait_idle(page)
+        record = page.evaluate("digitLab.exportRecord().predictions.at(-1)")
+        assert record["raw_text"] == "X" and record["predicted"] == 7
+        assert record["configuration"] == "ctc-digits-v1" and record["decoding"] == "exact-single-digit-ctc-v1"
+        assert len(record["scores"]) == 10 and abs(sum(record["scores"]) - 1) < .000001
+        assert "conditional digit score" in page.locator("#confidence").inner_text()
+        assert page.locator("#digit-raw").inner_text() == "X" and page.locator("#network").is_hidden()
+        checks["single_digit_classifier_is_separate_from_unrestricted_transcription"] = "PASS"
         screenshots = ROOT / "reports/screenshots"
         screenshots.mkdir(exist_ok=True)
         prefix = Path(args.report).stem

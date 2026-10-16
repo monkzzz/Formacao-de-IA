@@ -1,0 +1,30 @@
+{
+  "scope": "Fresh independent synthetic single-digit development/test experiment, not real CAPTCHA population accuracy",
+  "development_seed": 2026101701,
+  "test_seed": 2026101702,
+  "count_per_stage": 1000,
+  "weight_grid_current_model": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "development_fonts": [
+    "arial.ttf",
+    "times.ttf",
+    "cour.ttf",
+    "tahoma.ttf",
+    "verdana.ttf"
+  ],
+  "test_fonts": [
+    "georgia.ttf",
+    "cambria.ttc",
+    "consola.ttf",
+    "trebuc.ttf",
+    "calibri.ttf"
+  ],
+  "selection": "Maximum development accuracy, then minimum conditional log loss, then closest to equal weights",
+  "decoding": "Exact full-vocabulary CTC likelihood of each single-digit target; conditional normalization across ten digits",
+  "official_challenge_used": false
+}

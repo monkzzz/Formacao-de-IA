@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "scope": "Fresh synthetic browser integration screening, not real CAPTCHA population accuracy",
+  "models": [
+    {
+      "reader": "captcha-digits",
+      "correct": 1,
+      "count": 1,
+      "raw_report": "ctc-digits-v1-local-runtime-smoke-captcha-digits-raw.json",
+      "raw_sha256": "4b8fc145dd14a2484bd46753ef97c79ab7f63406f6e63d7d3ea55627286fb3ee",
+      "cases": [
+        {
+          "file": "sample-000.png",
+          "expected": 0,
+          "predicted": 0,
+          "raw_text": "0",
+          "correct": true,
+          "error": null
+        }
+      ],
+      "errors": 0,
+      "page_errors": [],
+      "request_body_count": 0,
+      "request_methods": [
+        "GET"
+      ]
+    }
+  ],
+  "sources_unchanged": true,
+  "application_version": "3.10.0"
+}

@@ -1,5 +1,10 @@
 # CAPTCHA-specific pretrained readers (v3.9.0)
 
+The [v3.10.0 single-digit classifier](ctc-digits.md) is a separate configuration
+using the same Legacy weights with exact one-digit CTC likelihoods. Its new
+frozen follow-up scored 10/10. The general readers and results below retain
+their original unrestricted-text decoding and scope.
+
 Digits adds **DdddOCR** and **DdddOCR Legacy** alongside the project CNN and
 the earlier TrOCR text-line readers. Both are pretrained for visual CAPTCHAs,
 download on demand and execute entirely in a browser worker. Neither model was

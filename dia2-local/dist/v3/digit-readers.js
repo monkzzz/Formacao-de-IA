@@ -2,6 +2,11 @@ import {prepareWord} from "./words.js?v=3.2.0";
 
 export const DIGIT_READERS = {
   local: {name: "Digit Lab residual CNN", trained_by_project: true},
+  "captcha-digits": {name: "CAPTCHA Digits · single-digit classifier", model: "sml2h3/ddddocr/common_old.onnx", engine: "ddddocr",
+    revision: "c40f56f95412e10bcb9bd0bd24411e92f896d238", download_mb: 14,
+    sha256: "b8f2ad9cbc1f2e3922a6cb9459e30824e7e2467f3fb4fd61420640e34ea0bf68",
+    charset_reader: "ddddocr-old", configuration: "ctc-digits-v1", single_digit: true,
+    preprocessing: "ddddocr-browser64-v1", decoding: "exact-single-digit-ctc-v1", trained_by_project: false},
   ddddocr: {name: "DdddOCR · CAPTCHA", model: "sml2h3/ddddocr/common.onnx", engine: "ddddocr",
     revision: "c40f56f95412e10bcb9bd0bd24411e92f896d238", download_mb: 54,
     sha256: "33b5cd351ee94e73a6bf8fa18c415ed8b819b3ffd342e267c30d8ad8334e34e8",
@@ -69,7 +74,7 @@ export function createDigitReader(announce, timeout = 240000) {
       timer = setTimeout(() => stop("Digit reading timed out. Try Standard quality or check your connection."), timeout);
       try {
         if (!worker) {
-          worker = new Worker(new URL("./digit-reader-worker.js?v=2", import.meta.url), {type: "module"});
+          worker = new Worker(new URL("./digit-reader-worker.js?v=3", import.meta.url), {type: "module"});
           worker.onmessage = ({data}) => {
             if (!pending || data.id !== pending.id) return;
             if (data.type === "progress") {announce(data.message); return;}
@@ -82,7 +87,9 @@ export function createDigitReader(announce, timeout = 240000) {
         worker.postMessage({id, image, pixels, width, reader, profile});
       } catch (error) {stop(error.message);}
     });
-    return {result: digitResult(output.text), elapsed: output.elapsed, prepared,
+    const result = digitResult(output.text);
+    if (identity.single_digit) Object.assign(result, {rawText: output.raw_text, singleDigit: true, scores: output.scores});
+    return {result, elapsed: output.elapsed, prepared,
       identity: {...identity, reader, profile,
         precision: captcha || profile === "precise" ? "float32" : "int8",
         decoding: identity.decoding || "greedy", preprocessing: identity.preprocessing || "word-crop-display-v1"}};

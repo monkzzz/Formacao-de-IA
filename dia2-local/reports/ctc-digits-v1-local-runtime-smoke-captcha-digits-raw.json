@@ -1,0 +1,91 @@
+{
+  "schema": 2,
+  "exported_at": "2026-10-16T21:12:57.715Z",
+  "origin": "http://127.0.0.1:8782",
+  "application": "Digit Lab 3.10.0",
+  "application_version": "3.10.0",
+  "mode": "digits",
+  "reader": "captcha-digits",
+  "model_sha256": "b8f2ad9cbc1f2e3922a6cb9459e30824e7e2467f3fb4fd61420640e34ea0bf68",
+  "preprocessing": "ddddocr-browser64-v1",
+  "labels_consulted_by_app": false,
+  "note": "Raw model outputs only; each record identifies its own mode, class labels and model hash. No answer key is loaded or used.",
+  "predictions": [
+    {
+      "file": "sample-000.png",
+      "bytes": 4740,
+      "batch": "39253c8f-987e-4058-89e8-43d1a35e0bd3",
+      "recorded_at": "2026-10-16T21:12:54.288Z",
+      "mode": "digits",
+      "model_sha256": "b8f2ad9cbc1f2e3922a6cb9459e30824e7e2467f3fb4fd61420640e34ea0bf68",
+      "labels": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "input_side": null,
+      "preprocessing": "ddddocr-browser64-v1",
+      "architecture": "captcha-ctc-single-digit",
+      "reader": "captcha-digits",
+      "model": "sml2h3/ddddocr/common_old.onnx",
+      "revision": "c40f56f95412e10bcb9bd0bd24411e92f896d238",
+      "trained_by_project": false,
+      "profile": "standard",
+      "precision": "float32",
+      "decoding": "exact-single-digit-ctc-v1",
+      "configuration": "ctc-digits-v1",
+      "output_constraint": "exactly one ASCII digit",
+      "score_scope": "conditional on one of ten single-digit CTC targets",
+      "file_sha256": "d350eb992a75c02d3371c4594bcf7a29bcbc833846fa3290f14d8c9fa3b541c6",
+      "width": 158,
+      "height": 117,
+      "raw_text": "0",
+      "accepted": true,
+      "prepared_width": 86,
+      "prepared_height": 64,
+      "input_sha256": "f9931d1df2207b5a4793593807ee80000f707b2bdd44decd35d134f49b0629db",
+      "predicted": 0,
+      "predicted_label": "0",
+      "class_index": 0,
+      "scores": [
+        0.9996393232598851,
+        2.888533931188184e-06,
+        4.602319166606052e-08,
+        6.2172851655146e-07,
+        7.708377126018877e-07,
+        7.60820850874086e-08,
+        4.538413119838523e-05,
+        2.274879429480776e-07,
+        1.2727757010007938e-05,
+        0.0002979341585264058
+      ],
+      "logits": null,
+      "inference_ms": 134.10000002384186
+    }
+  ],
+  "native_conditional_score_max_delta": 1.4985866579712306e-06,
+  "real_drawing_smoke": {
+    "expected": "7",
+    "predicted": "7",
+    "score_display": "99.98% conditional digit score",
+    "scope": "One generated drawing, not an accuracy benchmark"
+  },
+  "scope": "Fresh synthetic browser integration screening, not real CAPTCHA population accuracy",
+  "url": "http://127.0.0.1:8782/",
+  "freeze_sha256": "624ce56aa7a4d1b95fc3e1422b4e3089d523b6f9c6d230570f6883c067eccd36",
+  "page_errors": [],
+  "request_methods": [
+    "GET"
+  ],
+  "request_body_count": 0,
+  "input_file_sha256": {
+    "sample-000.png": "d350eb992a75c02d3371c4594bcf7a29bcbc833846fa3290f14d8c9fa3b541c6"
+  }
+}
