@@ -6,6 +6,7 @@ import hashlib
 import io
 import json
 import posixpath
+import re
 import socket
 import ssl
 from datetime import datetime, timezone
@@ -126,6 +127,9 @@ def main():
         report = {"uploaded_at": datetime.now(timezone.utc).isoformat(), "destination": target,
                   "tls": config.get("tls", True), "files": uploaded,
                   "backup_directory": str(backup.relative_to(ROOT))}
+        version = re.search(r'id="app-version"[^>]*>v([^<]+)',
+                            (ROOT / "dist/index.html").read_text(encoding="utf-8"))
+        report["application_version"] = version.group(1) if version else None
         (ROOT / "reports" / args.report).write_text(json.dumps(report, indent=2), encoding="utf-8")
     except Exception as error:
         # Server text can echo authentication data; print only its category/code.

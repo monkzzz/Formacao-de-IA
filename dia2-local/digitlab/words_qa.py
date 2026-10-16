@@ -45,6 +45,11 @@ def main():
         page.on("request", lambda request: requests.append((request.method, request.url)))
         page.goto(args.url)
         page.wait_for_function("window.digitLab?.state.ready", timeout=60000)
+        version = page.locator("#app-version").inner_text().removeprefix("v")
+        assert version == page.evaluate("digitLab.applicationVersion")
+        assert version == page.evaluate("digitLab.exportRecord().application_version")
+        checks["visible_and_exported_release_version"] = {"status": "PASS", "version": version}
+        report["application_version"] = version
         for mode in ("digits", "letters"):
             page.evaluate("mode => digitLab.activateMode(mode)", mode)
             fixture = json.loads((ROOT / "dist/model/robust" / mode / "parity.json").read_text())
@@ -190,6 +195,7 @@ def main():
             text = live.locator("#word-text").input_value()
             assert text, live.locator("#word-status").inner_text()
             assert live.evaluate("digitLab.wordsContext().metadata.model") == "Xenova/trocr-small-handwritten"
+            assert live.evaluate("digitLab.wordsContext().metadata.application_version") == version
             if args.expected_text:
                 assert text == args.expected_text, text
             checks["real_trocr_smoke"] = {"status": "PASS", "text": text,

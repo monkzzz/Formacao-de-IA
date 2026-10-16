@@ -51,6 +51,12 @@ The trained weights already exist locally in `dist/model/weights.bin`. They and 
 
 ## Words mode
 
+The footer displays the application release, currently **v3.1.0**. Character
+prediction JSON includes `application_version`; Words result metadata also keeps
+that version alongside the model identity. This release number identifies the
+website, separately from model weight hashes and preprocessing versions.
+See [release history and versioning instructions](docs/releases.md).
+
 Choose **Words** to write one word or a short English handwriting line on a wider
 canvas, or upload one cropped PNG, JPEG or WebP image. Select **Read my words**
 after drawing; image selection starts reading automatically. Review and edit the

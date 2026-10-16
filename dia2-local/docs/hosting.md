@@ -37,6 +37,19 @@ deployed release. The latest FTPS deployment record covers all 26 assets.
 
 ## Words release
 
+The visible footer identifies the current application release as **v3.1.0**.
+The [versioned deployment record](../reports/release-3.1.0-ftp-deployment.json),
+[public browser checks](../reports/release-3.1.0-public-qa.json),
+[character regression](../reports/release-3.1.0-character-qa.json) and
+[HTTPS asset checks](../reports/release-3.1.0-http-assets.json) all passed.
+Keep this version consistent with the `application_version` in exported prediction
+JSON. The static `#app-version` text in `dist/index.html` is the version source;
+JavaScript reads it for result metadata. It remains visible if model loading fails.
+Use major/minor/patch releases for incompatible changes, added features and fixes,
+respectively. When changing a browser module or stylesheet, bump its URL version
+as well so cached dependencies cannot hide a new release. Model hashes and the
+preprocessing contract version remain independent identifiers.
+
 Words is deployed at [the public application](https://naoquerosaber.pt/AI/).
 All 29 files passed [FTPS verification](../reports/words-ftp-deployment.json),
 with replaced files backed up, and independent

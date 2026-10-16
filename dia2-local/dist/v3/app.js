@@ -1,12 +1,13 @@
 import {loadModel, predict} from "./inference.js?v=robust-1";
 import {prepareCanvas, PREPROCESS_VERSION} from "./preprocess.js";
-import {createWordsWorkspace} from "./words.js?v=words-1";
+import {createWordsWorkspace} from "./words.js?v=3.1.0";
 
 const $ = id => document.getElementById(id);
 const state = {model: null, models: {}, mode: "digits", uploads: [], busy: false, loading: false, ready: false};
 const canvas = $("drawing"), ctx = canvas.getContext("2d", {willReadFrequently: true});
 let drawing = false, previousPoint = null;
-const words = createWordsWorkspace();
+const APPLICATION_VERSION = $("app-version").textContent.trim().slice(1);
+const words = createWordsWorkspace(APPLICATION_VERSION);
 const MODES = ["digits", "letters", "words"];
 
 function displayMode(mode) {
@@ -236,7 +237,8 @@ async function uploadFile(file, batch) {
 
 function exportRecord() {
   return {schema: 2, exported_at: new Date().toISOString(), origin: location.origin,
-    application: "Digit Lab v3 words-1", mode: state.mode, model_sha256: state.mode === "words" ? null : state.model.manifest.sha256,
+    application: "Digit Lab " + APPLICATION_VERSION, application_version: APPLICATION_VERSION,
+    mode: state.mode, model_sha256: state.mode === "words" ? null : state.model.manifest.sha256,
     preprocessing: PREPROCESS_VERSION, labels_consulted_by_app: false,
     note: "Raw model outputs only; each record identifies its own mode, class labels and model hash. No answer key is loaded or used.",
     predictions: state.uploads};
@@ -271,4 +273,5 @@ await activateMode("digits");
 
 // A narrow QA surface invokes the same functions and weights as the interface.
 window.digitLab = {state, predict: input => predict(state.model, Float32Array.from(input)),
-  prepareCanvas, exportRecord, activateMode, wordsContext: words.context, version: PREPROCESS_VERSION};
+  prepareCanvas, exportRecord, activateMode, wordsContext: words.context,
+  applicationVersion: APPLICATION_VERSION, version: PREPROCESS_VERSION};

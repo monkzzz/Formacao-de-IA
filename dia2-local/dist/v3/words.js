@@ -43,7 +43,7 @@ export function prepareWord(source) {
   return prepared;
 }
 
-export function createWordsWorkspace() {
+export function createWordsWorkspace(applicationVersion) {
   const canvas = $("word-drawing"), context = canvas.getContext("2d", {willReadFrequently: true});
   let worker, pending, timer, sequence = 0, drawing = false, previous, busy = false, active = false;
   let originalText = "", sourceName = "Your drawing", metadata = null;
@@ -109,7 +109,8 @@ export function createWordsWorkspace() {
     try {
       const result = await recognize(prepared.toDataURL("image/png"));
       if (!result.text) throw new Error("No text was recognized. Try a clearer word with a little space around it.");
-      originalText = result.text; metadata = {model: result.model, revision: result.revision, source: sourceName};
+      originalText = result.text; metadata = {model: result.model, revision: result.revision,
+        source: sourceName, application_version: applicationVersion};
       $("word-text").value = result.text; $("word-raw").textContent = result.text;
       $("word-timing").textContent = `${(result.elapsed / 1000).toFixed(1)} S / READING`;
       announce("Transcription ready. Check the text, make any corrections, then copy or download it.");

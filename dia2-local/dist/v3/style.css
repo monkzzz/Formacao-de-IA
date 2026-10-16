@@ -4,6 +4,8 @@
   font-family:'Segoe UI Variable','Segoe UI',Arial,sans-serif; color:var(--ink); background:var(--bg);
   font-synthesis:none; scroll-behavior:smooth; scroll-padding-top:28px;
 }
+.release-label { display:flex; align-items:center; gap:8px; }
+#app-version { display:inline-block; padding:5px 8px; border:1px solid var(--line); border-radius:6px; color:var(--ink); font:10px var(--mono); white-space:nowrap; }
 * { box-sizing:border-box; }
 body { margin:0; }
 button,input { font:inherit; }
