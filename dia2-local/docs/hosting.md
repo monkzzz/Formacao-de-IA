@@ -1,5 +1,9 @@
 # Website Hosting
 
+For v3.4.2, deploy both Konami assets, `v3/helper.js` and all three SNES frame
+assets before `index.html`. This updates the shared module import and frame CSS
+for expanded mobile layouts. The separate ROM is unchanged.
+
 For v3.4.1, deploy `v3/konami.js` and `v3/helper.js` before `index.html`.
 The helper imports the same versioned arcade module as the entry page. ROM
 and emulator frame assets from v3.4.0 remain required.

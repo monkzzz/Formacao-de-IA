@@ -26,3 +26,22 @@
   cursor: pointer;
 }
 .konami-dialog button:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+.konami-toolbar { display: flex; justify-content: center; gap: 10px; padding: 0 10px; }
+.konami-dialog.is-expanded, .konami-dialog:fullscreen {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+}
+.konami-dialog.is-expanded[open], .konami-dialog:fullscreen { display: flex; flex-direction: column; }
+.konami-dialog.is-expanded h2, .konami-dialog:fullscreen h2 { display: none; }
+.konami-dialog.is-expanded .konami-toolbar, .konami-dialog:fullscreen .konami-toolbar { flex-shrink: 0; padding: 6px; }
+.konami-dialog.is-expanded button, .konami-dialog:fullscreen button { padding: 10px 16px; font-size: 14px; }
+.konami-dialog.is-expanded iframe, .konami-dialog:fullscreen iframe { flex: 1; min-height: 0; height: 0; margin: 0; }

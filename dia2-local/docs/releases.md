@@ -1,5 +1,15 @@
 # Application releases
 
+## v3.4.2 — Expanded arcade on phones
+
+Phones open the arcade across the available browser viewport. **Expand game**
+uses native fullscreen when available and retains a CSS expanded view otherwise.
+Portrait and landscape layouts keep exit controls visible and give remaining
+space to the emulator. The frame no longer applies nested viewport height limits.
+
+Mobile Edge emulation passed portrait, landscape, unsupported-fullscreen fallback,
+typed unlock, Zelda startup and close/reopen. Physical iPhone Safari is NOT RUN.
+
 ## v3.4.1 — Typed arcade unlock in Scopedog
 
 Send `up up down down left right left right b a` to Scopedog to open the arcade

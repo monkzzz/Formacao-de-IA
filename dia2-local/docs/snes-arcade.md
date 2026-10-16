@@ -1,5 +1,14 @@
 # Secret SNES arcade
 
+Phones open in an expanded browser-sized view. **Expand game** also enables this
+on larger screens and requests native fullscreen where supported. **Exit expanded
+view** restores the dialog; **Back to the lab** closes it. Rotate the phone for
+landscape play. Safe-area padding protects the toolbar around notches.
+Browser controls may remain visible on iPhone: the fallback fills the available
+webpage viewport without relying on native fullscreen. Portrait, landscape and
+unsupported-fullscreen fallback were checked in mobile Edge emulation; physical
+iPhone Safari remains NOT RUN.
+
 On ROG Ally, set Command Center's Control Mode to **Gamepad**, tap the game,
 then press **Menu / Start**. In Auto/Desktop mode the browser may receive mouse
 and keyboard actions instead of gamepad input. Configure player 1 in the emulator

@@ -1,5 +1,5 @@
 import {answerQuestion} from "./helper-knowledge.js?v=3.3.0";
-import {openArcade} from "./konami.js?v=4";
+import {openArcade} from "./konami.js?v=5";
 
 const launcher = document.getElementById("helper-launcher");
 const panel = document.getElementById("scopedog");

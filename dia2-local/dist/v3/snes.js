@@ -23,6 +23,7 @@ function startGame(url, name) {
   document.getElementById("picker").hidden = true;
   document.getElementById("game").hidden = false;
   reset.hidden = false;
+  document.body.classList.add("is-playing");
   status.textContent = "Loading Zelda… If loading fails, stop and try again.";
   Object.assign(window, {
     EJS_player: "#game",
@@ -39,7 +40,10 @@ function startGame(url, name) {
   });
   const loader = document.createElement("script");
   loader.src = window.EJS_pathtodata + "loader.js";
-  loader.onerror = () => { status.textContent = "Could not load the emulator. Check your connection, then stop and try again."; };
+  loader.onerror = () => {
+    document.body.classList.remove("is-playing");
+    status.textContent = "Could not load the emulator. Check your connection, then stop and try again.";
+  };
   document.body.append(loader);
 }
 play.addEventListener("click", () => {

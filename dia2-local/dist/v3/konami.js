@@ -7,6 +7,7 @@ export function openArcade() {
   if (dialog.open) return;
   entered = [];
   previousFocus = document.activeElement;
+  setExpanded(matchMedia("(max-width: 700px), (max-height: 500px)").matches);
   dialog.showModal();
   frame.src = new URL("./snes.html", import.meta.url).href;
 }
@@ -21,15 +22,36 @@ frame.title = "SNES emulator and local ROM picker";
 frame.allow = "autoplay; fullscreen; gamepad";
 frame.setAttribute("allowfullscreen", "");
 const close = document.createElement("button");
+const expand = document.createElement("button");
+expand.type = "button";
+function setExpanded(expanded) {
+  dialog.classList.toggle("is-expanded", expanded);
+  expand.textContent = expanded ? "Exit expanded view" : "Expand game";
+  expand.setAttribute("aria-pressed", String(expanded));
+}
+setExpanded(false);
+expand.addEventListener("click", async () => {
+  const expanded = !dialog.classList.contains("is-expanded");
+  setExpanded(expanded);
+  if (expanded && document.fullscreenEnabled && dialog.requestFullscreen) {
+    try { await dialog.requestFullscreen(); } catch { /* Browser-sized view remains available. */ }
+  } else if (!expanded && document.fullscreenElement === dialog) {
+    try { await document.exitFullscreen(); } catch { /* Preserve the usable dialog. */ }
+  }
+});
 close.type = "button";
 close.textContent = "Back to the lab";
 close.addEventListener("click", () => dialog.close());
-dialog.append(heading, close, frame);
+const toolbar = document.createElement("div");
+toolbar.className = "konami-toolbar";
+toolbar.append(expand, close);
+dialog.append(heading, toolbar, frame);
 dialog.addEventListener("close", () => {
   // Destroy the frame to stop CPU use, audio and game input on exit.
   frame.src = "about:blank";
   frame.blur();
   previousFocus?.focus({preventScroll: true});
+  if (document.fullscreenElement === dialog) document.exitFullscreen().catch(() => {});
 });
 window.addEventListener("message", event => {
   if (event.origin !== location.origin || event.source !== frame.contentWindow) return;
