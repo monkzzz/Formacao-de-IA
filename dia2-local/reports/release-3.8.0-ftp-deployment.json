@@ -1,0 +1,40 @@
+{
+  "uploaded_at": "2026-10-16T20:22:14.996930+00:00",
+  "destination": "/",
+  "tls": true,
+  "files": [
+    {
+      "file": "v3/digit-reader-worker.js",
+      "bytes": 1547,
+      "sha256": "33504e07936a8347f0e6b6dab98bf36444d3f15bb72350a97edbf820cd7e4ac9"
+    },
+    {
+      "file": "v3/digit-readers.js",
+      "bytes": 3134,
+      "sha256": "1fd7ca64d63ee5b06d5e8b72e3b7622a851997d13c140e765fafaa2e89d9a485"
+    },
+    {
+      "file": "v3/helper-knowledge.js",
+      "bytes": 17496,
+      "sha256": "b2fb0a47711b90c3a483dd178eab7a9e339ec1e084e54974c86ca7ae1631253a"
+    },
+    {
+      "file": "v3/helper.js",
+      "bytes": 5367,
+      "sha256": "e23c21a925129a02e4e705627920501183df1b9b62b9bce22edd7810496af507"
+    },
+    {
+      "file": "v3/app.js",
+      "bytes": 22799,
+      "sha256": "89140739f1dd8140a2ea1a41e20761076252594f6f38c085e30f0f1aae98336b"
+    },
+    {
+      "file": "index.html",
+      "bytes": 20628,
+      "sha256": "f6a36eda57422dbaa935b7b3926c04f26f9217c4ff0e5139d130061cc9ca3614"
+    }
+  ],
+  "backup_directory": "artifacts\\ftp-backup-20261016T202200Z",
+  "application_version": "3.8.0",
+  "scope": "selected-files"
+}

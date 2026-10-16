@@ -1,5 +1,32 @@
 # Website Hosting
 
+## v3.8.0 selectable digit readers
+
+Release v3.8.0 is published at [Digit Lab](https://naoquerosaber.pt/AI/).
+The scoped FTPS deployment uploaded `v3/digit-reader-worker.js`,
+`v3/digit-readers.js`, `v3/helper-knowledge.js`, `v3/helper.js`, `v3/app.js`
+and `index.html`, switching HTML last. Replaced files were backed up locally;
+all six uploaded hashes passed verification. All 52 public static assets
+matched their local SHA-256 hashes, including earlier model and arcade assets.
+JavaScript MIME types also passed.
+
+- [Scoped FTPS deployment](../reports/release-3.8.0-ftp-deployment.json)
+- [All public asset hashes and MIME types](../reports/release-3.8.0-http-assets.json)
+- [Public digit reader integration and both real Standard OCR models](../reports/release-3.8.0-public-digit-readers-qa.json)
+- [Public character parity, 36 uploads and mixed-export regression](../reports/release-3.8.0-public-character-qa.json)
+- [Public Words regression, 19 groups](../reports/release-3.8.0-public-words-qa.json)
+- [Public helper regression, 6 groups](../reports/release-3.8.0-public-helper-qa.json)
+
+The default digit CNN and Letters/Words sources and weights are unchanged.
+TrOCR alternatives download from Hugging Face when requested and execute in the
+browser. See [reader identities and limitations](digit-readers.md). No official
+challenge inputs were used in this deployment's checks; no new CAPTCHA accuracy
+claim is made.
+
+All 14 digit reader browser groups passed. Both actual Standard readers
+transcribed a synthetic `7` correctly on the public origin. This confirms loading
+and execution, not CAPTCHA accuracy. Real FP32 OCR inference was not rerun.
+
 ## v3.7.0 residual digits
 
 Digits load `model/captcha-v3/digits/`; retain all earlier model folders.

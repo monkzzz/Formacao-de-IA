@@ -1,4 +1,4 @@
-# Selectable digit readers (local v3.8.0)
+# Selectable digit readers (v3.8.0)
 
 Digits retains the project-trained residual CNN as its default and adds two
 pretrained OCR alternatives. Select **Digit model**, choose Standard or Full
@@ -75,7 +75,8 @@ loading, blank rejection, per-model exports, strict acceptance, safe text, galle
 restoration, cancellation, download failure recovery, modes and mobile overflow.
 It saves desktop/mobile screenshots under a report-specific prefix. These checks
 do not establish CAPTCHA accuracy. Official challenge files and historical
-evaluation reports are excluded. Public deployment is **NOT RUN** for this change.
+evaluation reports are excluded. Public deployment passed; see the separate
+[deployment record and public verification](hosting.md#v380-selectable-digit-readers).
 
 Recorded local checks on 2026-10-16:
 
@@ -94,3 +95,9 @@ Both Standard models transcribed the synthetic seven as `7`. This is an
 integration smoke check, not evidence of improved CAPTCHA accuracy. Desktop and
 mobile screenshots were captured separately; the mobile layout was visually
 inspected. Previous release and challenge reports remain unchanged.
+
+The [public digit reader checks](../reports/release-3.8.0-public-digit-readers-qa.json)
+also passed all 14 groups and real Standard-model smoke tests for both readers.
+Both transcribed the same synthetic `7` correctly from the deployed origin.
+All 52 public assets matched local hashes; character, Words and helper regressions
+passed separately. See [all public evidence](hosting.md#v380-selectable-digit-readers).
