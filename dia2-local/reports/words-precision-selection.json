@@ -1,0 +1,26 @@
+{
+  "status": "FROZEN_BEFORE_TEST",
+  "selected_candidate": "small:3:direct",
+  "model": "Xenova/trocr-small-handwritten",
+  "revision": "2432e24d184b1d964d07ed04f5d9e21d31a59141",
+  "num_beams": 3,
+  "preparation": "direct original upload crop; skip display-canvas round trip",
+  "selection_report": "words-precision-validation.json",
+  "selection_basis": "Lowest human-line character error among four candidates; retain small download. Synthetic case-sensitive word exact matches unchanged at 5/8.",
+  "validation_samples": {
+    "human_lines": 8,
+    "synthetic_words": 8
+  },
+  "baseline": "small:1:legacy",
+  "test_plan": {
+    "split": "Teklia/IAM-line test",
+    "first_rows": 8,
+    "synthetic_words": 8,
+    "candidates": [
+      "small:1:legacy",
+      "small:3:direct"
+    ]
+  },
+  "training_performed": false,
+  "note": "Limited English sample; not an official full-dataset metric, multilingual benchmark, or accuracy claim for arbitrary user drawings."
+}

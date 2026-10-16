@@ -51,11 +51,24 @@ The trained weights already exist locally in `dist/model/weights.bin`. They and 
 
 ## Words mode
 
-The footer displays the application release, currently **v3.1.0**. Character
+The footer displays the application release, currently **v3.2.0**. Character
 prediction JSON includes `application_version`; Words result metadata also keeps
 that version alongside the model identity. This release number identifies the
 website, separately from model weight hashes and preprocessing versions.
 See [release history and versioning instructions](docs/releases.md).
+
+Use **Eraser** to remove individual marks, adjust **Eraser size**, and select
+**Pen** to write again. **Undo** and **Redo** work in Digits, Letters and Words,
+including after Clear. With the canvas focused, use Ctrl+Z and Ctrl+Shift+Z
+(or Ctrl+Y). Read the handwriting again after editing it.
+
+**v3.2.0 is live.** The [final public interface checks](reports/release-3.2.0-final-public-ui-qa.json),
+[real reading-profile checks](reports/release-3.2.0-public-qa.json),
+[digit/letter regression](reports/release-3.2.0-public-character-qa.json),
+[helper checks](reports/release-3.2.0-public-helper-qa.json) and
+[all 30 public asset hashes](reports/release-3.2.0-final-http-assets.json) passed.
+The Python suite passed all 16 tests. The word model remains pretrained; this
+release changes weight precision and drawing tools, with no additional training.
 
 Choose **Words** to write one word or a short English handwriting line on a wider
 canvas, or upload one cropped PNG, JPEG or WebP image. Select **Read my words**
@@ -67,19 +80,22 @@ or inference, and leaving Words mode cancels an active read.
 This optional mode uses the pretrained [TrOCR Small handwriting model](https://huggingface.co/microsoft/trocr-small-handwritten),
 fine-tuned on IAM English handwriting, through [Xenova's ONNX conversion](https://huggingface.co/Xenova/trocr-small-handwritten)
 at revision `2432e24d184b1d964d07ed04f5d9e21d31a59141` and Transformers.js 2.17.2.
-The first read downloads approximately 65 MB of quantized weights from Hugging Face
+Full precision is the default and downloads approximately 250 MB of weights;
+Standard downloads approximately 65 MB of compact weights from Hugging Face
 plus the JavaScript/WebAssembly runtime from jsDelivr. The browser may cache these
 files; offline use is not guaranteed. No account, API key, Python inference server
 or additional local training is needed. Image pixels and text stay on the device.
 
-Words has **no measured accuracy claim** on this website. It can add, omit or
+A limited, separately sampled English handwriting comparison favored full-precision
+weights; see [the measured results and limitations](docs/word-precision.md).
+This does not establish general word accuracy. It can add, omit or
 misread text; full pages, multiple lines and other languages are outside this
 mode's scope. Digit/letter benchmark scores and CNN activation displays do not
 apply to this separate sequence model. Existing character inference is unchanged.
 
 See [the Words implementation and validation notes](docs/words.md).
 
-**Release status:** Words is live on the [public website](https://naoquerosaber.pt/AI/).
+**Original Words release evidence:** Words was deployed to the [public website](https://naoquerosaber.pt/AI/).
 All 14 [public Words browser checks](reports/public-words-release-qa.json), the
 [public digit/letter regression](reports/public-words-character-regression.json),
 and all six [public helper groups](reports/public-words-helper-qa.json) passed.
@@ -207,6 +223,6 @@ The application has been uploaded over FTPS and verified on the public HTTPS web
 
 ## Attribution
 
-Based on the Day 2 exercise requirements by Vinicius Canonici and Hugo Gomes; see the [course license](../LICENSE.md). MNIST is credited to Yann LeCun, Corinna Cortes and collaborators. The reference application was examined for design ideas; this implementation and its trained parameters were created independently.
+Based on the Day 2 exercise requirements by Vinicius Canonici and Hugo Gomes; see the [course license](../LICENSE.md). MNIST is credited to Yann LeCun, Corinna Cortes and collaborators. The reference application was examined for design ideas; the digit/letter CNN implementation and its trained parameters were created independently. Words uses Microsoft's pretrained TrOCR model through Xenova's browser conversion; it was not trained by this project.
 
 EMNIST: Cohen, Afshar, Tapson, and van Schaik (2017), [EMNIST: an extension of MNIST to handwritten letters](https://arxiv.org/abs/1702.05373), distributed by [NIST](https://www.nist.gov/itl/products-and-services/emnist-dataset).

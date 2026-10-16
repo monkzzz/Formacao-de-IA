@@ -1,0 +1,545 @@
+{
+  "status": "PASS",
+  "split": "validation",
+  "fixtures": {
+    "dataset": "Teklia/IAM-line",
+    "dataset_api": "https://datasets-server.huggingface.co/rows?dataset=Teklia/IAM-line&config=default",
+    "split": "validation",
+    "human_count": 8,
+    "offset": 0,
+    "stride": 100,
+    "synthetic_font": "Segoe Print",
+    "note": "Small deterministic subset; synthetic words are not human handwriting. No training.",
+    "samples": [
+      {
+        "id": "iam-validation-0",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\validation\\offset-0-stride-100-count-8\\iam-0000.jpg",
+        "expected": "It was a splendid interpretation of the",
+        "sha256": "3eaed13b59f3a22eb239d6131de489833ebc80a6fef916f174c5675a00f65f50"
+      },
+      {
+        "id": "iam-validation-100",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\validation\\offset-0-stride-100-count-8\\iam-0100.jpg",
+        "expected": "with the fringes ( the tsitsits ) .",
+        "sha256": "eaa3265a72556160573d8dca4cf346312675cba7dd80f959d43c601229f8dd37"
+      },
+      {
+        "id": "iam-validation-200",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\validation\\offset-0-stride-100-count-8\\iam-0200.jpg",
+        "expected": "fascinating behaviour mysteries are peculiar",
+        "sha256": "1fed754bf3121e2aa18deb4d17049704132f6a60af5f290ca2563ded12d50365"
+      },
+      {
+        "id": "iam-validation-300",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\validation\\offset-0-stride-100-count-8\\iam-0300.jpg",
+        "expected": "encounters a certain measure of novelty .",
+        "sha256": "d74d8afa44d270f80f20109429e01df946f5831e3c5baccc720a20e088eca252"
+      },
+      {
+        "id": "iam-validation-400",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\validation\\offset-0-stride-100-count-8\\iam-0400.jpg",
+        "expected": "went on to describe the landing of the Thetan colony",
+        "sha256": "0f1f534913a7b7939b0a77c2f0e83b5b982fc622c384a1aedc023591fdb0a037"
+      },
+      {
+        "id": "iam-validation-500",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\validation\\offset-0-stride-100-count-8\\iam-0500.jpg",
+        "expected": "NO ONE has ever satisfactorily explained how a",
+        "sha256": "595a42e4e8cb8252911aee9395927d1ef49a91baf242b3d72a349efd48a5500b"
+      },
+      {
+        "id": "iam-validation-600",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\validation\\offset-0-stride-100-count-8\\iam-0600.jpg",
+        "expected": "his position by lighting bonfires or hoisting a",
+        "sha256": "f0362b5e8b58feecbca8c33a341a2891f3675a6f92fc27a5a668a71a17e1366d"
+      },
+      {
+        "id": "iam-validation-700",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\validation\\offset-0-stride-100-count-8\\iam-0700.jpg",
+        "expected": "Practically a shore job . Cheer up . \" She wiped",
+        "sha256": "ca0c14f5e8360ed1558700ba1910b913ba6b101f5788adddc6820bc957e61f65"
+      },
+      {
+        "id": "synthetic-validation-0",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\validation\\offset-0-stride-100-count-8\\synthetic-00.png",
+        "expected": "Hello",
+        "sha256": "aac8c4d8093dfe58bff422295eed326b8e0ebcb3c7f07a3b111cbdea95c64db3"
+      },
+      {
+        "id": "synthetic-validation-1",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\validation\\offset-0-stride-100-count-8\\synthetic-01.png",
+        "expected": "World",
+        "sha256": "bce43206aee74feff255f0f89c43c587af3a26bce5e5ae73b2076c4435b09e7c"
+      },
+      {
+        "id": "synthetic-validation-2",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\validation\\offset-0-stride-100-count-8\\synthetic-02.png",
+        "expected": "Machine",
+        "sha256": "9098ecb171cd27883adfc3d610b1819b64770295b37cecce224c7d66e7240b2e"
+      },
+      {
+        "id": "synthetic-validation-3",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\validation\\offset-0-stride-100-count-8\\synthetic-03.png",
+        "expected": "Learning",
+        "sha256": "97157b786dbb6785235a5751bc038337ef87909d36e9d2a478d7488d9e8be4a7"
+      },
+      {
+        "id": "synthetic-validation-4",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\validation\\offset-0-stride-100-count-8\\synthetic-04.png",
+        "expected": "Morning",
+        "sha256": "9b70dd54e54bb16ec102ea777fa717ed1af8c28a96bc4aea6172e5602593a77a"
+      },
+      {
+        "id": "synthetic-validation-5",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\validation\\offset-0-stride-100-count-8\\synthetic-05.png",
+        "expected": "Browser",
+        "sha256": "87b5f0b95f28cadbe4882220833d822a41fe431ec8db43d0199e6bbeef35e4fe"
+      },
+      {
+        "id": "synthetic-validation-6",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\validation\\offset-0-stride-100-count-8\\synthetic-06.png",
+        "expected": "Simple",
+        "sha256": "3f3c3709c21051ee235fab5d7b9c23a6321efdc3c0c08596963f31f7bf18460c"
+      },
+      {
+        "id": "synthetic-validation-7",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\validation\\offset-0-stride-100-count-8\\synthetic-07.png",
+        "expected": "Writing",
+        "sha256": "9d2edf11217698b98688509b0d18fab306463ba4c0722ec7a2a26e148c08cb41"
+      }
+    ]
+  },
+  "note": "Small sample comparison, not a full IAM benchmark or independent training-set audit.",
+  "candidates": {
+    "small:1:legacy": {
+      "model": "Xenova/trocr-small-handwritten",
+      "revision": "2432e24d184b1d964d07ed04f5d9e21d31a59141",
+      "beams": 1,
+      "preparation": "legacy",
+      "quantized": true,
+      "load_seconds": 17.703000000008615,
+      "rows": [
+        {
+          "id": "iam-validation-0",
+          "kind": "human-line",
+          "expected": "It was a splendid interpretation of the",
+          "predicted": "It was a splendid interpretation of that",
+          "elapsed_ms": 1016.6999999880791
+        },
+        {
+          "id": "iam-validation-100",
+          "kind": "human-line",
+          "expected": "with the fringes ( the tsitsits ) .",
+          "predicted": "with the fringes ( the tsitsits ).",
+          "elapsed_ms": 1126.4000000059605
+        },
+        {
+          "id": "iam-validation-200",
+          "kind": "human-line",
+          "expected": "fascinating behaviour mysteries are peculiar",
+          "predicted": "fascinating behaviour mysteries are peculiar",
+          "elapsed_ms": 838.2000000029802
+        },
+        {
+          "id": "iam-validation-300",
+          "kind": "human-line",
+          "expected": "encounters a certain measure of novelty .",
+          "predicted": "encounters a certain measure of novelty.",
+          "elapsed_ms": 1000.2999999970198
+        },
+        {
+          "id": "iam-validation-400",
+          "kind": "human-line",
+          "expected": "went on to describe the landing of the Thetan colony",
+          "predicted": "went on to describe the handling of the Theatre colony",
+          "elapsed_ms": 933.8000000119209
+        },
+        {
+          "id": "iam-validation-500",
+          "kind": "human-line",
+          "expected": "NO ONE has ever satisfactorily explained how a",
+          "predicted": "NO ONE has won satisfactorily explained how a",
+          "elapsed_ms": 1120.800000011921
+        },
+        {
+          "id": "iam-validation-600",
+          "kind": "human-line",
+          "expected": "his position by lighting bonfires or hoisting a",
+          "predicted": "his position by lighting bonfires or hoisting a",
+          "elapsed_ms": 974.7000000029802
+        },
+        {
+          "id": "iam-validation-700",
+          "kind": "human-line",
+          "expected": "Practically a shore job . Cheer up . \" She wiped",
+          "predicted": "Practically a share job. Cheer up. \" She wiped",
+          "elapsed_ms": 904.4000000059605
+        },
+        {
+          "id": "synthetic-validation-0",
+          "kind": "synthetic-word",
+          "expected": "Hello",
+          "predicted": "Hello",
+          "elapsed_ms": 750.0999999940395
+        },
+        {
+          "id": "synthetic-validation-1",
+          "kind": "synthetic-word",
+          "expected": "World",
+          "predicted": "world",
+          "elapsed_ms": 806.5
+        },
+        {
+          "id": "synthetic-validation-2",
+          "kind": "synthetic-word",
+          "expected": "Machine",
+          "predicted": "Machine",
+          "elapsed_ms": 778.7999999970198
+        },
+        {
+          "id": "synthetic-validation-3",
+          "kind": "synthetic-word",
+          "expected": "Learning",
+          "predicted": "Learning",
+          "elapsed_ms": 803.5999999940395
+        },
+        {
+          "id": "synthetic-validation-4",
+          "kind": "synthetic-word",
+          "expected": "Morning",
+          "predicted": "Morning",
+          "elapsed_ms": 778
+        },
+        {
+          "id": "synthetic-validation-5",
+          "kind": "synthetic-word",
+          "expected": "Browser",
+          "predicted": "Browser",
+          "elapsed_ms": 875.3999999910593
+        },
+        {
+          "id": "synthetic-validation-6",
+          "kind": "synthetic-word",
+          "expected": "Simple",
+          "predicted": "simple",
+          "elapsed_ms": 873.1000000089407
+        },
+        {
+          "id": "synthetic-validation-7",
+          "kind": "synthetic-word",
+          "expected": "Writing",
+          "predicted": "writing",
+          "elapsed_ms": 798.8000000119209
+        }
+      ],
+      "metrics": {
+        "human-line": {
+          "samples": 8,
+          "character_error_rate": 0.045454545454545456,
+          "word_error_rate": 0.203125,
+          "exact_matches": 2,
+          "mean_inference_ms": 989.4125000033528
+        },
+        "synthetic-word": {
+          "samples": 8,
+          "character_error_rate": 0.057692307692307696,
+          "word_error_rate": 0.375,
+          "exact_matches": 5,
+          "mean_inference_ms": 808.0374999996275
+        }
+      }
+    },
+    "small:3:legacy": {
+      "model": "Xenova/trocr-small-handwritten",
+      "revision": "2432e24d184b1d964d07ed04f5d9e21d31a59141",
+      "beams": 3,
+      "preparation": "legacy",
+      "quantized": true,
+      "load_seconds": 0.01600000000325963,
+      "rows": [
+        {
+          "id": "iam-validation-0",
+          "kind": "human-line",
+          "expected": "It was a splendid interpretation of the",
+          "predicted": "It was a splendid interpretation of that",
+          "elapsed_ms": 1541.800000011921
+        },
+        {
+          "id": "iam-validation-100",
+          "kind": "human-line",
+          "expected": "with the fringes ( the tsitsits ) .",
+          "predicted": "with the fringes ( the twists ).",
+          "elapsed_ms": 1612.0999999940395
+        },
+        {
+          "id": "iam-validation-200",
+          "kind": "human-line",
+          "expected": "fascinating behaviour mysteries are peculiar",
+          "predicted": "fascinating behaviour mysteries are peculiar",
+          "elapsed_ms": 1286.1000000089407
+        },
+        {
+          "id": "iam-validation-300",
+          "kind": "human-line",
+          "expected": "encounters a certain measure of novelty .",
+          "predicted": "encounters a certain measure of novelty.",
+          "elapsed_ms": 1369.7000000029802
+        },
+        {
+          "id": "iam-validation-400",
+          "kind": "human-line",
+          "expected": "went on to describe the landing of the Thetan colony",
+          "predicted": "went on to decide the landing of the Theatre colony",
+          "elapsed_ms": 1638.1000000089407
+        },
+        {
+          "id": "iam-validation-500",
+          "kind": "human-line",
+          "expected": "NO ONE has ever satisfactorily explained how a",
+          "predicted": "NO ONE has won satisfactorily explained how a",
+          "elapsed_ms": 1726.6000000089407
+        },
+        {
+          "id": "iam-validation-600",
+          "kind": "human-line",
+          "expected": "his position by lighting bonfires or hoisting a",
+          "predicted": "his position by lighting bonfires or hoisting a",
+          "elapsed_ms": 1525
+        },
+        {
+          "id": "iam-validation-700",
+          "kind": "human-line",
+          "expected": "Practically a shore job . Cheer up . \" She wiped",
+          "predicted": "Practically a share job. Cheer up. \" She wiped",
+          "elapsed_ms": 1914.5999999940395
+        },
+        {
+          "id": "synthetic-validation-0",
+          "kind": "synthetic-word",
+          "expected": "Hello",
+          "predicted": "Hello",
+          "elapsed_ms": 1054.2000000029802
+        },
+        {
+          "id": "synthetic-validation-1",
+          "kind": "synthetic-word",
+          "expected": "World",
+          "predicted": "world",
+          "elapsed_ms": 922.9000000059605
+        },
+        {
+          "id": "synthetic-validation-2",
+          "kind": "synthetic-word",
+          "expected": "Machine",
+          "predicted": "Machine",
+          "elapsed_ms": 865.5999999940395
+        },
+        {
+          "id": "synthetic-validation-3",
+          "kind": "synthetic-word",
+          "expected": "Learning",
+          "predicted": "Learning",
+          "elapsed_ms": 869.7999999970198
+        },
+        {
+          "id": "synthetic-validation-4",
+          "kind": "synthetic-word",
+          "expected": "Morning",
+          "predicted": "Morning",
+          "elapsed_ms": 858.4000000059605
+        },
+        {
+          "id": "synthetic-validation-5",
+          "kind": "synthetic-word",
+          "expected": "Browser",
+          "predicted": "Browser",
+          "elapsed_ms": 862.6000000089407
+        },
+        {
+          "id": "synthetic-validation-6",
+          "kind": "synthetic-word",
+          "expected": "Simple",
+          "predicted": "simple",
+          "elapsed_ms": 894.2999999970198
+        },
+        {
+          "id": "synthetic-validation-7",
+          "kind": "synthetic-word",
+          "expected": "Writing",
+          "predicted": "writing",
+          "elapsed_ms": 940.4000000059605
+        }
+      ],
+      "metrics": {
+        "human-line": {
+          "samples": 8,
+          "character_error_rate": 0.056818181818181816,
+          "word_error_rate": 0.21875,
+          "exact_matches": 2,
+          "mean_inference_ms": 1576.7500000037253
+        },
+        "synthetic-word": {
+          "samples": 8,
+          "character_error_rate": 0.057692307692307696,
+          "word_error_rate": 0.375,
+          "exact_matches": 5,
+          "mean_inference_ms": 908.5250000022352
+        }
+      }
+    },
+    "small-fp32:1:legacy": {
+      "model": "Xenova/trocr-small-handwritten",
+      "revision": "2432e24d184b1d964d07ed04f5d9e21d31a59141",
+      "beams": 1,
+      "preparation": "legacy",
+      "quantized": false,
+      "load_seconds": 60.75,
+      "rows": [
+        {
+          "id": "iam-validation-0",
+          "kind": "human-line",
+          "expected": "It was a splendid interpretation of the",
+          "predicted": "It was a splendid interpretation of that",
+          "elapsed_ms": 1161.5
+        },
+        {
+          "id": "iam-validation-100",
+          "kind": "human-line",
+          "expected": "with the fringes ( the tsitsits ) .",
+          "predicted": "with the fringes ( the tsitsits ).",
+          "elapsed_ms": 1169.6000000089407
+        },
+        {
+          "id": "iam-validation-200",
+          "kind": "human-line",
+          "expected": "fascinating behaviour mysteries are peculiar",
+          "predicted": "fascinating behaviour mysteries are peculiar",
+          "elapsed_ms": 1150.5
+        },
+        {
+          "id": "iam-validation-300",
+          "kind": "human-line",
+          "expected": "encounters a certain measure of novelty .",
+          "predicted": "encounters a certain measure of novelty.",
+          "elapsed_ms": 1161.4000000059605
+        },
+        {
+          "id": "iam-validation-400",
+          "kind": "human-line",
+          "expected": "went on to describe the landing of the Thetan colony",
+          "predicted": "went on to describe the landing of the Theteam colony",
+          "elapsed_ms": 1308.0999999940395
+        },
+        {
+          "id": "iam-validation-500",
+          "kind": "human-line",
+          "expected": "NO ONE has ever satisfactorily explained how a",
+          "predicted": "NO ONE has ever satisfactorily explained how a",
+          "elapsed_ms": 1364.4000000059605
+        },
+        {
+          "id": "iam-validation-600",
+          "kind": "human-line",
+          "expected": "his position by lighting bonfires or hoisting a",
+          "predicted": "his position by lighting bonfires or hoisting a",
+          "elapsed_ms": 1220.9000000059605
+        },
+        {
+          "id": "iam-validation-700",
+          "kind": "human-line",
+          "expected": "Practically a shore job . Cheer up . \" She wiped",
+          "predicted": "Practically a share job. Cheer up. \" She wiped",
+          "elapsed_ms": 1188.2999999970198
+        },
+        {
+          "id": "synthetic-validation-0",
+          "kind": "synthetic-word",
+          "expected": "Hello",
+          "predicted": "Hello",
+          "elapsed_ms": 1050.5
+        },
+        {
+          "id": "synthetic-validation-1",
+          "kind": "synthetic-word",
+          "expected": "World",
+          "predicted": "world",
+          "elapsed_ms": 1064.7999999970198
+        },
+        {
+          "id": "synthetic-validation-2",
+          "kind": "synthetic-word",
+          "expected": "Machine",
+          "predicted": "Machine",
+          "elapsed_ms": 1072.9000000059605
+        },
+        {
+          "id": "synthetic-validation-3",
+          "kind": "synthetic-word",
+          "expected": "Learning",
+          "predicted": "Learning",
+          "elapsed_ms": 1076.1000000089407
+        },
+        {
+          "id": "synthetic-validation-4",
+          "kind": "synthetic-word",
+          "expected": "Morning",
+          "predicted": "Morning",
+          "elapsed_ms": 1125.199999988079
+        },
+        {
+          "id": "synthetic-validation-5",
+          "kind": "synthetic-word",
+          "expected": "Browser",
+          "predicted": "Browser",
+          "elapsed_ms": 1188.5
+        },
+        {
+          "id": "synthetic-validation-6",
+          "kind": "synthetic-word",
+          "expected": "Simple",
+          "predicted": "simple",
+          "elapsed_ms": 1145.2000000029802
+        },
+        {
+          "id": "synthetic-validation-7",
+          "kind": "synthetic-word",
+          "expected": "Writing",
+          "predicted": "writing",
+          "elapsed_ms": 1149.2999999970198
+        }
+      ],
+      "metrics": {
+        "human-line": {
+          "samples": 8,
+          "character_error_rate": 0.02556818181818182,
+          "word_error_rate": 0.171875,
+          "exact_matches": 3,
+          "mean_inference_ms": 1215.5875000022352
+        },
+        "synthetic-word": {
+          "samples": 8,
+          "character_error_rate": 0.057692307692307696,
+          "word_error_rate": 0.375,
+          "exact_matches": 5,
+          "mean_inference_ms": 1109.0625
+        }
+      }
+    }
+  }
+}

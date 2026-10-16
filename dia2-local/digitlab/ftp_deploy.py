@@ -68,6 +68,7 @@ def main():
     parser.add_argument("--upload", action="store_true")
     parser.add_argument("--report", default="ftp-deployment.json",
                         help="Deployment report filename under reports")
+    parser.add_argument("--files", nargs="+", help="Upload only these relative dist paths, dependencies before index.html")
     args = parser.parse_args()
     config = json.loads((ROOT / "ftp.local.json").read_text(encoding="utf-8-sig"))
     if not all(config.get(key) for key in ["host", "username", "password"]):
@@ -94,6 +95,12 @@ def main():
         # Original root assets remain compatible with an already cached v1 page.
         files = sorted((path for path in (ROOT / "dist").rglob("*") if path.is_file() and path.name != "parity.json"),
                        key=lambda path: (path.relative_to(ROOT / "dist").as_posix() == "index.html", str(path)))
+        if args.files:
+            selected = set(args.files)
+            known = {path.relative_to(ROOT / "dist").as_posix() for path in files}
+            if not selected <= known:
+                raise ValueError("Requested files must be existing relative static asset paths")
+            files = [path for path in files if path.relative_to(ROOT / "dist").as_posix() in selected]
         # Existing remote files are downloaded before replacement; no remote files are deleted.
         backup = ROOT / "artifacts" / ("ftp-backup-" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ"))
         backup.mkdir(parents=True, exist_ok=False)
@@ -130,6 +137,7 @@ def main():
         version = re.search(r'id="app-version"[^>]*>v([^<]+)',
                             (ROOT / "dist/index.html").read_text(encoding="utf-8"))
         report["application_version"] = version.group(1) if version else None
+        report["scope"] = "selected-files" if args.files else "all-static-assets"
         (ROOT / "reports" / args.report).write_text(json.dumps(report, indent=2), encoding="utf-8")
     except Exception as error:
         # Server text can echo authentication data; print only its category/code.

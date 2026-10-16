@@ -35,9 +35,37 @@ The [public helper checks](../reports/public-helper-qa.json) and
 [recognition checks](../reports/public-helper-recognition-qa.json) pass on the
 deployed release. The latest FTPS deployment record covers all 26 assets.
 
+## Current release: v3.2.0
+
+The [public application](https://naoquerosaber.pt/AI/) now displays **v3.2.0** and
+includes a paint-style eraser, adjustable size, Undo/Redo, and full-precision
+Words reading by default. Standard remains available for a smaller download.
+
+All 19 [final public UI checks](../reports/release-3.2.0-final-public-ui-qa.json)
+passed, including the default quality selection and pixel-exact drawing history.
+The separate [real-model checks](../reports/release-3.2.0-public-qa.json) passed
+both FP32 and compact reading profiles. The
+[public character regression](../reports/release-3.2.0-public-character-qa.json)
+passed parity, all 36 uploads, mixed exports and failure recovery; all six
+[helper groups](../reports/release-3.2.0-public-helper-qa.json) passed.
+
+The [main upload](../reports/release-3.2.0-ftp-deployment.json) changed nine static
+assets, backed up replaced files and verified each uploaded hash. A
+[separate entry-page correction](../reports/release-3.2.0-default-ftp-deployment.json)
+set the full-precision option as the default. All 30 final site assets passed
+[independent HTTPS hash and MIME checks](../reports/release-3.2.0-final-http-assets.json).
+The original model files and earlier release assets remain present.
+
+The deployment utility accepts `--files <relative-dist-path> ...` for a scoped
+upload. It permits only known local static asset paths and still switches the
+entry page last. Use an unused `--report` filename for every deployment, and
+verify the complete public asset set after a scoped upload. Reading-profile
+weights download from Hugging Face in the browser and are not part of the FTP
+upload. See [the precision study](word-precision.md) for sizes and limitations.
+
 ## Words release
 
-The visible footer identifies the current application release as **v3.1.0**.
+Release 3.1.0 introduced the visible application version in the footer.
 The [versioned deployment record](../reports/release-3.1.0-ftp-deployment.json),
 [public browser checks](../reports/release-3.1.0-public-qa.json),
 [character regression](../reports/release-3.1.0-character-qa.json) and
@@ -50,8 +78,8 @@ respectively. When changing a browser module or stylesheet, bump its URL version
 as well so cached dependencies cannot hide a new release. Model hashes and the
 preprocessing contract version remain independent identifiers.
 
-Words is deployed at [the public application](https://naoquerosaber.pt/AI/).
-All 29 files passed [FTPS verification](../reports/words-ftp-deployment.json),
+The initial Words release was deployed at [the public application](https://naoquerosaber.pt/AI/).
+Its 29 files passed [FTPS verification](../reports/words-ftp-deployment.json),
 with replaced files backed up, and independent
 [HTTPS hash and JavaScript MIME checks](../reports/public-words-http-assets.json).
 The deployment records above remain evidence for their earlier releases.

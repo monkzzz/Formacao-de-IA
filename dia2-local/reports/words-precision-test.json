@@ -1,0 +1,403 @@
+{
+  "status": "PASS",
+  "split": "test",
+  "fixtures": {
+    "dataset": "Teklia/IAM-line",
+    "dataset_api": "https://datasets-server.huggingface.co/rows?dataset=Teklia/IAM-line&config=default&split=test&offset=0&length=8",
+    "split": "test",
+    "human_count": 8,
+    "synthetic_font": "Segoe Print",
+    "note": "Small deterministic subset; synthetic words are not human handwriting. No training.",
+    "samples": [
+      {
+        "id": "iam-test-0",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\test\\iam-0000.jpg",
+        "expected": "assuredness \" Bella Bella Marie \" ( Parlophone ) , a lively song that changes tempo mid-way .",
+        "sha256": "2b7c98bbd7c5d1a566b5fdee8b19dd5f2b83392f60e31ca29a49ca402d9b23da"
+      },
+      {
+        "id": "iam-test-1",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\test\\iam-0001.jpg",
+        "expected": "I don't think he will storm the charts with this one , but it 's a good start .",
+        "sha256": "399153df34c8d880a52ade9920bdb512a0231af6d7a2bab7246c81a8ad555777"
+      },
+      {
+        "id": "iam-test-2",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\test\\iam-0002.jpg",
+        "expected": "CHRIS CHARLES , 39 , who lives in Stockton-on-Tees , is an accountant .",
+        "sha256": "cb89900e557fcc6352c4af8cda521e9416ba5cab6a0df944e005708c8a51a484"
+      },
+      {
+        "id": "iam-test-3",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\test\\iam-0003.jpg",
+        "expected": "Become a success with a disc and hey presto ! You 're a star ... . Rolly sings with",
+        "sha256": "a4db4c8ebe3baa62190ba381c5b361be67418d26a92bf5bf2f3e17d31f7baf65"
+      },
+      {
+        "id": "iam-test-4",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\test\\iam-0004.jpg",
+        "expected": "Tolch , as he is known in Tin Pan Alley , likes songs with a month in the title . He wrote",
+        "sha256": "fdf368804aa1bae60657d1faea9f73ec5d3f8dbc2078e265c1e25d854a3aa970"
+      },
+      {
+        "id": "iam-test-5",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\test\\iam-0005.jpg",
+        "expected": "\" My September Love , \" the big David Whitfield hit of 1956 .",
+        "sha256": "d943a937e03b1ea9db9924f01c935f0ff9cf42c6b2a88f1943e191204425dcad"
+      },
+      {
+        "id": "iam-test-6",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\test\\iam-0006.jpg",
+        "expected": "He is also a director of a couple of garages . And he finds time as well to be a lyric",
+        "sha256": "54dac31c942b03cb5c9f16df5b7ba282a356db3818d255f335565ffb868a8257"
+      },
+      {
+        "id": "iam-test-7",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\test\\iam-0007.jpg",
+        "expected": "writer . He writes with Tolchard Evans , composer of \" Lady of Spain \" and other big hits .",
+        "sha256": "e4a96c73c803a9d84782a886d47cc0bc978436ca5d106ea648906553a282d716"
+      },
+      {
+        "id": "synthetic-test-0",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\test\\synthetic-00.png",
+        "expected": "Welcome",
+        "sha256": "41a2c65d5aaf51d6f3050417c20f246a97d905a5fd66abdf1f3a5a79be52dbe8"
+      },
+      {
+        "id": "synthetic-test-1",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\test\\synthetic-01.png",
+        "expected": "Today",
+        "sha256": "1c72dad36e26c74284d072745bbbe34fc9ab4aabcdf5648dbed68e6e26c7013d"
+      },
+      {
+        "id": "synthetic-test-2",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\test\\synthetic-02.png",
+        "expected": "Computer",
+        "sha256": "adb0c15bd1956243e04c3a1b9fb31b9d437aa5449a154437da94843119eeb807"
+      },
+      {
+        "id": "synthetic-test-3",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\test\\synthetic-03.png",
+        "expected": "Science",
+        "sha256": "69871efe5d6b0240768d33660be7f08e30993bd1cf3e3c08e3ea204de710b875"
+      },
+      {
+        "id": "synthetic-test-4",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\test\\synthetic-04.png",
+        "expected": "School",
+        "sha256": "17a84729ca812cb366c3e6a67718111d86e6ef6154bd9a3ec3a819725c41a5a4"
+      },
+      {
+        "id": "synthetic-test-5",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\test\\synthetic-05.png",
+        "expected": "Private",
+        "sha256": "94c68f453998dd19f9828a57bef19f3fe3c6f9bc892929387018728c0eea2d2d"
+      },
+      {
+        "id": "synthetic-test-6",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\test\\synthetic-06.png",
+        "expected": "Neural",
+        "sha256": "df11d744c7193355719875267236afef6257b90c5c0353079cdeb2ad142613ba"
+      },
+      {
+        "id": "synthetic-test-7",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\test\\synthetic-07.png",
+        "expected": "Reading",
+        "sha256": "51ed359891d19eb2f6746fc7ad5df550609d17cd83957af8fe2cd73b025ab900"
+      }
+    ]
+  },
+  "note": "Small sample comparison, not a full IAM benchmark or independent training-set audit.",
+  "candidates": {
+    "small:1:legacy": {
+      "model": "Xenova/trocr-small-handwritten",
+      "revision": "2432e24d184b1d964d07ed04f5d9e21d31a59141",
+      "beams": 1,
+      "preparation": "legacy",
+      "load_seconds": 14.672000000005937,
+      "rows": [
+        {
+          "id": "iam-test-0",
+          "kind": "human-line",
+          "expected": "assuredness \" Bella Bella Marie \" ( Parlophone ) , a lively song that changes tempo mid-way .",
+          "predicted": "assurances : \" Bella Bella Marie \" ( Anlophone ), a lively song that changes tempo midway.",
+          "elapsed_ms": 1255.8999999910593
+        },
+        {
+          "id": "iam-test-1",
+          "kind": "human-line",
+          "expected": "I don't think he will storm the charts with this one , but it 's a good start .",
+          "predicted": "I don't think he will storm the charts with his one, but it's a good start.",
+          "elapsed_ms": 1035.2000000029802
+        },
+        {
+          "id": "iam-test-2",
+          "kind": "human-line",
+          "expected": "CHRIS CHARLES , 39 , who lives in Stockton-on-Tees , is an accountant .",
+          "predicted": "CHRIS CHARLES, 39, who lives in Stockton - on - Tees, is an accountant.",
+          "elapsed_ms": 1000.0999999940395
+        },
+        {
+          "id": "iam-test-3",
+          "kind": "human-line",
+          "expected": "Become a success with a disc and hey presto ! You 're a star ... . Rolly sings with",
+          "predicted": "Become a success with a disc and key pesto'You're a star.... Rally sings with",
+          "elapsed_ms": 993.2999999970198
+        },
+        {
+          "id": "iam-test-4",
+          "kind": "human-line",
+          "expected": "Tolch , as he is known in Tin Pan Alley , likes songs with a month in the title . He wrote",
+          "predicted": "Tolch, as he is known in Tin Plan Alley, lines songs with a month in the title, He wrote",
+          "elapsed_ms": 1031.7000000029802
+        },
+        {
+          "id": "iam-test-5",
+          "kind": "human-line",
+          "expected": "\" My September Love , \" the big David Whitfield hit of 1956 .",
+          "predicted": "nMy September Love. \", the big David Whitfield hit of 1956.",
+          "elapsed_ms": 935.2999999970198
+        },
+        {
+          "id": "iam-test-6",
+          "kind": "human-line",
+          "expected": "He is also a director of a couple of garages . And he finds time as well to be a lyric",
+          "predicted": "He is also a director of a couple of garages. And he finds time as well to be a lyric",
+          "elapsed_ms": 1031.5999999940395
+        },
+        {
+          "id": "iam-test-7",
+          "kind": "human-line",
+          "expected": "writer . He writes with Tolchard Evans , composer of \" Lady of Spain \" and other big hits .",
+          "predicted": "writer. He writes with TALCHard Evans, composer of'1 Lady of Spain \" and other big hits,",
+          "elapsed_ms": 1054.6000000089407
+        },
+        {
+          "id": "synthetic-test-0",
+          "kind": "synthetic-word",
+          "expected": "Welcome",
+          "predicted": "welcome",
+          "elapsed_ms": 746.5999999940395
+        },
+        {
+          "id": "synthetic-test-1",
+          "kind": "synthetic-word",
+          "expected": "Today",
+          "predicted": "today",
+          "elapsed_ms": 747.1000000089407
+        },
+        {
+          "id": "synthetic-test-2",
+          "kind": "synthetic-word",
+          "expected": "Computer",
+          "predicted": "Computer",
+          "elapsed_ms": 750.3000000119209
+        },
+        {
+          "id": "synthetic-test-3",
+          "kind": "synthetic-word",
+          "expected": "Science",
+          "predicted": "science",
+          "elapsed_ms": 759.1999999880791
+        },
+        {
+          "id": "synthetic-test-4",
+          "kind": "synthetic-word",
+          "expected": "School",
+          "predicted": "school",
+          "elapsed_ms": 742.6999999880791
+        },
+        {
+          "id": "synthetic-test-5",
+          "kind": "synthetic-word",
+          "expected": "Private",
+          "predicted": "private",
+          "elapsed_ms": 737
+        },
+        {
+          "id": "synthetic-test-6",
+          "kind": "synthetic-word",
+          "expected": "Neural",
+          "predicted": "Neural",
+          "elapsed_ms": 752.5999999940395
+        },
+        {
+          "id": "synthetic-test-7",
+          "kind": "synthetic-word",
+          "expected": "Reading",
+          "predicted": "reading",
+          "elapsed_ms": 756.7999999970198
+        }
+      ],
+      "metrics": {
+        "human-line": {
+          "samples": 8,
+          "character_error_rate": 0.08409785932721713,
+          "word_error_rate": 0.40816326530612246,
+          "exact_matches": 0,
+          "mean_inference_ms": 1042.2124999985099
+        },
+        "synthetic-word": {
+          "samples": 8,
+          "character_error_rate": 0.11320754716981132,
+          "word_error_rate": 0.75,
+          "exact_matches": 2,
+          "mean_inference_ms": 749.0374999977648
+        }
+      }
+    },
+    "small:3:direct": {
+      "model": "Xenova/trocr-small-handwritten",
+      "revision": "2432e24d184b1d964d07ed04f5d9e21d31a59141",
+      "beams": 3,
+      "preparation": "direct",
+      "load_seconds": 0.0,
+      "rows": [
+        {
+          "id": "iam-test-0",
+          "kind": "human-line",
+          "expected": "assuredness \" Bella Bella Marie \" ( Parlophone ) , a lively song that changes tempo mid-way .",
+          "predicted": "assures \"'Bella Bella Marie \" ( Antelope ), a lively song that donge, tempo midway.",
+          "elapsed_ms": 3073.6000000089407
+        },
+        {
+          "id": "iam-test-1",
+          "kind": "human-line",
+          "expected": "I don't think he will storm the charts with this one , but it 's a good start .",
+          "predicted": "I don't think he will storm the charts with his one, but it's a good start.",
+          "elapsed_ms": 3046.2999999970198
+        },
+        {
+          "id": "iam-test-2",
+          "kind": "human-line",
+          "expected": "CHRIS CHARLES , 39 , who lives in Stockton-on-Tees , is an accountant .",
+          "predicted": "CHRISTMAS, BY, who lives in Stockton - on - Tees, is an accountant.",
+          "elapsed_ms": 2764.7000000029802
+        },
+        {
+          "id": "iam-test-3",
+          "kind": "human-line",
+          "expected": "Become a success with a disc and hey presto ! You 're a star ... . Rolly sings with",
+          "predicted": "Broome a success with a disc and hey pests.'You're a star..., Rolly sings with",
+          "elapsed_ms": 3388.9000000059605
+        },
+        {
+          "id": "iam-test-4",
+          "kind": "human-line",
+          "expected": "Tolch , as he is known in Tin Pan Alley , likes songs with a month in the title . He wrote",
+          "predicted": "Tolch, as he is known in Tin Pan Alley, lives songs with a month in the title, He wrote",
+          "elapsed_ms": 3299.6000000089407
+        },
+        {
+          "id": "iam-test-5",
+          "kind": "human-line",
+          "expected": "\" My September Love , \" the big David Whitfield hit of 1956 .",
+          "predicted": "\" My September Love!, the big David Whitfield hit or 1956.",
+          "elapsed_ms": 2701.5
+        },
+        {
+          "id": "iam-test-6",
+          "kind": "human-line",
+          "expected": "He is also a director of a couple of garages . And he finds time as well to be a lyric",
+          "predicted": "He is also a director of a couple of garages. And he finds time as well to be a lyric",
+          "elapsed_ms": 3494.4000000059605
+        },
+        {
+          "id": "iam-test-7",
+          "kind": "human-line",
+          "expected": "writer . He writes with Tolchard Evans , composer of \" Lady of Spain \" and other big hits .",
+          "predicted": "writer. He writes with Talchard Evans, composer of'Italy or Spain!'and other big hits.",
+          "elapsed_ms": 3347.8999999910593
+        },
+        {
+          "id": "synthetic-test-0",
+          "kind": "synthetic-word",
+          "expected": "Welcome",
+          "predicted": "welcome",
+          "elapsed_ms": 919.2999999970198
+        },
+        {
+          "id": "synthetic-test-1",
+          "kind": "synthetic-word",
+          "expected": "Today",
+          "predicted": "today",
+          "elapsed_ms": 960
+        },
+        {
+          "id": "synthetic-test-2",
+          "kind": "synthetic-word",
+          "expected": "Computer",
+          "predicted": "computer",
+          "elapsed_ms": 922.4000000059605
+        },
+        {
+          "id": "synthetic-test-3",
+          "kind": "synthetic-word",
+          "expected": "Science",
+          "predicted": "science",
+          "elapsed_ms": 920.5
+        },
+        {
+          "id": "synthetic-test-4",
+          "kind": "synthetic-word",
+          "expected": "School",
+          "predicted": "school",
+          "elapsed_ms": 929
+        },
+        {
+          "id": "synthetic-test-5",
+          "kind": "synthetic-word",
+          "expected": "Private",
+          "predicted": "private",
+          "elapsed_ms": 899.7000000029802
+        },
+        {
+          "id": "synthetic-test-6",
+          "kind": "synthetic-word",
+          "expected": "Neural",
+          "predicted": "Neural",
+          "elapsed_ms": 856.2000000029802
+        },
+        {
+          "id": "synthetic-test-7",
+          "kind": "synthetic-word",
+          "expected": "Reading",
+          "predicted": "reading",
+          "elapsed_ms": 899.2999999970198
+        }
+      ],
+      "metrics": {
+        "human-line": {
+          "samples": 8,
+          "character_error_rate": 0.11314984709480122,
+          "word_error_rate": 0.4421768707482993,
+          "exact_matches": 0,
+          "mean_inference_ms": 3139.6125000026077
+        },
+        "synthetic-word": {
+          "samples": 8,
+          "character_error_rate": 0.1320754716981132,
+          "word_error_rate": 0.875,
+          "exact_matches": 1,
+          "mean_inference_ms": 913.3000000007451
+        }
+      }
+    }
+  }
+}

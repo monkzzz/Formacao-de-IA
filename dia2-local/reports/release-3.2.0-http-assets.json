@@ -1,0 +1,188 @@
+{
+  "status": "PASS",
+  "application_version": "3.2.0",
+  "url": "https://naoquerosaber.pt/AI/",
+  "verified_at": "2026-10-16T10:53:52.261655+00:00",
+  "files": [
+    {
+      "file": "app.js",
+      "sha256": "3a5d231eeab5ba244fbc6a3a1521c525cb35bdfc34263c2dfbf06639459bc309",
+      "bytes": 11250,
+      "status": "PASS"
+    },
+    {
+      "file": "index.html",
+      "sha256": "bcaa29dd798145932bf6085514e2f6788a6de8e7417154a1835565e0ab84be23",
+      "bytes": 16072,
+      "status": "PASS"
+    },
+    {
+      "file": "inference.js",
+      "sha256": "12a41ae50ad566417652be21baeb96278e558d46c4b310bc70c97323b6bcb6ab",
+      "bytes": 4355,
+      "status": "PASS"
+    },
+    {
+      "file": "preprocess.js",
+      "sha256": "eaa43a89d27d90b1d08e49ab62baee982c0c108f044b2b71a19a68a9e133d988",
+      "bytes": 3150,
+      "status": "PASS"
+    },
+    {
+      "file": "style.css",
+      "sha256": "82d862ccce0f259cdbfd2769195f3ccd832e22119610da10a94a4d911c7bff39",
+      "bytes": 7652,
+      "status": "PASS"
+    },
+    {
+      "file": "assets/65474617.jpg",
+      "sha256": "20408bf697201912289abc7aa92ea4177908d492965131f58c6c2796bfcf83af",
+      "bytes": 14707,
+      "status": "PASS"
+    },
+    {
+      "file": "assets/scopedog.jpg",
+      "sha256": "9caaffdfbdc25c550c601d1fe07d24b9bb7d3ce331e6f97fdb8a2b6e0ce7a179",
+      "bytes": 234376,
+      "status": "PASS"
+    },
+    {
+      "file": "model/manifest.json",
+      "sha256": "71247af8e6e04330462d64f210f588c6652f68033802ab0598bfcfd2993ebaa6",
+      "bytes": 50243,
+      "status": "PASS"
+    },
+    {
+      "file": "model/weights.bin",
+      "sha256": "8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+      "bytes": 827688,
+      "status": "PASS"
+    },
+    {
+      "file": "v2/app.js",
+      "sha256": "2122258114ea61f867523b0f5260510904534c899f7e35bbda20369225197b67",
+      "bytes": 14034,
+      "status": "PASS"
+    },
+    {
+      "file": "v2/inference.js",
+      "sha256": "d43c67ba415ff594fed329ddd06392a704ad15dace033d4fe2d9044c38bbae38",
+      "bytes": 5169,
+      "status": "PASS"
+    },
+    {
+      "file": "v2/preprocess.js",
+      "sha256": "eaa43a89d27d90b1d08e49ab62baee982c0c108f044b2b71a19a68a9e133d988",
+      "bytes": 3150,
+      "status": "PASS"
+    },
+    {
+      "file": "v2/style.css",
+      "sha256": "b554914a88d30baa558d7063e15805d6c713fed74ca26f1c42f7e5937d55e319",
+      "bytes": 8555,
+      "status": "PASS"
+    },
+    {
+      "file": "v3/app.js",
+      "sha256": "a1ba47e6cfbfc1ce9e3bafd68496756d2bfca1613043437eda18872b79d3796a",
+      "bytes": 16488,
+      "status": "PASS"
+    },
+    {
+      "file": "v3/canvas-tools.js",
+      "sha256": "d07532ea11f2101ec84aa6126ca2580be1a940782dab0cf181bb862d551685fe",
+      "bytes": 3845,
+      "status": "PASS"
+    },
+    {
+      "file": "v3/helper-knowledge.js",
+      "sha256": "3041772a59bc553c3cbb077afdafd475b665fb198146a5b62cf7a2ee90440bcb",
+      "bytes": 14539,
+      "status": "PASS"
+    },
+    {
+      "file": "v3/helper.css",
+      "sha256": "3ee870b102fc425df898c3b50b9aef9f0a7ea56476744f702a5cefad0482f99d",
+      "bytes": 4525,
+      "status": "PASS"
+    },
+    {
+      "file": "v3/helper.js",
+      "sha256": "539c3d28205b4577260517f5d0bec9c9c906da30e7aeeefd767940d24d9e19ba",
+      "bytes": 4378,
+      "status": "PASS"
+    },
+    {
+      "file": "v3/inference.js",
+      "sha256": "fbc79abe5a66106ee5b0845cba4930edd79b007e45978109a31f63e935155010",
+      "bytes": 5141,
+      "status": "PASS"
+    },
+    {
+      "file": "v3/preprocess.js",
+      "sha256": "eaa43a89d27d90b1d08e49ab62baee982c0c108f044b2b71a19a68a9e133d988",
+      "bytes": 3150,
+      "status": "PASS"
+    },
+    {
+      "file": "v3/style.css",
+      "sha256": "65b57240b058ed8830b7282590dd724a6c3d7dcf06e13d3dedc1d22c9731a6ae",
+      "bytes": 25113,
+      "status": "PASS"
+    },
+    {
+      "file": "v3/words-worker.js",
+      "sha256": "289712ffd1bb65c517def0c9b53fe0d2713775bf0db409b3f39cafbe495245c0",
+      "bytes": 1827,
+      "status": "PASS"
+    },
+    {
+      "file": "v3/words.css",
+      "sha256": "f2411b623df2dbd0a1b04086eb8093ef788efc1f9e993d04c8564451178be926",
+      "bytes": 2392,
+      "status": "PASS"
+    },
+    {
+      "file": "v3/words.js",
+      "sha256": "bf13e41c41c27c5049607040c12bdc3139e63b0f408cce8e27ad054be34813b9",
+      "bytes": 11457,
+      "status": "PASS"
+    },
+    {
+      "file": "model/letters/manifest.json",
+      "sha256": "5ec7f6c41bec294eb83d61be815fb0b476bb32ec65f824f3c28f0c8567b6bd0c",
+      "bytes": 336931,
+      "status": "PASS"
+    },
+    {
+      "file": "model/letters/weights.bin",
+      "sha256": "c35d6fece31dbbacb37d684d3c256fbf634bf90751195fff8238f28e884f0ad5",
+      "bytes": 835944,
+      "status": "PASS"
+    },
+    {
+      "file": "model/robust/digits/manifest.json",
+      "sha256": "4028c77a64ee4174895bb6da1403712459427e9d49e981432f01e76168f81fff",
+      "bytes": 66288,
+      "status": "PASS"
+    },
+    {
+      "file": "model/robust/digits/weights.bin",
+      "sha256": "d2b9a1430a98fda5df41e27ca214ab1b57ef83508926f9eeb84967757300eb62",
+      "bytes": 827688,
+      "status": "PASS"
+    },
+    {
+      "file": "model/robust/letters/manifest.json",
+      "sha256": "7b3e6995d90bb03549605059fb80a5c68d3dd09fa8fca822f7cd11820ff7ca95",
+      "bytes": 359633,
+      "status": "PASS"
+    },
+    {
+      "file": "model/robust/letters/weights.bin",
+      "sha256": "0fef4b3155457eb1be91547590b48ebc61823c68b79fd414b406835cbfe1b101",
+      "bytes": 835944,
+      "status": "PASS"
+    }
+  ]
+}

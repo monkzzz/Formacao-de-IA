@@ -1,0 +1,8 @@
+{
+  "candidate": "small:3:direct",
+  "selection_report": "words-precision-selection.json",
+  "test_report": "words-precision-test.json",
+  "status": "REJECTED",
+  "reason": "Higher character and word error on the separate test sample than the existing release. No production adoption.",
+  "training_performed": false
+}

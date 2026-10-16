@@ -1,0 +1,28 @@
+{
+  "status": "FROZEN_BEFORE_FRESH_TEST",
+  "selected_candidate": "small-fp32:1:legacy",
+  "model": "Xenova/trocr-small-handwritten",
+  "revision": "2432e24d184b1d964d07ed04f5d9e21d31a59141",
+  "quantized": false,
+  "num_beams": 1,
+  "preparation": "legacy display canvas path unchanged",
+  "selection_report": "words-precision-diverse-validation.json",
+  "validation_sampling": {
+    "split": "validation",
+    "offset": 0,
+    "stride": 100,
+    "count": 8
+  },
+  "fresh_test_sampling": {
+    "split": "test",
+    "offset": 50,
+    "stride": 100,
+    "count": 8
+  },
+  "test_candidates": [
+    "small:1:legacy",
+    "small-fp32:1:legacy"
+  ],
+  "training_performed": false,
+  "note": "Earlier failed candidate and test remain separate. This sample is not a full benchmark or a claim about arbitrary user handwriting."
+}

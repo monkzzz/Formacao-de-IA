@@ -68,6 +68,12 @@ lazy downloads, worker cancellation/retry, original versus edited transcription,
 and local-only image processing. No word accuracy is established by a smoke test.
 Keep digit/letter scores and activation displays specific to their CNNs.
 
+For recognition-quality experiments, follow [the precision study](docs/word-precision.md).
+Use separate development and fresh test samples, preserve failed candidates, and
+identify pretrained models separately from locally trained CNNs. Do not treat a
+small line sample or synthetic font words as general recognition accuracy. The
+browser collector checks both quality profiles and pixel-exact eraser/undo/redo.
+
 Use `digitlab.robust_qa --report <new-report.json>` and
 `digitlab.helper_qa --report-prefix <new-prefix>` for follow-up regressions without
 replacing historical reports. The Words collector refuses existing report paths.

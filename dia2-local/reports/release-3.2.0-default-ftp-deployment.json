@@ -1,0 +1,15 @@
+{
+  "uploaded_at": "2026-10-16T10:55:19.437546+00:00",
+  "destination": "/",
+  "tls": true,
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 16081,
+      "sha256": "ec2d8bb1bd7e42333cd04c0420c865ddcf6a3c165f4370ff4a8fc63b08b6537a"
+    }
+  ],
+  "backup_directory": "artifacts\\ftp-backup-20261016T105517Z",
+  "application_version": "3.2.0",
+  "scope": "selected-files"
+}

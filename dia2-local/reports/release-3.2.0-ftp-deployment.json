@@ -1,0 +1,55 @@
+{
+  "uploaded_at": "2026-10-16T10:52:14.652218+00:00",
+  "destination": "/",
+  "tls": true,
+  "files": [
+    {
+      "file": "v3/app.js",
+      "bytes": 16488,
+      "sha256": "a1ba47e6cfbfc1ce9e3bafd68496756d2bfca1613043437eda18872b79d3796a"
+    },
+    {
+      "file": "v3/canvas-tools.js",
+      "bytes": 3845,
+      "sha256": "d07532ea11f2101ec84aa6126ca2580be1a940782dab0cf181bb862d551685fe"
+    },
+    {
+      "file": "v3/helper-knowledge.js",
+      "bytes": 14539,
+      "sha256": "3041772a59bc553c3cbb077afdafd475b665fb198146a5b62cf7a2ee90440bcb"
+    },
+    {
+      "file": "v3/helper.js",
+      "bytes": 4378,
+      "sha256": "539c3d28205b4577260517f5d0bec9c9c906da30e7aeeefd767940d24d9e19ba"
+    },
+    {
+      "file": "v3/style.css",
+      "bytes": 25113,
+      "sha256": "65b57240b058ed8830b7282590dd724a6c3d7dcf06e13d3dedc1d22c9731a6ae"
+    },
+    {
+      "file": "v3/words-worker.js",
+      "bytes": 1827,
+      "sha256": "289712ffd1bb65c517def0c9b53fe0d2713775bf0db409b3f39cafbe495245c0"
+    },
+    {
+      "file": "v3/words.css",
+      "bytes": 2392,
+      "sha256": "f2411b623df2dbd0a1b04086eb8093ef788efc1f9e993d04c8564451178be926"
+    },
+    {
+      "file": "v3/words.js",
+      "bytes": 11457,
+      "sha256": "bf13e41c41c27c5049607040c12bdc3139e63b0f408cce8e27ad054be34813b9"
+    },
+    {
+      "file": "index.html",
+      "bytes": 16072,
+      "sha256": "bcaa29dd798145932bf6085514e2f6788a6de8e7417154a1835565e0ab84be23"
+    }
+  ],
+  "backup_directory": "artifacts\\ftp-backup-20261016T105153Z",
+  "application_version": "3.2.0",
+  "scope": "selected-files"
+}

@@ -1,0 +1,45 @@
+{
+  "status": "ACCEPTED_LIMITED_COMPARISON",
+  "release": "3.2.0",
+  "candidate": "small-fp32:1:legacy",
+  "selection": "words-fp32-selection.json",
+  "test_report": "words-fp32-fresh-test.json",
+  "default_profile": "precise",
+  "alternative_profile": "standard",
+  "training_performed": false,
+  "metrics": {
+    "small:1:legacy": {
+      "human-line": {
+        "samples": 8,
+        "character_error_rate": 0.09166666666666666,
+        "word_error_rate": 0.23684210526315788,
+        "exact_matches": 1,
+        "mean_inference_ms": 1012.5249999966472
+      },
+      "synthetic-word": {
+        "samples": 8,
+        "character_error_rate": 0.05660377358490566,
+        "word_error_rate": 0.375,
+        "exact_matches": 5,
+        "mean_inference_ms": 758.1999999992549
+      }
+    },
+    "small-fp32:1:legacy": {
+      "human-line": {
+        "samples": 8,
+        "character_error_rate": 0.044444444444444446,
+        "word_error_rate": 0.17105263157894737,
+        "exact_matches": 1,
+        "mean_inference_ms": 1181.6624999996275
+      },
+      "synthetic-word": {
+        "samples": 8,
+        "character_error_rate": 0.05660377358490566,
+        "word_error_rate": 0.375,
+        "exact_matches": 5,
+        "mean_inference_ms": 1064.6499999966472
+      }
+    }
+  },
+  "limitations": "Eight English human lines and eight synthetic words; no general accuracy claim. Synthetic word performance did not improve."
+}

@@ -1,4 +1,4 @@
-import {answerQuestion} from "./helper-knowledge.js?v=words-1";
+import {answerQuestion} from "./helper-knowledge.js?v=3.2.0";
 
 const launcher = document.getElementById("helper-launcher");
 const panel = document.getElementById("scopedog");

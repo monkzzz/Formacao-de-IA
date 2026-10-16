@@ -1,0 +1,407 @@
+{
+  "status": "PASS",
+  "split": "test",
+  "fixtures": {
+    "dataset": "Teklia/IAM-line",
+    "dataset_api": "https://datasets-server.huggingface.co/rows?dataset=Teklia/IAM-line&config=default",
+    "split": "test",
+    "human_count": 8,
+    "offset": 50,
+    "stride": 100,
+    "synthetic_font": "Segoe Print",
+    "note": "Small deterministic subset; synthetic words are not human handwriting. No training.",
+    "samples": [
+      {
+        "id": "iam-test-50",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\test\\offset-50-stride-100-count-8\\iam-0050.jpg",
+        "expected": "that in the race of the modern nations ,",
+        "sha256": "c409c65940cb166029de843e8f4aba8128505a3a5f1d98145139c5de96ca6f31"
+      },
+      {
+        "id": "iam-test-150",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\test\\offset-50-stride-100-count-8\\iam-0150.jpg",
+        "expected": "with all his might and studies the",
+        "sha256": "4fb06c40ea6d6b2d443daad99f08c88eb527c2ec485e9186f8b8bb3f88fbbf15"
+      },
+      {
+        "id": "iam-test-250",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\test\\offset-50-stride-100-count-8\\iam-0250.jpg",
+        "expected": "appearance of mortar ) ; and ( 4 ) an attitude to lean",
+        "sha256": "2fd4adc304aebbea273bbe19713376bbc41ebc95fd63c7140d8c0bfbe9f17cb3"
+      },
+      {
+        "id": "iam-test-350",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\test\\offset-50-stride-100-count-8\\iam-0350.jpg",
+        "expected": "to face their fears , to see through them and come out on the",
+        "sha256": "e8dfda235e7140854fa3bc0ad013e6f5494cfcb38f22ceb23eaa5c9d571281fb"
+      },
+      {
+        "id": "iam-test-450",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\test\\offset-50-stride-100-count-8\\iam-0450.jpg",
+        "expected": "be happening at the other end of England ,",
+        "sha256": "30b9696ecfccc8c1c4d3ca223c3a688266e8e9b5190f9111c111fc8e611f248e"
+      },
+      {
+        "id": "iam-test-550",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\test\\offset-50-stride-100-count-8\\iam-0550.jpg",
+        "expected": "the comment of Rami bar Rabh is quoted",
+        "sha256": "c9d380def15adb858b1b4bf78fa3a228de62e73c2bc9e48718b56d4ff4a6bc2c"
+      },
+      {
+        "id": "iam-test-650",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\test\\offset-50-stride-100-count-8\\iam-0650.jpg",
+        "expected": "miles farther south before they",
+        "sha256": "e2d297b6fec0e67364c7e6d6fade659b23348dc7534eb8774c7cd8a9299c0374"
+      },
+      {
+        "id": "iam-test-750",
+        "kind": "human-line",
+        "path": "data\\words-evaluation\\test\\offset-50-stride-100-count-8\\iam-0750.jpg",
+        "expected": "trails . It was learned that Elizabeth Camp had been lending",
+        "sha256": "a0c8ff3c79caf7d6c5b064e8892cfbef6ea02603ffe93d9d7eee70fc0979aac6"
+      },
+      {
+        "id": "synthetic-test-0",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\test\\offset-50-stride-100-count-8\\synthetic-00.png",
+        "expected": "Tomorrow",
+        "sha256": "dac1aec2e5df3e1f7f6ced7bfba6b002848da3342bb903e7ffb42830ebc9a1b3"
+      },
+      {
+        "id": "synthetic-test-1",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\test\\offset-50-stride-100-count-8\\synthetic-01.png",
+        "expected": "Example",
+        "sha256": "30589de4a7f9702134e5b7e0617d291ec6db45b5bdd2049d4a4f102098c7dde4"
+      },
+      {
+        "id": "synthetic-test-2",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\test\\offset-50-stride-100-count-8\\synthetic-02.png",
+        "expected": "Human",
+        "sha256": "6a92db682cb37503afc756d7d4b423932f161734e5f5f4bdd80c6b36e01a1719"
+      },
+      {
+        "id": "synthetic-test-3",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\test\\offset-50-stride-100-count-8\\synthetic-03.png",
+        "expected": "Window",
+        "sha256": "ea3b2186d5f6f59bc5e9711d7b47821ffa4e86083c25bc410151a1f6753309f3"
+      },
+      {
+        "id": "synthetic-test-4",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\test\\offset-50-stride-100-count-8\\synthetic-04.png",
+        "expected": "Letter",
+        "sha256": "4d806f728eed2f2794eed5ea9de6a96e1acfddc1b134d1c072058c90850972e3"
+      },
+      {
+        "id": "synthetic-test-5",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\test\\offset-50-stride-100-count-8\\synthetic-05.png",
+        "expected": "Student",
+        "sha256": "64333c10969a9806fe2f2b015ff6caf8ea3f52dc3215d1cd42de190fcc1ec9bb"
+      },
+      {
+        "id": "synthetic-test-6",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\test\\offset-50-stride-100-count-8\\synthetic-06.png",
+        "expected": "People",
+        "sha256": "09334bb25d4aac7901e8bbb36524f85eaee340e2f120438f1df67924b1b69335"
+      },
+      {
+        "id": "synthetic-test-7",
+        "kind": "synthetic-word",
+        "path": "data\\words-evaluation\\test\\offset-50-stride-100-count-8\\synthetic-07.png",
+        "expected": "Friendly",
+        "sha256": "08aa9a8ff4560c75efcef302243be5285026187acf7e046c5af0951931ab95c1"
+      }
+    ]
+  },
+  "note": "Small sample comparison, not a full IAM benchmark or independent training-set audit.",
+  "candidates": {
+    "small:1:legacy": {
+      "model": "Xenova/trocr-small-handwritten",
+      "revision": "2432e24d184b1d964d07ed04f5d9e21d31a59141",
+      "beams": 1,
+      "preparation": "legacy",
+      "quantized": true,
+      "load_seconds": 16.485000000000582,
+      "rows": [
+        {
+          "id": "iam-test-50",
+          "kind": "human-line",
+          "expected": "that in the race of the modern nations ,",
+          "predicted": "that in the peace of the modern nations,",
+          "elapsed_ms": 984.2000000029802
+        },
+        {
+          "id": "iam-test-150",
+          "kind": "human-line",
+          "expected": "with all his might and studies the",
+          "predicted": "with all his might and studies. the",
+          "elapsed_ms": 1043
+        },
+        {
+          "id": "iam-test-250",
+          "kind": "human-line",
+          "expected": "appearance of mortar ) ; and ( 4 ) an attitude to lean",
+          "predicted": "appearance of mortar ) ; and ( 4 ) an attitude to Dean",
+          "elapsed_ms": 1176.7999999970198
+        },
+        {
+          "id": "iam-test-350",
+          "kind": "human-line",
+          "expected": "to face their fears , to see through them and come out on the",
+          "predicted": "to face their fans, to see through them and come out on the",
+          "elapsed_ms": 1164.5
+        },
+        {
+          "id": "iam-test-450",
+          "kind": "human-line",
+          "expected": "be happening at the other end of England ,",
+          "predicted": "be harmeenino at the other end of England",
+          "elapsed_ms": 939.5999999940395
+        },
+        {
+          "id": "iam-test-550",
+          "kind": "human-line",
+          "expected": "the comment of Rami bar Rabh is quoted",
+          "predicted": "the comment of Rami bar Rable is quoted",
+          "elapsed_ms": 883.8999999910593
+        },
+        {
+          "id": "iam-test-650",
+          "kind": "human-line",
+          "expected": "miles farther south before they",
+          "predicted": "miles farther south before they",
+          "elapsed_ms": 935.1999999880791
+        },
+        {
+          "id": "iam-test-750",
+          "kind": "human-line",
+          "expected": "trails . It was learned that Elizabeth Camp had been lending",
+          "predicted": "tva. ( I'll now learned that El Sabath Camp has been handing",
+          "elapsed_ms": 973
+        },
+        {
+          "id": "synthetic-test-0",
+          "kind": "synthetic-word",
+          "expected": "Tomorrow",
+          "predicted": "Tomorrow",
+          "elapsed_ms": 758
+        },
+        {
+          "id": "synthetic-test-1",
+          "kind": "synthetic-word",
+          "expected": "Example",
+          "predicted": "Example",
+          "elapsed_ms": 761.8999999910593
+        },
+        {
+          "id": "synthetic-test-2",
+          "kind": "synthetic-word",
+          "expected": "Human",
+          "predicted": "Human",
+          "elapsed_ms": 760.5
+        },
+        {
+          "id": "synthetic-test-3",
+          "kind": "synthetic-word",
+          "expected": "Window",
+          "predicted": "window",
+          "elapsed_ms": 758.8000000119209
+        },
+        {
+          "id": "synthetic-test-4",
+          "kind": "synthetic-word",
+          "expected": "Letter",
+          "predicted": "letter",
+          "elapsed_ms": 755.1999999880791
+        },
+        {
+          "id": "synthetic-test-5",
+          "kind": "synthetic-word",
+          "expected": "Student",
+          "predicted": "student",
+          "elapsed_ms": 756.2000000029802
+        },
+        {
+          "id": "synthetic-test-6",
+          "kind": "synthetic-word",
+          "expected": "People",
+          "predicted": "People",
+          "elapsed_ms": 759.2999999970198
+        },
+        {
+          "id": "synthetic-test-7",
+          "kind": "synthetic-word",
+          "expected": "Friendly",
+          "predicted": "Friendly",
+          "elapsed_ms": 755.7000000029802
+        }
+      ],
+      "metrics": {
+        "human-line": {
+          "samples": 8,
+          "character_error_rate": 0.09166666666666666,
+          "word_error_rate": 0.23684210526315788,
+          "exact_matches": 1,
+          "mean_inference_ms": 1012.5249999966472
+        },
+        "synthetic-word": {
+          "samples": 8,
+          "character_error_rate": 0.05660377358490566,
+          "word_error_rate": 0.375,
+          "exact_matches": 5,
+          "mean_inference_ms": 758.1999999992549
+        }
+      }
+    },
+    "small-fp32:1:legacy": {
+      "model": "Xenova/trocr-small-handwritten",
+      "revision": "2432e24d184b1d964d07ed04f5d9e21d31a59141",
+      "beams": 1,
+      "preparation": "legacy",
+      "quantized": false,
+      "load_seconds": 48.0,
+      "rows": [
+        {
+          "id": "iam-test-50",
+          "kind": "human-line",
+          "expected": "that in the race of the modern nations ,",
+          "predicted": "that in the race of the modern nations,",
+          "elapsed_ms": 1172.199999988079
+        },
+        {
+          "id": "iam-test-150",
+          "kind": "human-line",
+          "expected": "with all his might and studies the",
+          "predicted": "with all his might and studies. the",
+          "elapsed_ms": 1131.1000000089407
+        },
+        {
+          "id": "iam-test-250",
+          "kind": "human-line",
+          "expected": "appearance of mortar ) ; and ( 4 ) an attitude to lean",
+          "predicted": "appearance of mortar ) ; and ( 4 ) an attitude to Bean",
+          "elapsed_ms": 1190.800000011921
+        },
+        {
+          "id": "iam-test-350",
+          "kind": "human-line",
+          "expected": "to face their fears , to see through them and come out on the",
+          "predicted": "to face their fears, to see through them and come out on the",
+          "elapsed_ms": 1208.3999999910593
+        },
+        {
+          "id": "iam-test-450",
+          "kind": "human-line",
+          "expected": "be happening at the other end of England ,",
+          "predicted": "be haormenino at the other end of England",
+          "elapsed_ms": 1186
+        },
+        {
+          "id": "iam-test-550",
+          "kind": "human-line",
+          "expected": "the comment of Rami bar Rabh is quoted",
+          "predicted": "the comment of Rami bar Rable is quoted",
+          "elapsed_ms": 1152.0999999940395
+        },
+        {
+          "id": "iam-test-650",
+          "kind": "human-line",
+          "expected": "miles farther south before they",
+          "predicted": "miles farther south before they",
+          "elapsed_ms": 1243.0999999940395
+        },
+        {
+          "id": "iam-test-750",
+          "kind": "human-line",
+          "expected": "trails . It was learned that Elizabeth Camp had been lending",
+          "predicted": "trails. It was learned that Elizabeth Camp has been handing",
+          "elapsed_ms": 1169.6000000089407
+        },
+        {
+          "id": "synthetic-test-0",
+          "kind": "synthetic-word",
+          "expected": "Tomorrow",
+          "predicted": "Tomorrow",
+          "elapsed_ms": 1051.8999999910593
+        },
+        {
+          "id": "synthetic-test-1",
+          "kind": "synthetic-word",
+          "expected": "Example",
+          "predicted": "Example",
+          "elapsed_ms": 1066.5999999940395
+        },
+        {
+          "id": "synthetic-test-2",
+          "kind": "synthetic-word",
+          "expected": "Human",
+          "predicted": "Human",
+          "elapsed_ms": 1066
+        },
+        {
+          "id": "synthetic-test-3",
+          "kind": "synthetic-word",
+          "expected": "Window",
+          "predicted": "window",
+          "elapsed_ms": 1067.7000000029802
+        },
+        {
+          "id": "synthetic-test-4",
+          "kind": "synthetic-word",
+          "expected": "Letter",
+          "predicted": "letter",
+          "elapsed_ms": 1069.5999999940395
+        },
+        {
+          "id": "synthetic-test-5",
+          "kind": "synthetic-word",
+          "expected": "Student",
+          "predicted": "student",
+          "elapsed_ms": 1070.5
+        },
+        {
+          "id": "synthetic-test-6",
+          "kind": "synthetic-word",
+          "expected": "People",
+          "predicted": "People",
+          "elapsed_ms": 1057.7999999970198
+        },
+        {
+          "id": "synthetic-test-7",
+          "kind": "synthetic-word",
+          "expected": "Friendly",
+          "predicted": "Friendly",
+          "elapsed_ms": 1067.0999999940395
+        }
+      ],
+      "metrics": {
+        "human-line": {
+          "samples": 8,
+          "character_error_rate": 0.044444444444444446,
+          "word_error_rate": 0.17105263157894737,
+          "exact_matches": 1,
+          "mean_inference_ms": 1181.6624999996275
+        },
+        "synthetic-word": {
+          "samples": 8,
+          "character_error_rate": 0.05660377358490566,
+          "word_error_rate": 0.375,
+          "exact_matches": 5,
+          "mean_inference_ms": 1064.6499999966472
+        }
+      }
+    }
+  }
+}

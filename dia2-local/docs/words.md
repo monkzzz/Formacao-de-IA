@@ -12,16 +12,19 @@ from corrections; neither corrections nor drawings retrain a model.
 - Browser weights: [Xenova/trocr-small-handwritten](https://huggingface.co/Xenova/trocr-small-handwritten),
   pinned to revision `2432e24d184b1d964d07ed04f5d9e21d31a59141`.
 - Runtime: Transformers.js `2.17.2`, loaded from jsDelivr in a module worker.
-- Inference: quantized ONNX, single-thread WebAssembly, greedy decoding with a
+- Inference: selectable full FP32 (default) or compact INT8 ONNX, single-thread WebAssembly, greedy decoding with a
   64-token output limit. It does not require WebGPU or special isolation headers.
-- The two quantized graphs total 63,610,555 bytes (about 64 MB), plus runtime and
-  tokenizer/configuration downloads. UI copy rounds the model size to 65 MB.
+- The compact graphs total 63,610,555 bytes; full graphs total 246,543,658 bytes,
+  plus runtime and tokenizer/configuration downloads. UI copy rounds these to
+  65 MB and 250 MB. A small [precision comparison](word-precision.md) favored FP32
+  on English lines, with unchanged synthetic single-word results.
 
 The [model card](https://huggingface.co/microsoft/trocr-small-handwritten) describes
 single-text-line OCR; this release does not segment pages or multiple lines.
 Its English handwriting training does not establish multilingual performance.
-Do not apply the MNIST/EMNIST metrics to this model. A word accuracy benchmark and
-teacher review are **NOT RUN**. Public deployment and browser verification passed;
+Do not apply the MNIST/EMNIST metrics to this model. A full word accuracy benchmark
+and teacher review are **NOT RUN**; the small comparison above has limited scope.
+Public deployment and browser verification passed for earlier releases;
 see [the hosting record](hosting.md#words-release).
 
 ## Implementation
@@ -39,6 +42,14 @@ read. It reports download progress and performs recognition away from the UI
 thread. Cancel and mode changes terminate active work; a 240-second timeout and
 worker/download errors leave the mode usable for retry. Completed workers are
 reused. No model is downloaded merely by opening Words mode.
+
+The canvas supports Pen, a square Eraser with an adjustable size and cursor,
+and pixel-exact Undo/Redo for up to 20 actions, including Clear. With the canvas
+focused, Ctrl+Z undoes and Ctrl+Shift+Z or Ctrl+Y redoes. Editing clears the old
+transcription so it must be read again. Loaded word images can also be edited.
+Switching reading quality clears the old result and terminates its worker.
+Leaving Words releases the worker even when idle, so large weights do not remain
+resident while using the character modes.
 
 Images and transcriptions stay on the device. External requests download static
 runtime and model assets from jsDelivr and Hugging Face; no recognition endpoint,

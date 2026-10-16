@@ -21,12 +21,60 @@ self.onmessage = ({data}) => {
 """
 
 
+def check_drawing_tools(page, canvas_id, prefix, clear_id, screenshot=None):
+    page.locator("#" + clear_id).click()
+    canvas = page.locator("#" + canvas_id)
+    canvas.scroll_into_view_if_needed()
+    blank = canvas.evaluate("c => c.toDataURL()")
+    box = canvas.bounding_box()
+    y = box["y"] + box["height"] * .5
+    page.locator(f"#{prefix}-pen").click()
+    page.mouse.move(box["x"] + box["width"] * .2, y)
+    page.mouse.down()
+    page.mouse.move(box["x"] + box["width"] * .8, y, steps=12)
+    page.mouse.up()
+    drawn = canvas.evaluate("c => c.toDataURL()")
+    assert drawn != blank
+    page.locator(f"#{prefix}-eraser").click()
+    slider = page.locator(f"#{prefix}-eraser-size")
+    assert slider.is_visible()
+    slider.evaluate("el => {el.value='60';el.dispatchEvent(new Event('input',{bubbles:true}));}")
+    assert page.locator(f"#{prefix}-eraser").get_attribute("aria-pressed") == "true"
+    box = canvas.bounding_box(); y = box["y"] + box["height"] * .5
+    page.mouse.click(box["x"] + box["width"] * .5, y)
+    erased = canvas.evaluate("c => c.toDataURL()")
+    assert erased != drawn and erased != blank
+    assert canvas.evaluate("c => getComputedStyle(c).cursor.includes('data:image/svg+xml')")
+    if screenshot:
+        screenshot.parent.mkdir(exist_ok=True)
+        page.screenshot(path=str(screenshot), full_page=True)
+    page.locator(f"#{prefix}-undo").click()
+    assert canvas.evaluate("c => c.toDataURL()") == drawn
+    page.locator(f"#{prefix}-redo").click()
+    assert canvas.evaluate("c => c.toDataURL()") == erased
+    canvas.focus()
+    page.keyboard.press("Control+z")
+    assert canvas.evaluate("c => c.toDataURL()") == drawn
+    page.keyboard.press("Control+Shift+z")
+    assert canvas.evaluate("c => c.toDataURL()") == erased
+    page.locator("#" + clear_id).click()
+    assert canvas.evaluate("c => c.toDataURL()") == blank
+    page.locator(f"#{prefix}-undo").click()
+    assert canvas.evaluate("c => c.toDataURL()") == erased
+    page.locator(f"#{prefix}-pen").click()
+    box = canvas.bounding_box(); y = box["y"] + box["height"] * .5
+    page.mouse.click(box["x"] + box["width"] * .3, y)
+    assert page.locator(f"#{prefix}-redo").is_disabled()
+    page.locator("#" + clear_id).click()
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--url", default="http://127.0.0.1:8770/")
     parser.add_argument("--live-image", type=Path,
                         help="Run actual browser TrOCR on this non-challenge handwriting image")
     parser.add_argument("--expected-text", help="Optional exact expected live transcription")
+    parser.add_argument("--quality", choices=["standard", "precise"], default="precise")
     parser.add_argument("--report", default="words-browser-qa.json")
     parser.add_argument("--screenshot-prefix", default="words")
     args = parser.parse_args()
@@ -50,6 +98,9 @@ def main():
         assert version == page.evaluate("digitLab.exportRecord().application_version")
         checks["visible_and_exported_release_version"] = {"status": "PASS", "version": version}
         report["application_version"] = version
+        check_drawing_tools(page, "drawing", "drawing", "clear",
+                            ROOT / "reports/screenshots" / (args.screenshot_prefix + "-character-eraser.png"))
+        checks["character_eraser_size_undo_redo_and_keyboard"] = {"status": "PASS"}
         for mode in ("digits", "letters"):
             page.evaluate("mode => digitLab.activateMode(mode)", mode)
             fixture = json.loads((ROOT / "dist/model/robust" / mode / "parity.json").read_text())
@@ -62,6 +113,8 @@ def main():
             assert all(value <= .0001 for case in parity for value in case.values()), parity
             checks[mode + "_activation_parity"] = {"status": "PASS", "cases": parity}
         page.locator("#mode-words").click()
+        assert page.locator("#word-quality").input_value() == "precise"
+        checks["full_precision_is_default"] = {"status": "PASS"}
         assert page.locator("#words-workspace").is_visible()
         assert page.locator("#character-workspace").is_hidden()
         assert page.locator("#network").is_hidden()
@@ -70,6 +123,9 @@ def main():
         assert "non-blank" in page.locator("#word-status").inner_text()
         assert not any("huggingface.co" in url or "jsdelivr.net" in url for _, url in requests)
         checks["lazy_loading_and_blank_rejection"] = {"status": "PASS"}
+        check_drawing_tools(page, "word-drawing", "word", "word-clear",
+                            ROOT / "reports/screenshots" / (args.screenshot_prefix + "-word-eraser.png"))
+        checks["word_eraser_size_undo_redo_and_keyboard"] = {"status": "PASS"}
         preparation = page.evaluate("""async () => {
           const {prepareWord} = await import('./v3/words.js?v=words-1');
           const inputs = [false,true].map(dark => {
@@ -106,6 +162,9 @@ def main():
             page.locator("#word-download").click()
         assert Path(download.value.path()).read_text(encoding="utf-8") == "Hello corrected"
         checks["editing_copy_download_and_safe_rendering"] = {"status": "PASS", "worker": "test-double"}
+        page.locator("#word-quality").select_option("precise")
+        assert page.locator("#word-text").input_value() == ""
+        checks["quality_switch_clears_stale_transcription"] = {"status": "PASS"}
         drawing = page.locator("#word-drawing")
         drawing.scroll_into_view_if_needed()
         box = drawing.bounding_box()
@@ -190,18 +249,33 @@ def main():
             live.goto(args.url)
             live.wait_for_function("window.digitLab?.state.ready")
             live.locator("#mode-words").click()
+            live.locator("#word-quality").select_option(args.quality)
             live.locator("#word-file").set_input_files(str(args.live_image.resolve()))
+            live.wait_for_function("digitLab.wordsContext().busy")
+            assert live.locator("#word-eraser").is_disabled()
+            assert live.locator("#word-quality").is_disabled()
             live.wait_for_function("!digitLab.wordsContext().busy", timeout=300000)
             text = live.locator("#word-text").input_value()
             assert text, live.locator("#word-status").inner_text()
             assert live.evaluate("digitLab.wordsContext().metadata.model") == "Xenova/trocr-small-handwritten"
             assert live.evaluate("digitLab.wordsContext().metadata.application_version") == version
+            assert live.evaluate("digitLab.wordsContext().metadata.profile") == args.quality
+            assert live.evaluate("digitLab.wordsContext().metadata.precision") == ("float32" if args.quality == "precise" else "int8")
             if args.expected_text:
                 assert text == args.expected_text, text
             checks["real_trocr_smoke"] = {"status": "PASS", "text": text,
                 "expected": args.expected_text, "metadata": live.evaluate("digitLab.wordsContext().metadata"),
                 "note": "One fixture smoke test; not a word accuracy benchmark."}
             live.screenshot(path=str(screenshots / (args.screenshot_prefix + "-live-desktop.png")), full_page=True)
+            alternate = "standard" if args.quality == "precise" else "precise"
+            live.locator("#word-quality").select_option(alternate)
+            live.locator("#word-read").click()
+            live.wait_for_function("!digitLab.wordsContext().busy", timeout=300000)
+            alternate_text = live.locator("#word-text").input_value()
+            assert alternate_text
+            assert live.evaluate("digitLab.wordsContext().metadata.profile") == alternate
+            checks["real_alternate_quality_profile"] = {"status": "PASS", "profile": alternate,
+                "text": alternate_text, "metadata": live.evaluate("digitLab.wordsContext().metadata")}
             live.close()
         else:
             checks["real_trocr_smoke"] = {"status": "NOT RUN"}

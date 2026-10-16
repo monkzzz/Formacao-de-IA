@@ -1,6 +1,7 @@
 import {loadModel, predict} from "./inference.js?v=robust-1";
 import {prepareCanvas, PREPROCESS_VERSION} from "./preprocess.js";
-import {createWordsWorkspace} from "./words.js?v=3.1.0";
+import {createWordsWorkspace} from "./words.js?v=3.2.0";
+import {createDrawingTools} from "./canvas-tools.js?v=3.2.0";
 
 const $ = id => document.getElementById(id);
 const state = {model: null, models: {}, mode: "digits", uploads: [], busy: false, loading: false, ready: false};
@@ -8,6 +9,8 @@ const canvas = $("drawing"), ctx = canvas.getContext("2d", {willReadFrequently: 
 let drawing = false, previousPoint = null;
 const APPLICATION_VERSION = $("app-version").textContent.trim().slice(1);
 const words = createWordsWorkspace(APPLICATION_VERSION);
+const drawingTools = createDrawingTools(canvas, {prefix: "drawing", background: "#14251d", penWidth: 20, eraserWidth: 36,
+  onRestore: () => {drawing = false; previousPoint = null; resetOutput(); status("Drawing restored. Read it again when ready.");}});
 const MODES = ["digits", "letters", "words"];
 
 function displayMode(mode) {
@@ -60,6 +63,7 @@ function renderScores(labels) {
 }
 
 function setControls() {
+  drawingTools.setDisabled(!state.ready || state.busy || state.loading);
   $("classify").disabled = $("files").disabled = !state.ready || state.busy || state.loading;
   $("clear").disabled = state.busy || state.loading;
   $("export").disabled = !state.uploads.length || state.busy || state.loading;
@@ -101,7 +105,7 @@ for (const mode of MODES) $("mode-" + mode).addEventListener("click", () => acti
 
 function resetDrawing() {
   drawing = false; previousPoint = null;
-  ctx.fillStyle = "#14251d"; ctx.fillRect(0, 0, canvas.width, canvas.height);
+  drawingTools.clear();
 }
 
 function showPrediction(result, input, title, elapsed, model = state.model) {
@@ -151,15 +155,21 @@ function point(event) {
     (event.clientY - rect.top) * canvas.height / rect.height];
 }
 canvas.addEventListener("pointerdown", event => {
-  if (!state.ready || state.busy) return;
+  if (!state.ready || state.busy || state.loading) return;
+  drawingTools.snapshot(); resetOutput();
   event.preventDefault(); canvas.setPointerCapture(event.pointerId);
   drawing = true; previousPoint = point(event);
-  ctx.fillStyle = "#ffffff"; ctx.beginPath(); ctx.arc(...previousPoint, 10, 0, Math.PI * 2); ctx.fill();
+  const brush = drawingTools.brush;
+  status(brush.eraser ? "Erase unwanted marks, then read the drawing again." : "Drawing updated. Read it when ready.");
+  ctx.fillStyle = brush.color;
+  if (brush.eraser) ctx.fillRect(previousPoint[0] - brush.width / 2, previousPoint[1] - brush.width / 2, brush.width, brush.width);
+  else {ctx.beginPath(); ctx.arc(...previousPoint, brush.width / 2, 0, Math.PI * 2); ctx.fill();}
 });
 canvas.addEventListener("pointermove", event => {
   if (!drawing) return;
   const current = point(event);
-  ctx.strokeStyle = "#ffffff"; ctx.lineWidth = 20; ctx.lineCap = "round"; ctx.lineJoin = "round";
+  const brush = drawingTools.brush;
+  ctx.strokeStyle = brush.color; ctx.lineWidth = brush.width; ctx.lineCap = brush.eraser ? "square" : "round"; ctx.lineJoin = "round";
   ctx.beginPath(); ctx.moveTo(...previousPoint); ctx.lineTo(...current); ctx.stroke(); previousPoint = current;
 });
 for (const name of ["pointerup", "pointercancel", "lostpointercapture"]) canvas.addEventListener(name, () => {drawing = false; previousPoint = null;});
@@ -265,7 +275,7 @@ $("export").addEventListener("click", () => {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 });
 
-initializeViews(); resetDrawing();
+initializeViews(); drawingTools.reset();
 document.querySelector('nav a:last-child').addEventListener("click", () => {
   $(state.mode === "words" ? "word-about" : "network").open = true;
 });

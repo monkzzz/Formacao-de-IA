@@ -1,5 +1,34 @@
 # Application releases
 
+## v3.2.0 — Eraser, drawing history and full-precision words
+
+- Adds a paint-style square eraser, adjustable size and cursor, Pen selection,
+  and Undo/Redo for Digits, Letters and Words. Clear can also be undone.
+- Supports Ctrl+Z, Ctrl+Shift+Z and Ctrl+Y while the canvas is focused. Editing
+  clears stale predictions; loaded word images can be edited without disappearing.
+- Defaults Words to full FP32 weights, with compact INT8 Standard mode available
+  for smaller downloads and lower memory use. The pretrained model identity is
+  unchanged; this project did not train or fine-tune the word reader.
+- Records profile, weight precision and decoding alongside model and release
+  identity. Leaving Words releases the model worker.
+
+The [precision study](word-precision.md) records both unsuccessful candidates and
+the selected full-precision comparison. Eight fresh English lines had 4.44%
+character error versus 9.17% for compact weights; synthetic single-word results
+did not improve. These small samples do not establish general accuracy.
+
+All 19 [local browser groups](../reports/release-3.2.0-local-qa.json), the
+[local character regression](../reports/release-3.2.0-local-character-qa.json),
+all six [local helper groups](../reports/release-3.2.0-local-helper-qa.json), and
+all 16 Python unit tests passed. Public deployment evidence is recorded separately.
+
+This release is live. The [final public UI checks](../reports/release-3.2.0-final-public-ui-qa.json),
+[both real reading profiles](../reports/release-3.2.0-public-qa.json),
+[character regression](../reports/release-3.2.0-public-character-qa.json),
+[helper regression](../reports/release-3.2.0-public-helper-qa.json), and
+[all 30 final asset hashes](../reports/release-3.2.0-final-http-assets.json) passed.
+The final UI check explicitly verifies that full precision is the default.
+
 ## v3.1.0 — Words and release tracking
 
 - Adds Words mode for transcribing one word or a short English handwriting line.
@@ -18,7 +47,7 @@ number in the footer; their existing reports retain their original identities.
 
 See [hosting evidence](hosting.md#words-release) for public deployment status.
 
-Release 3.1.0 is deployed and verified. All 15
+Release 3.1.0 was deployed and verified. All 15
 [local browser groups](../reports/release-3.1.0-local-qa.json) and all 15
 [public browser groups](../reports/release-3.1.0-public-qa.json) passed, including
 matching visible/exported versions and real handwriting recognition. The
