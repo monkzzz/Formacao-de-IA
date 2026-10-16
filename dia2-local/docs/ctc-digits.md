@@ -138,3 +138,13 @@ Validation:
 
 Two initial parallel browser runs timed out before application readiness.
 Words and helper passed when rerun individually without source changes.
+
+## Public release
+
+v3.10.0 is published at [Digit Lab](https://naoquerosaber.pt/AI/). All seven
+changed uploads and all 55 public asset hashes passed verification. The actual
+online weight download, a generated synthetic upload, white-on-dark drawing
+and conditional-score parity passed on the public origin. The public score
+delta was `1.50e-6`. All 16 public interface groups passed. No official images
+were used in that public smoke check.
+See [deployment and public evidence](hosting.md#v3100-single-digit-classifier).

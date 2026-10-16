@@ -1,0 +1,45 @@
+{
+  "uploaded_at": "2026-10-16T21:17:37.081422+00:00",
+  "destination": "/",
+  "tls": true,
+  "files": [
+    {
+      "file": "v3/ctc-digits.js",
+      "bytes": 2036,
+      "sha256": "e41806b449025f2fac8dfe87b092d1bf98f491626be1f8556bccc12b709ed99e"
+    },
+    {
+      "file": "v3/digit-reader-worker.js",
+      "bytes": 4935,
+      "sha256": "966afab855833df9b1849649086ba0c0e88343f717d535f8fb1507365011fdef"
+    },
+    {
+      "file": "v3/digit-readers.js",
+      "bytes": 6137,
+      "sha256": "133987dc2aac136cdff0bd0240c08898d1dcdfb002b048f8cf5eab01016f0afd"
+    },
+    {
+      "file": "v3/helper-knowledge.js",
+      "bytes": 18315,
+      "sha256": "fb37f4408540451ecceb8524a693687684a6f06b69e312c99e799f4a5b10dac9"
+    },
+    {
+      "file": "v3/helper.js",
+      "bytes": 5368,
+      "sha256": "249dcc5028dfefc1cb5f1dbad30520bc0bcef3a7c256552a949d3f155079decc"
+    },
+    {
+      "file": "v3/app.js",
+      "bytes": 24451,
+      "sha256": "9a29eb7a9896582600913489ce65e6cb628319025da217a6e867f1d605ae9fa1"
+    },
+    {
+      "file": "index.html",
+      "bytes": 21802,
+      "sha256": "f6df646761735657fa76d6ceac047b7ffc9672bd41204671d7628af7e275bfc9"
+    }
+  ],
+  "backup_directory": "artifacts\\ftp-backup-20261016T211721Z",
+  "application_version": "3.10.0",
+  "scope": "selected-files"
+}

@@ -1,0 +1,32 @@
+{
+  "frozen_at": "2026-10-16T21:18:06.495040+00:00",
+  "stage": "download-smoke",
+  "sources": {
+    "dist/index.html": "f6df646761735657fa76d6ceac047b7ffc9672bd41204671d7628af7e275bfc9",
+    "dist/v3/app.js": "9a29eb7a9896582600913489ce65e6cb628319025da217a6e867f1d605ae9fa1",
+    "dist/v3/canvas-tools.js": "d07532ea11f2101ec84aa6126ca2580be1a940782dab0cf181bb862d551685fe",
+    "dist/v3/ctc-digits.js": "e41806b449025f2fac8dfe87b092d1bf98f491626be1f8556bccc12b709ed99e",
+    "dist/v3/digit-reader-worker.js": "966afab855833df9b1849649086ba0c0e88343f717d535f8fb1507365011fdef",
+    "dist/v3/digit-readers.js": "133987dc2aac136cdff0bd0240c08898d1dcdfb002b048f8cf5eab01016f0afd",
+    "dist/v3/helper-knowledge.js": "fb37f4408540451ecceb8524a693687684a6f06b69e312c99e799f4a5b10dac9",
+    "dist/v3/helper.js": "249dcc5028dfefc1cb5f1dbad30520bc0bcef3a7c256552a949d3f155079decc",
+    "dist/v3/inference.js": "98755d4b758326c16ab179c13eb725630cefd5ee9673061b2ef6359560e43dc4",
+    "dist/v3/konami.js": "0b8d48b711b85c3b2687064514c48e4731cdaf9d0b2aaf8461003cfb10ad35b5",
+    "dist/v3/preprocess.js": "170ad3280aa835bb0ad0efd5d65cd2ea507c1c3cd680b092cfc0e95537db3e3c",
+    "dist/v3/residual.js": "1b454e6acd7b97d7a8f1904ea97c4f382f0b97a6b9d924981e459a8bd972353a",
+    "dist/v3/snes.js": "dcb4e58382d349ea98acd7a29d7ac8be537f2dd496b895f1d16d0f1e9a0f8fb2",
+    "dist/v3/words-worker.js": "289712ffd1bb65c517def0c9b53fe0d2713775bf0db409b3f39cafbe495245c0",
+    "dist/v3/words.js": "bf13e41c41c27c5049607040c12bdc3139e63b0f408cce8e27ad054be34813b9",
+    "dist/v3/ddddocr-charsets.json": "049048ece5811aa2cdc5a55300f60f357c096ae12d35dd46f4d67c425c8adfd3"
+  },
+  "scope": "Fresh synthetic browser integration screening, not real CAPTCHA population accuracy",
+  "readers": [
+    "captcha-digits"
+  ],
+  "synthetic_count": 200,
+  "synthetic_seed": 2026101611,
+  "synthetic_noise": 2,
+  "selection": "Both models selected using independent synthetic development before official evaluation",
+  "further_tuning_permitted": true,
+  "cached_weights": false
+}

@@ -1,14 +1,16 @@
 # Digit Lab — Local Desafio Project
 
-**Current local application release: v3.10.0.** The new **CAPTCHA Digits** option
+**Current application release: v3.10.0.** The new **CAPTCHA Digits** option
 uses pretrained Legacy weights with an exact single-digit CTC classifier. It
 scored 999/1,000 on a fresh browser synthetic test and **10/10** on its frozen
 official follow-up. This is a new inference configuration, not newly trained
 weights or a guarantee of perfect recognition. It downloads about 14 MB and runs
 on-device. The project CNN stays the default. See
-[protocol, measured results and checks](docs/ctc-digits.md).
+[protocol, measured results and checks](docs/ctc-digits.md). It is published at
+[Digit Lab](https://naoquerosaber.pt/AI/); choose **Digits → Digit model → CAPTCHA Digits**.
+See [deployment evidence](docs/hosting.md#v3100-single-digit-classifier).
 
-**Previous public application release: v3.9.0.** Digits adds the pretrained
+**Previous release: v3.9.0.** Digits adds the pretrained
 CAPTCHA-specific DdddOCR (54 MB) and DdddOCR Legacy (14 MB), with verified weights
 and browser-only inference. Independent browser screening scored 200/200 and
 196/200 on fresh synthetic digits; their frozen official follow-up scored 8/10

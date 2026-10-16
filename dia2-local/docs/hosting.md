@@ -1,5 +1,34 @@
 # Website Hosting
 
+## v3.10.0 single-digit classifier
+
+Release v3.10.0 is published at [Digit Lab](https://naoquerosaber.pt/AI/).
+Choose **Digits → Digit model → CAPTCHA Digits** to use the pretrained Legacy
+weights with exact single-digit CTC classification. It downloads about 14 MB
+and runs in the browser. The existing CNN remains the default and earlier
+reader configurations remain available.
+
+All seven scoped uploads passed hash verification with backups and HTML last:
+`v3/ctc-digits.js`, `v3/digit-reader-worker.js`, `v3/digit-readers.js`,
+`v3/helper-knowledge.js`, `v3/helper.js`, `v3/app.js`, `index.html`.
+All 55 public static assets matched local hashes and JavaScript MIME types.
+The real public model download, synthetic upload, white-on-dark drawing and
+native/browser conditional-score parity checks passed. The maximum score
+difference for the public synthetic input was `1.50e-6`.
+
+- [Verified scoped deployment](../reports/release-3.10.0-ftp-deployment.json).
+- [All 55 HTTPS asset hashes and MIME types](../reports/release-3.10.0-http-assets.json).
+- [All 16 public interface groups](../reports/release-3.10.0-public-ui-qa.json).
+- [Actual public download and inference](../reports/release-3.10.0-public-runtime-smoke.json),
+  [raw provenance, drawing result and score parity](../reports/release-3.10.0-public-runtime-smoke-captcha-digits-raw.json).
+- [Independent experiment and frozen 10/10 local follow-up](ctc-digits.md).
+
+Only generated synthetic inputs were used on the public origin. Official
+CAPTCHA images stayed in the local browser; their new frozen follow-up scored
+10/10 without subsequent runtime or weight changes. That is a known ten-image
+follow-up, not a universal accuracy guarantee. Conditional scores explicitly
+assume a single digit and are not calibrated correctness probabilities.
+
 ## v3.9.0 CAPTCHA-specific readers
 
 Release v3.9.0 is published at [Digit Lab](https://naoquerosaber.pt/AI/).
