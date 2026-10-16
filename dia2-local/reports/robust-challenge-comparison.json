@@ -1,0 +1,72 @@
+{
+  "model_sha256": "d2b9a1430a98fda5df41e27ca214ab1b57ef83508926f9eeb84967757300eb62",
+  "raw_sha256": "376db15f4b34e096206349a7529c6eb736e5023f9d4f9fefb6f6fc7ebf094aac",
+  "scope": "Follow-up final evaluation, not a new blind first run",
+  "count": 10,
+  "correct": 2,
+  "accuracy": 0.2,
+  "original_correct": 2,
+  "answer_key_source": "Historical challenge-comparison.json",
+  "cases": [
+    {
+      "file": "caso_01.png",
+      "expected": 8,
+      "predicted": 0,
+      "correct": false
+    },
+    {
+      "file": "caso_02.png",
+      "expected": 3,
+      "predicted": 8,
+      "correct": false
+    },
+    {
+      "file": "caso_03.png",
+      "expected": 0,
+      "predicted": 0,
+      "correct": true
+    },
+    {
+      "file": "caso_04.png",
+      "expected": 6,
+      "predicted": 6,
+      "correct": true
+    },
+    {
+      "file": "caso_05.png",
+      "expected": 1,
+      "predicted": 3,
+      "correct": false
+    },
+    {
+      "file": "caso_06.png",
+      "expected": 9,
+      "predicted": 8,
+      "correct": false
+    },
+    {
+      "file": "caso_07.png",
+      "expected": 4,
+      "predicted": 6,
+      "correct": false
+    },
+    {
+      "file": "caso_08.png",
+      "expected": 2,
+      "predicted": 3,
+      "correct": false
+    },
+    {
+      "file": "caso_09.png",
+      "expected": 7,
+      "predicted": 3,
+      "correct": false
+    },
+    {
+      "file": "caso_10.png",
+      "expected": 5,
+      "predicted": 8,
+      "correct": false
+    }
+  ]
+}

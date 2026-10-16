@@ -1,0 +1,10 @@
+# Stable source line endings and byte-exact JSON evidence across checkouts.
+*.py text eol=lf
+*.js text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+*.png binary
+*.jpg binary

@@ -1,0 +1,27 @@
+{
+  "frozen_at": "2026-10-16T00:59:15.704045+00:00",
+  "url": "http://127.0.0.1:8765",
+  "scope": "local browser evaluation; no public deployment claimed",
+  "source_tree_sha256": "e785ddc862f1b4f3f57834f29f33977da7dd79edda23cbb9a4c326e0b5948f6e",
+  "sources": {
+    "digitlab/__init__.py": "8791a893799e47b17ecd608b87f5fa0ce7c7a1ad8a79e025145456fe443fd677",
+    "digitlab/challenge.py": "04f819edd684124e8056ab1daa3de29613714c8d5f10bc4de4e65742c78531d2",
+    "digitlab/data.py": "e763840db8b9ff2b98c46d0b16b4b4d0500aee289196d4b747f2f7037bfaacd9",
+    "digitlab/model.py": "bb84e961d40b8ccf857d0ea1c2e05f083e4c8bc17c21ea78b824598fca349a4b",
+    "digitlab/preprocess.py": "fca198da607852c23fe6285a0b0fc87526ad6af47c7f3517e9d7bc672f6db39c",
+    "digitlab/qa.py": "af5072a32c12a25faef81a80681f2bba7e5ceb99d6926f374710ebe7deec596c",
+    "digitlab/train.py": "bcfe4f264b691c66d57093efe61cabe3e8c2f1c85dc97708ce8f6c80f507f815",
+    "dist/app.js": "3a5d231eeab5ba244fbc6a3a1521c525cb35bdfc34263c2dfbf06639459bc309",
+    "dist/index.html": "f6abdeb8744475c36d29de1a862b5abdf39b0ca7fb5407c19ec0faf6c87bed6d",
+    "dist/inference.js": "12a41ae50ad566417652be21baeb96278e558d46c4b310bc70c97323b6bcb6ab",
+    "dist/model/manifest.json": "71247af8e6e04330462d64f210f588c6652f68033802ab0598bfcfd2993ebaa6",
+    "dist/preprocess.js": "eaa43a89d27d90b1d08e49ab62baee982c0c108f044b2b71a19a68a9e133d988",
+    "dist/style.css": "82d862ccce0f259cdbfd2769195f3ccd832e22119610da10a94a4d911c7bff39",
+    "requirements-lock.txt": "09baf8690572af2a4cf4e4b898b249e2c679a9e45d0956c331e3c1123e0827a8"
+  },
+  "model_sha256": "8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+  "preprocessing": "border-gray-bilinear-com-v1",
+  "archive": "artifacts\\frozen-app.zip",
+  "archive_sha256": "f262cfb833677ddc5b8680147607d66bb157db04558766fdd825e6029ea632c5",
+  "labels_consulted_before_predictions": false
+}

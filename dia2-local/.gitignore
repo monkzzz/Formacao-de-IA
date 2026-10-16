@@ -1,0 +1,15 @@
+.venv/
+.tmp/
+__pycache__/
+*.pyc
+artifacts/
+dist/model/*.bin
+dist/model/parity.json
+reports/screenshots/
+reports/challenge-inputs/
+ftp.local.json
+/data/
+dist/model/letters/*.bin
+dist/model/letters/parity.json
+dist/model/robust/*/*.bin
+dist/model/robust/*/parity.json

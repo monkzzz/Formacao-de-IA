@@ -1,0 +1,271 @@
+{
+  "url": "http://127.0.0.1:8765/",
+  "checks": {
+    "model_parity": {
+      "status": "PASS",
+      "tolerance": 0.0001,
+      "cases": [
+        {
+          "label": 0,
+          "predicted": 0,
+          "logits": 9.5367431640625e-07,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.6226043701171875e-06
+        },
+        {
+          "label": 1,
+          "predicted": 1,
+          "logits": 9.5367431640625e-07,
+          "hidden": 9.5367431640625e-07,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.430511474609375e-06
+        },
+        {
+          "label": 2,
+          "predicted": 2,
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.384185791015625e-06
+        },
+        {
+          "label": 3,
+          "predicted": 3,
+          "logits": 2.384185791015625e-06,
+          "hidden": 2.6226043701171875e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.86102294921875e-06
+        },
+        {
+          "label": 4,
+          "predicted": 4,
+          "logits": 2.86102294921875e-06,
+          "hidden": 2.384185791015625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.384185791015625e-06
+        },
+        {
+          "label": 5,
+          "predicted": 5,
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.384185791015625e-06
+        },
+        {
+          "label": 6,
+          "predicted": 6,
+          "logits": 3.814697265625e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 3.337860107421875e-06
+        },
+        {
+          "label": 7,
+          "predicted": 7,
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.6689300537109375e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.9073486328125e-06
+        },
+        {
+          "label": 8,
+          "predicted": 8,
+          "logits": 1.3262033462524414e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 3.337860107421875e-06
+        },
+        {
+          "label": 9,
+          "predicted": 9,
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.430511474609375e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.9073486328125e-06
+        }
+      ]
+    },
+    "preprocessing_parity": {
+      "status": "PASS",
+      "cases": 5,
+      "maximum_errors": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "tolerance": 1e-06
+    },
+    "multiple_upload_and_origin_parity": {
+      "status": "PASS",
+      "cases": [
+        {
+          "file": "digit-0.png",
+          "predicted": 0,
+          "score_max_error": 1.5063718994401398e-07
+        },
+        {
+          "file": "digit-1.png",
+          "predicted": 1,
+          "score_max_error": 6.42277364626409e-08
+        },
+        {
+          "file": "digit-2.png",
+          "predicted": 2,
+          "score_max_error": 2.4684046140421856e-08
+        },
+        {
+          "file": "digit-3.png",
+          "predicted": 3,
+          "score_max_error": 7.411181887628793e-08
+        },
+        {
+          "file": "digit-4.png",
+          "predicted": 4,
+          "score_max_error": 4.9538117941061444e-08
+        },
+        {
+          "file": "digit-5.png",
+          "predicted": 5,
+          "score_max_error": 1.3526052944357048e-07
+        },
+        {
+          "file": "digit-6.png",
+          "predicted": 6,
+          "score_max_error": 2.8442858734933907e-08
+        },
+        {
+          "file": "digit-7.png",
+          "predicted": 7,
+          "score_max_error": 5.769440225567024e-08
+        },
+        {
+          "file": "digit-8.png",
+          "predicted": 8,
+          "score_max_error": 5.539786473995889e-08
+        },
+        {
+          "file": "digit-9.png",
+          "predicted": 9,
+          "score_max_error": 1.2996723031122315e-08
+        }
+      ]
+    },
+    "filename_independence": {
+      "status": "PASS"
+    },
+    "blank_and_invalid_uploads": {
+      "status": "PASS",
+      "messages": [
+        "No visible digit: image is blank or has insufficient contrast.",
+        "The source image could not be decoded."
+      ]
+    },
+    "pointer_drawing_and_real_visualizations": {
+      "status": "PASS",
+      "predicted": "7"
+    },
+    "raw_export": {
+      "status": "PASS",
+      "records": 14
+    },
+    "mobile_layout": {
+      "status": "PASS",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    "browser_only_inference": {
+      "status": "PASS",
+      "requests": [
+        {
+          "url": "http://127.0.0.1:8765/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:8765/v3/style.css?v=design-1",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:8765/v3/app.js?v=design-1",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:8765/v3/inference.js?v=design-1",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:8765/v3/preprocess.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:8765/model/manifest.json?v=letters-1",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:8765/model/weights.bin?sha256=8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:8765/preprocess.js",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/5b42b077-918a-43a7-a205-8ffcb91fc975",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/e2e73914-9b8b-457b-906b-a26b95b01f8d",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/a197b21d-c011-49c7-9e6e-8d6637b212ab",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/0859c2ca-03a7-41f5-8089-1c2a3433a272",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/c7851731-24f3-4d6a-8ff2-2f9ae4f3745c",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/49d2d164-39a7-4705-acc9-94f9437b8d71",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/4e57e64e-fe39-4383-9573-4f3e7412717a",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/7e693559-df08-4e9a-ae31-9c7d2daab279",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/1f5a8c51-e0e9-4b84-9c41-c0e03552b3ec",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/05a6ae3c-78b1-45a8-b9d0-440fb89af80e",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/49e16d2c-e9ac-40cf-a8d3-3435d4d8e184",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/94b90a33-2708-4af4-814c-d5d573d16a20",
+          "method": "GET"
+        }
+      ],
+      "page_errors": []
+    }
+  },
+  "model_sha256": "8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+  "browser": "155.0.4283.45"
+}

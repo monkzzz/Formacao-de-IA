@@ -1,0 +1,558 @@
+{
+  "url": "https://naoquerosaber.pt/AI/",
+  "checks": {
+    "original_digit_weights_preserved": {
+      "status": "PASS",
+      "sha256": "8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338"
+    },
+    "digit_runtime_regression": {
+      "status": "PASS",
+      "maximum_logit_error": 3.814697265625e-06
+    },
+    "all_26_classes_and_activation_parity": {
+      "status": "PASS",
+      "tolerance": 0.0001,
+      "fixture_correct": 21,
+      "cases": [
+        {
+          "expected": "A",
+          "predicted": "A",
+          "logits": 4.76837158203125e-06,
+          "hidden": 2.384185791015625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.86102294921875e-06,
+          "score_sum": 1.0000000000000002
+        },
+        {
+          "expected": "B",
+          "predicted": "B",
+          "logits": 3.814697265625e-06,
+          "hidden": 2.86102294921875e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.9073486328125e-06,
+          "score_sum": 1
+        },
+        {
+          "expected": "C",
+          "predicted": "C",
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.86102294921875e-06,
+          "score_sum": 0.9999999999999993
+        },
+        {
+          "expected": "D",
+          "predicted": "R",
+          "logits": 1.1920928955078125e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.6689300537109375e-06,
+          "score_sum": 1
+        },
+        {
+          "expected": "E",
+          "predicted": "E",
+          "logits": 3.4570693969726562e-06,
+          "hidden": 3.814697265625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.384185791015625e-06,
+          "score_sum": 0.9999999999999998
+        },
+        {
+          "expected": "F",
+          "predicted": "F",
+          "logits": 3.814697265625e-06,
+          "hidden": 2.384185791015625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.430511474609375e-06,
+          "score_sum": 1
+        },
+        {
+          "expected": "G",
+          "predicted": "G",
+          "logits": 2.2649765014648438e-06,
+          "hidden": 2.384185791015625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.6226043701171875e-06,
+          "score_sum": 0.9999999999999997
+        },
+        {
+          "expected": "H",
+          "predicted": "H",
+          "logits": 3.814697265625e-06,
+          "hidden": 2.86102294921875e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.6689300537109375e-06,
+          "score_sum": 0.9999999999999996
+        },
+        {
+          "expected": "I",
+          "predicted": "L",
+          "logits": 1.9073486328125e-06,
+          "hidden": 2.8014183044433594e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.430511474609375e-06,
+          "score_sum": 0.9999999999999996
+        },
+        {
+          "expected": "J",
+          "predicted": "I",
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.5497207641601562e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.6689300537109375e-06,
+          "score_sum": 1.0000000000000002
+        },
+        {
+          "expected": "K",
+          "predicted": "K",
+          "logits": 2.86102294921875e-06,
+          "hidden": 2.384185791015625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.1457672119140625e-06,
+          "score_sum": 0.9999999999999998
+        },
+        {
+          "expected": "L",
+          "predicted": "L",
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.430511474609375e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.86102294921875e-06,
+          "score_sum": 1.0000000000000004
+        },
+        {
+          "expected": "M",
+          "predicted": "M",
+          "logits": 3.814697265625e-06,
+          "hidden": 3.814697265625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.9073486328125e-06,
+          "score_sum": 0.9999999999999999
+        },
+        {
+          "expected": "N",
+          "predicted": "N",
+          "logits": 5.7220458984375e-06,
+          "hidden": 3.814697265625e-06,
+          "pool1": 4.76837158203125e-07,
+          "pool2": 1.9073486328125e-06,
+          "score_sum": 1
+        },
+        {
+          "expected": "O",
+          "predicted": "A",
+          "logits": 3.814697265625e-06,
+          "hidden": 2.86102294921875e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 3.337860107421875e-06,
+          "score_sum": 1
+        },
+        {
+          "expected": "P",
+          "predicted": "P",
+          "logits": 3.814697265625e-06,
+          "hidden": 2.384185791015625e-06,
+          "pool1": 4.76837158203125e-07,
+          "pool2": 3.337860107421875e-06,
+          "score_sum": 1.0000000000000002
+        },
+        {
+          "expected": "Q",
+          "predicted": "Q",
+          "logits": 4.76837158203125e-06,
+          "hidden": 3.814697265625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.86102294921875e-06,
+          "score_sum": 1.0000000000000002
+        },
+        {
+          "expected": "R",
+          "predicted": "R",
+          "logits": 3.814697265625e-06,
+          "hidden": 2.86102294921875e-06,
+          "pool1": 4.76837158203125e-07,
+          "pool2": 1.9073486328125e-06,
+          "score_sum": 0.9999999999999999
+        },
+        {
+          "expected": "S",
+          "predicted": "S",
+          "logits": 6.67572021484375e-06,
+          "hidden": 4.76837158203125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.384185791015625e-06,
+          "score_sum": 0.9999999999999998
+        },
+        {
+          "expected": "T",
+          "predicted": "T",
+          "logits": 3.814697265625e-06,
+          "hidden": 2.384185791015625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.9073486328125e-06,
+          "score_sum": 1
+        },
+        {
+          "expected": "U",
+          "predicted": "U",
+          "logits": 3.814697265625e-06,
+          "hidden": 3.814697265625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.86102294921875e-06,
+          "score_sum": 1.0000000000000002
+        },
+        {
+          "expected": "V",
+          "predicted": "U",
+          "logits": 5.7220458984375e-06,
+          "hidden": 2.9802322387695312e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.384185791015625e-06,
+          "score_sum": 1
+        },
+        {
+          "expected": "W",
+          "predicted": "W",
+          "logits": 2.384185791015625e-06,
+          "hidden": 2.384185791015625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.384185791015625e-06,
+          "score_sum": 1.0000000000000002
+        },
+        {
+          "expected": "X",
+          "predicted": "X",
+          "logits": 3.814697265625e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 4.76837158203125e-07,
+          "pool2": 1.9073486328125e-06,
+          "score_sum": 0.9999999999999999
+        },
+        {
+          "expected": "Y",
+          "predicted": "Y",
+          "logits": 4.5299530029296875e-06,
+          "hidden": 4.291534423828125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.384185791015625e-06,
+          "score_sum": 0.9999999999999999
+        },
+        {
+          "expected": "Z",
+          "predicted": "Z",
+          "logits": 3.814697265625e-06,
+          "hidden": 3.4570693969726562e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.9073486328125e-06,
+          "score_sum": 0.9999999999999999
+        }
+      ]
+    },
+    "26_letter_uploads_and_python_parity": {
+      "status": "PASS",
+      "cases": [
+        {
+          "file": "letter-A.png",
+          "predicted": "A",
+          "maximum_score_error": 1.689622469713825e-07
+        },
+        {
+          "file": "letter-B.png",
+          "predicted": "B",
+          "maximum_score_error": 2.5291948990702195e-07
+        },
+        {
+          "file": "letter-C.png",
+          "predicted": "C",
+          "maximum_score_error": 9.610523188374742e-08
+        },
+        {
+          "file": "letter-D.png",
+          "predicted": "R",
+          "maximum_score_error": 1.6205761899090732e-07
+        },
+        {
+          "file": "letter-E.png",
+          "predicted": "E",
+          "maximum_score_error": 9.192384331502268e-08
+        },
+        {
+          "file": "letter-F.png",
+          "predicted": "F",
+          "maximum_score_error": 5.0326510625531284e-08
+        },
+        {
+          "file": "letter-G.png",
+          "predicted": "G",
+          "maximum_score_error": 1.4253715910350628e-07
+        },
+        {
+          "file": "letter-H.png",
+          "predicted": "H",
+          "maximum_score_error": 6.0706905058438565e-09
+        },
+        {
+          "file": "letter-I.png",
+          "predicted": "L",
+          "maximum_score_error": 2.83791330990546e-07
+        },
+        {
+          "file": "letter-J.png",
+          "predicted": "I",
+          "maximum_score_error": 1.6413895798095268e-09
+        },
+        {
+          "file": "letter-K.png",
+          "predicted": "K",
+          "maximum_score_error": 1.631395693361959e-08
+        },
+        {
+          "file": "letter-L.png",
+          "predicted": "L",
+          "maximum_score_error": 1.3571777740528645e-07
+        },
+        {
+          "file": "letter-M.png",
+          "predicted": "M",
+          "maximum_score_error": 3.93419377076043e-08
+        },
+        {
+          "file": "letter-N.png",
+          "predicted": "N",
+          "maximum_score_error": 1.4717225882421303e-08
+        },
+        {
+          "file": "letter-O.png",
+          "predicted": "A",
+          "maximum_score_error": 4.705857860609619e-07
+        },
+        {
+          "file": "letter-P.png",
+          "predicted": "P",
+          "maximum_score_error": 9.34696930965373e-09
+        },
+        {
+          "file": "letter-Q.png",
+          "predicted": "Q",
+          "maximum_score_error": 5.192340324366995e-08
+        },
+        {
+          "file": "letter-R.png",
+          "predicted": "R",
+          "maximum_score_error": 1.2970179152915762e-08
+        },
+        {
+          "file": "letter-S.png",
+          "predicted": "S",
+          "maximum_score_error": 1.0458765209442333e-07
+        },
+        {
+          "file": "letter-T.png",
+          "predicted": "T",
+          "maximum_score_error": 9.469635187109304e-09
+        },
+        {
+          "file": "letter-U.png",
+          "predicted": "U",
+          "maximum_score_error": 3.105782109269484e-08
+        },
+        {
+          "file": "letter-V.png",
+          "predicted": "U",
+          "maximum_score_error": 5.6947211168889567e-08
+        },
+        {
+          "file": "letter-W.png",
+          "predicted": "W",
+          "maximum_score_error": 7.669507695595712e-08
+        },
+        {
+          "file": "letter-X.png",
+          "predicted": "X",
+          "maximum_score_error": 3.622891675547635e-08
+        },
+        {
+          "file": "letter-Y.png",
+          "predicted": "Y",
+          "maximum_score_error": 5.878013631388512e-09
+        },
+        {
+          "file": "letter-Z.png",
+          "predicted": "Z",
+          "maximum_score_error": 6.350338521698973e-08
+        }
+      ]
+    },
+    "mode_switch_and_saved_result_identity": {
+      "status": "PASS",
+      "mixed_records": 27
+    },
+    "letter_drawing_and_visualization": {
+      "status": "PASS",
+      "drawn": "H",
+      "predicted": "H"
+    },
+    "mixed_mode_json_export": {
+      "status": "PASS"
+    },
+    "letters_mobile_layout": {
+      "status": "PASS"
+    },
+    "failed_mode_load_preserves_digits_and_retries": {
+      "status": "PASS"
+    },
+    "no_remote_inference_or_page_errors": {
+      "status": "PASS",
+      "requests": [
+        {
+          "url": "https://naoquerosaber.pt/AI/",
+          "method": "GET"
+        },
+        {
+          "url": "https://naoquerosaber.pt/AI/v2/style.css?v=letters-1",
+          "method": "GET"
+        },
+        {
+          "url": "https://naoquerosaber.pt/AI/v2/app.js?v=letters-1",
+          "method": "GET"
+        },
+        {
+          "url": "https://naoquerosaber.pt/AI/v2/inference.js?v=letters-1",
+          "method": "GET"
+        },
+        {
+          "url": "https://naoquerosaber.pt/AI/v2/preprocess.js",
+          "method": "GET"
+        },
+        {
+          "url": "https://naoquerosaber.pt/AI/model/manifest.json?v=letters-1",
+          "method": "GET"
+        },
+        {
+          "url": "https://naoquerosaber.pt/AI/model/weights.bin?sha256=8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+          "method": "GET"
+        },
+        {
+          "url": "https://naoquerosaber.pt/AI/model/letters/manifest.json?v=letters-1",
+          "method": "GET"
+        },
+        {
+          "url": "https://naoquerosaber.pt/AI/model/letters/weights.bin?sha256=c35d6fece31dbbacb37d684d3c256fbf634bf90751195fff8238f28e884f0ad5",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/464f27ec-ee6a-41b0-8072-44df2eef5519",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/611bd07e-0d68-4396-8f1f-304a68cd1d58",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/1569ebd9-ee53-4e17-a0a2-12baae9486dd",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/e9ae8e00-9f09-45d6-ac4c-f3b638121e8e",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/79efcb6b-cc5d-4f7a-adba-e1bff470d056",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/430729a6-7984-4a07-9387-589f69dfbab7",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/72a48859-8e2b-4def-8afa-32221135400b",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/a07e6e26-cec2-4e61-86a4-fd0598812f82",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/39d195b3-7c4f-4da9-a5f8-2c5e6d82ce60",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/59acebaf-d9b4-47de-826d-35511912b3d0",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/eca66b78-b63f-4ac8-a540-669e93585ab8",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/c93215b6-120a-4476-88c0-68f3e0204f84",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/8f1e0bc4-b888-4110-a909-faaa807840cd",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/d56516a5-3379-414c-b3ac-7cdf190b5860",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/6ae91254-9273-4a44-b1e8-4b1013e034d8",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/15ceb124-0009-4aac-9dcb-0409b82ae8af",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/b16d4863-7a27-4247-b3b5-69f1fb07d1a4",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/4f512359-fd0a-4953-b8ca-f1608ad03788",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/4ce8fd2f-69f8-4d22-b955-8cf8b96c00d4",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/4e77fad9-973f-4d29-bb4b-f04b9b3429d5",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/1ba15051-de0c-4ff5-87a4-86000e3b53d2",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/903bf471-b416-4d11-9d49-8e29a921dc41",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/6a19bdfd-be70-4a84-b02b-61deef08cc92",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/a4b16bc0-7429-4b3a-81a9-ac1d1b47269f",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/f0e9d95c-fa79-48c0-8c00-9a828e118f7d",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/01860ee9-5da9-4aa0-8483-5b02ed4a6e1e",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/cbbf1543-21fb-4576-bcc2-e29234f41701",
+          "method": "GET"
+        }
+      ]
+    }
+  },
+  "model_sha256": "c35d6fece31dbbacb37d684d3c256fbf634bf90751195fff8238f28e884f0ad5",
+  "browser": "155.0.4283.45"
+}

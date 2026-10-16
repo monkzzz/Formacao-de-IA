@@ -1,0 +1,81 @@
+{
+  "url": "https://naoquerosaber.pt/AI/",
+  "checks": {
+    "keyboard_skip_to_workspace": {
+      "status": "PASS"
+    },
+    "expandable_network_and_anchor": {
+      "status": "PASS",
+      "actual_feature_maps": 48
+    },
+    "gallery_count_and_containment": {
+      "status": "PASS",
+      "results": 26
+    },
+    "responsive_layout_and_controls": {
+      "status": "PASS",
+      "viewports": [
+        {
+          "viewport": 320,
+          "document": 320,
+          "galleryColumns": 2,
+          "galleryHeight": 380
+        },
+        {
+          "viewport": 390,
+          "document": 390,
+          "galleryColumns": 2,
+          "galleryHeight": 380
+        },
+        {
+          "viewport": 768,
+          "document": 768,
+          "galleryColumns": 4,
+          "galleryHeight": 414
+        },
+        {
+          "viewport": 1024,
+          "document": 1024,
+          "galleryColumns": 5,
+          "galleryHeight": 414
+        },
+        {
+          "viewport": 1440,
+          "document": 1440,
+          "galleryColumns": 7,
+          "galleryHeight": 414
+        }
+      ]
+    },
+    "key_text_contrast": {
+      "status": "PASS",
+      "minimum": 4.5,
+      "samples": [
+        {
+          "selector": ".primary",
+          "contrast": 8.98412643705653
+        },
+        {
+          "selector": ".mode-hint",
+          "contrast": 5.1522259907487475
+        },
+        {
+          "selector": ".score-row:not(.winner)",
+          "contrast": 5.6919891125816235
+        },
+        {
+          "selector": ".privacy",
+          "contrast": 5.108733971904213
+        },
+        {
+          "selector": ".prediction small",
+          "contrast": 6.025685050148465
+        }
+      ]
+    },
+    "reduced_motion_and_script_errors": {
+      "status": "PASS",
+      "page_errors": []
+    }
+  }
+}

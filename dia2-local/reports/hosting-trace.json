@@ -1,0 +1,121 @@
+{
+  "started_at": "2026-10-16T01:34:17.431307+00:00",
+  "events": [
+    {
+      "type": "response",
+      "url": "http://naoquerosaber.pt/AI/index.html",
+      "status": 404,
+      "resource": "document",
+      "server": "LiteSpeed",
+      "content_type": "text/html",
+      "location": null,
+      "at": 65154.093
+    },
+    {
+      "type": "navigation",
+      "url": "http://naoquerosaber.pt/AI/index.html",
+      "at": 65154.093
+    },
+    {
+      "type": "response",
+      "url": "https://naoquerosaber.pt/AI/index.html",
+      "status": 404,
+      "resource": "document",
+      "server": "LiteSpeed",
+      "content_type": "text/html",
+      "location": null,
+      "at": 65169.453
+    },
+    {
+      "type": "navigation",
+      "url": "https://naoquerosaber.pt/AI/index.html",
+      "at": 65169.453
+    }
+  ],
+  "snapshots": [
+    {
+      "requested_url": "http://naoquerosaber.pt/AI/index.html",
+      "url": "http://naoquerosaber.pt/AI/index.html",
+      "title": "404 Not Found",
+      "body": "404\nNot Found\n\nThe resource requested could not be found on this server!\n\n\nProudly powered by LiteSpeed Web Server\n\nPlease be advised that LiteSpeed Technologies Inc. is not a web hosting company and, as such, has no control over content found on this site.",
+      "app_ready": false
+    },
+    {
+      "requested_url": "http://naoquerosaber.pt/AI/index.html",
+      "url": "http://naoquerosaber.pt/AI/index.html",
+      "title": "404 Not Found",
+      "body": "404\nNot Found\n\nThe resource requested could not be found on this server!\n\n\nProudly powered by LiteSpeed Web Server\n\nPlease be advised that LiteSpeed Technologies Inc. is not a web hosting company and, as such, has no control over content found on this site.",
+      "app_ready": false
+    },
+    {
+      "requested_url": "http://naoquerosaber.pt/AI/index.html",
+      "url": "http://naoquerosaber.pt/AI/index.html",
+      "title": "404 Not Found",
+      "body": "404\nNot Found\n\nThe resource requested could not be found on this server!\n\n\nProudly powered by LiteSpeed Web Server\n\nPlease be advised that LiteSpeed Technologies Inc. is not a web hosting company and, as such, has no control over content found on this site.",
+      "app_ready": false
+    },
+    {
+      "requested_url": "http://naoquerosaber.pt/AI/index.html",
+      "url": "http://naoquerosaber.pt/AI/index.html",
+      "title": "404 Not Found",
+      "body": "404\nNot Found\n\nThe resource requested could not be found on this server!\n\n\nProudly powered by LiteSpeed Web Server\n\nPlease be advised that LiteSpeed Technologies Inc. is not a web hosting company and, as such, has no control over content found on this site.",
+      "app_ready": false
+    },
+    {
+      "requested_url": "http://naoquerosaber.pt/AI/index.html",
+      "url": "http://naoquerosaber.pt/AI/index.html",
+      "title": "404 Not Found",
+      "body": "404\nNot Found\n\nThe resource requested could not be found on this server!\n\n\nProudly powered by LiteSpeed Web Server\n\nPlease be advised that LiteSpeed Technologies Inc. is not a web hosting company and, as such, has no control over content found on this site.",
+      "app_ready": false
+    },
+    {
+      "requested_url": "http://naoquerosaber.pt/AI/index.html",
+      "url": "http://naoquerosaber.pt/AI/index.html",
+      "title": "404 Not Found",
+      "body": "404\nNot Found\n\nThe resource requested could not be found on this server!\n\n\nProudly powered by LiteSpeed Web Server\n\nPlease be advised that LiteSpeed Technologies Inc. is not a web hosting company and, as such, has no control over content found on this site.",
+      "app_ready": false
+    },
+    {
+      "requested_url": "https://naoquerosaber.pt/AI/index.html",
+      "url": "https://naoquerosaber.pt/AI/index.html",
+      "title": "404 Not Found",
+      "body": "404\nNot Found\n\nThe resource requested could not be found on this server!\n\n\nProudly powered by LiteSpeed Web Server\n\nPlease be advised that LiteSpeed Technologies Inc. is not a web hosting company and, as such, has no control over content found on this site.",
+      "app_ready": false
+    },
+    {
+      "requested_url": "https://naoquerosaber.pt/AI/index.html",
+      "url": "https://naoquerosaber.pt/AI/index.html",
+      "title": "404 Not Found",
+      "body": "404\nNot Found\n\nThe resource requested could not be found on this server!\n\n\nProudly powered by LiteSpeed Web Server\n\nPlease be advised that LiteSpeed Technologies Inc. is not a web hosting company and, as such, has no control over content found on this site.",
+      "app_ready": false
+    },
+    {
+      "requested_url": "https://naoquerosaber.pt/AI/index.html",
+      "url": "https://naoquerosaber.pt/AI/index.html",
+      "title": "404 Not Found",
+      "body": "404\nNot Found\n\nThe resource requested could not be found on this server!\n\n\nProudly powered by LiteSpeed Web Server\n\nPlease be advised that LiteSpeed Technologies Inc. is not a web hosting company and, as such, has no control over content found on this site.",
+      "app_ready": false
+    },
+    {
+      "requested_url": "https://naoquerosaber.pt/AI/index.html",
+      "url": "https://naoquerosaber.pt/AI/index.html",
+      "title": "404 Not Found",
+      "body": "404\nNot Found\n\nThe resource requested could not be found on this server!\n\n\nProudly powered by LiteSpeed Web Server\n\nPlease be advised that LiteSpeed Technologies Inc. is not a web hosting company and, as such, has no control over content found on this site.",
+      "app_ready": false
+    },
+    {
+      "requested_url": "https://naoquerosaber.pt/AI/index.html",
+      "url": "https://naoquerosaber.pt/AI/index.html",
+      "title": "404 Not Found",
+      "body": "404\nNot Found\n\nThe resource requested could not be found on this server!\n\n\nProudly powered by LiteSpeed Web Server\n\nPlease be advised that LiteSpeed Technologies Inc. is not a web hosting company and, as such, has no control over content found on this site.",
+      "app_ready": false
+    },
+    {
+      "requested_url": "https://naoquerosaber.pt/AI/index.html",
+      "url": "https://naoquerosaber.pt/AI/index.html",
+      "title": "404 Not Found",
+      "body": "404\nNot Found\n\nThe resource requested could not be found on this server!\n\n\nProudly powered by LiteSpeed Web Server\n\nPlease be advised that LiteSpeed Technologies Inc. is not a web hosting company and, as such, has no control over content found on this site.",
+      "app_ready": false
+    }
+  ]
+}

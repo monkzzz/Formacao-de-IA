@@ -1,0 +1,19 @@
+{
+  "audited_at": "2026-10-16T02:02:08.950072+00:00",
+  "scope": "Digits and Letters v2",
+  "letters_correct": 19508,
+  "letters_test_count": 20800,
+  "letters_accuracy": 0.9378846153846154,
+  "public_url": "https://naoquerosaber.pt/AI/index.html",
+  "qa_groups": {
+    "letters-browser-qa.json": 10,
+    "digits-browser-qa-v2.json": 9,
+    "public-letters-browser-qa.json": 10,
+    "public-browser-qa-v2.json": 9
+  },
+  "uploaded_assets": 13,
+  "original_digit_weights_and_challenge_record": "unchanged",
+  "weights_match_manifests": true,
+  "package_matches_deployed_assets": true,
+  "credentials_and_training_data_in_package": false
+}

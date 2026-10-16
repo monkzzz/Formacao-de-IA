@@ -1,0 +1,271 @@
+{
+  "url": "https://naoquerosaber.pt/AI/",
+  "checks": {
+    "model_parity": {
+      "status": "PASS",
+      "tolerance": 0.0001,
+      "cases": [
+        {
+          "label": 0,
+          "predicted": 0,
+          "logits": 9.5367431640625e-07,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.6226043701171875e-06
+        },
+        {
+          "label": 1,
+          "predicted": 1,
+          "logits": 9.5367431640625e-07,
+          "hidden": 9.5367431640625e-07,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.430511474609375e-06
+        },
+        {
+          "label": 2,
+          "predicted": 2,
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.384185791015625e-06
+        },
+        {
+          "label": 3,
+          "predicted": 3,
+          "logits": 2.384185791015625e-06,
+          "hidden": 2.6226043701171875e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.86102294921875e-06
+        },
+        {
+          "label": 4,
+          "predicted": 4,
+          "logits": 2.86102294921875e-06,
+          "hidden": 2.384185791015625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.384185791015625e-06
+        },
+        {
+          "label": 5,
+          "predicted": 5,
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.384185791015625e-06
+        },
+        {
+          "label": 6,
+          "predicted": 6,
+          "logits": 3.814697265625e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 3.337860107421875e-06
+        },
+        {
+          "label": 7,
+          "predicted": 7,
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.6689300537109375e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.9073486328125e-06
+        },
+        {
+          "label": 8,
+          "predicted": 8,
+          "logits": 1.3262033462524414e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 3.337860107421875e-06
+        },
+        {
+          "label": 9,
+          "predicted": 9,
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.430511474609375e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.9073486328125e-06
+        }
+      ]
+    },
+    "preprocessing_parity": {
+      "status": "PASS",
+      "cases": 5,
+      "maximum_errors": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "tolerance": 1e-06
+    },
+    "multiple_upload_and_origin_parity": {
+      "status": "PASS",
+      "cases": [
+        {
+          "file": "digit-0.png",
+          "predicted": 0,
+          "score_max_error": 1.5063718994401398e-07
+        },
+        {
+          "file": "digit-1.png",
+          "predicted": 1,
+          "score_max_error": 6.42277364626409e-08
+        },
+        {
+          "file": "digit-2.png",
+          "predicted": 2,
+          "score_max_error": 2.4684046140421856e-08
+        },
+        {
+          "file": "digit-3.png",
+          "predicted": 3,
+          "score_max_error": 7.411181887628793e-08
+        },
+        {
+          "file": "digit-4.png",
+          "predicted": 4,
+          "score_max_error": 4.9538117941061444e-08
+        },
+        {
+          "file": "digit-5.png",
+          "predicted": 5,
+          "score_max_error": 1.3526052944357048e-07
+        },
+        {
+          "file": "digit-6.png",
+          "predicted": 6,
+          "score_max_error": 2.8442858734933907e-08
+        },
+        {
+          "file": "digit-7.png",
+          "predicted": 7,
+          "score_max_error": 5.769440225567024e-08
+        },
+        {
+          "file": "digit-8.png",
+          "predicted": 8,
+          "score_max_error": 5.539786473995889e-08
+        },
+        {
+          "file": "digit-9.png",
+          "predicted": 9,
+          "score_max_error": 1.2996723031122315e-08
+        }
+      ]
+    },
+    "filename_independence": {
+      "status": "PASS"
+    },
+    "blank_and_invalid_uploads": {
+      "status": "PASS",
+      "messages": [
+        "No visible digit: image is blank or has insufficient contrast.",
+        "The source image could not be decoded."
+      ]
+    },
+    "pointer_drawing_and_real_visualizations": {
+      "status": "PASS",
+      "predicted": "7"
+    },
+    "raw_export": {
+      "status": "PASS",
+      "records": 14
+    },
+    "mobile_layout": {
+      "status": "PASS",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    "browser_only_inference": {
+      "status": "PASS",
+      "requests": [
+        {
+          "url": "https://naoquerosaber.pt/AI/",
+          "method": "GET"
+        },
+        {
+          "url": "https://naoquerosaber.pt/AI/v3/style.css?v=design-1",
+          "method": "GET"
+        },
+        {
+          "url": "https://naoquerosaber.pt/AI/v3/app.js?v=design-1",
+          "method": "GET"
+        },
+        {
+          "url": "https://naoquerosaber.pt/AI/v3/inference.js?v=design-1",
+          "method": "GET"
+        },
+        {
+          "url": "https://naoquerosaber.pt/AI/v3/preprocess.js",
+          "method": "GET"
+        },
+        {
+          "url": "https://naoquerosaber.pt/AI/model/manifest.json?v=letters-1",
+          "method": "GET"
+        },
+        {
+          "url": "https://naoquerosaber.pt/AI/model/weights.bin?sha256=8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+          "method": "GET"
+        },
+        {
+          "url": "https://naoquerosaber.pt/AI/preprocess.js",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/1fd1c2e4-f61a-4616-acfa-85316580a22d",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/c205247e-d461-4635-8443-e234d04162b0",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/68efcc1d-a29d-4822-a6e6-73f89e4707e1",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/d2d52dd5-ef22-4fe3-922e-394b209e033d",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/6aed9600-acbb-41d6-b586-cd57a759be43",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/3035eb54-7529-42af-9185-7d1f45873475",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/cb03f205-38e1-4ccd-b44f-0d34c1096f04",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/5764a24b-267d-4cf8-911f-4f9f4c25800a",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/cc7ae9d8-fc5e-4381-b925-e44fc6f6f050",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/31ef4a4e-04e5-44a4-a3f1-16d5ed57ff02",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/e63f26ce-18b4-4c0b-9e0c-a9cf0aa99eac",
+          "method": "GET"
+        },
+        {
+          "url": "blob:https://naoquerosaber.pt/285177f0-fab5-49aa-9601-7044ef9905f2",
+          "method": "GET"
+        }
+      ],
+      "page_errors": []
+    }
+  },
+  "model_sha256": "8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+  "browser": "155.0.4283.45"
+}

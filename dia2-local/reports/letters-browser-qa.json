@@ -1,0 +1,558 @@
+{
+  "url": "http://127.0.0.1:8765/",
+  "checks": {
+    "original_digit_weights_preserved": {
+      "status": "PASS",
+      "sha256": "8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338"
+    },
+    "digit_runtime_regression": {
+      "status": "PASS",
+      "maximum_logit_error": 3.814697265625e-06
+    },
+    "all_26_classes_and_activation_parity": {
+      "status": "PASS",
+      "tolerance": 0.0001,
+      "fixture_correct": 21,
+      "cases": [
+        {
+          "expected": "A",
+          "predicted": "A",
+          "logits": 4.76837158203125e-06,
+          "hidden": 2.384185791015625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.86102294921875e-06,
+          "score_sum": 1.0000000000000002
+        },
+        {
+          "expected": "B",
+          "predicted": "B",
+          "logits": 3.814697265625e-06,
+          "hidden": 2.86102294921875e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.9073486328125e-06,
+          "score_sum": 1
+        },
+        {
+          "expected": "C",
+          "predicted": "C",
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.86102294921875e-06,
+          "score_sum": 0.9999999999999993
+        },
+        {
+          "expected": "D",
+          "predicted": "R",
+          "logits": 1.1920928955078125e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.6689300537109375e-06,
+          "score_sum": 1
+        },
+        {
+          "expected": "E",
+          "predicted": "E",
+          "logits": 3.4570693969726562e-06,
+          "hidden": 3.814697265625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.384185791015625e-06,
+          "score_sum": 0.9999999999999998
+        },
+        {
+          "expected": "F",
+          "predicted": "F",
+          "logits": 3.814697265625e-06,
+          "hidden": 2.384185791015625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.430511474609375e-06,
+          "score_sum": 1
+        },
+        {
+          "expected": "G",
+          "predicted": "G",
+          "logits": 2.2649765014648438e-06,
+          "hidden": 2.384185791015625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.6226043701171875e-06,
+          "score_sum": 0.9999999999999997
+        },
+        {
+          "expected": "H",
+          "predicted": "H",
+          "logits": 3.814697265625e-06,
+          "hidden": 2.86102294921875e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.6689300537109375e-06,
+          "score_sum": 0.9999999999999996
+        },
+        {
+          "expected": "I",
+          "predicted": "L",
+          "logits": 1.9073486328125e-06,
+          "hidden": 2.8014183044433594e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.430511474609375e-06,
+          "score_sum": 0.9999999999999996
+        },
+        {
+          "expected": "J",
+          "predicted": "I",
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.5497207641601562e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.6689300537109375e-06,
+          "score_sum": 1.0000000000000002
+        },
+        {
+          "expected": "K",
+          "predicted": "K",
+          "logits": 2.86102294921875e-06,
+          "hidden": 2.384185791015625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.1457672119140625e-06,
+          "score_sum": 0.9999999999999998
+        },
+        {
+          "expected": "L",
+          "predicted": "L",
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.430511474609375e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.86102294921875e-06,
+          "score_sum": 1.0000000000000004
+        },
+        {
+          "expected": "M",
+          "predicted": "M",
+          "logits": 3.814697265625e-06,
+          "hidden": 3.814697265625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.9073486328125e-06,
+          "score_sum": 0.9999999999999999
+        },
+        {
+          "expected": "N",
+          "predicted": "N",
+          "logits": 5.7220458984375e-06,
+          "hidden": 3.814697265625e-06,
+          "pool1": 4.76837158203125e-07,
+          "pool2": 1.9073486328125e-06,
+          "score_sum": 1
+        },
+        {
+          "expected": "O",
+          "predicted": "A",
+          "logits": 3.814697265625e-06,
+          "hidden": 2.86102294921875e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 3.337860107421875e-06,
+          "score_sum": 1
+        },
+        {
+          "expected": "P",
+          "predicted": "P",
+          "logits": 3.814697265625e-06,
+          "hidden": 2.384185791015625e-06,
+          "pool1": 4.76837158203125e-07,
+          "pool2": 3.337860107421875e-06,
+          "score_sum": 1.0000000000000002
+        },
+        {
+          "expected": "Q",
+          "predicted": "Q",
+          "logits": 4.76837158203125e-06,
+          "hidden": 3.814697265625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.86102294921875e-06,
+          "score_sum": 1.0000000000000002
+        },
+        {
+          "expected": "R",
+          "predicted": "R",
+          "logits": 3.814697265625e-06,
+          "hidden": 2.86102294921875e-06,
+          "pool1": 4.76837158203125e-07,
+          "pool2": 1.9073486328125e-06,
+          "score_sum": 0.9999999999999999
+        },
+        {
+          "expected": "S",
+          "predicted": "S",
+          "logits": 6.67572021484375e-06,
+          "hidden": 4.76837158203125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.384185791015625e-06,
+          "score_sum": 0.9999999999999998
+        },
+        {
+          "expected": "T",
+          "predicted": "T",
+          "logits": 3.814697265625e-06,
+          "hidden": 2.384185791015625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.9073486328125e-06,
+          "score_sum": 1
+        },
+        {
+          "expected": "U",
+          "predicted": "U",
+          "logits": 3.814697265625e-06,
+          "hidden": 3.814697265625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.86102294921875e-06,
+          "score_sum": 1.0000000000000002
+        },
+        {
+          "expected": "V",
+          "predicted": "U",
+          "logits": 5.7220458984375e-06,
+          "hidden": 2.9802322387695312e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.384185791015625e-06,
+          "score_sum": 1
+        },
+        {
+          "expected": "W",
+          "predicted": "W",
+          "logits": 2.384185791015625e-06,
+          "hidden": 2.384185791015625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.384185791015625e-06,
+          "score_sum": 1.0000000000000002
+        },
+        {
+          "expected": "X",
+          "predicted": "X",
+          "logits": 3.814697265625e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 4.76837158203125e-07,
+          "pool2": 1.9073486328125e-06,
+          "score_sum": 0.9999999999999999
+        },
+        {
+          "expected": "Y",
+          "predicted": "Y",
+          "logits": 4.5299530029296875e-06,
+          "hidden": 4.291534423828125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.384185791015625e-06,
+          "score_sum": 0.9999999999999999
+        },
+        {
+          "expected": "Z",
+          "predicted": "Z",
+          "logits": 3.814697265625e-06,
+          "hidden": 3.4570693969726562e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.9073486328125e-06,
+          "score_sum": 0.9999999999999999
+        }
+      ]
+    },
+    "26_letter_uploads_and_python_parity": {
+      "status": "PASS",
+      "cases": [
+        {
+          "file": "letter-A.png",
+          "predicted": "A",
+          "maximum_score_error": 1.689622469713825e-07
+        },
+        {
+          "file": "letter-B.png",
+          "predicted": "B",
+          "maximum_score_error": 2.5291948990702195e-07
+        },
+        {
+          "file": "letter-C.png",
+          "predicted": "C",
+          "maximum_score_error": 9.610523188374742e-08
+        },
+        {
+          "file": "letter-D.png",
+          "predicted": "R",
+          "maximum_score_error": 1.6205761899090732e-07
+        },
+        {
+          "file": "letter-E.png",
+          "predicted": "E",
+          "maximum_score_error": 9.192384331502268e-08
+        },
+        {
+          "file": "letter-F.png",
+          "predicted": "F",
+          "maximum_score_error": 5.0326510625531284e-08
+        },
+        {
+          "file": "letter-G.png",
+          "predicted": "G",
+          "maximum_score_error": 1.4253715910350628e-07
+        },
+        {
+          "file": "letter-H.png",
+          "predicted": "H",
+          "maximum_score_error": 6.0706905058438565e-09
+        },
+        {
+          "file": "letter-I.png",
+          "predicted": "L",
+          "maximum_score_error": 2.83791330990546e-07
+        },
+        {
+          "file": "letter-J.png",
+          "predicted": "I",
+          "maximum_score_error": 1.6413895798095268e-09
+        },
+        {
+          "file": "letter-K.png",
+          "predicted": "K",
+          "maximum_score_error": 1.631395693361959e-08
+        },
+        {
+          "file": "letter-L.png",
+          "predicted": "L",
+          "maximum_score_error": 1.3571777740528645e-07
+        },
+        {
+          "file": "letter-M.png",
+          "predicted": "M",
+          "maximum_score_error": 3.93419377076043e-08
+        },
+        {
+          "file": "letter-N.png",
+          "predicted": "N",
+          "maximum_score_error": 1.4717225882421303e-08
+        },
+        {
+          "file": "letter-O.png",
+          "predicted": "A",
+          "maximum_score_error": 4.705857860609619e-07
+        },
+        {
+          "file": "letter-P.png",
+          "predicted": "P",
+          "maximum_score_error": 9.34696930965373e-09
+        },
+        {
+          "file": "letter-Q.png",
+          "predicted": "Q",
+          "maximum_score_error": 5.192340324366995e-08
+        },
+        {
+          "file": "letter-R.png",
+          "predicted": "R",
+          "maximum_score_error": 1.2970179152915762e-08
+        },
+        {
+          "file": "letter-S.png",
+          "predicted": "S",
+          "maximum_score_error": 1.0458765209442333e-07
+        },
+        {
+          "file": "letter-T.png",
+          "predicted": "T",
+          "maximum_score_error": 9.469635187109304e-09
+        },
+        {
+          "file": "letter-U.png",
+          "predicted": "U",
+          "maximum_score_error": 3.105782109269484e-08
+        },
+        {
+          "file": "letter-V.png",
+          "predicted": "U",
+          "maximum_score_error": 5.6947211168889567e-08
+        },
+        {
+          "file": "letter-W.png",
+          "predicted": "W",
+          "maximum_score_error": 7.669507695595712e-08
+        },
+        {
+          "file": "letter-X.png",
+          "predicted": "X",
+          "maximum_score_error": 3.622891675547635e-08
+        },
+        {
+          "file": "letter-Y.png",
+          "predicted": "Y",
+          "maximum_score_error": 5.878013631388512e-09
+        },
+        {
+          "file": "letter-Z.png",
+          "predicted": "Z",
+          "maximum_score_error": 6.350338521698973e-08
+        }
+      ]
+    },
+    "mode_switch_and_saved_result_identity": {
+      "status": "PASS",
+      "mixed_records": 27
+    },
+    "letter_drawing_and_visualization": {
+      "status": "PASS",
+      "drawn": "H",
+      "predicted": "H"
+    },
+    "mixed_mode_json_export": {
+      "status": "PASS"
+    },
+    "letters_mobile_layout": {
+      "status": "PASS"
+    },
+    "failed_mode_load_preserves_digits_and_retries": {
+      "status": "PASS"
+    },
+    "no_remote_inference_or_page_errors": {
+      "status": "PASS",
+      "requests": [
+        {
+          "url": "http://127.0.0.1:8765/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:8765/v2/style.css?v=letters-1",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:8765/v2/app.js?v=letters-1",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:8765/v2/inference.js?v=letters-1",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:8765/v2/preprocess.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:8765/model/manifest.json?v=letters-1",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:8765/model/weights.bin?sha256=8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:8765/model/letters/manifest.json?v=letters-1",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:8765/model/letters/weights.bin?sha256=c35d6fece31dbbacb37d684d3c256fbf634bf90751195fff8238f28e884f0ad5",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/3d49b67e-a010-4cdb-b115-f1b48add1587",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/0c1c0792-ce56-4af9-8f26-45f0a6f6f575",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/8b4a2692-c2dd-4f00-9f6d-31271e460752",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/fa616c00-7f00-4113-9b39-0a6561ec248f",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/f080276f-9a63-4fcd-b0df-6f5b7b1a9b07",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/440086ea-d1b8-4e22-bab6-6d772cfe8601",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/d99625a3-bce5-47fe-9fda-70c4173cf242",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/3fef7d99-6d3f-4a43-9264-a6bd25bae27b",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/bce6e246-6588-4399-aaf7-e85d52be9c67",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/b169d820-a441-439e-be0f-c576592be9dc",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/2188d1bc-75a4-454d-b0d0-2a49d740507a",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/58f94afa-8b0c-413e-b822-6590690baf81",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/4078dbef-18ef-467b-97c0-dd317e41af21",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/e0beae44-c5ed-49b0-a8ea-13b9e80c4943",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/9b26ff37-2d84-40ed-99d5-3c5e733efc5e",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/2eae05a6-98a8-45d9-9bdc-bbc9f2f1c347",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/fd4691e3-3252-46bb-a170-00fdd0626826",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/097187d5-deae-475c-bd13-582f31be58c7",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/b2f9433d-933b-4ffb-a5fc-f47a749fb2e3",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/46c755b2-9837-4632-8a4d-2d25b91ecf79",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/bffa04f9-8e99-4e36-bf3c-4481ffe52b31",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/95161dfe-cc7c-4371-a2b2-9a0016f52267",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/257cb4e4-33bb-46e2-8675-597d4eb87ea7",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/ea46ee30-4c98-4021-ace3-034acec90280",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/b567ed15-f715-4edd-bf2f-beb7846338ef",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/c878bc2f-34fa-4a2e-bfe1-dc322d43a7f7",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:8765/166df5cc-ef4e-40bf-bd84-6077bb5dc328",
+          "method": "GET"
+        }
+      ]
+    }
+  },
+  "model_sha256": "c35d6fece31dbbacb37d684d3c256fbf634bf90751195fff8238f28e884f0ad5",
+  "browser": "155.0.4283.45"
+}

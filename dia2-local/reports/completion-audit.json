@@ -1,0 +1,21 @@
+{
+  "audited_at": "2026-10-16T01:03:55.427563+00:00",
+  "scope": "local Desafio implementation",
+  "checks": {
+    "frozen_inference_unchanged": "PASS; collector repair separately identified",
+    "frozen_archive_matches_current_app": "PASS",
+    "preserved_record_and_ordering": "PASS",
+    "challenge_pixels_scores_and_comparison": "PASS",
+    "mnist_metrics_model_selection_and_browser_evidence": "PASS",
+    "artifacts_figures_and_document_links": "PASS"
+  },
+  "mnist_correct": 9928,
+  "mnist_count": 10000,
+  "challenge_correct": 2,
+  "challenge_count": 10,
+  "not_claimed": [
+    "public deployment",
+    "teacher feedback",
+    "all Day 2 exercises completed"
+  ]
+}

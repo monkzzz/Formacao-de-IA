@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-10-16T01:32:29.870842+00:00",
+  "url": "https://naoquerosaber.pt/AI/index.html",
+  "ftp_upload": "Seven assets uploaded to /AI and verified by SHA-256 download comparison",
+  "direct_http_check": "404 for all seven assets on HTTP and HTTPS",
+  "browser_check": "Five observations over 15 seconds showed One moment, please... and Please wait while your request is being verified..., with no app initialization",
+  "uncached_navigation": "Browser navigation aborted; uncached HTTP responses were hosting verification HTML, not the app",
+  "public_app_verified": false
+}

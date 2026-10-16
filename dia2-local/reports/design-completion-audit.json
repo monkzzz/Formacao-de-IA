@@ -1,0 +1,11 @@
+{
+  "audited_at": "2026-10-16T02:21:40.272001+00:00",
+  "release": "website design v3",
+  "public_url": "https://naoquerosaber.pt/AI/index.html",
+  "local_qa_groups": 25,
+  "public_qa_groups": 25,
+  "model_weights_preprocessing_and_inference": "unchanged",
+  "original_challenge_record": "unchanged",
+  "verified_assets": 17,
+  "reports_and_package": "PASS"
+}

@@ -1,2 +1,3 @@
-# Personal exercise implementation, maintained in its own local Git repository.
-/dia2-local/
+# Keep the local exercise repository's Git metadata private to this checkout.
+/dia2-local/.git/
+/dia2-local/.git-local-history/
