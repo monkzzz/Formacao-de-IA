@@ -1,0 +1,379 @@
+{
+  "url": "http://127.0.0.1:8768/",
+  "model_sha256": "c415bceb885677c1f57c800f22feaf1659ea184f7cf39c2bca462cde4e1f5c9c",
+  "checks": {
+    "raw_upload_python_parity": {
+      "count": 60,
+      "input_side": 64,
+      "maximum_score_error": 1.714813385733649e-07
+    },
+    "filename_independence": true,
+    "drawing": true,
+    "page_errors": []
+  },
+  "cases": [
+    {
+      "file": "sample-000.png",
+      "expected": 0,
+      "predicted": 0,
+      "printed": true
+    },
+    {
+      "file": "sample-001.png",
+      "expected": 4,
+      "predicted": 4,
+      "printed": false
+    },
+    {
+      "file": "sample-002.png",
+      "expected": 1,
+      "predicted": 1,
+      "printed": true
+    },
+    {
+      "file": "sample-003.png",
+      "expected": 0,
+      "predicted": 0,
+      "printed": false
+    },
+    {
+      "file": "sample-004.png",
+      "expected": 2,
+      "predicted": 2,
+      "printed": true
+    },
+    {
+      "file": "sample-005.png",
+      "expected": 0,
+      "predicted": 0,
+      "printed": false
+    },
+    {
+      "file": "sample-006.png",
+      "expected": 3,
+      "predicted": 3,
+      "printed": true
+    },
+    {
+      "file": "sample-007.png",
+      "expected": 1,
+      "predicted": 1,
+      "printed": false
+    },
+    {
+      "file": "sample-008.png",
+      "expected": 4,
+      "predicted": 4,
+      "printed": true
+    },
+    {
+      "file": "sample-009.png",
+      "expected": 8,
+      "predicted": 8,
+      "printed": false
+    },
+    {
+      "file": "sample-010.png",
+      "expected": 5,
+      "predicted": 5,
+      "printed": true
+    },
+    {
+      "file": "sample-011.png",
+      "expected": 4,
+      "predicted": 4,
+      "printed": false
+    },
+    {
+      "file": "sample-012.png",
+      "expected": 6,
+      "predicted": 6,
+      "printed": true
+    },
+    {
+      "file": "sample-013.png",
+      "expected": 7,
+      "predicted": 7,
+      "printed": false
+    },
+    {
+      "file": "sample-014.png",
+      "expected": 7,
+      "predicted": 7,
+      "printed": true
+    },
+    {
+      "file": "sample-015.png",
+      "expected": 9,
+      "predicted": 9,
+      "printed": false
+    },
+    {
+      "file": "sample-016.png",
+      "expected": 8,
+      "predicted": 8,
+      "printed": true
+    },
+    {
+      "file": "sample-017.png",
+      "expected": 2,
+      "predicted": 2,
+      "printed": false
+    },
+    {
+      "file": "sample-018.png",
+      "expected": 9,
+      "predicted": 9,
+      "printed": true
+    },
+    {
+      "file": "sample-019.png",
+      "expected": 3,
+      "predicted": 3,
+      "printed": false
+    },
+    {
+      "file": "sample-020.png",
+      "expected": 0,
+      "predicted": 0,
+      "printed": true
+    },
+    {
+      "file": "sample-021.png",
+      "expected": 2,
+      "predicted": 2,
+      "printed": false
+    },
+    {
+      "file": "sample-022.png",
+      "expected": 1,
+      "predicted": 1,
+      "printed": true
+    },
+    {
+      "file": "sample-023.png",
+      "expected": 9,
+      "predicted": 9,
+      "printed": false
+    },
+    {
+      "file": "sample-024.png",
+      "expected": 2,
+      "predicted": 2,
+      "printed": true
+    },
+    {
+      "file": "sample-025.png",
+      "expected": 2,
+      "predicted": 2,
+      "printed": false
+    },
+    {
+      "file": "sample-026.png",
+      "expected": 3,
+      "predicted": 3,
+      "printed": true
+    },
+    {
+      "file": "sample-027.png",
+      "expected": 2,
+      "predicted": 2,
+      "printed": false
+    },
+    {
+      "file": "sample-028.png",
+      "expected": 4,
+      "predicted": 4,
+      "printed": true
+    },
+    {
+      "file": "sample-029.png",
+      "expected": 9,
+      "predicted": 9,
+      "printed": false
+    },
+    {
+      "file": "sample-030.png",
+      "expected": 5,
+      "predicted": 5,
+      "printed": true
+    },
+    {
+      "file": "sample-031.png",
+      "expected": 7,
+      "predicted": 7,
+      "printed": false
+    },
+    {
+      "file": "sample-032.png",
+      "expected": 6,
+      "predicted": 6,
+      "printed": true
+    },
+    {
+      "file": "sample-033.png",
+      "expected": 3,
+      "predicted": 3,
+      "printed": false
+    },
+    {
+      "file": "sample-034.png",
+      "expected": 7,
+      "predicted": 7,
+      "printed": true
+    },
+    {
+      "file": "sample-035.png",
+      "expected": 3,
+      "predicted": 3,
+      "printed": false
+    },
+    {
+      "file": "sample-036.png",
+      "expected": 8,
+      "predicted": 8,
+      "printed": true
+    },
+    {
+      "file": "sample-037.png",
+      "expected": 6,
+      "predicted": 6,
+      "printed": false
+    },
+    {
+      "file": "sample-038.png",
+      "expected": 9,
+      "predicted": 9,
+      "printed": true
+    },
+    {
+      "file": "sample-039.png",
+      "expected": 8,
+      "predicted": 8,
+      "printed": false
+    },
+    {
+      "file": "sample-040.png",
+      "expected": 0,
+      "predicted": 0,
+      "printed": true
+    },
+    {
+      "file": "sample-041.png",
+      "expected": 1,
+      "predicted": 1,
+      "printed": false
+    },
+    {
+      "file": "sample-042.png",
+      "expected": 1,
+      "predicted": 1,
+      "printed": true
+    },
+    {
+      "file": "sample-043.png",
+      "expected": 5,
+      "predicted": 5,
+      "printed": false
+    },
+    {
+      "file": "sample-044.png",
+      "expected": 2,
+      "predicted": 2,
+      "printed": true
+    },
+    {
+      "file": "sample-045.png",
+      "expected": 9,
+      "predicted": 9,
+      "printed": false
+    },
+    {
+      "file": "sample-046.png",
+      "expected": 3,
+      "predicted": 3,
+      "printed": true
+    },
+    {
+      "file": "sample-047.png",
+      "expected": 1,
+      "predicted": 1,
+      "printed": false
+    },
+    {
+      "file": "sample-048.png",
+      "expected": 4,
+      "predicted": 4,
+      "printed": true
+    },
+    {
+      "file": "sample-049.png",
+      "expected": 1,
+      "predicted": 1,
+      "printed": false
+    },
+    {
+      "file": "sample-050.png",
+      "expected": 5,
+      "predicted": 5,
+      "printed": true
+    },
+    {
+      "file": "sample-051.png",
+      "expected": 8,
+      "predicted": 8,
+      "printed": false
+    },
+    {
+      "file": "sample-052.png",
+      "expected": 6,
+      "predicted": 6,
+      "printed": true
+    },
+    {
+      "file": "sample-053.png",
+      "expected": 7,
+      "predicted": 7,
+      "printed": false
+    },
+    {
+      "file": "sample-054.png",
+      "expected": 7,
+      "predicted": 7,
+      "printed": true
+    },
+    {
+      "file": "sample-055.png",
+      "expected": 3,
+      "predicted": 3,
+      "printed": false
+    },
+    {
+      "file": "sample-056.png",
+      "expected": 8,
+      "predicted": 8,
+      "printed": true
+    },
+    {
+      "file": "sample-057.png",
+      "expected": 5,
+      "predicted": 5,
+      "printed": false
+    },
+    {
+      "file": "sample-058.png",
+      "expected": 9,
+      "predicted": 9,
+      "printed": true
+    },
+    {
+      "file": "sample-059.png",
+      "expected": 9,
+      "predicted": 9,
+      "printed": false
+    }
+  ],
+  "status": "PASS",
+  "scope": "Synthetic upload integration, not a general accuracy benchmark",
+  "sample_correct": 60
+}

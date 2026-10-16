@@ -1,7 +1,9 @@
 // Keep in sync with digitlab/preprocess.py; browser/Python parity is tested.
 export const PREPROCESS_VERSION = "border-gray-bilinear-com-v1";
+export const PREPROCESS_VERSION64 = "border-gray-bilinear-com-64-v1";
 
-export function prepareRGBA(data, width, height) {
+export function prepareRGBA(data, width, height, side = 28) {
+  if (![28, 64].includes(side)) throw new Error("Supported model input sides are 28 and 64.");
   if (width < 2 || height < 2 || data.length !== width * height * 4) {
     throw new Error("Expected an RGBA image at least 2 by 2 pixels.");
   }
@@ -35,7 +37,7 @@ export function prepareRGBA(data, width, height) {
     }
   }
   if (right < left) throw new Error("No visible digit.");
-  const cw = right - left + 1, ch = bottom - top + 1, scale = 20 / Math.max(cw, ch);
+  const cw = right - left + 1, ch = bottom - top + 1, scale = (side === 64 ? 48 : 20) / Math.max(cw, ch);
   const rw = Math.max(1, Math.floor(cw * scale + .5)), rh = Math.max(1, Math.floor(ch * scale + .5));
   const resized = new Float64Array(rw * rh);
   let mass = 0, sumX = 0, sumY = 0;
@@ -51,17 +53,18 @@ export function prepareRGBA(data, width, height) {
     resized[y * rw + x] = v; mass += v; sumX += v * x; sumY += v * y;
   }
   if (mass < 1) throw new Error("Too little foreground to classify.");
-  const ox = Math.floor(13.5 - sumX / mass + .5), oy = Math.floor(13.5 - sumY / mass + .5);
-  const input = new Float32Array(784);
+  const center = (side - 1) / 2;
+  const ox = Math.floor(center - sumX / mass + .5), oy = Math.floor(center - sumY / mass + .5);
+  const input = new Float32Array(side * side);
   for (let y = 0; y < rh; y++) for (let x = 0; x < rw; x++) {
-    if (x + ox >= 0 && x + ox < 28 && y + oy >= 0 && y + oy < 28) {
-      input[(y + oy) * 28 + x + ox] = resized[y * rw + x];
+    if (x + ox >= 0 && x + ox < side && y + oy >= 0 && y + oy < side) {
+      input[(y + oy) * side + x + ox] = resized[y * rw + x];
     }
   }
   return input;
 }
 
-export function prepareCanvas(canvas) {
+export function prepareCanvas(canvas, side = 28) {
   return prepareRGBA(canvas.getContext("2d", {willReadFrequently: true})
-    .getImageData(0, 0, canvas.width, canvas.height).data, canvas.width, canvas.height);
+    .getImageData(0, 0, canvas.width, canvas.height).data, canvas.width, canvas.height, side);
 }

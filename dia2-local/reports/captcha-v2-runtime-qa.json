@@ -1,0 +1,137 @@
+{
+  "url": "http://127.0.0.1:8768/",
+  "model_sha256": "c415bceb885677c1f57c800f22feaf1659ea184f7cf39c2bca462cde4e1f5c9c",
+  "checks": {
+    "activation_parity": [
+      {
+        "label": "0",
+        "logits": 9.5367431640625e-07,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.3113021850585938e-06,
+        "hidden": 8.344650268554688e-07
+      },
+      {
+        "label": "1",
+        "logits": 1.430511474609375e-06,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 7.152557373046875e-07,
+        "hidden": 9.5367431640625e-07
+      },
+      {
+        "label": "2",
+        "logits": 1.9073486328125e-06,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.430511474609375e-06,
+        "hidden": 1.9073486328125e-06
+      },
+      {
+        "label": "3",
+        "logits": 9.5367431640625e-07,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.430511474609375e-06,
+        "hidden": 1.1920928955078125e-06
+      },
+      {
+        "label": "4",
+        "logits": 1.1920928955078125e-06,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.0728836059570312e-06,
+        "hidden": 9.639188647270203e-07
+      },
+      {
+        "label": "5",
+        "logits": 1.430511474609375e-06,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.430511474609375e-06,
+        "hidden": 1.1548399925231934e-06
+      },
+      {
+        "label": "6",
+        "logits": 1.9073486328125e-06,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.430511474609375e-06,
+        "hidden": 1.430511474609375e-06
+      },
+      {
+        "label": "7",
+        "logits": 1.9073486328125e-06,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.430511474609375e-06,
+        "hidden": 9.5367431640625e-07
+      },
+      {
+        "label": "8",
+        "logits": 2.86102294921875e-06,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.430511474609375e-06,
+        "hidden": 1.430511474609375e-06
+      },
+      {
+        "label": "9",
+        "logits": 9.5367431640625e-07,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 2.384185791015625e-06,
+        "hidden": 9.5367431640625e-07
+      }
+    ],
+    "both_resolution_preprocessing_parity": [
+      {
+        "side": 28,
+        "background": 255,
+        "transparent": false,
+        "maximum_error": 0.0
+      },
+      {
+        "side": 28,
+        "background": 0,
+        "transparent": false,
+        "maximum_error": 0.0
+      },
+      {
+        "side": 28,
+        "background": 255,
+        "transparent": true,
+        "maximum_error": 0.0
+      },
+      {
+        "side": 64,
+        "background": 255,
+        "transparent": false,
+        "maximum_error": 0.0
+      },
+      {
+        "side": 64,
+        "background": 0,
+        "transparent": false,
+        "maximum_error": 0.0
+      },
+      {
+        "side": 64,
+        "background": 255,
+        "transparent": true,
+        "maximum_error": 0.0
+      }
+    ],
+    "mode_dimensions_and_words_entry": true,
+    "helper_resolution_explanation": true,
+    "cached_previous_entry_uses_previous_model": true,
+    "desktop_latency": {
+      "previous": {
+        "count": 30,
+        "median_ms": 10.099999994039536,
+        "p95_ms": 11.399999991059303
+      },
+      "high_resolution": {
+        "count": 30,
+        "median_ms": 54.6000000089407,
+        "p95_ms": 71.20000000298023
+      }
+    },
+    "wrong_input_size_rejected": true,
+    "mobile_layout": true,
+    "page_errors": []
+  },
+  "scope": "Selected 64px runtime verification",
+  "latency_scope": "Headless desktop Edge on this machine, not a physical-phone benchmark",
+  "status": "PASS"
+}

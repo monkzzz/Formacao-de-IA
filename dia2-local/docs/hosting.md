@@ -1,5 +1,27 @@
 # Website Hosting
 
+## v3.6.0 higher-resolution digits
+
+Digits use `model/captcha-v2/digits/`; Letters keep `model/robust/letters/`.
+Preserve all earlier model folders. Transfer the new manifest and weights,
+`evaluation/digits-captcha-v2.json`, `v3/preprocess.js`, `v3/inference.js`,
+`v3/app.js`, `v3/helper-knowledge.js`, `v3/helper.js` and `index.html`.
+The deployer orders model/data assets first, shared runtimes before entry
+modules, and HTML last. The updated inference file pairs cached `captcha-1`
+and `robust-1` imports with their original 28px models.
+
+Use `digitlab.robust_qa --digit-experiment captcha-v2`,
+`digitlab.captcha_qa --experiment captcha-v2` and `digitlab.highres_qa` for
+current-model checks, always with new report destinations. The reusable
+`digitlab.deployed_challenge` collector verifies public results against the
+already frozen local evaluation; it does not select or tune weights.
+See [the 64px protocol and evidence](highres-training.md).
+
+The v3.6.0 deployment passed all nine upload hash checks, all 44 HTTPS asset
+hashes, public browser checks and direct live challenge verification (9/10,
+identical to the frozen local model). Deployment and verification reports are
+linked in the protocol document; earlier release evidence remains preserved.
+
 ## v3.5.0 digit release
 
 Digits now load `model/captcha-v1/digits/`; Letters still load

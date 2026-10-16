@@ -1,0 +1,55 @@
+{
+  "uploaded_at": "2026-10-16T17:34:32.709178+00:00",
+  "destination": "/",
+  "tls": true,
+  "files": [
+    {
+      "file": "evaluation/digits-captcha-v2.json",
+      "bytes": 1279,
+      "sha256": "e8403ec95a3e5962086683c6c9590c8efe068885a514ae1c7092ea41417a82f6"
+    },
+    {
+      "file": "model/captcha-v2/digits/manifest.json",
+      "bytes": 80227,
+      "sha256": "744021d3d9a4cc9301f7a5754d9ed4fcaffec2dfa57b840c7e90de9e9dd0d9df"
+    },
+    {
+      "file": "model/captcha-v2/digits/weights.bin",
+      "bytes": 1073448,
+      "sha256": "c415bceb885677c1f57c800f22feaf1659ea184f7cf39c2bca462cde4e1f5c9c"
+    },
+    {
+      "file": "v3/helper-knowledge.js",
+      "bytes": 16438,
+      "sha256": "42d957f814902614c006bfa2ab35bfbaeadf7179caf41aa771fd08c069e4da91"
+    },
+    {
+      "file": "v3/preprocess.js",
+      "bytes": 3415,
+      "sha256": "170ad3280aa835bb0ad0efd5d65cd2ea507c1c3cd680b092cfc0e95537db3e3c"
+    },
+    {
+      "file": "v3/helper.js",
+      "bytes": 5290,
+      "sha256": "be2138dbd9edaa18e8cf41f6288f524d5e55d69f1c8ca1fd6e5d427a98e85f90"
+    },
+    {
+      "file": "v3/inference.js",
+      "bytes": 6820,
+      "sha256": "bb5fa195df49de854dd207ecaa7293ca98712c8f1c8bf2490ff663590f5489f8"
+    },
+    {
+      "file": "v3/app.js",
+      "bytes": 17756,
+      "sha256": "1f230a3b1dc7e3c2327f480a282e0f14bdf06a5f06ca99fc4259932d827ad817"
+    },
+    {
+      "file": "index.html",
+      "bytes": 17910,
+      "sha256": "78282b5053a638136bda74c073a1bd1f6a10d7eda1c64fc186df68fd3c8fee45"
+    }
+  ],
+  "backup_directory": "artifacts\\ftp-backup-20261016T173412Z",
+  "application_version": "3.6.0",
+  "scope": "selected-files"
+}

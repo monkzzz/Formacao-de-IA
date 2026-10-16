@@ -1,6 +1,6 @@
 # Digit Lab — Local Desafio Project
 
-**Current application release: v3.5.0.** Enter the Konami code to open the secret
+**Current application release: v3.6.0.** Enter the Konami code to open the secret
 SNES arcade. The supplied Zelda ROM is a separate deployment asset excluded from
 Git. See [arcade setup, controls and validation](docs/snes-arcade.md).
 
@@ -12,7 +12,49 @@ Two CNNs trained from scratch on MNIST and EMNIST Letters, with a static browser
 
 The header logo, footer logo, and favicon use the supplied `65474617.jpg`, published unchanged as `dist/assets/65474617.jpg`. [Live logo verification](reports/logo-verification.json) confirms the image checksum, loading, mobile layout, and model readiness.
 
-## CAPTCHA-style digit release (v3.5.0)
+## Higher-resolution digits (v3.6.0)
+
+Digits now use **64 x 64 inputs** and broader independent synthetic training,
+including 31 font faces, short stroke gaps, shear and denser interference.
+Epoch 12 was selected using separate validation data before loading test data.
+The official challenge images and generator were excluded from training and
+selection. Letters retain their 28px model; Words retains its pretrained reader.
+
+| Evaluation | Previous 28px digit model | New 64px digit model |
+| --- | ---: | ---: |
+| Clean MNIST, 10,000 images | 99.20% | **98.91%** |
+| Broader raw synthetic test, 10,000 images | 95.09% | **97.90%** |
+| Official Desafio follow-up, 10 images | 7/10 | **9/10** |
+
+Both models use the same raw synthetic test images with their own preprocessing.
+This broader benchmark differs from the v3.5.0 synthetic benchmark. Clean MNIST
+accuracy decreased by 0.29 percentage points. The official challenge was uploaded
+once after freezing the selected model and runtime; its earlier outcomes were
+known, so this is a follow-up, not a new blind test. No tuning followed the result.
+Nine of ten does not establish general CAPTCHA population accuracy.
+
+Digits load from `dist/model/captcha-v2/digits/`. Real previews and feature maps
+follow the selected model's dimensions; each exported image identifies its input
+size and preprocessing contract. Older cached module entry points retain their
+matching 28px models. All earlier checkpoints, exports and reports remain preserved.
+
+All 23 Python tests passed. Local browser checks passed 36 clean uploads,
+60 noisy uploads, activations, pixels, drawing, mode changes, exports, error
+recovery, the helper and cached-page compatibility. Selected-model desktop Edge
+inference measured 54.6ms median and 71.2ms p95; physical-phone speed is unmeasured.
+
+See the [protocol and evidence](docs/highres-training.md),
+[training/test results](reports/captcha-v2.json),
+[browser regression](reports/captcha-v2-browser-qa.json),
+[runtime and speed checks](reports/captcha-v2-runtime-qa.json), and
+[frozen challenge comparison](reports/captcha-v2-challenge-comparison.json).
+
+**v3.6.0 is live.** All nine changed uploads, all 44 HTTPS asset hashes and live
+browser checks passed. Direct upload of all ten `caso_` files on the public site
+also scored **9/10**, exactly matching the frozen local results. See
+[deployment and direct live verification](docs/highres-training.md#public-deployment-and-direct-challenge-verification).
+
+## CAPTCHA-style digit release (v3.5.0, historical)
 
 The digit model now trains on independent printed and handwritten images with
 clutter rendered **before** upload preprocessing. Epoch 11 was selected from a
@@ -44,7 +86,7 @@ See the [protocol and validation](docs/captcha-training.md),
 [raw upload checks](reports/captcha-v1-raw-browser-qa.json), and
 [final challenge comparison](reports/captcha-v1-challenge-comparison.json).
 
-**v3.5.0 is live.** All eight changed uploads, all 41 public asset hashes,
+**v3.5.0 deployment:** All eight changed uploads, all 41 public asset hashes,
 character regression, 40 raw synthetic uploads and six helper groups passed.
 See the [public deployment evidence](docs/captcha-training.md#public-deployment).
 
@@ -94,7 +136,7 @@ The trained weights already exist locally in `dist/model/weights.bin`. They and 
 
 ## Words mode
 
-The footer displays the application release, currently **v3.5.0**. Character
+The footer displays the application release, currently **v3.6.0**. Character
 prediction JSON includes `application_version`; Words result metadata also keeps
 that version alongside the model identity. This release number identifies the
 website, separately from model weight hashes and preprocessing versions.

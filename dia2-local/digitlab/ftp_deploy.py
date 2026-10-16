@@ -15,6 +15,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def deployment_order(path):
+    """Transfer shared runtimes before their entry modules, and HTML last."""
+    relative = path.relative_to(ROOT / "dist").as_posix()
+    priority = {"preprocess.js": 1, "inference.js": 2, "helper.js": 2, "app.js": 3}
+    return (relative == "index.html", priority.get(path.name, 0), relative)
+
+
 def connect(config):
     host = config.get("tls_hostname") or config["host"]
     if host != config["host"]:
@@ -94,7 +101,7 @@ def main():
         # Upload versioned dependencies and model assets before switching the entry page.
         # Original root assets remain compatible with an already cached v1 page.
         files = sorted((path for path in (ROOT / "dist").rglob("*") if path.is_file() and path.name != "parity.json"),
-                       key=lambda path: (path.relative_to(ROOT / "dist").as_posix() == "index.html", str(path)))
+                       key=deployment_order)
         if args.files:
             selected = set(args.files)
             known = {path.relative_to(ROOT / "dist").as_posix() for path in files}

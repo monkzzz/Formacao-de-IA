@@ -13,7 +13,7 @@ def prepare_models(root, download=False):
     """Check current release weights; optionally restore verified public copies."""
     missing = []
     for mode in ("digits", "letters"):
-        experiment = "captcha-v1" if mode == "digits" else "robust"
+        experiment = "captcha-v2" if mode == "digits" else "robust"
         folder = root / "model" / experiment / mode
         manifest = json.loads((folder / "manifest.json").read_text(encoding="utf-8"))
         target = folder / "weights.bin"

@@ -1,5 +1,28 @@
 # Application releases
 
+## v3.6.0 — Higher-resolution digits and broader noise training
+
+Digit inputs increase to 64 x 64, with larger real feature maps and a separate
+model folder. Broader independent training adds font faces, short stroke gaps,
+shear and interference. Letters and Words retain their existing models.
+
+The frozen official challenge follow-up scored **9/10**, compared with **7/10**
+for v3.5.0. On the same broader synthetic test, accuracy improved from 95.09% to
+**97.90%**. Clean MNIST decreased from 99.20% to **98.91%**. Prior challenge
+outcomes were known, and no tuning followed the final evaluation.
+
+All 23 Python tests and local browser checks passed, including real activations,
+both preprocessing resolutions, 36 clean uploads, 60 noisy uploads, drawing,
+mode dimensions, helper text and cached previous model entries. Desktop Edge
+inference measured 54.6ms median / 71.2ms p95; physical-phone speed is unmeasured.
+
+See [the protocol and release evidence](highres-training.md).
+
+The release is live: nine uploaded assets and all 44 HTTPS asset hashes passed.
+Public character/raw-upload/helper/runtime checks passed. A separate direct
+upload of the ten official images on the live site confirmed **9/10**, matching
+all frozen local predictions, prepared inputs and class scores.
+
 ## v3.5.0 — Raw-image CAPTCHA-style digit training
 
 Digit training now includes independent printed and handwritten images with

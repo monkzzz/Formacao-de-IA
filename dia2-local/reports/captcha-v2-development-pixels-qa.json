@@ -1,0 +1,135 @@
+{
+  "url": "http://127.0.0.1:8768/",
+  "model_sha256": "54e27c4bb6418589e845a93ba030faed9b04495519566a99a1c6b059b9790329",
+  "checks": {
+    "activation_parity": [
+      {
+        "label": "0",
+        "logits": 9.5367431640625e-07,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.430511474609375e-06,
+        "hidden": 1.430511474609375e-06
+      },
+      {
+        "label": "1",
+        "logits": 9.5367431640625e-07,
+        "pool1": 2.384185791015625e-07,
+        "pool2": 1.430511474609375e-06,
+        "hidden": 7.152557373046875e-07
+      },
+      {
+        "label": "2",
+        "logits": 1.1920928955078125e-06,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.9073486328125e-06,
+        "hidden": 1.3113021850585938e-06
+      },
+      {
+        "label": "3",
+        "logits": 1.1622905731201172e-06,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.430511474609375e-06,
+        "hidden": 1.6093254089355469e-06
+      },
+      {
+        "label": "4",
+        "logits": 7.152557373046875e-07,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 9.5367431640625e-07,
+        "hidden": 7.152557373046875e-07
+      },
+      {
+        "label": "5",
+        "logits": 9.5367431640625e-07,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.6689300537109375e-06,
+        "hidden": 1.0132789611816406e-06
+      },
+      {
+        "label": "6",
+        "logits": 1.0728836059570312e-06,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.430511474609375e-06,
+        "hidden": 1.430511474609375e-06
+      },
+      {
+        "label": "7",
+        "logits": 1.087784767150879e-06,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 9.5367431640625e-07,
+        "hidden": 8.344650268554688e-07
+      },
+      {
+        "label": "8",
+        "logits": 7.152557373046875e-07,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.430511474609375e-06,
+        "hidden": 1.4454126358032227e-06
+      },
+      {
+        "label": "9",
+        "logits": 7.152557373046875e-07,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.430511474609375e-06,
+        "hidden": 1.1920928955078125e-06
+      }
+    ],
+    "both_resolution_preprocessing_parity": [
+      {
+        "side": 28,
+        "background": 255,
+        "transparent": false,
+        "maximum_error": 0.0
+      },
+      {
+        "side": 28,
+        "background": 0,
+        "transparent": false,
+        "maximum_error": 0.0
+      },
+      {
+        "side": 28,
+        "background": 255,
+        "transparent": true,
+        "maximum_error": 0.0
+      },
+      {
+        "side": 64,
+        "background": 255,
+        "transparent": false,
+        "maximum_error": 0.0
+      },
+      {
+        "side": 64,
+        "background": 0,
+        "transparent": false,
+        "maximum_error": 0.0
+      },
+      {
+        "side": 64,
+        "background": 255,
+        "transparent": true,
+        "maximum_error": 0.0
+      }
+    ],
+    "mode_dimensions_and_words_entry": true,
+    "desktop_latency": {
+      "previous": {
+        "count": 30,
+        "median_ms": 18.299999997019768,
+        "p95_ms": 19.700000002980232
+      },
+      "high_resolution": {
+        "count": 30,
+        "median_ms": 95.20000000298023,
+        "p95_ms": 98.59999999403954
+      }
+    },
+    "wrong_input_size_rejected": true,
+    "mobile_layout": true,
+    "page_errors": []
+  },
+  "scope": "Untrained development runtime fixture",
+  "latency_scope": "Headless desktop Edge on this machine, not a physical-phone benchmark",
+  "status": "PASS"
+}

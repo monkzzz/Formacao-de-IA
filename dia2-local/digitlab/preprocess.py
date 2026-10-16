@@ -1,18 +1,21 @@
-"""Versioned preprocessing contract, mirrored exactly in dist/preprocess.js."""
+"""Contracts mirrored in dist/v3/preprocess.js; the legacy default is preserved."""
 
 import math
 
 import numpy as np
 
 VERSION = "border-gray-bilinear-com-v1"
+VERSION64 = "border-gray-bilinear-com-64-v1"
 
 
-def prepare(rgba: np.ndarray) -> np.ndarray:
+def prepare(rgba: np.ndarray, side=28) -> np.ndarray:
     """Composite on white, estimate border background, crop and center ink.
 
-    Output is float32 CHW (1, 28, 28), foreground in [0, 1]. Uniform or
+    Output is float32 CHW (1, side, side), foreground in [0, 1]. Uniform or
     negligible-contrast inputs raise ValueError rather than inventing a digit.
     """
+    if side not in (28, 64):
+        raise ValueError("Supported model input sides are 28 and 64")
     if rgba.ndim != 3 or rgba.shape[2] != 4 or min(rgba.shape[:2]) < 2:
         raise ValueError("Expected an RGBA image at least 2 by 2 pixels")
     pixels = rgba.astype(np.float64)
@@ -32,7 +35,7 @@ def prepare(rgba: np.ndarray) -> np.ndarray:
     top, bottom, left, right = rows.min(), rows.max() + 1, cols.min(), cols.max() + 1
     crop = ink[top:bottom, left:right]
     height, width = crop.shape
-    scale = 20 / max(height, width)
+    scale = (48 if side == 64 else 20) / max(height, width)
     out_h = max(1, math.floor(height * scale + .5))
     out_w = max(1, math.floor(width * scale + .5))
     # Pixel-center bilinear interpolation with edge clamping, shared with JS.
@@ -50,21 +53,21 @@ def prepare(rgba: np.ndarray) -> np.ndarray:
         raise ValueError("Too little foreground to classify")
     cy = float((resized.sum(axis=1) * np.arange(out_h)).sum() / mass)
     cx = float((resized.sum(axis=0) * np.arange(out_w)).sum() / mass)
-    oy, ox = math.floor(13.5 - cy + .5), math.floor(13.5 - cx + .5)
-    result = np.zeros((28, 28), dtype=np.float32)
-    for y in range(out_h):
-        for x in range(out_w):
-            if 0 <= oy + y < 28 and 0 <= ox + x < 28:
-                result[oy + y, ox + x] = resized[y, x]
+    center = (side - 1) / 2
+    oy, ox = math.floor(center - cy + .5), math.floor(center - cx + .5)
+    result = np.zeros((side, side), dtype=np.float32)
+    top, left = max(0, oy), max(0, ox)
+    bottom, right = min(side, oy + out_h), min(side, ox + out_w)
+    result[top:bottom, left:right] = resized[top - oy:bottom - oy, left - ox:right - ox]
     return result[None]
 
 
-def prepare_mnist(images: np.ndarray) -> np.ndarray:
+def prepare_mnist(images: np.ndarray, side=28) -> np.ndarray:
     """Use the same image preparation for training and browser images."""
-    result = np.empty((len(images), 1, 28, 28), dtype=np.float32)
+    result = np.empty((len(images), 1, side, side), dtype=np.float32)
     for index, image in enumerate(images):
         rgba = np.empty((28, 28, 4), dtype=np.uint8)
         rgba[:, :, :3] = image[:, :, None]
         rgba[:, :, 3] = 255
-        result[index] = prepare(rgba)
+        result[index] = prepare(rgba, side)
     return result

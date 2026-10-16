@@ -1,22 +1,32 @@
-import {PREPROCESS_VERSION} from "./preprocess.js";
+import {PREPROCESS_VERSION, PREPROCESS_VERSION64} from "./preprocess.js?v=3.6.0";
+
+// An older cached page can fetch this file under its previous module URL.
+// Keep that entry point paired with the model/input size it originally used.
+const DEFAULT_DIGIT_EXPERIMENT = {"robust-1": "robust", "captcha-1": "captcha-v1"}
+  [new URL(import.meta.url).searchParams.get("v")] || "captcha-v2";
 
 const SHAPES = {
   "conv1.weight": [16, 1, 3, 3], "conv1.bias": [16],
   "conv2.weight": [32, 16, 3, 3], "conv2.bias": [32],
-  "fc1.weight": [128, 1568], "fc1.bias": [128],
+  "fc1.bias": [128],
 };
 
-export async function loadModel(mode = "digits") {
+export async function loadModel(mode = "digits", digitExperiment = DEFAULT_DIGIT_EXPERIMENT) {
   if (!["digits", "letters"].includes(mode)) throw new Error("Unknown recognition mode.");
   if (!globalThis.crypto?.subtle) throw new Error("Open the HTTPS version of this page to load the verified model.");
   const labels = mode === "letters" ? Array.from("ABCDEFGHIJKLMNOPQRSTUVWXYZ") : Array.from("0123456789");
-  const experiment = mode === "digits" ? "captcha-v1" : "robust";
+  if (!["robust", "captcha-v1", "captcha-v2"].includes(digitExperiment)) throw new Error("Unknown digit experiment.");
+  const experiment = mode === "digits" ? digitExperiment : "robust";
   const base = `./model/${experiment}/${mode}/`;
-  const response = await fetch(base + "manifest.json?v=captcha-1", {cache: "no-store"});
+  const response = await fetch(base + "manifest.json?v=captcha-2", {cache: "no-store"});
   if (!response.ok) throw new Error(`Cannot load the ${mode} model. Check that its model folder was uploaded.`);
   const manifest = await response.json();
-  if (manifest.schema !== 1 || manifest.architecture !== "cnn16-32-128"
-      || manifest.preprocessing !== PREPROCESS_VERSION || manifest.dtype !== "float32-le") {
+  const highResolution = manifest.architecture === "cnn64-16-32-128";
+  const inputSide = highResolution ? 64 : 28, featureSides = highResolution ? [32, 8] : [14, 7];
+  if (manifest.schema !== 1 || !["cnn16-32-128", "cnn64-16-32-128"].includes(manifest.architecture)
+      || (highResolution && (mode !== "digits" || manifest.input_side !== 64))
+      || manifest.preprocessing !== (highResolution ? PREPROCESS_VERSION64 : PREPROCESS_VERSION)
+      || manifest.dtype !== "float32-le") {
     throw new Error("Model and application contracts do not match.");
   }
   if ((mode === "letters" && manifest.task !== "letters") ||
@@ -33,7 +43,10 @@ export async function loadModel(mode = "digits") {
   }
   const weights = {};
   let expectedOffset = 0;
-  const shapes = {...SHAPES, "fc2.weight": [labels.length, 128], "fc2.bias": [labels.length]};
+  const shapes = {"conv1.weight": SHAPES["conv1.weight"], "conv1.bias": SHAPES["conv1.bias"],
+    "conv2.weight": SHAPES["conv2.weight"], "conv2.bias": SHAPES["conv2.bias"],
+    "fc1.weight": [128, 32 * featureSides[1] ** 2], "fc1.bias": [128],
+    "fc2.weight": [labels.length, 128], "fc2.bias": [labels.length]};
   for (const [name, shape] of Object.entries(shapes)) {
     const tensor = manifest.tensors.find(t => t.name === name);
     const length = shape.reduce((a, b) => a * b, 1);
@@ -46,7 +59,7 @@ export async function loadModel(mode = "digits") {
     expectedOffset += length;
   }
   if (expectedOffset * 4 !== bytes.byteLength) throw new Error("Unexpected model data.");
-  return {manifest, weights, labels, mode};
+  return {manifest, weights, labels, mode, inputSide, featureSides};
 }
 
 function convRelu(input, side, channels, outChannels, weights, bias) {
@@ -86,13 +99,24 @@ function dense(input, count, weights, bias, relu) {
   return output;
 }
 
+function averagePool(input, side, channels) {
+  const half = side / 2, output = new Float32Array(channels * half * half);
+  for (let c = 0; c < channels; c++) for (let y = 0; y < half; y++) for (let x = 0; x < half; x++) {
+    const at = c * side * side + y * 2 * side + x * 2;
+    output[c * half * half + y * half + x] = (input[at] + input[at + 1] + input[at + side] + input[at + side + 1]) / 4;
+  }
+  return output;
+}
+
 export function predict(model, input) {
-  if (input.length !== 784 || !input.every(v => Number.isFinite(v) && v >= 0 && v <= 1)) {
-    throw new Error("Expected 784 finite input pixels in [0, 1].");
+  const side = model.inputSide || 28;
+  if (input.length !== side * side || !input.every(v => Number.isFinite(v) && v >= 0 && v <= 1)) {
+    throw new Error(`Expected ${side * side} finite input pixels in [0, 1].`);
   }
   const w = model.weights;
-  const first = pool(convRelu(input, 28, 1, 16, w["conv1.weight"], w["conv1.bias"]), 28, 16);
-  const second = pool(convRelu(first, 14, 16, 32, w["conv2.weight"], w["conv2.bias"]), 14, 32);
+  const first = pool(convRelu(input, side, 1, 16, w["conv1.weight"], w["conv1.bias"]), side, 16);
+  const pooled = pool(convRelu(first, side / 2, 16, 32, w["conv2.weight"], w["conv2.bias"]), side / 2, 32);
+  const second = side === 64 ? averagePool(pooled, 16, 32) : pooled;
   const hidden = dense(second, 128, w["fc1.weight"], w["fc1.bias"], true);
   const logits = dense(hidden, model.labels.length, w["fc2.weight"], w["fc2.bias"], false);
   const maximum = Math.max(...logits), scores = Array.from(logits, v => Math.exp(v - maximum));

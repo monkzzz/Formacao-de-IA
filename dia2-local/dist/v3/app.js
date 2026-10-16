@@ -1,5 +1,5 @@
-import {loadModel, predict} from "./inference.js?v=captcha-1";
-import {prepareCanvas, PREPROCESS_VERSION} from "./preprocess.js";
+import {loadModel, predict} from "./inference.js?v=captcha-2";
+import {prepareCanvas, PREPROCESS_VERSION} from "./preprocess.js?v=3.6.0";
 import {createWordsWorkspace} from "./words.js?v=3.2.0";
 import {createDrawingTools} from "./canvas-tools.js?v=3.2.0";
 
@@ -31,6 +31,7 @@ function status(message, error = false) {
 }
 
 function paintMap(canvas, values, side) {
+  if (canvas.width !== side || canvas.height !== side) canvas.width = canvas.height = side;
   const context = canvas.getContext("2d");
   const maximum = Math.max(1e-9, ...values);
   const data = context.createImageData(side, side);
@@ -91,7 +92,13 @@ async function activateMode(mode) {
       : "Choose Digits for 0–9. Use Letters for A–Z, especially for similar shapes such as O and 0.";
     $("test-dataset").textContent = letters ? "Official EMNIST Letters test" : "Official MNIST test";
     $("test-accuracy").textContent = `${(test.accuracy * 100).toFixed(2)}% · ${test.correct.toLocaleString()} / ${test.count.toLocaleString()}`;
-    $("architecture").textContent = `Conv 16 → Conv 32 → Dense 128 → ${model.labels.length}`;
+    $("architecture").textContent = `${model.inputSide}px · Conv 16 → Conv 32${model.inputSide === 64 ? " → Average pool" : ""} → Dense 128 → ${model.labels.length}`;
+    document.querySelector(".input-preview p").textContent = `Your image, prepared as ${model.inputSide} × ${model.inputSide} pixels. Check this view if a prediction surprises you.`;
+    document.querySelector(".input-dimensions").textContent = `${model.inputSide} × ${model.inputSide}`;
+    for (const [id, count, side] of [["layer-one", 16, model.featureSides[0]], ["layer-two", 32, model.featureSides[1]]]) {
+      $(id).parentElement.querySelector("h3 small").textContent = `${count} maps · ${side} × ${side} pixels`;
+      for (const map of $(id).children) map.width = map.height = side;
+    }
     $("data-split").textContent = `${manifest.training.split.train.toLocaleString()} / ${manifest.training.split.validation.toLocaleString()} · no challenge inputs`;
     $("hash").textContent = manifest.sha256;
     renderScores(model.labels); resetOutput();
@@ -120,8 +127,8 @@ function showPrediction(result, input, title, elapsed, model = state.model) {
     rows[i].querySelector(".score-fill").style.width = `${result.scores[i] * 100}%`;
     rows[i].lastElementChild.textContent = `${(result.scores[i] * 100).toFixed(2)}%`;
   }
-  paintMap($("prepared"), input, 28);
-  for (const [id, values, side] of [["layer-one", result.first, 14], ["layer-two", result.second, 7]]) {
+  paintMap($("prepared"), input, model.inputSide);
+  for (const [id, values, side] of [["layer-one", result.first, model.featureSides[0]], ["layer-two", result.second, model.featureSides[1]]]) {
     Array.from($(id).children).forEach((map, i) => paintMap(map, values.slice(i * side * side, (i + 1) * side * side), side));
   }
   const hiddenContext = $("hidden").getContext("2d");
@@ -180,7 +187,8 @@ function resetOutput() {
   for (const row of $("scores").children) {
     row.classList.remove("winner"); row.querySelector(".score-fill").style.width = "0%"; row.lastElementChild.textContent = "—";
   }
-  paintMap($("prepared"), new Float32Array(784), 28);
+  const inputSide = state.model?.inputSide || 28;
+  paintMap($("prepared"), new Float32Array(inputSide * inputSide), inputSide);
   for (const id of ["layer-one", "layer-two"]) for (const map of $(id).children) paintMap(map, new Float32Array(map.width ** 2), map.width);
   $("hidden").getContext("2d").clearRect(0, 0, 128, 64);
   $("connections").textContent = "Classify an input to inspect learned connections.";
@@ -192,7 +200,7 @@ $("clear").addEventListener("click", () => {
 });
 $("classify").addEventListener("click", () => {
   try {
-    const input = prepareCanvas(canvas), {result, elapsed} = run(input);
+    const input = prepareCanvas(canvas, state.model.inputSide), {result, elapsed} = run(input);
     showPrediction(result, input, "Your drawing", elapsed);
     status("Prediction ready. Explore the scores or try another character.");
   } catch (error) { status(error.message, true); }
@@ -205,7 +213,9 @@ async function sha256(bytes) {
 async function uploadFile(file, batch) {
   const model = state.model, mode = state.mode;
   const record = {file: file.name, bytes: file.size, batch, recorded_at: new Date().toISOString(),
-    mode, model_sha256: model.manifest.sha256, labels: model.labels};
+    mode, model_sha256: model.manifest.sha256, labels: model.labels,
+    input_side: model.inputSide, preprocessing: model.manifest.preprocessing,
+    architecture: model.manifest.architecture};
   const card = document.createElement("button"); card.type = "button"; card.className = "upload-result";
   const name = document.createElement("strong"); name.textContent = file.name;
   const summary = document.createElement("span"); summary.textContent = "Processing…";
@@ -219,7 +229,7 @@ async function uploadFile(file, batch) {
     if (bitmap.width * bitmap.height > 16000000) {bitmap.close(); throw new Error("Image exceeds 16 million pixels.");}
     const imageCanvas = document.createElement("canvas"); imageCanvas.width = bitmap.width; imageCanvas.height = bitmap.height;
     imageCanvas.getContext("2d").drawImage(bitmap, 0, 0); bitmap.close();
-    const input = prepareCanvas(imageCanvas), {result, elapsed} = run(input);
+    const input = prepareCanvas(imageCanvas, model.inputSide), {result, elapsed} = run(input);
     record.width = imageCanvas.width; record.height = imageCanvas.height;
     record.input = Array.from(input); record.input_sha256 = await sha256(input.buffer);
     record.predicted = mode === "digits" ? result.digit : result.label;
@@ -249,7 +259,7 @@ function exportRecord() {
   return {schema: 2, exported_at: new Date().toISOString(), origin: location.origin,
     application: "Digit Lab " + APPLICATION_VERSION, application_version: APPLICATION_VERSION,
     mode: state.mode, model_sha256: state.mode === "words" ? null : state.model.manifest.sha256,
-    preprocessing: PREPROCESS_VERSION, labels_consulted_by_app: false,
+    preprocessing: state.mode === "words" ? null : state.model.manifest.preprocessing, labels_consulted_by_app: false,
     note: "Raw model outputs only; each record identifies its own mode, class labels and model hash. No answer key is loaded or used.",
     predictions: state.uploads};
 }
@@ -283,5 +293,7 @@ await activateMode("digits");
 
 // A narrow QA surface invokes the same functions and weights as the interface.
 window.digitLab = {state, predict: input => predict(state.model, Float32Array.from(input)),
-  prepareCanvas, exportRecord, activateMode, wordsContext: words.context,
-  applicationVersion: APPLICATION_VERSION, version: PREPROCESS_VERSION};
+  prepareCanvas: (canvas, side = state.model?.inputSide || 28) => prepareCanvas(canvas, side),
+  exportRecord, activateMode, wordsContext: words.context,
+  applicationVersion: APPLICATION_VERSION,
+  get version() {return state.model?.manifest.preprocessing || PREPROCESS_VERSION;}};

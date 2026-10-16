@@ -1,13 +1,16 @@
 # Digit Lab task workflows
 
-Current release: v3.5.0 uses `captcha-v1` digits and robustness letters. For
-current character checks, add `--digit-experiment captcha-v1` and use a new
+Current release: v3.6.0 uses 64px `captcha-v2` digits and robustness letters. For
+current character checks, add `--digit-experiment captcha-v2` and use a new
 `--report` and `--screenshot-prefix` with `digitlab.robust_qa`. Use
-`digitlab.captcha_qa --report <new-report.json>` for full-pipeline synthetic
-uploads. See [the current training and deployment evidence](docs/captcha-training.md).
+`digitlab.captcha_qa --experiment captcha-v2 --report <new-report.json>` for
+full-pipeline synthetic uploads and `digitlab.highres_qa` for dimensions, speed
+and cached-entry compatibility. See [the current evidence](docs/highres-training.md).
 The completed `captcha-v1-challenge-*.json` records must remain preserved;
 do not rerun the official challenge to tune this release. Older examples below
 describe their named workflows and original robustness experiments.
+The `captcha-v2-challenge-*.json` evaluation is also complete and must be
+preserved. `digitlab.deployed_challenge` writes separate live verification.
 
 This is a project workflow reference loaded from [AGENTS.md](AGENTS.md). It is not an automatically installed Codex skill package. Run commands from `dia2-local/`; consult each module's `--help` before using unfamiliar options.
 
