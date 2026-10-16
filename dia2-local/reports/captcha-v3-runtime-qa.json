@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "model_sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+  "url": "http://127.0.0.1:8770/",
+  "scope": "Frozen development choice, before fresh test",
+  "latency_scope": "Headless desktop Edge on training machine; not physical-phone performance",
+  "latency": {
+    "baseline": {
+      "count": 40,
+      "median_ms": 55.69999998807907,
+      "p95_ms": 64.09999999403954
+    },
+    "candidate": {
+      "count": 40,
+      "median_ms": 64.8999999910593,
+      "p95_ms": 75.40000000596046
+    }
+  },
+  "activation_parity": [
+    {
+      "label": "0",
+      "logits": 3.814697265625e-06,
+      "first": 4.76837158203125e-07,
+      "second": 2.86102294921875e-06,
+      "hidden": 2.384185791015625e-06
+    },
+    {
+      "label": "1",
+      "logits": 9.5367431640625e-07,
+      "first": 4.76837158203125e-07,
+      "second": 1.430511474609375e-06,
+      "hidden": 1.1920928955078125e-06
+    },
+    {
+      "label": "2",
+      "logits": 2.86102294921875e-06,
+      "first": 4.76837158203125e-07,
+      "second": 2.384185791015625e-06,
+      "hidden": 2.384185791015625e-06
+    },
+    {
+      "label": "3",
+      "logits": 3.337860107421875e-06,
+      "first": 7.152557373046875e-07,
+      "second": 2.86102294921875e-06,
+      "hidden": 3.814697265625e-06
+    },
+    {
+      "label": "4",
+      "logits": 2.86102294921875e-06,
+      "first": 4.76837158203125e-07,
+      "second": 1.430511474609375e-06,
+      "hidden": 1.6689300537109375e-06
+    },
+    {
+      "label": "5",
+      "logits": 1.9073486328125e-06,
+      "first": 7.152557373046875e-07,
+      "second": 2.0265579223632812e-06,
+      "hidden": 1.9073486328125e-06
+    },
+    {
+      "label": "6",
+      "logits": 7.62939453125e-06,
+      "first": 4.76837158203125e-07,
+      "second": 1.430511474609375e-06,
+      "hidden": 1.9073486328125e-06
+    },
+    {
+      "label": "7",
+      "logits": 3.814697265625e-06,
+      "first": 4.76837158203125e-07,
+      "second": 1.9073486328125e-06,
+      "hidden": 2.86102294921875e-06
+    },
+    {
+      "label": "8",
+      "logits": 9.5367431640625e-07,
+      "first": 7.152557373046875e-07,
+      "second": 1.430511474609375e-06,
+      "hidden": 1.9073486328125e-06
+    },
+    {
+      "label": "9",
+      "logits": 1.9073486328125e-06,
+      "first": 4.76837158203125e-07,
+      "second": 1.6689300537109375e-06,
+      "hidden": 2.0265579223632812e-06
+    }
+  ],
+  "invalid_input_rejected": true,
+  "page_errors": [],
+  "interface": {
+    "mode_dimensions": true,
+    "words_entry": true,
+    "cached_previous_models": true,
+    "mobile_layout": true,
+    "active_residual_model": true
+  }
+}

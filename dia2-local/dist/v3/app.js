@@ -1,4 +1,4 @@
-import {loadModel, predict} from "./inference.js?v=captcha-2";
+import {loadModel, predict} from "./inference.js?v=captcha-3";
 import {prepareCanvas, PREPROCESS_VERSION} from "./preprocess.js?v=3.6.0";
 import {createWordsWorkspace} from "./words.js?v=3.2.0";
 import {createDrawingTools} from "./canvas-tools.js?v=3.2.0";
@@ -92,7 +92,9 @@ async function activateMode(mode) {
       : "Choose Digits for 0–9. Use Letters for A–Z, especially for similar shapes such as O and 0.";
     $("test-dataset").textContent = letters ? "Official EMNIST Letters test" : "Official MNIST test";
     $("test-accuracy").textContent = `${(test.accuracy * 100).toFixed(2)}% · ${test.correct.toLocaleString()} / ${test.count.toLocaleString()}`;
-    $("architecture").textContent = `${model.inputSide}px · Conv 16 → Conv 32${model.inputSide === 64 ? " → Average pool" : ""} → Dense 128 → ${model.labels.length}`;
+    $("architecture").textContent = manifest.architecture === "residual64-16-32-128"
+      ? "64px · Conv 16 → Residual 16 → Conv 32 → Average pool → Residual 32 → Dense 128 → 10"
+      : `${model.inputSide}px · Conv 16 → Conv 32${model.inputSide === 64 ? " → Average pool" : ""} → Dense 128 → ${model.labels.length}`;
     document.querySelector(".input-preview p").textContent = `Your image, prepared as ${model.inputSide} × ${model.inputSide} pixels. Check this view if a prediction surprises you.`;
     document.querySelector(".input-dimensions").textContent = `${model.inputSide} × ${model.inputSide}`;
     for (const [id, count, side] of [["layer-one", 16, model.featureSides[0]], ["layer-two", 32, model.featureSides[1]]]) {

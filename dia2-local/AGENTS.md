@@ -10,7 +10,7 @@ The course requirements are in [the official challenge](../Dia2/Desafio/README.m
 
 - `digitlab/`: dataset loading, preprocessing, CNN training/export, browser verification, reporting and deployment utilities.
 - `dist/`: static application; `v3/` contains the current interface. Retain earlier assets for cached releases.
-- `dist/model/captcha-v2/digits/`: current 64px digit model. Letters use `dist/model/robust/letters/`; earlier exports remain preserved.
+- `dist/model/captcha-v3/digits/`: current 64px residual digit model. Letters use `dist/model/robust/letters/`; earlier exports remain preserved.
 - `tests/`: Python unit tests for the learning and inference pipeline.
 - `docs/`: experiment decisions, robustness protocol and hosting instructions.
 - `reports/`: measured results and historical verification evidence.
@@ -27,6 +27,7 @@ The course requirements are in [the official challenge](../Dia2/Desafio/README.m
 - The v3.6.0 64px digit release reports 98.91% clean MNIST, 97.90% on its broader raw synthetic test (previous model: 95.09% on identical images), and 9/10 on its frozen challenge follow-up. Preserve `reports/captcha-v2-challenge-*.json` and keep these measurements separate from the earlier synthetic benchmark.
 - The completed `ensemble-v1` experiment retained the 64px baseline. Its separate 20,000-image synthetic test measured 96.575% for the baseline and 96.55% for the pre-frozen 90%/10% ensemble. Preserve `reports/ensemble-v1-*.json` and the frozen selection; do not tune weights from the completed test cache or present it as real CAPTCHA population accuracy.
 - Mark checks `PASS`, `FAIL`, `BLOCKED` or `NOT RUN` according to actual execution. Do not claim deployment, teacher review or accuracy without evidence.
+- The residual `captcha-v3` experiment selected epoch 12 before opening its fresh synthetic test. It measured 99.10% clean MNIST and 98.73% on 20,000 raw synthetic images versus 98.115% for captcha-v2 on identical images. Preserve its selection and reports; do not train or tune against the completed test or subsequent official challenge follow-up.
 
 ## Implementation rules
 
@@ -50,7 +51,7 @@ For browser changes, start the static server in another terminal and run the rel
 
 ```powershell
 .\.venv\Scripts\python.exe serve.py
-.\.venv\Scripts\python.exe -m digitlab.robust_qa --url http://127.0.0.1:8765/ --digit-experiment captcha-v2 --report <new-report.json> --screenshot-prefix <new-prefix>
+.\.venv\Scripts\python.exe -m digitlab.robust_qa --url http://127.0.0.1:8765/ --digit-experiment captcha-v3 --report <new-report.json> --screenshot-prefix <new-prefix>
 ```
 
 Use the specialized workflows in [SKILLS.md](SKILLS.md) for design and helper checks. Inspect report destinations before running collectors so historical evidence is preserved. For documentation-only changes, check relative links and command consistency instead of retraining or rerunning the challenge.

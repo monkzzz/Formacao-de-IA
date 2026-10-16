@@ -1,6 +1,6 @@
 # Digit Lab — Local Desafio Project
 
-**Current application release: v3.6.0.** Enter the Konami code to open the secret
+**Current application release: v3.7.0.** Enter the Konami code to open the secret
 SNES arcade. The supplied Zelda ROM is a separate deployment asset excluded from
 Git. See [arcade setup, controls and validation](docs/snes-arcade.md).
 
@@ -12,7 +12,20 @@ Two CNNs trained from scratch on MNIST and EMNIST Letters, with a static browser
 
 The header logo, footer logo, and favicon use the supplied `65474617.jpg`, published unchanged as `dist/assets/65474617.jpg`. [Live logo verification](reports/logo-verification.json) confirms the image checksum, loading, mobile layout, and model readiness.
 
-## Higher-resolution digits (v3.6.0)
+## Residual digits (v3.7.0)
+
+Digits now use a compact residual CNN with the same 64px input contract. It was
+selected on independent development data, then compared with v3.6.0 on a fresh
+20,000-image synthetic test: **98.73% versus 98.115%** (123 more correct).
+Clean MNIST improved from **98.91% to 99.10%**. This synthetic benchmark differs
+from the earlier experiments and does not establish real CAPTCHA accuracy.
+
+The model loads from `dist/model/captcha-v3/digits/`. Letters, Words and earlier
+model folders remain preserved. Its frozen official challenge follow-up scored
+**10/10**, versus 9/10 previously; known prior outcomes mean this is not a new
+blind test. See [the protocol, results and deployment evidence](docs/residual-training.md).
+
+## Higher-resolution digits (v3.6.0, historical)
 
 **Independent ensemble experiment completed:** a new 10,000-image development
 set and 20,000-image synthetic test use separate, previously unused font families
@@ -109,7 +122,7 @@ python serve.py --download-models
 Open **http://127.0.0.1:8765**. Keep the terminal running; press Ctrl+C to stop it. Only `dist/` is served. Python serves static files; the browser computes every classification.
 
 A fresh Git clone does not include the trained weight binaries. On first start,
-`--download-models` downloads the missing digit and letter robustness weights from
+`--download-models` downloads the missing digit and letter release weights from
 the public application and verifies them against the SHA-256 hashes in the local
 manifests. This requires internet access but no training or extra Python packages.
 Subsequent starts can use `python serve.py` offline. If the public weights no longer
@@ -144,7 +157,7 @@ The trained weights already exist locally in `dist/model/weights.bin`. They and 
 
 ## Words mode
 
-The footer displays the application release, currently **v3.6.0**. Character
+The footer displays the application release, currently **v3.7.0**. Character
 prediction JSON includes `application_version`; Words result metadata also keeps
 that version alongside the model identity. This release number identifies the
 website, separately from model weight hashes and preprocessing versions.
@@ -270,7 +283,7 @@ The lock file records the versions actually installed. Initial dependency instal
 .\.venv\Scripts\python.exe -m digitlab.train --epochs 18 --threads 4
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 # Start serve.py in another terminal before checking the current browser app:
-.\.venv\Scripts\python.exe -m digitlab.robust_qa --url http://127.0.0.1:8765/
+.\.venv\Scripts\python.exe -m digitlab.robust_qa --url http://127.0.0.1:8765/ --digit-experiment captcha-v3 --report current-character-check.json
 ```
 
 Training reads `../Dia2/Dataset-MNIST/data/` by default; override with `--data <directory>` if moving the personal project. It refuses to overwrite an existing checkpoint. Use a separate experiment directory for new training. To reevaluate the existing checkpoint, use `-m digitlab.train --evaluate-only` before challenge freezing; do not replace the frozen first-run artifacts afterward.
@@ -282,7 +295,7 @@ Architecture: Conv16 → pool → Conv32 → pool → Dense128 → 10. The recor
 ```powershell
 .\.venv\Scripts\python.exe -m digitlab.emnist_data
 .\.venv\Scripts\python.exe -m digitlab.letters --epochs 24 --threads 4
-.\.venv\Scripts\python.exe -m digitlab.robust_qa --url http://127.0.0.1:8765/
+.\.venv\Scripts\python.exe -m digitlab.robust_qa --url http://127.0.0.1:8765/ --digit-experiment captcha-v3 --report current-letter-check.json
 .\.venv\Scripts\python.exe -m digitlab.letters_report
 ```
 

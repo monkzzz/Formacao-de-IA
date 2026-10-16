@@ -1,5 +1,24 @@
 # Application releases
 
+## v3.7.0 — Compact residual digits
+
+Adds two identity-initialized bottleneck residual blocks and broader independent
+raw-image training. The frozen epoch-12 model scored 98.73% on 20,000 fresh
+synthetic images versus 98.115% for v3.6.0 on the same inputs, fixing 159 errors
+and introducing 36. Clean MNIST improved from 98.91% to 99.10%. Selection did
+not use the official challenge or completed earlier test caches.
+
+The separately frozen official challenge follow-up scored **10/10**, versus
+9/10 for v3.6.0. No tuning followed this result. All 28 Python tests and local
+character/raw-upload/runtime/helper/Words UI checks passed.
+
+**Live verification:** nine FTPS uploads, all 50 HTTPS assets, public browser
+regression and direct official-image uploads passed. The live result is 10/10,
+identical to the frozen local evaluation. Full evidence is linked below.
+
+The 64px preprocessing contract, Letters, Words and earlier model exports remain
+preserved. See [the protocol and release evidence](residual-training.md).
+
 ## Independent benchmark publication — classifier remains v3.6.0
 
 A new 10,000-image development / 20,000-image synthetic test comparison evaluated

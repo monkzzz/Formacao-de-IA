@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "scope": "Verbatim contents of preserved local pre-test selection and test-start gate, archived for Git after release verification",
+  "records": {
+    "selection.json": {
+      "sha256": "c7f93258aad12f0621c80f7472542ebae423c44819109228068a455f9eb675e5",
+      "record": {
+        "selected_epoch": 12,
+        "policy": {
+          "challenge_inputs_used": false,
+          "seed": 20261123,
+          "development_count": 10000,
+          "test_count": 20000,
+          "minimum_raw_gain": 0.002,
+          "clean_tolerance": 0.001,
+          "desktop_p95_limit_ms": 150,
+          "selection": "minimum raw development loss among epochs gaining at least 0.002 raw accuracy and losing at most 0.001 clean accuracy against captcha-v2",
+          "scope": "Independent synthetic images, not collected real CAPTCHA population data",
+          "development_fonts": [
+            "CALIFR.TTF",
+            "CENTAUR.TTF",
+            "LeelawUI.ttf",
+            "NotoSans-Regular.ttf"
+          ],
+          "test_fonts": [
+            "HTOWERT.TTF",
+            "LTYPE.TTF",
+            "sylfaen.ttf",
+            "YuGothR.ttc"
+          ]
+        },
+        "test_inputs_loaded": false,
+        "model_sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+        "checkpoint_sha256": "bf3b6424c3f30815de9915b6158ea3d9ebcffa62356b2a6fd5a5243633afbec4",
+        "development_report_sha256": "4a5e1880ab2e1bc8eafb600c960f9e33b97395a7cb8aab97212e97579b57861a"
+      }
+    },
+    "test-started.json": {
+      "sha256": "f65a570a3f6c9e5482d4881d95d809a0489f5c8146adff8d61b2950425d2a76e",
+      "record": {
+        "model_sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+        "selection": {
+          "selected_epoch": 12,
+          "policy": {
+            "challenge_inputs_used": false,
+            "seed": 20261123,
+            "development_count": 10000,
+            "test_count": 20000,
+            "minimum_raw_gain": 0.002,
+            "clean_tolerance": 0.001,
+            "desktop_p95_limit_ms": 150,
+            "selection": "minimum raw development loss among epochs gaining at least 0.002 raw accuracy and losing at most 0.001 clean accuracy against captcha-v2",
+            "scope": "Independent synthetic images, not collected real CAPTCHA population data",
+            "development_fonts": [
+              "CALIFR.TTF",
+              "CENTAUR.TTF",
+              "LeelawUI.ttf",
+              "NotoSans-Regular.ttf"
+            ],
+            "test_fonts": [
+              "HTOWERT.TTF",
+              "LTYPE.TTF",
+              "sylfaen.ttf",
+              "YuGothR.ttc"
+            ]
+          },
+          "test_inputs_loaded": false,
+          "model_sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+          "checkpoint_sha256": "bf3b6424c3f30815de9915b6158ea3d9ebcffa62356b2a6fd5a5243633afbec4",
+          "development_report_sha256": "4a5e1880ab2e1bc8eafb600c960f9e33b97395a7cb8aab97212e97579b57861a"
+        },
+        "speed_report_sha256": "a93d23c81d988f6a7c50e23ed98f0c0bdfff2790099beb0869f55fc36daa280d"
+      }
+    }
+  }
+}

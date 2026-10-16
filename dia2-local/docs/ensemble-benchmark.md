@@ -119,3 +119,9 @@ for this experiment.
 See [publication evidence](../reports/ensemble-v1-ftp-deployment.json),
 [HTTPS and unchanged-source verification](../reports/ensemble-v1-public-assets.json)
 and the [public benchmark download](https://naoquerosaber.pt/AI/evaluation/independent-captcha-benchmark.json).
+
+A later user-requested live upload recheck again scored **9/10**, with every
+prediction, prepared input and score matching the frozen local v3.6.0 result.
+Its separate [verification](../reports/ensemble-v1-post-publication-challenge-verification.json)
+is deployment evidence, not another independent evaluation or tuning input.
+The raw export is preserved locally and excluded from this commit.

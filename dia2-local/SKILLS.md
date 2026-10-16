@@ -1,6 +1,14 @@
 # Digit Lab task workflows
 
-Current release: v3.6.0 uses 64px `captcha-v2` digits and robustness letters. For
+Current release: v3.7.0 uses 64px residual `captcha-v3` digits and robustness
+letters. Use `digitlab.robust_qa --digit-experiment captcha-v3`,
+`digitlab.captcha_qa --experiment captcha-v3`, `digitlab.residual_qa --interface`
+and `digitlab.words_qa --digit-experiment captcha-v3` with new report paths.
+See [the residual protocol and evidence](docs/residual-training.md). Its completed
+test and official follow-up are never tuning inputs. Earlier workflows below
+remain available for their named releases.
+
+Historical v3.6.0 uses 64px `captcha-v2` digits and robustness letters. For
 current character checks, add `--digit-experiment captcha-v2` and use a new
 `--report` and `--screenshot-prefix` with `digitlab.robust_qa`. Use
 `digitlab.captcha_qa --experiment captcha-v2 --report <new-report.json>` for
@@ -53,7 +61,7 @@ Inspect `digitlab/preprocess.py`, model/export code and the corresponding browse
 ```powershell
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 # Keep serve.py running in another terminal.
-.\.venv\Scripts\python.exe -m digitlab.robust_qa --url http://127.0.0.1:8765/
+.\.venv\Scripts\python.exe -m digitlab.robust_qa --url http://127.0.0.1:8765/ --digit-experiment captcha-v3 --report <new-report.json>
 ```
 
 **Output:** evidence for both digit and letter inference, uploads, mixed-mode records and error recovery. Use synthetic or non-challenge fixtures for debugging and tuning.
@@ -98,7 +106,7 @@ do not present it as exact whole-line accuracy or isolated-word classification.
 The larger evaluator is resumable and keeps reference labels/images in ignored
 storage. Do not tune the reader against the finished benchmark or replace earlier evidence.
 
-Use `digitlab.robust_qa --report <new-report.json>` and
+Use `digitlab.robust_qa --digit-experiment captcha-v3 --report <new-report.json>` and
 `digitlab.helper_qa --report-prefix <new-prefix>` for follow-up regressions without
 replacing historical reports. The Words collector refuses existing report paths.
 

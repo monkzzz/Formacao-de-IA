@@ -10,6 +10,7 @@ import torch
 
 from .model import DigitCNN
 from .highres import HighResCNN
+from .residual import ResidualCNN
 from .preprocess import prepare
 from .qa import open_browser
 from .train import ROOT, write_json
@@ -29,7 +30,7 @@ def main():
     directory = ROOT / "artifacts" / args.experiment
     manifest = json.loads((ROOT / "dist/model" / args.experiment / "digits/manifest.json").read_text(encoding="utf-8"))
     side = manifest.get("input_side", 28)
-    model = HighResCNN() if side == 64 else DigitCNN()
+    model = ResidualCNN() if manifest["architecture"] == "residual64-16-32-128" else (HighResCNN() if side == 64 else DigitCNN())
     model.load_state_dict(torch.load(directory / "best.pt", map_location="cpu", weights_only=True))
     model.eval()
     torch.set_num_threads(2)

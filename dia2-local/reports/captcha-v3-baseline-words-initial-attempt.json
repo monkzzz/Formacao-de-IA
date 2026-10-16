@@ -1,0 +1,6 @@
+{
+  "status": "FAIL",
+  "scope": "Collector mismatch before any Words worker tests; not a classifier or Words product failure",
+  "reason": "The historical collector supplied its hard-coded 28px robustness digit fixture to the active 64px captcha-v2 model, which correctly rejected its input size.",
+  "resolution": "Added explicit --digit-experiment selection and a matching model-hash assertion; rerun is recorded separately in captcha-v3-baseline-words-qa.json."
+}

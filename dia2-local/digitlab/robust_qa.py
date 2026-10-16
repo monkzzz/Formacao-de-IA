@@ -12,6 +12,7 @@ from playwright.sync_api import sync_playwright
 
 from .letters import LetterCNN
 from .highres import HighResCNN
+from .residual import ResidualCNN
 from .model import DigitCNN
 from .preprocess import prepare
 from .qa import open_browser
@@ -51,10 +52,12 @@ def main():
             experiment = args.digit_experiment if task == "digits" else "robust"
             directory = ROOT / "dist/model" / experiment / task
             manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
-            high_resolution = manifest["architecture"] == "cnn64-16-32-128"
+            residual = manifest["architecture"] == "residual64-16-32-128"
+            high_resolution = residual or manifest["architecture"] == "cnn64-16-32-128"
             original_checkpoint = ROOT / ("artifacts/letters/best.pt" if task == "letters" else
-                ("artifacts/captcha-v1/best.pt" if high_resolution else
-                 ("artifacts/best.pt" if experiment == "robust" else "artifacts/robust/digits/best.pt")))
+                ("artifacts/captcha-v2/best.pt" if residual else
+                 ("artifacts/captcha-v1/best.pt" if high_resolution else
+                  ("artifacts/best.pt" if experiment == "robust" else "artifacts/robust/digits/best.pt"))))
             assert hashlib.sha256(original_checkpoint.read_bytes()).hexdigest() == manifest["training"]["baseline_checkpoint_sha256"]
             assert hashlib.sha256((directory / "weights.bin").read_bytes()).hexdigest() == manifest["sha256"]
             page.evaluate("task => digitLab.activateMode(task)", task)
@@ -71,7 +74,8 @@ def main():
             assert all(row[key] <= .0001 for row in parity for key in ["logits", "hidden", "pool1", "pool2"]), parity
             assert all(abs(row["score_sum"] - 1) < 1e-10 for row in parity)
             report["checks"][task + "_activation_parity"] = parity
-            model = LetterCNN() if task == "letters" else (HighResCNN() if high_resolution else DigitCNN())
+            model = LetterCNN() if task == "letters" else (ResidualCNN() if residual else
+                    (HighResCNN() if high_resolution else DigitCNN()))
             checkpoint = ROOT / "artifacts" / experiment
             checkpoint = checkpoint / task / "best.pt" if experiment == "robust" else checkpoint / "best.pt"
             model.load_state_dict(torch.load(checkpoint, weights_only=True, map_location="cpu"))

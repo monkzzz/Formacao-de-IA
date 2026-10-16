@@ -15,9 +15,12 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--experiment", default="captcha-v2")
     parser.add_argument("--version", default="3.6.0")
+    parser.add_argument("--previous-experiment", default="captcha-v1")
     args = parser.parse_args()
     if not args.experiment.replace("-", "").isalnum():
         parser.error("Invalid experiment name")
+    if not args.previous_experiment.replace("-", "").isalnum():
+        parser.error("Invalid previous experiment name")
     target = ROOT / "dist/evaluation" / f"digits-{args.experiment}.json"
     if target.exists():
         parser.error("Public summary already exists; preserve the frozen release")
@@ -25,7 +28,7 @@ def main():
     comparison = json.loads((ROOT / "reports" / f"{args.experiment}-challenge-comparison.json").read_text())
     manifest = json.loads((ROOT / "dist/model" / args.experiment / "digits/manifest.json").read_text())
     freeze_path = ROOT / "reports" / f"{args.experiment}-challenge-freeze.json"
-    previous = json.loads((ROOT / "reports/captcha-v1-challenge-comparison.json").read_text())
+    previous = json.loads((ROOT / "reports" / f"{args.previous_experiment}-challenge-comparison.json").read_text())
     assert report["model_sha256"] == comparison["model_sha256"] == manifest["sha256"]
     assert report["policy"]["challenge_inputs_used"] is False
     write_json(target, {"application_version": args.version, "model_sha256": manifest["sha256"],
@@ -35,7 +38,7 @@ def main():
         "previous_clean_mnist": metrics(report["baseline_test"]["clean"]),
         "previous_model_on_same_raw_synthetic": metrics(report["baseline_test"]["raw"]),
         "official_challenge": metrics(comparison), "previous_challenge": metrics(previous),
-        "scope": "Follow-up evaluation; prior challenge outcomes known, not a fresh blind test. Raw synthetic data is broader than the v3.5.0 benchmark. Synthetic and clean scores do not establish real CAPTCHA population accuracy.",
+        "scope": "Follow-up evaluation; prior challenge outcomes known, not a fresh blind test. Synthetic comparisons use the same images for both models within this experiment. Synthetic and clean scores do not establish real CAPTCHA population accuracy.",
         "challenge_used_for_training_or_selection": False, "challenge_raw_sha256": comparison["raw_sha256"],
         "freeze_sha256": hashlib.sha256(freeze_path.read_bytes()).hexdigest()})
     print(f"Wrote aggregate-only public evaluation summary: {target.name}")

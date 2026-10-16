@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "url": "https://naoquerosaber.pt/AI/",
+  "application_version": "v3.6.0",
+  "model_sha256": "c415bceb885677c1f57c800f22feaf1659ea184f7cf39c2bca462cde4e1f5c9c",
+  "scope": "Deployed-site verification of an already evaluated frozen model; not an independent test or model selection",
+  "raw_sha256": "97773f598000b0ab56b3b8d1f822a78a590e39927c6d92acbbb89894797d222f",
+  "all_predictions_match_frozen_local_evaluation": true,
+  "all_inputs_and_scores_match": true,
+  "page_errors": [],
+  "count": 10,
+  "correct": 9,
+  "accuracy": 0.9,
+  "cases": [
+    {
+      "file": "caso_01.png",
+      "expected": 8,
+      "predicted": 8,
+      "correct": true
+    },
+    {
+      "file": "caso_02.png",
+      "expected": 3,
+      "predicted": 3,
+      "correct": true
+    },
+    {
+      "file": "caso_03.png",
+      "expected": 0,
+      "predicted": 0,
+      "correct": true
+    },
+    {
+      "file": "caso_04.png",
+      "expected": 6,
+      "predicted": 6,
+      "correct": true
+    },
+    {
+      "file": "caso_05.png",
+      "expected": 1,
+      "predicted": 1,
+      "correct": true
+    },
+    {
+      "file": "caso_06.png",
+      "expected": 9,
+      "predicted": 9,
+      "correct": true
+    },
+    {
+      "file": "caso_07.png",
+      "expected": 4,
+      "predicted": 4,
+      "correct": true
+    },
+    {
+      "file": "caso_08.png",
+      "expected": 2,
+      "predicted": 2,
+      "correct": true
+    },
+    {
+      "file": "caso_09.png",
+      "expected": 7,
+      "predicted": 7,
+      "correct": true
+    },
+    {
+      "file": "caso_10.png",
+      "expected": 5,
+      "predicted": 3,
+      "correct": false
+    }
+  ]
+}

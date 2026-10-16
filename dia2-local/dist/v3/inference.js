@@ -1,9 +1,10 @@
 import {PREPROCESS_VERSION, PREPROCESS_VERSION64} from "./preprocess.js?v=3.6.0";
+import {RESIDUAL_SHAPES, residualBlock} from "./residual.js?v=1";
 
 // An older cached page can fetch this file under its previous module URL.
 // Keep that entry point paired with the model/input size it originally used.
-const DEFAULT_DIGIT_EXPERIMENT = {"robust-1": "robust", "captcha-1": "captcha-v1"}
-  [new URL(import.meta.url).searchParams.get("v")] || "captcha-v2";
+const DEFAULT_DIGIT_EXPERIMENT = {"robust-1": "robust", "captcha-1": "captcha-v1", "captcha-2": "captcha-v2"}
+  [new URL(import.meta.url).searchParams.get("v")] || "captcha-v3";
 
 const SHAPES = {
   "conv1.weight": [16, 1, 3, 3], "conv1.bias": [16],
@@ -15,15 +16,16 @@ export async function loadModel(mode = "digits", digitExperiment = DEFAULT_DIGIT
   if (!["digits", "letters"].includes(mode)) throw new Error("Unknown recognition mode.");
   if (!globalThis.crypto?.subtle) throw new Error("Open the HTTPS version of this page to load the verified model.");
   const labels = mode === "letters" ? Array.from("ABCDEFGHIJKLMNOPQRSTUVWXYZ") : Array.from("0123456789");
-  if (!["robust", "captcha-v1", "captcha-v2"].includes(digitExperiment)) throw new Error("Unknown digit experiment.");
+  if (!["robust", "captcha-v1", "captcha-v2", "captcha-v3"].includes(digitExperiment)) throw new Error("Unknown digit experiment.");
   const experiment = mode === "digits" ? digitExperiment : "robust";
   const base = `./model/${experiment}/${mode}/`;
-  const response = await fetch(base + "manifest.json?v=captcha-2", {cache: "no-store"});
+  const response = await fetch(base + "manifest.json?v=captcha-3", {cache: "no-store"});
   if (!response.ok) throw new Error(`Cannot load the ${mode} model. Check that its model folder was uploaded.`);
   const manifest = await response.json();
-  const highResolution = manifest.architecture === "cnn64-16-32-128";
+  const residual = manifest.architecture === "residual64-16-32-128";
+  const highResolution = residual || manifest.architecture === "cnn64-16-32-128";
   const inputSide = highResolution ? 64 : 28, featureSides = highResolution ? [32, 8] : [14, 7];
-  if (manifest.schema !== 1 || !["cnn16-32-128", "cnn64-16-32-128"].includes(manifest.architecture)
+  if (manifest.schema !== 1 || !["cnn16-32-128", "cnn64-16-32-128", "residual64-16-32-128"].includes(manifest.architecture)
       || (highResolution && (mode !== "digits" || manifest.input_side !== 64))
       || manifest.preprocessing !== (highResolution ? PREPROCESS_VERSION64 : PREPROCESS_VERSION)
       || manifest.dtype !== "float32-le") {
@@ -46,7 +48,8 @@ export async function loadModel(mode = "digits", digitExperiment = DEFAULT_DIGIT
   const shapes = {"conv1.weight": SHAPES["conv1.weight"], "conv1.bias": SHAPES["conv1.bias"],
     "conv2.weight": SHAPES["conv2.weight"], "conv2.bias": SHAPES["conv2.bias"],
     "fc1.weight": [128, 32 * featureSides[1] ** 2], "fc1.bias": [128],
-    "fc2.weight": [labels.length, 128], "fc2.bias": [labels.length]};
+    "fc2.weight": [labels.length, 128], "fc2.bias": [labels.length],
+    ...(residual ? RESIDUAL_SHAPES : {})};
   for (const [name, shape] of Object.entries(shapes)) {
     const tensor = manifest.tensors.find(t => t.name === name);
     const length = shape.reduce((a, b) => a * b, 1);
@@ -114,9 +117,12 @@ export function predict(model, input) {
     throw new Error(`Expected ${side * side} finite input pixels in [0, 1].`);
   }
   const w = model.weights;
-  const first = pool(convRelu(input, side, 1, 16, w["conv1.weight"], w["conv1.bias"]), side, 16);
+  const residual = model.manifest.architecture === "residual64-16-32-128";
+  let first = pool(convRelu(input, side, 1, 16, w["conv1.weight"], w["conv1.bias"]), side, 16);
+  if (residual) first = residualBlock(first, 32, 16, w, "block1", convRelu);
   const pooled = pool(convRelu(first, side / 2, 16, 32, w["conv2.weight"], w["conv2.bias"]), side / 2, 32);
-  const second = side === 64 ? averagePool(pooled, 16, 32) : pooled;
+  let second = side === 64 ? averagePool(pooled, 16, 32) : pooled;
+  if (residual) second = residualBlock(second, 8, 32, w, "block2", convRelu);
   const hidden = dense(second, 128, w["fc1.weight"], w["fc1.bias"], true);
   const logits = dense(hidden, model.labels.length, w["fc2.weight"], w["fc2.bias"], false);
   const maximum = Math.max(...logits), scores = Array.from(logits, v => Math.exp(v - maximum));

@@ -1,0 +1,55 @@
+{
+  "uploaded_at": "2026-10-16T19:49:04.362348+00:00",
+  "destination": "/",
+  "tls": true,
+  "files": [
+    {
+      "file": "evaluation/digits-captcha-v3.json",
+      "bytes": 1309,
+      "sha256": "09a7ece64849bd6e25f3483fbdf7b72cd0cfd1f584214befe19c647bcafe2374"
+    },
+    {
+      "file": "model/captcha-v3/digits/manifest.json",
+      "bytes": 84360,
+      "sha256": "549f44ecf1fcf01a763917bbff3db1624f455aa4ae3bd908472efc2f648ac99f"
+    },
+    {
+      "file": "model/captcha-v3/digits/weights.bin",
+      "bytes": 1090472,
+      "sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c"
+    },
+    {
+      "file": "v3/helper-knowledge.js",
+      "bytes": 16618,
+      "sha256": "1e047b3ec00ccb5da1c44a59574a52f4ce1de9da642510ab61ca1e252a3b866a"
+    },
+    {
+      "file": "v3/residual.js",
+      "bytes": 1596,
+      "sha256": "1b454e6acd7b97d7a8f1904ea97c4f382f0b97a6b9d924981e459a8bd972353a"
+    },
+    {
+      "file": "v3/helper.js",
+      "bytes": 5290,
+      "sha256": "929aab946b4a5ab88e9992c32b82938ff36e5b138c98ab05f114369906d2ffd1"
+    },
+    {
+      "file": "v3/inference.js",
+      "bytes": 7300,
+      "sha256": "98755d4b758326c16ab179c13eb725630cefd5ee9673061b2ef6359560e43dc4"
+    },
+    {
+      "file": "v3/app.js",
+      "bytes": 17923,
+      "sha256": "785c3619d90e5485bf4f9078ae70105d7be71054894212e60fcaade671379748"
+    },
+    {
+      "file": "index.html",
+      "bytes": 17910,
+      "sha256": "e823118d6af20542fe8708073a3093223dd75d1dcc1aa579231dc46a8f73c1b8"
+    }
+  ],
+  "backup_directory": "artifacts\\ftp-backup-20261016T194832Z",
+  "application_version": "3.7.0",
+  "scope": "selected-files"
+}

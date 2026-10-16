@@ -1,5 +1,21 @@
 # Website Hosting
 
+## v3.7.0 residual digits
+
+Digits load `model/captcha-v3/digits/`; retain all earlier model folders.
+Upload its manifest and weights, `v3/residual.js`, `v3/inference.js`, `v3/app.js`,
+`v3/helper-knowledge.js`, `v3/helper.js` and `evaluation/digits-captcha-v3.json`
+before switching `index.html`. The deployer sends the residual module before
+the inference module. Cached `captcha-2` imports continue to use captcha-v2.
+
+Use the current checks listed in [SKILLS.md](../SKILLS.md), with new report
+destinations. The selected model passed independent development and fresh-test
+gates before the default changed. See [the complete evidence](residual-training.md).
+
+All nine uploads, all 50 HTTPS assets and live character/raw/runtime/helper/Words
+checks passed. Direct live challenge verification scored 10/10, matching the
+frozen local input pixels, scores and predictions exactly. No tuning followed.
+
 ## Independent benchmark metadata publication
 
 The `ensemble-v1` experiment rejected its diagnostic ensemble and retains the

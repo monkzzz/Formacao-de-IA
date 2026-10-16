@@ -77,7 +77,10 @@ def main():
     parser.add_argument("--quality", choices=["standard", "precise"], default="precise")
     parser.add_argument("--report", default="words-browser-qa.json")
     parser.add_argument("--screenshot-prefix", default="words")
+    parser.add_argument("--digit-experiment", default="captcha-v3", help="Digit fixture folder matching the active release")
     args = parser.parse_args()
+    if not args.digit_experiment.replace("-", "").isalnum():
+        parser.error("Invalid digit experiment name")
     report_path = ROOT / "reports" / args.report
     if report_path.exists():
         raise SystemExit(f"Refusing to overwrite existing evidence: {report_path}")
@@ -103,7 +106,9 @@ def main():
         checks["character_eraser_size_undo_redo_and_keyboard"] = {"status": "PASS"}
         for mode in ("digits", "letters"):
             page.evaluate("mode => digitLab.activateMode(mode)", mode)
-            fixture = json.loads((ROOT / "dist/model/robust" / mode / "parity.json").read_text())
+            experiment = args.digit_experiment if mode == "digits" else "robust"
+            fixture = json.loads((ROOT / "dist/model" / experiment / mode / "parity.json").read_text())
+            assert page.evaluate("digitLab.state.model.manifest.sha256") == fixture["model_sha256"]
             parity = page.evaluate("""fixture => fixture.cases.map(item => {
               const result = digitLab.predict(item.input);
               const delta = (a,b) => Math.max(...Array.from(a,(v,i)=>Math.abs(v-b[i])));
