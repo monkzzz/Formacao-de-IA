@@ -1,12 +1,12 @@
 # Project context
 
-Status: **existing classifier preservation context, version 1.1.0**, progress reconciled 2026-10-17. Owner: the project participant.
+Status: **existing classifier preservation context, version 1.2.0**, progress reconciled 2026-10-17. Owner: the project participant.
 The agent maintains this record from confirmed requirements and labels assumptions.
 
 | Field | Current value |
 | --- | --- |
 | Goal and intended users | Preserve the existing Day 2 Digit Lab website and prepare the course submission |
-| Scope and exclusions | Existing `dia2-local/`; no replacement classifier, retraining, migration or production changes in this batch |
+| Scope and exclusions | Preserve existing `dia2-local/` and external site; separately publish its verified static artifact on Pages; no replacement classifier, retraining or migration |
 | Inputs, outputs and interfaces | MNIST source data and browser drawing/local uploads of single digits; current model consumes 64×64 grayscale and emits ten digit scores |
 | Runtime and dependencies | Existing Python/PyTorch tools for training/export; static JavaScript browser inference; optional pretrained readers remain separate |
 | Resource constraints | Historical protocol used four CPU threads, 12 epochs and batch 128; no new training budget or physical-phone performance assumed |
@@ -14,7 +14,7 @@ The agent maintains this record from confirmed requirements and labels assumptio
 | Acceptance criteria | Evidence index, actual relevant checks, verified artifacts, browser parity/real activations and submitted-origin behavior; retain current site |
 | Validation commands and directory | From `dia2-local/`: `.venv/Scripts/python.exe -m unittest discover -s tests -v`; run only for the relevant verification Issue with new report names |
 | Repository and branch | Personal `monkzzz/Formacao-de-IA`, current root branch `main`; retain existing root history |
-| Deployment target and artifact process | Preserve `https://naoquerosaber.pt/AI/`; browser weights were restored/verified, public browser checks passed, and selected-model evaluation repeated in a clean venv. Local checkpoint/font prerequisites are verified; portable public recovery remains limited. Pages substitution needs instructor acceptance |
+| Deployment target and artifact process | Separate verified Pages site at `https://monkzzz.github.io/Formacao-de-IA/`; preserve `https://naoquerosaber.pt/AI/`. Manual artifact build restores seven hash-verified exports without committing binaries. Local checkpoint/font prerequisites are verified; portable public recovery remains limited |
 
 Confirmed generic preferences: English communication, autonomous progress on
 authorized reversible work, focused changes, evidence-based review and preservation
@@ -56,7 +56,14 @@ pending” wording is superseded by these actual records.
 
 Pending: actual participant research critique; portable off-machine checkpoint/font
 availability beyond the documented local route; instructor acceptance of
-hosting/assistant/fork/process deviations and an actual feedback session.
+assistant/fork/process deviations and an actual feedback session.
+
+The participant subsequently requested the GitHub Pages task. The separate site
+passed asset identities, real-model parity/uploads and drawing/touch checks;
+see [publication evidence](../../day2/pages-publication.md). This supersedes only
+the earlier deferred Pages scope, preserving the external site. The optional
+official-image rerun was rejected by automatic approval review and not run;
+deployment integrity uses frozen identities and non-challenge parity fixtures.
 
 Detailed evidence and alternatives: [specification](../../day2/classifier-specification.md).
 For a new unrelated project, use the preserved generic archive, not this populated

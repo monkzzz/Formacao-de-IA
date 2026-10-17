@@ -4,6 +4,13 @@ Prepared 2026-10-17 in the personal fork. This is delivery of the local work to
 the participant for review. It has **not been sent to a teacher** and does not
 establish classroom attendance, mastery or instructor acceptance.
 
+Pages update, 2026-10-17: [Digit Lab on GitHub Pages](https://monkzzz.github.io/Formacao-de-IA/)
+is now published and verified. See the [deployment and browser evidence](participant-work/day2/pages-publication.md).
+This supersedes the earlier deferred-Pages status below. The original external
+site and tracked `dia2-local` development remain intact; instructor/process review
+is still pending. The new-origin checks use hashes and non-challenge parity;
+no official-image rerun or new challenge accuracy is claimed.
+
 The subsequent [exercise coverage audit](EXERCISE-COVERAGE.md) identified twelve
 missing or understated follow-ups. Eleven are now completed with
 [follow-up evidence](participant-work/day2/independent-task-completion.md);
@@ -102,6 +109,7 @@ is [TASKS.md](TASKS.md); completion does not mean every course requirement is me
 The [prepared feedback packet](participant-work/day2/teacher-feedback-packet.md)
 contains review links and a blank actual-feedback record. It remains unsent.
 Instructor acceptance of the chosen assistant, personal-fork layout, existing
-hosting and missing original approvals is pending. Pages publication is deferred
-to preserve the current site. No new origin exists to trigger another challenge
-verification. These are external or conditional dependencies, not completed work.
+missing original approvals is pending. Pages publication now satisfies the hosting
+target while preserving the current site. New-origin integrity and non-challenge
+parity checks passed; the optional official-image rerun was not performed. Actual
+teacher delivery and feedback remain external dependencies.

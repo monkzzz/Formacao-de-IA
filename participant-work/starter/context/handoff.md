@@ -1,6 +1,6 @@
 # Session handoff
 
-Status: observed progress updated 2026-10-17, handoff version 1.3.0.
+Status: observed progress updated 2026-10-17, handoff version 1.4.0.
 Owner: the agent updates this at meaningful task boundaries from actual evidence.
 
 Completed: generic rules/procedures retained; context records the participant's
@@ -30,9 +30,13 @@ Source publication passed at `9e7eb08bc9187f703c1e7c7a9ed2f6cbb42f99cf`:
 Next action: obtain actual participant research critique for R01, then review the
 [remaining checklist](../../../TASKS.md) and
 [prepared feedback packet](../../day2/teacher-feedback-packet.md). Instructor contact
-is deferred and the current site must remain intact. Actual review needs an
+is deferred and the original site remains intact. Actual review needs an
 identified authorized recipient/channel and a real session; no such session has
-occurred. Pages publication or accepted hosting substitution remains pending.
+occurred. Pages is now published separately, following an explicit participant
+request: [deployment and actual browser checks](../../day2/pages-publication.md).
+This supersedes the earlier hosting dependency; context version 1.2.0 records it.
+The optional official-image rerun was not run after automatic approval rejection;
+asset identities and non-challenge parity verify the new origin without new scores.
 Checkpoint/off-machine archival availability also remains outside browser-weight
 recovery. Do not retrain, migrate or change production to manufacture completion.
 

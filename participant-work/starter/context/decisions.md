@@ -44,6 +44,19 @@ For each actual decision record:
   research critique. See [scope record](../../day2/participant-continuation-scope.md).
 - Review trigger: a new explicit change of requirements or actual external review.
 
+## D2-004 — Publish a separate GitHub Pages site
+
+- Date: 2026-10-17. Status: accepted by explicit participant task request,
+  “can do the github pages task?”.
+- Choice: publish the preserved static application at
+  `https://monkzzz.github.io/Formacao-de-IA/`, with verified weights restored into
+  a temporary Actions artifact. Keep the original external site and development
+  unchanged. No migration, retraining, model selection or ROM publication.
+- This supersedes the deferred-Pages scope of D2-001/D2-003 for this task only.
+  It does not establish historical design approval or instructor acceptance.
+- Evidence: [actual deployment and verification](../../day2/pages-publication.md).
+- Review trigger: requested runtime/model changes or deployment failure.
+
 ## D2-002 — Historical design approval unavailable
 
 - Date: 2026-10-17. Status: pending instructor review; no approval claimed.

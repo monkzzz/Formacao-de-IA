@@ -1,0 +1,12 @@
+{
+  "executed_utc": "2026-10-17T12:06:28.895957+00:00",
+  "url": "https://monkzzz.github.io/Formacao-de-IA/",
+  "status": "FAIL",
+  "checks": {},
+  "limits": [
+    "Automated Edge mouse and emulated touch, no physical touchscreen",
+    "Optional OCR and arcade ROM excluded from verification",
+    "No training or accuracy claim; separate frozen-challenge deployment comparison"
+  ],
+  "source_commit": "c144e551d760d0119e694048fe13906b69121a9f"
+}

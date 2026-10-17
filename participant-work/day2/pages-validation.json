@@ -1,0 +1,15 @@
+{
+  "executed_utc": "2026-10-17T12:08:46.603119+00:00",
+  "status": "PASS",
+  "pages_url": "https://monkzzz.github.io/Formacao-de-IA/",
+  "deployment_source_commit": "c144e551d760d0119e694048fe13906b69121a9f",
+  "deployment_run": "https://github.com/monkzzz/Formacao-de-IA/actions/runs/39031154032",
+  "relative_links_checked": 257,
+  "anchors_checked": 54,
+  "live_asset_hashes_checked": 55,
+  "local_and_public_real_model_parity": "PASS",
+  "frozen_model_identity": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+  "tracked_application_and_historical_reports_unchanged": true,
+  "official_image_rerun": "NOT RUN: automatic approval rejection; no workaround",
+  "validation_scope": "Live deployment identity, non-challenge browser parity/uploads, drawing and emulated touch; no training or new accuracy measurement"
+}
