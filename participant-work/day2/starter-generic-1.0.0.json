@@ -1,0 +1,29 @@
+{
+  "version": "starter-generic-1.0.0",
+  "source_commit": "cc349efac3aebfc26dafbb73724ca0ac85694d9c",
+  "sequence": "Captured existing generic source before bootstrap skill creation; not a reconstruction of an earlier course sequence.",
+  "archive": "starter-generic-1.0.0.zip",
+  "archive_sha256": "e9fa1eb99e022d8a6e948d2182e0fe472663881384c1dbff2b8b027b6ae226ce",
+  "files": {
+    ".github/copilot-instructions.md": "e628d37b5d70d19977fa2d72a0007972f5e06d5ed8a3626aa34d87c1eb7a3b1c",
+    ".gitignore": "2bb8c29502e150415cde326b5b22e890221599d30515efe40ec20ae1e5379881",
+    "AGENTS.md": "612464453164558cb391d88fd22b97b254bf41299499da734804d52bc1f29808",
+    "capabilities/cli.md": "af6c09682715e8af6699f33c50879163997bab0be7079f2b2a47e3c332e515ea",
+    "capabilities/mcp.md": "027e0d89ba5e2baa42990e88e3d069a31f8af2fc09ad6be9fdaa736042eacd87",
+    "capabilities/README.md": "5d474133a5076dd2778b87503603a56e921bdd6ae6b544adac448485b4ae83b9",
+    "capabilities/skills.md": "6e759acfa24ccd13385498c7d3d49206fd26430a6771cf4d0490a1bdb07091ea",
+    "context/decisions.md": "b5f89e76799364dd67f6b7f4ee5786711a8de6c8ac7efccdc1236dce76acb546",
+    "context/handoff.md": "fb4658b3e0a3d31303e5e618c8dbdafc22aaa7ad44739fc81e09cdd7d43303fe",
+    "context/project.md": "360a95af79604fa5cdcb5502a575a4950296f962a621b6bc4837570b075b7ead",
+    "evidence/README.md": "a69fa81bbdcf5eecee8cd2caf57fb34998d2b9a15880a388f652a1c5cac12c1c",
+    "knowledge/README.md": "0a068314c35a5b1d89185f1f74723af0002298198b6faf431bc8c921f93879f4",
+    "procedures/git-and-safety.md": "3e3132c41168e6b87520e3f0602adc8cfb7e960779a3936fd50f2207aeb9fcd2",
+    "procedures/workflow.md": "37c365df93dcfdee469b4eda519099e2e604b7c9cd2db781d8c9fd07c1631095",
+    "README.md": "015c69b5a02bd49970a0401991ca01f5bac1447db207a1514d91a9145daca676"
+  },
+  "limits": [
+    "local archive, not standalone publication",
+    "no classifier context",
+    "README describes historical pre-test status at capture time"
+  ]
+}

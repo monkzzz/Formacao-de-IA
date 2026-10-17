@@ -1,0 +1,22 @@
+{
+  "executed_utc": "2026-10-17T10:35:33.230897+00:00",
+  "baseline": "cc349efac3aebfc26dafbb73724ca0ac85694d9c",
+  "status": "PASS",
+  "tasks_completed": 5,
+  "local_links": 167,
+  "heading_anchors": 30,
+  "archived_files": 15,
+  "checks": [
+    "archive hash and per-file hashes",
+    "archive equals actual baseline source",
+    "archive predates skill",
+    "exact next five tasks",
+    "links and anchors",
+    "starter links survive copying",
+    "unchanged course and classifier sources"
+  ],
+  "limits": [
+    "does not prove Copilot discovery or interview behavior",
+    "fresh-session behavior has a separate observed report"
+  ]
+}

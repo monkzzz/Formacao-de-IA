@@ -2,8 +2,8 @@
 
 This is the participant's generic starter source, maintained in the personal course
 fork. It defines working behavior and empty project records, without an application
-implementation or bootstrap interview skill. This iteration establishes structure;
-fresh-session behavior and standalone GitHub publication are not yet demonstrated.
+implementation. A participant-authored [bootstrap interview skill](.github/skills/bootstrap-project/SKILL.md)
+is included; its native Copilot discovery and standalone publication remain unverified.
 
 The participant chose English and the current assistant. A Copilot-compatible
 [entry file](.github/copilot-instructions.md) is included for reuse, but Copilot
@@ -49,6 +49,14 @@ This English participant adaptation consolidates the structure, removes language
 and publication assumptions, and follows the participant's chosen assistant and
 authorization preferences. It does not imply endorsement by the course authors.
 
-No reference files were copied verbatim. Detailed reference-selection review,
-fresh-session experiments and preservation of a generic release remain subsequent
-checklist activities. Project-specific skill implementation is also a later activity.
+No reference files were copied verbatim. The containing course submission records
+the reference-selection review, a fresh agent session using a disposable unrelated
+project, and a hash-identified generic 1.0.0 archive captured before the skill was
+added. Those records stay outside this copyable directory. They establish scoped
+observations, not automatic Copilot discovery or classroom acceptance.
+
+To use the interview, open this directory as the target project and request
+`bootstrap-project` in a host that supports `.github/skills`, or explicitly provide
+the skill file to the chosen assistant. The skill reads current context, asks about
+material gaps and presents a proposal before writing approved project context.
+No installer is required. Presence alone does not prove host discovery or behavior.

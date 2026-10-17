@@ -104,22 +104,22 @@ Source: [setup and validation guide](Dia1/Exercicios-GSS/README.md). These are e
 
 ## 5. Day 2 — Exercise 1: Reusable starter repository
 
-Source: [starter instructions](Dia2/Exercicio-01-Starter-Repo.md). The first four activities now have [reusable starter source](participant-work/starter/README.md) and a [preparation record](participant-work/day2/starter-preparation.md). It remains in the personal fork; separate publication, reference-selection review, behavioral experiments and a preserved generic release remain pending.
+Source: [starter instructions](Dia2/Exercicio-01-Starter-Repo.md). The [reusable starter source](participant-work/starter/README.md) and [preparation record](participant-work/day2/starter-preparation.md) are supplemented by [reference review, scoped fresh-session reuse and generic preservation](participant-work/day2/starter-next-five.md). It remains in the personal fork; separate publication and native Copilot discovery remain unverified.
 
 - [x] Create the personal reusable starter with concise agent rules, a Copilot entry point, and documentation explaining reuse. See the [starter](participant-work/starter/README.md) and [scope adaptation](participant-work/day2/starter-preparation.md#deliverable-and-scope); this is source in the personal fork, not a separately published repository or verified Copilot session.
 - [x] Define planning, execution, verification, review, Git, security, and autonomy procedures that match the participant's preferences. See [workflow](participant-work/starter/procedures/workflow.md) and [Git/safety](participant-work/starter/procedures/git-and-safety.md).
 - [x] Provide persistent context, decisions, reusable knowledge, and evidence records with clear responsibilities. See [responsibilities and acceptance](participant-work/day2/starter-preparation.md#responsibilities-and-acceptance); project-specific requirements remain deliberately unconfigured.
 - [x] Document useful skills, CLI tools, and MCP capabilities; distinguish documented capabilities from verified availability. See [capability contracts](participant-work/starter/capabilities/README.md) and [scoped local probes](participant-work/day2/starter-preparation.md#environment-evidence); catalogs are not treated as verified service access.
-- [ ] Record what was copied, adapted, or discarded from the reference and why; preserve applicable attribution.
-- [ ] Test a fresh session, reuse for an unrelated hypothetical project, and a safe agent task; save observed behavior and correct failures.
-- [ ] Preserve an identifiable generic starter version before classifier-specific context is added. Do not describe a later reconstruction as proof that the original sequence occurred.
+- [x] Record what was copied, adapted, or discarded from the reference and why; preserve applicable attribution. See the [selection and attribution record](participant-work/day2/starter-reference-selection.md).
+- [x] Test a fresh session, reuse for an unrelated hypothetical project, and a safe agent task; save observed behavior and correct failures. See the [no-history agent experiment](participant-work/day2/starter-fresh-session.md); explicit chosen-assistant loading, not Copilot auto-discovery.
+- [x] Preserve an identifiable generic starter version before classifier-specific context is added. Do not describe a later reconstruction as proof that the original sequence occurred. See the [actual pre-skill archive and manifest](participant-work/day2/starter-next-five.md); no classifier context was added.
 
 ## 6. Day 2 — Exercise 2: Bootstrap interview skill
 
-Source: [bootstrap instructions](Dia2/Exercicio-02-Skill-Bootstrap.md). The study answer is a design explanation, not an executable, tested participant skill.
+Source: [bootstrap instructions](Dia2/Exercicio-02-Skill-Bootstrap.md). The study answer remains a design explanation; [research and participant skill source](participant-work/day2/starter-next-five.md) now exist separately. Format validation does not establish behavioral testing or native Copilot discovery.
 
-- [ ] Research interview-style skills and the Ask Me pattern, recording sources and useful design choices.
-- [ ] Create the participant's native Copilot skill at `.github/skills/<skill-name>/SKILL.md` in the personal starter, with appropriate metadata and instructions; no special installer is required.
+- [x] Research interview-style skills and the Ask Me pattern, recording sources and useful design choices. See the [research and access limitations](participant-work/day2/bootstrap-research.md).
+- [x] Create the participant's native Copilot skill at `.github/skills/<skill-name>/SKILL.md` in the personal starter, with appropriate metadata and instructions; no special installer is required. See [bootstrap-project](participant-work/starter/.github/skills/bootstrap-project/SKILL.md); authored through the chosen assistant, format validated, Copilot execution unverified.
 - [ ] Make the skill inspect existing context, ask adaptive questions, clarify contradictions, avoid repetition, and distinguish facts, assumptions, and pending decisions.
 - [ ] Require a reviewable context proposal and participant approval before the skill writes project context.
 - [ ] Apply it to the classifier requirements while preserving generic starter rules; support subsequent updates without restarting the interview.
