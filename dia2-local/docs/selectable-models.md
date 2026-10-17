@@ -1,5 +1,11 @@
 # Selectable training datasets
 
+Current project acceptance is now clarified by the participant: **10/10 correct
+and every score strictly >90%**. Supplementary training is acceptable as a
+separately documented extension. See [the professor criterion and next-study
+boundary](professor-acceptance.md). Earlier approval/NOT RUN statements below
+retain their dated historical scope.
+
 The local v3.11.0 interface separates the required exercise from an optional
 supplementary-data experiment. No public deployment is implied by local changes.
 

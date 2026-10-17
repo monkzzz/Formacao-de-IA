@@ -183,6 +183,12 @@ Source: [website instructions](Dia2/Exercicio-03/Parte-03-Site-GitHub-Pages.md).
 
 ### Part 4 — Official CAPTCHA challenge
 
+**Current professor criterion, clarified by the participant after the completed
+experiments:** exactly **10/10 correct and each score strictly >90%**.
+Supplementary training is acceptable as a separately documented extension.
+See [the explicit acceptance policy](dia2-local/docs/professor-acceptance.md).
+Historical >=90% reports retain their original definitions; this target remains unmet.
+
 Source: [challenge evaluation instructions](Dia2/Exercicio-03/Parte-04-Teste-do-Desafio.md).
 
 - [x] Original frozen local evaluation and separate comparison exist: 99.28% MNIST and 2/10 official CAPTCHA cases.

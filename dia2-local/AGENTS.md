@@ -24,6 +24,13 @@ Public v3.10.0 and all historical submission evidence remain separate.
 
 ## Evaluation integrity
 
+- The participant has clarified the professor's current criterion: exactly 10/10
+  correct and every original, unrounded score strictly >90%. Use
+  `digitlab.acceptance` for new acceptance checks; historical >=90% metrics retain
+  their original meaning. Supplementary training is acceptable as a separately
+  documented extension; preserve the MNIST-only course model and never tune on the
+  official ten. See [the requirement](docs/professor-acceptance.md).
+
 - Never use `../Dia2/Desafio/caso_01.png` through `caso_10.png` for training, validation, model selection or preprocessing tuning.
 - Never derive predictions from filenames, manually identified digits, generator labels or a hard-coded answer table. Classification must use image pixels and trained weights.
 - Preserve the original `reports/challenge-raw.json`, `reports/challenge-freeze.json`, `artifacts/frozen-app.zip`, associated screenshots and model checkpoints. Do not rerun the original challenge as a new independent first test.
