@@ -4,6 +4,11 @@ Prepared 2026-10-17 in the personal fork. This is delivery of the local work to
 the participant for review. It has **not been sent to a teacher** and does not
 establish classroom attendance, mastery or instructor acceptance.
 
+The subsequent [exercise coverage audit](EXERCISE-COVERAGE.md) identified twelve
+missing or understated follow-ups, now unchecked in [TASKS.md](TASKS.md).
+This index records delivery of existing artifacts; it does not establish full
+exercise completion or that only teacher-dependent work remains.
+
 ## Day 1 research
 
 The [research submission index](participant-work/day1/README.md) links all source

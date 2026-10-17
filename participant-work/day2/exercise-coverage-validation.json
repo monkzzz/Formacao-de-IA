@@ -1,0 +1,103 @@
+{
+  "executed_utc": "2026-10-17T11:39:20.629492+00:00",
+  "status": "PASS",
+  "baseline_commit": "8179136f601e925a06a45dc141474804336d0c11",
+  "sources_reviewed": {
+    "Dia1/Exercicio-01-Pesquisa-Orientada.md": "a54335a199f0453fee91b1a0b571f6b9d129336824f0d8fb0395e11155a4cd63",
+    "Dia1/Exercicio-02-Talk-to-a-Paper.md": "5274b0c337e2edfc90e15187c78bc4d345ff4031f263ab103b90cb1df7aa0cf7",
+    "Dia1/Exercicio-03-Cruzamento-de-Fontes.md": "818250d284ef64d06e2fa5c81c1ee6b30a94b80ffd0a2dc190732a3d3c39712f",
+    "Dia1/Exercicio-04-Auditoria-e-Refinamento.md": "ea17b21af9c70939d89a39dba4543e9cc061306d8be3286b380f522a3a6694b3",
+    "Dia2/Exercicio-01-Starter-Repo.md": "3c42265632697dc2f16dc0c78731f75df94993a032f58e525cd52560b1f3eaf3",
+    "Dia2/Exercicio-02-Skill-Bootstrap.md": "4243f16dfb2060f0b04df3f23af891f1462fa369d07ac2285ee490aa25f2b7c4",
+    "Dia2/Exercicio-03/Parte-01-Planejamento-da-Rede.md": "3c3c16e1cbfb1098579093a97e58f77d7af0b829d145c3e1d849aa1b0d3406b2",
+    "Dia2/Exercicio-03/Parte-02-Coding-com-o-Agente.md": "029068ca0b5f7dff2eb995cabd1e97ec165df777442a765de05165904567b846",
+    "Dia2/Exercicio-03/Parte-03-Site-GitHub-Pages.md": "060b1c5577f89bd488ce6eca495fda7f22b2b4305e5150896272be078b46beca",
+    "Dia2/Exercicio-03/Parte-04-Teste-do-Desafio.md": "181735041e74a6a29df90bdd504ef18657c94ccbd30677fde41bd7e8bb76e072",
+    "Dia2/Exercicio-03-Desenvolvimento-Issues.md": "ebd230eebf0904bf6d76af706b40b287f999861178ea27b4cddadb321d197e1f",
+    "Dia2/Exercicio-04-Roda-de-Feedback.md": "30d185b50d6106438f84dd033d28eb68071d638d4303cfa78e2313365267c8a0",
+    "Dia1/README.md": "843801eefadc93b399a159e1f1834dd2a605ea922c57af793bddbbc2284d9662",
+    "Dia2/README.md": "199b119e8237e5a96885a4b0ee87b551ef569c97c56c0191656b2f734333f7e7",
+    "Dia1/Exercicios-GSS/README.md": "cbd1d73c5fb67da3dd07236539c8c10d5c5c7b92aa3e020dce1b5288e0558745",
+    "Dia1/Exercicios-GSS/modulo1/README.md": "b9579c2cba7510328a044e415aad988b24cdf8df04010c73a37cf42b9a646155",
+    "Dia1/Exercicios-GSS/modulo2/README.md": "b73684a41729bd017c095ce17ca547e8e87796eedfdec1eb6c0cfad1ad7cce2a",
+    "Dia2/Guia-Skills-Copilot.md": "16333d3efdec18ed3c46f70d71710c3c2fc1d3b96011ba682653110d8dbdf6f1",
+    "Dia2/Dataset-MNIST/README.md": "576dba819f03b905b3eeea97f521003761aab0e6cd78483c7940243b4e9bfd8e",
+    "Dia2/Desafio/README.md": "341a1b44864064a928a83167f16515e84c45a3882620817ab707adcb2e625664",
+    "Dia2/Referencia-Starter-Repo/LEIA-PRIMEIRO.md": "40b234d62ef68130c7af3122b8e06f97922cfd59192cb032704884fca5721601"
+  },
+  "relative_links_checked": 215,
+  "heading_anchors_checked": 53,
+  "new_unchecked_followups": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12"
+  ],
+  "previous_pending_tasks": 11,
+  "current_pending_tasks": 23,
+  "completed_task_count_unchanged": 97,
+  "limits": [
+    "Documentation audit only; no follow-up task executed",
+    "No training, challenge inference, deployment or messages",
+    "Reference Issue and PR web reads failed; reference repository README was accessible, not a full component review",
+    "Source evidence was inspected locally; no fresh remote personal-repository or Issue-state verification"
+  ],
+  "gss_entry_sources_parsed": {
+    "Dia1/Exercicios-GSS/modulo1/dia1_modulo1_01_paradigmas_aprendizagem.py": {
+      "sha256": "5c39e43b5fc95331cc3c9122790c2aa4b0bfce7c0bc245028c687651cb5f2e8e",
+      "lesson_docstring": "Interactive comparison of labels, discovered groups and reward-based learning."
+    },
+    "Dia1/Exercicios-GSS/modulo1/dia1_modulo1_02_forward_pass_mlp.py": {
+      "sha256": "469c3d4be3d0959135b69f4c477d292c646e863681a65ba32f5828eaa11a6461",
+      "lesson_docstring": "Exercise 2: follow one digit through the forward pass of an untrained MLP."
+    },
+    "Dia1/Exercicios-GSS/modulo1/dia1_modulo1_03_perda_backpropagation_otimizacao.py": {
+      "sha256": "33444830bbd0c25b62e36f4f5e988af95b3716c9bea15c7c84099e17e526e8d1",
+      "lesson_docstring": "Exercise 3: loss, error, backpropagation and optimisation, written by hand."
+    },
+    "Dia1/Exercicios-GSS/modulo1/dia1_modulo1_04_metricas_avaliacao.py": {
+      "sha256": "627aa2ead791ca78e6c5a98d9eb40a9fdff4284eac84189869bc40503f814faf",
+      "lesson_docstring": "Exercise 4: visual evaluation, one calculation at a time."
+    },
+    "Dia1/Exercicios-GSS/modulo1/dia1_modulo1_05_mlp_digitos.py": {
+      "sha256": "19ebabfe52b3940663930937b6b4231018854ee1b28bfd7dfd5cf90f54863d3b",
+      "lesson_docstring": "Train and inspect a small PyTorch MLP on the UCI handwritten digits."
+    },
+    "Dia1/Exercicios-GSS/modulo1/dia1_modulo1_06_visao_computacional_yolo.py": {
+      "sha256": "a54054aac5942acc6cb97ec744ce49766bd3fdae9c7edff6d302c3ce76901378",
+      "lesson_docstring": "Exercise06: choose a YOLO task and inspect images, video or a webcam locally."
+    },
+    "Dia1/Exercicios-GSS/modulo2/dia1_modulo2_01_tokens_ids.py": {
+      "sha256": "b5f8a55594bd118a42f621a4362124b1371c3e803783b8009da3875e944178e7",
+      "lesson_docstring": "Exercise 1: split a sentence into tokens and IDs with a didactic WordPiece vocabulary."
+    },
+    "Dia1/Exercicios-GSS/modulo2/dia1_modulo2_02_mapa_embeddings.py": {
+      "sha256": "6d39c7aabe4c20d91b066565da9b1c96222df57f5733d31546940d1754ad2d23",
+      "lesson_docstring": "Exercise 2: a map of real sentence embeddings; click a phrase to see its nearest neighbours."
+    },
+    "Dia1/Exercicios-GSS/modulo2/dia1_modulo2_03_attention.py": {
+      "sha256": "b55c5bf561625754f691dd06e931d787cec7f3f8fd9ab0183e049b42128ce6da",
+      "lesson_docstring": "Exercise 3: click a word and see which earlier words it consults (didactic attention)."
+    },
+    "Dia1/Exercicios-GSS/modulo2/dia1_modulo2_04_proximo_token.py": {
+      "sha256": "53dd23b19acc8007cb6e3a02763cbbceb94456c4d437583d4b08af0e75de2ef5",
+      "lesson_docstring": "Exercise 4: predict the next token with a real local model, choose it and repeat."
+    },
+    "Dia1/Exercicios-GSS/modulo2/dia1_modulo2_05_laboratorio_prompts.py": {
+      "sha256": "95cea89f49c21f57f2c215523263789583cabfe26d359d0aebd8cbfa2ed0514e",
+      "lesson_docstring": "Exercise 5: change the prompt and the generation settings, ask AMALIA and compare answers."
+    },
+    "Dia1/Exercicios-GSS/modulo2/dia1_modulo2_06_imagem_texto.py": {
+      "sha256": "a39d0ae8b4c283621fe60ce719a90db55df8e10a7f78931f814b8ebb43c32556",
+      "lesson_docstring": "Exercise 6: ask GLM-4.6V about an image and judge what the answer can and cannot claim."
+    }
+  }
+}
