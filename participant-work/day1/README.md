@@ -9,5 +9,7 @@ Prepared on 2026-10-17 in the participant's existing personal fork. English is t
 - [Transformer reading note](reading-transformer.md) and [FlashAttention reading note](reading-flashattention.md): progressive questions, source-checked answers, and conclusions.
 - [Original synthesis](synthesis-original.md): definitions, evidence, conditional arguments, and proposed tests; preserved with a [SHA-256 record](synthesis-preservation.json).
 - [Audit](synthesis-audit.md): proposed edits from the fresh reviewer session, saved separately before any revision.
+- [Final synthesis](synthesis-final.md) and [correction record](synthesis-corrections.md): revised in another fresh session, with audit IDs and targeted source verification.
+- [GSS module 1 observations](gss-observations.md): environment, UCI cache, five executed entry scripts, GUI walkthroughs, screenshots, and measured limits.
 
-These are assistant-produced participant-work artifacts. They do not establish participant mastery, classroom attendance, or a Copilot interaction. The research report, reading notes, original synthesis, and audit are saved. The revised paper, verification of disputed claims during revision, and correction summary remain later tasks. See the [process record](review-process.md) for the fresh-session adaptation and validation evidence.
+These are assistant-produced participant-work artifacts. They do not establish participant mastery, classroom attendance, or a Copilot interaction. The research report, reading notes, original synthesis, audit, final revision, and correction summary are saved. See the [process record](review-process.md) for the original audit session and the [correction record](synthesis-corrections.md) for the later revision session and its limits.

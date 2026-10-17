@@ -16,6 +16,8 @@ The request instructed the reviewer to inspect claims, citations, omissions, con
 
 This batch ends before the second fresh conversation for revision. No final revised paper or correction summary is claimed. The audit's findings must be resolved and source-checked during that later work.
 
+Subsequent batch, 2026-10-17: another fresh agent session produced the [final revision](synthesis-final.md) and [correction record](synthesis-corrections.md), including targeted primary-source checks. The paragraph above records the earlier batch boundary; it is not the current revision status. The original and audit remain preserved separately.
+
 ## Validation
 
 Validation checks file links and local heading anchors in the changed Markdown, verifies that exactly ten checklist items changed to complete, recomputes the preserved original's SHA-256, and checks Git whitespace. Results are recorded after execution below. No training, challenge evaluation, or application test is appropriate for these documentation artifacts.

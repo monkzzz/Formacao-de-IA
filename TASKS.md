@@ -75,21 +75,21 @@ Source: [audit instructions](Dia1/Exercicio-04-Auditoria-e-Refinamento.md).
 
 - [x] Start a fresh reviewer session with the chosen assistant to audit claims, citations, omissions, confidence, and requested format. See the [session adaptation and limits](participant-work/day1/review-process.md#fresh-audit-session); this uses a reviewer agent without inherited chat history, not Copilot or independent human review.
 - [x] Save at least one Markdown audit containing proposed edits before changing the original paper. See the [audit and proposed edits A1-A8](participant-work/day1/synthesis-audit.md); revision remains the next task.
-- [ ] Use another new conversation with the original paper and audit to produce a traceable revision.
-- [ ] Verify disputed claims using the original sources; repeat review if necessary.
-- [ ] Deliver the final paper, preserved audit, and a brief record of the principal corrections.
+- [x] Use another fresh session with the original paper and audit to produce a traceable revision. See [final version 2](participant-work/day1/synthesis-final.md) and the [declared session adaptation](participant-work/day1/synthesis-corrections.md#session-and-chosen-route).
+- [x] Verify disputed claims using the original sources; repeat review if necessary. See the [targeted versioned-source checks](participant-work/day1/synthesis-corrections.md#targeted-primary-source-verification), two comparison methods, and unresolved limits.
+- [x] Deliver the final paper, preserved audit, and a brief record of the principal corrections. See the [final paper](participant-work/day1/synthesis-final.md), [unchanged audit](participant-work/day1/synthesis-audit.md), and [A1-A8 correction record](participant-work/day1/synthesis-corrections.md).
 
 ## 4. Day 1 — GSS Python demonstrations
 
 Source: [setup and validation guide](Dia1/Exercicios-GSS/README.md). These are existing demonstrations to execute and understand; no missing implementation was established by this audit.
 
-- [ ] Create or reuse the GSS virtual environment, install base requirements, and verify Tk GUI availability.
-- [ ] Prepare the UCI Optical Digits cache for module 1 exercises 02, 03, and 05; keep this 8×8 dataset separate from Day 2 MNIST.
-- [ ] Run module 1 exercise 01: compare supervised/unsupervised learning and observe Flappy Bird Q-learning.
-- [ ] Run module 1 exercise 02: inspect image matrices, flattening, and the MLP forward pass.
-- [ ] Run module 1 exercise 03: observe loss, backpropagation, optimization, and training cycles.
-- [ ] Run module 1 exercise 04: explore confusion matrices, thresholds, precision/recall, costs, and ROC behavior.
-- [ ] Run module 1 exercise 05: train/evaluate the digit MLP and test drawing inference without treating it as additional training.
+- [x] Create or reuse the GSS virtual environment, install base requirements, and verify Tk GUI availability. Created the ignored GSS environment; [setup](participant-work/day1/gss-evidence/setup.json) records installation/imports/pip checks. The [Tk walkthrough](participant-work/day1/gss-observations.md#environment-and-method) used the verified existing environment while installation completed.
+- [x] Prepare the UCI Optical Digits cache for module 1 exercises 02, 03, and 05; keep this 8×8 dataset separate from Day 2 MNIST. See [dataset boundary](participant-work/day1/gss-observations.md#dataset-boundary) and the archive hash/counts in [execution evidence](participant-work/day1/gss-evidence/execution.json).
+- [x] Run module 1 exercise 01: compare supervised/unsupervised learning and observe Flappy Bird Q-learning. See [observations and screenshots](participant-work/day1/gss-observations.md#observed-lessons); 200 episodes updated Q-values but did not establish improved play.
+- [x] Run module 1 exercise 02: inspect image matrices, flattening, and the MLP forward pass. See the [recorded untrained forward pass](participant-work/day1/gss-observations.md#observed-lessons) and [GUI](participant-work/day1/gss-evidence/02-forward.png).
+- [x] Run module 1 exercise 03: observe loss, backpropagation, optimization, and training cycles. See [21-update observations](participant-work/day1/gss-observations.md#observed-lessons) and [GUI](participant-work/day1/gss-evidence/03-learning.png).
+- [x] Run module 1 exercise 04: explore confusion matrices, thresholds, precision/recall, costs, and ROC behavior. See [threshold measurements](participant-work/day1/gss-evidence/execution.json), [cost GUI](participant-work/day1/gss-evidence/04-costs.png), and [ROC GUI](participant-work/day1/gss-evidence/04-roc.png).
+- [x] Run module 1 exercise 05: train/evaluate the digit MLP and test drawing inference without treating it as additional training. See [12-epoch observations](participant-work/day1/gss-observations.md#observed-lessons), [evaluation](participant-work/day1/gss-evidence/05-evaluation.png), and [drawing](participant-work/day1/gss-evidence/05-drawing.png); frozen parameter hashes agreed before/after inference.
 - [ ] For the optional vision exercise, install `requirements-visao.txt` and prepare YOLO weights using `--preparar` before class.
 - [ ] Run module 1 exercise 06: inspect classification, detection, segmentation, pose, and oriented boxes using the intended image/video/webcam inputs; distinguish model scores from accuracy.
 - [ ] Enable recorded-response mode for module 2, or configure the documented LM Studio endpoint and compatible models for live demonstrations.

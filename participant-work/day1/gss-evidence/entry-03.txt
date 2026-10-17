@@ -1,0 +1,1 @@
+Rede 2-2-2, label 5, uma atualização: perda 0.405610 -> 0.346342.

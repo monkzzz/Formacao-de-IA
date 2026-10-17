@@ -1,0 +1,1 @@
+Metricas calculadas: BinaryMetrics(true_positives=16, false_positives=8, false_negatives=4, true_negatives=72, accuracy=0.88, precision=0.6666666666666666, recall=0.8, f1=0.7272727272727273)

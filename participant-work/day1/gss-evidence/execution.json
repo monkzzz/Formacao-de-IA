@@ -1,0 +1,496 @@
+{
+  "started_utc": "2026-10-17T10:06:50.300436+00:00",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "executable": "dia2-local\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.4",
+    "torch": "2.14.1",
+    "Pillow": "12.3.0"
+  },
+  "tk_version": 8.6,
+  "backend": "TkAgg",
+  "mode": "real Tk windows; scripted controls and dispatched Matplotlib mouse events",
+  "lessons": {
+    "1": {
+      "entry_script": "dia1_modulo1_01_paradigmas_aprendizagem.py",
+      "exit_code": 0,
+      "log": "entry-01.txt",
+      "paradigms": {
+        "trained": true,
+        "new_session": [
+          4.1,
+          0.4
+        ],
+        "status": "\u2605 Nova sess\u00e3o: 4,1 p\u00e1ginas \u00b7 sa\u00edda 40%\nSupervisionada: prev\u00ea \u00abcomprou\u00bb    |    N\u00e3o supervisionada: atribui ao Grupo 1",
+        "screenshot": {
+          "file": "01-paradigms.png",
+          "window_size": [
+            1920,
+            1010
+          ],
+          "capture": "own Tk client area, PIL ImageGrab"
+        }
+      },
+      "flappy": {
+        "first_reward": 0.1,
+        "training_episodes": 200,
+        "score_first20_mean": 0.1,
+        "score_last20_mean": 0.1,
+        "score_max": 1,
+        "epsilon_playback": 0.0,
+        "nonzero_q_values": 521,
+        "playback_preserved_q_table": true,
+        "screenshot": {
+          "file": "01-flappy.png",
+          "window_size": [
+            1920,
+            1010
+          ],
+          "capture": "own Tk client area, PIL ImageGrab"
+        }
+      }
+    },
+    "2": {
+      "entry_script": "dia1_modulo1_02_forward_pass_mlp.py",
+      "exit_code": 0,
+      "log": "entry-02.txt",
+      "forward": {
+        "image_shape": [
+          8,
+          8
+        ],
+        "vector_size": 64,
+        "selected_pixels": [
+          2,
+          10
+        ],
+        "inputs": [
+          0.625,
+          0.875
+        ],
+        "hidden_activations": [
+          0.7987500000000001,
+          0.0
+        ],
+        "probabilities_0_5": [
+          0.33342993601035104,
+          0.6665700639896489
+        ],
+        "screenshot": {
+          "file": "02-forward.png",
+          "window_size": [
+            1920,
+            1010
+          ],
+          "capture": "own Tk client area, PIL ImageGrab"
+        }
+      }
+    },
+    "3": {
+      "entry_script": "dia1_modulo1_03_perda_backpropagation_otimizacao.py",
+      "exit_code": 0,
+      "log": "entry-03.txt",
+      "learning": {
+        "sample_loss_before": 0.4056100226232922,
+        "sample_loss_after": 0.34634244502849504,
+        "gradient_norm": 0.3692901182787696,
+        "updates": 21,
+        "mean_loss_initial": 0.7810735251048385,
+        "mean_loss_final": 0.6891030866988771,
+        "screenshot": {
+          "file": "03-learning.png",
+          "window_size": [
+            1920,
+            1010
+          ],
+          "capture": "own Tk client area, PIL ImageGrab"
+        }
+      }
+    },
+    "4": {
+      "entry_script": "dia1_modulo1_04_metricas_avaliacao.py",
+      "exit_code": 0,
+      "log": "entry-04.txt",
+      "metrics": {
+        "scenario": "100 pe\u00e7as: matriz",
+        "thresholds": {
+          "0.2": {
+            "true_positives": 19,
+            "false_positives": 52,
+            "false_negatives": 1,
+            "true_negatives": 28,
+            "accuracy": 0.47,
+            "precision": 0.2676056338028169,
+            "recall": 0.95,
+            "f1": 0.4175824175824176
+          },
+          "0.5": {
+            "true_positives": 16,
+            "false_positives": 8,
+            "false_negatives": 4,
+            "true_negatives": 72,
+            "accuracy": 0.88,
+            "precision": 0.6666666666666666,
+            "recall": 0.8,
+            "f1": 0.7272727272727273
+          },
+          "0.8": {
+            "true_positives": 6,
+            "false_positives": 0,
+            "false_negatives": 14,
+            "true_negatives": 80,
+            "accuracy": 0.86,
+            "precision": 1.0,
+            "recall": 0.3,
+            "f1": 0.46153846153846156
+          }
+        },
+        "auc": 0.88875,
+        "cost_toggle_changed": true,
+        "cost_screenshot": {
+          "file": "04-costs.png",
+          "window_size": [
+            1920,
+            1010
+          ],
+          "capture": "own Tk client area, PIL ImageGrab"
+        },
+        "roc_screenshot": {
+          "file": "04-roc.png",
+          "window_size": [
+            1920,
+            1010
+          ],
+          "capture": "own Tk client area, PIL ImageGrab"
+        }
+      }
+    },
+    "5": {
+      "entry_script": "dia1_modulo1_05_mlp_digitos.py",
+      "exit_code": 0,
+      "log": "entry-05.txt",
+      "training": {
+        "seed": 23,
+        "epochs": 12,
+        "updates": 312,
+        "train_size": 3251,
+        "validation_size": 572,
+        "test_size": 1797,
+        "best_epoch": 12,
+        "history": [
+          {
+            "train_loss": 2.308016538619995,
+            "validation_loss": 2.308497190475464,
+            "train_accuracy": 0.13749615848064423,
+            "validation_accuracy": 0.13461539149284363
+          },
+          {
+            "train_loss": 2.153928518295288,
+            "validation_loss": 2.152155876159668,
+            "train_accuracy": 0.4555521309375763,
+            "validation_accuracy": 0.4562937021255493
+          },
+          {
+            "train_loss": 1.9271578788757324,
+            "validation_loss": 1.9229806661605835,
+            "train_accuracy": 0.6653337478637695,
+            "validation_accuracy": 0.6625874042510986
+          },
+          {
+            "train_loss": 1.5864320993423462,
+            "validation_loss": 1.5786291360855103,
+            "train_accuracy": 0.7443863153457642,
+            "validation_accuracy": 0.7587412595748901
+          },
+          {
+            "train_loss": 1.214751958847046,
+            "validation_loss": 1.2037063837051392,
+            "train_accuracy": 0.822516143321991,
+            "validation_accuracy": 0.8426573276519775
+          },
+          {
+            "train_loss": 0.9183598756790161,
+            "validation_loss": 0.9002133011817932,
+            "train_accuracy": 0.8658874034881592,
+            "validation_accuracy": 0.8881118893623352
+          },
+          {
+            "train_loss": 0.7164574265480042,
+            "validation_loss": 0.6953011155128479,
+            "train_accuracy": 0.8895724415779114,
+            "validation_accuracy": 0.8933566212654114
+          },
+          {
+            "train_loss": 0.577057421207428,
+            "validation_loss": 0.5459340810775757,
+            "train_accuracy": 0.9107967019081116,
+            "validation_accuracy": 0.9318181872367859
+          },
+          {
+            "train_loss": 0.4856118857860565,
+            "validation_loss": 0.456145703792572,
+            "train_accuracy": 0.9132574796676636,
+            "validation_accuracy": 0.9248251914978027
+          },
+          {
+            "train_loss": 0.41762691736221313,
+            "validation_loss": 0.38455358147621155,
+            "train_accuracy": 0.9212549924850464,
+            "validation_accuracy": 0.938811182975769
+          },
+          {
+            "train_loss": 0.3701828122138977,
+            "validation_loss": 0.33352130651474,
+            "train_accuracy": 0.931713342666626,
+            "validation_accuracy": 0.9493007063865662
+          },
+          {
+            "train_loss": 0.33060213923454285,
+            "validation_loss": 0.2907887399196625,
+            "train_accuracy": 0.9307905435562134,
+            "validation_accuracy": 0.9440559148788452
+          },
+          {
+            "train_loss": 0.3015793263912201,
+            "validation_loss": 0.2640712857246399,
+            "train_accuracy": 0.9347892999649048,
+            "validation_accuracy": 0.9527971744537354
+          }
+        ],
+        "test": {
+          "accuracy": 0.9087367835281024,
+          "macro_precision": 0.9108366754584594,
+          "macro_recall": 0.9082617095459297,
+          "macro_f1": 0.9086804335571748,
+          "loss": 0.35584303736686707,
+          "confusion_matrix": [
+            [
+              175,
+              0,
+              0,
+              0,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              153,
+              7,
+              0,
+              0,
+              1,
+              2,
+              0,
+              5,
+              14
+            ],
+            [
+              0,
+              7,
+              161,
+              4,
+              0,
+              0,
+              0,
+              1,
+              2,
+              2
+            ],
+            [
+              0,
+              0,
+              3,
+              169,
+              0,
+              3,
+              0,
+              4,
+              3,
+              1
+            ],
+            [
+              0,
+              5,
+              0,
+              0,
+              172,
+              0,
+              1,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              176,
+              1,
+              0,
+              0,
+              4
+            ],
+            [
+              1,
+              4,
+              0,
+              0,
+              1,
+              1,
+              173,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              6,
+              1,
+              0,
+              164,
+              2,
+              6
+            ],
+            [
+              0,
+              24,
+              0,
+              1,
+              2,
+              5,
+              1,
+              0,
+              132,
+              9
+            ],
+            [
+              0,
+              3,
+              0,
+              4,
+              7,
+              4,
+              0,
+              0,
+              4,
+              158
+            ]
+          ]
+        },
+        "drawing": {
+          "input": "synthetic vertical mouse stroke; not a test sample",
+          "prediction": 1,
+          "scores": [
+            0.0005615750560536981,
+            0.7734957933425903,
+            0.035693082958459854,
+            0.032413117587566376,
+            0.0563938245177269,
+            0.009724031202495098,
+            0.0104123055934906,
+            0.03430737927556038,
+            0.03215065598487854,
+            0.014848235994577408
+          ],
+          "empty_notice": "Desenha um d\u00edgito antes de pedir a infer\u00eancia.",
+          "clear_works": true,
+          "frozen_state_sha256_before_after": "4b27c4cc901859e7d6de3ac5542b6197b1dccbe4e75b7beb582690c492a2d210",
+          "weights_unchanged_by_inference": true
+        },
+        "screenshots": [
+          {
+            "file": "05-training.png",
+            "window_size": [
+              1920,
+              1010
+            ],
+            "capture": "own Tk client area, PIL ImageGrab"
+          },
+          {
+            "file": "05-evaluation.png",
+            "window_size": [
+              1920,
+              1010
+            ],
+            "capture": "own Tk client area, PIL ImageGrab"
+          },
+          {
+            "file": "05-drawing.png",
+            "window_size": [
+              1920,
+              1010
+            ],
+            "capture": "own Tk client area, PIL ImageGrab"
+          }
+        ]
+      }
+    }
+  },
+  "source_baseline": "4188bfefdae77e8c252d26ecfc5f822361364c14",
+  "provenance_manifest_sha256": "ce230a1a5d936bf59fe52c057300c0fb2e16d48e41c796fa1ecde5b82825efb7",
+  "entry_script_sha256": {
+    "dia1_modulo1_01_paradigmas_aprendizagem.py": "5c39e43b5fc95331cc3c9122790c2aa4b0bfce7c0bc245028c687651cb5f2e8e",
+    "dia1_modulo1_02_forward_pass_mlp.py": "469c3d4be3d0959135b69f4c477d292c646e863681a65ba32f5828eaa11a6461",
+    "dia1_modulo1_03_perda_backpropagation_otimizacao.py": "33444830bbd0c25b62e36f4f5e988af95b3716c9bea15c7c84099e17e526e8d1",
+    "dia1_modulo1_04_metricas_avaliacao.py": "627aa2ead791ca78e6c5a98d9eb40a9fdff4284eac84189869bc40503f814faf",
+    "dia1_modulo1_05_mlp_digitos.py": "19ebabfe52b3940663930937b6b4231018854ee1b28bfd7dfd5cf90f54863d3b"
+  },
+  "tk_patchlevel": "8.6.15",
+  "pip_check": "NOT RUN: reused environment has no pip; required imports succeeded",
+  "dataset": {
+    "url": "https://archive.ics.uci.edu/static/public/80/optical+recognition+of+handwritten+digits.zip",
+    "cache_path": "Dia1\\Exercicios-GSS\\.cache\\datasets\\optical_digits.zip",
+    "sha256": "0d7b054fea010270e9b3f06411c654c5e59547732ad626381980baffe0a23fb0",
+    "train_shape": [
+      3823,
+      8,
+      8
+    ],
+    "test_shape": [
+      1797,
+      8,
+      8
+    ],
+    "train_class_counts": [
+      376,
+      389,
+      380,
+      389,
+      387,
+      376,
+      377,
+      387,
+      380,
+      382
+    ],
+    "test_class_counts": [
+      178,
+      182,
+      177,
+      183,
+      181,
+      182,
+      181,
+      179,
+      174,
+      180
+    ],
+    "range": [
+      0.0,
+      16.0
+    ],
+    "separate_from_day2_mnist": true
+  },
+  "finished_utc": "2026-10-17T10:07:33.507315+00:00"
+}
