@@ -41,6 +41,13 @@ Crossing lines, broken strokes, clutter, and unusual backgrounds can differ subs
 
 ## Verification matrix
 
+The matrix below records the original local baseline. As of 2026-10-17,
+[real Issues](../../participant-work/day2/issue-register.md) and
+[existing-host browser verification](../../participant-work/day2/submission-browser-delivery.md)
+have separate evidence. Pages and instructor acceptance remain pending. The
+[selected CNN chain](../../participant-work/day2/submission-challenge-chain.md)
+preserves all later results as follow-ups, without replacing this first score.
+
 | Check | Status |
 | --- | --- |
 | Real training and official MNIST evaluation | PASS — 99.28% |

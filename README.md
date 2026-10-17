@@ -20,6 +20,24 @@
 
 ## A proposta
 
+### Personal-fork navigation — 2026-10-17
+
+This fork also contains the participant's work. Students should keep their own
+implementations in their personal repositories; these additions are evidence and
+reference material, not substitutes for completing the course exercises.
+
+| Location | Role |
+| --- | --- |
+| [Participant work](participant-work/day1/README.md) | Day 1 research, reading notes, synthesis, audit and execution evidence |
+| [Reusable starter](participant-work/starter/README.md) | Personal starter and bootstrap skill; separate evidence records describe actual tests |
+| [Day 2 study answers](Dia2-Answers/README.md) | Explanations and proposed answers, separate from practical completion |
+| [Digit Lab implementation](dia2-local/README.md) | Trained classifier and browser app, with versioned evidence and ignored model recovery |
+| [Preparation proposal](DIA2-PROPOSTA.md) | Historical plan with a dated current-status pointer |
+| [Task checklist](TASKS.md) | Completion evidence, maintenance work and external dependencies |
+| [Current submission](participant-work/day2/submission-browser-delivery.md) | Existing public URL, default model identity and fresh browser checks |
+
+GitHub Pages, instructor acceptance and actual teacher feedback remain pending.
+
 Este repositório reúne os **exercícios, materiais de referência e desafios** de uma formação em inteligência artificial centrada na prática.
 
 O percurso começa com **pesquisa, leitura crítica e produção de conhecimento** com IA. Depois avança para **engenharia de contexto, personalização de coding agents, desenvolvimento de software, testes e publicação** de uma aplicação real.

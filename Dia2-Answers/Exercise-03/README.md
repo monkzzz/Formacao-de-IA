@@ -1,5 +1,11 @@
 # Exercise 3 — Digit Classifier
 
+**Status update, 2026-10-17:** see the [current submission](../../participant-work/day2/submission-browser-delivery.md),
+[real Issues](../../participant-work/day2/issue-register.md) and
+[preserved challenge chain](../../participant-work/day2/submission-challenge-chain.md).
+The original local-only summary below is historical. The existing public site is
+verified; Pages, instructor acceptance and actual feedback remain pending.
+
 Complete the parts in order:
 
 1. [Planning and GitHub Issues](Part-01-Planning.md): approve requirements and implementation tasks.

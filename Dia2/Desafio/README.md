@@ -45,6 +45,42 @@ Esse resultado não é uma meta para os alunos, nem representa o desempenho gara
 
 ## Recursos
 
+### Maintenance automation (2026-10-17)
+
+The ten PNGs in this directory remain reserved for final evaluation. The generator
+defaults to `Avancado/` as a **separate output for generator auditing**, not another
+official challenge or training data. The same algorithm and classes do not create
+an independent benchmark. Never replace official PNGs. The output directory must
+be empty; `--output-dir Dia2/Desafio` is refused.
+
+```powershell
+python -m pip install Pillow==11.3.0
+python Dia2/Desafio/gerar_desafio_avancado.py --output-dir <pasta-vazia>
+```
+
+The fonts `DejaVuSans-Bold.ttf` and `DejaVuSerif-BoldItalic.ttf` are required.
+The generation workflow saves a temporary artifact without committing, pushing
+or changing official images. Exact reproducibility also depends on Pillow and
+font versions.
+
+The [evaluator](avaliar_captcha_no_site.py) supports the Digit Lab interface
+(`window.digitLab`, `#files`, `#app-version`), rather than arbitrary classifiers.
+It collects real predictions and hashes through upload without reading labels or
+computing accuracy. It requires Playwright 1.55.0 and Chromium:
+
+```powershell
+python -m pip install playwright==1.55.0
+python -m playwright install chromium
+python Dia2/Desafio/avaliar_captcha_no_site.py --url <url-digit-lab> --input-dir <pasta-png> --output <novo-relatorio.json>
+```
+
+Official PNGs require `--allow-official-followup`. Evaluation is manual-only and
+requires a URL and explicit follow-up confirmation. Never tune from known outcomes.
+Loading, contract or inference failures produce `FAIL`, a nonzero exit status and
+diagnostic JSON; the workflow attempts to retain reports even on failure. Errors
+before evaluator startup, such as browser installation failures, may produce no
+JSON. Existing reports are never overwritten.
+
 - [Exercício 3 · Parte 4 — Teste do desafio](../Exercicio-03/Parte-04-Teste-do-Desafio.md)
 - [Gerador auditável das dez imagens](gerar_desafio_avancado.py)
 - [Aplicação de referência com upload](https://vcanonici.github.io/Image-classifier-demo/)

@@ -1,0 +1,9 @@
+{
+  "executed_utc": "2026-10-17T11:06:47.512923+00:00",
+  "url": "invalid",
+  "status": "FAIL",
+  "scope": "Deployment follow-up after prior challenge exposure; not training or a blind test",
+  "labels_consulted": false,
+  "accuracy": "NOT COMPUTED; compare labels separately",
+  "error": "ValueError: --url must be an HTTP(S) application URL"
+}

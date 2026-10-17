@@ -33,7 +33,7 @@ As bibliotecas eventualmente escolhidas para o classificador **podem exigir inst
 
 - Os **60.000 exemplos de treino** poderão ser reorganizados pelo participante em treinamento e validação, documentando seu critério.
 - Os **10.000 exemplos de teste** não devem servir para decidir arquitetura nem hiperparâmetros; devem ser usados para avaliação final de generalização.
-- As **[nove imagens do desafio](../Desafio/)** não fazem parte do MNIST. Use-as apenas no desafio independente, sem treinamento ou ajuste a partir desses nove casos.
+- As **[dez imagens do desafio](../Desafio/)** não fazem parte do MNIST. Use-as apenas no desafio independente, sem treinamento ou ajuste a partir desses dez casos.
 
 ## Fontes, integridade e licença
 

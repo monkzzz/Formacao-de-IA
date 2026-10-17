@@ -1,0 +1,101 @@
+{
+  "executed_utc": "2026-10-17T11:05:27.431877+00:00",
+  "status": "PASS",
+  "scope": "Existing evidence integrity only; no new challenge inference",
+  "cases": [
+    {
+      "file": "caso_01.png",
+      "file_sha256": "6cd73de6eafae2fb452dca580b0158bb1fb4fed7f8867e846bced25f7c4024ae",
+      "predicted": 8,
+      "correct": true,
+      "scores_and_inputs_match_public_record": true
+    },
+    {
+      "file": "caso_02.png",
+      "file_sha256": "268aa7f25e73b34d0fb94d3ce3e850e3ab2cef389c1de9d8ecdab007199ba050",
+      "predicted": 3,
+      "correct": true,
+      "scores_and_inputs_match_public_record": true
+    },
+    {
+      "file": "caso_03.png",
+      "file_sha256": "4b2642d2626961775e1273a0f1e02beb454bbf02df54a54dfc47c898c117676f",
+      "predicted": 0,
+      "correct": true,
+      "scores_and_inputs_match_public_record": true
+    },
+    {
+      "file": "caso_04.png",
+      "file_sha256": "3025fbbefe176614402f61bee420139e4dc6bf3e4752c49baae00e16770c0114",
+      "predicted": 6,
+      "correct": true,
+      "scores_and_inputs_match_public_record": true
+    },
+    {
+      "file": "caso_05.png",
+      "file_sha256": "499792b6590cd1e159bfcee3ca6fc2568db2be4e6af9c16df69ec8d46d6e3097",
+      "predicted": 1,
+      "correct": true,
+      "scores_and_inputs_match_public_record": true
+    },
+    {
+      "file": "caso_06.png",
+      "file_sha256": "ef2fa09e4316e28b6cbee88a38df3b5ad8b09f7b2a1313daa678f9a9988ea017",
+      "predicted": 9,
+      "correct": true,
+      "scores_and_inputs_match_public_record": true
+    },
+    {
+      "file": "caso_07.png",
+      "file_sha256": "81f266b467fd61c0c38748b2b005860ed334beb324d0c260a8b0bb8b205d8b77",
+      "predicted": 4,
+      "correct": true,
+      "scores_and_inputs_match_public_record": true
+    },
+    {
+      "file": "caso_08.png",
+      "file_sha256": "6656893b125f181bbeabe6bd8f21516992b53faa821ded1144e5e0e1160ed5f4",
+      "predicted": 2,
+      "correct": true,
+      "scores_and_inputs_match_public_record": true
+    },
+    {
+      "file": "caso_09.png",
+      "file_sha256": "b5d8233d8db40854a74ba81324f76f6b9c2a1d9abdbc733a41c5708615fca5ed",
+      "predicted": 7,
+      "correct": true,
+      "scores_and_inputs_match_public_record": true
+    },
+    {
+      "file": "caso_10.png",
+      "file_sha256": "47a84026c0ea27fa8d8da624aef58669c632c3c7910c4530286a9ba4e6c9265a",
+      "predicted": 5,
+      "correct": true,
+      "scores_and_inputs_match_public_record": true
+    }
+  ],
+  "historical_report_hashes": {
+    "challenge-freeze.json": "5f1b5b849fb13d9050ea29e3b5a44c1dc141b397689da57eb3fd0c58103fd15a",
+    "challenge-raw.json": "de678c7d21b0e102d4396824192789b005cdb0bb6b38a42acf3171a2cf5b45dc",
+    "challenge-comparison.json": "3421cd73584b7599e1ba258dac8dd26fdee71822ef44cb85a86fae9e874feec0",
+    "captcha-v3-challenge-freeze.json": "88bedf7d47737902bb763ce1bd722408601fe27f4271614962138e5e4f5e9660",
+    "captcha-v3-challenge-raw.json": "e1b408601c32f9b2ce195aa3c3499303845729ee6b903d3aca442101a37771cc",
+    "captcha-v3-challenge-comparison.json": "e54ff9d8812e27a0fb97f3c337ffadd83c1b3ab89635312616352843d5c4d89b",
+    "release-3.7.0-public-challenge-verification-raw.json": "279522d5aa5c3ad158edf73724c892dd16a1bb45ae696ed28e9f79a0adf73434",
+    "release-3.7.0-public-challenge-verification.json": "e7dc96485ccb9760d944f70d0c32ba04e692e4d860fdd45c3e1c9e76e64f5cf2"
+  },
+  "unchanged_selected_runtime": {
+    "dist/v3/inference.js": "98755d4b758326c16ab179c13eb725630cefd5ee9673061b2ef6359560e43dc4",
+    "dist/v3/preprocess.js": "170ad3280aa835bb0ad0efd5d65cd2ea507c1c3cd680b092cfc0e95537db3e3c",
+    "dist/v3/residual.js": "1b454e6acd7b97d7a8f1904ea97c4f382f0b97a6b9d924981e459a8bd972353a",
+    "dist/model/captcha-v3/digits/manifest.json": "549f44ecf1fcf01a763917bbff3db1624f455aa4ae3bd908472efc2f648ac99f",
+    "dist/model/captcha-v3/digits/weights.bin": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c"
+  },
+  "original_frozen_archive_sha256": "f262cfb833677ddc5b8680147607d66bb157db04558766fdd825e6029ea632c5",
+  "current_origin_retest": "NOT RUN: same origin and default model; preserved results used",
+  "limits": [
+    "Entry page and UI changed since v3.7.0; only listed runtime files matched",
+    "Hash verification does not prove every historical process claim",
+    "Known ten-image follow-up; not independent population accuracy"
+  ]
+}

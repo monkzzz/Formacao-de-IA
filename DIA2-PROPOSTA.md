@@ -2,6 +2,16 @@
 
 ## Estado e decisões pendentes
 
+**Status update, 2026-10-17:** the following proposal is historical. The personal
+fork now contains the [starter](participant-work/starter/README.md),
+[bootstrap/context evidence](participant-work/day2/bootstrap-next-ten.md),
+[real Issues](participant-work/day2/issue-register.md), trained classifier and
+[v3.10.0 public application checks](participant-work/day2/submission-browser-delivery.md).
+English, the chosen assistant and preservation of the current website are
+confirmed preferences. The original planning text below is retained; it does not
+describe current absence of those deliverables. GitHub Pages, original process
+approval acceptance and actual teacher feedback remain pending. See [tasks](TASKS.md).
+
 Este documento é uma proposta de preparação, não uma entrega concluída. O projeto pessoal ainda não foi criado. Confirmar com o participante:
 
 1. Caminho do novo repositório e destino na sua conta GitHub.

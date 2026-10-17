@@ -9,15 +9,13 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   gerar:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          persist-credentials: true
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -28,7 +26,7 @@ jobs:
           fc-match DejaVuSans-Bold
           fc-match DejaVuSerif-BoldItalic
       - name: Gerar dez PNGs determinísticos
-        run: python Dia2/Desafio/gerar_desafio_avancado.py
+        run: python Dia2/Desafio/gerar_desafio_avancado.py --output-dir /tmp/desafio-avancado
       - name: Verificar ficheiros gerados
         shell: bash
         run: |
@@ -36,7 +34,7 @@ jobs:
           from pathlib import Path
           from PIL import Image
           import hashlib
-          folder = Path("Dia2/Desafio/Avancado")
+          folder = Path("/tmp/desafio-avancado")
           imgs = sorted(folder.glob("caso_??.png"))
           assert len(imgs) == 10, f"Esperadas 10 imagens, encontradas {len(imgs)}"
           for i, filename in enumerate(imgs, 1):
@@ -49,16 +47,8 @@ jobs:
           assert len(hashes) == 10, "Existem imagens duplicadas"
           print(f"Verificadas {len(imgs)} imagens PNG distintas de 192x192 pixels.")
           PY
-      - name: Publicar imagens no repositório
-        shell: bash
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add Dia2/Desafio/Avancado/caso_*.png
-          if git diff --cached --quiet; then
-            echo "Nenhuma alteração nas imagens."
-          else
-            git commit -m "data(desafio): publish ten advanced digit challenge images"
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: desafio-avancado-separado
+          path: /tmp/desafio-avancado/*.png
+          if-no-files-found: error

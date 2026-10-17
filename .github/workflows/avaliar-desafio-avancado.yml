@@ -1,12 +1,17 @@
 name: Testar dígitos difíceis na aplicação publicada
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - .github/workflows/avaliar-desafio-avancado.yml
-      - Dia2/Desafio/avaliar_captcha_no_site.py
   workflow_dispatch:
+    inputs:
+      url:
+        description: URL da aplicacao compativel com Digit Lab
+        required: true
+        type: string
+      confirm_followup:
+        description: Confirmo verificacao posterior sem treino ou ajuste pelos resultados
+        required: true
+        default: false
+        type: boolean
 
 permissions:
   contents: read
@@ -20,15 +25,22 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Exigir confirmacao da verificacao posterior
+        env:
+          CONFIRM_FOLLOWUP: ${{ inputs.confirm_followup }}
+        run: test "$CONFIRM_FOLLOWUP" = "true"
       - name: Preparar navegador automatizado
         run: |
           python -m pip install playwright==1.55.0
           python -m playwright install --with-deps chromium
       - name: Classificar os 10 dígitos no site real
+        env:
+          APPLICATION_URL: ${{ inputs.url }}
         run: |
-          python Dia2/Desafio/avaliar_captcha_no_site.py --output /tmp/resultado-captcha.json
+          python Dia2/Desafio/avaliar_captcha_no_site.py --url "$APPLICATION_URL" --input-dir Dia2/Desafio --allow-official-followup --output /tmp/resultado-captcha.json
       - uses: actions/upload-artifact@v4
-        if: success()
+        if: always()
         with:
           name: resultado-captcha-avancado
           path: /tmp/resultado-captcha.json
+          if-no-files-found: warn

@@ -1,5 +1,12 @@
 # Digit Lab — Local Desafio Project
 
+**Submission status, 2026-10-17:** application **v3.10.0**, default participant-trained
+**captcha-v3 residual CNN**, existing [public origin](https://naoquerosaber.pt/AI/).
+See [fresh browser submission evidence](../participant-work/day2/submission-browser-delivery.md)
+and the [preserved challenge chain](../participant-work/day2/submission-challenge-chain.md).
+GitHub Pages and instructor acceptance remain pending. Historical release sections
+below retain their own measurements; [audit scope](reports/README.md) explains earlier records.
+
 **Current application release: v3.10.0.** The new **CAPTCHA Digits** option
 uses pretrained Legacy weights with an exact single-digit CTC classifier. It
 scored 999/1,000 on a fresh browser synthetic test and **10/10** on its frozen
@@ -163,8 +170,8 @@ match this checkout, setup stops rather than loading a different model.
 
 ## Improved recognition release
 
-This section records the earlier robustness release. Current digit results and
-model paths are documented in the v3.5.0 section above.
+This section records the earlier robustness release. Submission digit results and
+model paths are documented in the v3.7.0 residual section above; the application is v3.10.0.
 
 The local and public `v3/` apps now load separately trained robustness models from `dist/model/robust/`. Additional training varies handwriting shape, stroke width, noise and short occlusions while retaining clean examples. Selection uses the original validation splits, with no challenge images. The [public release verification](reports/public-robust-browser-qa.json) confirms both new weight identities, Python/JavaScript activation parity, 36 uploads, mixed-mode results and failure recovery. All 26 deployed assets passed SHA-256 download verification; replaced files were backed up.
 
@@ -186,7 +193,7 @@ The trained weights already exist locally in `dist/model/weights.bin`. They and 
 
 ## Words mode
 
-The footer displays the application release, currently **v3.7.0**. Character
+The footer displays the application release, currently **v3.10.0**. Character
 prediction JSON includes `application_version`; Words result metadata also keeps
 that version alongside the model identity. This release number identifies the
 website, separately from model weight hashes and preprocessing versions.

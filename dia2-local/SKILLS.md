@@ -1,6 +1,7 @@
 # Digit Lab task workflows
 
-Current release: v3.7.0 uses 64px residual `captcha-v3` digits and robustness
+Current application release: v3.10.0; its default CNN, introduced in v3.7.0,
+uses 64px residual `captcha-v3` digits and robustness
 letters. Use `digitlab.robust_qa --digit-experiment captcha-v3`,
 `digitlab.captcha_qa --experiment captcha-v3`, `digitlab.residual_qa --interface`
 and `digitlab.words_qa --digit-experiment captcha-v3` with new report paths.

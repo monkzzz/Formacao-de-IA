@@ -1,0 +1,66 @@
+{
+  "executed_utc": "2026-10-17T11:08:24.934638+00:00",
+  "status": "PASS",
+  "relative_links_checked": 405,
+  "workflow_checks": {
+    "avaliar-desafio-avancado": {
+      "scripts_exist": [
+        "Dia2/Desafio/avaliar_captcha_no_site.py"
+      ],
+      "triggers": [
+        "workflow_dispatch"
+      ]
+    },
+    "gerar-desafio-avancado": {
+      "scripts_exist": [
+        "Dia2/Desafio/gerar_desafio_avancado.py"
+      ],
+      "triggers": [
+        "push",
+        "workflow_dispatch"
+      ]
+    }
+  },
+  "generator": {
+    "count": 10,
+    "format": "PNG",
+    "size": [
+      192,
+      192
+    ],
+    "same_environment_repeat_hashes_match": true,
+    "pillow": "12.3.0",
+    "font_hashes": {
+      "DejaVuSans-Bold.ttf": "e6476c1b80502924294eed40894c5b18e06c181444ca953e5334262df9c27724",
+      "DejaVuSerif-BoldItalic.ttf": "8d3dd3d31350309042ed226af82b34539bd773518e6107cb352712853ba80308"
+    },
+    "hashes": {
+      "caso_01.png": "6cd73de6eafae2fb452dca580b0158bb1fb4fed7f8867e846bced25f7c4024ae",
+      "caso_02.png": "268aa7f25e73b34d0fb94d3ce3e850e3ab2cef389c1de9d8ecdab007199ba050",
+      "caso_03.png": "4b2642d2626961775e1273a0f1e02beb454bbf02df54a54dfc47c898c117676f",
+      "caso_04.png": "3025fbbefe176614402f61bee420139e4dc6bf3e4752c49baae00e16770c0114",
+      "caso_05.png": "499792b6590cd1e159bfcee3ca6fc2568db2be4e6af9c16df69ec8d46d6e3097",
+      "caso_06.png": "ef2fa09e4316e28b6cbee88a38df3b5ad8b09f7b2a1313daa678f9a9988ea017",
+      "caso_07.png": "81f266b467fd61c0c38748b2b005860ed334beb324d0c260a8b0bb8b205d8b77",
+      "caso_08.png": "6656893b125f181bbeabe6bd8f21516992b53faa821ded1144e5e0e1160ed5f4",
+      "caso_09.png": "b5d8233d8db40854a74ba81324f76f6b9c2a1d9abdbc733a41c5708615fca5ed",
+      "caso_10.png": "47a84026c0ea27fa8d8da624aef58669c632c3c7910c4530286a9ba4e6c9265a"
+    },
+    "validator_pillow": "13.0.0",
+    "environment_note": "Generator used dia2-local venv; validator used GSS venv. Metadata corrected before commit to identify each environment."
+  },
+  "official_images_and_historical_records_preserved": true,
+  "evaluator_real_browser_nonchallenge_smoke": "PASS: ten MNIST fixture uploads",
+  "evaluator_failure_contract": "PASS: nonzero exit and diagnostic JSON",
+  "automation_unit_tests": {
+    "observed_result": "PASS",
+    "tests": 4,
+    "initial_sandbox_attempt": "Three temporary-directory access errors; one test passed",
+    "retry": "All four passed after reviewed escalation"
+  },
+  "limits": [
+    "GitHub-hosted Actions execution NOT RUN; local workflow parsing and script checks only",
+    "No official challenge inference, retraining, deployment or teacher feedback",
+    "Generator determinism verified only with this Pillow/font environment"
+  ]
+}

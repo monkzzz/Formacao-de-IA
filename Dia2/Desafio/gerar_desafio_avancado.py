@@ -9,6 +9,7 @@ Requer Pillow. Geracao deterministica, sem usar ou ajustar o classificador.
 from __future__ import annotations
 
 from pathlib import Path
+import argparse
 import math
 import random
 
@@ -180,14 +181,23 @@ def render(case: int, digit: int) -> Image.Image:
     )
 
 
-def gerar() -> None:
+def gerar(output: Path = OUTPUT) -> None:
     assert sorted(DIGITS) == list(range(10))
-    OUTPUT.mkdir(parents=True, exist_ok=True)
+    output = output.resolve()
+    if output == Path(__file__).resolve().parent:
+        raise ValueError("A pasta oficial esta reservada; escolha outra pasta")
+    if output.exists() and any(output.iterdir()):
+        raise ValueError("A pasta de destino deve estar vazia; resultados anteriores sao preservados")
+    output.mkdir(parents=True, exist_ok=True)
     for index, digit in enumerate(DIGITS):
-        target = OUTPUT / f"caso_{index+1:02}.png"
+        target = output / f"caso_{index+1:02}.png"
         render(index, digit).save(target, format="PNG", optimize=True)
         print("Gerado:", target)
 
 
 if __name__ == "__main__":
-    gerar()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output-dir", type=Path, default=OUTPUT,
+                        help="Pasta vazia para um conjunto separado; nunca a pasta oficial")
+    args = parser.parse_args()
+    gerar(args.output_dir)

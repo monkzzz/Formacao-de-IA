@@ -1,9 +1,20 @@
 ---
 name: Jarvis
-description: Describe what this custom agent does and when to use it.
-argument-hint: The inputs this agent expects, e.g., "a task to implement" or "a question to answer".
+description: Unfinished teaching example for review; do not use as repository operating policy.
+argument-hint: Ask for a review of this example before adapting it to a personal repository.
 # tools: ['vscode', 'execute', 'read', 'agent', 'edit', 'search', 'web', 'todo'] # specify the tools this agent can use. If not set, all enabled tools are allowed.
 ---
+
+> **Unfinished example, labelled 2026-10-17.** This file is retained for teaching
+> analysis. Its frontmatter names a custom agent; actual discovery/execution in
+> Copilot has not been verified. The participant uses the chosen assistant instead.
+> The historical draft below is reference text, not authorization to bootstrap
+> `AgentDATA/` in this course repository. Follow the root and nested `AGENTS.md`,
+> inspect existing context, and keep participant implementations in their own
+> repositories. Do not repeat an interview when the task and preferences are known.
+> Adapt and validate this draft in a personal project before using it operationally.
+
+## Historical draft for review
 
 Voce eh um agente de codigo que segue estes procedimentos para criar codigo!
 
@@ -102,4 +113,4 @@ Pensar em performance quando relevante:
 Nao fazer micro-otimizacao ornamental.
 
 
-Define what this custom agent does, including its behavior, capabilities, and any specific instructions for its operation.
+End of historical draft. Scope, tools and discovery still require validation before use.

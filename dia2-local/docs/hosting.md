@@ -1,5 +1,15 @@
 # Website Hosting
 
+## Submission status — 2026-10-17
+
+The submission application is **v3.10.0** at the existing
+[Digit Lab origin](https://naoquerosaber.pt/AI/), using the **captcha-v3**
+participant-trained residual CNN by default. See the
+[fresh browser/weight checks](../../participant-work/day2/submission-browser-delivery.md).
+The participant requested preservation of this site. GitHub Pages publication
+and instructor acceptance of the hosting substitution remain pending.
+Sections below are versioned deployment history, not competing current releases.
+
 ## v3.10.0 single-digit classifier
 
 Release v3.10.0 is published at [Digit Lab](https://naoquerosaber.pt/AI/).
@@ -125,7 +135,7 @@ and `robust-1` imports with their original 28px models.
 
 Use `digitlab.robust_qa --digit-experiment captcha-v2`,
 `digitlab.captcha_qa --experiment captcha-v2` and `digitlab.highres_qa` for
-current-model checks, always with new report destinations. The reusable
+that release's model checks, always with new report destinations. The reusable
 `digitlab.deployed_challenge` collector verifies public results against the
 already frozen local evaluation; it does not select or tune weights.
 See [the 64px protocol and evidence](highres-training.md).
@@ -145,7 +155,7 @@ before switching `index.html`. The entry page and changed module imports use new
 version queries. The selected digit weight hash is recorded in the
 [training/evaluation protocol](captcha-training.md).
 
-Use `digitlab.robust_qa --digit-experiment captcha-v1` for current-model checks,
+Use `digitlab.robust_qa --digit-experiment captcha-v1` for that release's model checks,
 with new report and screenshot prefixes. `digitlab.captcha_qa` checks raw
 synthetic uploads. Do not rerun the completed official challenge for deployment
 verification: match the deployed weight hash and verify independent inputs.
@@ -175,7 +185,7 @@ Public URL: https://naoquerosaber.pt/AI/index.html
 
 Static application assets and both trained models are served by the hosting account. Inference remains in the browser; no Python service is deployed. Use HTTPS because the model-integrity and upload-record APIs use secure browser capabilities.
 
-## Current robustness release
+## Historical robustness release (before v3.5.0)
 
 The public app now loads the improved digit and letter models from
 `model/robust/digits/` and `model/robust/letters/`. All 26 uploaded assets passed
@@ -190,7 +200,7 @@ recovery from a failed model download. Inference remains entirely in-browser.
 The original digit and letter exports are retained for older cached releases.
 
 The verification commands below describe the earlier original-model releases.
-Use `digitlab.robust_qa` for the current models. Its default report target is
+Use `digitlab.robust_qa --digit-experiment captcha-v3` for the submission CNN. Its default report target is
 `reports/robust-browser-qa.json`; the public run was saved separately to
 `reports/public-robust-browser-qa.json` to preserve local evidence.
 
@@ -206,7 +216,7 @@ The [public helper checks](../reports/public-helper-qa.json) and
 [recognition checks](../reports/public-helper-recognition-qa.json) pass on the
 deployed release. The latest FTPS deployment record covers all 26 assets.
 
-## Current release: v3.3.0
+## Historical release: v3.3.0
 
 The [public application](https://naoquerosaber.pt/AI/) displays **v3.3.0** and adds
 **67.89% word accuracy (1 − WER)** alongside the digit and letter percentages.

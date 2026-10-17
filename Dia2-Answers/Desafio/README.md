@@ -40,6 +40,14 @@ The challenge inputs must never be used for training, validation, architecture s
 
 ## Current status
 
+**Updated 2026-10-17:** this section's measurements below are the preserved first
+local run. For the submitted captcha-v3 CNN in application v3.10.0, see the
+[current evidence chain](../../participant-work/day2/submission-challenge-chain.md)
+and [existing public-site verification](../../participant-work/day2/submission-browser-delivery.md).
+Pages and teacher acceptance remain pending; later 10/10 results are follow-ups.
+
+### Historical local baseline
+
 The local implementation is now in [dia2-local](../../dia2-local/README.md). A CNN was trained from scratch and evaluated through the actual browser upload interface:
 
 - Official MNIST test: **9,928/10,000 correct (99.28%)**.

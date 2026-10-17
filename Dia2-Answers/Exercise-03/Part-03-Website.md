@@ -36,6 +36,12 @@ Record the public URL, deployment/commit identity, model hash, browser used, par
 
 ## Actual local implementation
 
+**Status update, 2026-10-17:** the following describes the original local release.
+The existing v3.10.0 public site now has [fresh trained-CNN parity and interaction checks](../../participant-work/day2/submission-browser-delivery.md).
+GitHub Pages and instructor acceptance of the existing host remain pending.
+
+### Historical local release
+
 The [local browser application](../../dia2-local/README.md) now supports drawing, clear, multi-image uploads, previews, ten-class scores, prepared inputs, real feature maps, hidden activations, learned output contributions, and raw JSON export. The reference application's design was reviewed; its code and weights were not copied.
 
 Browser QA passed, including input preparation, origin/browser parity, error handling, mobile layout, and local-only requests. The maximum clean-fixture logit difference was approximately 0.00000382. See the [QA evidence](../../dia2-local/reports/browser-qa.json).
