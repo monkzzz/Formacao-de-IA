@@ -194,6 +194,9 @@ Source: [challenge evaluation instructions](Dia2/Exercicio-03/Parte-04-Teste-do-
 
 ## 8. Day 2 — Exercise 4: Teacher feedback and corrections
 
+- [ ] **Participant-reported CAPTCHA confidence target:** improve the default model so each official case is correct with a score around 90% or above, without training/tuning on those ten inputs or inflating displayed scores. [Two independent follow-up experiments](dia2-local/docs/confidence-experiment.md) completed but failed their development gates; the original model/sites are retained. This target remains unmet, and the report is not evidence of an actual teacher feedback session.
+
+
 Source: [feedback instructions](Dia2/Exercicio-04-Roda-de-Feedback.md). No completed teacher feedback session was established locally.
 
 - [ ] Provide the teacher with the personal repository, starter, skill, Issues, public URL, trained model identity, and evaluation evidence.

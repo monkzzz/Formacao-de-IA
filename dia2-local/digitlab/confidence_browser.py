@@ -24,12 +24,14 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--stage", choices=["export", "qa", "official"], required=True)
     parser.add_argument("--url", default="http://127.0.0.1:8878/")
+    parser.add_argument("--experiment", choices=[NAME, "captcha-confidence-head-v1"], default=NAME)
     args = parser.parse_args()
-    directory = ROOT / "artifacts" / NAME
-    report = json.loads((ROOT / "reports" / (NAME + ".json")).read_text())
+    experiment = args.experiment
+    directory = ROOT / "artifacts" / experiment
+    report = json.loads((ROOT / "reports" / (experiment + ".json")).read_text())
     selection = json.loads((directory / "selection.json").read_text())
     assert selection["selected_epoch"] and digest(directory / "best.pt") == selection["checkpoint_sha256"]
-    preview = ROOT / ".tmp" / NAME
+    preview = ROOT / ".tmp" / experiment
     model_dir = preview / "model/captcha-v3/digits"
     if args.stage == "export":
         assert not preview.exists(), "Preserve prior preview"
@@ -61,11 +63,11 @@ def main():
     freeze = json.loads((directory / "runtime-freeze.json").read_text())
     assert all(digest(preview / name) == value for name, value in freeze["source_runtime_sha256"].items())
     assert digest(model_dir / "weights.bin") == freeze["model_sha256"]
-    output = ROOT / "reports" / (NAME + ("-browser.json" if args.stage == "qa" else "-official-followup.json"))
+    output = ROOT / "reports" / (experiment + ("-browser.json" if args.stage == "qa" else "-official-followup.json"))
     assert not output.exists(), "Preserve previous evaluation"
     if args.stage == "official":
         assert report.get("independent_test_eligible"), "No official evaluation for a rejected candidate"
-        assert json.loads((ROOT / "reports" / (NAME + "-browser.json")).read_text())["status"] == "PASS"
+        assert json.loads((ROOT / "reports" / (experiment + "-browser.json")).read_text())["status"] == "PASS"
         assert args.url.startswith("http://127.0.0.1:"), "Official inputs stay in the local browser"
     results = {"started_utc": datetime.now(timezone.utc).isoformat(), "status": "FAIL", "url": args.url,
                "model_sha256": freeze["model_sha256"], "checks": {}, "requests": []}

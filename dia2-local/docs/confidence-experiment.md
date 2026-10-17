@@ -43,3 +43,59 @@ Commands from `dia2-local/`:
 Both stages preserve completed outputs. The test refuses to proceed without a
 frozen eligible selection. Application publication is a separate reviewed step;
 this experiment never changes an active model or public site.
+
+## Bounded alternative fixed before its results
+
+The first six full-network epochs have not passed the development gates. Test
+one alternative, `captcha-confidence-head-v1`: freeze all image-feature parameters,
+extract features from 40,000 independent synthetic training examples and 20,000
+clean training examples, and train only the actual final affine classifier.
+Use seed 2026101702, sixteen epochs, AdamW 0.0002, weight decay 0.001 and batch
+512. Use the same development set and unchanged acceptance gates; select minimum
+development NLL before test. This changes trained class boundaries/weights, not
+display arithmetic or a global temperature. The official ten remain excluded.
+If neither strategy qualifies, retain the active model and report the failed
+attempt honestly. Do not lower gates or test rejected candidates on the official
+images. See [final-layer experiment](../digitlab/confidence_head.py).
+
+## Actual outcome — 2026-10-17
+
+**Target not achieved; existing default retained.** Both planned experiments ran
+to completion. None of their epochs met every predeclared development gate.
+The original model, original reports, application files and both public sites
+remain unchanged. No score rescaling, temperature calibration or UI percentage
+change was made.
+
+| New development set, 6,000 images | Existing model | Full-network final epoch | Final-layer final epoch |
+| --- | ---: | ---: | ---: |
+| Raw synthetic accuracy | 98.750% | 98.800% | 98.567% |
+| Correct prediction with score at least 90%, fraction of all inputs | 94.300% | 94.667% | 94.733% |
+| Negative log likelihood, lower is better | 0.04789 | 0.04620 | 0.04674 |
+| Clean development accuracy | See recorded baseline | 99.340% | 99.360% |
+| Qualifying epoch | Baseline retained | None of eight | None of sixteen |
+
+These final epochs are diagnostics, not selected replacements. Full-network
+fine-tuning improved several aggregate measurements but did not reach the minimum
+0.5-point correct-at-90 coverage improvement. Final-layer fine-tuning also failed
+the raw-accuracy tolerance. The thresholds were not loosened after seeing results.
+
+Actual histories, per-epoch proper-score/calibration diagnostics, environment and
+provenance: [full-network report](../reports/captcha-confidence-v1.json) and
+[final-layer report](../reports/captcha-confidence-head-v1.json).
+The existing Python suite passed **32 tests**, including two new checks separating
+confident wrong predictions from correct ones and rejecting apparent confidence
+gains with worse proper scores. [Integrity/validation record](../reports/captcha-confidence-validation.json)
+checks both completed histories, unchanged baseline identities and prior reports.
+
+Fresh held-out tests, candidate browser QA and official challenge follow-ups were
+**NOT RUN** because no candidate qualified. This preserves those test boundaries
+and avoids using official outcomes to search for a replacement. Checkpoints are
+retained locally in ignored experiment directories; binaries are not committed.
+
+The existing frozen official follow-up remains 10/10 correct, with six top scores
+at least 90% and four below it. No new per-image confidence is claimed. Therefore
+the participant-reported teacher criterion remains open. The next defensible work
+is a separately scoped improvement using broader independently labelled examples
+and validation; neither more training nor a guaranteed 90%-on-all result is implied
+by this failed attempt. Any subsequent final test must remain separate from model
+selection and must preserve the current version.
