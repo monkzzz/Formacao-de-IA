@@ -155,12 +155,12 @@ Source: [website instructions](Dia2/Exercicio-03/Parte-03-Site-GitHub-Pages.md).
 
 - [x] Existing application provides drawing, clearing, local image uploads, model scores, and real network information with browser inference.
 - [x] Recorded public releases exist on the separately hosted HTTPS application; public deployment is no longer wholly missing.
-- [ ] Publish the participant repository and selected application on GitHub Pages, or obtain instructor acceptance of the existing hosting substitution.
-- [ ] Supply the ignored model binaries required by the static deployment through a documented artifact process; a source checkout alone does not include them.
-- [ ] Verify the submitted origin's loading, drawing with mouse/touch, individual/batch uploads, clear/reset, per-image results, real activations, and failure recovery.
-- [ ] Verify preprocessing and inference parity for the selected trained CNN, and confirm that classification is executed in-browser without a remote inference API.
-- [ ] Clearly distinguish the participant-trained default CNN from optional pretrained digit/word readers; those extensions do not replace the trained-model deliverable.
-- [ ] Record the submitted URL, release/commit, model identity, validation results, and screenshots. Include model scores and limitations without presenting softmax as calibrated correctness probability.
+- [ ] Publish the participant repository and selected application on GitHub Pages, or obtain instructor acceptance of the existing hosting substitution. Existing site preserved by participant direction on 2026-10-17; neither Pages publication nor instructor acceptance is claimed.
+- [x] Supply the ignored model binaries required by the static deployment through a documented artifact process; a source checkout alone does not include them. See [current HTTPS weight identities and recovery process](participant-work/day2/submission-browser-delivery.md#submission-identity-and-artifacts); binaries remain outside Git.
+- [x] Verify the submitted origin's loading, drawing with mouse/touch, individual/batch uploads, clear/reset, per-image results, real activations, and failure recovery. See [fresh public checks](participant-work/day2/submission-browser-delivery.md#executed-checks); automated mouse and emulated touch, no physical touchscreen claim.
+- [x] Verify preprocessing and inference parity for the selected trained CNN, and confirm that classification is executed in-browser without a remote inference API. See [current selected-model browser QA](dia2-local/reports/submission-20261017-browser-qa.json): prepared pixels, scores, logits and intermediate activations agree with Python; observed inference uses no remote API.
+- [x] Clearly distinguish the participant-trained default CNN from optional pretrained digit/word readers; those extensions do not replace the trained-model deliverable. See [live selector and disclosure checks](participant-work/day2/submission-public-interactions.json); optional readers were not evaluated.
+- [x] Record the submitted URL, release/commit, model identity, validation results, and screenshots. Include model scores and limitations without presenting softmax as calibrated correctness probability. See [v3.10.0 submission record](participant-work/day2/submission-browser-delivery.md), scoped public hashes and locally preserved ignored screenshots; original remote deployment commit remains unestablished.
 
 ### Part 4 — Official CAPTCHA challenge
 

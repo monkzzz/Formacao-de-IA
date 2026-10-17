@@ -1,0 +1,49 @@
+{
+  "executed_utc": "2026-10-17T10:59:52.226219+00:00",
+  "url": "https://naoquerosaber.pt/AI/",
+  "status": "PASS",
+  "checks": {
+    "trained_default_and_pretrained_extensions": true,
+    "mouse_eraser_undo_redo_clear": true,
+    "emulated_touch_classify_clear": true,
+    "individual_upload": {
+      "file": "digit-0.png",
+      "model_sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c"
+    },
+    "public_asset_identity": [
+      {
+        "path": "index.html",
+        "sha256": "f6df646761735657fa76d6ceac047b7ffc9672bd41204671d7628af7e275bfc9",
+        "bytes": 21802
+      },
+      {
+        "path": "v3/app.js",
+        "sha256": "9a29eb7a9896582600913489ce65e6cb628319025da217a6e867f1d605ae9fa1",
+        "bytes": 24451
+      },
+      {
+        "path": "model/captcha-v3/digits/manifest.json",
+        "sha256": "549f44ecf1fcf01a763917bbff3db1624f455aa4ae3bd908472efc2f648ac99f",
+        "bytes": 84360
+      },
+      {
+        "path": "model/captcha-v3/digits/weights.bin",
+        "sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+        "bytes": 1090472
+      },
+      {
+        "path": "model/robust/letters/weights.bin",
+        "sha256": "0fef4b3155457eb1be91547590b48ebc61823c68b79fd414b406835cbfe1b101",
+        "bytes": 835944
+      }
+    ]
+  },
+  "limits": [
+    "Automated Edge mouse and emulated touch; no physical touchscreen test",
+    "No official challenge inputs, training or optional reader inference",
+    "Existing host retained; GitHub Pages and instructor acceptance pending"
+  ],
+  "release": "v3.10.0",
+  "model_sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+  "screenshot": "dia2-local/reports/screenshots/submission-20261017-desktop.png"
+}
