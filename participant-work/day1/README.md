@@ -11,5 +11,6 @@ Prepared on 2026-10-17 in the participant's existing personal fork. English is t
 - [Audit](synthesis-audit.md): proposed edits from the fresh reviewer session, saved separately before any revision.
 - [Final synthesis](synthesis-final.md) and [correction record](synthesis-corrections.md): revised in another fresh session, with audit IDs and targeted source verification.
 - [GSS module 1 observations](gss-observations.md): environment, UCI cache, five executed entry scripts, GUI walkthroughs, screenshots, and measured limits.
+- [GSS vision, tokens and embeddings](gss-vision-language.md): optional dependencies and five YOLO models, real image/video inference, webcam selection limits, recorded-response mode, and token/embedding walkthrough evidence.
 
 These are assistant-produced participant-work artifacts. They do not establish participant mastery, classroom attendance, or a Copilot interaction. The research report, reading notes, original synthesis, audit, final revision, and correction summary are saved. See the [process record](review-process.md) for the original audit session and the [correction record](synthesis-corrections.md) for the later revision session and its limits.

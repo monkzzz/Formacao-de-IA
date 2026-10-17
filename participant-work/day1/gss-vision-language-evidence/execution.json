@@ -1,0 +1,1120 @@
+{
+  "executed_utc": "2026-10-17T10:16:15.275273+00:00",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "executable": "Dia1\\Exercicios-GSS\\.venv\\Scripts\\python.exe",
+  "mode": "scripted real Tk controls and real CPU YOLO; recorded language responses",
+  "packages": {
+    "ultralytics": "8.4.176",
+    "torch": "2.14.1",
+    "torchvision": "0.29.1",
+    "opencv-python": "5.0.0.93",
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2",
+    "Pillow": "13.0.0"
+  },
+  "provenance_sha256": "ce230a1a5d936bf59fe52c057300c0fb2e16d48e41c796fa1ecde5b82825efb7",
+  "entries": [
+    {
+      "path": "Dia1\\Exercicios-GSS\\modulo1\\dia1_modulo1_06_visao_computacional_yolo.py",
+      "sha256": "a54054aac5942acc6cb97ec744ce49766bd3fdae9c7edff6d302c3ce76901378",
+      "exit_code": 0,
+      "log": "dia1_modulo1_06_visao_computacional_yolo.txt"
+    },
+    {
+      "path": "Dia1\\Exercicios-GSS\\modulo2\\dia1_modulo2_01_tokens_ids.py",
+      "sha256": "b5f8a55594bd118a42f621a4362124b1371c3e803783b8009da3875e944178e7",
+      "exit_code": 0,
+      "log": "dia1_modulo2_01_tokens_ids.txt"
+    },
+    {
+      "path": "Dia1\\Exercicios-GSS\\modulo2\\dia1_modulo2_02_mapa_embeddings.py",
+      "sha256": "6d39c7aabe4c20d91b066565da9b1c96222df57f5733d31546940d1754ad2d23",
+      "exit_code": 0,
+      "log": "dia1_modulo2_02_mapa_embeddings.txt"
+    }
+  ],
+  "vision": [
+    {
+      "task": "detect",
+      "image": "bus.jpg",
+      "input_sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
+      "count": 5,
+      "details": "5 objetos acima do limiar.",
+      "items": [
+        {
+          "label": "bus",
+          "score": 0.9401524662971497
+        },
+        {
+          "label": "person",
+          "score": 0.8882200121879578
+        },
+        {
+          "label": "person",
+          "score": 0.8782547116279602
+        },
+        {
+          "label": "person",
+          "score": 0.8557725548744202
+        },
+        {
+          "label": "person",
+          "score": 0.6219193935394287
+        }
+      ]
+    },
+    {
+      "task": "classify",
+      "image": "dog.jpg",
+      "input_sha256": "f3f87bb8ab3c26c7ecfd3ac60421d7f32b0503d1d6c5baf8bac42ed93d86351a",
+      "count": 1,
+      "details": "Uma classificação global. Os cinco scores apresentados são apenas o top 5, não têm de somar 1.",
+      "items": [
+        {
+          "label": "Samoyed",
+          "score": 0.3634178340435028
+        },
+        {
+          "label": "Arctic_fox",
+          "score": 0.14798782765865326
+        },
+        {
+          "label": "Angora",
+          "score": 0.09957088530063629
+        },
+        {
+          "label": "Pomeranian",
+          "score": 0.08578161895275116
+        },
+        {
+          "label": "Great_Pyrenees",
+          "score": 0.05385233461856842
+        }
+      ]
+    },
+    {
+      "task": "segment",
+      "image": "bus.jpg",
+      "input_sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
+      "count": 6,
+      "details": "6 objetos acima do limiar. 6 máscaras de instâncias.",
+      "items": [
+        {
+          "label": "bus",
+          "score": 0.8985284566879272
+        },
+        {
+          "label": "person",
+          "score": 0.884929358959198
+        },
+        {
+          "label": "person",
+          "score": 0.8628067970275879
+        },
+        {
+          "label": "person",
+          "score": 0.8223414421081543
+        },
+        {
+          "label": "stop sign",
+          "score": 0.4611492455005646
+        },
+        {
+          "label": "person",
+          "score": 0.44277626276016235
+        }
+      ]
+    },
+    {
+      "task": "pose",
+      "image": "bus.jpg",
+      "input_sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
+      "count": 4,
+      "details": "4 pessoas acima do limiar. 17 pontos possíveis por pessoa.",
+      "items": [
+        {
+          "label": "person",
+          "score": 0.8870384097099304
+        },
+        {
+          "label": "person",
+          "score": 0.8809612989425659
+        },
+        {
+          "label": "person",
+          "score": 0.8779017925262451
+        },
+        {
+          "label": "person",
+          "score": 0.457708477973938
+        }
+      ]
+    },
+    {
+      "task": "obb",
+      "image": "boats.jpg",
+      "input_sha256": "8c5ada657cf8110a9f8aaac954c1dd96cde0187315b581276c32b0d1863e756f",
+      "count": 170,
+      "details": "170 objetos acima do limiar. Legendas escondidas: mais de 40 objetos.",
+      "items": [
+        {
+          "label": "ship",
+          "score": 0.8246821165084839
+        },
+        {
+          "label": "ship",
+          "score": 0.8218669891357422
+        },
+        {
+          "label": "ship",
+          "score": 0.8206066489219666
+        },
+        {
+          "label": "ship",
+          "score": 0.818300187587738
+        },
+        {
+          "label": "ship",
+          "score": 0.8178054690361023
+        },
+        {
+          "label": "ship",
+          "score": 0.8175176978111267
+        },
+        {
+          "label": "ship",
+          "score": 0.8165081739425659
+        },
+        {
+          "label": "ship",
+          "score": 0.814323902130127
+        },
+        {
+          "label": "ship",
+          "score": 0.8137099742889404
+        },
+        {
+          "label": "ship",
+          "score": 0.8119878768920898
+        },
+        {
+          "label": "ship",
+          "score": 0.8098304867744446
+        },
+        {
+          "label": "ship",
+          "score": 0.8068827390670776
+        },
+        {
+          "label": "ship",
+          "score": 0.8068280816078186
+        },
+        {
+          "label": "ship",
+          "score": 0.8032733201980591
+        },
+        {
+          "label": "ship",
+          "score": 0.8024843335151672
+        },
+        {
+          "label": "ship",
+          "score": 0.8013143539428711
+        },
+        {
+          "label": "ship",
+          "score": 0.8005262613296509
+        },
+        {
+          "label": "ship",
+          "score": 0.7996622323989868
+        },
+        {
+          "label": "ship",
+          "score": 0.7992668747901917
+        },
+        {
+          "label": "ship",
+          "score": 0.798433780670166
+        },
+        {
+          "label": "ship",
+          "score": 0.7965400218963623
+        },
+        {
+          "label": "ship",
+          "score": 0.7948275208473206
+        },
+        {
+          "label": "ship",
+          "score": 0.7896472215652466
+        },
+        {
+          "label": "ship",
+          "score": 0.7890948057174683
+        },
+        {
+          "label": "ship",
+          "score": 0.7884509563446045
+        },
+        {
+          "label": "ship",
+          "score": 0.787764847278595
+        },
+        {
+          "label": "ship",
+          "score": 0.7870651483535767
+        },
+        {
+          "label": "ship",
+          "score": 0.7862540483474731
+        },
+        {
+          "label": "ship",
+          "score": 0.7831358313560486
+        },
+        {
+          "label": "ship",
+          "score": 0.7823712229728699
+        },
+        {
+          "label": "ship",
+          "score": 0.7817444205284119
+        },
+        {
+          "label": "ship",
+          "score": 0.7817017436027527
+        },
+        {
+          "label": "ship",
+          "score": 0.7814911603927612
+        },
+        {
+          "label": "ship",
+          "score": 0.7807775735855103
+        },
+        {
+          "label": "ship",
+          "score": 0.7778838872909546
+        },
+        {
+          "label": "ship",
+          "score": 0.7778822779655457
+        },
+        {
+          "label": "ship",
+          "score": 0.7767215371131897
+        },
+        {
+          "label": "ship",
+          "score": 0.7758113741874695
+        },
+        {
+          "label": "ship",
+          "score": 0.7752610445022583
+        },
+        {
+          "label": "ship",
+          "score": 0.774364173412323
+        },
+        {
+          "label": "ship",
+          "score": 0.7742641568183899
+        },
+        {
+          "label": "ship",
+          "score": 0.7737919688224792
+        },
+        {
+          "label": "ship",
+          "score": 0.7730327248573303
+        },
+        {
+          "label": "ship",
+          "score": 0.7728809118270874
+        },
+        {
+          "label": "ship",
+          "score": 0.7721447348594666
+        },
+        {
+          "label": "ship",
+          "score": 0.7717902064323425
+        },
+        {
+          "label": "ship",
+          "score": 0.7713014483451843
+        },
+        {
+          "label": "ship",
+          "score": 0.7712792754173279
+        },
+        {
+          "label": "ship",
+          "score": 0.7705668210983276
+        },
+        {
+          "label": "ship",
+          "score": 0.7701120972633362
+        },
+        {
+          "label": "ship",
+          "score": 0.7683541774749756
+        },
+        {
+          "label": "ship",
+          "score": 0.7674769759178162
+        },
+        {
+          "label": "ship",
+          "score": 0.7661928534507751
+        },
+        {
+          "label": "ship",
+          "score": 0.7661301493644714
+        },
+        {
+          "label": "ship",
+          "score": 0.7656784653663635
+        },
+        {
+          "label": "ship",
+          "score": 0.7653550505638123
+        },
+        {
+          "label": "ship",
+          "score": 0.7643454074859619
+        },
+        {
+          "label": "ship",
+          "score": 0.7639209032058716
+        },
+        {
+          "label": "ship",
+          "score": 0.7621254920959473
+        },
+        {
+          "label": "ship",
+          "score": 0.7620956897735596
+        },
+        {
+          "label": "ship",
+          "score": 0.7613794207572937
+        },
+        {
+          "label": "ship",
+          "score": 0.7599337697029114
+        },
+        {
+          "label": "ship",
+          "score": 0.7583630084991455
+        },
+        {
+          "label": "ship",
+          "score": 0.7562570571899414
+        },
+        {
+          "label": "ship",
+          "score": 0.7561324834823608
+        },
+        {
+          "label": "ship",
+          "score": 0.7546933889389038
+        },
+        {
+          "label": "ship",
+          "score": 0.7528554797172546
+        },
+        {
+          "label": "ship",
+          "score": 0.7526658773422241
+        },
+        {
+          "label": "ship",
+          "score": 0.7504748106002808
+        },
+        {
+          "label": "ship",
+          "score": 0.7493056654930115
+        },
+        {
+          "label": "ship",
+          "score": 0.748896598815918
+        },
+        {
+          "label": "ship",
+          "score": 0.745557427406311
+        },
+        {
+          "label": "ship",
+          "score": 0.7441872954368591
+        },
+        {
+          "label": "ship",
+          "score": 0.7439787983894348
+        },
+        {
+          "label": "ship",
+          "score": 0.7439242005348206
+        },
+        {
+          "label": "ship",
+          "score": 0.7427834868431091
+        },
+        {
+          "label": "ship",
+          "score": 0.742583692073822
+        },
+        {
+          "label": "ship",
+          "score": 0.7394124865531921
+        },
+        {
+          "label": "ship",
+          "score": 0.7380185127258301
+        },
+        {
+          "label": "ship",
+          "score": 0.7354239821434021
+        },
+        {
+          "label": "ship",
+          "score": 0.7339795231819153
+        },
+        {
+          "label": "ship",
+          "score": 0.7303851246833801
+        },
+        {
+          "label": "ship",
+          "score": 0.7274380922317505
+        },
+        {
+          "label": "ship",
+          "score": 0.7267870306968689
+        },
+        {
+          "label": "ship",
+          "score": 0.7263025045394897
+        },
+        {
+          "label": "ship",
+          "score": 0.7261641621589661
+        },
+        {
+          "label": "ship",
+          "score": 0.7239768505096436
+        },
+        {
+          "label": "ship",
+          "score": 0.7233359813690186
+        },
+        {
+          "label": "ship",
+          "score": 0.7221754193305969
+        },
+        {
+          "label": "ship",
+          "score": 0.7213018536567688
+        },
+        {
+          "label": "ship",
+          "score": 0.7190291285514832
+        },
+        {
+          "label": "ship",
+          "score": 0.7183799743652344
+        },
+        {
+          "label": "ship",
+          "score": 0.7151547074317932
+        },
+        {
+          "label": "ship",
+          "score": 0.7142768502235413
+        },
+        {
+          "label": "ship",
+          "score": 0.7129209041595459
+        },
+        {
+          "label": "ship",
+          "score": 0.7127964496612549
+        },
+        {
+          "label": "ship",
+          "score": 0.7108293175697327
+        },
+        {
+          "label": "ship",
+          "score": 0.7088229060173035
+        },
+        {
+          "label": "ship",
+          "score": 0.7077867984771729
+        },
+        {
+          "label": "ship",
+          "score": 0.70705246925354
+        },
+        {
+          "label": "ship",
+          "score": 0.7068310379981995
+        },
+        {
+          "label": "ship",
+          "score": 0.7054116129875183
+        },
+        {
+          "label": "ship",
+          "score": 0.70456463098526
+        },
+        {
+          "label": "ship",
+          "score": 0.7033695578575134
+        },
+        {
+          "label": "ship",
+          "score": 0.7032715678215027
+        },
+        {
+          "label": "ship",
+          "score": 0.7021332383155823
+        },
+        {
+          "label": "ship",
+          "score": 0.6974079012870789
+        },
+        {
+          "label": "ship",
+          "score": 0.6941814422607422
+        },
+        {
+          "label": "ship",
+          "score": 0.6927428841590881
+        },
+        {
+          "label": "ship",
+          "score": 0.6908488869667053
+        },
+        {
+          "label": "ship",
+          "score": 0.6869800686836243
+        },
+        {
+          "label": "ship",
+          "score": 0.6774262189865112
+        },
+        {
+          "label": "ship",
+          "score": 0.6689596772193909
+        },
+        {
+          "label": "ship",
+          "score": 0.6611654162406921
+        },
+        {
+          "label": "ship",
+          "score": 0.6608121395111084
+        },
+        {
+          "label": "ship",
+          "score": 0.6590325832366943
+        },
+        {
+          "label": "ship",
+          "score": 0.6547256112098694
+        },
+        {
+          "label": "ship",
+          "score": 0.651459813117981
+        },
+        {
+          "label": "ship",
+          "score": 0.6369121670722961
+        },
+        {
+          "label": "ship",
+          "score": 0.6317937970161438
+        },
+        {
+          "label": "ship",
+          "score": 0.6313125491142273
+        },
+        {
+          "label": "ship",
+          "score": 0.6223142147064209
+        },
+        {
+          "label": "ship",
+          "score": 0.621344268321991
+        },
+        {
+          "label": "harbor",
+          "score": 0.6129379272460938
+        },
+        {
+          "label": "ship",
+          "score": 0.6102748513221741
+        },
+        {
+          "label": "ship",
+          "score": 0.6064151525497437
+        },
+        {
+          "label": "ship",
+          "score": 0.6026655435562134
+        },
+        {
+          "label": "ship",
+          "score": 0.6006052494049072
+        },
+        {
+          "label": "ship",
+          "score": 0.59928959608078
+        },
+        {
+          "label": "ship",
+          "score": 0.5967675447463989
+        },
+        {
+          "label": "ship",
+          "score": 0.5885124206542969
+        },
+        {
+          "label": "ship",
+          "score": 0.5875874161720276
+        },
+        {
+          "label": "ship",
+          "score": 0.5810795426368713
+        },
+        {
+          "label": "ship",
+          "score": 0.5757742524147034
+        },
+        {
+          "label": "ship",
+          "score": 0.5728539228439331
+        },
+        {
+          "label": "ship",
+          "score": 0.5719029307365417
+        },
+        {
+          "label": "ship",
+          "score": 0.5709241628646851
+        },
+        {
+          "label": "ship",
+          "score": 0.5694018602371216
+        },
+        {
+          "label": "ship",
+          "score": 0.5676307082176208
+        },
+        {
+          "label": "ship",
+          "score": 0.5554998517036438
+        },
+        {
+          "label": "ship",
+          "score": 0.5377631783485413
+        },
+        {
+          "label": "ship",
+          "score": 0.5282047986984253
+        },
+        {
+          "label": "ship",
+          "score": 0.5250487327575684
+        },
+        {
+          "label": "ship",
+          "score": 0.517963171005249
+        },
+        {
+          "label": "harbor",
+          "score": 0.4982494115829468
+        },
+        {
+          "label": "harbor",
+          "score": 0.49417319893836975
+        },
+        {
+          "label": "ship",
+          "score": 0.4748738706111908
+        },
+        {
+          "label": "ship",
+          "score": 0.47383779287338257
+        },
+        {
+          "label": "ship",
+          "score": 0.462274968624115
+        },
+        {
+          "label": "ship",
+          "score": 0.45378080010414124
+        },
+        {
+          "label": "ship",
+          "score": 0.44302165508270264
+        },
+        {
+          "label": "harbor",
+          "score": 0.43858933448791504
+        },
+        {
+          "label": "ship",
+          "score": 0.43644633889198303
+        },
+        {
+          "label": "ship",
+          "score": 0.4351682662963867
+        },
+        {
+          "label": "ship",
+          "score": 0.4239331781864166
+        },
+        {
+          "label": "ship",
+          "score": 0.4235936403274536
+        },
+        {
+          "label": "ship",
+          "score": 0.42094042897224426
+        },
+        {
+          "label": "ship",
+          "score": 0.4099292755126953
+        },
+        {
+          "label": "ship",
+          "score": 0.39876261353492737
+        },
+        {
+          "label": "ship",
+          "score": 0.39703479409217834
+        },
+        {
+          "label": "ship",
+          "score": 0.39353397488594055
+        },
+        {
+          "label": "ship",
+          "score": 0.3864142894744873
+        },
+        {
+          "label": "harbor",
+          "score": 0.37174928188323975
+        },
+        {
+          "label": "ship",
+          "score": 0.3694034814834595
+        },
+        {
+          "label": "ship",
+          "score": 0.357719361782074
+        },
+        {
+          "label": "harbor",
+          "score": 0.3511914312839508
+        },
+        {
+          "label": "ship",
+          "score": 0.28370028734207153
+        },
+        {
+          "label": "ship",
+          "score": 0.28177523612976074
+        },
+        {
+          "label": "ship",
+          "score": 0.2817075252532959
+        },
+        {
+          "label": "ship",
+          "score": 0.27954038977622986
+        }
+      ]
+    }
+  ],
+  "pip_check": {
+    "exit_code": 0,
+    "output": "No broken requirements found.\n"
+  },
+  "weights": {
+    "yolo11n-cls.pt": {
+      "bytes": 5790624,
+      "sha256": "c62d41bf9625777760018bf914d2e6cd472420ccd01706d97a61cb6c82502bd7"
+    },
+    "yolo11n-obb.pt": {
+      "bytes": 5795654,
+      "sha256": "b62898ebf38940ca4df323863e45ee9d84a1a46d5d11ebdde529fb33aa9f3a32"
+    },
+    "yolo11n-pose.pt": {
+      "bytes": 6255593,
+      "sha256": "869e83fcdffdc7371fa4e34cd8e51c838cc729571d1635e5141e3075e9319dc0"
+    },
+    "yolo11n-seg.pt": {
+      "bytes": 6182636,
+      "sha256": "55ed65c56c91713d23e8402371c6c49a6fd84f257f7dce452e8d70e41dcbe152"
+    },
+    "yolo11n.pt": {
+      "bytes": 5613764,
+      "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+    }
+  },
+  "video": {
+    "fixture": "two frames from attributed bus.jpg; second horizontally flipped",
+    "first_frame": 1,
+    "next_frame": 2,
+    "objects": 5
+  },
+  "camera": {
+    "selected": "camera",
+    "capture_unopened": true,
+    "live_capture": "NOT RUN: no classroom camera input supplied"
+  },
+  "tokens": [
+    {
+      "text": "A peça parou e a peça partiu.",
+      "tokens": [
+        {
+          "piece": "A",
+          "token_id": 37,
+          "word_index": 0
+        },
+        {
+          "piece": "pe",
+          "token_id": 905,
+          "word_index": 1
+        },
+        {
+          "piece": "##ça",
+          "token_id": 2210,
+          "word_index": 1
+        },
+        {
+          "piece": "par",
+          "token_id": 518,
+          "word_index": 2
+        },
+        {
+          "piece": "##ou",
+          "token_id": 77,
+          "word_index": 2
+        },
+        {
+          "piece": "e",
+          "token_id": 9,
+          "word_index": 3
+        },
+        {
+          "piece": "a",
+          "token_id": 12,
+          "word_index": 4
+        },
+        {
+          "piece": "pe",
+          "token_id": 905,
+          "word_index": 5
+        },
+        {
+          "piece": "##ça",
+          "token_id": 2210,
+          "word_index": 5
+        },
+        {
+          "piece": "par",
+          "token_id": 518,
+          "word_index": 6
+        },
+        {
+          "piece": "##tiu",
+          "token_id": 3120,
+          "word_index": 6
+        },
+        {
+          "piece": ".",
+          "token_id": 4,
+          "word_index": 7
+        }
+      ],
+      "summary": "8 palavras e sinais → 12 tokens  ·  mesma peça, mesmo ID: pe (905) ×2, ##ça (2210) ×2, par (518) ×2",
+      "comparison": "AMALIA: 10 tokens (gravado)  ·  vocabulário didático: 12 tokens"
+    },
+    {
+      "text": "A linha 2 parou às 10h15.",
+      "tokens": [
+        {
+          "piece": "A",
+          "token_id": 37,
+          "word_index": 0
+        },
+        {
+          "piece": "linha",
+          "token_id": 1290,
+          "word_index": 1
+        },
+        {
+          "piece": "2",
+          "token_id": 30,
+          "word_index": 2
+        },
+        {
+          "piece": "par",
+          "token_id": 518,
+          "word_index": 3
+        },
+        {
+          "piece": "##ou",
+          "token_id": 77,
+          "word_index": 3
+        },
+        {
+          "piece": "às",
+          "token_id": 21,
+          "word_index": 4
+        },
+        {
+          "piece": "10",
+          "token_id": 140,
+          "word_index": 5
+        },
+        {
+          "piece": "##h",
+          "token_id": 66,
+          "word_index": 5
+        },
+        {
+          "piece": "##15",
+          "token_id": 1415,
+          "word_index": 5
+        },
+        {
+          "piece": ".",
+          "token_id": 4,
+          "word_index": 6
+        }
+      ],
+      "summary": "7 palavras e sinais → 10 tokens",
+      "comparison": "AMALIA: 14 tokens (gravado)  ·  vocabulário didático: 10 tokens"
+    },
+    {
+      "text": "A produção foi retomada após a substituição do sensor.",
+      "tokens": [
+        {
+          "piece": "A",
+          "token_id": 37,
+          "word_index": 0
+        },
+        {
+          "piece": "produ",
+          "token_id": 1840,
+          "word_index": 1
+        },
+        {
+          "piece": "##ção",
+          "token_id": 95,
+          "word_index": 1
+        },
+        {
+          "piece": "foi",
+          "token_id": 210,
+          "word_index": 2
+        },
+        {
+          "piece": "retom",
+          "token_id": 2561,
+          "word_index": 3
+        },
+        {
+          "piece": "##ada",
+          "token_id": 130,
+          "word_index": 3
+        },
+        {
+          "piece": "após",
+          "token_id": 388,
+          "word_index": 4
+        },
+        {
+          "piece": "a",
+          "token_id": 12,
+          "word_index": 5
+        },
+        {
+          "piece": "substitu",
+          "token_id": 3412,
+          "word_index": 6
+        },
+        {
+          "piece": "##ição",
+          "token_id": 702,
+          "word_index": 6
+        },
+        {
+          "piece": "do",
+          "token_id": 27,
+          "word_index": 7
+        },
+        {
+          "piece": "sensor",
+          "token_id": 2875,
+          "word_index": 8
+        },
+        {
+          "piece": ".",
+          "token_id": 4,
+          "word_index": 9
+        }
+      ],
+      "summary": "10 palavras e sinais → 13 tokens",
+      "comparison": "AMALIA: 12 tokens (gravado)  ·  vocabulário didático: 13 tokens"
+    },
+    {
+      "text": "Rolamento sobreaquecido!",
+      "tokens": [
+        {
+          "piece": "[UNK]",
+          "token_id": 0,
+          "word_index": 0
+        },
+        {
+          "piece": "[UNK]",
+          "token_id": 0,
+          "word_index": 1
+        },
+        {
+          "piece": "!",
+          "token_id": 6,
+          "word_index": 2
+        }
+      ],
+      "summary": "3 palavras e sinais → 3 tokens  ·  2 palavra(s) sem peças conhecidas → [UNK]",
+      "comparison": "AMALIA: 7 tokens (gravado)  ·  vocabulário didático: 3 tokens"
+    }
+  ],
+  "tokens_missing_recording": "LM Studio indisponível e sem contagem gravada para este texto.",
+  "embeddings": {
+    "shape": [
+      16,
+      1024
+    ],
+    "neighbours": "«O sensor da linha 2 avariou»\n\nMais próximas (semelhança, 0 a 1):\n  0.55  motor sobreaquecido · Manutenção\n  0.55  camião sem carga · Logística\n  0.55  peças devolvidas · Qualidade",
+    "suggestion": [
+      "Rolamento gasto na linha 3"
+    ],
+    "bank_comparison": "Modo «banco»: semelhança de cada frase\ncom uma frase de dinheiro e uma de jardim:\n\n«Fui ao banco levantar dinheiro.»\n  0.57  conta bancária e multibanco\n  0.48  parque com árvores e relva\n«Sentei-me no banco do jardim.»\n  0.47  conta bancária e multibanco\n  0.61  parque com árvores e relva",
+    "missing_recording": "Sem vetor gravado para: Unrecorded sentence outside the prepared examples. Sem LM Studio, usa «Sugestão de frase»."
+  },
+  "recording_hashes": {
+    "contagem_tokens.json": "c0ca032460927b6e746f50f36436df90275e81a6bbefe933f5bb795ccbd814c2",
+    "embeddings.json": "361d299e7eca3b41ef4da00dc207aae318206cbca4ae91b6ee6307d782367ba3",
+    "imagem_texto.json": "02998a28fb080e31185a4c9570ea90341d22c1d237eb0f1d90f31d8226a04ee2",
+    "laboratorio_prompts.json": "44dcff8fa24a2a7c10ff97d81a1b45f11de18210ac72694f388d4b1933931e96",
+    "proximo_token.json": "16dd45005fa79c9006d16fb278475e66881aecde243813da8f896f0023461621"
+  }
+}

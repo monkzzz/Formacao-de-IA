@@ -1,0 +1,4 @@
+8 palavras e sinais → 12 tokens  ·  mesma peça, mesmo ID: pe (905) ×2, ##ça (2210) ×2, par (518) ×2
+7 palavras e sinais → 10 tokens
+10 palavras e sinais → 13 tokens
+3 palavras e sinais → 3 tokens  ·  2 palavra(s) sem peças conhecidas → [UNK]
