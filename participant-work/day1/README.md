@@ -2,6 +2,7 @@
 
 Prepared on 2026-10-17 in the participant's existing personal fork. English is the participant's chosen language. The current assistant replaces Copilot under the [recorded preparation decision](../../PREPARATION.md#working-decisions); instructor acceptance of that substitution remains unconfirmed.
 
+- [Participant review — R01](participant-review.md): actual feedback across the report, papers and synthesis, resulting edits and final agreement.
 - [Research brief and instruction revisions](research-brief.md): scope, questions, evidence rules, and the instructions used to shape and refine the research.
 - [Research report](research-report.md): bounded historical overview, conclusions, uncertainties, and traceable primary sources.
 - [Verification record](source-verification.md): claim checks, access limits, and corrections.

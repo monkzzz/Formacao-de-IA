@@ -9,7 +9,7 @@ identified twelve missing or understated follow-ups, labelled **R01–R12** belo
 The earlier handover completed its local artifact batch; it did not establish
 that only teacher-dependent work remained. New tasks distinguish participant
 activities, reference review, publication, Issue maintenance and ML reproducibility
-from already verified artifacts. The audit itself did not complete follow-ups. Subsequent work completed R02–R12; see [actual delivery and limits](participant-work/day2/independent-task-completion.md). R01 remains pending participant critique.
+from already verified artifacts. The audit itself did not complete follow-ups. Subsequent work completed R02–R12; see [actual delivery and limits](participant-work/day2/independent-task-completion.md). R01 is now complete through [actual participant critique, direction and final agreement](participant-work/day1/participant-review.md).
 
 ## 1. Folder coverage and existing work
 
@@ -48,7 +48,7 @@ Participant route update (2026-10-17): Copilot will not be used, by explicit par
 
 Complete in order; each exercise consumes the preceding outputs. The initial audit found no participant research submissions. The 2026-10-17 batch adds the [research submission](participant-work/day1/README.md), using the participant's chosen assistant and English; instructor acceptance of the Copilot substitution remains unconfirmed.
 
-- [ ] **R01 — Participant review and direction:** record the participant's actual critique and instruction/question choices across the research report, both papers, synthesis and final audit/revision. Keep assistant-produced artifacts and synthetic session tests labelled accurately; do not fabricate participant dialogue, mastery or approval. Source: all four [Day 1 exercises](Dia1/README.md#sequência); see [coverage audit](EXERCISE-COVERAGE.md#new-follow-ups-and-acceptance-boundaries).
+- [x] **R01 — Participant review and direction:** record the participant's actual critique and instruction/question choices across the research report, both papers, synthesis and final audit/revision. Keep assistant-produced artifacts and synthetic session tests labelled accurately; do not fabricate participant dialogue, mastery or approval. Source: all four [Day 1 exercises](Dia1/README.md#sequência); see [coverage audit](EXERCISE-COVERAGE.md#new-follow-ups-and-acceptance-boundaries). **Completion:** [Actual participant feedback and final agreement](participant-work/day1/participant-review.md) recorded across the report, both papers, synthesis and audit/revision choices; assistant edits and review limits remain explicit.
 
 ### Exercise 1 — Guided research
 

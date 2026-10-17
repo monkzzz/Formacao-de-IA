@@ -41,3 +41,9 @@ The S1 numerical discrepancy remains unresolved. Rendering metadata is recorded 
 The revision is satisfactory for the bounded written synthesis: all six requested textual changes are implemented and the two justified constraints are retained. No further prose-audit cycle was required by the checks above; empirical and course-route questions remain open. This is editorial closure, not evidence that a consciousness claim has been validated.
 
 Integrity: the original SHA-256 remains `06bddb955a1091a3c1be22717e6c57bd7a6c0d4685b543e7f2a193ef0595960a`, matching the manifest. The audit SHA-256 before and after revision is `f1891b96cd18a910536a24e760ce5726428739ab4b3607cee7abaa228fe321a7`. Both inputs were preserved byte-for-byte. Local relative links in the two deliverables were checked for target existence. The fresh revision session did not create a commit; batch integration is handled separately.
+
+## Version 3 — participant-directed clarification
+
+The preceding record describes version 2, now preserved as [synthesis-v2.md](synthesis-v2.md). The [current final synthesis](synthesis-final.md) is version 3. The participant found the simplified argument more convincing, asked for a clearer access/experience distinction, and requested stronger counterarguments; see the verbatim [review record](participant-review.md).
+
+Changes: added a two-question comparison with a warning-sign example; expanded objections concerning alternative explanations of self-reports, mechanism mismatch, execution efficiency, intervention controls and falsifiability. New illustrative examples and reasoning are not empirical findings. Historical source boundaries remain explicit; no new source inspection, experiment or independent audit occurred for version 3. The participant has not yet assessed the resulting text or the original audit’s specific decisions. The original synthesis and audit were verified unchanged during this edit.

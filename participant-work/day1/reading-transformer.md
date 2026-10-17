@@ -43,3 +43,31 @@ Passage examined: the masking/shift explanation in
 
 The resolved distinction improves the architectural explanation; it does not
 measure new performance or resolve the separate English–French BLEU discrepancy.
+
+## R01 participant-directed example and diagram
+
+Added in response to the participant’s request for both a worked sentence example and a diagram. The [review record](participant-review.md) preserves the actual answers. This is an assistant explanation, not a measured attention trace.
+
+Take “The animal crossed the road because it was tired.” When building a representation of “it,” an attention head can combine information from earlier words, including “animal.” Different heads may use different relationships. These links are learned, and an attention weight alone does not prove a grammatical explanation or a reasoning step.
+
+For a simplified numerical example, suppose three available value vectors are animal = (1, 0), road = (0, 1), tired = (1, 1), and their attention weights are 0.6, 0.1 and 0.3. The weighted result is 0.6(1, 0) + 0.1(0, 1) + 0.3(1, 1) = (0.9, 0.4). The vectors and weights are invented solely to show the calculation. A real layer obtains queries, keys and values through learned projections and computes weights using scaled dot products and softmax. A causal decoder includes only positions available at that prediction step.
+
+```mermaid
+flowchart LR
+    A[Tokens and position information] --> B[Learned queries, keys and values]
+    B --> C[Query-key scores and causal mask]
+    C --> D[Softmax weights]
+    D --> E[Weighted combination of values]
+    B --> E
+    E --> F[Head combination and output projection]
+    F --> G[Residual connections, normalization and feed-forward processing]
+    G --> H[Further layers and next-token scores]
+```
+
+The diagram simplifies a causal language model, rather than reproducing the original encoder-decoder architecture. Training on known sequences permits parallel position calculations with masking; generating an unknown continuation still requires successive token steps. This explanation uses the original note’s S1 §§3–4 source boundary.
+
+### Connection to a current open model
+
+The participant asked how these ideas translate to current LLM technology. As a concrete documented example, the [Qwen3-8B model card](https://huggingface.co/Qwen/Qwen3-8B), inspected on 2026-10-17, identifies a causal language model with 32 query heads and eight key/value heads. Those grouped heads adapt the attention machinery introduced in the earlier reading. This is one available model example, not a claim about every current model or a claim that it is the newest release.
+
+The useful connection is that later LLMs retain attention-based building blocks while changing architectural details and training. The original translation model is therefore a foundation to learn from, rather than an exact blueprint of every present-day assistant. The model card was inspected; no model was downloaded or executed.

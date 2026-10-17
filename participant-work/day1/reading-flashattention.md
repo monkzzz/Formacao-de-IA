@@ -43,3 +43,27 @@ read again on 2026-10-17. Two candidate meanings of “exact” are:
 “Same mathematical output” does not guarantee bit-for-bit equality for every
 floating-point implementation or hardware platform. This is an interpretation
 boundary, not a new kernel experiment or a universal speed claim.
+
+## R01 participant question: how can it become more efficient?
+
+The participant asked “How it can be improved and more efficient” and how the papers translate to current LLM technology. These are actual participant questions; the answers below were prepared by the assistant. Sources were inspected on 2026-10-17; no performance benchmark was run.
+
+The first improvement is to avoid unnecessary movement of intermediate results between fast on-chip memory and larger GPU memory. Imagine calculating a large table in blocks, keeping the needed partial totals close to the processor instead of repeatedly writing and rereading the entire table. FlashAttention reorganizes the calculation this way. It still computes dense attention; it does not turn quadratic arithmetic into linear arithmetic.
+
+There are further improvements within that approach:
+
+| Improvement | Why it can help | Boundary |
+| --- | --- | --- |
+| FlashAttention-2 reduces non-matrix arithmetic and distributes work better across GPU blocks and warps. | More GPU resources can work usefully, with less communication overhead. | Speed depends on the workload and GPU; author benchmarks are not universal guarantees. |
+| FlashAttention-3 overlaps data movement, matrix multiplication and other attention operations on Hopper GPUs. | Work that would wait can overlap with other work. | Hardware-specific scheduling does not automatically help every device. |
+| FlashAttention-3 also explores FP8 computation. | Lower precision can exploit faster hardware operations. | Reduced precision changes numerical accuracy; it is distinct from merely reorganizing the same-precision calculation. |
+
+Sources: [FlashAttention-2 abstract](https://arxiv.org/abs/2307.08691) and [FlashAttention-3 author explanation](https://tridao.me/blog/2024/flash3/). These are later developments used to answer the participant’s question, not additions to the original 2022 paper’s results. They are examples of improvement, not a complete survey of the latest kernels.
+
+### What this means when using an LLM
+
+There are two useful moments to distinguish: processing the prompt and generating its continuation. A long prompt gives attention many positions to process together. During ordinary token-by-token generation, each step adds a token and can reuse stored keys and values. These phases can have different bottlenecks, so an attention-kernel gain does not imply the same reduction in total chat latency.
+
+As a practical software connection, [PyTorch’s scaled dot-product attention API](https://docs.pytorch.org/docs/main/generated/torch.nn.functional.scaled_dot_product_attention.html) documents FlashAttention-2 among its implementations and automatic selection subject to input constraints. A developer can use an optimized backend when supported without manually rewriting the attention calculation. Availability depends on hardware, inputs and installed software; no backend execution was verified here.
+
+Faster attention can make a workload more affordable or allow larger inputs within memory limits. It does not by itself establish better reasoning or reliable understanding of a long document. Architecture choices such as grouped-query attention and execution choices such as FlashAttention address different costs and can be combined.

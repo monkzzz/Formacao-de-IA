@@ -1,6 +1,6 @@
 # Attention, training, and the limits of a consciousness analogy
 
-Revised synthesis, version 2, 2026-10-17. Course question: why might attention combined with modern training permit LLMs to exhibit something analogous to consciousness? This paper offers a conditional functional analogy, with no finding of subjective experience. The [original](synthesis-original.md), [audit](synthesis-audit.md), and [correction record](synthesis-corrections.md) preserve the revision trail.
+Revised synthesis, version 3, 2026-10-17. This participant-directed revision follows the preserved [version 2](synthesis-v2.md) and [actual review](participant-review.md). Course question: why might attention combined with modern training permit LLMs to exhibit something analogous to consciousness? This paper offers a conditional functional analogy, with no finding of subjective experience. The [original](synthesis-original.md), [audit](synthesis-audit.md), and [correction record](synthesis-corrections.md) preserve the revision trail.
 
 ## Materials and source identities
 
@@ -22,7 +22,16 @@ Access note: C1's unusual HTML heading is a rendering issue; the page also displ
 
 **Concrete training context:** R1 discusses GPT-3, an autoregressive pretrained model. S3's abstract separates model training from its few-shot evaluations, which provide demonstrations in the prompt without gradient updates or fine-tuning. Prompt conditioning changes the available input; it does not establish permanent parameter learning. Neither pretraining nor this evaluation procedure establishes that a workspace was learned. [S3, abstract](https://arxiv.org/abs/2005.14165v4)
 
-“Functional access” means information being available for flexible use by multiple processes. “Phenomenal consciousness” means subjective experience: whether there is something it is like to be the system. “Analogous” means resemblance in an explicitly named function, not identity of mechanisms or proof of experience.
+Two questions need to stay separate:
+
+| Question | What it asks | Example |
+| --- | --- | --- |
+| Can the system use information? | Whether information affects what the system does: answering, choosing, comparing or reporting. This is the functional question. | A system receives a red warning sign and uses it to produce a warning message. |
+| Does the system experience anything? | Whether there is something it feels like to be that system. This is the question of subjective, or phenomenal, experience. | Is there any felt appearance of red or any feeling of alarm? A warning message does not answer that question. |
+
+These are illustrative examples, not experimental results. We can test whether changing the sign changes the system’s answer. That establishes a relation between input and behavior. To treat it as evidence of experience, we would also need a justified theory connecting the observed mechanism to experience.
+
+“Functional access” means that information is available for flexible use by multiple processes. “Analogous” means similarity in a specified function. A system might therefore resemble one proposed function of conscious access without that resemblance settling whether it has subjective experience. This distinction does not prove that machines cannot have experiences; it identifies what the present evidence leaves unanswered.
 
 **Established source evidence:** S1 describes attention-based sequence modeling; S9 changes execution of exact attention. These engineering premises do not evaluate consciousness. S9's Theorem 1 retains quadratic dense arithmetic despite reduced additional memory. [S1, §§3–4](https://arxiv.org/html/1706.03762v7), [S9, §§3.1–3.2](https://arxiv.org/html/2205.14135v1)
 
@@ -38,13 +47,19 @@ The processes, their access and transfer beyond familiar phrasing need demonstra
 
 ## Arguments against a strong conclusion
 
-**Interpretation:** a successful description of experience is compatible with multiple accounts of its production. Discriminating accounts requires interventions that predict different outcomes, beyond self-description.
+The strongest objection is that the evidence does not distinguish the proposed explanation from alternatives. Below are reasoning objections and proposed tests, not new experimental findings.
 
-**Historical theory-dependent counterargument:** C1's 2023 Transformer case analysis considers a residual-stream workspace interpretation but challenges its bottleneck and reciprocal module/workspace structure, particularly recurrence. This is relevant counterevidence to a direct workspace analogy for the architectures discussed, not a survey of all systems in 2026 or a proof of impossibility. [C1, §3.2.1](https://arxiv.org/html/2308.08708v3)
+**1. A convincing report can have several explanations.** A model may produce “I feel afraid” because that continuation fits its training and context. A system with experience might also produce those words. The sentence alone cannot distinguish these possibilities. A useful test must predict different observations under the competing explanations. Fluency and apparent sincerity do not provide that test.
 
-**Theory-dependent objection:** ordinary weighted token mixing does not demonstrate a predictive attention model or the full workspace requirements. Failure on one proposed indicator would not refute every rival theory. The bridge from a function to experience still needs justification.
+**2. Shared vocabulary can hide different mechanisms.** Transformer “attention” names a mathematical weighting operation. A consciousness theory may require a constrained workspace, broadcast between specialized processes and particular feedback connections. Using the same word does not show that these requirements are met. C1’s 2023 Transformer case analysis raises specific objections about bottlenecks, reciprocal connections and recurrence. Those objections apply to the architectures and theory discussed; they do not establish impossibility for every later system. [C1, §3.2.1](https://arxiv.org/html/2308.08708v3)
 
-**Speculation:** additional training might improve convincing reports about mental states without supplying the proposed mechanism. Matched-performance systems with differing candidate mechanisms could help assess whether reports discriminate those mechanisms.
+**3. More efficient execution does not supply the missing evidence.** FlashAttention reorganizes an attention computation. Running that computation with fewer memory transfers establishes an engineering improvement. It supplies no measurement of experience. If the consciousness argument depends only on faster execution, it must explain why that timing difference matters to its theory. The attention papers themselves do not provide that bridge. [S9, §§3.1–3.2](https://arxiv.org/html/2205.14135v1)
+
+**4. Even a successful intervention can be too weak.** Suppose disrupting a representation harms several tasks. That could show that the representation carries useful information, but it could also reflect a general loss of processing capacity. To support a specific access mechanism, the study must predict which tasks should fail together, include controls for general damage, and show the expected differences. Even then, functional access and subjective experience remain separate claims.
+
+**5. A claim needs a possible failure condition.** If fluent answers count as consciousness and failures are always excused as hidden consciousness, the proposal cannot be meaningfully tested. State in advance what would count against the proposed functional mechanism. This is a requirement for the narrow study here, not a claim that every philosophical question has an agreed experimental test.
+
+These objections weaken the claim that attention and training are sufficient evidence of consciousness. They do not prove the opposite claim. C1’s indicators remain theory-dependent, and failure under one account does not settle every rival theory. [C1, §§1.2.1, 3.1.2](https://arxiv.org/html/2308.08708v3)
 
 ## Agreements, tensions, and missing evidence
 
