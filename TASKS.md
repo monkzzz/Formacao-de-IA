@@ -39,22 +39,22 @@ Participant route update (2026-10-17): Copilot will not be used, by explicit par
 
 ## 3. Day 1 — Research exercises
 
-Complete in order; each exercise consumes the preceding outputs. No participant research submissions were identified locally.
+Complete in order; each exercise consumes the preceding outputs. The initial audit found no participant research submissions. The 2026-10-17 batch adds the [research submission](participant-work/day1/README.md), using the participant's chosen assistant and English; instructor acceptance of the Copilot substitution remains unconfirmed.
 
 ### Exercise 1 — Guided research
 
 Source: [research instructions](Dia1/Exercicio-01-Pesquisa-Orientada.md).
 
-- [ ] Define the research objective, timeframe, scope, questions, acceptable evidence, report structure, and length.
-- [ ] Develop and refine your own Copilot instructions to research LLM evolution, Transformers, multimodality, MoE, and attention efficiency.
-- [ ] Verify important claims against traceable sources and distinguish evidence, interpretation, and uncertainty.
-- [ ] Save the structured Markdown report, conclusions, uncertainties, and source list for subsequent exercises.
+- [x] Define the research objective, timeframe, scope, questions, acceptable evidence, report structure, and length. See the [research brief](participant-work/day1/research-brief.md).
+- [x] Develop and refine research instructions for LLM evolution, Transformers, multimodality, MoE, and attention efficiency using the chosen assistant. See [instruction revisions and authorship limits](participant-work/day1/research-brief.md#initial-instruction-specification); this is the declared adaptation of the Copilot task.
+- [x] Verify important claims against traceable sources and distinguish evidence, interpretation, and uncertainty. See the [verification ledger and access limits](participant-work/day1/source-verification.md).
+- [x] Save the structured Markdown report, conclusions, uncertainties, and source list for subsequent exercises. See the [2017-2023 research report](participant-work/day1/research-report.md).
 
 ### Exercise 2 — Talk to a Paper
 
 Source: [paper analysis instructions](Dia1/Exercicio-02-Talk-to-a-Paper.md).
 
-- [ ] Select two scientific papers from Exercise 1 and provide their contents to Copilot; record any document-access limitations.
+- [x] Select two scientific papers from Exercise 1 and provide their contents to the chosen assistant; record document-access limitations. See the [versioned full-text handoff](participant-work/day1/paper-selection.md); no Copilot upload is claimed.
 - [ ] Ask progressive questions about each paper's problem, objectives, methods, data, results, assumptions, and limitations.
 - [ ] Check responses against identifiable sections/pages and separate author claims, paraphrases, and model inference.
 - [ ] Save two reading notes with grounded questions/answers, conclusions, and references to the original papers.
