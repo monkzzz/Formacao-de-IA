@@ -1,0 +1,35 @@
+{
+  "executed_utc": "2026-10-17T10:41:59.716512+00:00",
+  "issues": [
+    {
+      "number": 2,
+      "title": "docs(submission): assemble the trained CNN evidence and approval record",
+      "url": "https://github.com/monkzzz/Formacao-de-IA/issues/2"
+    },
+    {
+      "number": 3,
+      "title": "build(submission): provide verified ignored model artifacts",
+      "url": "https://github.com/monkzzz/Formacao-de-IA/issues/3"
+    },
+    {
+      "number": 4,
+      "title": "test(submission): verify the selected CNN and browser application",
+      "url": "https://github.com/monkzzz/Formacao-de-IA/issues/4"
+    },
+    {
+      "number": 5,
+      "title": "docs(submission): verify the existing website and resolve the hosting requirement",
+      "url": "https://github.com/monkzzz/Formacao-de-IA/issues/5"
+    },
+    {
+      "number": 6,
+      "title": "docs(submission): preserve the complete frozen challenge evidence chain",
+      "url": "https://github.com/monkzzz/Formacao-de-IA/issues/6"
+    },
+    {
+      "number": 7,
+      "title": "docs(course): record instructor decisions on process deviations",
+      "url": "https://github.com/monkzzz/Formacao-de-IA/issues/7"
+    }
+  ]
+}

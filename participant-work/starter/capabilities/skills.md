@@ -9,11 +9,14 @@ decisions and handoff. Dependencies: a Markdown skill-capable host and repositor
 read/write tools; no installer, libraries or external account. Side effects: only
 approved context writes, no automatic implementation or publication.
 
-Availability: source present; format checks are recorded in the containing course
-submission. Copilot discovery, interview behavior, approval handling and recovery
-are **not yet verified**. Explicit loading by another assistant must be recorded
-separately from native host discovery. No personal machine paths or globally
-installed skill inventory are assumed in a future project.
+Availability: source present; format and controlled behavioral checks are recorded
+in the containing course submission. Explicit chosen-assistant loading exercised
+missing context, a contradiction, adaptive questions and proposal approval in a
+disposable fixture. Synthetic approval is not participant approval. Fresh-session
+recovery has a separate record. Native Copilot discovery/use remains **not tested**,
+consistent with the participant's assistant choice; no host compatibility claim
+follows from explicit loading. No personal machine paths or globally installed
+skill inventory are assumed in a future project.
 
 Use general instructions for always-applicable behavior. Use a specialized skill
 when a repeatable task benefits from focused procedures, supporting resources or

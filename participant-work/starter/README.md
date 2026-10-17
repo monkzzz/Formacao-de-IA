@@ -1,7 +1,8 @@
 # Personal reusable starter
 
-This is the participant's generic starter source, maintained in the personal course
-fork. It defines working behavior and empty project records, without an application
+This is the participant's reusable starter, maintained in the personal course
+fork. Generic rules and procedures are preserved; its current context records the
+existing Day 2 website preservation scope. It contains no duplicate application
 implementation. A participant-authored [bootstrap interview skill](.github/skills/bootstrap-project/SKILL.md)
 is included; its native Copilot discovery and standalone publication remain unverified.
 
@@ -12,7 +13,7 @@ discovery and execution have not been tested or required for the chosen route.
 ## Start here
 
 1. Read [AGENTS.md](AGENTS.md), [project context](context/project.md) and
-   [handoff](context/handoff.md). Unknown fields are deliberately unresolved.
+   [handoff](context/handoff.md). Remaining unknowns are explicitly unresolved.
 2. Read [workflow](procedures/workflow.md) and [Git and safety](procedures/git-and-safety.md).
 3. Discover necessary [capabilities](capabilities/README.md) in the target environment.
 4. Work within the request; save observations in [evidence](evidence/README.md),
@@ -21,8 +22,11 @@ discovery and execution have not been tested or required for the chosen route.
 
 ## Reuse in a different project
 
-Copy the contents of this directory, including `.github/` and `.gitignore`, into
-an empty personal project directory. Do not copy this course's parent Git metadata,
+For unrelated reuse, start from the preserved generic 1.0.0 archive in the course
+submission, or reset the three populated context records before copying this
+directory. Do not inherit classifier requirements or the website decision. Copy
+the chosen generic contents, including `.github/` and `.gitignore`, into an empty
+personal project directory. Do not copy this course's parent Git metadata,
 datasets, environments, reports or classifier. Initialize Git in the destination
 only when creating that separate repository is authorized. Review the diff and
 retain the attribution below when adapting the starter.

@@ -1,0 +1,11 @@
+{
+  "executed_utc": "2026-10-17T10:38:31.708390+00:00",
+  "repository": "monkzzz/Formacao-de-IA",
+  "status": "PASS",
+  "operation": "public-read",
+  "issues": [],
+  "limits": [
+    "Issue bodies and counts do not prove original approval",
+    "Comment contents are not fetched by this operation"
+  ]
+}

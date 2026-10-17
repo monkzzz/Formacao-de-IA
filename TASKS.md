@@ -120,11 +120,11 @@ Source: [bootstrap instructions](Dia2/Exercicio-02-Skill-Bootstrap.md). The stud
 
 - [x] Research interview-style skills and the Ask Me pattern, recording sources and useful design choices. See the [research and access limitations](participant-work/day2/bootstrap-research.md).
 - [x] Create the participant's native Copilot skill at `.github/skills/<skill-name>/SKILL.md` in the personal starter, with appropriate metadata and instructions; no special installer is required. See [bootstrap-project](participant-work/starter/.github/skills/bootstrap-project/SKILL.md); authored through the chosen assistant, format validated, Copilot execution unverified.
-- [ ] Make the skill inspect existing context, ask adaptive questions, clarify contradictions, avoid repetition, and distinguish facts, assumptions, and pending decisions.
-- [ ] Require a reviewable context proposal and participant approval before the skill writes project context.
-- [ ] Apply it to the classifier requirements while preserving generic starter rules; support subsequent updates without restarting the interview.
-- [ ] Verify actual Copilot discovery/use, insufficient-context behavior, approval handling, and fresh-session recovery; preserve evidence.
-- [ ] Version the skill and populated context. Do not substitute a downloaded external skill for the participant's implementation.
+- [x] Make the skill inspect existing context, ask adaptive questions, clarify contradictions, avoid repetition, and distinguish facts, assumptions, and pending decisions. See [controlled behavior evidence](participant-work/day2/bootstrap-behavior.md); no fabricated participant answers.
+- [x] Require a reviewable context proposal and participant approval before the skill writes project context. [Unchanged hashes before synthetic approval and writes afterward](participant-work/day2/bootstrap-behavior.md) test the boundary; synthetic approval is not actual participant approval.
+- [x] Apply it to the classifier requirements while preserving generic starter rules; support subsequent updates without restarting the interview. See [populated preservation context](participant-work/starter/context/project.md), the participant's current-website directive and [bounded update/recovery evidence](participant-work/day2/bootstrap-recovery.md).
+- [x] Verify actual Copilot discovery/use, insufficient-context behavior, approval handling, and fresh-session recovery; preserve evidence. **Chosen-assistant adaptation:** explicit skill loading and [two no-history session records](participant-work/day2/bootstrap-next-ten.md); Copilot discovery/use was not tested because the participant declined it. Instructor acceptance remains pending.
+- [x] Version the skill and populated context. Do not substitute a downloaded external skill for the participant's implementation. See [version hashes and provenance](participant-work/day2/bootstrap-context-version.json); participant-authored skill source retained, no third-party installation.
 
 ## 7. Day 2 — Exercise 3: Classifier project
 
@@ -132,11 +132,11 @@ Source: [bootstrap instructions](Dia2/Exercicio-02-Skill-Bootstrap.md). The stud
 
 Source: [planning instructions](Dia2/Exercicio-03/Parte-01-Planejamento-da-Rede.md).
 
-- [ ] Reconcile the existing experiment decisions with an approved project specification covering inputs/outputs, architecture alternatives, resource constraints, preprocessing, data splits, metrics, export, browser parity, UI, and publication.
-- [ ] Locate and link any real personal GitHub Issues and original approvals; local task notes are insufficient evidence of published Issues.
-- [ ] Create missing Issues for remaining work with scope, dependencies, acceptance criteria, and verification evidence. Record existing implementation honestly as retrospective context.
-- [ ] Identify the missing pre-implementation approval trail explicitly and seek the instructor's acceptance of that process deviation; later Issues cannot establish earlier approval.
-- [ ] Verify that a fresh agent session can identify the next actionable Issue using repository context alone.
+- [x] Reconcile the existing experiment decisions with an approved project specification covering inputs/outputs, architecture alternatives, resource constraints, preprocessing, data splits, metrics, export, browser parity, UI, and publication. See [retrospective specification](participant-work/day2/classifier-specification.md); participant confirmed preservation of the current development/site, not new technical design or original pre-implementation approval.
+- [x] Locate and link any real personal GitHub Issues and original approvals; local task notes are insufficient evidence of published Issues. [Initial public audit](participant-work/day2/github-issues-before.json) returned no Issues; no original approval established in the inspected records. [New real Issues and search limits](participant-work/day2/issue-register.md) are explicitly retrospective.
+- [x] Create missing Issues for remaining work with scope, dependencies, acceptance criteria, and verification evidence. Record existing implementation honestly as retrospective context. [Six published Issues #2–#7](participant-work/day2/issue-register.md) cover remaining evidence, artifacts, verification, hosting and instructor decisions; current website preserved.
+- [ ] Identify the missing pre-implementation approval trail explicitly and seek the instructor's acceptance of that process deviation; later Issues cannot establish earlier approval. Gap recorded and [request prepared](participant-work/day2/instructor-process-request.md), but **not sent**: instructor recipient/channel and actual acceptance are external dependencies. Tracked in [Issue #7](https://github.com/monkzzz/Formacao-de-IA/issues/7).
+- [x] Verify that a fresh agent session can identify the next actionable Issue using repository context alone. See [no-history recovery](participant-work/day2/bootstrap-recovery.md): real Issue #2, dependencies, verification and preservation limits.
 
 ### Part 2 — Training and evaluation
 

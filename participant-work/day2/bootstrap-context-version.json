@@ -1,0 +1,18 @@
+{
+  "source_baseline": "4342c320a0f570de729f8fc517850c9cebb6767d",
+  "skill_version": "1.0.0",
+  "context_version": "1.0.0",
+  "context_authority": "Participant instruction to maintain existing dia2-local development and website, after context proposal; no new technical design or publication approval",
+  "files": {
+    "participant-work/starter/.github/skills/bootstrap-project/SKILL.md": "be62211bdbe40db2bc2934ef231b332be85eb95ec292de58a0af5cda87cdb6c9",
+    "participant-work/starter/context/decisions.md": "f029a64da4e8e96986b7a8bf49bf1996bf9d21ec8631f4b0e3d700f01f065005",
+    "participant-work/starter/context/handoff.md": "d96f1316050176384bc93743982d03725a0165d340487656ed84c05ea6641d70",
+    "participant-work/starter/context/project.md": "2f461e8761ae1083fcc6f37762cbeb1a9f014be09446642bf6354434bb0e9954"
+  },
+  "generic_archive": "starter-generic-1.0.0.json",
+  "limits": [
+    "retrospective scope confirmation, not original design approval",
+    "explicit chosen-assistant tests, not native Copilot discovery",
+    "Git history versions source; no standalone release/tag claimed"
+  ]
+}

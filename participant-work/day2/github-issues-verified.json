@@ -1,0 +1,66 @@
+{
+  "executed_utc": "2026-10-17T10:43:59.487561+00:00",
+  "repository": "monkzzz/Formacao-de-IA",
+  "status": "PASS",
+  "operation": "public-read",
+  "issues": [
+    {
+      "number": 7,
+      "title": "docs(course): record instructor decisions on process deviations",
+      "url": "https://github.com/monkzzz/Formacao-de-IA/issues/7",
+      "state": "open",
+      "created_at": "2026-10-17T10:41:58Z",
+      "body": "No original pre-implementation approval trail has been established. Existing code,\ntraining and deployments precede this retrospective planning batch. New Issues\ncannot prove earlier approval.\n\nDependencies: none to prepare the request; recipient/channel and a real instructor\nresponse are external dependencies. Do not fabricate feedback or contact details.\n\nAcceptance:\n\n- Send the prepared process-deviation request to an identified instructor through\n  an authorized channel with links to actual submission evidence.\n- Ask about assistant substitution, personal fork/starter layout, retrospective\n  planning and hosting substitution if needed.\n- Record date, reviewer, response, conditions and unresolved corrective actions.\n\nVerification: preserve actual delivery/response evidence without credentials or\nprivate messages in public artifacts. A drafted request or public Issue is not\ninstructor acceptance. Mark pending until the external response exists.\n",
+      "comments": 0
+    },
+    {
+      "number": 6,
+      "title": "docs(submission): preserve the complete frozen challenge evidence chain",
+      "url": "https://github.com/monkzzz/Formacao-de-IA/issues/6",
+      "state": "open",
+      "created_at": "2026-10-17T10:41:57Z",
+      "body": "Preserve and index existing frozen challenge evidence without tuning or rerunning\nthe official evaluation. Original recorded 99.28% MNIST / 2-of-10 and later follow-ups\nretain separate model and runtime identities.\n\nDepends on model evidence index (`evidence` in issue-plan.json).\n\nAcceptance:\n\n- Link frozen runtime/weights, ten raw predictions/scores, separate comparison,\n  input hashes, error analysis and applicable public verification.\n- Explain prior exposure and distinguish MNIST, synthetic and ten-image results.\n- Preserve ignored raw artifacts through an appropriate artifact process rather\n  than staging unrelated local files or completed test caches indiscriminately.\n\nVerification: inspect existing hashes, sources and chronology only; no training,\nmodel/preprocessing selection or score tuning using official images or answers.\nRecord absent artifacts and retrieval requirements instead of inventing evidence.\n\n\nPublished dependencies:\n- https://github.com/monkzzz/Formacao-de-IA/issues/2\n",
+      "comments": 0
+    },
+    {
+      "number": 5,
+      "title": "docs(submission): verify the existing website and resolve the hosting requirement",
+      "url": "https://github.com/monkzzz/Formacao-de-IA/issues/5",
+      "state": "open",
+      "created_at": "2026-10-17T10:41:57Z",
+      "body": "The participant instructed preservation of the current dia2-local development and\nwebsite at https://naoquerosaber.pt/AI/. Keep it intact; no migration, replacement\nor production change is authorized in this batch. GitHub Pages remains an unmet\ncourse requirement unless the instructor accepts the existing host substitution.\n\nDepends on artifact restoration and local verification (`artifacts`, `verification`\nin issue-plan.json). Confirm repository permissions and deployment authorization\nbefore external configuration/publication.\n\nAcceptance:\n\n- Obtain and link instructor acceptance of the existing hosting substitution.\n  If the instructor instead requires Pages, propose a separate deployment using\n  verified weights/static assets and obtain participant authorization before it.\n- Verify submitted-origin asset hashes, mouse/touch drawing, uploads, reset,\n  per-image scores, real activations and failure recovery.\n- Record URL, release/commit, model identity, screenshots and limits. Keep the\n  participant-trained CNN default; distinguish optional pretrained OCR readers.\n\nVerification: fresh browser evidence at the submitted origin, static asset checks\nand parity against the frozen model. Any official-image reuse is deployment\nverification after exposure, never a new independent accuracy result.\n\n\nPublished dependencies:\n- https://github.com/monkzzz/Formacao-de-IA/issues/3\n- https://github.com/monkzzz/Formacao-de-IA/issues/4\n",
+      "comments": 0
+    },
+    {
+      "number": 4,
+      "title": "test(submission): verify the selected CNN and browser application",
+      "url": "https://github.com/monkzzz/Formacao-de-IA/issues/4",
+      "state": "open",
+      "created_at": "2026-10-17T10:41:56Z",
+      "body": "Verify the existing selected captcha-v3 CNN and application for submission.\nEarlier test reports are retrospective context, not a current suite result.\n\nDepends on verified artifacts (`artifacts` in issue-plan.json).\n\nAcceptance:\n\n- Run the relevant existing Python unit suite and preserve actual output/count.\n- Check Python/JavaScript preprocessing, logits and real activations within 0.0001.\n- Exercise drawing, upload/batch upload, clear/reset, scores, activation displays,\n  export, invalid input and weight-download failure recovery.\n- Label mocked versus real-model checks and desktop versus physical-phone limits;\n  confirm inference uses browser pixels and weights, not a remote inference API.\n\nVerification: use new report names, record environment and model hash, link final\ncommits and findings. No retraining or new official challenge accuracy experiment.\n\n\nPublished dependencies:\n- https://github.com/monkzzz/Formacao-de-IA/issues/3\n",
+      "comments": 0
+    },
+    {
+      "number": 3,
+      "title": "build(submission): provide verified ignored model artifacts",
+      "url": "https://github.com/monkzzz/Formacao-de-IA/issues/3",
+      "state": "open",
+      "created_at": "2026-10-17T10:41:55Z",
+      "body": "The existing exported weights/checkpoints are ignored and are not supplied by a\nsource clone. This Issue completes the submission artifact process, not training.\n\nDepends on the evidence-index Issue in this batch (`evidence` in issue-plan.json).\n\nAcceptance:\n\n- Document an authorized artifact retrieval or reproducible training route with\n  model identity, byte count, SHA-256 and restoration paths.\n- Demonstrate restoration in an isolated clean directory/environment; preserve\n  existing checkpoints, exports and frozen evaluation outputs.\n- Keep secrets, datasets and weights outside Git; document font/runtime limits if\n  using the historical training route.\n\nVerification: record retrieval/restoration commands and manifest hash comparisons.\nDo not overwrite historical outputs or claim a clone alone includes weights.\n\n\nPublished dependencies:\n- https://github.com/monkzzz/Formacao-de-IA/issues/2\n",
+      "comments": 0
+    },
+    {
+      "number": 2,
+      "title": "docs(submission): assemble the trained CNN evidence and approval record",
+      "url": "https://github.com/monkzzz/Formacao-de-IA/issues/2",
+      "state": "open",
+      "created_at": "2026-10-17T10:41:55Z",
+      "body": "The existing Digit Lab implementation predates this Issue. This is retrospective\nsubmission work, not evidence of pre-implementation approval or an instruction to\nretrain. Scope: reconcile the selected captcha-v3 model with its source reports,\nparticipant-approved specification and a complete submission index.\n\nDependencies: none for evidence discovery. The participant instructed preservation\nof the current dia2-local website after the context proposal was presented;\nrecord that limited retrospective scope. Instructor acceptance is separate.\n\nAcceptance:\n\n- Link configuration, seeds, split, environment, training history, selection,\n  clean/synthetic metrics, confusion/errors, preprocessing and weight hash.\n- Verify ignored local weights against recorded manifest SHA-256 without changing\n  weights, original reports or official challenge inputs.\n- Link present participant approval accurately as retrospective; identify absent\n  original approvals and remaining instructor decisions.\n\nVerification: check every local evidence link/hash, review scope and chronology,\nrecord commands/results and final commit. Do not use historical test counts as\nfresh test execution. Course exercise source remains unchanged.\n",
+      "comments": 0
+    }
+  ],
+  "limits": [
+    "Issue bodies and counts do not prove original approval",
+    "Comment contents are not fetched by this operation"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "executed_utc": "2026-10-17T10:45:09.860809+00:00",
+  "baseline": "4342c320a0f570de729f8fc517850c9cebb6767d",
+  "status": "PASS",
+  "tasks_attempted": 10,
+  "tasks_completed": 9,
+  "pending": "Instructor request delivery/acceptance; no recipient/channel",
+  "real_issues_verified": 6,
+  "local_links": 193,
+  "heading_anchors": 30,
+  "generic_files_unchanged": 10,
+  "versioned_files": {
+    "participant-work/starter/.github/skills/bootstrap-project/SKILL.md": "be62211bdbe40db2bc2934ef231b332be85eb95ec292de58a0af5cda87cdb6c9",
+    "participant-work/starter/context/decisions.md": "f029a64da4e8e96986b7a8bf49bf1996bf9d21ec8631f4b0e3d700f01f065005",
+    "participant-work/starter/context/handoff.md": "d96f1316050176384bc93743982d03725a0165d340487656ed84c05ea6641d70",
+    "participant-work/starter/context/project.md": "2f461e8761ae1083fcc6f37762cbeb1a9f014be09446642bf6354434bb0e9954"
+  },
+  "checks": [
+    "exact next ten checklist scope, nine complete",
+    "unsent request remains open",
+    "real public Issues and dependency URLs",
+    "generic rules/procedures unchanged",
+    "course/classifier source unchanged",
+    "existing weight hash and byte count",
+    "local links and anchors",
+    "version hashes"
+  ],
+  "limits": [
+    "does not prove Copilot discovery or instructor acceptance",
+    "behavior has separate actual-session evidence",
+    "no retraining, official evaluation or production change"
+  ]
+}

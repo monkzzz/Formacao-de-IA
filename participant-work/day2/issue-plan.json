@@ -1,0 +1,8 @@
+[
+  {"key": "evidence", "title": "docs(submission): assemble the trained CNN evidence and approval record", "body_file": "issues/01-evidence.md", "depends_on": []},
+  {"key": "artifacts", "title": "build(submission): provide verified ignored model artifacts", "body_file": "issues/02-artifacts.md", "depends_on": ["evidence"]},
+  {"key": "verification", "title": "test(submission): verify the selected CNN and browser application", "body_file": "issues/03-verification.md", "depends_on": ["artifacts"]},
+  {"key": "pages", "title": "docs(submission): verify the existing website and resolve the hosting requirement", "body_file": "issues/04-pages.md", "depends_on": ["artifacts", "verification"]},
+  {"key": "challenge", "title": "docs(submission): preserve the complete frozen challenge evidence chain", "body_file": "issues/05-challenge.md", "depends_on": ["evidence"]},
+  {"key": "instructor", "title": "docs(course): record instructor decisions on process deviations", "body_file": "issues/06-instructor.md", "depends_on": []}
+]
