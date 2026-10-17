@@ -1,0 +1,26 @@
+{
+  "executed_utc": "2026-10-17T11:56:00.396710+00:00",
+  "status": "PASS",
+  "repository": "https://github.com/monkzzz/Formacao-de-IA",
+  "remote_main": "9e7eb08bc9187f703c1e7c7a9ed2f6cbb42f99cf",
+  "commit_url": "https://github.com/monkzzz/Formacao-de-IA/commit/9e7eb08bc9187f703c1e7c7a9ed2f6cbb42f99cf",
+  "tree_sha": "c23af95a152ad1159721648a8c2672b862b88ece",
+  "required_path_blob_sha": {
+    "TASKS.md": "043bb6c725bb04136eea2fb683cb925cbfd159b6",
+    "SUBMISSION.md": "dfa5b4e3bdc6b1552b7d370c9113a2ea2d6a723a",
+    "participant-work/starter/AGENTS.md": "e93ea7f3ce9257063eedab16b007a75e9c6bc298",
+    "participant-work/starter/.github/skills/bootstrap-project/SKILL.md": "88dad0636fe45501da6c245f7ffc74e77c82f128",
+    "participant-work/starter/context/project.md": "c0ff9bde4bba5a868e295182961316bc9c7a008b",
+    "participant-work/starter/context/handoff.md": "ae13bd3bc9ab47867a6829cb77a6bae823af2729",
+    "participant-work/day2/starter-generic-1.0.0.zip": "7b151e394931302028e4bec5b8123ff37c31032c",
+    "participant-work/day2/submission-evidence-index.md": "1a6d31287e0b047243d506a6c8d215b3be81735a",
+    "participant-work/day2/independent-task-completion.md": "90c7b275a7bc1c5689cab80a682cace74bb6fceb",
+    "participant-work/day2/ml-process-reproduction.md": "9a8b24f1b612bc50bb4a4f3468ad1da856d5eef0",
+    "participant-work/day2/selected-mnist-clean-reevaluation.json": "e3586b1287c7adee6a512aa949ff36294de87bf8",
+    "dia2-local/digitlab/residual.py": "1eb250162317f1cdf69f13658b5cfa1004e3d862",
+    "dia2-local/dist/index.html": "d11c0a414b3620da2a8edfa1a277c044932f34e9",
+    "dia2-local/dist/model/captcha-v3/digits/manifest.json": "7315dc30b0785eedca494975ffe00fa1e5727dca"
+  },
+  "ignored_model_binaries_not_published_in_git": true,
+  "scope": "Source repository publication only; no site, Pages or FTP deployment"
+}

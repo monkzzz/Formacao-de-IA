@@ -5,7 +5,9 @@ the participant for review. It has **not been sent to a teacher** and does not
 establish classroom attendance, mastery or instructor acceptance.
 
 The subsequent [exercise coverage audit](EXERCISE-COVERAGE.md) identified twelve
-missing or understated follow-ups, now unchecked in [TASKS.md](TASKS.md).
+missing or understated follow-ups. Eleven are now completed with
+[follow-up evidence](participant-work/day2/independent-task-completion.md);
+R01 still requires the participant's actual research critique in [TASKS.md](TASKS.md).
 This index records delivery of existing artifacts; it does not establish full
 exercise completion or that only teacher-dependent work remains.
 
@@ -69,18 +71,24 @@ different evaluations; softmax scores are not calibrated correctness probabiliti
 The original 99.28% MNIST and 2/10 challenge results remain preserved. No new
 training, official challenge inference or deployment ran for this handover.
 
-| Local delivery commit | Record |
+| Published delivery commit | Record |
 | --- | --- |
-| `809ef4d96e4e7f127b5e953ea733c714b59a7d39` ([URL pending push](https://github.com/monkzzz/Formacao-de-IA/commit/809ef4d96e4e7f127b5e953ea733c714b59a7d39)) | [CNN submission review](participant-work/day2/submission-review.md) |
-| `4cd82621f0269134ffe46c301575ef703c1b9f96` ([URL pending push](https://github.com/monkzzz/Formacao-de-IA/commit/4cd82621f0269134ffe46c301575ef703c1b9f96)) | [Five browser submission tasks](participant-work/day2/submission-browser-delivery.md) |
-| `da515d0f7d2d1b385e555a2b1a7f1089e26a7b15` ([URL pending push](https://github.com/monkzzz/Formacao-de-IA/commit/da515d0f7d2d1b385e555a2b1a7f1089e26a7b15)) | [Challenge/maintenance delivery](participant-work/day2/maintenance-next-ten.md) |
+| `809ef4d96e4e7f127b5e953ea733c714b59a7d39` ([published commit](https://github.com/monkzzz/Formacao-de-IA/commit/809ef4d96e4e7f127b5e953ea733c714b59a7d39)) | [CNN submission review](participant-work/day2/submission-review.md) |
+| `4cd82621f0269134ffe46c301575ef703c1b9f96` ([published commit](https://github.com/monkzzz/Formacao-de-IA/commit/4cd82621f0269134ffe46c301575ef703c1b9f96)) | [Five browser submission tasks](participant-work/day2/submission-browser-delivery.md) |
+| `da515d0f7d2d1b385e555a2b1a7f1089e26a7b15` ([published commit](https://github.com/monkzzz/Formacao-de-IA/commit/da515d0f7d2d1b385e555a2b1a7f1089e26a7b15)) | [Challenge/maintenance delivery](participant-work/day2/maintenance-next-ten.md) |
 | This handover's containing commit | Resolve with `git log -1 --format=%H -- SUBMISSION.md` |
 
-The read-only remote check returned `main` at
+The earlier read-only remote check returned `main` at
 [preparation commit 1d8707c65666885861a2a90c7e39145f49c65f7b](https://github.com/monkzzz/Formacao-de-IA/commit/1d8707c65666885861a2a90c7e39145f49c65f7b).
-The later delivery commits are local and were **not pushed in this batch**;
-their files are delivered in this checkout. Their GitHub commit URLs must not be
-represented as published evidence until a push and remote verification occur.
+That was the original handover state. The subsequent source-only push published
+these commits through
+[9e7eb08](https://github.com/monkzzz/Formacao-de-IA/commit/9e7eb08bc9187f703c1e7c7a9ed2f6cbb42f99cf).
+[Remote verification](participant-work/day2/source-publication-verification.json)
+confirmed the main ref, commit/tree identities and fourteen required source/evidence
+paths. [Actual Issue updates](participant-work/day2/issue-sync-result.json) closed
+#4 verification and #6 challenge preservation; #2, #3, #5 and #7 remain open with
+their unresolved acceptance limits. The receipt/checklist commit follows that
+published evidence commit. No production site or hosting configuration changed.
 Ignored weights, checkpoints, original frozen archives and screenshots need
 separate preservation; source delivery alone does not contain them.
 

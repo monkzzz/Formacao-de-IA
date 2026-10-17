@@ -33,7 +33,12 @@ within the current completion request. Teacher contact and Pages/site changes
 remain deferred. Remaining checkpoint/font portability limits are explicit; no
 full retraining or fresh official challenge accuracy is claimed.
 
-After synchronization, the next open work is actual participant research critique,
+Synchronization passed: #4 verification and #6 challenge preservation are closed;
+#2 evidence/process, #3 artifact portability, #5 hosting and #7 instructor process
+remain open. The receipt links evidence at published commit
+`9e7eb08bc9187f703c1e7c7a9ed2f6cbb42f99cf` and records returned body/state checks.
+
+The next open work is actual participant research critique,
 documented artifact portability limits, instructor decisions and the real feedback
 session. Consult the receipt and [TASKS.md](../../TASKS.md) before assuming any Issue
 is closed. #7 cannot be completed without an authorized recipient/channel and an

@@ -1,6 +1,6 @@
 # Session handoff
 
-Status: observed progress updated 2026-10-17, handoff version 1.2.0.
+Status: observed progress updated 2026-10-17, handoff version 1.3.0.
 Owner: the agent updates this at meaningful task boundaries from actual evidence.
 
 Completed: generic rules/procedures retained; context records the participant's
@@ -12,7 +12,7 @@ Completed since the context snapshot: the [selected CNN index](../../day2/submis
 unit result, [public browser/parity checks](../../day2/submission-browser-delivery.md),
 [preserved challenge chain](../../day2/submission-challenge-chain.md) and maintenance
 corrections. The [submission handover](../../../SUBMISSION.md) links the deliverables
-and distinguishes current local commits from published history. Requirements,
+and links published source history. Requirements,
 technical design and original approvals are not changed by this status update.
 
 New completion evidence: [reference Issue/PR review](../../day2/reference-issue-pr-review.md),
@@ -22,8 +22,13 @@ and [present participant continuation scope](../../day2/participant-continuation
 Project facts are reconciled in context version 1.1.0; historical version manifests
 remain immutable. The user specifically reconfirmed that `dia2-local` stays as is.
 
-Next action: finish/check source publication and real Issue status synchronization,
-then review the [remaining checklist](../../../TASKS.md) and
+Source publication passed at `9e7eb08bc9187f703c1e7c7a9ed2f6cbb42f99cf`:
+[remote verification](../../day2/source-publication-verification.json).
+[Applied Issue reconciliation](../../day2/issue-sync-result.json) closed #4 and #6;
+#2, #3, #5 and #7 remain open with stated acceptance limits. No deployment occurred.
+
+Next action: obtain actual participant research critique for R01, then review the
+[remaining checklist](../../../TASKS.md) and
 [prepared feedback packet](../../day2/teacher-feedback-packet.md). Instructor contact
 is deferred and the current site must remain intact. Actual review needs an
 identified authorized recipient/channel and a real session; no such session has
