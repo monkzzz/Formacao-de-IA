@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "recorded_on": "2026-10-17",
+  "source_commit": "93461811be4bd2edc77c3738a5bc3e578c733dfa",
+  "purpose": "Preservation inventory for preparation; hashes are not backups or fresh model evaluation.",
+  "scope": "All eleven course PDFs, all current dist/model files, selected artifact checkpoints/splits/archives, and existing freeze reports. Excludes credentials, datasets, ROMs, screenshots, and unrelated untracked files.",
+  "files": [
+    {
+      "path": "Dia1/Teorico/20261012--formação_gss_modulos_1.1_1.2-HCG-v_conjunta_dia1.pdf",
+      "bytes": 7185114,
+      "sha256": "599f9473241057df187b0b930ff84fcfe67fe58e800b8498f35b7593d4d31193"
+    },
+    {
+      "path": "Dia1/Teorico/Context Eng.pdf",
+      "bytes": 13496507,
+      "sha256": "28b7a15f1f518cdb96fff2aa11c7608f5103c039603028ca806ad18942dda50b"
+    },
+    {
+      "path": "Dia1/Teorico/From LLM to Chatbot.pdf",
+      "bytes": 8429635,
+      "sha256": "b12d2082fd1dbbc6da3642ba3d47734ec351e6f7d426372a3b54619e57445ee4"
+    },
+    {
+      "path": "Dia1/Teorico/LLM Anatomy.pdf",
+      "bytes": 19129209,
+      "sha256": "04b9e329a9ca17778557a99405b86329a6654beea8013b09bc3dc89d2300a5df"
+    },
+    {
+      "path": "Dia1/Teorico/Model Chosing.pdf",
+      "bytes": 6381078,
+      "sha256": "40f0a71d95cace22a39410d39d559dbc378524f8b31ede3263a556b23786f4d1"
+    },
+    {
+      "path": "Dia1/Teorico/The Basics.pdf",
+      "bytes": 11026606,
+      "sha256": "a399441181d691b0d8df064589516f5244cab13f00372b9ab4018a358b9f85c9"
+    },
+    {
+      "path": "Dia1/Teorico/Whoami.pdf",
+      "bytes": 7422450,
+      "sha256": "9e563452b4cbfa0405067732f9713bbe3e35c43e2f8e3b5ecfd7ec93512c23d4"
+    },
+    {
+      "path": "Dia2/Teorico/Agentic Context Eng.pdf",
+      "bytes": 14804763,
+      "sha256": "7419cf684f9ff53302269e558d30e06f0cae5e30e9b9ab80366d3cc6b1a648ad"
+    },
+    {
+      "path": "Dia2/Teorico/Coding Agents.pdf",
+      "bytes": 10451648,
+      "sha256": "2b89c3a6f0371ba27ab70a82a8032a3e689265ec27f9359bac38283392f4ef66"
+    },
+    {
+      "path": "Dia2/Teorico/Task eng.pdf",
+      "bytes": 8379633,
+      "sha256": "15ef9bfce53380570a8a14e5a81874120d78b073f45eabd60a7792aee04244af"
+    },
+    {
+      "path": "Dia2/Teorico/VDD and Autonomy.pdf",
+      "bytes": 7517337,
+      "sha256": "d3b159bd6cebc73372f8898158cf0cdb23957d5c6e5712cde037aef875b1a273"
+    },
+    {
+      "path": "dia2-local/artifacts/best.pt",
+      "bytes": 830755,
+      "sha256": "ef08a457d1b2c7f59907c01a4f8bccd982eda97e1eb08365b4bf1dda8129e313"
+    },
+    {
+      "path": "dia2-local/artifacts/captcha-v1/best.pt",
+      "bytes": 830755,
+      "sha256": "d8b905c7401a36be8bfec1fda4125755b864ff7696408503c59e521b444cbfce"
+    },
+    {
+      "path": "dia2-local/artifacts/captcha-v1/split.npz",
+      "bytes": 480516,
+      "sha256": "f97032c34d6527306d948414fb44abeecea95551de934d86cd5a4686f935f1d5"
+    },
+    {
+      "path": "dia2-local/artifacts/captcha-v2/best.pt",
+      "bytes": 1076515,
+      "sha256": "36a6f330c0283bc47370cf262c308fa2dc4eed68083e760d041fe521c5310ec2"
+    },
+    {
+      "path": "dia2-local/artifacts/captcha-v2/split.npz",
+      "bytes": 480516,
+      "sha256": "f97032c34d6527306d948414fb44abeecea95551de934d86cd5a4686f935f1d5"
+    },
+    {
+      "path": "dia2-local/artifacts/captcha-v3/best.pt",
+      "bytes": 1096281,
+      "sha256": "bf3b6424c3f30815de9915b6158ea3d9ebcffa62356b2a6fd5a5243633afbec4"
+    },
+    {
+      "path": "dia2-local/artifacts/captcha-v3/last.pt",
+      "bytes": 1096281,
+      "sha256": "da9e9270c931a89f19492e7b90b2b0662e5f1c90da025dc4274dae116b2d09d3"
+    },
+    {
+      "path": "dia2-local/artifacts/captcha-v3/test-predictions.npz",
+      "bytes": 40470,
+      "sha256": "7c143ef62955748c001d5174e6fd9b840d244fd2480cc7bc18dc05e294ea890d"
+    },
+    {
+      "path": "dia2-local/artifacts/digitlab-website-logo.zip",
+      "bytes": 1619784,
+      "sha256": "41dd3e4e3ea8c1f5813ab41b43568373ff9bc35f401a679e2d8fead7aa43cb0f"
+    },
+    {
+      "path": "dia2-local/artifacts/digitlab-website-v2.zip",
+      "bytes": 1591451,
+      "sha256": "f8a31d2ef96662b961524f440e7ea210c5ce7a87ec7e2469461a1e2d68a98826"
+    },
+    {
+      "path": "dia2-local/artifacts/digitlab-website-v3.zip",
+      "bytes": 1606709,
+      "sha256": "a9dda5370d02a7866a7db0cb04a9b1ce793aaed44a868c33cf96fb9a87446a9f"
+    },
+    {
+      "path": "dia2-local/artifacts/digitlab-website.zip",
+      "bytes": 786100,
+      "sha256": "f262cfb833677ddc5b8680147607d66bb157db04558766fdd825e6029ea632c5"
+    },
+    {
+      "path": "dia2-local/artifacts/ensemble-v1/development.npz",
+      "bytes": 1552220,
+      "sha256": "cf2af3b8b77b9e1b4340bcb5126445c391f65a47aa00716b940aac1391174d66"
+    },
+    {
+      "path": "dia2-local/artifacts/ensemble-v1/test.npz",
+      "bytes": 3101869,
+      "sha256": "58ba6661a6f4e273b9485b2297f431d7b55f88d9559a77fb3b45604d46b0f4fa"
+    },
+    {
+      "path": "dia2-local/artifacts/frozen-app.zip",
+      "bytes": 786100,
+      "sha256": "f262cfb833677ddc5b8680147607d66bb157db04558766fdd825e6029ea632c5"
+    },
+    {
+      "path": "dia2-local/artifacts/letters/best.pt",
+      "bytes": 839011,
+      "sha256": "7c9a9ae23f55a14ba5108eb6c6cb2434a731787c104d3c84f16de441915c08ae"
+    },
+    {
+      "path": "dia2-local/artifacts/letters/split.npz",
+      "bytes": 998916,
+      "sha256": "9835d3252e93cfd7aa6153d6bcc10a9d9ee2f8b02a65a903d72944c767965fc5"
+    },
+    {
+      "path": "dia2-local/artifacts/robust/digits/best.pt",
+      "bytes": 830755,
+      "sha256": "bb690bb7cdaf81ca8943bf536841ed49cb72acce795aae6eb9a70a971375e093"
+    },
+    {
+      "path": "dia2-local/artifacts/robust/digits/split.npz",
+      "bytes": 480516,
+      "sha256": "f97032c34d6527306d948414fb44abeecea95551de934d86cd5a4686f935f1d5"
+    },
+    {
+      "path": "dia2-local/artifacts/robust/letters/best.pt",
+      "bytes": 839011,
+      "sha256": "52431af9055597d89baa8b9f698fb7effd900716f32e4f703c7540d4b2c5dcd5"
+    },
+    {
+      "path": "dia2-local/artifacts/robust/letters/split.npz",
+      "bytes": 998916,
+      "sha256": "9835d3252e93cfd7aa6153d6bcc10a9d9ee2f8b02a65a903d72944c767965fc5"
+    },
+    {
+      "path": "dia2-local/artifacts/split.npz",
+      "bytes": 480516,
+      "sha256": "f97032c34d6527306d948414fb44abeecea95551de934d86cd5a4686f935f1d5"
+    },
+    {
+      "path": "dia2-local/dist/model/captcha-v1/digits/manifest.json",
+      "bytes": 78401,
+      "sha256": "324bfb26a18922af88f3f0dad6eaa6561e966ec22b5a80ba98e085d167ae02fb"
+    },
+    {
+      "path": "dia2-local/dist/model/captcha-v1/digits/parity.json",
+      "bytes": 1167417,
+      "sha256": "e135fab284e09d931c5f511b9869eecdcea0d3081d0fb1ad91f070fed5e11d16"
+    },
+    {
+      "path": "dia2-local/dist/model/captcha-v1/digits/weights.bin",
+      "bytes": 827688,
+      "sha256": "9531ae35882aa8ba348911f41e506bc00bb359d8110116ce98a2c6c1f8e04b13"
+    },
+    {
+      "path": "dia2-local/dist/model/captcha-v2/digits/manifest.json",
+      "bytes": 80227,
+      "sha256": "744021d3d9a4cc9301f7a5754d9ed4fcaffec2dfa57b840c7e90de9e9dd0d9df"
+    },
+    {
+      "path": "dia2-local/dist/model/captcha-v2/digits/parity.json",
+      "bytes": 4632555,
+      "sha256": "caa062cc1f4ae3c43af01bea4fe0bd89757247b1d2926f885a7378abb6ffae69"
+    },
+    {
+      "path": "dia2-local/dist/model/captcha-v2/digits/weights.bin",
+      "bytes": 1073448,
+      "sha256": "c415bceb885677c1f57c800f22feaf1659ea184f7cf39c2bca462cde4e1f5c9c"
+    },
+    {
+      "path": "dia2-local/dist/model/captcha-v3/digits/manifest.json",
+      "bytes": 84360,
+      "sha256": "549f44ecf1fcf01a763917bbff3db1624f455aa4ae3bd908472efc2f648ac99f"
+    },
+    {
+      "path": "dia2-local/dist/model/captcha-v3/digits/parity.json",
+      "bytes": 4587942,
+      "sha256": "5c5fa7a53c166771079f9271d530a0c1c031c0d914489930e71eb85092a9a551"
+    },
+    {
+      "path": "dia2-local/dist/model/captcha-v3/digits/weights.bin",
+      "bytes": 1090472,
+      "sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c"
+    },
+    {
+      "path": "dia2-local/dist/model/letters/manifest.json",
+      "bytes": 336931,
+      "sha256": "5ec7f6c41bec294eb83d61be815fb0b476bb32ec65f824f3c28f0c8567b6bd0c"
+    },
+    {
+      "path": "dia2-local/dist/model/letters/parity.json",
+      "bytes": 3163613,
+      "sha256": "ef8fd3a05ba83b36751fe179cd2157c46f613430c217cc63311fb58b30041141"
+    },
+    {
+      "path": "dia2-local/dist/model/letters/weights.bin",
+      "bytes": 835944,
+      "sha256": "c35d6fece31dbbacb37d684d3c256fbf634bf90751195fff8238f28e884f0ad5"
+    },
+    {
+      "path": "dia2-local/dist/model/manifest.json",
+      "bytes": 50243,
+      "sha256": "71247af8e6e04330462d64f210f588c6652f68033802ab0598bfcfd2993ebaa6"
+    },
+    {
+      "path": "dia2-local/dist/model/parity.json",
+      "bytes": 1167540,
+      "sha256": "33059d23d38ea1c7acf2cca11d64fd2ea8afb81082f24f63db7db1393bcdf6d7"
+    },
+    {
+      "path": "dia2-local/dist/model/robust/digits/manifest.json",
+      "bytes": 66288,
+      "sha256": "4028c77a64ee4174895bb6da1403712459427e9d49e981432f01e76168f81fff"
+    },
+    {
+      "path": "dia2-local/dist/model/robust/digits/parity.json",
+      "bytes": 1169351,
+      "sha256": "7341c287114c4c9f5089f8cc36bdb5c6268b4cdf39400d2d0a6bc6294991971e"
+    },
+    {
+      "path": "dia2-local/dist/model/robust/digits/weights.bin",
+      "bytes": 827688,
+      "sha256": "d2b9a1430a98fda5df41e27ca214ab1b57ef83508926f9eeb84967757300eb62"
+    },
+    {
+      "path": "dia2-local/dist/model/robust/letters/manifest.json",
+      "bytes": 359633,
+      "sha256": "7b3e6995d90bb03549605059fb80a5c68d3dd09fa8fca822f7cd11820ff7ca95"
+    },
+    {
+      "path": "dia2-local/dist/model/robust/letters/parity.json",
+      "bytes": 3113774,
+      "sha256": "6c2a16c99afa39d8f45385faf7f9f24bac94c7363d2a50f302fc6240700e412c"
+    },
+    {
+      "path": "dia2-local/dist/model/robust/letters/weights.bin",
+      "bytes": 835944,
+      "sha256": "0fef4b3155457eb1be91547590b48ebc61823c68b79fd414b406835cbfe1b101"
+    },
+    {
+      "path": "dia2-local/dist/model/weights.bin",
+      "bytes": 827688,
+      "sha256": "8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338"
+    },
+    {
+      "path": "dia2-local/reports/captcha-v1-challenge-freeze.json",
+      "bytes": 5118,
+      "sha256": "ae0b32ce005bb6f5642815c2be121d3540e373663d21aff0c2af4648a4a5c315"
+    },
+    {
+      "path": "dia2-local/reports/captcha-v2-challenge-freeze.json",
+      "bytes": 5624,
+      "sha256": "351d57b1a2cb3fdeb8aa712595b25852f868d89bef4c34e6c5447d8673b2cee3"
+    },
+    {
+      "path": "dia2-local/reports/captcha-v3-challenge-freeze.json",
+      "bytes": 6449,
+      "sha256": "88bedf7d47737902bb763ce1bd722408601fe27f4271614962138e5e4f5e9660"
+    },
+    {
+      "path": "dia2-local/reports/challenge-freeze.json",
+      "bytes": 1918,
+      "sha256": "5f1b5b849fb13d9050ea29e3b5a44c1dc141b397689da57eb3fd0c58103fd15a"
+    },
+    {
+      "path": "dia2-local/reports/ctc-digits-v1-browser-test-freeze.json",
+      "bytes": 2064,
+      "sha256": "acb587243ac9d742d901b0564192ba053b4a1d2a3173ba1c75810dca06995083"
+    },
+    {
+      "path": "dia2-local/reports/ctc-digits-v1-frozen-challenge-freeze.json",
+      "bytes": 2071,
+      "sha256": "5f8d2c58e40a8c71df546cc77b89fe749e2e849d27b95e7923a8de28a304a00c"
+    },
+    {
+      "path": "dia2-local/reports/ctc-digits-v1-local-runtime-smoke-freeze.json",
+      "bytes": 2068,
+      "sha256": "624ce56aa7a4d1b95fc3e1422b4e3089d523b6f9c6d230570f6883c067eccd36"
+    },
+    {
+      "path": "dia2-local/reports/ddddocr-browser-development-20261016-freeze.json",
+      "bytes": 1893,
+      "sha256": "e2a56cf6d301adfa9bf6f929b800faec0b35a70c7e09c329ff72e9329f5442f9"
+    },
+    {
+      "path": "dia2-local/reports/ddddocr-frozen-challenge-followup-20261016-freeze.json",
+      "bytes": 1901,
+      "sha256": "2a89e216e3b7d5cacad0d39775aedb4f1054ebd439dbd3e9594260f020a77ff8"
+    },
+    {
+      "path": "dia2-local/reports/ensemble-v1-evaluation-freeze.json",
+      "bytes": 733,
+      "sha256": "ff3e569491e08cad422faf3b1d69d085027737140470a1de658cab8f7e96a5b4"
+    },
+    {
+      "path": "dia2-local/reports/release-3.10.0-public-runtime-smoke-freeze.json",
+      "bytes": 2069,
+      "sha256": "428d48d1107d5d693799bfe85da351f9a9da782d13453331d3f806f2f7747a69"
+    },
+    {
+      "path": "dia2-local/reports/release-3.8.0-local-captcha-readers-20261016-freeze.json",
+      "bytes": 2098,
+      "sha256": "c092b253f25e033f4f419d2a109db57fb9b1b396ab8a6eb55e2c4a70dff4c968"
+    },
+    {
+      "path": "dia2-local/reports/release-3.9.0-public-download-smoke-freeze.json",
+      "bytes": 1899,
+      "sha256": "e8b4c17369f34fa88025a11643537d77111b403430c8c24c094e41a672716563"
+    },
+    {
+      "path": "dia2-local/reports/robust-challenge-freeze.json",
+      "bytes": 3732,
+      "sha256": "5aeb54512180e6639acbffaab72776128f44cc12c8a6f9b053a952271b4dcb6b"
+    }
+  ]
+}

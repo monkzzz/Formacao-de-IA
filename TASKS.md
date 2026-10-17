@@ -1,0 +1,214 @@
+# Course Completion Tasks
+
+Initial assessment date: 2026-10-17. This checklist covers both course participation and repository maintenance. It is based on the local exercise instructions, source layout, workflows, study answers, and recorded implementation evidence. The initial documentation audit did not independently check remote GitHub state, the live website, GUI behavior, test suites, or PDF contents. The subsequent [preparation record](PREPARATION.md) documents the Git connectivity check and slide review completed for the first five open tasks, including their limits.
+
+An unchecked task means work or completion evidence is still needed; it does not necessarily mean the functionality is absent. Checked items identify existing artifacts or recorded results, rather than fresh execution. Historical reports remain valid for their named versions.
+
+## 1. Folder coverage and existing work
+
+| Location | Purpose and completion implications |
+| --- | --- |
+| [Dia1](Dia1/README.md) | Four research exercises; participant deliverables were not found in this repository. |
+| [GSS exercises](Dia1/Exercicios-GSS/README.md) | Twelve implemented Python demonstrations, support modules, resources, recordings, and unit tests; run and observe them. |
+| [Day 1 slides](Dia1/Teorico/) and [Day 2 slides](Dia2/Teorico/) | Teaching references; review alongside the corresponding exercises. |
+| [Dia2](Dia2/README.md) | Four exercises, including four parts of the classifier project. |
+| [MNIST](Dia2/Dataset-MNIST/README.md) | Four compressed IDX archives and an integrity-checking downloader already exist. |
+| [Official challenge](Dia2/Desafio/README.md) | Ten final-evaluation PNGs; preserve them and exclude them from training and tuning. |
+| [Starter reference](Dia2/Referencia-Starter-Repo/LEIA-PRIMEIRO.md) | Agent instructions, procedures, context/knowledge templates, and capability registries for selective adaptation. |
+| [Study answers](Dia2-Answers/README.md) | English explanations and proposed answers; these do not prove completion of practical activities. |
+| [Local implementation](dia2-local/README.md) | Existing trained models, static website, training/evaluation utilities, tests, documentation, and release evidence. Extend this implementation rather than building a duplicate. |
+| [.github](.github/) | Custom agent and three workflows; concrete maintenance issues appear below. |
+| [Day 2 proposal](DIA2-PROPOSTA.md) | Earlier preparation proposal; reconcile its pending claims with subsequent implementation. |
+| Root documentation | Course navigation, contribution instructions, licensing, attribution, and citation metadata. |
+
+- [x] Locate all twelve GSS entry scripts and their support/resource/test folders.
+- [x] Locate MNIST archives, the downloader, and all ten official challenge PNGs.
+- [x] Locate the implemented classifier, browser application, and recorded training/evaluation evidence.
+- [x] Identify recorded public deployment and public challenge follow-up evidence. For example, the [v3.7.0 public verification](dia2-local/reports/release-3.7.0-public-challenge-verification.json) records 10/10 and agreement with frozen local inputs/scores. This is a later verification, not the original independent test.
+- [x] Locate [v3.10.0 public interface evidence](dia2-local/reports/release-3.10.0-public-ui-qa.json); its real-model and CAPTCHA accuracy checks are explicitly marked `NOT RUN` in that report.
+
+## 2. Preparation
+
+- [x] Resolve the assistant choice and access prerequisite: the participant explicitly declined Copilot; continue with the current assistant and verified local tools. This replaces the original Copilot access check by participant decision, without claiming instructor acceptance. See [working decisions](PREPARATION.md#working-decisions).
+- [x] Prepare Git, a personal GitHub repository, and a GitHub Pages publication destination. Verified the existing personal remote and selected the future Pages URL/static artifact source; actual Pages configuration/publication remains Part 3 work. See [repository and destination](PREPARATION.md#git-repository-and-pages-destination).
+- [x] Establish the participant's working preferences: English, the current assistant, autonomous work within the requested batch, evidence/diff review, and the expressly authorized commit/push. See [working decisions](PREPARATION.md#working-decisions).
+- [x] Review the Day 1 and Day 2 slides with their corresponding lessons; record questions to resolve during the course. All eleven decks were inspected through text extraction or visual contact sheets; see [review notes and limits](SLIDE-REVIEW.md).
+- [x] Keep participant submissions in their own repository and decide how to reference the existing implementation: retain `dia2-local/` in the existing personal fork with root Git history and preserve ignored artifacts separately. See [preservation plan](PREPARATION.md#preserve-and-reference-the-existing-implementation) and [artifact hashes](preparation-artifacts.json). No migration or off-machine backup is claimed.
+
+Participant route update (2026-10-17): Copilot will not be used, by explicit participant instruction. The original exercise links retain their course wording. For future work, adapt tool-specific steps to the chosen assistant while preserving the learning objectives and declaring any rubric differences. Fresh-session checks, skill behavior, and instructor acceptance still require their own evidence.
+
+## 3. Day 1 — Research exercises
+
+Complete in order; each exercise consumes the preceding outputs. No participant research submissions were identified locally.
+
+### Exercise 1 — Guided research
+
+Source: [research instructions](Dia1/Exercicio-01-Pesquisa-Orientada.md).
+
+- [ ] Define the research objective, timeframe, scope, questions, acceptable evidence, report structure, and length.
+- [ ] Develop and refine your own Copilot instructions to research LLM evolution, Transformers, multimodality, MoE, and attention efficiency.
+- [ ] Verify important claims against traceable sources and distinguish evidence, interpretation, and uncertainty.
+- [ ] Save the structured Markdown report, conclusions, uncertainties, and source list for subsequent exercises.
+
+### Exercise 2 — Talk to a Paper
+
+Source: [paper analysis instructions](Dia1/Exercicio-02-Talk-to-a-Paper.md).
+
+- [ ] Select two scientific papers from Exercise 1 and provide their contents to Copilot; record any document-access limitations.
+- [ ] Ask progressive questions about each paper's problem, objectives, methods, data, results, assumptions, and limitations.
+- [ ] Check responses against identifiable sections/pages and separate author claims, paraphrases, and model inference.
+- [ ] Save two reading notes with grounded questions/answers, conclusions, and references to the original papers.
+
+### Exercise 3 — Cross-source synthesis
+
+Source: [synthesis instructions](Dia1/Exercicio-03-Cruzamento-de-Fontes.md).
+
+- [ ] Combine the research report, both papers, and their reading notes with traceable source identities.
+- [ ] Investigate the speculative attention/training/consciousness question, defining ambiguous terms and examining supporting and opposing arguments.
+- [ ] Identify agreements, contradictions, redundancy, and missing evidence across the sources.
+- [ ] Save an argued synthesis that explicitly separates established evidence, interpretation, and speculation.
+- [ ] Preserve the original synthesis for the next exercise.
+
+### Exercise 4 — Audit and refinement
+
+Source: [audit instructions](Dia1/Exercicio-04-Auditoria-e-Refinamento.md).
+
+- [ ] Start a new Copilot conversation to audit claims, citations, omissions, confidence, and requested format.
+- [ ] Save at least one Markdown audit containing proposed edits before changing the original paper.
+- [ ] Use another new conversation with the original paper and audit to produce a traceable revision.
+- [ ] Verify disputed claims using the original sources; repeat review if necessary.
+- [ ] Deliver the final paper, preserved audit, and a brief record of the principal corrections.
+
+## 4. Day 1 — GSS Python demonstrations
+
+Source: [setup and validation guide](Dia1/Exercicios-GSS/README.md). These are existing demonstrations to execute and understand; no missing implementation was established by this audit.
+
+- [ ] Create or reuse the GSS virtual environment, install base requirements, and verify Tk GUI availability.
+- [ ] Prepare the UCI Optical Digits cache for module 1 exercises 02, 03, and 05; keep this 8×8 dataset separate from Day 2 MNIST.
+- [ ] Run module 1 exercise 01: compare supervised/unsupervised learning and observe Flappy Bird Q-learning.
+- [ ] Run module 1 exercise 02: inspect image matrices, flattening, and the MLP forward pass.
+- [ ] Run module 1 exercise 03: observe loss, backpropagation, optimization, and training cycles.
+- [ ] Run module 1 exercise 04: explore confusion matrices, thresholds, precision/recall, costs, and ROC behavior.
+- [ ] Run module 1 exercise 05: train/evaluate the digit MLP and test drawing inference without treating it as additional training.
+- [ ] For the optional vision exercise, install `requirements-visao.txt` and prepare YOLO weights using `--preparar` before class.
+- [ ] Run module 1 exercise 06: inspect classification, detection, segmentation, pose, and oriented boxes using the intended image/video/webcam inputs; distinguish model scores from accuracy.
+- [ ] Enable recorded-response mode for module 2, or configure the documented LM Studio endpoint and compatible models for live demonstrations.
+- [ ] Run module 2 exercise 01: compare text, tokens, IDs, and the didactic vocabulary.
+- [ ] Run module 2 exercise 02: explore embeddings and sentence similarity.
+- [ ] Run module 2 exercise 03: inspect attention weights and causal masking.
+- [ ] Run module 2 exercise 04: explore next-token generation, temperature, and top-p.
+- [ ] Run module 2 exercise 05: compare classification, summarization, and extraction prompts.
+- [ ] Run module 2 exercise 06: inspect image/text inference and its limitations.
+- [ ] Run the documented offline unit suite and investigate failures; manually check the affected windows and interactions.
+- [ ] Record what was actually run, observations, environment limitations, and whether outputs were live or recorded. Preserve resource attribution and `origem.json` provenance.
+
+## 5. Day 2 — Exercise 1: Reusable starter repository
+
+Source: [starter instructions](Dia2/Exercicio-01-Starter-Repo.md). Written proposals exist, but a completed reusable personal starter and its behavioral evidence were not established.
+
+- [ ] Create the personal reusable starter with concise agent rules, a Copilot entry point, and documentation explaining reuse.
+- [ ] Define planning, execution, verification, review, Git, security, and autonomy procedures that match the participant's preferences.
+- [ ] Provide persistent context, decisions, reusable knowledge, and evidence records with clear responsibilities.
+- [ ] Document useful skills, CLI tools, and MCP capabilities; distinguish documented capabilities from verified availability.
+- [ ] Record what was copied, adapted, or discarded from the reference and why; preserve applicable attribution.
+- [ ] Test a fresh session, reuse for an unrelated hypothetical project, and a safe agent task; save observed behavior and correct failures.
+- [ ] Preserve an identifiable generic starter version before classifier-specific context is added. Do not describe a later reconstruction as proof that the original sequence occurred.
+
+## 6. Day 2 — Exercise 2: Bootstrap interview skill
+
+Source: [bootstrap instructions](Dia2/Exercicio-02-Skill-Bootstrap.md). The study answer is a design explanation, not an executable, tested participant skill.
+
+- [ ] Research interview-style skills and the Ask Me pattern, recording sources and useful design choices.
+- [ ] Create the participant's native Copilot skill at `.github/skills/<skill-name>/SKILL.md` in the personal starter, with appropriate metadata and instructions; no special installer is required.
+- [ ] Make the skill inspect existing context, ask adaptive questions, clarify contradictions, avoid repetition, and distinguish facts, assumptions, and pending decisions.
+- [ ] Require a reviewable context proposal and participant approval before the skill writes project context.
+- [ ] Apply it to the classifier requirements while preserving generic starter rules; support subsequent updates without restarting the interview.
+- [ ] Verify actual Copilot discovery/use, insufficient-context behavior, approval handling, and fresh-session recovery; preserve evidence.
+- [ ] Version the skill and populated context. Do not substitute a downloaded external skill for the participant's implementation.
+
+## 7. Day 2 — Exercise 3: Classifier project
+
+### Part 1 — Planning and GitHub Issues
+
+Source: [planning instructions](Dia2/Exercicio-03/Parte-01-Planejamento-da-Rede.md).
+
+- [ ] Reconcile the existing experiment decisions with an approved project specification covering inputs/outputs, architecture alternatives, resource constraints, preprocessing, data splits, metrics, export, browser parity, UI, and publication.
+- [ ] Locate and link any real personal GitHub Issues and original approvals; local task notes are insufficient evidence of published Issues.
+- [ ] Create missing Issues for remaining work with scope, dependencies, acceptance criteria, and verification evidence. Record existing implementation honestly as retrospective context.
+- [ ] Identify the missing pre-implementation approval trail explicitly and seek the instructor's acceptance of that process deviation; later Issues cannot establish earlier approval.
+- [ ] Verify that a fresh agent session can identify the next actionable Issue using repository context alone.
+
+### Part 2 — Training and evaluation
+
+Source: [implementation instructions](Dia2/Exercicio-03/Parte-02-Coding-com-o-Agente.md).
+
+- [x] Existing implementation includes MNIST loading, separated training/validation, genuine CNN training, exported weights, metrics, and original evaluation records.
+- [x] Existing tests and browser verification tools cover learning/inference behavior and Python/JavaScript parity.
+- [ ] Assemble a submission evidence index linking the selected model to its configuration, seed, split, environment, training history, held-out metrics, confusion/error analysis, preprocessing, and weight hash.
+- [ ] Run the existing relevant unit suite for the selected submission version and record the actual result; do not reuse historical test counts as a current result.
+- [ ] Confirm that a clean environment can obtain the correct ignored weights/checkpoints or reproduce them through documented training commands. Preserve existing frozen outputs instead of overwriting them.
+- [ ] Link reviewed changes and final commits to the personal project's Issues, including explicit limitations and deviations.
+
+### Part 3 — Browser application and publication
+
+Source: [website instructions](Dia2/Exercicio-03/Parte-03-Site-GitHub-Pages.md).
+
+- [x] Existing application provides drawing, clearing, local image uploads, model scores, and real network information with browser inference.
+- [x] Recorded public releases exist on the separately hosted HTTPS application; public deployment is no longer wholly missing.
+- [ ] Publish the participant repository and selected application on GitHub Pages, or obtain instructor acceptance of the existing hosting substitution.
+- [ ] Supply the ignored model binaries required by the static deployment through a documented artifact process; a source checkout alone does not include them.
+- [ ] Verify the submitted origin's loading, drawing with mouse/touch, individual/batch uploads, clear/reset, per-image results, real activations, and failure recovery.
+- [ ] Verify preprocessing and inference parity for the selected trained CNN, and confirm that classification is executed in-browser without a remote inference API.
+- [ ] Clearly distinguish the participant-trained default CNN from optional pretrained digit/word readers; those extensions do not replace the trained-model deliverable.
+- [ ] Record the submitted URL, release/commit, model identity, validation results, and screenshots. Include model scores and limitations without presenting softmax as calibrated correctness probability.
+
+### Part 4 — Official CAPTCHA challenge
+
+Source: [challenge evaluation instructions](Dia2/Exercicio-03/Parte-04-Teste-do-Desafio.md).
+
+- [x] Original frozen local evaluation and separate comparison exist: 99.28% MNIST and 2/10 official CAPTCHA cases.
+- [x] Later frozen iterations and public verification exist, including the recorded v3.7.0 10/10 follow-up; preserve their distinct identities and evaluation histories.
+- [ ] Select and link the complete evidence chain for the submitted version: frozen runtime/weights, ten raw predictions and scores, separate comparison, input hashes, errors/limitations, and public verification where applicable.
+- [ ] If a new GitHub Pages origin or changed submission needs checking, verify it against the already frozen results and label it as deployment verification after prior challenge exposure.
+- [ ] Preserve original records and explain that later evaluations are follow-ups. Never use the official images, known answers, filenames, or completed test caches to tune the model or preprocessing.
+- [ ] Report MNIST, synthetic robustness, and ten-image challenge results separately. A perfect ten-image score is not required for course completion and does not establish general CAPTCHA accuracy.
+
+## 8. Day 2 — Exercise 4: Teacher feedback and corrections
+
+Source: [feedback instructions](Dia2/Exercicio-04-Roda-de-Feedback.md). No completed teacher feedback session was established locally.
+
+- [ ] Provide the teacher with the personal repository, starter, skill, Issues, public URL, trained model identity, and evaluation evidence.
+- [ ] Participate in the actual teacher/class feedback session and record the date, reviewer, tested URL/version, observed behavior, and questions discussed.
+- [ ] Distinguish reproduced problems from suspected causes; create or update Issues with reproduction steps and acceptance criteria.
+- [ ] Prioritize functional and integrity problems, investigate selected corrections with the agent, and preserve before/after evidence.
+- [ ] Review diffs, run relevant regression checks, and link correction commits and any published versions to their Issues.
+- [ ] Record resolved and unresolved findings with next actions, and add reusable lessons to the starter.
+- [ ] Preserve original challenge results when corrections create a new iteration; do not claim teacher approval before it occurs.
+
+## 9. Repository maintenance findings
+
+These are concrete documentation/automation issues found locally; complete them separately from participant submissions.
+
+- [ ] **Repair the challenge evaluation workflow:** [.github/workflows/avaliar-desafio-avancado.yml](.github/workflows/avaliar-desafio-avancado.yml) invokes `Dia2/Desafio/avaliar_captcha_no_site.py`, which is absent from the inspected file inventory. Restore a suitable evaluator or update the workflow to a maintained implementation; verify its CLI, dependencies, output artifact, and failure reporting.
+- [ ] **Resolve challenge output paths:** the generator and [.github/workflows/gerar-desafio-avancado.yml](.github/workflows/gerar-desafio-avancado.yml) target `Dia2/Desafio/Avancado/`, whereas the official ten files are directly in `Dia2/Desafio/`. Decide whether this is an explicit separate set or stale behavior and align code/workflow/documentation without silently replacing the reserved evaluation images. Verify generation in an isolated output directory.
+- [ ] **Correct the challenge count:** [the MNIST guide](Dia2/Dataset-MNIST/README.md) still says nine challenge images/cases; the official set has ten.
+- [ ] **Reconcile current and historical status:** `Dia2-Answers/`, `DIA2-PROPOSTA.md`, and the local README/audit contain earlier local-only or pending-publication claims. Add a dated current status and link later releases while preserving historical findings and original metrics.
+- [ ] **Clarify release documentation:** the local README describes v3.7.0 as current, while release evidence reaches v3.10.0; the hosting guide contains multiple historical sections labelled current. Establish one clearly identified submission release and label older sections by version.
+- [ ] **Complete or label the custom agent template:** [.github/agents/Jarvis.agent.md](.github/agents/Jarvis.agent.md) retains placeholder description, argument hint, and closing instructions. Define its intended scope and discovery behavior or clearly mark it as an unfinished example; check that its bootstrap policy fits this course repository.
+- [ ] **Update root navigation:** document the role of `Dia2-Answers/`, `dia2-local/`, the proposal, and this checklist, while making the separate student-repository requirement clear.
+- [ ] **Review existing untracked files individually:** the initial Git status contains two local JPGs and several raw/follow-up reports. Decide which are required evidence, duplicates, or local-only artifacts; do not delete or stage them indiscriminately.
+- [ ] **Check teaching assets and attribution:** verify slide links/order/size claims, resource provenance, third-party notices, and consistency between `LICENSE.md` and `CITATION.cff`; review PDF contents manually where necessary.
+- [ ] **Validate maintenance changes:** check relative links, exercise numbering, workflow script paths, and relevant script behavior. Run GSS or Digit Lab tests only when their corresponding behavior changes; do not retrain or rerun the official challenge for documentation edits.
+
+## 10. Completion and handover
+
+Recommended order: repair broken course automation/documentation; collect missing Day 1 outputs; establish starter/skill evidence; reconcile project Issues and process deviations; finalize the existing model/app submission; publish on Pages or document the accepted substitution; complete teacher feedback.
+
+- [ ] Deliver the Day 1 report, two reading notes, original synthesis, audit, final revision, and correction summary.
+- [ ] Deliver the GSS execution/observation record and relevant validation results.
+- [ ] Deliver the personal starter, bootstrap skill, approved project context, and actual fresh-session test evidence.
+- [ ] Deliver repository/Issue/commit URLs, the trained-model evidence index, deployment URL, and preserved challenge records.
+- [ ] Deliver the teacher feedback log, correction evidence, and explicit remaining limitations or instructor-accepted deviations.
+- [ ] Update this checklist using linked evidence. Treat account access, instructor decisions, and real classroom activities as external dependencies rather than completed work.
+
+Creating this checklist does not execute the tasks, publish anything, create GitHub Issues, or certify course completion.
