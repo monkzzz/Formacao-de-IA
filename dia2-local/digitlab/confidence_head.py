@@ -4,6 +4,8 @@ import argparse
 from datetime import datetime, timezone
 import json
 from pathlib import Path
+
+from .platform_support import font_root, resolve_fonts
 import time
 
 import numpy as np
@@ -61,9 +63,9 @@ def main():
         train, validation = split_indices(labels)
         clean = torch.from_numpy(prepare_mnist(images, 64))
         targets = torch.from_numpy(labels.astype(np.int64))
-        font_root = Path("C:/Windows/Fonts")
-        train_fonts = [font_root / name for name in TRAIN_FONTS + EXTRA_FONTS + ADDED_FONTS]
-        dev_fonts = [font_root / name for name in DEV_FONTS]
+        font_directory = font_root()
+        train_fonts = resolve_fonts(font_directory, TRAIN_FONTS + EXTRA_FONTS + ADDED_FONTS)
+        dev_fonts = resolve_fonts(font_directory, DEV_FONTS)
         metadata["font_sha256"] = {p.name: digest(p) for p in train_fonts + dev_fonts}
         print("Preparing independent classifier-training and shared development inputs...", flush=True)
         rx, ry = make_raw(images, labels, validation, dev_fonts, 6000, GATE_POLICY["seed"] + 1)
@@ -113,7 +115,7 @@ def main():
     images, labels = load_partition(ROOT.parent / "Dia2/Dataset-MNIST/data", False)
     clean = torch.from_numpy(prepare_mnist(images, 64))
     target = torch.from_numpy(labels.astype(np.int64))
-    raw, raw_y = make_raw(images, labels, np.arange(len(labels)), [Path("C:/Windows/Fonts") / n for n in TEST_FONTS],
+    raw, raw_y = make_raw(images, labels, np.arange(len(labels)), resolve_fonts(font_root(), TEST_FONTS),
                          10000, SEED + 2, directory / "fixtures")
     results, predictions = {}, {}
     for name, network in [("baseline", baseline), ("candidate", model)]:

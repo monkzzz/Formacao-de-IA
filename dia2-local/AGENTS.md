@@ -8,6 +8,12 @@ The course requirements are in [the official challenge](../Dia2/Desafio/README.m
 
 ## Project map
 
+Local v3.11.0 adds a training-data selector: original MNIST-only weights are the
+course default, `mnist-supplementary-v1` is a separate optional extension, and
+the previous residual default remains selectable with unchanged weights.
+See [the dataset boundary and workflow](docs/selectable-models.md).
+Public v3.10.0 and all historical submission evidence remain separate.
+
 - `digitlab/`: dataset loading, preprocessing, CNN training/export, browser verification, reporting and deployment utilities.
 - `dist/`: static application; `v3/` contains the current interface. Retain earlier assets for cached releases.
 - `dist/model/captcha-v3/digits/`: current 64px residual digit model. Letters use `dist/model/robust/letters/`; earlier exports remain preserved.
@@ -39,6 +45,20 @@ The course requirements are in [the official challenge](../Dia2/Desafio/README.m
 - Match existing Python style: four spaces and `snake_case`. Keep changes focused and write project-specific documentation in English, as requested.
 - Do not commit datasets, weights, caches, credentials or generated screenshots excluded by `.gitignore`. Do not display the contents of `ftp.local.json`.
 
+## Cross-platform runtime
+
+Use the [shared Windows/Linux setup guide](../PORTABILITY.md). The repository's
+`setup_course.py` creates `.runtime/windows/day2/Scripts/python.exe` or
+`.runtime/linux/day2/bin/python` relative to the repository root. Choose the
+runtime for the current OS; an existing `.venv` may belong to the other OS.
+Run modules from this directory with that interpreter. Historical PowerShell
+examples below remain valid when their interpreter path is adapted.
+New portable confidence work uses `digitlab.confidence_broad` and the pinned
+open-font bundle; historical experiments still require their exact recorded fonts.
+The subsequent `digitlab.confidence_suite` workflow adds diagnosis, consistency
+training and capacity comparison; follow its fixed protocol in
+[docs/confidence-suite.md](docs/confidence-suite.md). It never changes active assets.
+
 ## Validation
 
 Run commands from this directory. Use the existing `.venv` when available:
@@ -48,6 +68,12 @@ Run commands from this directory. Use the existing `.venv` when available:
 ```
 
 For browser changes, start the static server in another terminal and run the relevant checks:
+
+For the local dataset selector use
+`python -m digitlab.selectable_models_qa --url http://127.0.0.1:8765/`
+with a new `--report`. Historical QA commands below assume
+their named default model and matching preserved interface; they do not select
+the previous residual model automatically in v3.11.0.
 
 ```powershell
 .\.venv\Scripts\python.exe serve.py

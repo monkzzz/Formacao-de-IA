@@ -1,5 +1,14 @@
 # Digit Lab — Local Desafio Project
 
+**Local v3.11.0, not deployed:** choose **Digits → Digit Lab CNN → CNN training
+data** to use the preserved **MNIST-only course model** (default), the separate
+**MNIST + EMNIST/synthetic extension**, or the unchanged previous residual model.
+See [training scope, rules and reproducibility](docs/selectable-models.md).
+The published v3.10.0 and historical submission evidence below retain their own
+models and results; this local change does not alter those records.
+
+Windows/Linux setup: [shared runtime guide](../PORTABILITY.md). New portable confidence work: [protocol](docs/confidence-broad.md). Independent diagnosis, consistency training and architecture comparison: [suite protocol](docs/confidence-suite.md).
+
 **Submission status, 2026-10-17:** application **v3.10.0**, default participant-trained
 **captcha-v3 residual CNN**, existing [public origin](https://naoquerosaber.pt/AI/).
 See [fresh browser submission evidence](../participant-work/day2/submission-browser-delivery.md)

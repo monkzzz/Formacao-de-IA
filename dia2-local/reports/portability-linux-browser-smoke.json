@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "title": "Digit Lab portability",
+  "javascript": 4,
+  "browser_version": "155.0.8059.84",
+  "scope": "Linux browser launch and JavaScript only; no classifier accuracy claim"
+}

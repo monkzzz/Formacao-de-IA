@@ -9,6 +9,8 @@ import hashlib
 import json
 from functools import lru_cache
 from pathlib import Path
+
+from .platform_support import font_root, resolve_fonts
 import time
 
 import numpy as np
@@ -119,8 +121,8 @@ def run(args):
     destination = ROOT / "dist/model" / args.name / "digits"
     if directory.exists() or report_path.exists() or destination.exists():
         raise SystemExit("Experiment already exists; choose a new --name. Existing evidence is preserved.")
-    train_fonts = [args.fonts / name for name in TRAIN_FONTS]
-    heldout_fonts = [args.fonts / name for name in HELDOUT_FONTS]
+    train_fonts = resolve_fonts(args.fonts, TRAIN_FONTS)
+    heldout_fonts = resolve_fonts(args.fonts, HELDOUT_FONTS)
     for path in train_fonts + heldout_fonts:
         if not path.is_file():
             raise SystemExit(f"Required font missing: {path}")
@@ -211,7 +213,7 @@ def run(args):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--name", default="captcha-v1")
-    parser.add_argument("--fonts", type=Path, default=Path("C:/Windows/Fonts"))
+    parser.add_argument("--fonts", type=Path, default=font_root())
     parser.add_argument("--epochs", type=int, default=12)
     parser.add_argument("--samples", type=int, default=40000)
     parser.add_argument("--threads", type=int, default=4)

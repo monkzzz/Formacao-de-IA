@@ -1,11 +1,12 @@
-import {loadModel, predict} from "./inference.js?v=captcha-3";
+import {loadModel, predict} from "./inference.js?v=dataset-1";
 import {prepareCanvas, PREPROCESS_VERSION} from "./preprocess.js?v=3.6.0";
 import {createWordsWorkspace} from "./words.js?v=3.2.0";
 import {createDrawingTools} from "./canvas-tools.js?v=3.2.0";
 import {createDigitReader, DIGIT_READERS} from "./digit-readers.js?v=3";
+import {CNN_MODELS} from "./cnn-models.js?v=1";
 
 const $ = id => document.getElementById(id);
-const state = {model: null, models: {}, mode: "digits", uploads: [], busy: false, loading: false, ready: false};
+const state = {model: null, models: {}, mode: "digits", digitExperiment: "mnist", uploads: [], busy: false, loading: false, ready: false};
 const canvas = $("drawing"), ctx = canvas.getContext("2d", {willReadFrequently: true});
 let drawing = false, previousPoint = null;
 const APPLICATION_VERSION = $("app-version").textContent.trim().slice(1);
@@ -18,6 +19,7 @@ const externalReader = () => selectedReader() !== "local";
 function readerViews() {
   const external = externalReader(), wordMode = state.mode === "words";
   $("digit-reader-options").hidden = state.mode !== "digits";
+  $("cnn-model-options").hidden = state.mode !== "digits" || external;
   $("digit-quality-options").hidden = !external || DIGIT_READERS[selectedReader()].engine === "ddddocr";
   $("digit-reader-about").hidden = !external;
   for (const id of ["network", "model"]) $(id).hidden = wordMode || external;
@@ -112,11 +114,13 @@ function setControls() {
   $("export").disabled = !state.uploads.length || state.busy || state.loading;
   for (const mode of MODES) $("mode-" + mode).disabled = state.busy || state.loading;
   $("digit-reader").disabled = $("digit-quality").disabled = state.busy || state.loading;
+  $("cnn-model").disabled = state.busy || state.loading;
   $("digit-cancel").hidden = !state.busy || !externalReader();
 }
 
-async function activateMode(mode) {
+async function activateMode(mode, digitExperiment = state.digitExperiment) {
   if (state.busy || state.loading) return false;
+  if (mode === "digits" && !Object.hasOwn(CNN_MODELS, digitExperiment)) return false;
   if (mode !== "digits") digitReader.stop();
   if (mode === "words") {
     state.mode = mode; state.ready = false;
@@ -127,8 +131,12 @@ async function activateMode(mode) {
   $("status").hidden = false;
   status(`Loading and verifying the ${mode} model…`);
   try {
-    const model = state.models[mode] || await loadModel(mode);
-    state.models[mode] = model; state.model = model; state.mode = mode; state.ready = true;
+    const key = mode === "digits" ? `digits:${digitExperiment}` : mode;
+    const model = state.models[key] || await loadModel(mode, digitExperiment);
+    state.models[key] = model; state.model = model; state.mode = mode; state.ready = true;
+    if (mode === "digits") state.digitExperiment = digitExperiment;
+    $("cnn-model").value = state.digitExperiment;
+    $("cnn-model-hint").textContent = CNN_MODELS[state.digitExperiment].scope;
     const letters = mode === "letters", manifest = model.manifest, test = manifest.training.test;
     for (const name of ["digits", "letters"]) $("mode-" + name).setAttribute("aria-pressed", String(name === mode));
     $("canvas-hint").textContent = letters ? "DRAW A SINGLE LETTER · A–Z" : "DRAW A SINGLE DIGIT · 0–9";
@@ -138,6 +146,11 @@ async function activateMode(mode) {
       : "Choose Digits for 0–9. Use Letters for A–Z, especially for similar shapes such as O and 0.";
     $("test-dataset").textContent = letters ? "Official EMNIST Letters test" : "Official MNIST test";
     $("test-accuracy").textContent = `${(test.accuracy * 100).toFixed(2)}% · ${test.correct.toLocaleString()} / ${test.count.toLocaleString()}`;
+    if (!letters) {
+      $("benchmark-digits").querySelector("strong").innerHTML = `${(test.accuracy * 100).toFixed(2)}<small>%</small>`;
+      $("benchmark-digit-model").textContent = CNN_MODELS[digitExperiment].name;
+      $("digit-evaluation-link").href = `./evaluation/digits-${digitExperiment === "captcha-v3" ? "captcha-v3-preserved" : digitExperiment}.json`;
+    }
     $("architecture").textContent = manifest.architecture === "residual64-16-32-128"
       ? "64px · Conv 16 → Residual 16 → Conv 32 → Average pool → Residual 32 → Dense 128 → 10"
       : `${model.inputSide}px · Conv 16 → Conv 32${model.inputSide === 64 ? " → Average pool" : ""} → Dense 128 → ${model.labels.length}`;
@@ -147,16 +160,19 @@ async function activateMode(mode) {
       $(id).parentElement.querySelector("h3 small").textContent = `${count} maps · ${side} × ${side} pixels`;
       for (const map of $(id).children) map.width = map.height = side;
     }
-    $("data-split").textContent = `${manifest.training.split.train.toLocaleString()} / ${manifest.training.split.validation.toLocaleString()} · no challenge inputs`;
+    $("data-split").textContent = letters
+      ? `${manifest.training.split.train.toLocaleString()} / ${manifest.training.split.validation.toLocaleString()} · no challenge inputs`
+      : `${CNN_MODELS[digitExperiment].data} · no official challenge inputs`;
     $("hash").textContent = manifest.sha256;
     renderScores(model.labels); resetOutput();
     displayMode(mode);
     status(`${letters ? "Letters A–Z" : "Digits 0–9"} ready. Draw one character or choose an image to begin.`);
     return true;
-  } catch (error) {status(error.message, true); return false;}
+  } catch (error) {$("cnn-model").value = state.digitExperiment; status(error.message, true); return false;}
   finally {state.loading = false; setControls();}
 }
 for (const mode of MODES) $("mode-" + mode).addEventListener("click", () => activateMode(mode));
+$("cnn-model").addEventListener("change", () => activateMode("digits", $("cnn-model").value));
 
 function resetDrawing() {
   drawing = false; previousPoint = null;
@@ -288,6 +304,10 @@ async function uploadFile(file, batch) {
     mode, model_sha256: model.manifest.sha256, labels: model.labels,
     input_side: model.inputSide, preprocessing: model.manifest.preprocessing,
     architecture: model.manifest.architecture, reader};
+  if (reader === "local") Object.assign(record, {
+    cnn_model: mode === "digits" ? state.digitExperiment : "letters",
+    training_scope: mode === "digits" ? CNN_MODELS[state.digitExperiment].scope : "EMNIST Letters",
+  });
   if (reader !== "local") Object.assign(record, {model_sha256: null, input_side: null,
     preprocessing: "word-crop-display-v1", architecture: "vision-encoder-decoder", labels: null,
     model: DIGIT_READERS[reader].model, revision: DIGIT_READERS[reader].revision,
@@ -331,6 +351,8 @@ async function uploadFile(file, batch) {
     const select = async (automatic = false) => {
       if (!automatic && (state.busy || state.loading)) return;
       if (state.mode !== mode && !await activateMode(mode)) return;
+      if (mode === "digits" && reader === "local" && state.digitExperiment !== record.cnn_model
+          && !await activateMode("digits", record.cnn_model)) return;
       if (mode === "digits" && (selectedReader() !== reader || $("digit-quality").value !== profile)) changeReader(reader, profile);
       for (const item of $("uploads").children) item.classList.remove("active");
       card.classList.add("active"); showPrediction(result, input, file.name, elapsed, model);
@@ -347,7 +369,8 @@ async function uploadFile(file, batch) {
 function exportRecord() {
   return {schema: 2, exported_at: new Date().toISOString(), origin: location.origin,
     application: "Digit Lab " + APPLICATION_VERSION, application_version: APPLICATION_VERSION,
-    mode: state.mode, reader: selectedReader(), model_sha256: state.mode === "words" ? null : externalReader() ? DIGIT_READERS[selectedReader()].sha256 || null : state.model.manifest.sha256,
+    mode: state.mode, reader: selectedReader(), cnn_model: state.mode === "digits" && !externalReader() ? state.digitExperiment : null,
+    model_sha256: state.mode === "words" ? null : externalReader() ? DIGIT_READERS[selectedReader()].sha256 || null : state.model.manifest.sha256,
     preprocessing: state.mode === "words" ? null : externalReader() ? DIGIT_READERS[selectedReader()].preprocessing || "word-crop-display-v1" : state.model.manifest.preprocessing, labels_consulted_by_app: false,
     note: "Raw model outputs only; each record identifies its own mode, class labels and model hash. No answer key is loaded or used.",
     predictions: state.uploads};

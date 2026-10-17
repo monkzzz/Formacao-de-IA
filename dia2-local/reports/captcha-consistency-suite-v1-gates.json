@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "reserved_test_and_preview_not_created": true,
+  "checks": [
+    {
+      "module": "digitlab.confidence_suite",
+      "stage": "test",
+      "returncode": 1,
+      "output": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/home/monk/Nextcloud/dev_server/IA_Formation/Formacao-de-IA/dia2-local/digitlab/confidence_suite.py\", line 418, in <module>\n    main()\n  File \"/home/monk/Nextcloud/dev_server/IA_Formation/Formacao-de-IA/dia2-local/digitlab/confidence_suite.py\", line 414, in main\n    {\"prepare\": prepare_data, \"train\": train, \"test\": final_test}[args.stage]()\n  File \"/home/monk/Nextcloud/dev_server/IA_Formation/Formacao-de-IA/dia2-local/digitlab/confidence_suite.py\", line 372, in final_test\n    metadata, selection, model = load_selection()\n                                 ^^^^^^^^^^^^^^^^\n  File \"/home/monk/Nextcloud/dev_server/IA_Formation/Formacao-de-IA/dia2-local/digitlab/confidence_suite.py\", line 361, in load_selection\n    raise ValueError(\"No eligible development selection; reserved data remain unopened\")\nValueError: No eligible development selection; reserved data remain unopened\n",
+      "status": "PASS"
+    },
+    {
+      "module": "digitlab.confidence_suite_browser",
+      "stage": "export",
+      "returncode": 1,
+      "output": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/home/monk/Nextcloud/dev_server/IA_Formation/Formacao-de-IA/dia2-local/digitlab/confidence_suite_browser.py\", line 359, in <module>\n    main()\n  File \"/home/monk/Nextcloud/dev_server/IA_Formation/Formacao-de-IA/dia2-local/digitlab/confidence_suite_browser.py\", line 351, in main\n    export_preview()\n  File \"/home/monk/Nextcloud/dev_server/IA_Formation/Formacao-de-IA/dia2-local/digitlab/confidence_suite_browser.py\", line 142, in export_preview\n    metadata, selection, model = load_selection()\n                                 ^^^^^^^^^^^^^^^^\n  File \"/home/monk/Nextcloud/dev_server/IA_Formation/Formacao-de-IA/dia2-local/digitlab/confidence_suite.py\", line 361, in load_selection\n    raise ValueError(\"No eligible development selection; reserved data remain unopened\")\nValueError: No eligible development selection; reserved data remain unopened\n",
+      "status": "PASS"
+    }
+  ]
+}

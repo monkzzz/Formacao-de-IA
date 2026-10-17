@@ -8,6 +8,8 @@ import hashlib
 import json
 from pathlib import Path
 
+from .platform_support import font_root, resolve_fonts
+
 import numpy as np
 from PIL import Image
 
@@ -105,11 +107,11 @@ def evaluate(stage):
         sessions[name] = ort.InferenceSession(str(path), options, providers=["CPUExecutionProvider"])
     seed = 2026101701 if stage == "development" else 2026101702
     rng = np.random.default_rng(seed)
-    fonts = DEVELOPMENT_FONTS if stage == "development" else TEST_FONTS
+    fonts = resolve_fonts(font_root(), DEVELOPMENT_FONTS if stage == "development" else TEST_FONTS)
     rows, vectors, labels = [], {name: [] for name in sessions}, []
     for i in range(1000):
         digit, severity = i % 10, 0 if i < 500 else 4
-        image = render(rng, digit, None, Path("C:/Windows/Fonts") / fonts[(i // 10) % len(fonts)], severity)
+        image = render(rng, digit, None, fonts[(i // 10) % len(fonts)], severity)
         resized = image.convert("RGB").resize((int(image.width * 64 / image.height), 64), Image.Resampling.LANCZOS).convert("L")
         pixels = (np.asarray(resized).astype(np.float32) / 255 - .5) / .5
         row = {"index": i, "expected": digit, "severity": severity, "models": {}}

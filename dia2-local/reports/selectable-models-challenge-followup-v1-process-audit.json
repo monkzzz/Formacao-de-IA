@@ -1,0 +1,284 @@
+{
+  "scope": "Post-evaluation diagnostic audit of preserved predictions; no alternate preprocessing, training, tuning or fresh browser challenge run",
+  "models": {
+    "mnist": {
+      "status": "PASS",
+      "sha256": "8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+      "input_side": 28,
+      "cases": [
+        {
+          "file": "caso_01.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 7.115686950776023e-08,
+          "logit_max_error": 5.513429641723633e-07,
+          "class_matches": true,
+          "input_sha256": "8beee89f761230d6d5103e00201357ca3953702bb5c88b872d2fdab1553b4569"
+        },
+        {
+          "file": "caso_02.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 5.062658106624873e-08,
+          "logit_max_error": 5.066394805908203e-07,
+          "class_matches": true,
+          "input_sha256": "862b6c4b79525e0a985fb12845cdaf05e3e9f398f117d750dd054b2b11e4104e"
+        },
+        {
+          "file": "caso_03.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 2.2115416778434316e-07,
+          "logit_max_error": 9.5367431640625e-07,
+          "class_matches": true,
+          "input_sha256": "e2252f3214e14ee4e1d2695c9cd41f0581fbf05421cf6bf94669459d42692e05"
+        },
+        {
+          "file": "caso_04.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 1.6124048363153065e-07,
+          "logit_max_error": 6.556510925292969e-07,
+          "class_matches": true,
+          "input_sha256": "c1867e63cf5cb94540c69e2dd07ca0388a18015260fbd8dc978f1f5ea0d21de4"
+        },
+        {
+          "file": "caso_05.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 7.955743830390105e-08,
+          "logit_max_error": 1.430511474609375e-06,
+          "class_matches": true,
+          "input_sha256": "040ce3d626a8c67f4d64c3115c20f553cccfd14a96418004a596387f8bdc9803"
+        },
+        {
+          "file": "caso_06.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 8.659546946176988e-08,
+          "logit_max_error": 9.5367431640625e-07,
+          "class_matches": true,
+          "input_sha256": "e06cbbfa7b5ebc52221543b4fe3824bf0de85d583f5e851d6487c1c523a9dbd9"
+        },
+        {
+          "file": "caso_07.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 2.2599548921142798e-07,
+          "logit_max_error": 1.0728836059570312e-06,
+          "class_matches": true,
+          "input_sha256": "1a7424cf829d2958a3a502715da501824054dbde147ed30438410dce23403d9b"
+        },
+        {
+          "file": "caso_08.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 9.249578658554469e-08,
+          "logit_max_error": 9.5367431640625e-07,
+          "class_matches": true,
+          "input_sha256": "0f8a5431130f48fa852851c0797418763cc23c442889d7aae54f469000c48168"
+        },
+        {
+          "file": "caso_09.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 1.965557658301087e-07,
+          "logit_max_error": 9.5367431640625e-07,
+          "class_matches": true,
+          "input_sha256": "874cc34cb2014aad60302189af2b1e89166eaad7a0465042c1e9d66dccaf6446"
+        },
+        {
+          "file": "caso_10.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 5.1766481212744964e-08,
+          "logit_max_error": 6.556510925292969e-07,
+          "class_matches": true,
+          "input_sha256": "799fbdd48c81a55fad8817a243470cd29955fac406df32bddb70e4dad7750225"
+        }
+      ],
+      "maximum_preprocessing_error": 0.0,
+      "maximum_score_error": 2.2599548921142798e-07
+    },
+    "mnist-supplementary-v1": {
+      "status": "PASS",
+      "sha256": "2f2a7aaf69845caeacd5cbab02ba56f95956f5ab8657d203b747a83004852c89",
+      "input_side": 28,
+      "cases": [
+        {
+          "file": "caso_01.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 6.837281762983594e-08,
+          "logit_max_error": 1.430511474609375e-06,
+          "class_matches": true,
+          "input_sha256": "8beee89f761230d6d5103e00201357ca3953702bb5c88b872d2fdab1553b4569"
+        },
+        {
+          "file": "caso_02.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 3.3371112095892386e-08,
+          "logit_max_error": 4.76837158203125e-07,
+          "class_matches": true,
+          "input_sha256": "862b6c4b79525e0a985fb12845cdaf05e3e9f398f117d750dd054b2b11e4104e"
+        },
+        {
+          "file": "caso_03.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 1.2832062734613459e-07,
+          "logit_max_error": 9.5367431640625e-07,
+          "class_matches": true,
+          "input_sha256": "e2252f3214e14ee4e1d2695c9cd41f0581fbf05421cf6bf94669459d42692e05"
+        },
+        {
+          "file": "caso_04.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 1.0767904712327692e-07,
+          "logit_max_error": 9.5367431640625e-07,
+          "class_matches": true,
+          "input_sha256": "c1867e63cf5cb94540c69e2dd07ca0388a18015260fbd8dc978f1f5ea0d21de4"
+        },
+        {
+          "file": "caso_05.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 3.76724251793803e-08,
+          "logit_max_error": 7.152557373046875e-07,
+          "class_matches": true,
+          "input_sha256": "040ce3d626a8c67f4d64c3115c20f553cccfd14a96418004a596387f8bdc9803"
+        },
+        {
+          "file": "caso_06.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 1.1037928315804635e-07,
+          "logit_max_error": 1.1920928955078125e-06,
+          "class_matches": true,
+          "input_sha256": "e06cbbfa7b5ebc52221543b4fe3824bf0de85d583f5e851d6487c1c523a9dbd9"
+        },
+        {
+          "file": "caso_07.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 2.754863954179676e-07,
+          "logit_max_error": 9.5367431640625e-07,
+          "class_matches": true,
+          "input_sha256": "1a7424cf829d2958a3a502715da501824054dbde147ed30438410dce23403d9b"
+        },
+        {
+          "file": "caso_08.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 3.421193950359225e-08,
+          "logit_max_error": 4.76837158203125e-07,
+          "class_matches": true,
+          "input_sha256": "0f8a5431130f48fa852851c0797418763cc23c442889d7aae54f469000c48168"
+        },
+        {
+          "file": "caso_09.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 5.906565092583804e-08,
+          "logit_max_error": 9.5367431640625e-07,
+          "class_matches": true,
+          "input_sha256": "874cc34cb2014aad60302189af2b1e89166eaad7a0465042c1e9d66dccaf6446"
+        },
+        {
+          "file": "caso_10.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 1.1869646954210111e-07,
+          "logit_max_error": 1.1920928955078125e-06,
+          "class_matches": true,
+          "input_sha256": "799fbdd48c81a55fad8817a243470cd29955fac406df32bddb70e4dad7750225"
+        }
+      ],
+      "maximum_preprocessing_error": 0.0,
+      "maximum_score_error": 2.754863954179676e-07
+    },
+    "captcha-v3": {
+      "status": "PASS",
+      "sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+      "input_side": 64,
+      "cases": [
+        {
+          "file": "caso_01.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 8.16641770873261e-08,
+          "logit_max_error": 2.86102294921875e-06,
+          "class_matches": true,
+          "input_sha256": "486d522c843780f23417f92d6cc580e4ed6597b8a57a99c5affbc255afe8ff9a"
+        },
+        {
+          "file": "caso_02.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 8.204170320880166e-08,
+          "logit_max_error": 1.6689300537109375e-06,
+          "class_matches": true,
+          "input_sha256": "1cd63c5582b633579d805e31ee2a653ffe7554c79e13b129d0f577aba047e84a"
+        },
+        {
+          "file": "caso_03.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 1.0391077553961736e-08,
+          "logit_max_error": 1.6689300537109375e-06,
+          "class_matches": true,
+          "input_sha256": "574d25fe38973370fedc5021577a0a7e0d29e9a269a893d229361be2d63014a0"
+        },
+        {
+          "file": "caso_04.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 9.13648501299491e-08,
+          "logit_max_error": 1.9073486328125e-06,
+          "class_matches": true,
+          "input_sha256": "22ef41a4b9183fd8a4c2ce6206c830de78a31c29380b0d3a5983734281aa7f59"
+        },
+        {
+          "file": "caso_05.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 1.5518326845764818e-08,
+          "logit_max_error": 9.5367431640625e-07,
+          "class_matches": true,
+          "input_sha256": "5f003b68fe3dcc03346c1a4ad2de1c452c8cff663a5f268e59b0c30f6cb99b8a"
+        },
+        {
+          "file": "caso_06.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 1.8758061770540735e-08,
+          "logit_max_error": 1.9073486328125e-06,
+          "class_matches": true,
+          "input_sha256": "5ea914e8376115156c4ba5da202787208346112bab4cca4e0556e103cf19acc4"
+        },
+        {
+          "file": "caso_07.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 2.558115672623984e-07,
+          "logit_max_error": 9.5367431640625e-07,
+          "class_matches": true,
+          "input_sha256": "2dbb28b7bacc78296ecb773bfd9469b950f18b97712826a6a73ce5e0f6e87725"
+        },
+        {
+          "file": "caso_08.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 5.2477807988005054e-08,
+          "logit_max_error": 2.86102294921875e-06,
+          "class_matches": true,
+          "input_sha256": "82cb6d95a46324f1a3182bfd1531bcfaf1ce6517a14d328434f8b48645e63209"
+        },
+        {
+          "file": "caso_09.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 6.45869637772023e-08,
+          "logit_max_error": 1.3113021850585938e-06,
+          "class_matches": true,
+          "input_sha256": "bf8ad7fe817057b6eb1e34d749685fe456bbd117e9c0800e2adf374de74c6387"
+        },
+        {
+          "file": "caso_10.png",
+          "preprocessing_max_error": 0.0,
+          "score_max_error": 1.3126036191302148e-07,
+          "logit_max_error": 1.9073486328125e-06,
+          "class_matches": true,
+          "input_sha256": "61edf9407df38570490b2283c68d7202a2f6f21764c6df1cf9473cff1ea5bb7b"
+        }
+      ],
+      "maximum_preprocessing_error": 0.0,
+      "maximum_score_error": 2.558115672623984e-07
+    }
+  },
+  "checks": {
+    "raw_pixel_preprocessing_matches_python": true,
+    "inference_from_verified_exported_tensors_matches_python": true,
+    "input_file_hashes_match": true,
+    "frozen_files_unchanged": true
+  },
+  "status": "PASS",
+  "limitations": [
+    "Parity rules out an implementation mismatch on these inputs; it does not establish that preprocessing preserves the best discriminative features.",
+    "This is a local follow-up after prior official exposure, not a fresh blind evaluation or the published GitHub Pages submission.",
+    "No alternate input transforms or model candidates were evaluated."
+  ]
+}

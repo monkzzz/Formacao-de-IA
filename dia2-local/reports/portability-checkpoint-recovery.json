@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "exact_tensors": 20,
+  "original_checkpoint_sha256": "bf3b6424c3f30815de9915b6158ea3d9ebcffa62356b2a6fd5a5243633afbec4",
+  "recovered_checkpoint_sha256": "23cd2cbbb6ee50b47028379b9db960ba29682217686b30b245202253c65fa537",
+  "original_unchanged": true,
+  "scope": "Actual selected residual checkpoint exactly recovered from exported browser tensors; serialized container hashes differ"
+}

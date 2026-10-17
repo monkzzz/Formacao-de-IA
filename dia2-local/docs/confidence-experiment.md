@@ -99,3 +99,22 @@ is a separately scoped improvement using broader independently labelled examples
 and validation; neither more training nor a guaranteed 90%-on-all result is implied
 by this failed attempt. Any subsequent final test must remain separate from model
 selection and must preserve the current version.
+
+## Portable follow-up — 2026-10-17
+
+A third, separately scoped [broad-font and averaged-weight experiment](confidence-broad.md)
+completed eight Linux epochs using the portable open-font bundle and unchanged
+acceptance gates. Its correct-at-90 development gain was 0.25 percentage points,
+below the required 0.5 points. No epoch qualified; reserved tests, candidate browser
+checks and official follow-up were not run. The active model/sites remain intact,
+and the confidence target remains open. See the new protocol/history rather than
+attributing this run to the earlier two experiments.
+
+## Diagnostic and architecture follow-up — 2026-10-17
+
+The separately frozen [diagnostic/consistency/capacity suite](confidence-suite.md)
+completed its independent preprocessing diagnosis and all three four-epoch arms.
+No epoch passed the unchanged development gates. The baseline remains active;
+no reserved evaluation, official follow-up or deployment ran. The
+[measured summary](../reports/captcha-consistency-suite-v1-summary.md) separates
+the synthetic findings from the unresolved official confidence target.

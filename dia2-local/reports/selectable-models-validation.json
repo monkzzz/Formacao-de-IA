@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "checks": {
+    "preserved_models": true,
+    "training_sources_unchanged": true,
+    "fonts_unchanged": true,
+    "split_hash": true,
+    "selected_checkpoint": true,
+    "source_indices_disjoint": true,
+    "supplementary_pixels_disjoint": true,
+    "export_weights": true,
+    "browser_qa": true,
+    "unit_tests": true,
+    "all_epochs_completed": true
+  },
+  "preserved_sha256": {
+    "dist/model/parity.json": "33059d23d38ea1c7acf2cca11d64fd2ea8afb81082f24f63db7db1393bcdf6d7",
+    "dist/model/weights.bin": "8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+    "dist/model/manifest.json": "71247af8e6e04330462d64f210f588c6652f68033802ab0598bfcfd2993ebaa6",
+    "dist/model/captcha-v3/digits/parity.json": "5c5fa7a53c166771079f9271d530a0c1c031c0d914489930e71eb85092a9a551",
+    "dist/model/captcha-v3/digits/weights.bin": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+    "dist/model/captcha-v3/digits/manifest.json": "549f44ecf1fcf01a763917bbff3db1624f455aa4ae3bd908472efc2f648ac99f"
+  },
+  "supplementary_sha256": "2f2a7aaf69845caeacd5cbab02ba56f95956f5ab8657d203b747a83004852c89",
+  "model_selection": {
+    "selected_epoch": 4,
+    "checkpoint_sha256": "f35735452ccf30e77aacf15142fe4ae4b2cd01ce3e9937b2e730686e3a9ffbba",
+    "policy": {
+      "seed": 2026102001,
+      "epochs": 4,
+      "batch_size": 256,
+      "threads": 4,
+      "learning_rate": 0.0002,
+      "minimum_learning_rate": 2e-05,
+      "weight_decay": 0.0001,
+      "synthetic_training_count": 12000,
+      "synthetic_validation_count": 2400,
+      "synthetic_test_count": 2400,
+      "selection": "Minimum equal-weight mean NLL across MNIST, EMNIST and synthetic validation; freeze before test metrics",
+      "role": "Optional supplementary-data experiment; not the required MNIST-only submission or a qualified default replacement",
+      "official_challenge_used": false,
+      "official_challenge_evaluation": "NOT RUN",
+      "test_hygiene": "Test pixels fingerprinted only before training for exact duplicate exclusion; no test labels or metrics used for selection",
+      "limitations": "No writer-disjoint or near-duplicate independence claim; synthetic examples are not collected real CAPTCHAs"
+    },
+    "test_metrics_loaded": false,
+    "source_sha256": {
+      "supplementary.py": "0ce4cb8388181297491038a38a0285d2c5e495509644e719a5fb4eeae09e8132",
+      "supplementary_data.py": "8a89ab15976afa5651900f9fe8f7ec2d746f5ab304ac49766e345249b3b1aec6",
+      "model.py": "bb84e961d40b8ccf857d0ea1c2e05f083e4c8bc17c21ea78b824598fca349a4b",
+      "preprocess.py": "21e0c93a7d12217be49b3d2d9b85b59c05343382d3f4d1b07f32d08212257447",
+      "highres.py": "c4f2c99fcd211061654a8cbcda44b2efa095d7d58f80e8f248ae481100fcf332",
+      "captcha.py": "af3c3770aba1b3e9477806ce424f72fc2c076a8d19254315e1aa1992b0d5ecb2"
+    }
+  },
+  "official_challenge": "NOT RUN",
+  "public_deployment": "NOT RUN",
+  "windows_execution": "NOT RUN",
+  "hosted_ci": "NOT RUN"
+}

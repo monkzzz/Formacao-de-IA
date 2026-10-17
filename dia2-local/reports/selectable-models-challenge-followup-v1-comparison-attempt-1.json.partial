@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "User-requested frozen official follow-up after prior exposure; descriptive comparison only, never training, tuning or model selection",
+  "raw_sha256": "be9c767c54aa1b1cd765a1189261e3782ae30c871b590bdf27c168c009ad2a8a",
+  "freeze_sha256": "52f9e1a1c98f5f035452f3ff5b01e76d9f81a0502c877f32ad18a03193a1411f",
+  "reference_sha256": "e54ff9d8812e27a0fb97f3c337ffadd83c1b3ab89635312616352843d5c4d89b",
+  "models": {
+    "mnist": {
+      "model_sha256": "8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+      "count": 10,
+      "correct": 2,
+      "correct_at_90": 

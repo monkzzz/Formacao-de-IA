@@ -1,5 +1,7 @@
 <div align="center">
 
+Guia de ambiente: [Windows e Linux](PORTABILITY.md).
+
 # Formação de IA
 
 ### Da pesquisa com IA à engenharia de software com agentes

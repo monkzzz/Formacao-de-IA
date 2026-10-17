@@ -1,0 +1,77 @@
+{
+  "groups": {
+    "train": [
+      "notosans/NotoSans[wdth,wght].ttf",
+      "notosans/NotoSans-Italic[wdth,wght].ttf",
+      "notoserif/NotoSerif[wdth,wght].ttf",
+      "notoserif/NotoSerif-Italic[wdth,wght].ttf",
+      "robotoslab/RobotoSlab[wght].ttf",
+      "oswald/Oswald[wght].ttf"
+    ],
+    "development": [
+      "lato/Lato-Regular.ttf",
+      "lato/Lato-Bold.ttf",
+      "lato/Lato-Italic.ttf",
+      "lato/Lato-BoldItalic.ttf"
+    ],
+    "test": [
+      "ubuntu/Ubuntu-Regular.ttf",
+      "ubuntu/Ubuntu-Bold.ttf",
+      "ubuntu/Ubuntu-Italic.ttf",
+      "ubuntu/Ubuntu-BoldItalic.ttf"
+    ]
+  },
+  "sha256": {
+    "notosans/NotoSans[wdth,wght].ttf": "bfb7bb691513f12e734dc346c03a03f784912432d7e3fa8e56efcf906fe86b3d",
+    "notosans/NotoSans-Italic[wdth,wght].ttf": "58e6e0ebd1931b29a365aa2d3e2ee9a9e831a3af7cf3ad1462d4e72154f0b291",
+    "notosans/OFL.txt": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a",
+    "notoserif/NotoSerif[wdth,wght].ttf": "4d8e6761424656867019081a1a01336f3cb086982682698714054fc33f782713",
+    "notoserif/NotoSerif-Italic[wdth,wght].ttf": "e87acbc6c0efd0d9a20d6a8cbbda2b266c14be3a3a6f5af8ec9d7b2460570ad1",
+    "notoserif/OFL.txt": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a",
+    "robotoslab/RobotoSlab[wght].ttf": "786ae192477447d33c6672c3055fba7cbfe45184c9a79e77a14f15716ca05b16",
+    "robotoslab/LICENSE.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "oswald/Oswald[wght].ttf": "5b38c246e255a12f5712d640d56bcced0472466fc68983d2d0410ec0457c2817",
+    "oswald/OFL.txt": "0fd731a904b729a4e02eaf5e8ebd06783edd9abe400e8882760160230675b652",
+    "lato/Lato-Regular.ttf": "d636e4683231f931eda222d588e944d082bfd3bdba02f928bee461c0f185b251",
+    "lato/Lato-Bold.ttf": "8a0aace75d33794eece4b28187bfc1df0bbd2888b5d8a56e01788c8d65d16be1",
+    "lato/Lato-Italic.ttf": "e399c44efe1387100531d26c7e4800c5d12251b890d6654a3098c7c679cb1786",
+    "lato/Lato-BoldItalic.ttf": "62c1b7f0d2e74b45960154c3520efc337b553db0961bfdc950d5618334596cc8",
+    "lato/OFL.txt": "74ba064d03f1f1c4a952da936c3eb71866c34404916734de3cae73b34357e59e",
+    "ubuntu/Ubuntu-Regular.ttf": "3128df86a31805618436d0ae5651ba4285d0c9de0a39057d025f64ee33bceb64",
+    "ubuntu/Ubuntu-Bold.ttf": "679b5c1e09cab3156bb8ef529735f9382bf31ca7ac737382ab959297f8d82ad4",
+    "ubuntu/Ubuntu-Italic.ttf": "4ab857e72f781a8967a6e4a9ac8858fbd6b3a9f9782db349d4b62b78ed02860b",
+    "ubuntu/Ubuntu-BoldItalic.ttf": "875d776e7f33c50b1d1b594791da0eba9865648f232f08bcba00bba9dfa01d96",
+    "ubuntu/UFL.txt": "2f0015108d68627bd788d313f529c21ff4da2c2c42a5e1f3883acc83480f9002"
+  },
+  "sources": {
+    "notosans/NotoSans[wdth,wght].ttf": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/notosans/NotoSans%5Bwdth%2Cwght%5D.ttf",
+    "notosans/NotoSans-Italic[wdth,wght].ttf": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/notosans/NotoSans-Italic%5Bwdth%2Cwght%5D.ttf",
+    "notosans/OFL.txt": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/notosans/OFL.txt",
+    "notoserif/NotoSerif[wdth,wght].ttf": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/notoserif/NotoSerif%5Bwdth%2Cwght%5D.ttf",
+    "notoserif/NotoSerif-Italic[wdth,wght].ttf": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/notoserif/NotoSerif-Italic%5Bwdth%2Cwght%5D.ttf",
+    "notoserif/OFL.txt": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/notoserif/OFL.txt",
+    "robotoslab/RobotoSlab[wght].ttf": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/apache/robotoslab/RobotoSlab%5Bwght%5D.ttf",
+    "robotoslab/LICENSE.txt": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/apache/robotoslab/LICENSE.txt",
+    "oswald/Oswald[wght].ttf": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/oswald/Oswald%5Bwght%5D.ttf",
+    "oswald/OFL.txt": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/oswald/OFL.txt",
+    "lato/Lato-Regular.ttf": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/lato/Lato-Regular.ttf",
+    "lato/Lato-Bold.ttf": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/lato/Lato-Bold.ttf",
+    "lato/Lato-Italic.ttf": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/lato/Lato-Italic.ttf",
+    "lato/Lato-BoldItalic.ttf": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/lato/Lato-BoldItalic.ttf",
+    "lato/OFL.txt": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/lato/OFL.txt",
+    "ubuntu/Ubuntu-Regular.ttf": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ufl/ubuntu/Ubuntu-Regular.ttf",
+    "ubuntu/Ubuntu-Bold.ttf": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ufl/ubuntu/Ubuntu-Bold.ttf",
+    "ubuntu/Ubuntu-Italic.ttf": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ufl/ubuntu/Ubuntu-Italic.ttf",
+    "ubuntu/Ubuntu-BoldItalic.ttf": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ufl/ubuntu/Ubuntu-BoldItalic.ttf",
+    "ubuntu/UFL.txt": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ufl/ubuntu/UFL.txt"
+  },
+  "licenses": {
+    "notosans": "notosans/OFL.txt",
+    "notoserif": "notoserif/OFL.txt",
+    "robotoslab": "robotoslab/LICENSE.txt",
+    "oswald": "oswald/OFL.txt",
+    "lato": "lato/OFL.txt",
+    "ubuntu": "ubuntu/UFL.txt"
+  },
+  "upstream_revision": "47d54ca1ebb14fd864695f1d39dc734f39017c33"
+}

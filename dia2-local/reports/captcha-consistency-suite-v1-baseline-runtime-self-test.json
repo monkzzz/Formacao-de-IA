@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "scope": "Real Chromium/Python math parity; three random inputs, no training/test/challenge samples; extra blocks nonidentity when deep",
+  "checks": [
+    {
+      "logits": 3.814697265625e-06,
+      "hidden": 3.814697265625e-06,
+      "first": 4.76837158203125e-07,
+      "second": 1.0728836059570312e-06
+    },
+    {
+      "logits": 2.86102294921875e-06,
+      "hidden": 1.430511474609375e-06,
+      "first": 4.76837158203125e-07,
+      "second": 7.152557373046875e-07
+    },
+    {
+      "logits": 1.6689300537109375e-06,
+      "hidden": 1.430511474609375e-06,
+      "first": 4.76837158203125e-07,
+      "second": 8.344650268554688e-07
+    }
+  ],
+  "architecture": "residual64-16-32-128"
+}

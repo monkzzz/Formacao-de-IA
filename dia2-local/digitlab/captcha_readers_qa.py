@@ -8,6 +8,8 @@ import io
 import json
 from pathlib import Path
 
+from .platform_support import font_root, resolve_fonts
+
 import numpy as np
 from PIL import Image
 from playwright.sync_api import sync_playwright
@@ -64,7 +66,7 @@ def main():
         directory = ROOT / "artifacts/ddddocr-candidates" / prefix
         directory.mkdir(parents=True, exist_ok=False)
         rng = np.random.default_rng(args.seed)
-        fonts = [Path("C:/Windows/Fonts") / name for name in ("arial.ttf", "times.ttf", "cour.ttf", "tahoma.ttf", "verdana.ttf")]
+        fonts = resolve_fonts(font_root(), ("arial.ttf", "times.ttf", "cour.ttf", "tahoma.ttf", "verdana.ttf"))
         count = args.count if args.stage == "synthetic" else 1
         paths = []
         for i in range(count):

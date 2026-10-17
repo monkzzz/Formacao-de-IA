@@ -16,13 +16,11 @@ from .train import ROOT, write_json
 
 
 def open_browser(playwright):
-    """Use installed Edge without installing another browser."""
-    edge = Path("C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe")
-    if not edge.exists():
-        raise RuntimeError("Microsoft Edge was not found. Set up a supported Playwright browser first.")
+    """Launch an explicit, system or Playwright browser on Windows/Linux."""
+    from .platform_support import launch_browser
     (ROOT / ".tmp").mkdir(exist_ok=True)
     tempfile.tempdir = str(ROOT / ".tmp")
-    return playwright.chromium.launch(executable_path=str(edge), headless=True)
+    return launch_browser(playwright)
 
 
 def main():

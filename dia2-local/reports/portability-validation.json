@@ -1,0 +1,93 @@
+{
+  "status": "PASS: Linux preparation; Windows execution NOT RUN",
+  "linux_setup": {
+    "status": "PASS",
+    "command": "python3 setup_course.py --component day2 --install",
+    "runtime": ".runtime/linux/day2"
+  },
+  "fonts": {
+    "status": "PASS",
+    "fresh_pinned_download": "/tmp/digitlab-portable-fonts-verified",
+    "manifest": "docs/confidence-fonts.json",
+    "revision": "47d54ca1ebb14fd864695f1d39dc734f39017c33",
+    "license_files_preserved": true
+  },
+  "day2_tests": {
+    "status": "PASS",
+    "tests_run": 38,
+    "skipped": [],
+    "report": "portability-linux-unit-tests.json"
+  },
+  "day1_tests": {
+    "status": "PASS with skips",
+    "tests_run": 125,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 4,
+    "scope": "Offline suite in isolated Linux environment; four Tk GUI checks skipped on headless host",
+    "command": "MPLBACKEND=Agg FORMACAO_LMSTUDIO_OFFLINE=1 python -m unittest discover -s tests -t ."
+  },
+  "browser": {
+    "status": "PASS",
+    "report": "portability-linux-classifier-qa.json",
+    "scope": "Preserved baseline digit/letter activation parity, 36 non-challenge uploads, mixed exports, failure recovery and browser-only inference"
+  },
+  "windows": {
+    "status": "NOT RUN",
+    "preparation": "Platform branches unit-tested with mocks; CI matrix added, not dispatched"
+  },
+  "preservation": {
+    "sha256": {
+      "dia2-local/artifacts/captcha-v3/best.pt": "bf3b6424c3f30815de9915b6158ea3d9ebcffa62356b2a6fd5a5243633afbec4",
+      "dia2-local/dist/model/captcha-v3/digits/weights.bin": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+      "dia2-local/dist/model/captcha-v3/digits/manifest.json": "549f44ecf1fcf01a763917bbff3db1624f455aa4ae3bd908472efc2f648ac99f",
+      "dia2-local/reports/challenge-raw.json": "de678c7d21b0e102d4396824192789b005cdb0bb6b38a42acf3171a2cf5b45dc",
+      "dia2-local/reports/challenge-freeze.json": "5f1b5b849fb13d9050ea29e3b5a44c1dc141b397689da57eb3fd0c58103fd15a",
+      "dia2-local/reports/captcha-confidence-v1.json": "0ac77bb345d3d381a3f4e1070e541943702a2598a518e5dc70ceff03f79c26ac",
+      "dia2-local/reports/captcha-confidence-head-v1.json": "9daf925d9d1e7553a3b6249dee1137881e5e8de3fc67584fe5a32cac0404eef9",
+      "dia2-local/artifacts/frozen-app.zip": "f262cfb833677ddc5b8680147607d66bb157db04558766fdd825e6029ea632c5",
+      "dia2-local/dist/index.html": "f6df646761735657fa76d6ceac047b7ffc9672bd41204671d7628af7e275bfc9",
+      "dia2-local/dist/v3/app.js": "9a29eb7a9896582600913489ce65e6cb628319025da217a6e867f1d605ae9fa1",
+      "dia2-local/dist/v3/canvas-tools.js": "d07532ea11f2101ec84aa6126ca2580be1a940782dab0cf181bb862d551685fe",
+      "dia2-local/dist/v3/ctc-digits.js": "e41806b449025f2fac8dfe87b092d1bf98f491626be1f8556bccc12b709ed99e",
+      "dia2-local/dist/v3/digit-reader-worker.js": "966afab855833df9b1849649086ba0c0e88343f717d535f8fb1507365011fdef",
+      "dia2-local/dist/v3/digit-readers.js": "133987dc2aac136cdff0bd0240c08898d1dcdfb002b048f8cf5eab01016f0afd",
+      "dia2-local/dist/v3/helper-knowledge.js": "fb37f4408540451ecceb8524a693687684a6f06b69e312c99e799f4a5b10dac9",
+      "dia2-local/dist/v3/helper.js": "249dcc5028dfefc1cb5f1dbad30520bc0bcef3a7c256552a949d3f155079decc",
+      "dia2-local/dist/v3/inference.js": "98755d4b758326c16ab179c13eb725630cefd5ee9673061b2ef6359560e43dc4",
+      "dia2-local/dist/v3/konami.js": "0b8d48b711b85c3b2687064514c48e4731cdaf9d0b2aaf8461003cfb10ad35b5",
+      "dia2-local/dist/v3/preprocess.js": "170ad3280aa835bb0ad0efd5d65cd2ea507c1c3cd680b092cfc0e95537db3e3c",
+      "dia2-local/dist/v3/residual.js": "1b454e6acd7b97d7a8f1904ea97c4f382f0b97a6b9d924981e459a8bd972353a",
+      "dia2-local/dist/v3/snes.js": "dcb4e58382d349ea98acd7a29d7ac8be537f2dd496b895f1d16d0f1e9a0f8fb2",
+      "dia2-local/dist/v3/words-worker.js": "289712ffd1bb65c517def0c9b53fe0d2713775bf0db409b3f39cafbe495245c0",
+      "dia2-local/dist/v3/words.js": "bf13e41c41c27c5049607040c12bdc3139e63b0f408cce8e27ad054be34813b9"
+    },
+    "unchanged": true
+  },
+  "limitations": [
+    "Full Windows execution not performed",
+    "Historical font-specific experiments still require exact original licensed fonts",
+    "No public deployment or official-image inference performed for portability",
+    "Browser weights must be recovered from the documented host before source-only checkouts can reconstruct the selected checkpoint; historical checkpoints/optimizer state are not supplied"
+  ],
+  "day1_gui_followup": {
+    "status": "PASS",
+    "tests_run": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "command": "xvfb-run -a python -m unittest tests.test_ml_vision_yolo.VisionGuiTests -v",
+    "scope": "The four previously skipped checks ran under a virtual display; not manual desktop interaction"
+  },
+  "focused_checkpoint_recovery_test": {
+    "status": "PASS",
+    "tests_run": 1,
+    "failures": 0,
+    "errors": 0
+  },
+  "checkpoint_recovery": {
+    "status": "PASS",
+    "report": "portability-checkpoint-recovery.json",
+    "scope": "All selected residual tensors exactly recovered from verified browser export; existing checkpoint unchanged"
+  }
+}

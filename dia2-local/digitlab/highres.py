@@ -4,6 +4,8 @@ import argparse
 from functools import lru_cache
 import hashlib
 from pathlib import Path
+
+from .platform_support import font_root, resolve_fonts
 import platform
 import time
 
@@ -173,8 +175,8 @@ def run(args):
     destination = ROOT / "dist/model" / args.name / "digits"
     if directory.exists() or report_path.exists() or destination.exists():
         raise SystemExit("Preserve existing experiments; choose a new --name")
-    train_fonts = [args.fonts / name for name in TRAIN_FONTS + EXTRA_FONTS]
-    heldout_fonts = [args.fonts / name for name in HELDOUT_FONTS]
+    train_fonts = resolve_fonts(args.fonts, TRAIN_FONTS + EXTRA_FONTS)
+    heldout_fonts = resolve_fonts(args.fonts, HELDOUT_FONTS)
     for path in train_fonts + heldout_fonts:
         if not path.is_file():
             raise SystemExit(f"Missing font: {path}")
@@ -273,7 +275,7 @@ def main():
     parser.add_argument("--epochs", type=int, default=12)
     parser.add_argument("--samples", type=int, default=40000)
     parser.add_argument("--threads", type=int, default=4)
-    parser.add_argument("--fonts", type=Path, default=Path("C:/Windows/Fonts"))
+    parser.add_argument("--fonts", type=Path, default=font_root())
     args = parser.parse_args()
     if not args.name.replace("-", "").isalnum() or min(args.epochs, args.samples, args.threads) < 1:
         parser.error("Use a simple experiment name and positive counts")

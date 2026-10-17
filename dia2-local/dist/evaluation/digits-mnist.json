@@ -1,0 +1,135 @@
+{
+  "model": "mnist",
+  "model_sha256": "8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+  "training_scope": "Required MNIST-only course model; historical evaluation",
+  "mnist_test": {
+    "count": 10000,
+    "loss": 0.021777823567390442,
+    "accuracy": 0.9927999973297119,
+    "correct": 9928,
+    "confusion_matrix": [
+      [
+        976,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1130,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        0
+      ],
+      [
+        2,
+        0,
+        1024,
+        1,
+        1,
+        0,
+        0,
+        3,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1006,
+        0,
+        0,
+        0,
+        1,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        979,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        4,
+        0,
+        886,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        2,
+        1,
+        0,
+        2,
+        0,
+        949,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1021,
+        1,
+        3
+      ],
+      [
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        0,
+        1,
+        965,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        8,
+        3,
+        0,
+        3,
+        2,
+        992
+      ]
+    ]
+  },
+  "official_challenge_for_this_change": "NOT RUN",
+  "results_origin": "Preserved model manifest; no new evaluation implied"
+}

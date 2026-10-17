@@ -9,6 +9,8 @@ from datetime import datetime, timezone
 import hashlib
 import json
 from pathlib import Path
+
+from .platform_support import font_root, resolve_fonts
 import platform
 import time
 
@@ -107,10 +109,10 @@ def main():
     baseline_path = ROOT / "artifacts/captcha-v3/best.pt"
     baseline = ResidualCNN()
     baseline.load_state_dict(torch.load(baseline_path, map_location="cpu", weights_only=True))
-    fonts = Path("C:/Windows/Fonts")
-    train_fonts = [fonts / name for name in TRAIN_FONTS + EXTRA_FONTS + ADDED_FONTS]
-    dev_fonts = [fonts / name for name in DEV_FONTS]
-    test_fonts = [fonts / name for name in TEST_FONTS]
+    fonts = font_root()
+    train_fonts = resolve_fonts(fonts, TRAIN_FONTS + EXTRA_FONTS + ADDED_FONTS)
+    dev_fonts = resolve_fonts(fonts, DEV_FONTS)
+    test_fonts = resolve_fonts(fonts, TEST_FONTS)
     for path in train_fonts + dev_fonts + test_fonts:
         if not path.is_file():
             raise SystemExit(f"Missing font: {path.name}")

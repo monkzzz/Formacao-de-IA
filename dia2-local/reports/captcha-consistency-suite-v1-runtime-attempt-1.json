@@ -1,0 +1,7 @@
+{
+  "status": "FAIL",
+  "stage": "runtime self-test readiness predicate",
+  "error": "Bare function expression in Playwright wait_for_function was invoked without input; predictor received null",
+  "correction": "Wait for typeof window.fixturePredict to equal function; invoke it explicitly only in parity cases",
+  "scope": "Harness readiness error after model loaded; not a model accuracy result; no official or held-out samples used"
+}

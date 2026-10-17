@@ -1,0 +1,23 @@
+{
+  "reason": "NumPy boolean aggregation produced an int64 count that standard JSON cannot serialize",
+  "failed_output_preserved": "reports/selectable-models-challenge-followup-v1-comparison-attempt-1.json.partial",
+  "before_sha256": {
+    "reports/selectable-models-challenge-followup-v1-raw.json": "be9c767c54aa1b1cd765a1189261e3782ae30c871b590bdf27c168c009ad2a8a",
+    "reports/selectable-models-challenge-followup-v1-freeze.json": "52f9e1a1c98f5f035452f3ff5b01e76d9f81a0502c877f32ad18a03193a1411f",
+    "digitlab/confidence_suite_browser.py": "8bde86990d87d1f0c55a8ae5a0532eb94eee870082743939be22b731a658fe93"
+  },
+  "inference_repeated": false,
+  "status": "PASS",
+  "frozen_raw_and_identity_unchanged": {
+    "reports/selectable-models-challenge-followup-v1-raw.json": true,
+    "reports/selectable-models-challenge-followup-v1-freeze.json": true
+  },
+  "fix": "Convert the post-recording correct_at_90 flag to a native Python bool before aggregation; no inference code or weights changed",
+  "comparison_helper_after_sha256": "3b23be37a517a381ad1f8924917eee589a0a7c804f556af23c206fd52c804ea8",
+  "regression_tests": {
+    "command": "python -m unittest tests.test_confidence_comparison -v",
+    "tests_run": 2,
+    "status": "PASS"
+  },
+  "completed_comparison_sha256": "b4bcdb0d85d35e1a34ff0c941db89e5063e27f89be5ae449524179d7e891aa4f"
+}

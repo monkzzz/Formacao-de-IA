@@ -7,6 +7,8 @@ import io
 import json
 import time
 from pathlib import Path
+
+from .platform_support import font_root, resolve_fonts
 from urllib.request import urlopen
 
 from PIL import Image, ImageDraw, ImageFont
@@ -76,7 +78,7 @@ def fixtures(split, count, offset=0, stride=1):
              ["Welcome", "Today", "Computer", "Science", "School", "Private", "Neural", "Reading"])
     if split == "test" and offset:
         words = ["Tomorrow", "Example", "Human", "Window", "Letter", "Student", "People", "Friendly"]
-    font = ImageFont.truetype("C:/Windows/Fonts/segoepr.ttf", 80)
+    font = ImageFont.truetype(str(resolve_fonts(font_root(), ["segoepr.ttf"])[0]), 80)
     for i, word in enumerate(words):
         box = font.getbbox(word)
         image = Image.new("RGB", (box[2] - box[0] + 60, box[3] - box[1] + 60), "white")

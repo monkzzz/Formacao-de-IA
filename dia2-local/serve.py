@@ -12,9 +12,9 @@ from urllib.request import urlopen
 def prepare_models(root, download=False):
     """Check current release weights; optionally restore verified public copies."""
     missing = []
-    for mode in ("digits", "letters"):
-        experiment = "captcha-v3" if mode == "digits" else "robust"
-        folder = root / "model" / experiment / mode
+    for relative in ("model", "model/captcha-v3/digits", "model/robust/letters"):
+        folder = root / relative
+        mode = "letters" if relative.endswith("letters") else "digits"
         manifest = json.loads((folder / "manifest.json").read_text(encoding="utf-8"))
         target = folder / "weights.bin"
         if target.exists():
@@ -22,7 +22,7 @@ def prepare_models(root, download=False):
         if not download:
             missing.append(str(target.relative_to(root)))
             continue
-        url = f"https://naoquerosaber.pt/AI/model/{experiment}/{mode}/weights.bin"
+        url = f"https://naoquerosaber.pt/AI/{relative}/weights.bin"
         print(f"Downloading {mode} weights...", flush=True)
         with urlopen(url, timeout=60) as response:
             data = response.read(manifest["bytes"] + 1)
@@ -35,6 +35,9 @@ def prepare_models(root, download=False):
     if missing:
         print("Missing trained models: " + ", ".join(missing), flush=True)
         print("Run: python serve.py --download-models", flush=True)
+    supplementary = root / "model/mnist-supplementary-v1/digits"
+    if (supplementary / "manifest.json").exists() and not (supplementary / "weights.bin").exists():
+        print("Missing optional supplementary weights. Restore the matching local artifact, or follow docs/selectable-models.md to reproduce training; this model is not downloaded from the public release.", flush=True)
 
 
 def main():

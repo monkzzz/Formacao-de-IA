@@ -38,9 +38,9 @@ class ResidualTests(unittest.TestCase):
         self.assertFalse(test & previous)
 
     def test_raw_mixture_reproducibility_and_source_isolation(self):
-        font = Path("C:/Windows/Fonts/arial.ttf")
+        font = Path(__file__).resolve().parents[1] / "data/open-fonts/lato/Lato-Regular.ttf"
         if not font.exists():
-            self.skipTest("Font fixture unavailable")
+            self.skipTest("Run python ../setup_course.py --fonts to obtain the portable font fixture")
         images = np.zeros((2, 28, 28), np.uint8)
         images[:, 4:24, 12:16] = 255
         labels = np.array([1, 7])

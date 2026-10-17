@@ -1,0 +1,135 @@
+{
+  "model": "captcha-v3",
+  "model_sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+  "training_scope": "Preserved previous default: MNIST + independent synthetic training; historical evaluation",
+  "mnist_test": {
+    "count": 10000,
+    "correct": 9910,
+    "accuracy": 0.991,
+    "loss": 0.026058243587613106,
+    "confusion_matrix": [
+      [
+        977,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      [
+        0,
+        1129,
+        1,
+        0,
+        0,
+        0,
+        2,
+        3,
+        0,
+        0
+      ],
+      [
+        2,
+        1,
+        1024,
+        0,
+        0,
+        0,
+        0,
+        3,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1004,
+        0,
+        4,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        978,
+        0,
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        0,
+        4,
+        0,
+        881,
+        2,
+        1,
+        0,
+        1
+      ],
+      [
+        4,
+        2,
+        1,
+        0,
+        2,
+        2,
+        945,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        3,
+        6,
+        0,
+        0,
+        0,
+        0,
+        1018,
+        1,
+        0
+      ],
+      [
+        1,
+        2,
+        1,
+        1,
+        0,
+        1,
+        0,
+        2,
+        964,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        7,
+        3,
+        0,
+        7,
+        2,
+        990
+      ]
+    ]
+  },
+  "official_challenge_for_this_change": "NOT RUN",
+  "results_origin": "Preserved model manifest; no new evaluation implied"
+}

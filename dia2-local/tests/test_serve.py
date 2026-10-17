@@ -34,9 +34,9 @@ class ModelSetupTests(unittest.TestCase):
                 patch.object(Path, "write_bytes") as write, \
                 patch.object(Path, "replace") as replace:
             prepare_models(Path("dist"), download=True)
-        self.assertEqual(write.call_count, 2)
+        self.assertEqual(write.call_count, 3)
         write.assert_called_with(self.data)
-        self.assertEqual(replace.call_count, 2)
+        self.assertEqual(replace.call_count, 3)
 
     def test_wrong_hash_or_size_never_writes_weights(self):
         for data in (b"x" * len(self.data), self.data + b"x"):

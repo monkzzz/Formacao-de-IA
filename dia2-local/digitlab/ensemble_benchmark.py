@@ -9,6 +9,8 @@ from functools import lru_cache
 import hashlib
 import json
 from pathlib import Path
+
+from .platform_support import font_root, resolve_fonts
 import platform
 
 import numpy as np
@@ -181,7 +183,7 @@ def run(args):
     report_path = ROOT / "reports" / f"{NAME}-{args.stage}.json"
     if report_path.exists() or (directory / f"{args.stage}.npz").exists():
         raise SystemExit("Stage already exists; preserve its evidence")
-    fonts = [args.fonts / name for name in (DEV_FONTS if args.stage == "development" else TEST_FONTS)]
+    fonts = resolve_fonts(args.fonts, DEV_FONTS if args.stage == "development" else TEST_FONTS)
     for path in fonts:
         if not path.is_file():
             raise SystemExit(f"Missing required font: {path}")
@@ -243,7 +245,7 @@ def run(args):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--stage", choices=("development", "test"), required=True)
-    parser.add_argument("--fonts", type=Path, default=Path("C:/Windows/Fonts"))
+    parser.add_argument("--fonts", type=Path, default=font_root())
     run(parser.parse_args())
 
 

@@ -15,3 +15,5 @@ dist/model/robust/*/*.bin
 dist/model/robust/*/parity.json
 dist/model/captcha-*/*/*.bin
 dist/model/captcha-*/*/parity.json
+dist/model/mnist-supplementary-*/*/*.bin
+dist/model/mnist-supplementary-*/*/parity.json

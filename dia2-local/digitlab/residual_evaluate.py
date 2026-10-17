@@ -4,6 +4,8 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+
+from .platform_support import font_root, resolve_fonts
 import platform
 
 import numpy as np
@@ -71,7 +73,7 @@ def run(stage):
     images, labels = load_partition(ROOT.parent / "Dia2/Dataset-MNIST/data", False)
     clean = torch.from_numpy(prepare_mnist(images, 64))
     targets = torch.from_numpy(labels.astype(np.int64))
-    fonts = [Path("C:/Windows/Fonts") / name for name in TEST_FONTS]
+    fonts = resolve_fonts(font_root(), TEST_FONTS)
     print("Opening fresh 20,000-image synthetic test, with separate font families...", flush=True)
     raw, raw_y = make_raw(images, labels, np.arange(len(labels)), fonts, POLICY["test_count"], SEED + 2,
                           directory / "fixtures")

@@ -5,6 +5,8 @@ import copy
 import hashlib
 from io import BytesIO
 from pathlib import Path
+
+from .platform_support import font_root, resolve_fonts
 import time
 
 import numpy as np
@@ -114,10 +116,10 @@ def run(args):
     report = ROOT / "reports" / f"{NAME}.json"
     if directory.exists() or report.exists():
         raise SystemExit("Preserve existing experiment")
-    fonts = Path("C:/Windows/Fonts")
-    train_fonts = [fonts / n for n in TRAIN_FONTS + EXTRA_FONTS + ADDED_FONTS]
-    dev_fonts = [fonts / n for n in DEV_FONTS]
-    for p in train_fonts + dev_fonts + [fonts / n for n in TEST_FONTS]:
+    fonts = font_root()
+    train_fonts = resolve_fonts(fonts, TRAIN_FONTS + EXTRA_FONTS + ADDED_FONTS)
+    dev_fonts = resolve_fonts(fonts, DEV_FONTS)
+    for p in train_fonts + dev_fonts + resolve_fonts(fonts, TEST_FONTS):
         if not p.is_file():
             raise SystemExit(f"Missing font: {p}")
     directory.mkdir(parents=True)

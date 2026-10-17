@@ -11,6 +11,12 @@ Python exigem preparação própria. O módulo 3 e os exercícios antigos não e
 incluídos. Os exercícios UCI de dígitos usam imagens 8×8 e são independentes do
 projeto MNIST 28×28 do Dia 2.
 
+## Windows e Linux
+
+O [guia comum](../../PORTABILITY.md) prepara ambientes separados nos dois sistemas.
+Em Linux, usar `bin/python` em vez de `Scripts/python.exe` e instalar Tk para as
+janelas. Os comandos PowerShell seguintes continuam disponíveis para Windows.
+
 ## Preparar e executar
 
 Python 3.10 ou superior, com Tk disponível para as janelas. Na raiz do repositório:

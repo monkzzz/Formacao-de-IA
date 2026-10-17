@@ -16,9 +16,9 @@ export async function loadModel(mode = "digits", digitExperiment = DEFAULT_DIGIT
   if (!["digits", "letters"].includes(mode)) throw new Error("Unknown recognition mode.");
   if (!globalThis.crypto?.subtle) throw new Error("Open the HTTPS version of this page to load the verified model.");
   const labels = mode === "letters" ? Array.from("ABCDEFGHIJKLMNOPQRSTUVWXYZ") : Array.from("0123456789");
-  if (!["robust", "captcha-v1", "captcha-v2", "captcha-v3"].includes(digitExperiment)) throw new Error("Unknown digit experiment.");
+  if (!["mnist", "mnist-supplementary-v1", "robust", "captcha-v1", "captcha-v2", "captcha-v3"].includes(digitExperiment)) throw new Error("Unknown digit experiment.");
   const experiment = mode === "digits" ? digitExperiment : "robust";
-  const base = `./model/${experiment}/${mode}/`;
+  const base = mode === "digits" && experiment === "mnist" ? "./model/" : `./model/${experiment}/${mode}/`;
   const response = await fetch(base + "manifest.json?v=captcha-3", {cache: "no-store"});
   if (!response.ok) throw new Error(`Cannot load the ${mode} model. Check that its model folder was uploaded.`);
   const manifest = await response.json();

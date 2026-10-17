@@ -24,7 +24,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--stage", choices=["export", "qa", "official"], required=True)
     parser.add_argument("--url", default="http://127.0.0.1:8878/")
-    parser.add_argument("--experiment", choices=[NAME, "captcha-confidence-head-v1"], default=NAME)
+    parser.add_argument("--experiment", choices=[NAME, "captcha-confidence-head-v1", "captcha-confidence-broad-v1"], default=NAME)
     args = parser.parse_args()
     experiment = args.experiment
     directory = ROOT / "artifacts" / experiment
