@@ -17,6 +17,15 @@ Issue numbers begin at 2; this does not establish an earlier Issue #1 or approva
 | challenge | [#6 Frozen challenge evidence](https://github.com/monkzzz/Formacao-de-IA/issues/6) | #2 | Index and preserve existing frozen records without tuning/retest |
 | instructor | [#7 Process decisions](https://github.com/monkzzz/Formacao-de-IA/issues/7) | Instructor recipient/channel and actual response | Prepared request available; external dependency |
 
+## Pages follow-up — 2026-10-17
+
+The participant explicitly requested the Pages task. The separate site is now
+published and verified; [deployment evidence](pages-publication.md) and
+[Issue #5 closure receipt](pages-issue-closure.json) supersede its earlier hosting
+dependency. Current open Issues are #2, #3 and #7; #4, #5 and #6 are closed.
+The original site/development remain intact and teacher contact stays deferred.
+The dated synchronization statements below describe the earlier batch.
+
 ## Current evidence reconciliation — 2026-10-17
 
 The table above preserves the initial Issue-publication scope. Evidence-index,
