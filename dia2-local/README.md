@@ -1,5 +1,10 @@
 # Digit Lab — Local Desafio Project
 
+**Independent preprocessing study:** the fixed-weight comparison selected small-component
+cleanup on development data and passed an isolated 60-upload browser parity check.
+The active app and models are unchanged; the official confidence target is still unmet.
+See [results, trade-offs and limits](reports/fixed-weight-preprocessing-v1-summary.md).
+
 **Local v3.11.0, not deployed:** choose **Digits → Digit Lab CNN → CNN training
 data** to use the preserved **MNIST-only course model** (default), the separate
 **MNIST + EMNIST/synthetic extension**, or the unchanged previous residual model.

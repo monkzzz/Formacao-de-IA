@@ -1,0 +1,15 @@
+{
+  "scope": "Isolated development parity; fixed weights; no reserved/official challenge inference",
+  "files": {
+    "index.html": "9fbbb87789b2df071f0d86b3865cb6ec76d281f9b1323c1119ebd711525a9cbb",
+    "v3/inference.js": "540ec962500ed162ce1871c716cc82b77b630a53e651caffd3a3f27935091690",
+    "v3/residual.js": "1b454e6acd7b97d7a8f1904ea97c4f382f0b97a6b9d924981e459a8bd972353a",
+    "v3/preprocess.js": "22184ac394254c03cdb7bc20da25e78a57cda0d8033706f3518f4bfe0b5921f7",
+    "model/captcha-v3/digits/weights.bin": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+    "model/captcha-v3/digits/manifest.json": "5c4a3e79bce5a3de1bc630ba7383c97019d2a1444e1351e21e5a87a8febec54a"
+  },
+  "model_sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+  "preprocessing": "border-gray-bilinear-com-64-small-components-v1",
+  "helper_sha256": "6f43f267a109828881c37f85d47d59a5b5f0727033650d8e4c2f7f7de63b5e13",
+  "study_report_sha256": "d8bf488a65a6152a930dd321ba56493a6ac0510fa30e2ef193374da1fd359daf"
+}

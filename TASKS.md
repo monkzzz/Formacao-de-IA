@@ -189,6 +189,8 @@ Supplementary training is acceptable as a separately documented extension.
 See [the explicit acceptance policy](dia2-local/docs/professor-acceptance.md).
 Historical >=90% reports retain their original definitions; this target remains unmet.
 
+- [x] Start the controlled improvement recommendation with a [fixed-weight independent preprocessing study](dia2-local/docs/preprocessing-study.md). [Measured results](dia2-local/reports/fixed-weight-preprocessing-v1-summary.md): small-component cleanup raises correct-and-strictly->90% development coverage from 93.889% to 95.222%, while raw accuracy decreases from 98.222% to 98.167%; clean MNIST validation accuracy remains 99.30%. It meets the predeclared gates and passes 60 isolated browser uploads, exact prepared-input parity, score/activation parity and 57 unit tests. This is a development candidate only: no new training, reserved/official evaluation, active-app replacement or deployment ran. Human readability review remains NOT RUN. Pushing was cancelled by the participant.
+
 Source: [challenge evaluation instructions](Dia2/Exercicio-03/Parte-04-Teste-do-Desafio.md).
 
 - [x] Original frozen local evaluation and separate comparison exist: 99.28% MNIST and 2/10 official CAPTCHA cases.

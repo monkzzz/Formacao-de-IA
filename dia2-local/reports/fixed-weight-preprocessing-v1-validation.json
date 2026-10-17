@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "checks": {
+    "preserved_models_app_archive": true,
+    "study_sources": true,
+    "predeclared_protocol": true,
+    "fonts": true,
+    "split_file": true,
+    "record_file": true,
+    "score_file": true,
+    "raw_fixture_files": true,
+    "source_indices_disjoint": true,
+    "handwriting_uses_only_development_sources": true,
+    "balanced_digit_source_cells": true,
+    "strict_counts_match_saved_scores": true,
+    "browser_qa": true,
+    "preview_files": true,
+    "preview_helper": true,
+    "preview_uses_frozen_study": true,
+    "unit_tests": true
+  },
+  "selected_variant": "small_components",
+  "model_sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+  "human_readability_review": "NOT RUN",
+  "reserved_test": "NOT RUN",
+  "official_challenge": "NOT RUN",
+  "new_model_training": "NOT RUN",
+  "active_app_replacement": "NOT RUN",
+  "push": "CANCELLED by participant"
+}

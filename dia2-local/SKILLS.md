@@ -1,5 +1,12 @@
 # Digit Lab task workflows
 
+The new fixed-weight preprocessing phase uses `digitlab.preprocessing_study`,
+`digitlab.preprocessing_preview` and `digitlab.preprocessing_study_report`.
+Follow [the predeclared protocol](docs/preprocessing-study.md) and preserve the
+[completed results](reports/fixed-weight-preprocessing-v1-summary.md).
+The selected small-component cleanup passed development and isolated browser
+checks only; it is not part of the active application or a verified official result.
+
 Local v3.11.0 separates a default MNIST-only course model from the supplementary
 experiment and preserved residual model. Follow
 [the selectable-model workflow](docs/selectable-models.md) and run

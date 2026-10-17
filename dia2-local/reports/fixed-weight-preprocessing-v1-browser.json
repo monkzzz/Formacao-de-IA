@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "freeze_sha256": "5e9cd0bc22461bcdeb5e1aec11909aa95ef7e2c8af9135e726e8b6118b4dff28",
+  "model_sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+  "preprocessing": "border-gray-bilinear-com-64-small-components-v1",
+  "reserved_or_official_evaluation": "NOT RUN",
+  "publication": "NOT RUN",
+  "uploads": 60,
+  "preprocessing_max_error": 0.0,
+  "scores_max_error": 2.428789025454847e-07,
+  "activations": [
+    {
+      "logits": 3.814697265625e-06,
+      "pool1": 7.152557373046875e-07,
+      "pool2": 1.430511474609375e-06,
+      "hidden": 1.6689300537109375e-06
+    },
+    {
+      "logits": 2.86102294921875e-06,
+      "pool1": 4.76837158203125e-07,
+      "pool2": 1.1920928955078125e-06,
+      "hidden": 1.430511474609375e-06
+    },
+    {
+      "logits": 1.9073486328125e-06,
+      "pool1": 7.152557373046875e-07,
+      "pool2": 1.430511474609375e-06,
+      "hidden": 3.337860107421875e-06
+    }
+  ],
+  "median_inference_ms": 34.05000000074506,
+  "p95_inference_ms": 38.75999999903142,
+  "static_get_requests": 6,
+  "page_errors": []
+}
