@@ -1,0 +1,21 @@
+# Local environments, downloads and generated outputs
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+node_modules/
+.cache/
+artifacts/
+dist/
+# Credentials: commit variable names and safe examples only
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets/
+# Model weights are transferred as verified external artifacts
+*.pt
+*.pth
+*.onnx
+*.safetensors

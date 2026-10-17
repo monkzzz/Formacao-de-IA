@@ -1,0 +1,102 @@
+Rede 2–2–2 sem treino. Probabilidades (0, 5): [0.38039134 0.61960866]
+Rede 2-2-2, label 5, uma atualização: perda 0.478667 -> 0.416742.
+........................................................EE...................................................................
+======================================================================
+ERROR: test_download_is_cached_for_later_calls (tests.test_ml_exercises.DatasetCacheTests.test_download_is_cached_for_later_calls)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\falle\Nextcloud\dev_server\IA_Formation\Formacao-de-IA\Dia1\Exercicios-GSS\modulo1\apoio\dataset_cache.py", line 32, in load_dataset_archive
+    archive_path.write_bytes(archive_bytes)
+  File "C:\Users\falle\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1036, in write_bytes
+    with self.open(mode='wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\falle\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\.cache\\test-temp\\tmp_hhrnvqr\\data.zip'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\falle\Nextcloud\dev_server\IA_Formation\Formacao-de-IA\Dia1\Exercicios-GSS\tests\test_ml_exercises.py", line 55, in test_download_is_cached_for_later_calls
+    first = dataset_cache.load_dataset_archive("https://example.test/data", "data.zip", "test")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\falle\Nextcloud\dev_server\IA_Formation\Formacao-de-IA\Dia1\Exercicios-GSS\modulo1\apoio\dataset_cache.py", line 34, in load_dataset_archive
+    raise RuntimeError(
+RuntimeError: O dataset foi descarregado, mas nao pode ser guardado em C:\Users\falle\Nextcloud\dev_server\IA_Formation\Formacao-de-IA\Dia1\Exercicios-GSS\.cache\test-temp\tmp_hhrnvqr\data.zip.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen os>", line 366, in walk
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\.cache\\test-temp\\tmp_hhrnvqr'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\falle\Nextcloud\dev_server\IA_Formation\Formacao-de-IA\Dia1\Exercicios-GSS\tests\test_ml_exercises.py", line 50, in test_download_is_cached_for_later_calls
+    with tempfile.TemporaryDirectory() as directory:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\falle\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\falle\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\falle\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\falle\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\falle\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 623, in _rmtree_unsafe
+    for dirpath, dirnames, filenames in results:
+                                        ^^^^^^^
+  File "<frozen os>", line 369, in walk
+  File "C:\Users\falle\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 621, in onerror
+    onexc(os.scandir, err.filename, err)
+  File "C:\Users\falle\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\falle\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\falle\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\.cache\\test-temp\\tmp_hhrnvqr'
+
+======================================================================
+ERROR: test_offline_download_error_explains_how_to_resolve (tests.test_ml_exercises.DatasetCacheTests.test_offline_download_error_explains_how_to_resolve)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<frozen os>", line 366, in walk
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\.cache\\test-temp\\tmpxow_igdy'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\falle\Nextcloud\dev_server\IA_Formation\Formacao-de-IA\Dia1\Exercicios-GSS\tests\test_ml_exercises.py", line 63, in test_offline_download_error_explains_how_to_resolve
+    with tempfile.TemporaryDirectory() as directory:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\falle\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+  File "C:\Users\falle\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\falle\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\falle\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\falle\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 623, in _rmtree_unsafe
+    for dirpath, dirnames, filenames in results:
+                                        ^^^^^^^
+  File "<frozen os>", line 369, in walk
+  File "C:\Users\falle\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 621, in onerror
+    onexc(os.scandir, err.filename, err)
+  File "C:\Users\falle\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+  File "C:\Users\falle\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\falle\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\.cache\\test-temp\\tmpxow_igdy'
+
+----------------------------------------------------------------------
+Ran 125 tests in 119.754s
+
+FAILED (errors=2)

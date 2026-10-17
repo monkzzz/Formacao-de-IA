@@ -1,0 +1,1107 @@
+{
+  "started_utc": "2026-10-17T10:20:16.471942+00:00",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "executable": "Dia1\\Exercicios-GSS\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "backend": "TkAgg",
+  "mode": "real Tk windows; scripted callbacks and dispatched mouse events; figure exports",
+  "language_outputs": "recorded responses; attention is hand-authored didactic data",
+  "packages": {
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2",
+    "Pillow": "13.0.0",
+    "torch": "2.14.1",
+    "ultralytics": "8.4.176"
+  },
+  "provenance_sha256": "ce230a1a5d936bf59fe52c057300c0fb2e16d48e41c796fa1ecde5b82825efb7",
+  "entries": [
+    {
+      "command": [
+        "C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\modulo2\\dia1_modulo2_03_attention.py"
+      ],
+      "cwd": "Dia1\\Exercicios-GSS",
+      "exit_code": 0,
+      "log": "entry-03.txt",
+      "path": "Dia1\\Exercicios-GSS\\modulo2\\dia1_modulo2_03_attention.py",
+      "sha256": "b55c5bf561625754f691dd06e931d787cec7f3f8fd9ab0183e049b42128ce6da"
+    },
+    {
+      "command": [
+        "C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\modulo2\\dia1_modulo2_04_proximo_token.py"
+      ],
+      "cwd": "Dia1\\Exercicios-GSS",
+      "exit_code": 0,
+      "log": "entry-04.txt",
+      "path": "Dia1\\Exercicios-GSS\\modulo2\\dia1_modulo2_04_proximo_token.py",
+      "sha256": "53dd23b19acc8007cb6e3a02763cbbceb94456c4d437583d4b08af0e75de2ef5"
+    },
+    {
+      "command": [
+        "C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\modulo2\\dia1_modulo2_05_laboratorio_prompts.py"
+      ],
+      "cwd": "Dia1\\Exercicios-GSS",
+      "exit_code": 0,
+      "log": "entry-05.txt",
+      "path": "Dia1\\Exercicios-GSS\\modulo2\\dia1_modulo2_05_laboratorio_prompts.py",
+      "sha256": "95cea89f49c21f57f2c215523263789583cabfe26d359d0aebd8cbfa2ed0514e"
+    },
+    {
+      "command": [
+        "C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\modulo2\\dia1_modulo2_06_imagem_texto.py"
+      ],
+      "cwd": "Dia1\\Exercicios-GSS",
+      "exit_code": 0,
+      "log": "entry-06.txt",
+      "path": "Dia1\\Exercicios-GSS\\modulo2\\dia1_modulo2_06_imagem_texto.py",
+      "sha256": "a39d0ae8b4c283621fe60ce719a90db55df8e10a7f78931f814b8ebb43c32556"
+    }
+  ],
+  "attention": {
+    "tokens": [
+      "A",
+      "peça",
+      "era",
+      "frágil",
+      ",",
+      "por",
+      "isso",
+      "coloquei",
+      "-",
+      "a",
+      "na",
+      "caixa",
+      "."
+    ],
+    "causal_matrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.4736842105263158,
+        0.5263157894736842,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.06818181818181818,
+        0.7045454545454545,
+        0.22727272727272727,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.04918032786885246,
+        0.4426229508196721,
+        0.34426229508196726,
+        0.1639344262295082,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.07894736842105263,
+        0.07894736842105263,
+        0.07894736842105263,
+        0.5,
+        0.2631578947368421,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.09677419354838711,
+        0.09677419354838711,
+        0.09677419354838711,
+        0.09677419354838711,
+        0.2903225806451613,
+        0.32258064516129037,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.04687499999999999,
+        0.04687499999999999,
+        0.04687499999999999,
+        0.296875,
+        0.04687499999999999,
+        0.35937499999999994,
+        0.15625,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.05084745762711864,
+        0.22033898305084745,
+        0.05084745762711864,
+        0.05084745762711864,
+        0.05084745762711864,
+        0.05084745762711864,
+        0.3559322033898305,
+        0.1694915254237288,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.05454545454545454,
+        0.05454545454545454,
+        0.05454545454545454,
+        0.05454545454545454,
+        0.05454545454545454,
+        0.05454545454545454,
+        0.05454545454545454,
+        0.43636363636363634,
+        0.18181818181818182,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.04,
+        0.52,
+        0.03,
+        0.14,
+        0.01,
+        0.02,
+        0.03,
+        0.12,
+        0.01,
+        0.08,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.049999999999999996,
+        0.049999999999999996,
+        0.049999999999999996,
+        0.049999999999999996,
+        0.049999999999999996,
+        0.049999999999999996,
+        0.049999999999999996,
+        0.2833333333333333,
+        0.049999999999999996,
+        0.15,
+        0.16666666666666666,
+        0.0,
+        0.0
+      ],
+      [
+        0.038461538461538464,
+        0.038461538461538464,
+        0.038461538461538464,
+        0.038461538461538464,
+        0.038461538461538464,
+        0.038461538461538464,
+        0.038461538461538464,
+        0.20512820512820515,
+        0.038461538461538464,
+        0.038461538461538464,
+        0.32051282051282054,
+        0.12820512820512822,
+        0.0
+      ],
+      [
+        0.04166666666666667,
+        0.04166666666666667,
+        0.04166666666666667,
+        0.04166666666666667,
+        0.04166666666666667,
+        0.04166666666666667,
+        0.04166666666666667,
+        0.18055555555555558,
+        0.04166666666666667,
+        0.04166666666666667,
+        0.04166666666666667,
+        0.2638888888888889,
+        0.1388888888888889
+      ]
+    ],
+    "bidirectional_matrix": [
+      [
+        0.21739130434782614,
+        0.06521739130434784,
+        0.06521739130434784,
+        0.06521739130434784,
+        0.06521739130434784,
+        0.06521739130434784,
+        0.06521739130434784,
+        0.06521739130434784,
+        0.06521739130434784,
+        0.06521739130434784,
+        0.06521739130434784,
+        0.06521739130434784,
+        0.06521739130434784
+      ],
+      [
+        0.10227272727272727,
+        0.11363636363636363,
+        0.03409090909090909,
+        0.2159090909090909,
+        0.03409090909090909,
+        0.03409090909090909,
+        0.03409090909090909,
+        0.03409090909090909,
+        0.03409090909090909,
+        0.17045454545454544,
+        0.03409090909090909,
+        0.125,
+        0.03409090909090909
+      ],
+      [
+        0.04054054054054054,
+        0.41891891891891897,
+        0.13513513513513514,
+        0.04054054054054054,
+        0.04054054054054054,
+        0.04054054054054054,
+        0.04054054054054054,
+        0.04054054054054054,
+        0.04054054054054054,
+        0.04054054054054054,
+        0.04054054054054054,
+        0.04054054054054054,
+        0.04054054054054054
+      ],
+      [
+        0.03409090909090909,
+        0.30681818181818177,
+        0.23863636363636362,
+        0.11363636363636363,
+        0.03409090909090909,
+        0.03409090909090909,
+        0.03409090909090909,
+        0.03409090909090909,
+        0.03409090909090909,
+        0.03409090909090909,
+        0.03409090909090909,
+        0.03409090909090909,
+        0.03409090909090909
+      ],
+      [
+        0.04838709677419356,
+        0.04838709677419356,
+        0.04838709677419356,
+        0.30645161290322587,
+        0.1612903225806452,
+        0.04838709677419356,
+        0.04838709677419356,
+        0.04838709677419356,
+        0.04838709677419356,
+        0.04838709677419356,
+        0.04838709677419356,
+        0.04838709677419356,
+        0.04838709677419356
+      ],
+      [
+        0.04545454545454546,
+        0.04545454545454546,
+        0.04545454545454546,
+        0.04545454545454546,
+        0.13636363636363638,
+        0.15151515151515155,
+        0.2575757575757576,
+        0.04545454545454546,
+        0.04545454545454546,
+        0.04545454545454546,
+        0.04545454545454546,
+        0.04545454545454546,
+        0.04545454545454546
+      ],
+      [
+        0.03658536585365854,
+        0.03658536585365854,
+        0.03658536585365854,
+        0.23170731707317077,
+        0.03658536585365854,
+        0.2804878048780488,
+        0.12195121951219513,
+        0.03658536585365854,
+        0.03658536585365854,
+        0.03658536585365854,
+        0.03658536585365854,
+        0.03658536585365854,
+        0.03658536585365854
+      ],
+      [
+        0.04054054054054054,
+        0.17567567567567569,
+        0.04054054054054054,
+        0.04054054054054054,
+        0.04054054054054054,
+        0.04054054054054054,
+        0.2837837837837838,
+        0.13513513513513514,
+        0.04054054054054054,
+        0.04054054054054054,
+        0.04054054054054054,
+        0.04054054054054054,
+        0.04054054054054054
+      ],
+      [
+        0.04477611940298508,
+        0.04477611940298508,
+        0.04477611940298508,
+        0.04477611940298508,
+        0.04477611940298508,
+        0.04477611940298508,
+        0.04477611940298508,
+        0.35820895522388063,
+        0.1492537313432836,
+        0.04477611940298508,
+        0.04477611940298508,
+        0.04477611940298508,
+        0.04477611940298508
+      ],
+      [
+        0.034,
+        0.442,
+        0.0255,
+        0.11900000000000001,
+        0.0085,
+        0.017,
+        0.0255,
+        0.102,
+        0.0085,
+        0.068,
+        0.03,
+        0.1,
+        0.02
+      ],
+      [
+        0.045454545454545456,
+        0.045454545454545456,
+        0.045454545454545456,
+        0.045454545454545456,
+        0.045454545454545456,
+        0.045454545454545456,
+        0.045454545454545456,
+        0.25757575757575757,
+        0.045454545454545456,
+        0.13636363636363638,
+        0.15151515151515152,
+        0.045454545454545456,
+        0.045454545454545456
+      ],
+      [
+        0.037037037037037035,
+        0.037037037037037035,
+        0.037037037037037035,
+        0.037037037037037035,
+        0.037037037037037035,
+        0.037037037037037035,
+        0.037037037037037035,
+        0.19753086419753088,
+        0.037037037037037035,
+        0.037037037037037035,
+        0.308641975308642,
+        0.1234567901234568,
+        0.037037037037037035
+      ],
+      [
+        0.04166666666666667,
+        0.04166666666666667,
+        0.04166666666666667,
+        0.04166666666666667,
+        0.04166666666666667,
+        0.04166666666666667,
+        0.04166666666666667,
+        0.18055555555555558,
+        0.04166666666666667,
+        0.04166666666666667,
+        0.04166666666666667,
+        0.2638888888888889,
+        0.1388888888888889
+      ]
+    ],
+    "initial_query": 9,
+    "causal_explanation": "«a» consulta 10 palavras · os pesos somam 100%\nNovo vetor de «a» = 52% «peça» + 14% «frágil» + 12% «coloquei» + …\nMáscara ligada: só o passado (modelo que gera texto).",
+    "bidirectional_explanation": "«a» consulta 13 palavras · os pesos somam 100%\nNovo vetor de «a» = 44% «peça» + 12% «frágil» + 10% «coloquei» + …\nMáscara desligada: também o futuro (encoder).",
+    "matrix_click_navigation_reset": "PASS"
+  },
+  "generation": {
+    "initial_step": {
+      "context": "A produção foi retomada após",
+      "options": [
+        {
+          "text": " uma",
+          "probability": 0.298801
+        },
+        {
+          "text": " a",
+          "probability": 0.287535
+        },
+        {
+          "text": " um",
+          "probability": 0.191151
+        },
+        {
+          "text": " det",
+          "probability": 0.069244
+        },
+        {
+          "text": " o",
+          "probability": 0.05068
+        },
+        {
+          "text": " resolver",
+          "probability": 0.01425
+        },
+        {
+          "text": " ",
+          "probability": 0.008278
+        },
+        {
+          "text": " corrig",
+          "probability": 0.00778
+        },
+        {
+          "text": " identificar",
+          "probability": 0.003554
+        },
+        {
+          "text": " ter",
+          "probability": 0.003221
+        }
+      ],
+      "is_end": false,
+      "source": "gravado em 2026-10-12"
+    },
+    "settings": [
+      {
+        "temperature": 0.1,
+        "top_p": 1,
+        "distribution": [
+          0.5908818083818552,
+          0.40233453993639545,
+          0.006783376101427021,
+          2.6393782313121034e-07,
+          1.1642499167273341e-08,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "kept": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "temperature": 1,
+        "top_p": 1,
+        "distribution": [
+          0.3197463012068564,
+          0.30769057907273883,
+          0.20455026998568213,
+          0.07409785402581504,
+          0.05423255794044692,
+          0.015248894053894409,
+          0.00885826982302722,
+          0.008325361104512177,
+          0.0038031276819326825,
+          0.0034467851050943073
+        ],
+        "kept": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "temperature": 2,
+        "top_p": 1,
+        "distribution": [
+          0.2255756527773154,
+          0.2212822393183643,
+          0.18042199749672866,
+          0.10859061015321368,
+          0.09290081042909329,
+          0.04926161340924282,
+          0.037546020293167566,
+          0.036399129547336144,
+          0.024601405036031143,
+          0.023420521539506918
+        ],
+        "kept": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "temperature": 1,
+        "top_p": 0.5,
+        "distribution": [
+          0.5096071194673362,
+          0.49039288053266383,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "kept": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      }
+    ],
+    "contexts": [
+      {
+        "start": "A produção foi retomada após",
+        "greedy_three_steps": "A produção foi retomada após uma falha",
+        "undo": "A produção foi retomada após uma fal",
+        "sampled": "A produção foi retomada após a",
+        "sample_message": "Escolhido «␣a» (sorteado: 29%, 2.º candidato). Agora faz parte do contexto da próxima previsão."
+      },
+      {
+        "start": "A linha 2 parou devido a uma falha no",
+        "greedy_three_steps": "A linha 2 parou devido a uma falha no sensor de temperatura",
+        "undo": "A linha 2 parou devido a uma falha no sensor de",
+        "sampled": "A linha 2 parou devido a uma falha no sensor",
+        "sample_message": "Escolhido «␣sensor» (sorteado: 37%, 1.º candidato). Agora faz parte do contexto da próxima previsão."
+      },
+      {
+        "start": "O sensor da linha 2",
+        "greedy_three_steps": "O sensor da linha 2 detetou",
+        "undo": "O sensor da linha 2 detet",
+        "sampled": "O sensor da linha 2 det",
+        "sample_message": "Escolhido «␣det» (sorteado: 57%, 1.º candidato). Agora faz parte do contexto da próxima previsão."
+      }
+    ],
+    "unrecorded_branch_message": "Saiu «␣det» (7%), mas não há resposta gravada a partir daí. Volta a amostrar ou liga o LM Studio.",
+    "ending": {
+      "context": "A produção foi retomada após uma falha de energia temporária.",
+      "message": "O modelo devolveu o token de fim: a geração termina aqui. «Recomeçar» para repetir.",
+      "new_tokens": 8,
+      "is_end": true
+    }
+  },
+  "prompts": [
+    {
+      "label": "classification-baseline",
+      "setup": {
+        "task": "Classificar",
+        "case": "ambíguo",
+        "examples": 0,
+        "with_rule": false
+      },
+      "temperature": 0.0,
+      "max_tokens": 120,
+      "prompt": "Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.",
+      "reference": "Ambíguo: há sensor (Manutenção) e fissura (Qualidade); falta um critério.",
+      "answers": [
+        {
+          "text": "Manutenção",
+          "finish_reason": "stop",
+          "prompt_tokens": 107,
+          "completion_tokens": 4,
+          "seconds": 0.1,
+          "source": "gravado em 2026-10-12"
+        },
+        {
+          "text": "Manutenção",
+          "finish_reason": "stop",
+          "prompt_tokens": 107,
+          "completion_tokens": 4,
+          "seconds": 0.1,
+          "source": "gravado em 2026-10-12"
+        },
+        {
+          "text": "Manutenção",
+          "finish_reason": "stop",
+          "prompt_tokens": 107,
+          "completion_tokens": 4,
+          "seconds": 0.1,
+          "source": "gravado em 2026-10-12"
+        }
+      ]
+    },
+    {
+      "label": "classification-rule",
+      "setup": {
+        "task": "Classificar",
+        "case": "ambíguo",
+        "examples": 0,
+        "with_rule": true
+      },
+      "temperature": 0.0,
+      "max_tokens": 120,
+      "prompt": "Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.",
+      "reference": "Qualidade (pela regra: dano físico da peça tem prioridade).",
+      "answers": [
+        {
+          "text": "Manutenção",
+          "finish_reason": "stop",
+          "prompt_tokens": 122,
+          "completion_tokens": 4,
+          "seconds": 0.1,
+          "source": "gravado em 2026-10-12"
+        },
+        {
+          "text": "Manutenção",
+          "finish_reason": "stop",
+          "prompt_tokens": 122,
+          "completion_tokens": 4,
+          "seconds": 0.1,
+          "source": "gravado em 2026-10-12"
+        },
+        {
+          "text": "Manutenção",
+          "finish_reason": "stop",
+          "prompt_tokens": 122,
+          "completion_tokens": 4,
+          "seconds": 0.1,
+          "source": "gravado em 2026-10-12"
+        }
+      ]
+    },
+    {
+      "label": "classification-examples",
+      "setup": {
+        "task": "Classificar",
+        "case": "ambíguo",
+        "examples": 3,
+        "with_rule": true
+      },
+      "temperature": 0.0,
+      "max_tokens": 120,
+      "prompt": "Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.",
+      "reference": "Qualidade (pela regra: dano físico da peça tem prioridade).",
+      "answers": [
+        {
+          "text": "Qualidade",
+          "finish_reason": "stop",
+          "prompt_tokens": 154,
+          "completion_tokens": 3,
+          "seconds": 0.1,
+          "source": "gravado em 2026-10-12"
+        }
+      ]
+    },
+    {
+      "label": "classification-temperature",
+      "setup": {
+        "task": "Classificar",
+        "case": "ambíguo",
+        "examples": 3,
+        "with_rule": true
+      },
+      "temperature": 0.7,
+      "max_tokens": 120,
+      "prompt": "Classifica a ocorrência em Manutenção, Qualidade ou Logística. Devolve apenas a categoria. Se houver vários indícios, dano físico da peça tem prioridade.\n\nExemplos:\nSensor avariado: Manutenção\nPeça com fissura: Qualidade\nEntrega atrasada: Logística\n\nOcorrência: Sensor sem sinal após impacto. A peça apresenta fissura.",
+      "reference": "Qualidade (pela regra: dano físico da peça tem prioridade).",
+      "answers": [
+        {
+          "text": "Qualidade",
+          "finish_reason": "stop",
+          "prompt_tokens": 154,
+          "completion_tokens": 3,
+          "seconds": 0.1,
+          "source": "gravado em 2026-10-12"
+        },
+        {
+          "text": "Qualidade",
+          "finish_reason": "stop",
+          "prompt_tokens": 154,
+          "completion_tokens": 3,
+          "seconds": 0.1,
+          "source": "gravado em 2026-10-12"
+        },
+        {
+          "text": "Qualidade",
+          "finish_reason": "stop",
+          "prompt_tokens": 154,
+          "completion_tokens": 3,
+          "seconds": 0.1,
+          "source": "gravado em 2026-10-12"
+        }
+      ]
+    },
+    {
+      "label": "summary",
+      "setup": {
+        "task": "Resumir",
+        "case": "ambíguo",
+        "examples": 3,
+        "with_rule": true
+      },
+      "temperature": 0.7,
+      "max_tokens": 120,
+      "prompt": "Resume a ocorrência numa frase. Usa apenas informação do texto.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.",
+      "reference": "Falha no sensor da linha 2 e retoma após a substituição (sem causas acrescentadas).",
+      "answers": [
+        {
+          "text": "A linha 2 parou às 10h15 devido a uma falha no sensor, sendo reiniciada às 10h35 após a sua substituição.",
+          "finish_reason": "stop",
+          "prompt_tokens": 124,
+          "completion_tokens": 39,
+          "seconds": 0.5,
+          "source": "gravado em 2026-10-12"
+        }
+      ]
+    },
+    {
+      "label": "extraction",
+      "setup": {
+        "task": "Extrair",
+        "case": "ambíguo",
+        "examples": 3,
+        "with_rule": true
+      },
+      "temperature": 0.7,
+      "max_tokens": 120,
+      "prompt": "Extrai linha, hora de paragem, hora de retoma e duração em minutos. Se um campo faltar, indica não informado.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.",
+      "reference": "Linha 2 · paragem 10h15 · retoma 10h35 · 20 minutos.",
+      "answers": [
+        {
+          "text": "- Linha: 2  \n- Linha de Paragem: 10h15  \n- Hora de Retoma: 10h35  \n- Duração (em minutos): 20",
+          "finish_reason": "stop",
+          "prompt_tokens": 139,
+          "completion_tokens": 46,
+          "seconds": 0.6,
+          "source": "gravado em 2026-10-12"
+        }
+      ]
+    },
+    {
+      "label": "extraction-short",
+      "setup": {
+        "task": "Extrair",
+        "case": "ambíguo",
+        "examples": 3,
+        "with_rule": true
+      },
+      "temperature": 0.7,
+      "max_tokens": 8,
+      "prompt": "Extrai linha, hora de paragem, hora de retoma e duração em minutos. Se um campo faltar, indica não informado.\nOcorrência: A linha 2 parou às 10h15 devido a uma falha no sensor. A produção foi retomada às 10h35 após a substituição do sensor.",
+      "reference": "Linha 2 · paragem 10h15 · retoma 10h35 · 20 minutos.",
+      "answers": [
+        {
+          "text": "- Linha: 2  \n-",
+          "finish_reason": "length",
+          "prompt_tokens": 139,
+          "completion_tokens": 8,
+          "seconds": 0.1,
+          "source": "gravado em 2026-10-12"
+        }
+      ]
+    }
+  ],
+  "image_text": [
+    {
+      "image": {
+        "key": "peca",
+        "label": "Peça (esquema)",
+        "file_name": "peca_fissura_esquema.png",
+        "specific_question": "Há alguma anomalia visível? Diz onde está e separa o que observas do que é hipótese.",
+        "is_generated": false
+      },
+      "input_sha256": "f01d6ea5b66585f705a2f24516cb7f30699e38f9f3b325f00871b62bbee3faa8",
+      "request": "Descrever",
+      "prompt": "Descreve a imagem. Responde em português europeu, em três frases no máximo.",
+      "answer": {
+        "text": "A imagem mostra um bloco retangular cinzento com duas furos circulares na face frontal. O bloco apresenta uma fissura irregular que se estende entre os dois furos. O fundo é branco e o bloco exibe uma sombra, indicando a luz proveniente da esquerda.",
+        "seconds": 45.8,
+        "source": "gravado em 2026-10-13"
+      }
+    },
+    {
+      "image": {
+        "key": "peca",
+        "label": "Peça (esquema)",
+        "file_name": "peca_fissura_esquema.png",
+        "specific_question": "Há alguma anomalia visível? Diz onde está e separa o que observas do que é hipótese.",
+        "is_generated": false
+      },
+      "input_sha256": "f01d6ea5b66585f705a2f24516cb7f30699e38f9f3b325f00871b62bbee3faa8",
+      "request": "Pergunta",
+      "prompt": "Há alguma anomalia visível? Diz onde está e separa o que observas do que é hipótese. Responde em português europeu, em três frases no máximo.",
+      "answer": {
+        "text": "Há uma anomalia visível: uma fissura na superfície entre os dois buracos. A fissura está localizada no centro do bloco, entre as duas aberturas circulares. O que se observa é a presença da fissura; hipóteses sobre sua causa (ex: fratura) não são evidentes na imagem.",
+        "seconds": 15.7,
+        "source": "gravado em 2026-10-13"
+      }
+    },
+    {
+      "image": {
+        "key": "peca",
+        "label": "Peça (esquema)",
+        "file_name": "peca_fissura_esquema.png",
+        "specific_question": "Há alguma anomalia visível? Diz onde está e separa o que observas do que é hipótese.",
+        "is_generated": false
+      },
+      "input_sha256": "f01d6ea5b66585f705a2f24516cb7f30699e38f9f3b325f00871b62bbee3faa8",
+      "request": "Limites",
+      "prompt": "Que conclusões não se podem tirar só a partir desta imagem? Responde em português europeu, em três frases no máximo.",
+      "answer": {
+        "text": "Não se pode determinar o material do bloco (ex: concreto ou metal) apenas pela imagem. Não se consegue saber a causa da fenda (como estresse, choque ou mudança de temperatura). As dimensões ou peso do objeto não são inferíveis a partir desta representação gráfica.",
+        "seconds": 13.4,
+        "source": "gravado em 2026-10-13"
+      }
+    },
+    {
+      "image": {
+        "key": "grafico",
+        "label": "Gráfico de paragens",
+        "file_name": "grafico_paragens.png",
+        "specific_question": "Que linha teve mais minutos de paragem e quantos minutos foram?",
+        "is_generated": false
+      },
+      "input_sha256": "a62e71255f95d24afefe2be3245718a007e4c018b8d08dcb769264ea95a0ba1c",
+      "request": "Descrever",
+      "prompt": "Descreve a imagem. Responde em português europeu, em três frases no máximo.",
+      "answer": {
+        "text": "A imagem é um gráfico de barras com o título \"Minutos de paragem por linha (dados fictícios)\". Ele compara três linhas, onde Linha 1 tem aproximadamente 5 minutos, Linha 2 tem cerca de 20 minutos (o valor mais alto) e Linha 3 tem cerca de 8 minutos.",
+        "seconds": 12.0,
+        "source": "gravado em 2026-10-13"
+      }
+    },
+    {
+      "image": {
+        "key": "grafico",
+        "label": "Gráfico de paragens",
+        "file_name": "grafico_paragens.png",
+        "specific_question": "Que linha teve mais minutos de paragem e quantos minutos foram?",
+        "is_generated": false
+      },
+      "input_sha256": "a62e71255f95d24afefe2be3245718a007e4c018b8d08dcb769264ea95a0ba1c",
+      "request": "Pergunta",
+      "prompt": "Que linha teve mais minutos de paragem e quantos minutos foram? Responde em português europeu, em três frases no máximo.",
+      "answer": {
+        "text": "A linha que teve mais minutos de paragem foi a Linha 2. Foram cerca de 20 minutos.",
+        "seconds": 8.1,
+        "source": "gravado em 2026-10-13"
+      }
+    },
+    {
+      "image": {
+        "key": "grafico",
+        "label": "Gráfico de paragens",
+        "file_name": "grafico_paragens.png",
+        "specific_question": "Que linha teve mais minutos de paragem e quantos minutos foram?",
+        "is_generated": false
+      },
+      "input_sha256": "a62e71255f95d24afefe2be3245718a007e4c018b8d08dcb769264ea95a0ba1c",
+      "request": "Limites",
+      "prompt": "Que conclusões não se podem tirar só a partir desta imagem? Responde em português europeu, em três frases no máximo.",
+      "answer": {
+        "text": "Não se pode inferir os motivos das paragens (ex: falhas técnicas ou congestionamento). Não se consegue saber se os dados representam um único dia ou uma média de múltiplos dias. Não é possível determinar a frequência de paradas por hora ou o número total de paradas na linha.",
+        "seconds": 9.9,
+        "source": "gravado em 2026-10-13"
+      }
+    },
+    {
+      "image": {
+        "key": "foto",
+        "label": "Peça (fotografia)",
+        "file_name": "peca_fissura_foto.png",
+        "specific_question": "Há alguma anomalia visível? Diz onde está e separa o que observas do que é hipótese.",
+        "is_generated": true
+      },
+      "input_sha256": "c303924b918c2cbdf1f87078c8a2ea9df5135cbd46ce6fcaed699c5d6f5deca7",
+      "request": "Descrever",
+      "prompt": "Descreve a imagem. Responde em português europeu, em três frases no máximo.",
+      "answer": {
+        "text": "A imagem mostra uma placa metálica retangular com bordas arredondadas. Possui dois buracos redondos em cada extremidade e uma fenda que atravessa o centro. Está sobre uma superfície de metal com marcas e manchas, indicando uso.",
+        "seconds": 22.4,
+        "source": "gravado em 2026-10-13"
+      }
+    },
+    {
+      "image": {
+        "key": "foto",
+        "label": "Peça (fotografia)",
+        "file_name": "peca_fissura_foto.png",
+        "specific_question": "Há alguma anomalia visível? Diz onde está e separa o que observas do que é hipótese.",
+        "is_generated": true
+      },
+      "input_sha256": "c303924b918c2cbdf1f87078c8a2ea9df5135cbd46ce6fcaed699c5d6f5deca7",
+      "request": "Pergunta",
+      "prompt": "Há alguma anomalia visível? Diz onde está e separa o que observas do que é hipótese. Responde em português europeu, em três frases no máximo.",
+      "answer": {
+        "text": "Há uma anomalia visível na placa metálica. A anomalia é uma fissura que se estende entre os dois buracos centrais da peça. Observo a fissura; não há hipótese sobre sua causa, apenas a detecção da falha.",
+        "seconds": 24.0,
+        "source": "gravado em 2026-10-13"
+      }
+    },
+    {
+      "image": {
+        "key": "foto",
+        "label": "Peça (fotografia)",
+        "file_name": "peca_fissura_foto.png",
+        "specific_question": "Há alguma anomalia visível? Diz onde está e separa o que observas do que é hipótese.",
+        "is_generated": true
+      },
+      "input_sha256": "c303924b918c2cbdf1f87078c8a2ea9df5135cbd46ce6fcaed699c5d6f5deca7",
+      "request": "Limites",
+      "prompt": "Que conclusões não se podem tirar só a partir desta imagem? Responde em português europeu, em três frases no máximo.",
+      "answer": {
+        "text": "Não se pode inferir o material exato (ex: tipo de aço) apenas pela imagem.  \nNão se consegue saber a causa da fenda (se foi por choque, calor ou outro fator), pois a imagem não mostra o contexto de sua formação.  \nNão é possível determinar a função ou aplicação do objeto sem informações adicionais, já que a imagem só mostra a forma e defeito.",
+        "seconds": 23.7,
+        "source": "gravado em 2026-10-13"
+      }
+    }
+  ],
+  "suite_environment": {
+    "MPLBACKEND": "Agg",
+    "FORMACAO_LMSTUDIO_OFFLINE": "1",
+    "MPLCONFIGDIR": "C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\.cache\\matplotlib",
+    "TMP": "C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\.cache\\test-temp",
+    "TEMP": "C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\.cache\\test-temp"
+  },
+  "suite": {
+    "command": [
+      "C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-t",
+      "."
+    ],
+    "cwd": "Dia1\\Exercicios-GSS",
+    "exit_code": 0,
+    "log": "offline-suite.txt"
+  },
+  "recording_hashes": {
+    "contagem_tokens.json": "c0ca032460927b6e746f50f36436df90275e81a6bbefe933f5bb795ccbd814c2",
+    "embeddings.json": "361d299e7eca3b41ef4da00dc207aae318206cbca4ae91b6ee6307d782367ba3",
+    "imagem_texto.json": "02998a28fb080e31185a4c9570ea90341d22c1d237eb0f1d90f31d8226a04ee2",
+    "laboratorio_prompts.json": "44dcff8fa24a2a7c10ff97d81a1b45f11de18210ac72694f388d4b1933931e96",
+    "proximo_token.json": "16dd45005fa79c9006d16fb278475e66881aecde243813da8f896f0023461621"
+  },
+  "finished_utc": "2026-10-17T10:27:48.418053+00:00",
+  "suite_attempts": [
+    {
+      "command": [
+        "C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        "."
+      ],
+      "cwd": "Dia1\\Exercicios-GSS",
+      "exit_code": 1,
+      "log": "offline-suite-restricted-temp-failure.txt"
+    },
+    {
+      "command": [
+        "C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        "."
+      ],
+      "cwd": "Dia1\\Exercicios-GSS",
+      "exit_code": 1,
+      "log": "offline-suite-failed-attempt-2.txt",
+      "environment": {
+        "MPLBACKEND": "Agg",
+        "FORMACAO_LMSTUDIO_OFFLINE": "1",
+        "MPLCONFIGDIR": "C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\.cache\\matplotlib",
+        "TMP": "C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\.cache\\test-temp",
+        "TEMP": "C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\.cache\\test-temp"
+      }
+    }
+  ],
+  "suite_execution_context": "reviewed sandbox escalation"
+}

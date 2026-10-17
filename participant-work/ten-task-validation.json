@@ -1,0 +1,27 @@
+{
+  "executed_utc": "2026-10-17T10:28:09.740666+00:00",
+  "baseline": "fbf1af3",
+  "status": "PASS",
+  "tasks_completed": 10,
+  "local_links": 202,
+  "heading_anchors": 32,
+  "rendered_images": 22,
+  "offline_tests": 125,
+  "checks": [
+    "entry exits/hashes",
+    "recording/model-input/provenance hashes",
+    "suite result",
+    "lesson observations",
+    "nonblank renderings",
+    "exact next ten tasks",
+    "links/anchors",
+    "starter-contained links",
+    "six capability probes",
+    "Python syntax",
+    "unchanged course and classifier sources"
+  ],
+  "limits": [
+    "not a fresh-session behavioral test",
+    "renderings are not desktop screenshots"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "executed_utc": "2026-10-17T10:23:11.387725+00:00",
+  "scope": "course workspace only; executable/version/status probes, not remote authentication",
+  "checks": [
+    {
+      "name": "rtk",
+      "command": [
+        "rtk",
+        "--version"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "stdout": "rtk 0.42.4\n",
+      "stderr": "",
+      "status": "verified"
+    },
+    {
+      "name": "git",
+      "command": [
+        "rtk",
+        "proxy",
+        "git",
+        "--version"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "stdout": "git version 2.55.0.windows.3\n",
+      "stderr": "",
+      "status": "verified"
+    },
+    {
+      "name": "ripgrep",
+      "command": [
+        "rtk",
+        "proxy",
+        "rg",
+        "--version"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "stdout": "ripgrep 15.2.0 (rev e89fff89ac)\n\nfeatures:+pcre2\nsimd(compile):+SSE2,-SSSE3,-AVX2\nsimd(runtime):+SSE2,+SSSE3,+AVX2\n\nPCRE2 10.45 is available (JIT is available)\n",
+      "stderr": "",
+      "status": "verified"
+    },
+    {
+      "name": "powershell",
+      "command": [
+        "rtk",
+        "proxy",
+        "powershell",
+        "-NoProfile",
+        "-Command",
+        "$PSVersionTable.PSVersion.ToString()"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "stdout": "5.1.26100.9711\n",
+      "stderr": "",
+      "status": "verified"
+    },
+    {
+      "name": "gss-python",
+      "command": [
+        "C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\Dia1\\Exercicios-GSS\\.venv\\Scripts\\python.exe",
+        "--version"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "stdout": "Python 3.12.10\n",
+      "stderr": "",
+      "status": "verified"
+    },
+    {
+      "name": "repository-status",
+      "command": [
+        "rtk",
+        "proxy",
+        "git",
+        "status",
+        "--short"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "stdout": "?? dia2-local/65474617.jpg\n?? dia2-local/reports/captcha-v3-challenge-raw.json\n?? dia2-local/reports/ensemble-v1-post-publication-challenge-verification-raw.json\n?? dia2-local/reports/release-3.7.0-public-challenge-recheck-20261016-raw.json\n?? dia2-local/reports/release-3.7.0-public-challenge-recheck-20261016.json\n?? dia2-local/reports/release-3.7.0-public-challenge-verification-raw.json\n?? dia2-local/scopedog-asset.jpg\n?? participant-work/day1/gss-language-final-evidence/\n?? participant-work/day1/run-gss-language-final.py\n?? participant-work/day2/\n?? participant-work/starter/\n",
+      "stderr": "",
+      "status": "verified"
+    }
+  ],
+  "optional_path_discovery": {
+    "gh": {
+      "path": null,
+      "status": "not found on current PATH"
+    },
+    "node": {
+      "path": null,
+      "status": "not found on current PATH"
+    },
+    "npm": {
+      "path": null,
+      "status": "not found on current PATH"
+    }
+  },
+  "skills": {
+    "status": "advertised in session catalog; not invoked for this batch",
+    "project_skills": "none; bootstrap implementation deferred"
+  },
+  "mcp": {
+    "status": "session tool metadata inspected; no service calls made",
+    "project_integration": "none selected",
+    "authentication_and_writes": "NOT RUN"
+  }
+}

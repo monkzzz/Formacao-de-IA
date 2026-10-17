@@ -1,0 +1,14 @@
+python.exe : mkdir -p failed for path C:\Users\falle\AppData\Local\matplotlib: [WinError 5] Access is denied:
+'C:\\Users\\falle\\AppData\\Local\\matplotlib'
+At line:1 char:56
++ ... _OFFLINE=1; & .\.venv\Scripts\python.exe -m unittest discover -s test ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (mkdir -p failed...al\\matplotlib':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+Matplotlib created a temporary cache directory at C:\Users\falle\AppData\Local\Temp\matplotlib-z7_rwrmq because there
+was an issue with the default path (C:\Users\falle\AppData\Local\matplotlib); it is highly recommended to set the
+MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to
+better support multiprocessing.
+Could not save font_manager cache [Errno 13] Permission denied:
+'C:\\Users\\falle\\AppData\\Local\\Temp\\matplotlib-z7_rwrmq\\fontlist-v3.11.0.json.matplotlib-lock'
