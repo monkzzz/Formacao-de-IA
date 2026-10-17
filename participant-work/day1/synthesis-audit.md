@@ -1,0 +1,50 @@
+# Audit of the original synthesis
+
+Date: 2026-10-17. Target: [synthesis-original.md](synthesis-original.md), version 1. Status: proposed edits only; the original is preserved. This is the Exercise 4 audit, not its later revision or final acceptance.
+
+## Session and instructions
+
+This review was conducted in a fresh agent session without inherited chat history. The reviewer received the task and repository instructions, then read the original, the [research report](research-report.md), both [Transformer](reading-transformer.md) and [FlashAttention](reading-flashattention.md) notes, and the [Exercise 3](../../Dia1/Exercicio-03-Cruzamento-de-Fontes.md) and [Exercise 4](../../Dia1/Exercicio-04-Auditoria-e-Refinamento.md) requirements. The chosen assistant replaces Copilot by the participant's recorded choice. This is not a Copilot conversation, a separate human review, or proof of unbiased independence. Instructor acceptance of that substitution is not established.
+
+Audit instructions used: distinguish sourced facts from interpretation; check whether each citation supports the exact claim; look for missing qualifications, unsupported bridges to consciousness, redundant evidence, and format deviations; then attempt a second review by reconstructing the inference in reverse. Propose identifiable edits before changing the paper.
+
+## Outcome and proposed edits
+
+The conclusion is appropriately conditional. No fabricated publication or affirmative claim of demonstrated subjective experience was found in the inspected material. The main weakness is an underspecified bridge from training and attention to the proposed access function. Citation scope and the distinction between a generic analogy and a particular theory also need tightening. Severity means impact on this argument: medium affects interpretation or reproducibility; low affects clarity. No high-severity correction was established.
+
+| ID / severity / decision | Exact target in original | Proposed edit and reason | Support / locator |
+| --- | --- | --- | --- |
+| A1 / medium / clarify | **Definitions and levels of claim**, first paragraph; **Argument in favor**, first paragraph | Name a concrete training example already present in R1, distinguish learned parameters from in-context conditioning, and say that neither establishes workspace learning. The present umbrella definition is cautious but leaves the central training premise nearly unexamined. | R1, **Architecture and pretraining**, BERT/GPT-3/Chinchilla paragraphs. Use those as bounded context; their abstract-level checks do not support a new mechanism claim. |
+| A2 / medium / clarify | **Definitions and levels of claim**, paragraph beginning “Theory-dependent author account” | Say explicitly that this is a selective summary, and identify state-dependent sequential recruitment as an additional workspace requirement. The three named features should not read as a complete checklist. | [C1 v3](https://arxiv.org/html/2308.08708v3), §2.2.3, GWT-1–GWT-4; §3.1.2. |
+| A3 / medium / clarify | **Argument in favor**, paragraph beginning “Speculation: suppose”; **Proposed discriminating study and conclusion**, first paragraph | Explicitly name the proposed construct as a narrow cross-task access analogy. Availability to several processes and intervention effects alone do not show that the fuller C1 workspace account is implemented. Keep the proposed study, but require an architecture-specific account of processes, candidate state, intervention, and a predicted failure pattern before execution. | Internal inference check against the original's own definitions; C1 §2.2.3. This is an editorial/design recommendation, not a source-reported experiment. |
+| A4 / medium / clarify | **Agreements, tensions, and missing evidence**, final row and following paragraph | Add a brief historical limitation: C1 also discusses particular Transformer systems; its architecture-level objections are relevant counterevidence, not just an abstract demand for tests. Describe these as its 2023 case analysis, without extending them to all current LLM systems or treating them as a proof of impossibility. Extend the C1 source table's inspected scope if this material is used. | C1 §3.2.1, especially the residual-stream discussion and recurrence objection. |
+| A5 / low / correct | **Definitions and levels of claim**, “Established source evidence” citation | Narrow S1 to §§3–4 and S9 to §§3.1–3.2 for the architectural/execution claims. Keep broader evaluation references only where an evaluation is actually discussed. The present ranges are valid but unnecessarily broad. | [S1 v7](https://arxiv.org/html/1706.03762v7), §§3–4; [S9 v1](https://arxiv.org/html/2205.14135v1), §§3.1–3.2, Theorem 1. |
+| A6 / low / clarify | **Materials and source identities**, C1 row | Put the unusual HTML title in an access note or shorten it. Retain the actual paper title, arXiv identifier/version, and selected-section boundary. Rendering metadata should not interrupt the evidence argument. | C1 HTML contains the paper title/authors despite its unusual page heading. No identity mismatch was found. |
+| A7 / low / keep | **Agreements, tensions, and missing evidence**, English–French discrepancy row | Keep the discrepancy unresolved; optionally move it to a short note because it is not evidence about consciousness. Do not silently replace one BLEU value with the other. | S1 §6.1, prose and Table 2; the linked Transformer note accurately flags the disagreement in that rendering. |
+| A8 / low / keep | Opening, **Arguments against a strong conclusion**, and final conclusion | Preserve the experience/access distinction, explicit speculation labels, conditional conclusion, and statement that no experiment was performed. They appropriately bound what the sources establish. | Both engineering papers concern computation and task evaluation. C1 abstract also warns against treating its indicators as certainty. |
+
+## Claim and citation checks
+
+- S1 supports attention-based sequence modeling; it does not supply evidence of consciousness. The original uses that boundary correctly. The broad working definition of attention is a stipulation, not a complete technical definition of the Transformer operation.
+- S9 supports an execution-cost distinction. Theorem 1 retains quadratic dense arithmetic while reducing additional memory under its setup. No speed-to-consciousness inference is present in the original; retain that restraint.
+- C1 supports a disputed functionalist framing and provisional theoretical indicators. Its attention-schema criterion concerns predictive control, rather than ordinary token weighting. The original's attribution is acceptable with A2's completeness qualification.
+- The report and two notes repeat source evidence rather than corroborate it independently. The original explicitly acknowledges this; keep it.
+- Self-description, matched-control interventions, and transfer tests are presented as interpretations or proposed methods. They are not falsely attributed as experimental results. Their feasibility remains untested.
+
+## Second approach and comparison
+
+First approach: forward claim-to-source inspection, using the original's section order and checking its principal engineering and theoretical citations.
+
+Second approach: reverse argument reconstruction. Starting from the conclusion, ask what observations would be needed to establish (1) selective weighting, (2) learned usable representations, (3) cross-task access, (4) a specified theory's mechanisms, and (5) subjective experience. The supplied sources substantiate engineering premises; the paper proposes observations for access; it does not supply observations for the final steps. A generic access intervention can succeed while a stronger theory-specific claim remains unsupported.
+
+Both approaches support keeping the conditional conclusion. The reverse approach adds A1 and A3: the paper needs a more explicit training premise and a narrower operational target. The source approach adds A2 and A4: fuller criteria and historical case analysis would strengthen the counterargument. These are two methods in one reviewer session, not two independent reviewers or reproduced experiments.
+
+## Format, unresolved issues, and limits
+
+The original meets the substantive Exercise 3 format: a short Markdown synthesis, traceable sources, favorable and opposing arguments, redundancy/contradiction checks, missing evidence, and explicit uncertainty. No fixed length or required citation style is specified in the exercise. English and the assistant substitution are declared participant adaptations; acceptance under the original Portuguese/Copilot teaching route is not inferred. The requested Exercise 4 Markdown audit is this file; a revised paper and correction summary remain subsequent work.
+
+Primary-source HTML was opened on this date for S1 v7, S9 v1, and C1 v3. Targeted checks covered S1 architecture/results, S9 Theorem 1 and its IO context, and C1 functionalist framing, indicators, attention schema, implementation discussion, and Transformer case discussion. This is selective source inspection, not a full systematic literature review. No PDF pagination, experiments, kernels, or model internals were independently reproduced. Supporting report sources outside S1/S9/C1 were not newly verified here. No post-2023 consciousness literature was surveyed; the audit does not assess the state of all systems in 2026.
+
+Unresolved: S1's English–French numerical inconsistency remains an author-text discrepancy; no authoritative correction was located or claimed. C1's unusual HTML heading remains a rendering issue, not evidence of a different paper. The proposed access test still lacks a selected model, intervention specification, metrics, and preregistration; those are future empirical work, not omissions that a prose edit can resolve.
+
+For the later revision, use A1–A6 as traceable edit IDs, preserve A7–A8's justified statements, and distinguish accepted textual edits from unresolved empirical questions. No revision is produced by this audit.

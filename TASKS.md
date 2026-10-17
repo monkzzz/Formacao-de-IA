@@ -55,26 +55,26 @@ Source: [research instructions](Dia1/Exercicio-01-Pesquisa-Orientada.md).
 Source: [paper analysis instructions](Dia1/Exercicio-02-Talk-to-a-Paper.md).
 
 - [x] Select two scientific papers from Exercise 1 and provide their contents to the chosen assistant; record document-access limitations. See the [versioned full-text handoff](participant-work/day1/paper-selection.md); no Copilot upload is claimed.
-- [ ] Ask progressive questions about each paper's problem, objectives, methods, data, results, assumptions, and limitations.
-- [ ] Check responses against identifiable sections/pages and separate author claims, paraphrases, and model inference.
-- [ ] Save two reading notes with grounded questions/answers, conclusions, and references to the original papers.
+- [x] Ask progressive questions about each paper's problem, objectives, methods, data, results, assumptions, and limitations. See the assistant-formulated questions in the [Transformer](participant-work/day1/reading-transformer.md) and [FlashAttention](participant-work/day1/reading-flashattention.md) notes; no participant dialogue is fabricated.
+- [x] Check responses against identifiable sections/pages and separate author claims, paraphrases, and model inference. Both [reading notes](participant-work/day1/README.md) identify source sections/tables, answer status, and inference; PDF pagination and replication were not verified.
+- [x] Save two reading notes with grounded questions/answers, conclusions, and references to the original papers. See [Transformer](participant-work/day1/reading-transformer.md) and [FlashAttention](participant-work/day1/reading-flashattention.md).
 
 ### Exercise 3 — Cross-source synthesis
 
 Source: [synthesis instructions](Dia1/Exercicio-03-Cruzamento-de-Fontes.md).
 
-- [ ] Combine the research report, both papers, and their reading notes with traceable source identities.
-- [ ] Investigate the speculative attention/training/consciousness question, defining ambiguous terms and examining supporting and opposing arguments.
-- [ ] Identify agreements, contradictions, redundancy, and missing evidence across the sources.
-- [ ] Save an argued synthesis that explicitly separates established evidence, interpretation, and speculation.
-- [ ] Preserve the original synthesis for the next exercise.
+- [x] Combine the research report, both papers, and their reading notes with traceable source identities. See the [original synthesis source map](participant-work/day1/synthesis-original.md#materials-and-source-identities).
+- [x] Investigate the speculative attention/training/consciousness question, defining ambiguous terms and examining supporting and opposing arguments. See the [original synthesis](participant-work/day1/synthesis-original.md); its analogy is conditional and does not establish subjective experience.
+- [x] Identify agreements, contradictions, redundancy, and missing evidence across the sources. See the [cross-source comparison](participant-work/day1/synthesis-original.md#agreements-tensions-and-missing-evidence).
+- [x] Save an argued synthesis that explicitly separates established evidence, interpretation, and speculation. See [version 1](participant-work/day1/synthesis-original.md).
+- [x] Preserve the original synthesis for the next exercise. See the [pre-audit SHA-256 record](participant-work/day1/synthesis-preservation.json); the original remains unchanged after review.
 
 ### Exercise 4 — Audit and refinement
 
 Source: [audit instructions](Dia1/Exercicio-04-Auditoria-e-Refinamento.md).
 
-- [ ] Start a new Copilot conversation to audit claims, citations, omissions, confidence, and requested format.
-- [ ] Save at least one Markdown audit containing proposed edits before changing the original paper.
+- [x] Start a fresh reviewer session with the chosen assistant to audit claims, citations, omissions, confidence, and requested format. See the [session adaptation and limits](participant-work/day1/review-process.md#fresh-audit-session); this uses a reviewer agent without inherited chat history, not Copilot or independent human review.
+- [x] Save at least one Markdown audit containing proposed edits before changing the original paper. See the [audit and proposed edits A1-A8](participant-work/day1/synthesis-audit.md); revision remains the next task.
 - [ ] Use another new conversation with the original paper and audit to produce a traceable revision.
 - [ ] Verify disputed claims using the original sources; repeat review if necessary.
 - [ ] Deliver the final paper, preserved audit, and a brief record of the principal corrections.

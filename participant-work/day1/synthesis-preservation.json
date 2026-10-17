@@ -1,0 +1,9 @@
+{
+  "recorded_on": "2026-10-17",
+  "path": "synthesis-original.md",
+  "algorithm": "SHA-256",
+  "sha256": "06bddb955a1091a3c1be22717e6c57bd7a6c0d4685b543e7f2a193ef0595960a",
+  "stage": "original saved before audit; hash captured before audit output existed",
+  "policy": "Keep original bytes unchanged. Save audit and eventual revision separately.",
+  "limits": "A local integrity record is not an external timestamp, backup, or proof of independent authorship."
+}
