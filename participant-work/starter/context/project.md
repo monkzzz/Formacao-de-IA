@@ -1,6 +1,6 @@
 # Project context
 
-Status: **existing classifier preservation context, version 1.0.0**. Owner: the project participant.
+Status: **existing classifier preservation context, version 1.1.0**, progress reconciled 2026-10-17. Owner: the project participant.
 The agent maintains this record from confirmed requirements and labels assumptions.
 
 | Field | Current value |
@@ -14,7 +14,7 @@ The agent maintains this record from confirmed requirements and labels assumptio
 | Acceptance criteria | Evidence index, actual relevant checks, verified artifacts, browser parity/real activations and submitted-origin behavior; retain current site |
 | Validation commands and directory | From `dia2-local/`: `.venv/Scripts/python.exe -m unittest discover -s tests -v`; run only for the relevant verification Issue with new report names |
 | Repository and branch | Personal `monkzzz/Formacao-de-IA`, current root branch `main`; retain existing root history |
-| Deployment target and artifact process | Preserve `https://naoquerosaber.pt/AI/`; ignored model retrieval and live verification remain work; Pages substitution needs instructor acceptance |
+| Deployment target and artifact process | Preserve `https://naoquerosaber.pt/AI/`; browser weights were restored/verified, public browser checks passed, and selected-model evaluation repeated in a clean venv. Local checkpoint/font prerequisites are verified; portable public recovery remains limited. Pages substitution needs instructor acceptance |
 
 Confirmed generic preferences: English communication, autonomous progress on
 authorized reversible work, focused changes, evidence-based review and preservation
@@ -44,10 +44,19 @@ synthetic test. Historical results: 99.10% clean MNIST, 98.73% synthetic and a
 separate 10/10 official follow-up after exposure. These are not current reruns.
 Original 99.28% / 2-of-10 evidence remains preserved separately.
 
-Assumption: existing exported manifest identity represents the intended current
-default CNN; verify the submitted origin before claiming production parity.
-Pending: artifact restoration proof, fresh tests, live-origin checks, instructor
-acceptance of hosting/assistant/fork/process deviations and actual feedback.
+Verified progress: [selected-model evidence](../../day2/submission-evidence-index.md),
+[public browser identity/parity](../../day2/submission-browser-delivery.md) and
+[clean ML prerequisites/re-evaluation](../../day2/ml-process-reproduction.md).
+Historical metrics retain their identity; later checks are verification follow-ups.
+The participant reconfirmed preservation of `dia2-local` and continuation of the
+current development while finishing tasks; see [present scope](../../day2/participant-continuation-scope.md).
+Source publication and real Issue synchronization are completion work, distinct
+from production deployment. The old blanket “artifact/tests/live verification
+pending” wording is superseded by these actual records.
+
+Pending: actual participant research critique; portable off-machine checkpoint/font
+availability beyond the documented local route; instructor acceptance of
+hosting/assistant/fork/process deviations and an actual feedback session.
 
 Detailed evidence and alternatives: [specification](../../day2/classifier-specification.md).
 For a new unrelated project, use the preserved generic archive, not this populated

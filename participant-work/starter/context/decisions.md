@@ -30,6 +30,20 @@ For each actual decision record:
 - Review trigger: a new explicit participant request or instructor requirements.
   No accepted original design decision is superseded or invented here.
 
+## D2-003 — Continue current development while preserving the implementation
+
+- Date: 2026-10-17. Status: participant-directed present continuation scope.
+- After the assistant presented retaining the frozen captcha-v3 CNN, preprocessing
+  and site while finishing verification/publication/Issues, the participant said
+  “the dia 2 local remains as is for now, as previous development”, “everything
+  else is like current ongoing development”, and “the goal is to finish all tasks”.
+- Continue the requested evidence and repository work. Preserve the existing app,
+  models, preprocessing and production hosting; no retraining or new architecture.
+- This extends present task authority to the requested source publication and Issue
+  updates. It does not supply original design approval, teacher acceptance or a
+  research critique. See [scope record](../../day2/participant-continuation-scope.md).
+- Review trigger: a new explicit change of requirements or actual external review.
+
 ## D2-002 — Historical design approval unavailable
 
 - Date: 2026-10-17. Status: pending instructor review; no approval claimed.

@@ -22,3 +22,24 @@ My inference: a cheaper execution path cannot by itself establish the psychologi
 For the [synthesis](synthesis-original.md), treat an engineering improvement and a claim about experience as separate propositions. Ask which intervention changes the proposed cognitive mechanism, which only changes its implementation, and how a test would distinguish them.
 
 Verification performed: checked §2.2, §§3.1-3.2, §4.1 Table 1, and §5. Numerical results remain author-reported. No kernels were run; no PDF pagination or cross-hardware reproduction was checked. Further reading should distinguish the dense algorithm from the paper's separately described sparse extension before comparing results.
+
+## R02 follow-up: plain explanation and competing readings
+
+Added 2026-10-17 by the assistant, not a participant interaction. Imagine doing
+the same calculation with a small fast workbench and a large slow cupboard.
+FlashAttention brings useful blocks to the workbench and combines partial results
+carefully, avoiding a huge intermediate table in the cupboard. It can repeat
+some arithmetic to save expensive trips. The analogy describes memory movement,
+not a claim that all computation becomes linear or every device gets faster.
+
+Passage examined: [v1 §3.1, Algorithm 1 and Theorem 1](https://arxiv.org/html/2205.14135v1#S3.SS1),
+read again on 2026-10-17. Two candidate meanings of “exact” are:
+
+| Candidate reading | Assessment against the passage |
+| --- | --- |
+| It approximates dense attention by skipping low-weight pairs | Unsupported for the dense algorithm in Theorem 1; the paper discusses a separate block-sparse extension |
+| It evaluates the same mathematical dense-attention output using blocked execution and normalization statistics | Supported by the theorem; arithmetic remains quadratic in sequence length under its setup while additional storage and memory traffic are different quantities |
+
+“Same mathematical output” does not guarantee bit-for-bit equality for every
+floating-point implementation or hardware platform. This is an interpretation
+boundary, not a new kernel experiment or a universal speed claim.

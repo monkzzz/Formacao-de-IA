@@ -22,3 +22,24 @@ My inference: a translation result cannot establish subjective experience. A sep
 The architecture makes a useful starting point for the [synthesis](synthesis-original.md), provided its task and evidence boundaries remain explicit. For further reading, ask how changing a component while holding training conditions fixed would affect results. Do not silently choose one English-French score; an author correction or authoritative source comparison would be needed to resolve the discrepancy.
 
 Verification performed: inspected architecture §§3.1-3.3, complexity §4, data §5.1, and results §6.1. PDF page positions and experimental reproducibility were not verified. Remaining uncertainty concerns the reported English-French inconsistency and generalization beyond the studied settings.
+
+## R02 follow-up: plain explanation and competing readings
+
+Added 2026-10-17 by the assistant; this is not participant-authored dialogue.
+Imagine each word asking which other words help describe it. Attention assigns
+weights to their information and combines it. A decoder predicting the next word
+must hide later answer words, or training would let it look at the answer. During
+training many known positions can still be processed together; producing a new
+translation remains sequential because each new word uses the words already
+generated. This analogy omits vector projections and training details.
+
+Passage examined: the masking/shift explanation in
+[§3.1, Decoder, of v7](https://arxiv.org/html/1706.03762v7#S3.SS1), read again on 2026-10-17.
+
+| Candidate reading | Assessment against the passage |
+| --- | --- |
+| Masking removes every kind of sequential dependence, including when generating a translation | Unsupported. §3 explicitly describes autoregressive output; parallel training positions do not make unknown future outputs available |
+| Masking prevents access to future target positions while permitting parallel computation on known training inputs | Supported by the decoder's mask and one-position shift; distinguish training computation from generation |
+
+The resolved distinction improves the architectural explanation; it does not
+measure new performance or resolve the separate English–French BLEU discrepancy.

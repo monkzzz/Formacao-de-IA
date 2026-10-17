@@ -1,0 +1,171 @@
+{
+  "executed_utc": "2026-10-17T11:48:39.510511+00:00",
+  "status": "PASS",
+  "scope": "Clean dependency install and isolated training/evaluation prerequisites; no full retraining",
+  "venv": "C:\\Users\\falle\\Nextcloud\\dev_server\\IA_Formation\\Formacao-de-IA\\dia2-local\\.tmp\\repro-clean-20261017",
+  "environment": {
+    "torch": "2.14.1",
+    "numpy": "2.5.4",
+    "Pillow": "12.3.0",
+    "playwright": "1.64.0"
+  },
+  "clean_install_packages": [
+    {
+      "name": "numpy",
+      "version": "2.5.4"
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0"
+    },
+    {
+      "name": "torch",
+      "version": "2.14.1"
+    },
+    {
+      "name": "playwright",
+      "version": "1.64.0"
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.9.0"
+    },
+    {
+      "name": "greenlet",
+      "version": "3.5.6"
+    },
+    {
+      "name": "networkx",
+      "version": "3.7"
+    },
+    {
+      "name": "pyee",
+      "version": "14.0.0"
+    },
+    {
+      "name": "setuptools",
+      "version": "84.0.0"
+    },
+    {
+      "name": "sympy",
+      "version": "1.14.0"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0"
+    },
+    {
+      "name": "filelock",
+      "version": "4.2.0"
+    },
+    {
+      "name": "Jinja2",
+      "version": "3.1.6"
+    },
+    {
+      "name": "MarkupSafe",
+      "version": "3.0.4"
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0"
+    }
+  ],
+  "dataset_hashes": {
+    "t10k-images-idx3-ubyte.gz": "8d422c7b0a1c1c79245a5bcf07fe86e33eeafee792b84584aec276f5a2dbc4e6",
+    "t10k-labels-idx1-ubyte.gz": "f7ae60f92e00ec6debd23a6088c31dbd2371eca3ffa0defaefb259924204aec6",
+    "train-images-idx3-ubyte.gz": "440fcabf73cc546fa21475e81ea370265605f56be210a4024d2ca8f203523609",
+    "train-labels-idx1-ubyte.gz": "3552534a0a558bbed6aed32b30c495cca23d567ec52cac8be1a0730e8010255c"
+  },
+  "split": {
+    "train": 55000,
+    "validation": 5000,
+    "test": 10000,
+    "train_indices_sha256": "64639fe1ad14e3d7f6c32703fb13196dbee342c878d9beea48dbaefe36c9d53f",
+    "validation_indices_sha256": "f0e370e59a59c6e870f33cabbc879f63e7b592e4d28c08d5ea3e2124108bbff1"
+  },
+  "baseline_checkpoint_sha256": "36a6f330c0283bc47370cf262c308fa2dc4eed68083e760d041fe521c5310ec2",
+  "selected_checkpoint_sha256": "bf3b6424c3f30815de9915b6158ea3d9ebcffa62356b2a6fd5a5243633afbec4",
+  "font_hashes": {
+    "arial.ttf": "b3658eadae55e682b5f69eb64c439c1ecc8f196c0bb8d4756d145d13bc86476a",
+    "arialbd.ttf": "e8f4e3baf6cc35fed6fcce3a540e8b39e8f6cda1d22a28f2ec8f526fef7a43f5",
+    "ariali.ttf": "86b32db9a06f9694e2a3760c42e5117bcdc5cc1255bb5186ca8ce0305e22f288",
+    "times.ttf": "931c5de5c70401d9324d5014c123802b4fb753000360ceb2f56c589403cd58c5",
+    "timesbd.ttf": "54fbe2c70af7c85a97bed0573227e3ccc4b2486012e3ca2a40c6bc77065846f5",
+    "cour.ttf": "e4a66a0259718d0c8f4b6e14319b4803ced45afbddf3abba8b8c3e2006856206",
+    "courbd.ttf": "11e629cef937cd08f942aa1bd994a71302dbe2819c72c6d4c183a623acbb421a",
+    "calibri.ttf": "57e93ff143572bcc092c1f56202d43ddc07bb119aa104c6d7af163470fb551f6",
+    "calibrib.ttf": "0a8296747536ead27d5f48f67e911cc3b207742b3f704e66995251d12fd422e5",
+    "verdana.ttf": "6a8481fe107ee547893c018b13dba291c2020bec3de5da6525d9ac09f6bc2105",
+    "verdanab.ttf": "f3245f5f38f61bd1ceefb0f1338a5b88a21e6220832c2f43a38bbc7e1547c36f",
+    "tahoma.ttf": "9af03d4ad44a3b413d92f7de48b94aa7cc8a1471a75d498406eae837f62ee1d1",
+    "georgia.ttf": "38dffcaf1fac89492f7c56c600a14daf36ae42f7c21985cd4134ae113124a58f",
+    "trebuc.ttf": "fe3e8bdd64c1c9f3b9cf5189d06510c80d72cec28e03d04bffc560f77eec58d1",
+    "comic.ttf": "fc7fbc3fb456a363f1f719b0ec62ae093c78124bb6da046006ae7e217a6b8575",
+    "consola.ttf": "cf00b507b3286870cc5064ebd0633c303f70b491a4af25eec2d32df413db0179",
+    "segoeui.ttf": "704eada12961a27fd271f7d3b09e2066520e758390c1776744eff430fee30f6e",
+    "arialbi.ttf": "267a411525980d648f10a7222a6ff1ebe4d4feeefbf9b3100cae2b5cfab5594a",
+    "timesbi.ttf": "3a29d114cb5229e8dbda5bef6c69be4a210a13b7277de4d66e9fc86963226f6c",
+    "couri.ttf": "d82eeeb458f661d867f916d691fc6d3c53f8735fe4d5b04b54a5757321ee03e0",
+    "calibrii.ttf": "7f150e9eabe5db3e1b0f9469dca5c96176bc2fbb306dc9d48b7029dc69c52763",
+    "verdanai.ttf": "14f2ebcdaa1b77e5993a8533662e4bd3ebfe2c5771b6daafd8ccb39b2ad588b9",
+    "georgiab.ttf": "72a6cd94fab6c179392075d3fb361e269cdddfad41bb7ab385fa22a37e49a900",
+    "georgiai.ttf": "d3e4bad27651d120ac8f2cea42cf4b4f077264fb243f66b3caffcfd35465f49b",
+    "trebucbd.ttf": "dfcc306777a594d2815368547dd897e2ac82aff8073e55d9e682569939e49b81",
+    "comicbd.ttf": "128fdcfdfdd358e1624c15dd1f84a4d0689e59afcdefb81f8105efb2253b9c00",
+    "consolab.ttf": "7e8de70c92a891722bd3fbd623db005caab2bfe267e5dab5be46b95a44e0c7f1",
+    "segoeuib.ttf": "b169e636719880976a97e94e3b1cb3dbe5f4a38eabc037bf9f2a9165154c3ad2",
+    "tahomabd.ttf": "b16ed1a15e0cabea8d41d9f8899c253cd61ac466af5e3980d02bd0cf311c2267",
+    "ARIALN.TTF": "cad552553cf2a75afca01955751aaa115e2a64fd6c6eea42e1fbd236630b7e0a",
+    "ARIALNB.TTF": "6c4a4b643461def5411e0217b74a625dcf2fb681252ef5da1db0af4eae80aa7e",
+    "DejaVuSerif.ttf": "42d1edeb7952f31b1f96d767ed7030b08a39e0c372b0071641518864e2bffb51",
+    "LiberationMono-Regular.ttf": "f2b83c763e8afd21709333370bed4774337fae82267937e2b5aea7e2fbd922c1",
+    "pala.ttf": "e47d594e2e2bc31b28f87b6f66483d32f925843ceb002f919c7a403aca48813d",
+    "gadugi.ttf": "0ec2bdbfc2ba99d9fb05b6f7c511e7ab8b7c055e2d644570ad777455d6e9796d",
+    "malgun.ttf": "7a183cf1c6c56b9609fcc16eda8b5229fbc11758a21e669ec00343239b02192f",
+    "CALIFR.TTF": "a779c135081030298594ea50fcdf59bcf5cd341008137931e2fd0e68d4ca65d6",
+    "CENTAUR.TTF": "1d9fec6f9b2b72203ea56a4c7e3b40499984829ff99ae8ae53340fd8d5f07fcb",
+    "LeelawUI.ttf": "ca9a670f12d0e47c20441012a22f78ab17c1b126818e0e887ef7db6ecf5e76b4",
+    "NotoSans-Regular.ttf": "f5f552c8c5edb61fe6efb824baf4d4de47b1a8689ab4925ff43f7bd6a4ebece5",
+    "HTOWERT.TTF": "d5ed7dbd872ae77e6e30cada5287dbaa1ba755f962d0672c5ed14bea08f08422",
+    "LTYPE.TTF": "b700d1bc51a11c77ca7b119b0677a9cd4dc1e61fe43a7130bc2044cd7dc9b116",
+    "sylfaen.ttf": "ac278d932d59558a76817e98051b1dae53867aa81ad83e5198b1b4c4b8066a08",
+    "YuGothR.ttc": "cd24b5617c1e26572b0a7fe7e558f7121ca42c36f7b50e8d9216ac222a1c0a93"
+  },
+  "source_sha256": {
+    "residual.py": "a7dde6fc75aed96e072931fd0d2fa091748ab21c47f1a6aa2d5d073f1e275d66",
+    "captcha.py": "961acfee948639f9d391597b8da4df92dcc956909d57f145821a5ca6e344a89a",
+    "highres.py": "0218fd62adf4ac55aa06fff4df18c1911343936583fb5872f9b3ce33ca9ad27c",
+    "ensemble_benchmark.py": "3a2164366911ca22733cf29d1354710044548fb2a50e653ccf2ab6a1940a9370",
+    "preprocess.py": "21e0c93a7d12217be49b3d2d9b85b59c05343382d3f4d1b07f32d08212257447",
+    "model.py": "bb84e961d40b8ccf857d0ea1c2e05f083e4c8bc17c21ea78b824598fca349a4b",
+    "data.py": "e763840db8b9ff2b98c46d0b16b4b4d0500aee289196d4b747f2f7037bfaacd9"
+  },
+  "independent_training_renderer_probe": {
+    "count": 20,
+    "source": "training split only",
+    "shape": [
+      20,
+      1,
+      64,
+      64
+    ]
+  },
+  "training_and_export_cli": {
+    "digitlab.residual": {
+      "returncode": 0,
+      "stdout": "usage: residual.py [-h] [--epochs EPOCHS] [--samples SAMPLES]\n\nResidual digit experiment with independent font-family development/test\nsplits.\n\noptions:\n  -h, --help         show this help message and exit\n  --epochs EPOCHS\n  --samples SAMPLES\n"
+    },
+    "digitlab.residual_evaluate": {
+      "returncode": 0,
+      "stdout": "usage: residual_evaluate.py [-h] --stage {export,test}\n\nExport a frozen development choice, then open fresh test data after speed QA.\n\noptions:\n  -h, --help            show this help message and exit\n  --stage {export,test}\n"
+    }
+  },
+  "limits": [
+    "Full 12-epoch retraining NOT RUN; exact trained-weight reproduction not claimed",
+    "Checkpoints restored from existing local ignored artifacts, not from a verified public archive",
+    "44 font identities verified on this Windows host; font redistribution/other-host availability not established",
+    "Run a new experiment only in a separate layout; original trainer guards completed output paths"
+  ],
+  "system_site_packages_disabled": true
+}
