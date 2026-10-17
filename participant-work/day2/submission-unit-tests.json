@@ -1,0 +1,17 @@
+{
+  "executed_date": "2026-10-17",
+  "status": "PASS",
+  "command": ".\\.venv\\Scripts\\python.exe -m unittest discover -s tests -v",
+  "cwd": "dia2-local",
+  "tests_run": 30,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "reported_duration_seconds": 5.048,
+  "python": "3.12.10",
+  "torch": "2.14.1+cpu",
+  "numpy": "2.5.4",
+  "source_commit": "450a14fe0338bbf3200986b8649497ae5a8c5808",
+  "evidence": "Observed command exit 0 and unittest OK during this batch; summary transcribed from tool output",
+  "scope": "Full current Python unit suite; no browser or deployment checks"
+}

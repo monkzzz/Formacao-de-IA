@@ -1,6 +1,7 @@
 # Prepared instructor process-deviation request
 
 Status: **not sent; recipient/channel and instructor response pending**.
+Participant explicitly deferred sending this approval request on 2026-10-17.
 Prepared 2026-10-17. No instructor approval is claimed.
 
 Please review whether the following route and process deviations are acceptable

@@ -1,0 +1,26 @@
+{
+  "executed_utc": "2026-10-17T10:51:59.181237+00:00",
+  "status": "PASS",
+  "scope": "Clean stdlib-only venv, copied server and manifests, real HTTPS downloads",
+  "models": [
+    {
+      "path": "model\\captcha-v3\\digits",
+      "sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+      "bytes": 1090472,
+      "original_unchanged": true
+    },
+    {
+      "path": "model\\robust\\letters",
+      "sha256": "0fef4b3155457eb1be91547590b48ebc61823c68b79fd414b406835cbfe1b101",
+      "bytes": 835944,
+      "original_unchanged": true
+    }
+  ],
+  "limitations": [
+    "Restores browser weights, not training checkpoints or optional pretrained readers",
+    "No training, accuracy evaluation, browser QA or deployment performed"
+  ],
+  "returncode": 0,
+  "stdout": "Downloading digits weights...\nVerified digits weights.\nDownloading letters weights...\nVerified letters weights.\n",
+  "stderr": ""
+}

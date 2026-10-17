@@ -1,0 +1,157 @@
+{
+  "executed_utc": "2026-10-17T10:52:23.611012+00:00",
+  "status": "PASS",
+  "source_commit": "450a14fe0338bbf3200986b8649497ae5a8c5808",
+  "selected_model": "captcha-v3 / residual64-16-32-128 / epoch 12",
+  "model_sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+  "checkpoint_sha256": "bf3b6424c3f30815de9915b6158ea3d9ebcffa62356b2a6fd5a5243633afbec4",
+  "training_environment": {
+    "python": "3.12.10",
+    "torch": "2.14.1+cpu",
+    "numpy": "2.5.4",
+    "pillow": "12.3.0",
+    "device": "cpu"
+  },
+  "split": {
+    "train": 55000,
+    "validation": 5000
+  },
+  "training_seed": 20261123,
+  "split_seed": 20261016,
+  "epochs_recorded": 12,
+  "metrics_and_error_analysis": {
+    "test": {
+      "count": 10000,
+      "correct": 9910,
+      "accuracy": 0.991,
+      "errors": 90,
+      "largest_confusions": [
+        {
+          "actual": 9,
+          "predicted": 4,
+          "count": 7
+        },
+        {
+          "actual": 9,
+          "predicted": 7,
+          "count": 7
+        },
+        {
+          "actual": 7,
+          "predicted": 2,
+          "count": 6
+        },
+        {
+          "actual": 3,
+          "predicted": 5,
+          "count": 4
+        },
+        {
+          "actual": 5,
+          "predicted": 3,
+          "count": 4
+        }
+      ]
+    },
+    "raw_test": {
+      "count": 20000,
+      "correct": 19746,
+      "accuracy": 0.9873,
+      "errors": 254,
+      "largest_confusions": [
+        {
+          "actual": 7,
+          "predicted": 1,
+          "count": 18
+        },
+        {
+          "actual": 4,
+          "predicted": 9,
+          "count": 13
+        },
+        {
+          "actual": 5,
+          "predicted": 9,
+          "count": 11
+        },
+        {
+          "actual": 9,
+          "predicted": 4,
+          "count": 11
+        },
+        {
+          "actual": 9,
+          "predicted": 7,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "identities": [
+    {
+      "path": "dia2-local/reports/captcha-v3.json",
+      "exists": true,
+      "sha256": "fa8ec634f24b975598212d010b48667405810825699a1ba570dc7f3362385819"
+    },
+    {
+      "path": "dia2-local/reports/captcha-v3-development-selection.json",
+      "exists": true,
+      "sha256": "b1b2a9296638e80c5e606340b6695cd35d619bd974bf8e9e71500e8c89607301"
+    },
+    {
+      "path": "dia2-local/docs/residual-training.md",
+      "exists": true,
+      "sha256": "23883697ed74a291c322a1881f9732253018fa11fd3894cae00345927b975c44"
+    },
+    {
+      "path": "dia2-local/digitlab/residual.py",
+      "exists": true,
+      "sha256": "a7dde6fc75aed96e072931fd0d2fa091748ab21c47f1a6aa2d5d073f1e275d66"
+    },
+    {
+      "path": "dia2-local/digitlab/residual_evaluate.py",
+      "exists": true,
+      "sha256": "6869bc3db8c5417251354b62005c00d347c019029a69cd9177f1a37c135c2546"
+    },
+    {
+      "path": "dia2-local/digitlab/data.py",
+      "exists": true,
+      "sha256": "e763840db8b9ff2b98c46d0b16b4b4d0500aee289196d4b747f2f7037bfaacd9"
+    },
+    {
+      "path": "dia2-local/digitlab/preprocess.py",
+      "exists": true,
+      "sha256": "21e0c93a7d12217be49b3d2d9b85b59c05343382d3f4d1b07f32d08212257447"
+    },
+    {
+      "path": "dia2-local/digitlab/highres.py",
+      "exists": true,
+      "sha256": "0218fd62adf4ac55aa06fff4df18c1911343936583fb5872f9b3ce33ca9ad27c"
+    },
+    {
+      "path": "dia2-local/dist/model/captcha-v3/digits/manifest.json",
+      "exists": true,
+      "sha256": "549f44ecf1fcf01a763917bbff3db1624f455aa4ae3bd908472efc2f648ac99f"
+    },
+    {
+      "path": "dia2-local/requirements-lock.txt",
+      "exists": true,
+      "sha256": "09baf8690572af2a4cf4e4b898b249e2c679a9e45d0956c331e3c1123e0827a8"
+    },
+    {
+      "path": "dia2-local/dist/model/captcha-v3/digits/weights.bin",
+      "exists": true,
+      "sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c"
+    },
+    {
+      "path": "dia2-local/artifacts/captcha-v3/best.pt",
+      "exists": true,
+      "sha256": "bf3b6424c3f30815de9915b6158ea3d9ebcffa62356b2a6fd5a5243633afbec4"
+    }
+  ],
+  "limitations": [
+    "Index and confusion analysis of historical results; no fresh accuracy evaluation",
+    "Checkpoint and weights exist locally and remain ignored by Git",
+    "Current UI release is v3.10.0; selected trained CNN originated in v3.7.0"
+  ]
+}
