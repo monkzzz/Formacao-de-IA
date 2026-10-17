@@ -2,6 +2,12 @@
 
 Review date: 2026-10-17. Scope: preparation for the course exercises, using the PDFs supplied in this checkout. Page numbers below are PDF page positions.
 
+The [handover asset audit](participant-work/day2/teaching-assets-review.md) freshly
+verified all eleven deck hashes, sizes and individual page counts: **479 pages**
+total (83 GSS plus 396 in the other decks). It also checked covers and two
+previously noted pages. This corrects the aggregate arithmetic in the original
+preparation record; none of the PDFs or per-deck review counts changed.
+
 The joint GSS deck has selectable text; the other ten decks are image-only. Review used extracted GSS text and rendered contact sheets covering every page of the other decks. Contact sheets support topic review, not a complete transcription or independent validation of every small caption, benchmark, product claim, or reference. Rendering dependencies were installed temporarily outside project requirements; the slides were not changed.
 
 ## Day 1

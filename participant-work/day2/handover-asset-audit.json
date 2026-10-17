@@ -1,0 +1,153 @@
+{
+  "executed_utc": "2026-10-17T11:16:11.549250+00:00",
+  "status": "PASS",
+  "scope": "Local inventory and integrity review; no rights clearance or human feedback",
+  "duplicate_images": [
+    {
+      "path": "65474617.jpg",
+      "bytes": 14707,
+      "size": [
+        400,
+        400
+      ],
+      "sha256": "20408bf697201912289abc7aa92ea4177908d492965131f58c6c2796bfcf83af",
+      "duplicate_of": "dist/assets/65474617.jpg",
+      "decision": "Keep local, ignore exact duplicate; tracked serving asset retained"
+    },
+    {
+      "path": "scopedog-asset.jpg",
+      "bytes": 234376,
+      "size": [
+        1422,
+        1577
+      ],
+      "sha256": "9caaffdfbdc25c550c601d1fe07d24b9bb7d3ce331e6f97fdb8a2b6e0ce7a179",
+      "duplicate_of": "dist/assets/scopedog.jpg",
+      "decision": "Keep local, ignore exact duplicate; tracked serving asset retained"
+    }
+  ],
+  "historical_followups": [
+    {
+      "raw": "ensemble-v1-post-publication-challenge-verification-raw.json",
+      "comparison": "ensemble-v1-post-publication-challenge-verification.json",
+      "baseline": "captcha-v2-challenge-raw.json",
+      "raw_sha256": "97773f598000b0ab56b3b8d1f822a78a590e39927c6d92acbbb89894797d222f",
+      "comparison_sha256": "77156c1b6c2f05f82a80794fd6da9b76e7b133419158f79a2f3c479ee62a775a",
+      "count": 10,
+      "correct": 9,
+      "decision": "Commit unchanged historical follow-up evidence; not a new accuracy test"
+    },
+    {
+      "raw": "release-3.7.0-public-challenge-recheck-20261016-raw.json",
+      "comparison": "release-3.7.0-public-challenge-recheck-20261016.json",
+      "baseline": "captcha-v3-challenge-raw.json",
+      "raw_sha256": "7493d544f5086c7d46a76a8fa65cd15b10fb034c79664945a134a3bbb0e55283",
+      "comparison_sha256": "4b23d8ae46f16be1f2faff425e39816c69b5922e7d0806c3fa6da5b8b35380e7",
+      "count": 10,
+      "correct": 10,
+      "decision": "Commit unchanged historical follow-up evidence; not a new accuracy test"
+    }
+  ],
+  "gss_provenance": {
+    "repository": "https://github.com/PIEP-Portugal/formacao_gss",
+    "commit": "d53f1884a51f9a3056cf850475264237b410bd7d",
+    "files_verified": 63,
+    "recorded_adaptations": 8,
+    "manifest_sha256": "ce230a1a5d936bf59fe52c057300c0fb2e16d48e41c796fa1ecde5b82825efb7"
+  },
+  "license_citation_consistency": {
+    "authors_and_license_match": true,
+    "upstream_repository_metadata_retained": "https://github.com/vcanonici/Formacao-de-IA"
+  },
+  "slides": [
+    {
+      "file": "Dia1/Teorico/20261012--forma\u00e7\u00e3o_gss_modulos_1.1_1.2-HCG-v_conjunta_dia1.pdf",
+      "pages": 83,
+      "bytes": 7185114,
+      "sha256": "599f9473241057df187b0b930ff84fcfe67fe58e800b8498f35b7593d4d31193",
+      "first_page_text_characters": 66
+    },
+    {
+      "file": "Dia1/Teorico/Context Eng.pdf",
+      "pages": 49,
+      "bytes": 13496507,
+      "sha256": "28b7a15f1f518cdb96fff2aa11c7608f5103c039603028ca806ad18942dda50b",
+      "first_page_text_characters": 0
+    },
+    {
+      "file": "Dia1/Teorico/From LLM to Chatbot.pdf",
+      "pages": 33,
+      "bytes": 8429635,
+      "sha256": "b12d2082fd1dbbc6da3642ba3d47734ec351e6f7d426372a3b54619e57445ee4",
+      "first_page_text_characters": 0
+    },
+    {
+      "file": "Dia1/Teorico/LLM Anatomy.pdf",
+      "pages": 83,
+      "bytes": 19129209,
+      "sha256": "04b9e329a9ca17778557a99405b86329a6654beea8013b09bc3dc89d2300a5df",
+      "first_page_text_characters": 0
+    },
+    {
+      "file": "Dia1/Teorico/Model Chosing.pdf",
+      "pages": 19,
+      "bytes": 6381078,
+      "sha256": "40f0a71d95cace22a39410d39d559dbc378524f8b31ede3263a556b23786f4d1",
+      "first_page_text_characters": 0
+    },
+    {
+      "file": "Dia1/Teorico/The Basics.pdf",
+      "pages": 48,
+      "bytes": 11026606,
+      "sha256": "a399441181d691b0d8df064589516f5244cab13f00372b9ab4018a358b9f85c9",
+      "first_page_text_characters": 0
+    },
+    {
+      "file": "Dia1/Teorico/Whoami.pdf",
+      "pages": 27,
+      "bytes": 7422450,
+      "sha256": "9e563452b4cbfa0405067732f9713bbe3e35c43e2f8e3b5ecfd7ec93512c23d4",
+      "first_page_text_characters": 0
+    },
+    {
+      "file": "Dia2/Teorico/Agentic Context Eng.pdf",
+      "pages": 44,
+      "bytes": 14804763,
+      "sha256": "7419cf684f9ff53302269e558d30e06f0cae5e30e9b9ab80366d3cc6b1a648ad",
+      "first_page_text_characters": 0
+    },
+    {
+      "file": "Dia2/Teorico/Coding Agents.pdf",
+      "pages": 38,
+      "bytes": 10451648,
+      "sha256": "2b89c3a6f0371ba27ab70a82a8032a3e689265ec27f9359bac38283392f4ef66",
+      "first_page_text_characters": 0
+    },
+    {
+      "file": "Dia2/Teorico/Task eng.pdf",
+      "pages": 34,
+      "bytes": 8379633,
+      "sha256": "15ef9bfce53380570a8a14e5a81874120d78b073f45eabd60a7792aee04244af",
+      "first_page_text_characters": 0
+    },
+    {
+      "file": "Dia2/Teorico/VDD and Autonomy.pdf",
+      "pages": 21,
+      "bytes": 7517337,
+      "sha256": "d3b159bd6cebc73372f8898158cf0cdb23957d5c6e5712cde037aef875b1a273",
+      "first_page_text_characters": 0
+    }
+  ],
+  "pdf_review_method": "Fresh metadata/cover renders and two targeted pages; earlier full contact-sheet review remains in SLIDE-REVIEW.md",
+  "preservation": {
+    "generic_starter_archive_matches": true,
+    "original_synthesis_matches": true,
+    "recorded_skill_and_context_files_match_before_handoff_update": true
+  },
+  "tooling": {
+    "pdf": "1.28.2",
+    "initial_pdf_install": "Restricted attempt failed; reviewed escalation succeeded into ignored target",
+    "restricted_audit": "Package directory access prevented import; reviewed escalation used",
+    "page_total_correction": "Initial aggregate assertion used the previous incorrect 579-page total; individual deck counts matched. Correct total is 479."
+  }
+}

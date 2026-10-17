@@ -1,0 +1,42 @@
+{
+  "executed_utc": "2026-10-17T11:23:23.037605+00:00",
+  "status": "PASS",
+  "local_tasks_completed": 8,
+  "requested_batch_size": 10,
+  "relative_links_checked": 284,
+  "heading_anchors_checked": 53,
+  "workflow_script_paths": {
+    "avaliar-desafio-avancado.yml": [
+      "Dia2/Desafio/avaliar_captcha_no_site.py"
+    ],
+    "gerar-desafio-avancado.yml": [
+      "Dia2/Desafio/gerar_desafio_avancado.py"
+    ],
+    "import-mnist.yml": [
+      "Dia2/Dataset-MNIST/download_mnist.py"
+    ]
+  },
+  "exercise_numbering": "PASS: four per day, four classifier parts and twelve GSS entries",
+  "current_starter_file_hashes": {
+    "participant-work/starter/.github/skills/bootstrap-project/SKILL.md": "be62211bdbe40db2bc2934ef231b332be85eb95ec292de58a0af5cda87cdb6c9",
+    "participant-work/starter/context/decisions.md": "f029a64da4e8e96986b7a8bf49bf1996bf9d21ec8631f4b0e3d700f01f065005",
+    "participant-work/starter/context/handoff.md": "35eb2e5d2bbcf9d878b75e76b63d29835b521def5ff105a4b257332a70a00bdf",
+    "participant-work/starter/context/project.md": "2f461e8761ae1083fcc6f37762cbeb1a9f014be09446642bf6354434bb0e9954"
+  },
+  "generic_starter_archive_unchanged": true,
+  "prior_test_evidence": "125 GSS and 30 classifier tests; evidence checked, not rerun",
+  "preserved_challenge_records_and_official_inputs": true,
+  "observed_remote_main": "1d8707c65666885861a2a90c7e39145f49c65f7b",
+  "remote_check": "Initial restricted connection failed; reviewed read-only retry succeeded",
+  "external_dependencies": [
+    "Instructor recipient, acceptance and real feedback session",
+    "Pages publication or accepted existing-host substitution",
+    "Future new-origin check only if a submission changes"
+  ],
+  "limits": [
+    "No teacher delivery, session or approval",
+    "No push or deployment",
+    "No training or official challenge inference",
+    "Attribution review does not establish all third-party rights"
+  ]
+}

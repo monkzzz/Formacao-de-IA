@@ -33,7 +33,7 @@ Git is installed and the repository already has classifier history. No GitHub CL
 
 ## Slide preparation
 
-All eleven PDFs were opened for preparation review: 83 pages in the text-readable GSS deck and 496 image-only pages across the other ten decks. The latter were rendered into temporary contact sheets and visually reviewed. All files are below 20,000,000 bytes.
+All eleven PDFs were opened for preparation review: 83 pages in the text-readable GSS deck and 396 image-only pages across the other ten decks (479 total). The earlier aggregate of 496 image-only pages was an arithmetic error, corrected by the [2026-10-17 asset audit](participant-work/day2/handover-asset-audit.json); individual deck counts in the slide review were correct. The latter were rendered into temporary contact sheets and visually reviewed. All files are below 20,000,000 bytes.
 
 The [slide review](SLIDE-REVIEW.md) connects the decks to the exercises, records takeaways, and lists questions for the course. This is an assistant preparation review, not evidence of the participant attending lessons or mastering the material. Fine print in contact sheets and empirical claims in the slides were not independently fact-checked.
 

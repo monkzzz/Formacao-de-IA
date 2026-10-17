@@ -1,22 +1,33 @@
 # Session handoff
 
-Status: existing classifier preservation context populated, version 1.0.0.
+Status: observed progress updated 2026-10-17, handoff version 1.1.0.
 Owner: the agent updates this at meaningful task boundaries from actual evidence.
 
 Completed: generic rules/procedures retained; context records the participant's
 instruction to maintain current `dia2-local/` and website. Native bootstrap skill
 source is versioned; chosen-assistant behavior has separate test evidence.
 
-Next action: read the [real Issue register](../../day2/issue-register.md) and start
-the evidence-index Issue, subject to its acceptance criteria. Artifact restoration
-precedes fresh browser verification; verification precedes submitted-origin checks.
-The instructor Issue is separately waiting on a recipient/channel and actual reply.
-Do not retrain, migrate or change production merely to complete documentation.
+Completed since the context snapshot: the [selected CNN index](../../day2/submission-evidence-index.md),
+[clean browser-weight recovery](../../day2/submission-artifacts.md), actual 30-test
+unit result, [public browser/parity checks](../../day2/submission-browser-delivery.md),
+[preserved challenge chain](../../day2/submission-challenge-chain.md) and maintenance
+corrections. The [submission handover](../../../SUBMISSION.md) links the deliverables
+and distinguishes current local commits from published history. Requirements,
+technical design and original approvals are not changed by this status update.
 
-Pending: artifact availability, fresh relevant checks and current live-origin
-verification; instructor acceptance of tool/hosting/process differences. Original
-approval trail is unavailable. Copilot discovery/use was not tested, following the
-participant's chosen-assistant route. Explicit skill loading is a separate claim.
+Next action: review the [remaining checklist](../../../TASKS.md) and
+[prepared feedback packet](../../day2/teacher-feedback-packet.md). Instructor contact
+is deferred and the current site must remain intact. Actual review needs an
+identified authorized recipient/channel and a real session; no such session has
+occurred. Pages publication or accepted hosting substitution remains pending.
+Checkpoint/off-machine archival availability also remains outside browser-weight
+recovery. Do not retrain, migrate or change production to manufacture completion.
+
+Original approval trail is unavailable. Native Copilot discovery/use was not
+tested, following the participant's chosen-assistant route. Explicit skill loading
+and synthetic session tests are separate claims. The immutable version 1.0.0
+identity record describes the earlier handoff; current delivery identities are
+recorded separately rather than overwriting that historical manifest.
 
 For future context updates, load `.github/skills/bootstrap-project/SKILL.md`, read
 these existing records, ask only about changed material requirements, present the

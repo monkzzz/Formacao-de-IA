@@ -35,6 +35,7 @@ reference material, not substitutes for completing the course exercises.
 | [Preparation proposal](DIA2-PROPOSTA.md) | Historical plan with a dated current-status pointer |
 | [Task checklist](TASKS.md) | Completion evidence, maintenance work and external dependencies |
 | [Current submission](participant-work/day2/submission-browser-delivery.md) | Existing public URL, default model identity and fresh browser checks |
+| [Complete participant handover](SUBMISSION.md) | Research, demonstrations, starter, classifier evidence and explicit external dependencies |
 
 GitHub Pages, instructor acceptance and actual teacher feedback remain pending.
 

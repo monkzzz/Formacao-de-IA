@@ -196,19 +196,19 @@ These are concrete documentation/automation issues found locally; complete them 
 - [x] **Clarify release documentation:** identified application v3.10.0 with the default captcha-v3 CNN in the local README, task workflows and [hosting guide](dia2-local/docs/hosting.md#submission-status--2026-10-17); earlier competing current headings are historical.
 - [x] **Complete or label the custom agent template:** [Jarvis](.github/agents/Jarvis.agent.md) is explicitly an unfinished teaching example, with concrete metadata and a course-repository bootstrap boundary. Native discovery/execution remains unverified.
 - [x] **Update root navigation:** [root README](README.md#personal-fork-navigation--2026-10-17) explains study answers, implementation, proposal, checklist and participant work, while keeping student implementations in personal repositories.
-- [ ] **Review existing untracked files individually:** the initial Git status contains two local JPGs and several raw/follow-up reports. Decide which are required evidence, duplicates, or local-only artifacts; do not delete or stage them indiscriminately.
-- [ ] **Check teaching assets and attribution:** verify slide links/order/size claims, resource provenance, third-party notices, and consistency between `LICENSE.md` and `CITATION.cff`; review PDF contents manually where necessary.
-- [ ] **Validate maintenance changes:** check relative links, exercise numbering, workflow script paths, and relevant script behavior. Run GSS or Digit Lab tests only when their corresponding behavior changes; do not retrain or rerun the official challenge for documentation edits.
+- [x] **Review existing untracked files individually:** [five-file review](participant-work/day2/teaching-assets-review.md#remaining-untracked-files) identifies two exact JPG duplicates, retained locally and ignored, and three historical JSON records preserved unchanged. Earlier raw exports were individually checked in the preceding challenge batch; no file was deleted.
+- [x] **Check teaching assets and attribution:** [review](participant-work/day2/teaching-assets-review.md) verifies eleven decks/479 pages, size/order/navigation, all 63 GSS provenance hashes and local license/citation/notices. PDF covers and two targeted pages were visually inspected; earlier full-slide review remains separate. Unresolved third-party ownership limits are recorded, not certified away.
+- [x] **Validate maintenance changes:** [handover validation](participant-work/day2/handover-validation.json) checks links, exercise numbering, workflow paths, evidence identities and syntax; [previous actual behavior checks](participant-work/day2/maintenance-next-ten.md#actual-validation) remain preserved. No training, official challenge inference or unnecessary behavior-suite rerun for these documentation edits.
 
 ## 10. Completion and handover
 
 Recommended order: repair broken course automation/documentation; collect missing Day 1 outputs; establish starter/skill evidence; reconcile project Issues and process deviations; finalize the existing model/app submission; publish on Pages or document the accepted substitution; complete teacher feedback.
 
-- [ ] Deliver the Day 1 report, two reading notes, original synthesis, audit, final revision, and correction summary.
-- [ ] Deliver the GSS execution/observation record and relevant validation results.
-- [ ] Deliver the personal starter, bootstrap skill, approved project context, and actual fresh-session test evidence.
-- [ ] Deliver repository/Issue/commit URLs, the trained-model evidence index, deployment URL, and preserved challenge records.
+- [x] Deliver the Day 1 report, two reading notes, original synthesis, audit, final revision, and correction summary. Delivered locally through the [participant submission](SUBMISSION.md#day-1-research); no teacher receipt or mastery is claimed.
+- [x] Deliver the GSS execution/observation record and relevant validation results. See the [twelve-lesson handover](SUBMISSION.md#gss-demonstrations), actual 125-test record and declared live/recorded limits.
+- [x] Deliver the personal starter, bootstrap skill, approved project context, and actual fresh-session test evidence. See [starter handover](SUBMISSION.md#starter-skill-and-context); participant confirmation covers preservation scope, not original technical-design approval. Chosen-assistant session adaptations and native Copilot limits remain explicit.
+- [x] Deliver repository/Issue/commit URLs, the trained-model evidence index, deployment URL, and preserved challenge records. See [classifier handover](SUBMISSION.md#classifier-repository-and-commits); delivered in this checkout, later commit URLs are explicitly pending push and do not establish remote publication.
 - [ ] Deliver the teacher feedback log, correction evidence, and explicit remaining limitations or instructor-accepted deviations.
-- [ ] Update this checklist using linked evidence. Treat account access, instructor decisions, and real classroom activities as external dependencies rather than completed work.
+- [x] Update this checklist using linked evidence. Treat account access, instructor decisions, and real classroom activities as external dependencies rather than completed work. See [final local batch and remaining dependencies](participant-work/day2/handover-completion.md); only eight remaining items were locally completable, and the teacher packet is prepared but unsent.
 
 Creating this checklist does not execute the tasks, publish anything, create GitHub Issues, or certify course completion.
