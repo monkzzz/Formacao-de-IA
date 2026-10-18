@@ -1,5 +1,7 @@
 # Participant submission and handover
 
+**GitHub Pages update — 2026-10-18:** the [live Pages submission](https://monkzzz.github.io/Formacao-de-IA/) now publishes only participant-trained CNNs, with the MNIST-only course model as default and separately labelled extensions. [Deployment and live verification](dia2-local/docs/self-trained-pages.md) passed four-model parity and forty non-challenge uploads. The separate existing website is unchanged. No public official-CAPTCHA rerun or new accuracy result is claimed.
+
 **Day 2 clarification — participant-trained models only:** the professor excludes downloaded pretrained models. The separate [submission package and run instructions](dia2-local/docs/self-trained-submission.md) now include only our trained CNNs, with MNIST-only as the course default and supplementary extensions labelled separately. [Provenance and validation](dia2-local/reports/self-trained-submission-v1-validation.json) passed: 71 unit tests, four-model browser parity and 40 uploads. The existing published sites remain unchanged and contain historical pretrained experiments; they are not this restricted package. The CAPTCHA confidence target remains unmet.
 
 Prepared 2026-10-17 in the personal fork. This is delivery of the local work to

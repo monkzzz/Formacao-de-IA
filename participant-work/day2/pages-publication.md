@@ -1,5 +1,7 @@
 # GitHub Pages publication
 
+**Superseded Pages release:** the subsequent 2026-10-18 update publishes the [participant-trained submission only](../../dia2-local/docs/self-trained-pages.md), without the optional pretrained readers described below. Preserve this document as the original publication history.
+
 Published 2026-10-17 after the participant explicitly asked, “can do the github
 pages task?”. This authorizes a separate Pages deployment while preserving the
 existing development and external site. Earlier deferred-Pages statements describe

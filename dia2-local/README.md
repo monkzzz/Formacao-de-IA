@@ -1,5 +1,7 @@
 # Digit Lab — Local Desafio Project
 
+**Participant-trained version is now on [GitHub Pages](https://monkzzz.github.io/Formacao-de-IA/).** [Deployment verification](docs/self-trained-pages.md) passed all 22 asset hashes and four-model browser checks with 40 uploads. No pretrained readers are included. The separate original website and local development assets remain unchanged.
+
 **Participant-trained submission:** the professor excludes downloaded pretrained models. A separate [submission site and ZIP](docs/self-trained-submission.md) bundle only our trained digit/letter CNNs, with no pretrained reader runtimes or remote model loaders. The MNIST-only model remains the course default; extensions show their own data scopes and recorded results. [Verification](reports/self-trained-submission-v1-validation.json): 71 tests, four-model browser parity, 40 uploads and local-only network requests passed. Existing sites/assets are preserved; the all-ten confidence target is still unmet.
 
 **Balanced legacy/color training:** four CPU epochs completed after a fixed 60-sample visual review. No epoch/preprocessing pair met the frozen gates. The RGB baseline scored 98.722% raw accuracy and 95.500% correct with score strictly >90%; the final trained RGB model scored 98.722% and 95.000%, with higher NLL. Retain the baseline. Test/export refusal checks passed; reserved and official evaluation were NOT RUN. See [measured results and limits](reports/balanced-color-training-v1-summary.md) and [gated commands](docs/balanced-color-evaluation.md).

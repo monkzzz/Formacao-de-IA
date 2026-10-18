@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "origin": "https://naoquerosaber.pt/AI/",
+  "sha256": {
+    "index.html": "f6df646761735657fa76d6ceac047b7ffc9672bd41204671d7628af7e275bfc9",
+    "v3/app.js": "9a29eb7a9896582600913489ce65e6cb628319025da217a6e867f1d605ae9fa1",
+    "model/captcha-v3/digits/weights.bin": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c"
+  },
+  "scope": "Read-only snapshot before Pages update"
+}

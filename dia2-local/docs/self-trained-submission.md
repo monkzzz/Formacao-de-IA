@@ -89,3 +89,7 @@ review, a fresh Windows run, teacher acceptance and deployment are NOT RUN.
 ## Subsequently requested official rerun
 
 After the package was built and verified, the participant explicitly requested a new run of the official ten. The unchanged package was served locally, the preserved residual extension was selected through its UI, and all ten raw browser predictions were saved before a separate label comparison. **10/10 were correct; 6/10 were correct with original scores strictly >90%.** The requirement remains unmet. Python prepared inputs and predictions matched the browser, and the package, ZIP and original active assets retained their hashes. [Separate rerun evidence](../reports/self-trained-submission-v1-challenge-rerun-v1-summary.md). Earlier NOT RUN receipts retain their original build/QA scope. No training, tuning, publication or default-model change followed.
+
+## Subsequent GitHub Pages deployment
+
+The participant subsequently requested publication on GitHub Pages. The [live participant-trained site](https://monkzzz.github.io/Formacao-de-IA/) now serves this exact package; [deployment and live verification](self-trained-pages.md) passed all 22 public asset hashes, four-model parity and forty non-challenge uploads. The separate original website remains unchanged. This supersedes earlier NOT RUN deployment statements for the later publication phase only.

@@ -1,5 +1,9 @@
 # Website Hosting
 
+## Current GitHub Pages submission — 2026-10-18
+
+[Pages now serves the participant-trained package](self-trained-pages.md), without pretrained digit/word readers. Its deployment, all 22 asset hashes and four-model browser checks passed. The separate existing website below remains unchanged; older sections retain their release history.
+
 ## Submission status — 2026-10-17
 
 The submission application is **v3.10.0** at the existing

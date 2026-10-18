@@ -1,0 +1,133 @@
+{
+  "status": "PASS",
+  "url": "https://monkzzz.github.io/Formacao-de-IA/",
+  "live_build": {
+    "scope": "Reviewed participant-trained submission only; no pretrained readers, datasets, credentials or ROMs",
+    "submission": "self-trained-submission-v1",
+    "archive_sha256": "91b807d9c78fcd8cba60516e9a5854dc30d0174d3e90d3f6f49f8378e0d95070",
+    "receipt_sha256": "63e03d807a109d1d1c7d8970d3480c1369e00215a305a029e3087782117e4d0b",
+    "asset_sha256": {
+      "submission.js": "532ef00a7b718a5d73b8b0d84dd5252b0211992c07f0974d95729b96b723dbb6",
+      ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "provenance.json": "36e037190e17b90bedb8b4aa8ae001fa2cc0039cb6eb0dd79ecac46f1b445aa4",
+      "index.html": "d5e18ca6e415ec86a550053f8b9fa9ca8ceaa3e33ff80e41531ef1ead3f7f9b1",
+      "submission.css": "cdb689b30b435b29cc6f5d40a3a4032a94c089b21ac735de9932143c19dc31fc",
+      "evaluation.json": "8d9945b101f6aba59d42542e9fa933b6d98eb76ada98bd706c87d3f614f55c4e",
+      "v3/inference.js": "540ec962500ed162ce1871c716cc82b77b630a53e651caffd3a3f27935091690",
+      "v3/canvas-tools.js": "d07532ea11f2101ec84aa6126ca2580be1a940782dab0cf181bb862d551685fe",
+      "v3/residual.js": "1b454e6acd7b97d7a8f1904ea97c4f382f0b97a6b9d924981e459a8bd972353a",
+      "v3/preprocess.js": "170ad3280aa835bb0ad0efd5d65cd2ea507c1c3cd680b092cfc0e95537db3e3c",
+      "model/parity.json": "33059d23d38ea1c7acf2cca11d64fd2ea8afb81082f24f63db7db1393bcdf6d7",
+      "model/weights.bin": "8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+      "model/manifest.json": "71247af8e6e04330462d64f210f588c6652f68033802ab0598bfcfd2993ebaa6",
+      "model/robust/letters/parity.json": "6c2a16c99afa39d8f45385faf7f9f24bac94c7363d2a50f302fc6240700e412c",
+      "model/robust/letters/weights.bin": "0fef4b3155457eb1be91547590b48ebc61823c68b79fd414b406835cbfe1b101",
+      "model/robust/letters/manifest.json": "7b3e6995d90bb03549605059fb80a5c68d3dd09fa8fca822f7cd11820ff7ca95",
+      "model/mnist-supplementary-v1/digits/parity.json": "f9f73bfa93cdcd8aa1c1ab4ae36ff53f9ca03763131ecd8dc7d78e33260451ec",
+      "model/mnist-supplementary-v1/digits/weights.bin": "2f2a7aaf69845caeacd5cbab02ba56f95956f5ab8657d203b747a83004852c89",
+      "model/mnist-supplementary-v1/digits/manifest.json": "9c6ca06f7fb90672eb8047bb71322762cded0c3859357090483b0013b83f4dfe",
+      "model/captcha-v3/digits/parity.json": "5c5fa7a53c166771079f9271d530a0c1c031c0d914489930e71eb85092a9a551",
+      "model/captcha-v3/digits/weights.bin": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+      "model/captcha-v3/digits/manifest.json": "549f44ecf1fcf01a763917bbff3db1624f455aa4ae3bd908472efc2f648ac99f"
+    },
+    "source_commit": "3e69e8e839d1eb8691de9d19b9fea0189501b3ed",
+    "official_captcha_inference": "NOT RUN",
+    "original_external_website_modified": false
+  },
+  "assets": {
+    "submission.js": {
+      "sha256": "532ef00a7b718a5d73b8b0d84dd5252b0211992c07f0974d95729b96b723dbb6",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    ".nojekyll": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_type": "application/octet-stream"
+    },
+    "provenance.json": {
+      "sha256": "36e037190e17b90bedb8b4aa8ae001fa2cc0039cb6eb0dd79ecac46f1b445aa4",
+      "content_type": "application/json; charset=utf-8"
+    },
+    "index.html": {
+      "sha256": "d5e18ca6e415ec86a550053f8b9fa9ca8ceaa3e33ff80e41531ef1ead3f7f9b1",
+      "content_type": "text/html; charset=utf-8"
+    },
+    "submission.css": {
+      "sha256": "cdb689b30b435b29cc6f5d40a3a4032a94c089b21ac735de9932143c19dc31fc",
+      "content_type": "text/css; charset=utf-8"
+    },
+    "evaluation.json": {
+      "sha256": "8d9945b101f6aba59d42542e9fa933b6d98eb76ada98bd706c87d3f614f55c4e",
+      "content_type": "application/json; charset=utf-8"
+    },
+    "v3/inference.js": {
+      "sha256": "540ec962500ed162ce1871c716cc82b77b630a53e651caffd3a3f27935091690",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    "v3/canvas-tools.js": {
+      "sha256": "d07532ea11f2101ec84aa6126ca2580be1a940782dab0cf181bb862d551685fe",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    "v3/residual.js": {
+      "sha256": "1b454e6acd7b97d7a8f1904ea97c4f382f0b97a6b9d924981e459a8bd972353a",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    "v3/preprocess.js": {
+      "sha256": "170ad3280aa835bb0ad0efd5d65cd2ea507c1c3cd680b092cfc0e95537db3e3c",
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    "model/parity.json": {
+      "sha256": "33059d23d38ea1c7acf2cca11d64fd2ea8afb81082f24f63db7db1393bcdf6d7",
+      "content_type": "application/json; charset=utf-8"
+    },
+    "model/weights.bin": {
+      "sha256": "8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+      "content_type": "application/octet-stream"
+    },
+    "model/manifest.json": {
+      "sha256": "71247af8e6e04330462d64f210f588c6652f68033802ab0598bfcfd2993ebaa6",
+      "content_type": "application/json; charset=utf-8"
+    },
+    "model/robust/letters/parity.json": {
+      "sha256": "6c2a16c99afa39d8f45385faf7f9f24bac94c7363d2a50f302fc6240700e412c",
+      "content_type": "application/json; charset=utf-8"
+    },
+    "model/robust/letters/weights.bin": {
+      "sha256": "0fef4b3155457eb1be91547590b48ebc61823c68b79fd414b406835cbfe1b101",
+      "content_type": "application/octet-stream"
+    },
+    "model/robust/letters/manifest.json": {
+      "sha256": "7b3e6995d90bb03549605059fb80a5c68d3dd09fa8fca822f7cd11820ff7ca95",
+      "content_type": "application/json; charset=utf-8"
+    },
+    "model/mnist-supplementary-v1/digits/parity.json": {
+      "sha256": "f9f73bfa93cdcd8aa1c1ab4ae36ff53f9ca03763131ecd8dc7d78e33260451ec",
+      "content_type": "application/json; charset=utf-8"
+    },
+    "model/mnist-supplementary-v1/digits/weights.bin": {
+      "sha256": "2f2a7aaf69845caeacd5cbab02ba56f95956f5ab8657d203b747a83004852c89",
+      "content_type": "application/octet-stream"
+    },
+    "model/mnist-supplementary-v1/digits/manifest.json": {
+      "sha256": "9c6ca06f7fb90672eb8047bb71322762cded0c3859357090483b0013b83f4dfe",
+      "content_type": "application/json; charset=utf-8"
+    },
+    "model/captcha-v3/digits/parity.json": {
+      "sha256": "5c5fa7a53c166771079f9271d530a0c1c031c0d914489930e71eb85092a9a551",
+      "content_type": "application/json; charset=utf-8"
+    },
+    "model/captcha-v3/digits/weights.bin": {
+      "sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+      "content_type": "application/octet-stream"
+    },
+    "model/captcha-v3/digits/manifest.json": {
+      "sha256": "549f44ecf1fcf01a763917bbff3db1624f455aa4ae3bd908472efc2f648ac99f",
+      "content_type": "application/json; charset=utf-8"
+    }
+  },
+  "preserved_existing_origin": {
+    "index.html": "f6df646761735657fa76d6ceac047b7ffc9672bd41204671d7628af7e275bfc9",
+    "v3/app.js": "9a29eb7a9896582600913489ce65e6cb628319025da217a6e867f1d605ae9fa1",
+    "model/captcha-v3/digits/weights.bin": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c"
+  },
+  "official_images_used": false
+}
