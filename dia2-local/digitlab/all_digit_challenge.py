@@ -307,7 +307,7 @@ def main():
     parser.add_argument("--full-verification", type=Path, default=RELEASE_CHECKS["full"])
     parser.add_argument("--submission-verification", type=Path, default=RELEASE_CHECKS["submission"])
     args = parser.parse_args()
-    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9-]*", args.name):
+    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]*", args.name):
         parser.error("Use a simple evaluation name without directories")
     globals().update(NAME=args.name, BUILD=args.build, FULL_SITE=args.full_site, REPORT_ROOT=args.report_root,
                      SNAPSHOT_ROOT=args.snapshot_root, REFERENCE=args.reference,
