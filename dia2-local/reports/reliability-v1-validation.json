@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "public_runtime_assets_preserved": 61,
+  "prior_official_raw_reports_preserved": 13,
+  "prior_official_predictions_preserved": 130,
+  "experiment_source_font_baseline_and_prior_evidence": "PASS",
+  "local_day2_unit_tests": 100,
+  "local_day1_gui_tests": 125,
+  "local_gui_skips": 0,
+  "relocated_submission_uploads": 40,
+  "new_relative_receipt_package_uploads": 40,
+  "ftp_fault_tests": "Connection failure, interrupted/corrupt temporary upload and refused rename preserve safe state and journal evidence",
+  "live_ftp_upload": "NOT RUN",
+  "official_captcha_inference_in_this_phase": "NOT RUN"
+}

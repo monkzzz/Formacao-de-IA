@@ -1,0 +1,528 @@
+{
+  "status": "PASS",
+  "build_sha256": "b08d69519027cb5a64d033272e4730ca2b621d338e3a4d10c56c6fb8e5c563e7",
+  "artifacts": {
+    "site": "/home/monk/Nextcloud/dev_server/IA_Formation/Formacao-de-IA/dia2-local/artifacts/self-trained-submission-portable-v1/site",
+    "archive": "/home/monk/Nextcloud/dev_server/IA_Formation/Formacao-de-IA/dia2-local/artifacts/self-trained-submission-portable-v1/self-trained-submission-portable-v1.zip"
+  },
+  "checks": {
+    "own_trained_options_and_mnist_default": "PASS",
+    "mnist": {
+      "status": "PASS",
+      "parity_cases": 10,
+      "upload_count": 10,
+      "maximum_score_error": 1.3526052944357048e-07,
+      "activation_errors": [
+        {
+          "logits": 9.5367431640625e-07,
+          "first": 2.384185791015625e-07,
+          "second": 2.6226043701171875e-06,
+          "hidden": 1.9073486328125e-06
+        },
+        {
+          "logits": 9.5367431640625e-07,
+          "first": 2.384185791015625e-07,
+          "second": 1.430511474609375e-06,
+          "hidden": 9.5367431640625e-07
+        },
+        {
+          "logits": 1.9073486328125e-06,
+          "first": 2.384185791015625e-07,
+          "second": 2.384185791015625e-06,
+          "hidden": 1.9073486328125e-06
+        },
+        {
+          "logits": 2.384185791015625e-06,
+          "first": 2.384185791015625e-07,
+          "second": 2.86102294921875e-06,
+          "hidden": 2.6226043701171875e-06
+        },
+        {
+          "logits": 2.86102294921875e-06,
+          "first": 2.384185791015625e-07,
+          "second": 2.384185791015625e-06,
+          "hidden": 2.384185791015625e-06
+        },
+        {
+          "logits": 1.9073486328125e-06,
+          "first": 2.384185791015625e-07,
+          "second": 2.384185791015625e-06,
+          "hidden": 1.9073486328125e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "first": 2.384185791015625e-07,
+          "second": 3.337860107421875e-06,
+          "hidden": 1.9073486328125e-06
+        },
+        {
+          "logits": 1.9073486328125e-06,
+          "first": 2.384185791015625e-07,
+          "second": 1.9073486328125e-06,
+          "hidden": 1.6689300537109375e-06
+        },
+        {
+          "logits": 1.3262033462524414e-06,
+          "first": 2.384185791015625e-07,
+          "second": 3.337860107421875e-06,
+          "hidden": 1.9073486328125e-06
+        },
+        {
+          "logits": 1.9073486328125e-06,
+          "first": 2.384185791015625e-07,
+          "second": 1.9073486328125e-06,
+          "hidden": 1.430511474609375e-06
+        }
+      ]
+    },
+    "mnist-supplementary-v1": {
+      "status": "PASS",
+      "parity_cases": 10,
+      "upload_count": 10,
+      "maximum_score_error": 1.5057567859244614e-07,
+      "activation_errors": [
+        {
+          "logits": 1.9073486328125e-06,
+          "first": 4.76837158203125e-07,
+          "second": 2.384185791015625e-06,
+          "hidden": 1.9073486328125e-06
+        },
+        {
+          "logits": 9.5367431640625e-07,
+          "first": 4.76837158203125e-07,
+          "second": 1.9073486328125e-06,
+          "hidden": 3.0100345611572266e-06
+        },
+        {
+          "logits": 2.86102294921875e-06,
+          "first": 2.384185791015625e-07,
+          "second": 1.9073486328125e-06,
+          "hidden": 2.86102294921875e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "first": 2.384185791015625e-07,
+          "second": 1.9073486328125e-06,
+          "hidden": 3.814697265625e-06
+        },
+        {
+          "logits": 1.3113021850585938e-06,
+          "first": 2.384185791015625e-07,
+          "second": 2.1457672119140625e-06,
+          "hidden": 1.9073486328125e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "first": 4.76837158203125e-07,
+          "second": 1.9073486328125e-06,
+          "hidden": 2.86102294921875e-06
+        },
+        {
+          "logits": 1.9073486328125e-06,
+          "first": 2.384185791015625e-07,
+          "second": 2.6226043701171875e-06,
+          "hidden": 1.7285346984863281e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "first": 4.76837158203125e-07,
+          "second": 3.337860107421875e-06,
+          "hidden": 2.562999725341797e-06
+        },
+        {
+          "logits": 1.9073486328125e-06,
+          "first": 2.384185791015625e-07,
+          "second": 1.9073486328125e-06,
+          "hidden": 1.430511474609375e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "first": 2.384185791015625e-07,
+          "second": 1.9073486328125e-06,
+          "hidden": 2.86102294921875e-06
+        }
+      ]
+    },
+    "captcha-v3": {
+      "status": "PASS",
+      "parity_cases": 10,
+      "upload_count": 10,
+      "maximum_score_error": 1.523964013316892e-07,
+      "activation_errors": [
+        {
+          "logits": 3.814697265625e-06,
+          "first": 4.76837158203125e-07,
+          "second": 2.86102294921875e-06,
+          "hidden": 2.384185791015625e-06
+        },
+        {
+          "logits": 9.5367431640625e-07,
+          "first": 4.76837158203125e-07,
+          "second": 1.430511474609375e-06,
+          "hidden": 1.1920928955078125e-06
+        },
+        {
+          "logits": 2.86102294921875e-06,
+          "first": 4.76837158203125e-07,
+          "second": 2.384185791015625e-06,
+          "hidden": 2.384185791015625e-06
+        },
+        {
+          "logits": 3.337860107421875e-06,
+          "first": 7.152557373046875e-07,
+          "second": 2.86102294921875e-06,
+          "hidden": 3.814697265625e-06
+        },
+        {
+          "logits": 2.86102294921875e-06,
+          "first": 4.76837158203125e-07,
+          "second": 1.430511474609375e-06,
+          "hidden": 1.6689300537109375e-06
+        },
+        {
+          "logits": 1.9073486328125e-06,
+          "first": 7.152557373046875e-07,
+          "second": 2.0265579223632812e-06,
+          "hidden": 1.9073486328125e-06
+        },
+        {
+          "logits": 7.62939453125e-06,
+          "first": 4.76837158203125e-07,
+          "second": 1.430511474609375e-06,
+          "hidden": 1.9073486328125e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "first": 4.76837158203125e-07,
+          "second": 1.9073486328125e-06,
+          "hidden": 2.86102294921875e-06
+        },
+        {
+          "logits": 9.5367431640625e-07,
+          "first": 7.152557373046875e-07,
+          "second": 1.430511474609375e-06,
+          "hidden": 1.9073486328125e-06
+        },
+        {
+          "logits": 1.9073486328125e-06,
+          "first": 4.76837158203125e-07,
+          "second": 1.6689300537109375e-06,
+          "hidden": 2.0265579223632812e-06
+        }
+      ]
+    },
+    "letters": {
+      "status": "PASS",
+      "parity_cases": 26,
+      "upload_count": 10,
+      "maximum_score_error": 2.39310623539879e-07,
+      "activation_errors": [
+        {
+          "logits": 2.86102294921875e-06,
+          "first": 4.76837158203125e-07,
+          "second": 2.384185791015625e-06,
+          "hidden": 1.430511474609375e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "first": 2.384185791015625e-07,
+          "second": 2.86102294921875e-06,
+          "hidden": 2.86102294921875e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "first": 2.384185791015625e-07,
+          "second": 2.384185791015625e-06,
+          "hidden": 2.5033950805664062e-06
+        },
+        {
+          "logits": 2.86102294921875e-06,
+          "first": 2.384185791015625e-07,
+          "second": 1.430511474609375e-06,
+          "hidden": 1.8477439880371094e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "first": 2.384185791015625e-07,
+          "second": 2.6226043701171875e-06,
+          "hidden": 2.86102294921875e-06
+        },
+        {
+          "logits": 5.7220458984375e-06,
+          "first": 2.384185791015625e-07,
+          "second": 2.384185791015625e-06,
+          "hidden": 2.682209014892578e-06
+        },
+        {
+          "logits": 1.430511474609375e-06,
+          "first": 2.384185791015625e-07,
+          "second": 1.9073486328125e-06,
+          "hidden": 1.430511474609375e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "first": 2.384185791015625e-07,
+          "second": 2.384185791015625e-06,
+          "hidden": 2.86102294921875e-06
+        },
+        {
+          "logits": 9.5367431640625e-06,
+          "first": 2.384185791015625e-07,
+          "second": 2.384185791015625e-06,
+          "hidden": 1.9073486328125e-06
+        },
+        {
+          "logits": 1.9073486328125e-06,
+          "first": 2.384185791015625e-07,
+          "second": 2.6226043701171875e-06,
+          "hidden": 1.9073486328125e-06
+        },
+        {
+          "logits": 7.62939453125e-06,
+          "first": 2.384185791015625e-07,
+          "second": 2.1457672119140625e-06,
+          "hidden": 2.86102294921875e-06
+        },
+        {
+          "logits": 2.86102294921875e-06,
+          "first": 2.384185791015625e-07,
+          "second": 1.9073486328125e-06,
+          "hidden": 1.7881393432617188e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "first": 2.384185791015625e-07,
+          "second": 1.9073486328125e-06,
+          "hidden": 2.384185791015625e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "first": 2.384185791015625e-07,
+          "second": 2.1457672119140625e-06,
+          "hidden": 3.814697265625e-06
+        },
+        {
+          "logits": 4.291534423828125e-06,
+          "first": 2.384185791015625e-07,
+          "second": 1.6093254089355469e-06,
+          "hidden": 2.86102294921875e-06
+        },
+        {
+          "logits": 7.62939453125e-06,
+          "first": 4.76837158203125e-07,
+          "second": 1.9073486328125e-06,
+          "hidden": 2.86102294921875e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "first": 2.384185791015625e-07,
+          "second": 1.9073486328125e-06,
+          "hidden": 2.7418136596679688e-06
+        },
+        {
+          "logits": 3.337860107421875e-06,
+          "first": 2.384185791015625e-07,
+          "second": 2.1457672119140625e-06,
+          "hidden": 2.562999725341797e-06
+        },
+        {
+          "logits": 1.9073486328125e-06,
+          "first": 2.384185791015625e-07,
+          "second": 2.384185791015625e-06,
+          "hidden": 2.86102294921875e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "first": 2.384185791015625e-07,
+          "second": 1.430511474609375e-06,
+          "hidden": 2.86102294921875e-06
+        },
+        {
+          "logits": 5.7220458984375e-06,
+          "first": 3.5762786865234375e-07,
+          "second": 1.430511474609375e-06,
+          "hidden": 2.86102294921875e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "first": 2.384185791015625e-07,
+          "second": 2.384185791015625e-06,
+          "hidden": 2.384185791015625e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "first": 2.384185791015625e-07,
+          "second": 2.384185791015625e-06,
+          "hidden": 1.9073486328125e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "first": 2.384185791015625e-07,
+          "second": 2.1457672119140625e-06,
+          "hidden": 2.86102294921875e-06
+        },
+        {
+          "logits": 5.245208740234375e-06,
+          "first": 2.384185791015625e-07,
+          "second": 2.384185791015625e-06,
+          "hidden": 2.86102294921875e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "first": 2.384185791015625e-07,
+          "second": 1.9073486328125e-06,
+          "hidden": 2.86102294921875e-06
+        }
+      ]
+    },
+    "filename_independence_and_raw_download": "PASS",
+    "drawing_undo_redo_blank_invalid_and_loaded_offline_inference": "PASS",
+    "pretrained_mode_refused": "PASS",
+    "metadata_retry_model_failure_recovery_and_busy_controls": "PASS"
+  },
+  "official_captcha_inference": "NOT RUN",
+  "deployment": "NOT RUN",
+  "requests": [
+    {
+      "url": "http://127.0.0.1:33259/",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/submission.css?v=3.11.1",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/submission.js?v=3.11.1",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/v3/inference.js?v=self-trained-1",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/v3/preprocess.js?v=3.6.0",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/v3/canvas-tools.js?v=3.11.1",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/v3/browser-utils.js?v=3.11.1",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/v3/residual.js?v=1",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/evaluation.json",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/model/manifest.json?v=captcha-3",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/model/weights.bin?sha256=8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/model/manifest.json?v=captcha-3",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/model/weights.bin?sha256=8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/model/mnist-supplementary-v1/digits/manifest.json?v=captcha-3",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/model/mnist-supplementary-v1/digits/weights.bin?sha256=2f2a7aaf69845caeacd5cbab02ba56f95956f5ab8657d203b747a83004852c89",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/model/captcha-v3/digits/manifest.json?v=captcha-3",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/model/captcha-v3/digits/weights.bin?sha256=d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/model/robust/letters/manifest.json?v=captcha-3",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/model/robust/letters/weights.bin?sha256=0fef4b3155457eb1be91547590b48ebc61823c68b79fd414b406835cbfe1b101",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/model/manifest.json?v=captcha-3",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/model/weights.bin?sha256=8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/submission.css?v=3.11.1",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/submission.js?v=3.11.1",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/v3/inference.js?v=self-trained-1",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/v3/preprocess.js?v=3.6.0",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/v3/canvas-tools.js?v=3.11.1",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/v3/browser-utils.js?v=3.11.1",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/v3/residual.js?v=1",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/evaluation.json",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/evaluation.json",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/model/manifest.json?v=captcha-3",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/model/weights.bin?sha256=8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33259/model/mnist-supplementary-v1/digits/manifest.json?v=captcha-3",
+      "method": "GET"
+    }
+  ],
+  "blocked_external_requests": [],
+  "page_errors": [],
+  "active_assets_preserved": true,
+  "browser_version": "155.0.8059.84",
+  "visual_manual_review": "NOT RUN; screenshots captured"
+}

@@ -1,0 +1,33 @@
+{
+  "scope": "Preserved hosted CI diagnostic attempts and final successful validation",
+  "runs": [
+    {
+      "id": 39167301143,
+      "commit": "cb0a960",
+      "conclusion": "failure",
+      "findings": "Missing ignored weight binaries; Windows temporary-path aliases",
+      "url": "https://github.com/monkzzz/Formacao-de-IA/actions/runs/39167301143"
+    },
+    {
+      "id": 39167616525,
+      "commit": "40334a8",
+      "conclusion": "failure",
+      "findings": "Missing ignored parity fixtures; Windows path aliases before their fix",
+      "url": "https://github.com/monkzzz/Formacao-de-IA/actions/runs/39167616525"
+    },
+    {
+      "id": 39167707130,
+      "commit": "f8ba440",
+      "conclusion": "failure",
+      "findings": "Diagnostic run before the reviewed parity-restoration fix",
+      "url": "https://github.com/monkzzz/Formacao-de-IA/actions/runs/39167707130"
+    },
+    {
+      "id": 39168253971,
+      "commit": "bcadebe",
+      "conclusion": "success",
+      "findings": "Both operating systems, unit/GUI checks and frontend browser suites passed",
+      "url": "https://github.com/monkzzz/Formacao-de-IA/actions/runs/39168253971"
+    }
+  ]
+}

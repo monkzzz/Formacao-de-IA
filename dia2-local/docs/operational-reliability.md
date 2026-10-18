@@ -12,6 +12,10 @@ Each OS installs Chromium and runs `digitlab.browser_ci`. The harness downloads
 the reviewed restricted ZIP, checks its archive and every member hash, then
 combines its four weight exports with **current checkout frontend sources** in
 temporary directories. The fixture is not a new submission or deployment.
+Before unit tests, preparation restores only missing reviewed weight binaries
+and parity fixtures. It checks the checkout's manifests and refuses to replace
+differing existing model assets. This covers a fresh checkout without weakening
+the export-integrity unit test.
 
 Both interfaces get actual activation parity, native Python upload-score checks,
 exports and mobile checks. Full-site design, helper, drawing, Words and reader
@@ -96,3 +100,27 @@ contacting the production FTP account.
 Local evidence: [browser CI](../reports/reliability-v1-browser-ci.json),
 [relocated package and 40 uploads](../reports/reliability-v1-relocated-submission.json)
 and [research integrity](../reports/captcha-confidence-replay-v1-validation.json).
+The [new portable build](../reports/self-trained-submission-portable-v1-build.json)
+stores relative paths and passed
+[another four-model/40-upload check](../reports/reliability-v1-portable-build-browser.json).
+It is a local validation artifact; publication remains pinned to cleanup v4.
+
+## Executed verification
+
+[Hosted run 39168253971](https://github.com/monkzzz/Formacao-de-IA/actions/runs/39168253971)
+passed on both Ubuntu and Windows at source commit
+`bcadebeefea908b58f0514f63289da38f188ce4b`. Each OS ran 100 Day 2 tests with one
+optional EMNIST-data test skipped, all 125 Day 1 tests without GUI skips, and
+both frontend browser checks plus the design/helper/Words/reader collectors.
+The [workflow record](../reports/reliability-v1-hosted-ci.json) preserves every
+step's conclusion. The local run passed all 100 Day 2 tests and all 125 Day 1
+tests under Xvfb. Local fault-injection and integrity results are in
+[the validation record](../reports/reliability-v1-validation.json).
+
+The implementation was committed to the isolated validation branch
+`maintenance/reliability-confidence-20261018`. Production publication was not
+part of this phase. Earlier diagnostic workflow failures remain preserved in
+GitHub: they exposed missing ignored weights/parity fixtures and Windows short
+temporary-path aliases. Preparation now restores reviewed model assets, and
+portable receipt resolution canonicalizes both root and target paths. An
+isolated clean-checkout browser run also passed before the final hosted run.

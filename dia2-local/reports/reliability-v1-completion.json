@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "validated_source_commit": "bcadebeefea908b58f0514f63289da38f188ce4b",
+  "validation_branch": "maintenance/reliability-confidence-20261018",
+  "hosted_run": "https://github.com/monkzzz/Formacao-de-IA/actions/runs/39168253971",
+  "hosted_os": [
+    "Linux",
+    "Windows"
+  ],
+  "hosted_tests_per_os": {
+    "day2_run": 100,
+    "day2_skipped_optional_emnist": 1,
+    "day1_run": 125,
+    "day1_skipped": 0,
+    "browser_suite": "PASS"
+  },
+  "hosted_browser_report_sha256": {
+    "ci-39168253971-1-Linux-design.json": "7cb7b45ce1401edb0c11b647856aa7cca2fb1ff77e394758faf0ac7d80fb6880",
+    "ci-39168253971-1-Linux-helper-qa.json": "355937da8a54dd8b791c9145077d4bda69f15fb0a59f0d841f442a27e38ab059",
+    "ci-39168253971-1-Linux-readers.json": "6a819642ba2c705a73dc81c313ce6b5937a042d9233dd6e0c5beaa6f2bac519b",
+    "ci-39168253971-1-Linux-weights.json": "4ceee7f7efd5c6b00ecb14db9850622b8dc2b186816f475e140dd9c2a11a3cf8",
+    "ci-39168253971-1-Linux-words.json": "521b485054c08c8f8f4e53fbf005fc53ff77bb559a5c4101341a39e5e2ae673a",
+    "ci-39168253971-1-Linux.json": "fe0752433439f440ef0d4694c9f1ed2aca39a778005c4d4457eb9b4b9a1c216e",
+    "ci-39168253971-1-Windows-design.json": "be023adfd83ab5309dc007034f353a23a2256de0ee660fe815c16f1cf73667db",
+    "ci-39168253971-1-Windows-helper-qa.json": "dfaa1596d7ff1b221b121ecaa55fe460349566e4b1f5ef876f44bdd46c0fa736",
+    "ci-39168253971-1-Windows-readers.json": "949e3f23ad1f54913d8817021c8a858a40e03b82860650375ae8f8a735918c22",
+    "ci-39168253971-1-Windows-weights.json": "81848f5785012fe80d75d5dada321a796391a3de017861f9f3748e035a7b24a9",
+    "ci-39168253971-1-Windows-words.json": "565e654119cbd5b6cb9ffbc4564b102001d3b2d97ca85c3a8ca96399ab352ffe",
+    "ci-39168253971-1-Windows.json": "80f0aa956f5d3060777f23f6df3356dc6afbe2ed2e5c75985e08a871b490ab3f"
+  },
+  "confidence_experiment": {
+    "epochs": 4,
+    "selected": null,
+    "best_strict_coverage": 0.9770833333333333,
+    "required_strict_coverage": 0.98125,
+    "decision": "RETAIN BASELINE; no eligible candidate",
+    "reserved_and_official_inference": "NOT RUN"
+  },
+  "manual_review": "Windows hosted submission screenshot and 24 independent synthetic training examples inspected",
+  "live_ftp_publication": "NOT RUN; staged upload, corruption, connection and rename failure paths tested locally"
+}

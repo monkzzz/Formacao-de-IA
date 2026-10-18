@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "scope": "Manual review of 24 fixed independent synthetic training examples: two digits, printed/MNIST sources and all six corruption conditions; not a human-labelled accuracy benchmark",
+  "sample_indices": [
+    2,
+    7,
+    12,
+    17,
+    22,
+    27,
+    32,
+    37,
+    42,
+    47,
+    52,
+    57,
+    62,
+    67,
+    72,
+    77,
+    82,
+    87,
+    92,
+    97,
+    102,
+    107,
+    112,
+    117
+  ],
+  "review": "Displayed glyphs retain their intended identities in this small reviewed subset; no training/data decisions changed from this post-run inspection",
+  "screenshot": "screenshots/captcha-confidence-replay-v1-training-review.png"
+}

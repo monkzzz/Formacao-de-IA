@@ -1,0 +1,55 @@
+{
+  "checks": {
+    "reviewed_weights_current_frontends": "PASS",
+    "full-mnist": {
+      "status": "PASS",
+      "parity_cases": 10,
+      "upload_native_score_error": 6.42277364626409e-08
+    },
+    "full-mnist-supplementary-v1": {
+      "status": "PASS",
+      "parity_cases": 10,
+      "upload_native_score_error": 1.5057567859244614e-07
+    },
+    "full-captcha-v3": {
+      "status": "PASS",
+      "parity_cases": 10,
+      "upload_native_score_error": 8.443153065584852e-09
+    },
+    "full-letters": {
+      "status": "PASS",
+      "parity_cases": 26,
+      "upload_native_score_error": 5.06584714177194e-08
+    },
+    "full-export-mobile-local-only": "PASS",
+    "submission-mnist": {
+      "status": "PASS",
+      "parity_cases": 10,
+      "upload_native_score_error": 6.42277364626409e-08
+    },
+    "submission-mnist-supplementary-v1": {
+      "status": "PASS",
+      "parity_cases": 10,
+      "upload_native_score_error": 1.5057567859244614e-07
+    },
+    "submission-captcha-v3": {
+      "status": "PASS",
+      "parity_cases": 10,
+      "upload_native_score_error": 8.443153065584852e-09
+    },
+    "submission-letters": {
+      "status": "PASS",
+      "parity_cases": 26,
+      "upload_native_score_error": 5.06584714177194e-08
+    },
+    "submission-export-mobile-local-only": "PASS",
+    "design_qa": "PASS",
+    "helper_qa": "PASS",
+    "words_qa": "PASS",
+    "digit_readers_qa": "PASS"
+  },
+  "scope": "Current checkout UI with four reviewed participant-trained exports; no training, official images, external OCR downloads or deployment",
+  "status": "PASS",
+  "archive_sha256": "4af37b2413f36bdf88d36593e0aed1ccd636a58b0af57c62d9aede43f5e96335",
+  "browser_version": "155.0.8059.0"
+}

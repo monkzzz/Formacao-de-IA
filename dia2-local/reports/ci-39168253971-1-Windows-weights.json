@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "reviewed_weights": {
+      "status": "PASS",
+      "restored": [
+        "model/weights.bin",
+        "model/parity.json",
+        "model/mnist-supplementary-v1/digits/weights.bin",
+        "model/mnist-supplementary-v1/digits/parity.json",
+        "model/captcha-v3/digits/weights.bin",
+        "model/captcha-v3/digits/parity.json",
+        "model/robust/letters/weights.bin",
+        "model/robust/letters/parity.json"
+      ]
+    }
+  },
+  "scope": "Current checkout UI with four reviewed participant-trained exports; no training, official images, external OCR downloads or deployment",
+  "status": "PASS"
+}
