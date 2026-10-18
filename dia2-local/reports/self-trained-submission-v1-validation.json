@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "checks": {
+    "exact_allowlist": true,
+    "site_hashes": true,
+    "zip_hash": true,
+    "active_site_preserved": true,
+    "provenance_audit": true,
+    "four_models": true,
+    "browser": true,
+    "no_external_requests": true,
+    "unit_tests": true,
+    "source_templates_match": true,
+    "only_local_entry_links": true
+  },
+  "asset_count": 22,
+  "included_models": [
+    "mnist",
+    "mnist-supplementary-v1",
+    "captcha-v3",
+    "letters"
+  ],
+  "tests_run": 71,
+  "uploads": 40,
+  "desktop_mobile_visual_review": "Coding agent inspected both screenshots; independent human review NOT RUN",
+  "first_collector_failure_preserved": true,
+  "collector_repair": "CSP-compatible polling only; artifact and ZIP unchanged",
+  "no_downloaded_pretrained_models": true,
+  "official_captcha_rerun": "NOT RUN",
+  "strict_professor_accuracy_target": "UNMET",
+  "fresh_windows_run": "NOT RUN",
+  "teacher_acceptance": "NOT RUN",
+  "deployment": "NOT RUN",
+  "commit": "NOT RUN",
+  "push": "NOT RUN"
+}

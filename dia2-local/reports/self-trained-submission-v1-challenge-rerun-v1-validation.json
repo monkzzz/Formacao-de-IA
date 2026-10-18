@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "cases": 10,
+  "prepared_input_parity": "PASS",
+  "maximum_score_error": 2.558115672623984e-07,
+  "predictions_match_python": true,
+  "submission_archive_and_active_app_preserved": true,
+  "raw_sha256": "03ade6e9cbe33904c711076e70cbbdc95b800b6384596c6adbc84f6f483727ef",
+  "no_external_requests": true,
+  "training_tuning_selection": "NOT RUN"
+}

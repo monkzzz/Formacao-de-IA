@@ -1,0 +1,84 @@
+{
+  "policy": {
+    "name": "professor-official-captcha-strict-v1",
+    "source": "Participant's explicit report of professor requirements in the conversation",
+    "required_cases": 10,
+    "required_correct": 10,
+    "minimum_score_exclusive": 0.9,
+    "score_comparison": ">",
+    "score_basis": "Unrounded original model score for the correct class; no display rescaling",
+    "supplementary_training": "Acceptable as a separate, correctly documented extension",
+    "mnist_only_model": "Preserve the required course model and its evidence separately",
+    "official_inputs_for_training_or_selection": false
+  },
+  "count": 10,
+  "correct": 10,
+  "correct_above_90": 6,
+  "accepted": false,
+  "cases": [
+    {
+      "file": "caso_01.png",
+      "correct": true,
+      "correct_class_score": 0.9926245433150255,
+      "passes": true
+    },
+    {
+      "file": "caso_02.png",
+      "correct": true,
+      "correct_class_score": 0.9531295523900614,
+      "passes": true
+    },
+    {
+      "file": "caso_03.png",
+      "correct": true,
+      "correct_class_score": 0.9976004854241995,
+      "passes": true
+    },
+    {
+      "file": "caso_04.png",
+      "correct": true,
+      "correct_class_score": 0.7222405791390392,
+      "passes": false
+    },
+    {
+      "file": "caso_05.png",
+      "correct": true,
+      "correct_class_score": 0.5813570133171732,
+      "passes": false
+    },
+    {
+      "file": "caso_06.png",
+      "correct": true,
+      "correct_class_score": 0.9975862690632376,
+      "passes": true
+    },
+    {
+      "file": "caso_07.png",
+      "correct": true,
+      "correct_class_score": 0.7692806894663524,
+      "passes": false
+    },
+    {
+      "file": "caso_08.png",
+      "correct": true,
+      "correct_class_score": 0.953737788226099,
+      "passes": true
+    },
+    {
+      "file": "caso_09.png",
+      "correct": true,
+      "correct_class_score": 0.9850162813908194,
+      "passes": true
+    },
+    {
+      "file": "caso_10.png",
+      "correct": true,
+      "correct_class_score": 0.555623842211494,
+      "passes": false
+    }
+  ],
+  "scope": "Explicit user-requested official rerun in the frozen participant-trained package; historical exposure, no training, tuning or selection",
+  "raw_sha256": "03ade6e9cbe33904c711076e70cbbdc95b800b6384596c6adbc84f6f483727ef",
+  "reference_sha256": "b4bcdb0d85d35e1a34ff0c941db89e5063e27f89be5ae449524179d7e891aa4f",
+  "model_sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c"
+}

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "module": "digitlab.balanced_color",
+      "stage": "test",
+      "returncode": 1,
+      "refused": true
+    },
+    {
+      "module": "digitlab.balanced_color_browser",
+      "stage": "export",
+      "returncode": 1,
+      "refused": true
+    }
+  ],
+  "reserved_test_and_preview_absent": true
+}

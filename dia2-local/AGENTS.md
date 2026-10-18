@@ -24,6 +24,13 @@ Public v3.10.0 and all historical submission evidence remain separate.
 
 ## Evaluation integrity
 
+- The participant subsequently clarified that the professor excludes downloaded
+  pretrained models from the submission. Use the separate
+  [participant-trained submission package](docs/self-trained-submission.md), with
+  the MNIST-only model as the course default and locally trained extensions labelled
+  separately. Preserve existing pretrained-reader experiments and the deployed site;
+  do not include their weights, remote loaders or word-reader runtime in the package.
+
 - The participant has clarified the professor's current criterion: exactly 10/10
   correct and every original, unrounded score strictly >90%. Use
   `digitlab.acceptance` for new acceptance checks; historical >=90% metrics retain

@@ -1,0 +1,7 @@
+{
+  "status": "FAIL",
+  "build_sha256": "63e03d807a109d1d1c7d8970d3480c1369e00215a305a029e3087782117e4d0b",
+  "checks": {},
+  "official_captcha_inference": "NOT RUN",
+  "deployment": "NOT RUN"
+}

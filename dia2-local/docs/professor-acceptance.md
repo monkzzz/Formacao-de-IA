@@ -6,6 +6,11 @@ professor's requirements in this conversation:
 - Exactly **10/10 correct** on the official CAPTCHA cases.
 - Every correct prediction must have an original model score **strictly >90%**.
 - Supplementary training is acceptable as a **separate, correctly documented extension**.
+- Downloaded pretrained models are **not acceptable for the submission**, according
+  to the participant's subsequent clarification. Keep pretrained digit/word readers
+  as historical experiments only. Use the separate
+  [participant-trained submission package](self-trained-submission.md); downloading
+  MNIST/EMNIST training datasets does not import pretrained model weights.
 
 This is the participant's report of the professor's criterion. It does not claim
 an independently witnessed review or approval of the current implementation.

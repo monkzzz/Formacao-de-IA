@@ -1,5 +1,7 @@
 # Participant submission and handover
 
+**Day 2 clarification — participant-trained models only:** the professor excludes downloaded pretrained models. The separate [submission package and run instructions](dia2-local/docs/self-trained-submission.md) now include only our trained CNNs, with MNIST-only as the course default and supplementary extensions labelled separately. [Provenance and validation](dia2-local/reports/self-trained-submission-v1-validation.json) passed: 71 unit tests, four-model browser parity and 40 uploads. The existing published sites remain unchanged and contain historical pretrained experiments; they are not this restricted package. The CAPTCHA confidence target remains unmet.
+
 Prepared 2026-10-17 in the personal fork. This is delivery of the local work to
 the participant for review. It has **not been sent to a teacher** and does not
 establish classroom attendance, mastery or instructor acceptance.

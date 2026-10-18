@@ -1,5 +1,9 @@
 # Digit Lab task workflows
 
+For the professor's no-pretrained-model restriction, build the separate [participant-trained submission](docs/self-trained-submission.md) with `digitlab.self_trained_submission`; verify with `digitlab.self_trained_submission_qa` and a new report path. It bundles verified local checkpoints' exports only. Do not use the earlier general Pages builder for this restricted package: that builder preserves optional pretrained readers.
+
+The [balanced legacy/color training experiment](docs/balanced-color-training.md) completed all four epochs without an eligible replacement. Preserve its [results](reports/balanced-color-training-v1-summary.md) and follow the [gated evaluation guide](docs/balanced-color-evaluation.md). Actual test/export refusal checks passed; reserved/official data remain unopened for this experiment.
+
 The separate [color-aware preprocessing study](docs/color-preprocessing.md) is complete; [results](reports/color-preprocessing-v1-summary.md) show useful color recovery but one additional confidently wrong prediction. Keep active grayscale preprocessing and all weights unchanged. Use `digitlab.color_study`, `digitlab.color_preview` and `digitlab.color_audit` for this preserved development workflow; do not overwrite completed destinations.
 
 The separate 64px training extension has [completed results](reports/captcha-training-extension-v1-summary.md) and a [gated evaluation workflow](docs/captcha-training-extension-evaluation.md). It passed browser parity but failed the independent legacy-renderer preservation gate. Preserve the baseline and frozen candidate; do not rerun its reserved test or open an official follow-up for the rejected candidate.
