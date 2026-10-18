@@ -18,12 +18,14 @@ class BrowserCiTests(unittest.TestCase):
             manifest = {"sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data)}
             original = json.dumps(manifest)
             (folder / "manifest.json").write_text(original)
+            payloads = {"model/weights.bin": data,
+                        "model/parity.json": json.dumps({"model_sha256": manifest["sha256"]}).encode()}
             with patch.object(browser_ci, "MODELS", {"fixture": "model"}):
-                self.assertEqual(browser_ci.prepare_weights({"model/weights.bin": data}, root), ["model/weights.bin"])
-                self.assertEqual(browser_ci.prepare_weights({"model/weights.bin": data}, root), [])
+                self.assertEqual(browser_ci.prepare_weights(payloads, root), ["model/weights.bin", "model/parity.json"])
+                self.assertEqual(browser_ci.prepare_weights(payloads, root), [])
                 (folder / "weights.bin").write_bytes(b"different preserved weights")
                 with self.assertRaises(ValueError):
-                    browser_ci.prepare_weights({"model/weights.bin": data}, root)
+                    browser_ci.prepare_weights(payloads, root)
                 self.assertEqual((folder / "weights.bin").read_bytes(), b"different preserved weights")
             self.assertEqual((folder / "manifest.json").read_text(), original)
 

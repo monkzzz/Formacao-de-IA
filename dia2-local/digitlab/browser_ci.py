@@ -77,7 +77,7 @@ def native_model(site, name):
 
 
 def prepare_weights(payloads, root=ROOT):
-    """Restore missing ignored binaries only; preserve current checkout manifests."""
+    """Restore reviewed ignored binaries/parity fixtures; preserve checkout manifests."""
     restored = []
     for folder in MODELS.values():
         name = folder + "/weights.bin"
@@ -86,14 +86,19 @@ def prepare_weights(payloads, root=ROOT):
         manifest = json.loads((root / "dist" / folder / "manifest.json").read_text())
         if checksum != manifest["sha256"] or len(payload) != manifest["bytes"]:
             raise ValueError("Reviewed weights differ from checkout manifest: " + folder)
-        path = root / "dist" / name
-        if path.exists():
-            if hashlib.sha256(path.read_bytes()).hexdigest() != checksum:
-                raise ValueError("Preserve differing existing weights: " + folder)
-        else:
-            with path.open("xb") as stream:
-                stream.write(payload)
-            restored.append(name)
+        parity_name = folder + "/parity.json"
+        parity = payloads[parity_name]
+        if json.loads(parity)["model_sha256"] != checksum:
+            raise ValueError("Reviewed parity fixture/model mismatch: " + folder)
+        for relative, content in ((name, payload), (parity_name, parity)):
+            path = root / "dist" / relative
+            if path.exists():
+                if hashlib.sha256(path.read_bytes()).digest() != hashlib.sha256(content).digest():
+                    raise ValueError("Preserve differing existing model asset: " + relative)
+            else:
+                with path.open("xb") as stream:
+                    stream.write(content)
+                restored.append(relative)
     return restored
 
 
