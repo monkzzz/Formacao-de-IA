@@ -1,0 +1,87 @@
+{
+  "policy": {
+    "name": "professor-official-captcha-strict-v1",
+    "source": "Participant's explicit report of professor requirements in the conversation",
+    "required_cases": 10,
+    "required_correct": 10,
+    "minimum_score_exclusive": 0.9,
+    "score_comparison": ">",
+    "score_basis": "Unrounded original model score for the correct class; no display rescaling",
+    "supplementary_training": "Acceptable as a separate, correctly documented extension",
+    "mnist_only_model": "Preserve the required course model and its evidence separately",
+    "official_inputs_for_training_or_selection": false
+  },
+  "count": 10,
+  "correct": 9,
+  "correct_above_90": 6,
+  "accepted": false,
+  "cases": [
+    {
+      "file": "caso_01.png",
+      "correct": true,
+      "correct_class_score": 0.9942479331402717,
+      "passes": true
+    },
+    {
+      "file": "caso_02.png",
+      "correct": true,
+      "correct_class_score": 0.9766625447924703,
+      "passes": true
+    },
+    {
+      "file": "caso_03.png",
+      "correct": true,
+      "correct_class_score": 0.9949545205747525,
+      "passes": true
+    },
+    {
+      "file": "caso_04.png",
+      "correct": true,
+      "correct_class_score": 0.8015200435137486,
+      "passes": false
+    },
+    {
+      "file": "caso_05.png",
+      "correct": true,
+      "correct_class_score": 0.5178622819379773,
+      "passes": false
+    },
+    {
+      "file": "caso_06.png",
+      "correct": true,
+      "correct_class_score": 0.9986943016724046,
+      "passes": true
+    },
+    {
+      "file": "caso_07.png",
+      "correct": true,
+      "correct_class_score": 0.816955468064649,
+      "passes": false
+    },
+    {
+      "file": "caso_08.png",
+      "correct": true,
+      "correct_class_score": 0.9559514379491335,
+      "passes": true
+    },
+    {
+      "file": "caso_09.png",
+      "correct": true,
+      "correct_class_score": 0.984601813084296,
+      "passes": true
+    },
+    {
+      "file": "caso_10.png",
+      "correct": false,
+      "correct_class_score": 0.28724169926466747,
+      "passes": false
+    }
+  ],
+  "scope": "Explicit user-requested official follow-up after prior exposure; reserved independent test still NOT RUN; never training, tuning or model selection",
+  "raw_sha256": "928f1dd5425ad9b3987ef58ddc03b0876036e304a6dea05159c7550085646d5a",
+  "reference_sha256": "b4bcdb0d85d35e1a34ff0c941db89e5063e27f89be5ae449524179d7e891aa4f",
+  "freeze_sha256": "663dbcbc6bf911de408ab1670196a51b27f2e4dd17d491e170f8e1bb976bad35",
+  "model_sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+  "preprocessing": "border-gray-bilinear-com-64-small-components-v1",
+  "frozen_runtime_and_active_app_unchanged": true
+}

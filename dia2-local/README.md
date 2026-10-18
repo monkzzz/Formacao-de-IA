@@ -1,9 +1,17 @@
 # Digit Lab — Local Desafio Project
 
+**Separate 64px training extension:** completed four CPU epochs and isolated browser verification. On the independent synthetic test, accuracy remained 99.056% and correct predictions with scores strictly >90% rose from 95.111% to 96.111%. The candidate failed the legacy-renderer preservation gate (98.833% → 98.542%), so the baseline is retained and the official follow-up was refused before opening images. The professor's target remains unmet. See [results and limitations](reports/captcha-training-extension-v1-summary.md) and [evaluation commands](docs/captcha-training-extension-evaluation.md).
+
+
 **Independent preprocessing study:** the fixed-weight comparison selected small-component
 cleanup on development data and passed an isolated 60-upload browser parity check.
 The active app and models are unchanged; the official confidence target is still unmet.
 See [results, trade-offs and limits](reports/fixed-weight-preprocessing-v1-summary.md).
+
+**Subsequent user-requested official follow-up:** the frozen cleanup candidate scored
+9/10 correct and 6/10 correct with score strictly >90%, against the preserved
+original's 10/10 and 6/10. The app remains unchanged and the target is unmet.
+See [raw evidence and per-image results](reports/fixed-weight-preprocessing-v1-challenge-summary.md).
 
 **Local v3.11.0, not deployed:** choose **Digits → Digit Lab CNN → CNN training
 data** to use the preserved **MNIST-only course model** (default), the separate

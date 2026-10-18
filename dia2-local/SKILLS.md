@@ -1,5 +1,7 @@
 # Digit Lab task workflows
 
+The separate 64px training extension has [completed results](reports/captcha-training-extension-v1-summary.md) and a [gated evaluation workflow](docs/captcha-training-extension-evaluation.md). It passed browser parity but failed the independent legacy-renderer preservation gate. Preserve the baseline and frozen candidate; do not rerun its reserved test or open an official follow-up for the rejected candidate.
+
 The new fixed-weight preprocessing phase uses `digitlab.preprocessing_study`,
 `digitlab.preprocessing_preview` and `digitlab.preprocessing_study_report`.
 Follow [the predeclared protocol](docs/preprocessing-study.md) and preserve the

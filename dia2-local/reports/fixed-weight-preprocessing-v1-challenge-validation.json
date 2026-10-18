@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "scope": "Frozen raw/input/model integrity and Python parity; this does not mean acceptance criteria passed",
+  "checks": [
+    {
+      "file": "caso_01.png",
+      "preprocessing_max_error": 0.0,
+      "scores_max_error": 1.9779676008191416e-08,
+      "class_matches": true
+    },
+    {
+      "file": "caso_02.png",
+      "preprocessing_max_error": 0.0,
+      "scores_max_error": 2.8198537171952864e-08,
+      "class_matches": true
+    },
+    {
+      "file": "caso_03.png",
+      "preprocessing_max_error": 0.0,
+      "scores_max_error": 1.1335963412406613e-07,
+      "class_matches": true
+    },
+    {
+      "file": "caso_04.png",
+      "preprocessing_max_error": 0.0,
+      "scores_max_error": 1.6697896423889524e-07,
+      "class_matches": true
+    },
+    {
+      "file": "caso_05.png",
+      "preprocessing_max_error": 0.0,
+      "scores_max_error": 1.1679313483003995e-07,
+      "class_matches": true
+    },
+    {
+      "file": "caso_06.png",
+      "preprocessing_max_error": 0.0,
+      "scores_max_error": 5.85837904854003e-08,
+      "class_matches": true
+    },
+    {
+      "file": "caso_07.png",
+      "preprocessing_max_error": 0.0,
+      "scores_max_error": 8.047233335251036e-08,
+      "class_matches": true
+    },
+    {
+      "file": "caso_08.png",
+      "preprocessing_max_error": 0.0,
+      "scores_max_error": 4.52985292609398e-08,
+      "class_matches": true
+    },
+    {
+      "file": "caso_09.png",
+      "preprocessing_max_error": 0.0,
+      "scores_max_error": 7.701557036554618e-08,
+      "class_matches": true
+    },
+    {
+      "file": "caso_10.png",
+      "preprocessing_max_error": 0.0,
+      "scores_max_error": 2.9606995777253786e-07,
+      "class_matches": true
+    }
+  ],
+  "frozen_preview_and_preserved_files_unchanged": true,
+  "raw_sha256": "928f1dd5425ad9b3987ef58ddc03b0876036e304a6dea05159c7550085646d5a",
+  "correct": 9,
+  "correct_above_90": 6,
+  "accepted": false,
+  "new_training_or_tuning": "NOT RUN",
+  "active_app_change": "NOT RUN"
+}

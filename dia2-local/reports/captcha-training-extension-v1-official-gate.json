@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "returncode": 1,
+  "reason": "ValueError: Require matched passing browser and reserved gates before official images",
+  "official_raw_absent": true,
+  "scope": "Actual refusal before official image paths or browser server are opened"
+}

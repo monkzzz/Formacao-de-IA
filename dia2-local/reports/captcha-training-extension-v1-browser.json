@@ -1,0 +1,412 @@
+{
+  "status": "PASS",
+  "checkpoint_sha256": "23bce3866c4818cea4aa5e9875fb46e99a5c87b97d2363cbdbe338af18f768f4",
+  "model_sha256": "12ae08ad04235513dec7537972961cefda77dfa94f97fd5f5e7c326b1b1ea052",
+  "scope": "Actual isolated application parity on development data",
+  "checks": {
+    "activations": [
+      {
+        "logits": 7.62939453125e-06,
+        "pool1": 9.5367431640625e-07,
+        "pool2": 1.430511474609375e-06,
+        "hidden": 4.76837158203125e-06
+      },
+      {
+        "logits": 5.7220458984375e-06,
+        "pool1": 7.152557373046875e-07,
+        "pool2": 1.9073486328125e-06,
+        "hidden": 2.0265579223632812e-06
+      },
+      {
+        "logits": 1.9073486328125e-06,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.430511474609375e-06,
+        "hidden": 2.86102294921875e-06
+      },
+      {
+        "logits": 3.814697265625e-06,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.9073486328125e-06,
+        "hidden": 2.384185791015625e-06
+      },
+      {
+        "logits": 3.814697265625e-06,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.430511474609375e-06,
+        "hidden": 2.384185791015625e-06
+      },
+      {
+        "logits": 1.9073486328125e-06,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.430511474609375e-06,
+        "hidden": 2.86102294921875e-06
+      },
+      {
+        "logits": 3.814697265625e-06,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.430511474609375e-06,
+        "hidden": 2.3245811462402344e-06
+      },
+      {
+        "logits": 7.62939453125e-06,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.430511474609375e-06,
+        "hidden": 1.9073486328125e-06
+      },
+      {
+        "logits": 1.9073486328125e-06,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 2.384185791015625e-06,
+        "hidden": 2.86102294921875e-06
+      },
+      {
+        "logits": 7.62939453125e-06,
+        "pool1": 4.76837158203125e-07,
+        "pool2": 1.9073486328125e-06,
+        "hidden": 3.337860107421875e-06
+      }
+    ],
+    "upload_count": 60,
+    "maximum_score_error": 2.404858397975218e-07,
+    "letters_and_words": "PASS",
+    "letter_max_logit_error": 9.5367431640625e-06
+  },
+  "requests": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/v3/style.css?v=3.3.0"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/v3/words.css?v=3.2.0"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/v3/helper.css?v=scopedog-1"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/v3/app.js?v=3.11.0"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/v3/helper.js?v=3.11.0"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/v3/konami.css?v=3"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/v3/konami.js?v=5"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/assets/65474617.jpg"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/assets/scopedog.jpg"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/v3/helper-knowledge.js?v=3.11.0"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/v3/inference.js?v=dataset-1"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/v3/preprocess.js?v=3.6.0"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/v3/words.js?v=3.2.0"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/v3/canvas-tools.js?v=3.2.0"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/v3/digit-readers.js?v=3"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/v3/cnn-models.js?v=1"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/v3/residual.js?v=1"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/model/captcha-v3/digits/manifest.json?v=captcha-3"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/assets/65474617.jpg"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/model/captcha-v3/digits/weights.bin?sha256=12ae08ad04235513dec7537972961cefda77dfa94f97fd5f5e7c326b1b1ea052"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/62227875-4952-4ac8-a12a-c6ca645e9df8"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/5dd608d8-ec77-4be2-acaa-c9d00459f842"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/019d4934-a25e-4ad2-826b-05cd708cc031"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/3622d348-304c-4a4f-afe0-9cf1ffac21f6"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/f5e0ab52-9928-4637-a4c7-6c3f87ccc6cc"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/7f7ca65b-f352-4e73-8835-7c600f33b3f4"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/b60ae30f-19c6-467c-947d-b27fb356e9f4"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/9651e038-e95e-4c36-acf6-3421ea795957"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/0c67e38d-f621-4549-accb-3b71a80863c1"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/573099e2-70f8-418f-b378-11c9f152979a"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/93f862b8-5ba0-4eb4-a35b-c15ed87f9633"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/2d8f7839-2e16-414d-8723-8c4114902045"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/78f66a4c-1a36-41d2-8ddd-6f92ba2a0811"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/05b2d516-483f-4d07-9008-5bb14f6c4c2f"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/9ea12573-d304-4f38-950f-1419819406f2"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/8bdbc3b9-b222-456a-a963-3d8b7c930e2a"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/f3934d3b-f648-4f13-9d0b-20402b6a2f89"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/d2c89b39-ebe1-4cd7-9e26-a47c900fa4ee"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/828fe91b-c28a-43a9-91e8-6e0789d5e379"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/e406e2bc-8d1f-41bb-aee2-b6b10f57d249"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/f1fd29e1-2a3b-4bfa-a284-711ead0c0636"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/8347dd0a-41f4-4156-bb7c-44f4c80fda6c"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/73d8ced6-11a3-437e-a9a7-f23264ae9810"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/be98f1e2-b38c-4295-81b7-0a228a876581"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/624944ea-e6c4-4cbc-8d2d-55af7af26d28"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/f03d1488-fa61-4730-a79a-11abb88979f3"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/ed3c3af3-cca7-4a14-901e-c19bea5ebd8b"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/06915c12-4f0a-4bea-8301-10ae0c824e37"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/67eb0fa6-03b7-49c8-8716-75506ea5538e"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/b20aef28-2132-4cef-8bb2-296b16d5105f"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/c0ba41b6-8b65-4272-beb3-0a1edfc473dc"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/56e98483-ba4d-4ee3-bcf5-90a14a093df0"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/8e6dd5e7-7654-4ad6-ad94-430886a92f38"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/e81ff41d-5c41-4fb2-9d39-2c0541d9ecc1"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/d26512d3-719c-46c0-9be9-c643b7803974"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/0830035f-33b9-4240-bf32-bc8204e78a4f"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/580c4576-dd10-4b84-a4a3-5cb1a8fe44cc"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/ce4cc1e4-b008-40de-b3f7-396208d44de9"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/d354c94d-e195-4656-8057-6cbd6668d8df"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/176e5c14-67f5-4605-b8d1-5da9450348a3"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/18844fa4-4f7b-4a3c-bfae-3028c1e2cfed"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/f0f48b62-392d-4690-b99c-ea9d1739f935"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/7844e81e-afe6-4147-b4e3-127ffcc5e4f1"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/5bfebab8-cc83-42ef-b24c-c24213377af2"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/3a2b2e18-7683-44a9-bd9b-28ed86d166ce"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/aa27f43b-1b00-4624-bb9f-98605bda622a"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/38424cf2-a562-472b-b824-bfc7086c815b"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/b332040f-d035-4da3-ba32-16467ac7abf9"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/aba70a08-eb56-4bb8-9277-8c162e6cd7a6"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/c00cc3cf-3754-4fd1-af68-d9cce46b0d3d"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/e809812b-23cd-4386-8f18-736c22e0fa60"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/058cd68d-3727-44a9-a26c-670b4cdfdf77"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/7c4e4f63-9821-48e7-a645-5fff4970a731"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/d01aa841-cd71-48b5-975a-6a1d20a10898"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/4bfd665f-3dbc-4294-bead-52790cd0559f"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/970b1cb5-9193-47f4-98c1-add393f72cdf"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/c5676eea-b83d-4997-ba80-d106fbfc9d78"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/8c70b77c-bbd5-4f01-a269-ba7caae51ace"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/4cf546e5-d127-4765-a00b-a9da4720a37f"
+    },
+    {
+      "method": "GET",
+      "url": "blob:http://127.0.0.1:42863/8909bc5f-04c9-4be0-ac99-871339cd26c7"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/model/robust/letters/manifest.json?v=captcha-3"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:42863/model/robust/letters/weights.bin?sha256=0fef4b3155457eb1be91547590b48ebc61823c68b79fd414b406835cbfe1b101"
+    }
+  ],
+  "p95_ms": 40.984999999776484,
+  "median_ms": 35.44999999925494,
+  "page_errors": [],
+  "browser_version": "155.0.8059.84"
+}
