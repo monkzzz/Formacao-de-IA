@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "configurations": 13,
+  "official_predictions": 130,
+  "raw_sha256": {
+    "release-3.11.1-all-captcha-followup-v1-full-captcha-digits-raw.json": "b00cced663fdd1c9adad29fe9a0ba0791f773af124554df8f0db06da38ce537a",
+    "release-3.11.1-all-captcha-followup-v1-full-captcha-v3-raw.json": "77b323963d1f2bf9d56997123c5012a864b9b59e028d44eb7d0cc1ff8e864cc9",
+    "release-3.11.1-all-captcha-followup-v1-full-ddddocr-old-raw.json": "232552cda10320b21ac8b75e7d7156fbfbb9ab69b2af558af670362c14dd98f5",
+    "release-3.11.1-all-captcha-followup-v1-full-ddddocr-raw.json": "3d7c0e8b779ea09648398feed07eae471412ef409735dc299bd56b103e76f252",
+    "release-3.11.1-all-captcha-followup-v1-full-handwritten-precise-raw.json": "88ad665156445d9cb66a3c7fe9a295df30afa6a57308a2e25b20c0ca5d476129",
+    "release-3.11.1-all-captcha-followup-v1-full-handwritten-standard-raw.json": "f64e151f49cb092697c05cc9ca332b1ee0fd376f284f0b023f4e13871065f83f",
+    "release-3.11.1-all-captcha-followup-v1-full-mnist-raw.json": "cde2280a5d0bfa17c6537e4e5e5a04a6109053adcaa99d8142d090a39c0dab05",
+    "release-3.11.1-all-captcha-followup-v1-full-mnist-supplementary-v1-raw.json": "f6033b058c851b8a209ac1d47359fc8e9f684aa857e597027e23f06d4d0ec77f",
+    "release-3.11.1-all-captcha-followup-v1-full-printed-precise-raw.json": "146bc5e3b2db0d367a2de5a12b39b62502d7d1141a8e728590aa6143b1dab799",
+    "release-3.11.1-all-captcha-followup-v1-full-printed-standard-raw.json": "061dfe9af03f857d5b3c38e3e512c5cb619150c6ceb505f10c00f20b3c719d71",
+    "release-3.11.1-all-captcha-followup-v1-submission-captcha-v3-raw.json": "a0cef920ce77632bff0eb64798a57d57909a6ab396b7b497f940f106fc36f87f",
+    "release-3.11.1-all-captcha-followup-v1-submission-mnist-raw.json": "a92da419cf381138fcab7cde6edf0b50d9afc48b21b1922053fc2f0c2b4feea3",
+    "release-3.11.1-all-captcha-followup-v1-submission-mnist-supplementary-v1-raw.json": "c7468c13e94fa416b34e1900782536453d08db3ab55114527a4659a22dcd414f"
+  },
+  "frozen_source_and_historical_evidence_preserved": true,
+  "full_submission_prediction_parity": "PASS",
+  "unit_tests": 85,
+  "screenshots": 13,
+  "manual_screenshot_review": [
+    "full-captcha-v3",
+    "full-captcha-digits"
+  ],
+  "training_tuning_or_deployment": false
+}
