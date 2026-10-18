@@ -8,11 +8,12 @@ The course requirements are in [the official challenge](../Dia2/Desafio/README.m
 
 ## Project map
 
-Local v3.11.0 adds a training-data selector: original MNIST-only weights are the
+Published v3.11.1 includes the training-data selector: original MNIST-only weights are the
 course default, `mnist-supplementary-v1` is a separate optional extension, and
 the previous residual default remains selectable with unchanged weights.
 See [the dataset boundary and workflow](docs/selectable-models.md).
-Public v3.10.0 and all historical submission evidence remain separate.
+The full site and separate restricted Pages cleanup-v4 package are deployed;
+see [the release record](docs/release-3.11.1.md). Historical evidence remains preserved.
 
 - `digitlab/`: dataset loading, preprocessing, CNN training/export, browser verification, reporting and deployment utilities.
 - `dist/`: static application; `v3/` contains the current interface. Retain earlier assets for cached releases.

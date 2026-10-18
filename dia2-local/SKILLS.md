@@ -15,12 +15,13 @@ Follow [the predeclared protocol](docs/preprocessing-study.md) and preserve the
 The selected small-component cleanup passed development and isolated browser
 checks only; it is not part of the active application or a verified official result.
 
-Local v3.11.0 separates a default MNIST-only course model from the supplementary
+Published v3.11.1 separates a default MNIST-only course model from the supplementary
 experiment and preserved residual model. Follow
 [the selectable-model workflow](docs/selectable-models.md) and run
 `digitlab.selectable_models_qa` for the current dataset selector. Historical QA
 commands below assume their named default model and matching preserved interface;
-use the current selector collector for all three local CNNs. Public v3.10.0 is unchanged.
+use the current selector collector for all three CNNs. The
+[3.11.1 release record](docs/release-3.11.1.md) covers both deployed sites.
 
 For Windows/Linux setup, interpreter selection, fonts and browser discovery, use
 the [shared runtime guide](../PORTABILITY.md). The current portable confidence
@@ -29,7 +30,7 @@ The subsequent [diagnostic/consistency/capacity suite](docs/confidence-suite.md)
 adds paired-data diagnosis, matched training arms, a deeper isolated browser runtime
 and gated final evaluation. Preserve both experiments and their separate identities.
 
-Current application release: v3.10.0; its default CNN, introduced in v3.7.0,
+Historical application release v3.10.0 used a default CNN introduced in v3.7.0,
 uses 64px residual `captcha-v3` digits and robustness
 letters. Use `digitlab.robust_qa --digit-experiment captcha-v3`,
 `digitlab.captcha_qa --experiment captcha-v3`, `digitlab.residual_qa --interface`

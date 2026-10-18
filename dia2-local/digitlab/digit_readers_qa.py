@@ -43,13 +43,16 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--url", default="http://127.0.0.1:8782/")
     parser.add_argument("--report", required=True)
+    parser.add_argument("--digit-experiment", default="mnist", choices=["mnist", "mnist-supplementary-v1", "captcha-v3"],
+                        help="Digit fixture folder matching the active release")
     parser.add_argument("--live", action="store_true", help="Download and execute both actual Standard OCR models")
     args = parser.parse_args()
     destination = ROOT / "reports" / args.report
     if destination.exists():
         raise SystemExit("Refusing to overwrite existing evidence")
     checks = {}
-    report = {"status": "FAIL", "checks": checks, "live": "NOT RUN", "captcha_accuracy": "NOT RUN"}
+    report = {"status": "FAIL", "url": args.url, "digit_experiment": args.digit_experiment,
+              "checks": checks, "live": "NOT RUN", "captcha_accuracy": "NOT RUN"}
     with sync_playwright() as playwright:
         browser = open_browser(playwright)
         page = browser.new_page(viewport={"width": 1440, "height": 1100})
@@ -63,8 +66,9 @@ def main():
         assert page.locator("#network").is_visible()
         for mode in ("digits", "letters"):
             page.evaluate("mode => digitLab.activateMode(mode)", mode)
-            experiment = "captcha-v3" if mode == "digits" else "robust"
-            parity = json.loads((ROOT / "dist/model" / experiment / mode / "parity.json").read_text())
+            experiment = args.digit_experiment if mode == "digits" else "robust"
+            folder = ROOT / "dist/model" if mode == "digits" and experiment == "mnist" else ROOT / "dist/model" / experiment / mode
+            parity = json.loads((folder / "parity.json").read_text())
             delta = page.evaluate("""fixture => Math.max(...fixture.cases.map(item => {
               const out = digitLab.predict(item.input);
               return ['logits','hidden'].flatMap(k => Array.from(out[k],(v,i)=>Math.abs(v-item[k][i])))

@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "verified_at": "2026-10-18T15:54:21.921356+00:00",
+  "source_commit": "e592cb16bfdc3360a55001d22df200007b7bef3e",
+  "unit_tests": {
+    "day1": {
+      "status": "PASS",
+      "run": 125,
+      "skipped": 4,
+      "command": "MPLBACKEND=Agg FORMACAO_LMSTUDIO_OFFLINE=1 <python> -m unittest discover -s tests -t .",
+      "cwd": "Dia1/Exercicios-GSS"
+    },
+    "day2": {
+      "status": "PASS",
+      "run": 80,
+      "skipped": 0,
+      "command": "<python> -m unittest discover -s tests",
+      "cwd": "dia2-local"
+    }
+  },
+  "public_reports": [
+    "release-cleanup-3.11.1-public-assets.json",
+    "release-cleanup-3.11.1-public-models.json",
+    "release-cleanup-3.11.1-public-words-live.json",
+    "release-cleanup-3.11.1-public-readers-v2.json",
+    "release-cleanup-3.11.1-public-captcha-downloads.json",
+    "release-cleanup-3.11.1-public-design.json",
+    "release-cleanup-3.11.1-public-helper-qa.json",
+    "release-cleanup-3.11.1-public-recovery-v3.json",
+    "self-trained-pages-cleanup-v4-public-assets.json",
+    "self-trained-pages-cleanup-v4-browser.json"
+  ],
+  "not_run": [
+    "Windows execution",
+    "Four display-dependent Day 1 GUI tests",
+    "Game emulation",
+    "New model accuracy evaluation or official CAPTCHA inference"
+  ],
+  "visual_review": {
+    "status": "PASS",
+    "scope": "Pages desktop/mobile and full-site mobile design screenshots inspected"
+  },
+  "preserved_attempts": {
+    "legacy_captcha_smoke": "Stopped at missing exact licensed fonts; font-free download smoke passed",
+    "recovery_attempts_1_2": "Pages recovery passed; arcade URL/readiness/close-event test assumptions corrected in third passing attempt"
+  }
+}

@@ -1,0 +1,428 @@
+{
+  "status": "PASS",
+  "scope": "Font-free synthetic image: real optional-reader download/inference smoke only; no accuracy measurement",
+  "results": [
+    {
+      "file": "synthetic-seven.png",
+      "bytes": 695,
+      "batch": "3b897037-b92d-45f0-a2af-28e49410b380",
+      "recorded_at": "2026-10-18T15:51:28.514Z",
+      "mode": "digits",
+      "model_sha256": "33b5cd351ee94e73a6bf8fa18c415ed8b819b3ffd342e267c30d8ad8334e34e8",
+      "labels": null,
+      "input_side": null,
+      "preprocessing": "ddddocr-browser64-v1",
+      "architecture": "captcha-ctc",
+      "reader": "ddddocr",
+      "model": "sml2h3/ddddocr/common.onnx",
+      "revision": "c40f56f95412e10bcb9bd0bd24411e92f896d238",
+      "trained_by_project": false,
+      "profile": "standard",
+      "precision": "float32",
+      "decoding": "greedy-full-charset-ctc",
+      "file_sha256": "ad467934ea6cbbce91afdf27855053c00638df36bff7a64c0250f40ec4422aa0",
+      "width": 160,
+      "height": 160,
+      "raw_text": "7",
+      "accepted": true,
+      "prepared_width": 64,
+      "prepared_height": 64,
+      "input_sha256": "84a8338d6e8a5d9273b6a6b5b89bb0a9c34c6f9a3db90aad28fe840b54a29a4d",
+      "predicted": 7,
+      "predicted_label": "7",
+      "class_index": 7,
+      "scores": null,
+      "logits": null,
+      "inference_ms": 52.30000000447035
+    },
+    {
+      "file": "synthetic-seven.png",
+      "bytes": 695,
+      "batch": "0ea65cf8-e933-46b3-a4a7-e216a2003c82",
+      "recorded_at": "2026-10-18T15:51:34.959Z",
+      "mode": "digits",
+      "model_sha256": "b8f2ad9cbc1f2e3922a6cb9459e30824e7e2467f3fb4fd61420640e34ea0bf68",
+      "labels": null,
+      "input_side": null,
+      "preprocessing": "ddddocr-browser64-v1",
+      "architecture": "captcha-ctc",
+      "reader": "ddddocr-old",
+      "model": "sml2h3/ddddocr/common_old.onnx",
+      "revision": "c40f56f95412e10bcb9bd0bd24411e92f896d238",
+      "trained_by_project": false,
+      "profile": "standard",
+      "precision": "float32",
+      "decoding": "greedy-full-charset-ctc",
+      "file_sha256": "ad467934ea6cbbce91afdf27855053c00638df36bff7a64c0250f40ec4422aa0",
+      "width": 160,
+      "height": 160,
+      "raw_text": "7",
+      "accepted": true,
+      "prepared_width": 64,
+      "prepared_height": 64,
+      "input_sha256": "84a8338d6e8a5d9273b6a6b5b89bb0a9c34c6f9a3db90aad28fe840b54a29a4d",
+      "predicted": 7,
+      "predicted_label": "7",
+      "class_index": 7,
+      "scores": null,
+      "logits": null,
+      "inference_ms": 102
+    },
+    {
+      "file": "synthetic-seven.png",
+      "bytes": 695,
+      "batch": "2aafbf0e-8f2f-493f-9047-dcd6a48fc13f",
+      "recorded_at": "2026-10-18T15:51:37.064Z",
+      "mode": "digits",
+      "model_sha256": "b8f2ad9cbc1f2e3922a6cb9459e30824e7e2467f3fb4fd61420640e34ea0bf68",
+      "labels": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "input_side": null,
+      "preprocessing": "ddddocr-browser64-v1",
+      "architecture": "captcha-ctc-single-digit",
+      "reader": "captcha-digits",
+      "model": "sml2h3/ddddocr/common_old.onnx",
+      "revision": "c40f56f95412e10bcb9bd0bd24411e92f896d238",
+      "trained_by_project": false,
+      "profile": "standard",
+      "precision": "float32",
+      "decoding": "exact-single-digit-ctc-v1",
+      "configuration": "ctc-digits-v1",
+      "output_constraint": "exactly one ASCII digit",
+      "score_scope": "conditional on one of ten single-digit CTC targets",
+      "file_sha256": "ad467934ea6cbbce91afdf27855053c00638df36bff7a64c0250f40ec4422aa0",
+      "width": 160,
+      "height": 160,
+      "raw_text": "7",
+      "accepted": true,
+      "prepared_width": 64,
+      "prepared_height": 64,
+      "input_sha256": "84a8338d6e8a5d9273b6a6b5b89bb0a9c34c6f9a3db90aad28fe840b54a29a4d",
+      "predicted": 7,
+      "predicted_label": "7",
+      "class_index": 7,
+      "scores": [
+        7.596624109650823e-08,
+        9.20146806724275e-05,
+        4.170192868029453e-06,
+        7.709134923254928e-06,
+        4.884034413480773e-06,
+        2.9828779911704403e-07,
+        7.237587667820284e-08,
+        0.9998844512332183,
+        7.920182782128793e-08,
+        6.244892159903055e-06
+      ],
+      "logits": null,
+      "inference_ms": 110.39999999850988
+    }
+  ],
+  "page_errors": [],
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/style.css?v=3.3.0",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/words.css?v=3.2.0",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/helper.css?v=scopedog-1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/app.js?v=3.11.1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/helper.js?v=3.11.1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/konami.css?v=3",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/konami.js?v=5",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/assets/65474617.jpg",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/assets/scopedog.jpg",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/helper-knowledge.js?v=3.11.1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/inference.js?v=dataset-1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/preprocess.js?v=3.6.0",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/words.js?v=3.11.1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/canvas-tools.js?v=3.11.1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/digit-readers.js?v=3",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/cnn-models.js?v=1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/browser-utils.js?v=3.11.1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/residual.js?v=1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/words.js?v=3.2.0",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/model/manifest.json?v=captcha-3",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/assets/65474617.jpg",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/model/weights.bin?sha256=8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/digit-reader-worker.js?v=3",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/digit-readers.js?v=3",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/ctc-digits.js?v=1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/words.js?v=3.2.0",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/canvas-tools.js?v=3.11.1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/browser-utils.js?v=3.11.1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.1/dist/ort.wasm.min.mjs",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/ddddocr-charsets.json?v=1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://raw.githubusercontent.com/sml2h3/ddddocr/c40f56f95412e10bcb9bd0bd24411e92f896d238/ddddocr/common.onnx",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.1/dist/ort-wasm-simd-threaded.mjs",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.1/dist/ort-wasm-simd-threaded.wasm",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "blob:https://naoquerosaber.pt/95a96e3a-9d9e-4f53-9d54-6570d76b6a25",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/digit-reader-worker.js?v=3",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/digit-readers.js?v=3",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/ctc-digits.js?v=1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/words.js?v=3.2.0",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/canvas-tools.js?v=3.11.1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/browser-utils.js?v=3.11.1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.1/dist/ort.wasm.min.mjs",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/ddddocr-charsets.json?v=1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://raw.githubusercontent.com/sml2h3/ddddocr/c40f56f95412e10bcb9bd0bd24411e92f896d238/ddddocr/common_old.onnx",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.1/dist/ort-wasm-simd-threaded.mjs",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.1/dist/ort-wasm-simd-threaded.wasm",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "blob:https://naoquerosaber.pt/c000ee5e-902c-41f3-858b-0d934876d1d9",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/digit-reader-worker.js?v=3",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/digit-readers.js?v=3",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/ctc-digits.js?v=1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/words.js?v=3.2.0",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/canvas-tools.js?v=3.11.1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/browser-utils.js?v=3.11.1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.1/dist/ort.wasm.min.mjs",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://naoquerosaber.pt/AI/v3/ddddocr-charsets.json?v=1",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://raw.githubusercontent.com/sml2h3/ddddocr/c40f56f95412e10bcb9bd0bd24411e92f896d238/ddddocr/common_old.onnx",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.1/dist/ort-wasm-simd-threaded.mjs",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.20.1/dist/ort-wasm-simd-threaded.wasm",
+      "body": false
+    },
+    {
+      "method": "GET",
+      "url": "blob:https://naoquerosaber.pt/7eea3fd6-8780-485d-a858-5884729c0e69",
+      "body": false
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "status": "PASS",
+  "url": "https://monkzzz.github.io/Formacao-de-IA/",
+  "scope": "Public HTTP asset identity and JavaScript MIME verification; ROM and parity fixtures excluded for full site",
+  "count": 23,
+  "files": [
+    {
+      "file": "submission.js",
+      "expected_sha256": "21d95616d1ded351eb17ac3927bc9a60dfa4757edcc3e551a2aab2413e02944a",
+      "http_status": 200,
+      "sha256": "21d95616d1ded351eb17ac3927bc9a60dfa4757edcc3e551a2aab2413e02944a",
+      "bytes": 9891,
+      "mime": "application/javascript",
+      "status": "PASS"
+    },
+    {
+      "file": ".nojekyll",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "http_status": 200,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mime": "application/octet-stream",
+      "status": "PASS"
+    },
+    {
+      "file": "provenance.json",
+      "expected_sha256": "36e037190e17b90bedb8b4aa8ae001fa2cc0039cb6eb0dd79ecac46f1b445aa4",
+      "http_status": 200,
+      "sha256": "36e037190e17b90bedb8b4aa8ae001fa2cc0039cb6eb0dd79ecac46f1b445aa4",
+      "bytes": 6258,
+      "mime": "application/json",
+      "status": "PASS"
+    },
+    {
+      "file": "index.html",
+      "expected_sha256": "b5f0650abff6d50f19a5ff30b7c0c0e2174fad3a36517cabd4172b3b5eab28c1",
+      "http_status": 200,
+      "sha256": "b5f0650abff6d50f19a5ff30b7c0c0e2174fad3a36517cabd4172b3b5eab28c1",
+      "bytes": 3868,
+      "mime": "text/html",
+      "status": "PASS"
+    },
+    {
+      "file": "submission.css",
+      "expected_sha256": "51d55fa5c3d5789d9840cd94733d9644570a7b5c295a91d802d6e92cfb30a210",
+      "http_status": 200,
+      "sha256": "51d55fa5c3d5789d9840cd94733d9644570a7b5c295a91d802d6e92cfb30a210",
+      "bytes": 3285,
+      "mime": "text/css",
+      "status": "PASS"
+    },
+    {
+      "file": "evaluation.json",
+      "expected_sha256": "f386760fe7ccb4323c3e26d46e73f20f6b6fd84bad737397bc459893e2446346",
+      "http_status": 200,
+      "sha256": "f386760fe7ccb4323c3e26d46e73f20f6b6fd84bad737397bc459893e2446346",
+      "bytes": 2468,
+      "mime": "application/json",
+      "status": "PASS"
+    },
+    {
+      "file": "v3/inference.js",
+      "expected_sha256": "540ec962500ed162ce1871c716cc82b77b630a53e651caffd3a3f27935091690",
+      "http_status": 200,
+      "sha256": "540ec962500ed162ce1871c716cc82b77b630a53e651caffd3a3f27935091690",
+      "bytes": 7394,
+      "mime": "application/javascript",
+      "status": "PASS"
+    },
+    {
+      "file": "v3/canvas-tools.js",
+      "expected_sha256": "265e0d2b894621313268a4fb2432eaddf35f5fabd09f42f838d0749a31abe05a",
+      "http_status": 200,
+      "sha256": "265e0d2b894621313268a4fb2432eaddf35f5fabd09f42f838d0749a31abe05a",
+      "bytes": 6007,
+      "mime": "application/javascript",
+      "status": "PASS"
+    },
+    {
+      "file": "v3/residual.js",
+      "expected_sha256": "1b454e6acd7b97d7a8f1904ea97c4f382f0b97a6b9d924981e459a8bd972353a",
+      "http_status": 200,
+      "sha256": "1b454e6acd7b97d7a8f1904ea97c4f382f0b97a6b9d924981e459a8bd972353a",
+      "bytes": 1596,
+      "mime": "application/javascript",
+      "status": "PASS"
+    },
+    {
+      "file": "v3/preprocess.js",
+      "expected_sha256": "170ad3280aa835bb0ad0efd5d65cd2ea507c1c3cd680b092cfc0e95537db3e3c",
+      "http_status": 200,
+      "sha256": "170ad3280aa835bb0ad0efd5d65cd2ea507c1c3cd680b092cfc0e95537db3e3c",
+      "bytes": 3415,
+      "mime": "application/javascript",
+      "status": "PASS"
+    },
+    {
+      "file": "v3/browser-utils.js",
+      "expected_sha256": "0f4f5ee52996d78425040c72265131b0cdf8e11c803099ab7a30e71ca5200926",
+      "http_status": 200,
+      "sha256": "0f4f5ee52996d78425040c72265131b0cdf8e11c803099ab7a30e71ca5200926",
+      "bytes": 1622,
+      "mime": "application/javascript",
+      "status": "PASS"
+    },
+    {
+      "file": "model/parity.json",
+      "expected_sha256": "33059d23d38ea1c7acf2cca11d64fd2ea8afb81082f24f63db7db1393bcdf6d7",
+      "http_status": 200,
+      "sha256": "33059d23d38ea1c7acf2cca11d64fd2ea8afb81082f24f63db7db1393bcdf6d7",
+      "bytes": 1167540,
+      "mime": "application/json",
+      "status": "PASS"
+    },
+    {
+      "file": "model/weights.bin",
+      "expected_sha256": "8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+      "http_status": 200,
+      "sha256": "8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338",
+      "bytes": 827688,
+      "mime": "application/octet-stream",
+      "status": "PASS"
+    },
+    {
+      "file": "model/manifest.json",
+      "expected_sha256": "71247af8e6e04330462d64f210f588c6652f68033802ab0598bfcfd2993ebaa6",
+      "http_status": 200,
+      "sha256": "71247af8e6e04330462d64f210f588c6652f68033802ab0598bfcfd2993ebaa6",
+      "bytes": 50243,
+      "mime": "application/json",
+      "status": "PASS"
+    },
+    {
+      "file": "model/robust/letters/parity.json",
+      "expected_sha256": "6c2a16c99afa39d8f45385faf7f9f24bac94c7363d2a50f302fc6240700e412c",
+      "http_status": 200,
+      "sha256": "6c2a16c99afa39d8f45385faf7f9f24bac94c7363d2a50f302fc6240700e412c",
+      "bytes": 3113774,
+      "mime": "application/json",
+      "status": "PASS"
+    },
+    {
+      "file": "model/robust/letters/weights.bin",
+      "expected_sha256": "0fef4b3155457eb1be91547590b48ebc61823c68b79fd414b406835cbfe1b101",
+      "http_status": 200,
+      "sha256": "0fef4b3155457eb1be91547590b48ebc61823c68b79fd414b406835cbfe1b101",
+      "bytes": 835944,
+      "mime": "application/octet-stream",
+      "status": "PASS"
+    },
+    {
+      "file": "model/robust/letters/manifest.json",
+      "expected_sha256": "7b3e6995d90bb03549605059fb80a5c68d3dd09fa8fca822f7cd11820ff7ca95",
+      "http_status": 200,
+      "sha256": "7b3e6995d90bb03549605059fb80a5c68d3dd09fa8fca822f7cd11820ff7ca95",
+      "bytes": 359633,
+      "mime": "application/json",
+      "status": "PASS"
+    },
+    {
+      "file": "model/mnist-supplementary-v1/digits/parity.json",
+      "expected_sha256": "f9f73bfa93cdcd8aa1c1ab4ae36ff53f9ca03763131ecd8dc7d78e33260451ec",
+      "http_status": 200,
+      "sha256": "f9f73bfa93cdcd8aa1c1ab4ae36ff53f9ca03763131ecd8dc7d78e33260451ec",
+      "bytes": 1103183,
+      "mime": "application/json",
+      "status": "PASS"
+    },
+    {
+      "file": "model/mnist-supplementary-v1/digits/weights.bin",
+      "expected_sha256": "2f2a7aaf69845caeacd5cbab02ba56f95956f5ab8657d203b747a83004852c89",
+      "http_status": 200,
+      "sha256": "2f2a7aaf69845caeacd5cbab02ba56f95956f5ab8657d203b747a83004852c89",
+      "bytes": 827688,
+      "mime": "application/octet-stream",
+      "status": "PASS"
+    },
+    {
+      "file": "model/mnist-supplementary-v1/digits/manifest.json",
+      "expected_sha256": "9c6ca06f7fb90672eb8047bb71322762cded0c3859357090483b0013b83f4dfe",
+      "http_status": 200,
+      "sha256": "9c6ca06f7fb90672eb8047bb71322762cded0c3859357090483b0013b83f4dfe",
+      "bytes": 71037,
+      "mime": "application/json",
+      "status": "PASS"
+    },
+    {
+      "file": "model/captcha-v3/digits/parity.json",
+      "expected_sha256": "5c5fa7a53c166771079f9271d530a0c1c031c0d914489930e71eb85092a9a551",
+      "http_status": 200,
+      "sha256": "5c5fa7a53c166771079f9271d530a0c1c031c0d914489930e71eb85092a9a551",
+      "bytes": 4587942,
+      "mime": "application/json",
+      "status": "PASS"
+    },
+    {
+      "file": "model/captcha-v3/digits/weights.bin",
+      "expected_sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+      "http_status": 200,
+      "sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+      "bytes": 1090472,
+      "mime": "application/octet-stream",
+      "status": "PASS"
+    },
+    {
+      "file": "model/captcha-v3/digits/manifest.json",
+      "expected_sha256": "549f44ecf1fcf01a763917bbff3db1624f455aa4ae3bd908472efc2f648ac99f",
+      "http_status": 200,
+      "sha256": "549f44ecf1fcf01a763917bbff3db1624f455aa4ae3bd908472efc2f648ac99f",
+      "bytes": 84360,
+      "mime": "application/json",
+      "status": "PASS"
+    }
+  ],
+  "changed_files": []
+}

@@ -47,3 +47,10 @@ Read each report's actual statuses. A captured screenshot is not a human review;
 record visual inspection separately. Linux Chromium execution does not establish
 Windows execution. No maintained QA command needs official CAPTCHA inputs or
 updates a completed evaluation. Credentials and remote deployment are separate.
+
+The optional digit-reader collector also accepts `--digit-experiment mnist` for
+the current default. Add `--live` to execute actual printed/handwritten Standard
+OCR models; without it, reader UI checks use an identified worker double. Use a
+fresh required `--report` filename. See the
+[3.11.1 public verification](release-3.11.1.md) for executed commands' scope,
+real-model smoke results and preserved unsuccessful attempts.

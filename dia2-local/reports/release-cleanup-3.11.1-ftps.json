@@ -1,0 +1,80 @@
+{
+  "uploaded_at": "2026-10-18T15:45:26.142480+00:00",
+  "destination": "/",
+  "tls": true,
+  "files": [
+    {
+      "file": "evaluation/digits-captcha-v3-preserved.json",
+      "bytes": 1788,
+      "sha256": "4838b65cbe121784a3c25a026a1724f6f36068a3a3e85a34da007e77d5fb3423"
+    },
+    {
+      "file": "evaluation/digits-mnist-supplementary-v1.json",
+      "bytes": 15780,
+      "sha256": "b6ab6f2d25bf3630feae17adbffc034f3eb4ad9c8fa6e20b511e1ad5dd210d80"
+    },
+    {
+      "file": "evaluation/digits-mnist.json",
+      "bytes": 1762,
+      "sha256": "6bc5b6079d5b17d9061519484f38a76aa478633b79ef57e51a3cd38a45e3e7bf"
+    },
+    {
+      "file": "model/mnist-supplementary-v1/digits/manifest.json",
+      "bytes": 71037,
+      "sha256": "9c6ca06f7fb90672eb8047bb71322762cded0c3859357090483b0013b83f4dfe"
+    },
+    {
+      "file": "model/mnist-supplementary-v1/digits/weights.bin",
+      "bytes": 827688,
+      "sha256": "2f2a7aaf69845caeacd5cbab02ba56f95956f5ab8657d203b747a83004852c89"
+    },
+    {
+      "file": "v3/browser-utils.js",
+      "bytes": 1622,
+      "sha256": "0f4f5ee52996d78425040c72265131b0cdf8e11c803099ab7a30e71ca5200926"
+    },
+    {
+      "file": "v3/canvas-tools.js",
+      "bytes": 6007,
+      "sha256": "265e0d2b894621313268a4fb2432eaddf35f5fabd09f42f838d0749a31abe05a"
+    },
+    {
+      "file": "v3/cnn-models.js",
+      "bytes": 1039,
+      "sha256": "a25976de61b3b745fff2f87c7397e2726893e58d26506805a5fbd6765cf1ea56"
+    },
+    {
+      "file": "v3/helper-knowledge.js",
+      "bytes": 18900,
+      "sha256": "b6890e24678a8f6b7e39ecd9538dd04a00c6861ad303f8d2f2f74967861538a6"
+    },
+    {
+      "file": "v3/words.js",
+      "bytes": 9355,
+      "sha256": "3076346f5e2b8a753d4d1edaa329009330a48fadb1d43eab0192b3e92c5d5195"
+    },
+    {
+      "file": "v3/helper.js",
+      "bytes": 5368,
+      "sha256": "14c1c2659c5899117525a0b823afb560a277b914b8d723ccd2823e6ee1d8d0b5"
+    },
+    {
+      "file": "v3/inference.js",
+      "bytes": 7394,
+      "sha256": "540ec962500ed162ce1871c716cc82b77b630a53e651caffd3a3f27935091690"
+    },
+    {
+      "file": "v3/app.js",
+      "bytes": 23168,
+      "sha256": "f319274c7da5a9810f1abbb2e22d108da3ab5d212bb0973955feed2a059d0542"
+    },
+    {
+      "file": "index.html",
+      "bytes": 22514,
+      "sha256": "cd836d2f03763cc80d35f8acbedcd69be1b96490b5edd3696ad6ed212f9abaa5"
+    }
+  ],
+  "backup_directory": "artifacts/ftp-backup-20261018T154505Z",
+  "application_version": "3.11.1",
+  "scope": "selected-files"
+}
