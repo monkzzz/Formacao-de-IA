@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "checks": {
+    "invalid_files_fail_before_decode": true,
+    "dimension_failure_closes_bitmap": true,
+    "canvas_failure_closes_bitmap": true,
+    "failed_preview_releases_url": true
+  },
+  "source_sha256": "0f4f5ee52996d78425040c72265131b0cdf8e11c803099ab7a30e71ca5200926",
+  "scope": "Browser resource/error contracts with explicit bitmap doubles; no classification accuracy claim"
+}

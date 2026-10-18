@@ -1,0 +1,275 @@
+{
+  "status": "PASS",
+  "url": "http://127.0.0.1:8779/",
+  "checks": {
+    "mnist_only_default": {
+      "status": "PASS",
+      "sha256": "8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338"
+    },
+    "mnist_activations": {
+      "status": "PASS",
+      "cases": 10,
+      "maximum_errors": [
+        {
+          "logits": 9.5367431640625e-07,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.6226043701171875e-06
+        },
+        {
+          "logits": 9.5367431640625e-07,
+          "hidden": 9.5367431640625e-07,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.430511474609375e-06
+        },
+        {
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.384185791015625e-06
+        },
+        {
+          "logits": 2.384185791015625e-06,
+          "hidden": 2.6226043701171875e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.86102294921875e-06
+        },
+        {
+          "logits": 2.86102294921875e-06,
+          "hidden": 2.384185791015625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.384185791015625e-06
+        },
+        {
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.384185791015625e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 3.337860107421875e-06
+        },
+        {
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.6689300537109375e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.9073486328125e-06
+        },
+        {
+          "logits": 1.3262033462524414e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 3.337860107421875e-06
+        },
+        {
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.430511474609375e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.9073486328125e-06
+        }
+      ]
+    },
+    "mnist_uploads_and_identity": {
+      "status": "PASS",
+      "cases": 10,
+      "maximum_score_error": 1.2022961970448165e-07
+    },
+    "mnist_latency": {
+      "status": "PASS",
+      "median_ms": 7.650000002235174,
+      "p95_ms": 11.429999998956918,
+      "scope": "Measured desktop only; not a model promotion gate"
+    },
+    "mnist-supplementary-v1_activations": {
+      "status": "PASS",
+      "cases": 10,
+      "maximum_errors": [
+        {
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 4.76837158203125e-07,
+          "pool2": 2.384185791015625e-06
+        },
+        {
+          "logits": 9.5367431640625e-07,
+          "hidden": 3.0100345611572266e-06,
+          "pool1": 4.76837158203125e-07,
+          "pool2": 1.9073486328125e-06
+        },
+        {
+          "logits": 2.86102294921875e-06,
+          "hidden": 2.86102294921875e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.9073486328125e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "hidden": 3.814697265625e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.9073486328125e-06
+        },
+        {
+          "logits": 1.3113021850585938e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.1457672119140625e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "hidden": 2.86102294921875e-06,
+          "pool1": 4.76837158203125e-07,
+          "pool2": 1.9073486328125e-06
+        },
+        {
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.7285346984863281e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 2.6226043701171875e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "hidden": 2.562999725341797e-06,
+          "pool1": 4.76837158203125e-07,
+          "pool2": 3.337860107421875e-06
+        },
+        {
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.430511474609375e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.9073486328125e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "hidden": 2.86102294921875e-06,
+          "pool1": 2.384185791015625e-07,
+          "pool2": 1.9073486328125e-06
+        }
+      ]
+    },
+    "mnist-supplementary-v1_uploads_and_identity": {
+      "status": "PASS",
+      "cases": 10,
+      "maximum_score_error": 1.605210349087116e-07
+    },
+    "mnist-supplementary-v1_latency": {
+      "status": "PASS",
+      "median_ms": 8.0,
+      "p95_ms": 9.13000000193715,
+      "scope": "Measured desktop only; not a model promotion gate"
+    },
+    "captcha-v3_activations": {
+      "status": "PASS",
+      "cases": 10,
+      "maximum_errors": [
+        {
+          "logits": 3.814697265625e-06,
+          "hidden": 2.384185791015625e-06,
+          "pool1": 4.76837158203125e-07,
+          "pool2": 2.86102294921875e-06
+        },
+        {
+          "logits": 9.5367431640625e-07,
+          "hidden": 1.1920928955078125e-06,
+          "pool1": 4.76837158203125e-07,
+          "pool2": 1.430511474609375e-06
+        },
+        {
+          "logits": 2.86102294921875e-06,
+          "hidden": 2.384185791015625e-06,
+          "pool1": 4.76837158203125e-07,
+          "pool2": 2.384185791015625e-06
+        },
+        {
+          "logits": 3.337860107421875e-06,
+          "hidden": 3.814697265625e-06,
+          "pool1": 7.152557373046875e-07,
+          "pool2": 2.86102294921875e-06
+        },
+        {
+          "logits": 2.86102294921875e-06,
+          "hidden": 1.6689300537109375e-06,
+          "pool1": 4.76837158203125e-07,
+          "pool2": 1.430511474609375e-06
+        },
+        {
+          "logits": 1.9073486328125e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 7.152557373046875e-07,
+          "pool2": 2.0265579223632812e-06
+        },
+        {
+          "logits": 7.62939453125e-06,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 4.76837158203125e-07,
+          "pool2": 1.430511474609375e-06
+        },
+        {
+          "logits": 3.814697265625e-06,
+          "hidden": 2.86102294921875e-06,
+          "pool1": 4.76837158203125e-07,
+          "pool2": 1.9073486328125e-06
+        },
+        {
+          "logits": 9.5367431640625e-07,
+          "hidden": 1.9073486328125e-06,
+          "pool1": 7.152557373046875e-07,
+          "pool2": 1.430511474609375e-06
+        },
+        {
+          "logits": 1.9073486328125e-06,
+          "hidden": 2.0265579223632812e-06,
+          "pool1": 4.76837158203125e-07,
+          "pool2": 1.6689300537109375e-06
+        }
+      ]
+    },
+    "captcha-v3_uploads_and_identity": {
+      "status": "PASS",
+      "cases": 10,
+      "maximum_score_error": 1.1657336984605138e-07
+    },
+    "captcha-v3_latency": {
+      "status": "PASS",
+      "median_ms": 42.79999999701977,
+      "p95_ms": 57.41499999798834,
+      "scope": "Measured desktop only; not a model promotion gate"
+    },
+    "mixed_model_session_export": {
+      "status": "PASS",
+      "records": 30
+    },
+    "old_upload_restores_its_model": {
+      "status": "PASS"
+    },
+    "letters_preserved": {
+      "status": "PASS",
+      "maximum_logit_error": 9.5367431640625e-06
+    },
+    "words_and_mode_roundtrip": {
+      "status": "PASS"
+    },
+    "pretrained_readers_remain_separate": {
+      "status": "PASS"
+    },
+    "failed_load_keeps_previous_model_and_retry_works": {
+      "status": "PASS"
+    },
+    "drawing_uses_selected_weights": {
+      "status": "PASS"
+    },
+    "desktop_mobile_selector": {
+      "status": "PASS",
+      "mobile_width": 390
+    },
+    "browser_only_static_requests": {
+      "status": "PASS",
+      "requests": 61,
+      "page_errors": []
+    }
+  },
+  "official_challenge": "NOT RUN",
+  "public_deployment": "NOT RUN"
+}

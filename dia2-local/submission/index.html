@@ -1,23 +1,93 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Digit Lab · Participant-trained submission</title><link rel="stylesheet" href="./submission.css"></head>
-<body><header><a class="brand" href="#">DIGIT LAB</a><span>Participant-trained submission · v1</span></header>
-<main><section class="intro"><p class="eyebrow">TRAINED HERE. RUNS IN YOUR BROWSER.</p><h1>From your strokes<br>to a prediction.</h1>
+<title>Digit Lab · Participant-trained submission</title>
+<link rel="stylesheet" href="./submission.css?v=3.11.1">
+</head>
+<body>
+<header>
+<a class="brand" href="#">DIGIT LAB</a>
+<span id="submission-version">Participant-trained submission</span>
+</header>
+<main>
+<section class="intro">
+<p class="eyebrow">TRAINED HERE. RUNS IN YOUR BROWSER.</p>
+<h1>From your strokes<br>to a prediction.</h1>
 <p>Draw or upload one digit or letter. Inspect the actual input, class scores and learned feature maps.</p>
 <p class="scope">The required course model uses MNIST only. Optional extensions are labelled separately. Every included model was trained in this project; its weights are bundled with this submission.</p>
-<a href="./provenance.json" download>Download training provenance</a> · <a href="./evaluation.json" download>Download recorded evaluations</a></section>
-<section class="workspace"><div class="controls"><label>Recognition mode<select id="mode"><option value="digits">Digits 0–9</option><option value="letters">Letters A–Z · EMNIST extension</option></select></label>
-<label id="dataset-control">Digit training data<select id="dataset"><option value="mnist">MNIST only · required course model</option><option value="mnist-supplementary-v1">MNIST + EMNIST/synthetic · optional extension</option><option value="captcha-v3">MNIST + synthetic · preserved residual extension</option></select></label></div>
-<p id="model-scope"></p><p id="metrics" class="metrics"></p><p id="challenge"></p><div id="status" role="status" aria-live="polite">Loading verified local weights…</div>
-<div class="columns"><section><h2>Make your mark</h2><canvas id="drawing" width="280" height="280" aria-label="Draw one character"></canvas>
-<div class="tools"><button id="drawing-pen" aria-pressed="true">Pen</button><button id="drawing-eraser" aria-pressed="false">Eraser</button><button id="drawing-undo">Undo</button><button id="drawing-redo">Redo</button><button id="clear">Clear</button></div>
-<button id="read" class="primary">Classify drawing</button><label class="upload">Or choose images<input id="files" type="file" multiple accept="image/png,image/jpeg,image/webp"></label>
-<div id="uploads" class="uploads" aria-label="Uploaded image results"></div></section>
-<section><h2>Read the result</h2><p id="prediction" class="prediction">—</p><p id="score-note">Original softmax scores are model scores, not calibrated probabilities of correctness.</p>
-<canvas id="input" width="64" height="64" aria-label="Actual prepared model input"></canvas><div id="scores" aria-label="Class scores"></div>
-<button id="export" disabled>Export raw predictions</button></section></div></section>
-<section class="inside"><h2>Inside the selected model</h2><p>Real intermediate activations from the selected input. Each feature map uses its own display scale; classification scores are unchanged.</p>
-<h3>First feature maps</h3><div id="first" class="maps"></div><h3>Second feature maps</h3><div id="second" class="maps"></div><h3>128 hidden activations</h3><canvas id="hidden" width="128" height="1" aria-label="Actual hidden activations"></canvas></section>
-<footer>No pretrained model readers are included. Clean dataset accuracy and recorded CAPTCHA results are different measurements. The all-ten-above-90% requirement remains unmet.</footer></main>
-<script type="module" src="./submission.js"></script></body></html>
+<a href="./provenance.json" download>Download training provenance</a> · <a href="./evaluation.json" download>Download recorded evaluations</a>
+</section>
+<section class="workspace">
+<div class="controls">
+<label>Recognition mode<select id="mode">
+<option value="digits">Digits 0–9</option>
+<option value="letters">Letters A–Z · EMNIST extension</option>
+</select>
+</label>
+<label id="dataset-control">Digit training data<select id="dataset">
+<option value="mnist">MNIST only · required course model</option>
+<option value="mnist-supplementary-v1">MNIST + EMNIST/synthetic · optional extension</option>
+<option value="captcha-v3">MNIST + synthetic · preserved residual extension</option>
+</select>
+</label>
+</div>
+<p id="model-scope">
+</p>
+<p id="metrics" class="metrics">
+</p>
+<p id="challenge">
+</p>
+<div id="status" role="status" aria-live="polite">Loading verified local weights…</div>
+<button id="retry" hidden>Retry loading model</button>
+<div class="columns">
+<section>
+<h2>Make your mark</h2>
+<canvas id="drawing" width="280" height="280" aria-label="Draw one character">
+</canvas>
+<div class="tools">
+<button id="drawing-pen" aria-pressed="true">Pen</button>
+<button id="drawing-eraser" aria-pressed="false">Eraser</button>
+<button id="drawing-undo">Undo</button>
+<button id="drawing-redo">Redo</button>
+<button id="clear">Clear</button>
+</div>
+<button id="read" class="primary">Classify drawing</button>
+<label class="upload">Or choose images<input id="files" type="file" multiple accept="image/png,image/jpeg,image/webp">
+</label>
+<div id="uploads" class="uploads" aria-label="Uploaded image results">
+</div>
+</section>
+<section>
+<h2>Read the result</h2>
+<p id="prediction" class="prediction">—</p>
+<p id="score-note">Original softmax scores are model scores, not calibrated probabilities of correctness.</p>
+<canvas id="input" width="64" height="64" aria-label="Actual prepared model input">
+</canvas>
+<div id="scores" aria-label="Class scores">
+</div>
+<button id="export" disabled>Export raw predictions</button>
+</section>
+</div>
+</section>
+<section class="inside">
+<h2>Inside the selected model</h2>
+<p>Real intermediate activations from the selected input. Each feature map uses its own display scale; classification scores are unchanged.</p>
+<h3>First feature maps</h3>
+<div id="first" class="maps">
+</div>
+<h3>Second feature maps</h3>
+<div id="second" class="maps">
+</div>
+<h3>128 hidden activations</h3>
+<canvas id="hidden" width="128" height="1" aria-label="Actual hidden activations">
+</canvas>
+</section>
+<footer>No pretrained model readers are included. Clean dataset accuracy and recorded CAPTCHA results are different measurements. The all-ten-above-90% requirement remains unmet.</footer>
+</main>
+<script type="module" src="./submission.js?v=3.11.1">
+</script>
+</body>
+</html>

@@ -9,6 +9,7 @@ from PIL import Image
 from playwright.sync_api import sync_playwright
 
 from .qa import open_browser
+from .qa_outputs import qa_outputs
 from .train import ROOT, write_json
 
 
@@ -25,7 +26,42 @@ def check_drawing_tools(page, canvas_id, prefix, clear_id, screenshot=None):
     page.locator("#" + clear_id).click()
     canvas = page.locator("#" + canvas_id)
     canvas.scroll_into_view_if_needed()
+    page.locator(f"#{prefix}-pen").click()
     blank = canvas.evaluate("c => c.toDataURL()")
+
+    # A stroke belongs to one pointer; unrelated events must not draw or end it.
+    box = canvas.bounding_box()
+    x, y = box["x"] + box["width"] * .3, box["y"] + box["height"] * .5
+    page.mouse.move(x, y)
+    page.mouse.down()
+    stroke = canvas.evaluate("c => c.toDataURL()")
+    canvas.evaluate("""c => {
+      const b = c.getBoundingClientRect();
+      for (const type of ['pointerdown', 'pointermove', 'pointerup', 'pointercancel', 'lostpointercapture']) {
+        c.dispatchEvent(new PointerEvent(type, {pointerId:999, button:0,
+          clientX:b.x+b.width*.8, clientY:b.y+b.height*.6, bubbles:true}));
+      }
+    }""")
+    assert canvas.evaluate("c => c.toDataURL()") == stroke
+    page.mouse.move(x + box["width"] * .2, y)
+    assert canvas.evaluate("c => c.toDataURL()") != stroke
+    page.mouse.up()
+    finished = canvas.evaluate("c => c.toDataURL()")
+    page.mouse.move(x + box["width"] * .3, y)
+    assert canvas.evaluate("c => c.toDataURL()") == finished
+    page.locator("#" + clear_id).click()
+    page.mouse.click(x, y, button="right")
+    assert canvas.evaluate("c => c.toDataURL()") == blank
+
+    # Undo while pressed cancels capture; later movement cannot mutate restored pixels.
+    page.mouse.move(x, y)
+    page.mouse.down()
+    page.mouse.move(x + box["width"] * .2, y)
+    page.keyboard.press("Control+z")
+    assert canvas.evaluate("c => c.toDataURL()") == blank
+    page.mouse.move(x + box["width"] * .3, y)
+    assert canvas.evaluate("c => c.toDataURL()") == blank
+    page.mouse.up()
     box = canvas.bounding_box()
     y = box["y"] + box["height"] * .5
     page.locator(f"#{prefix}-pen").click()
@@ -81,9 +117,10 @@ def main():
     args = parser.parse_args()
     if not args.digit_experiment.replace("-", "").isalnum():
         parser.error("Invalid digit experiment name")
-    report_path = ROOT / "reports" / args.report
-    if report_path.exists():
-        raise SystemExit(f"Refusing to overwrite existing evidence: {report_path}")
+    names = ["character-eraser", "word-eraser", "mobile", "desktop"]
+    if args.live_image:
+        names.append("live-desktop")
+    report_path, captures = qa_outputs(args.report, args.screenshot_prefix, names)
     checks = {}
     report = {"url": args.url, "status": "FAIL", "checks": checks}
     with sync_playwright() as playwright:
@@ -102,12 +139,13 @@ def main():
         checks["visible_and_exported_release_version"] = {"status": "PASS", "version": version}
         report["application_version"] = version
         check_drawing_tools(page, "drawing", "drawing", "clear",
-                            ROOT / "reports/screenshots" / (args.screenshot_prefix + "-character-eraser.png"))
+                            captures["character-eraser"])
         checks["character_eraser_size_undo_redo_and_keyboard"] = {"status": "PASS"}
         for mode in ("digits", "letters"):
             page.evaluate("mode => digitLab.activateMode(mode)", mode)
             experiment = args.digit_experiment if mode == "digits" else "robust"
-            fixture = json.loads((ROOT / "dist/model" / experiment / mode / "parity.json").read_text())
+            folder = ROOT / "dist/model" if mode == "digits" and experiment == "mnist" else ROOT / "dist/model" / experiment / mode
+            fixture = json.loads((folder / "parity.json").read_text())
             assert page.evaluate("digitLab.state.model.manifest.sha256") == fixture["model_sha256"]
             parity = page.evaluate("""fixture => fixture.cases.map(item => {
               const result = digitLab.predict(item.input);
@@ -129,7 +167,7 @@ def main():
         assert not any("huggingface.co" in url or "jsdelivr.net" in url for _, url in requests)
         checks["lazy_loading_and_blank_rejection"] = {"status": "PASS"}
         check_drawing_tools(page, "word-drawing", "word", "word-clear",
-                            ROOT / "reports/screenshots" / (args.screenshot_prefix + "-word-eraser.png"))
+                            captures["word-eraser"])
         checks["word_eraser_size_undo_redo_and_keyboard"] = {"status": "PASS"}
         preparation = page.evaluate("""async () => {
           const {prepareWord} = await import('./v3/words.js?v=words-1');
@@ -215,11 +253,9 @@ def main():
         page.locator("#word-text").fill("A word")
         page.keyboard.press("Tab")
         assert page.evaluate("document.activeElement.id") == "word-copy"
-        screenshots = ROOT / "reports/screenshots"
-        screenshots.mkdir(exist_ok=True)
-        page.screenshot(path=str(screenshots / (args.screenshot_prefix + "-mobile.png")), full_page=True)
+        page.screenshot(path=str(captures["mobile"]), full_page=True)
         page.set_viewport_size({"width": 1440, "height": 1100})
-        page.screenshot(path=str(screenshots / (args.screenshot_prefix + "-desktop.png")), full_page=True)
+        page.screenshot(path=str(captures["desktop"]), full_page=True)
         checks["responsive_layout_and_keyboard"] = {"status": "PASS"}
 
         # A fresh page must recover after a worker/module load fails.
@@ -271,7 +307,7 @@ def main():
             checks["real_trocr_smoke"] = {"status": "PASS", "text": text,
                 "expected": args.expected_text, "metadata": live.evaluate("digitLab.wordsContext().metadata"),
                 "note": "One fixture smoke test; not a word accuracy benchmark."}
-            live.screenshot(path=str(screenshots / (args.screenshot_prefix + "-live-desktop.png")), full_page=True)
+            live.screenshot(path=str(captures["live-desktop"]), full_page=True)
             alternate = "standard" if args.quality == "precise" else "precise"
             live.locator("#word-quality").select_option(alternate)
             live.locator("#word-read").click()

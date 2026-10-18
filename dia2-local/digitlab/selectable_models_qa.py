@@ -11,6 +11,7 @@ import torch
 
 from .preprocess import prepare
 from .qa import open_browser
+from .qa_outputs import qa_outputs
 from .residual import ResidualCNN
 from .supplementary import NAME, original_model
 from .train import ROOT, write_json
@@ -20,10 +21,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--url", default="http://127.0.0.1:8882/")
     parser.add_argument("--report", default="selectable-models-browser-qa.json")
+    parser.add_argument("--screenshot-prefix", default="selectable-models")
     args = parser.parse_args()
-    output = ROOT / "reports" / args.report
-    if output.exists():
-        raise FileExistsError(output)
+    output, captures = qa_outputs(args.report, args.screenshot_prefix)
     torch.set_num_threads(2)
     checks, errors, requests = {}, [], []
     report = {"status": "FAIL", "url": args.url, "checks": checks,
@@ -143,14 +143,12 @@ def main():
             page.wait_for_function("!digitLab.state.busy")
             assert page.locator("#predicted").inner_text() == drawing
             checks["drawing_uses_selected_weights"] = {"status": "PASS"}
-            images = ROOT / "reports/screenshots"
-            images.mkdir(exist_ok=True)
             page.locator("#workspace").scroll_into_view_if_needed()
-            page.screenshot(path=str(images / "selectable-models-desktop.png"))
+            page.screenshot(path=str(captures["desktop"]))
             page.set_viewport_size({"width": 390, "height": 844})
             assert page.evaluate("document.documentElement.scrollWidth <= innerWidth")
             assert page.locator("#cnn-model").is_visible()
-            page.screenshot(path=str(images / "selectable-models-mobile.png"))
+            page.screenshot(path=str(captures["mobile"]))
             checks["desktop_mobile_selector"] = {"status": "PASS", "mobile_width": 390}
             assert not errors, errors
             origin = urlparse(args.url).netloc

@@ -1,0 +1,9 @@
+{
+  "status": "FAIL",
+  "collector": "digitlab.helper_qa",
+  "url": "http://127.0.0.1:8779/",
+  "error": "AssertionError: collector expected the old phrase 'not a new blind test' in the authored challenge answer",
+  "scope": "Stale collector text assertion against the current selectable-model guide; no classifier or helper source changed",
+  "repair": "Verify preserved historical evaluation scope and explicit exclusion from training/selection in the current answer",
+  "retry": "maintenance-cleanup-v2-helper-retry-qa.json"
+}

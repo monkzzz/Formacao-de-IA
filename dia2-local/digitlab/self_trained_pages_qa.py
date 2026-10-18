@@ -14,6 +14,7 @@ from .letters import LetterCNN
 from .model import DigitCNN
 from .preprocess import prepare
 from .qa import open_browser
+from .qa_outputs import qa_outputs
 from .residual import ResidualCNN
 from .self_trained_submission import NAME, SPECS, digest
 from .train import ROOT, write_json
@@ -28,16 +29,16 @@ def wait(page, expression, arg=None):
         page.wait_for_timeout(100)
 
 
-def main(destination, url):
-    if destination.exists():
-        raise FileExistsError("Preserve completed browser verification")
-    build = json.loads((ROOT / "reports" / (NAME + "-build.json")).read_text())
+def main(destination, url, receipt=None, screenshot_prefix=None):
+    receipt = Path(receipt) if receipt is not None else ROOT / "reports" / (NAME + "-build.json")
+    build = json.loads(receipt.read_text(encoding="utf-8"))
+    destination, captures = qa_outputs(destination, screenshot_prefix or build['name']+'-pages')
     output = Path(build["output"])
     if any(digest(output / p) != value for p,value in build["files_sha256"].items()):
         raise ValueError("Frozen submission files changed")
     if digest(Path(build["archive"])) != build["archive_sha256"]:
         raise ValueError("Frozen submission ZIP changed")
-    report = {"status": "FAIL", "build_sha256": digest(ROOT / "reports" / (NAME + "-build.json")),
+    report = {"status": "FAIL", "build_sha256": digest(receipt),
               "checks": {}, "official_captcha_inference": "NOT RUN", "scope": "Public deployment verification with non-challenge fixtures"}
     torch.set_num_threads(2)
 
@@ -126,11 +127,10 @@ def main(destination, url):
             except Exception as error:
                 assert 'Unsupported submission model' in str(error)
             report['checks']['pretrained_mode_refused']='PASS'
-            folder=ROOT/'reports/screenshots';folder.mkdir(exist_ok=True)
-            page.screenshot(path=str(folder/(NAME+'-pages-desktop.png')),full_page=True)
+            page.screenshot(path=str(captures['desktop']),full_page=True)
             page.set_viewport_size({'width':390,'height':844})
             assert page.evaluate('document.documentElement.scrollWidth<=innerWidth')
-            page.screenshot(path=str(folder/(NAME+'-pages-mobile.png')),full_page=True)
+            page.screenshot(path=str(captures['mobile']),full_page=True)
             assert not blocked and not errors and all(r['method']=='GET' and r['url'].startswith((url,'blob:','data:')) for r in requests)
             assert all(digest(ROOT / p)==value for p,value in build['active_assets_preserved'].items())
             report.update(status='PASS',requests=requests,blocked_external_requests=blocked,page_errors=errors,
@@ -146,5 +146,7 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--report',type=Path,default=ROOT/'reports'/'self-trained-pages-v1-browser.json')
     parser.add_argument('--url',default='https://monkzzz.github.io/Formacao-de-IA/')
+    parser.add_argument('--build',type=Path)
+    parser.add_argument('--screenshot-prefix')
     args=parser.parse_args()
-    main(args.report,args.url)
+    main(args.report,args.url,args.build,args.screenshot_prefix)

@@ -7,6 +7,7 @@ import json
 from playwright.sync_api import sync_playwright
 
 from .qa import open_browser
+from .qa_outputs import qa_outputs
 from .train import ROOT, write_json
 
 
@@ -17,6 +18,7 @@ def main():
     parser.add_argument("--report-prefix", help="Use a separate report and screenshot prefix for follow-up checks")
     args = parser.parse_args()
     name = args.report_prefix or ("public-helper" if args.public else "helper")
+    destination, captures = qa_outputs(name + "-qa.json", name)
     report = {"url": args.url, "checks": {}}
     original = ROOT / "scopedog-asset.jpg"
     asset = ROOT / "dist/assets/scopedog.jpg"
@@ -60,7 +62,10 @@ def main():
 
         assert "isn’t a prediction" in ask("Explain this prediction")
         assert "not calibrated" in ask("What does confidence mean?")
-        assert "not a new blind test" in ask("Explain the Desafio")
+        challenge = ask("Explain the Desafio")
+        assert "not a new blind test" in challenge
+        assert "Historical official evaluations remain preserved" in challenge
+        assert "excluded from training and selection" in challenge
         malicious = '<img src=x onerror="window.helperInjected=true">'
         ask(malicious)
         assert page.locator(".helper-message.is-user").last.inner_text().endswith(malicious)
@@ -85,9 +90,7 @@ def main():
         report["checks"]["prediction_context_navigation_and_model_unchanged"] = "PASS"
 
         launcher.click()
-        screenshots = ROOT / "reports/screenshots"
-        screenshots.mkdir(exist_ok=True)
-        page.screenshot(path=str(screenshots / (name + "-desktop.png")), full_page=True)
+        page.screenshot(path=str(captures["desktop"]), full_page=True)
         sizes = []
         for width, height in [(320, 568), (390, 844), (844, 390)]:
             page.set_viewport_size({"width": width, "height": height})
@@ -98,7 +101,7 @@ def main():
             assert page.evaluate("document.documentElement.scrollWidth <= innerWidth")
             sizes.append([width, height])
             if width == 390:
-                page.screenshot(path=str(screenshots / (name + "-mobile.png")), full_page=True)
+                page.screenshot(path=str(captures["mobile"]), full_page=True)
         report["checks"]["mobile_portrait_and_landscape"] = {"status": "PASS", "viewports": sizes}
         page.emulate_media(reduced_motion="reduce")
         assert page.locator("#helper-messages").evaluate("el => getComputedStyle(el).scrollBehavior") == "auto"
@@ -108,7 +111,7 @@ def main():
         report["checks"]["no_chat_api_requests_or_script_errors"] = "PASS"
         browser.close()
     report["status"] = "PASS"
-    write_json(ROOT / "reports" / (name + "-qa.json"), report)
+    write_json(destination, report)
     print(json.dumps({"status": "PASS", "groups": len(report["checks"]), "report": name + "-qa.json"}))
 
 

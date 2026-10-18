@@ -1,4 +1,5 @@
-import {createDrawingTools} from "./canvas-tools.js?v=3.2.0";
+import {createDrawingTools} from "./canvas-tools.js?v=3.11.1";
+import {imageCanvas, downloadBlob} from "./browser-utils.js?v=3.11.1";
 const $ = id => document.getElementById(id);
 
 // A separate, full-resolution pipeline: never squeeze a word into the CNN's 28×28 input.
@@ -46,10 +47,14 @@ export function prepareWord(source) {
 
 export function createWordsWorkspace(applicationVersion) {
   const canvas = $("word-drawing"), context = canvas.getContext("2d", {willReadFrequently: true});
-  let worker, pending, timer, sequence = 0, drawing = false, previous, busy = false, active = false;
+  let worker, pending, timer, sequence = 0, busy = false, active = false;
   let originalText = "", sourceName = "Your drawing", metadata = null;
   const drawingTools = createDrawingTools(canvas, {prefix: "word", background: "white", penWidth: 6, eraserWidth: 40,
-    onRestore: () => {drawing = false; previous = null; clearResult(); announce("Drawing restored. Read it again when ready.");}});
+    onDraw: brush => {
+      clearResult();
+      announce(brush.eraser ? "Erase unwanted marks, then read your words again." : "Writing updated. Read it when ready.");
+    },
+    onRestore: () => {clearResult(); announce("Drawing restored. Read it again when ready.");}});
   const announce = (message, error = false) => {
     $("word-status").textContent = message; $("word-status").classList.toggle("error", error);
   };
@@ -68,7 +73,6 @@ export function createWordsWorkspace(applicationVersion) {
     originalText = ""; metadata = null; controls();
   }
   function clearCanvas(resetHistory = false) {
-    drawing = false; previous = null;
     if (resetHistory) drawingTools.reset(); else drawingTools.clear();
     sourceName = "Your drawing";
   }
@@ -107,7 +111,7 @@ export function createWordsWorkspace(applicationVersion) {
     if (busy) return;
     let prepared;
     try {prepared = prepareWord(canvas);} catch (error) {announce(error.message, true); return;}
-    clearResult(); busy = true; drawing = false; controls();
+    clearResult(); busy = true; controls();
     $("word-preview").src = prepared.toDataURL("image/png"); $("word-preview").hidden = false;
     const fullPrecision = $("word-quality").value === "precise";
     announce(`Preparing ${fullPrecision ? "full precision" : "standard"} reading. First use downloads about ${fullPrecision ? "250" : "65"} MB of weights plus the runtime; this may take a few minutes…`);
@@ -124,29 +128,6 @@ export function createWordsWorkspace(applicationVersion) {
     } catch (error) {announce(error.message, true);}
     finally {busy = false; controls();}
   }
-  function point(event) {
-    const rect = canvas.getBoundingClientRect();
-    return [(event.clientX - rect.left) * canvas.width / rect.width, (event.clientY - rect.top) * canvas.height / rect.height];
-  }
-  canvas.addEventListener("pointerdown", event => {
-    if (busy) return;
-    event.preventDefault(); canvas.setPointerCapture(event.pointerId);
-    drawingTools.snapshot();
-    clearResult(); drawing = true; previous = point(event);
-    const brush = drawingTools.brush;
-    announce(brush.eraser ? "Erase unwanted marks, then read your words again." : "Writing updated. Read it when ready.");
-    context.fillStyle = brush.color;
-    if (brush.eraser) context.fillRect(previous[0] - brush.width / 2, previous[1] - brush.width / 2, brush.width, brush.width);
-    else {context.beginPath(); context.arc(...previous, brush.width / 2, 0, 2 * Math.PI); context.fill();}
-  });
-  canvas.addEventListener("pointermove", event => {
-    if (!drawing || busy) return;
-    const current = point(event);
-    const brush = drawingTools.brush;
-    context.strokeStyle = brush.color; context.lineWidth = brush.width; context.lineCap = brush.eraser ? "square" : "round"; context.lineJoin = "round";
-    context.beginPath(); context.moveTo(...previous); context.lineTo(...current); context.stroke(); previous = current;
-  });
-  for (const type of ["pointerup", "pointercancel", "lostpointercapture"]) canvas.addEventListener(type, () => {drawing = false; previous = null;});
   $("word-read").addEventListener("click", read);
   $("word-quality").addEventListener("change", () => {
     stopWorker(new Error("Reading quality changed.")); clearResult();
@@ -159,20 +140,12 @@ export function createWordsWorkspace(applicationVersion) {
     if (!file || busy) return;
     busy = true; controls(); clearResult();
     try {
-      if (file.size > 30 * 1024 * 1024) throw new Error("Image exceeds the 30 MB limit.");
-      if (file.type && !["image/png", "image/jpeg", "image/webp"].includes(file.type)) throw new Error("Use PNG, JPEG, or WebP images.");
-      const bitmap = await createImageBitmap(file);
-      try {
-        if (bitmap.width * bitmap.height > 16000000) throw new Error("Image exceeds 16 million pixels.");
-        const source = document.createElement("canvas"); source.width = bitmap.width; source.height = bitmap.height;
-        source.getContext("2d").drawImage(bitmap, 0, 0);
-        const prepared = prepareWord(source);
-        clearCanvas(true);
-        const scale = Math.min((canvas.width - 32) / prepared.width, (canvas.height - 32) / prepared.height);
-        context.drawImage(prepared, (canvas.width - prepared.width * scale) / 2,
-          (canvas.height - prepared.height * scale) / 2, prepared.width * scale, prepared.height * scale);
-        sourceName = file.name;
-      } finally {bitmap.close();}
+      const prepared = prepareWord(await imageCanvas(file));
+      clearCanvas(true);
+      const scale = Math.min((canvas.width - 32) / prepared.width, (canvas.height - 32) / prepared.height);
+      context.drawImage(prepared, (canvas.width - prepared.width * scale) / 2,
+        (canvas.height - prepared.height * scale) / 2, prepared.width * scale, prepared.height * scale);
+      sourceName = file.name;
     } catch (error) {announce(error.message, true); return;}
     finally {busy = false; controls();}
     await read();
@@ -183,9 +156,7 @@ export function createWordsWorkspace(applicationVersion) {
     catch {$("word-text").focus(); $("word-text").select(); announce("Select and copy the text using your keyboard or device menu.");}
   });
   $("word-download").addEventListener("click", () => {
-    const url = URL.createObjectURL(new Blob([$("word-text").value], {type: "text/plain;charset=utf-8"}));
-    const link = document.createElement("a"); link.href = url; link.download = "digitlab-handwriting.txt"; link.click();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    downloadBlob(new Blob([$("word-text").value], {type: "text/plain;charset=utf-8"}), "digitlab-handwriting.txt");
   });
   clearCanvas(true); controls();
   return {

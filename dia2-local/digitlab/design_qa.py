@@ -6,6 +6,7 @@ import json
 from playwright.sync_api import sync_playwright
 
 from .qa import open_browser
+from .qa_outputs import qa_outputs
 from .train import ROOT, write_json
 
 
@@ -13,8 +14,13 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--url", default="http://127.0.0.1:8765/")
     parser.add_argument("--public", action="store_true")
+    parser.add_argument("--report")
+    parser.add_argument("--screenshot-prefix")
     args = parser.parse_args()
-    report = {"url": args.url, "checks": {}}
+    prefix = args.screenshot_prefix or ("public-design" if args.public else "design")
+    name = args.report or ("public-design-qa.json" if args.public else "design-qa.json")
+    destination, captures = qa_outputs(name, prefix, ("390", "1440"))
+    report = {"url": args.url, "status": "FAIL", "checks": {}}
     with sync_playwright() as p:
         browser = open_browser(p)
         page = browser.new_page(viewport={"width": 1440, "height": 1100})
@@ -52,9 +58,6 @@ def main():
         assert page.locator("#uploads").evaluate("el => el.scrollHeight > el.clientHeight")
         assert page.locator("#uploads").bounding_box()["height"] <= 415
         report["checks"]["gallery_count_and_containment"] = {"status": "PASS", "results": 26}
-        screenshots = ROOT / "reports/screenshots"
-        screenshots.mkdir(exist_ok=True)
-        prefix = "public-design" if args.public else "design"
         page.locator(".upload-result").first.click()
         sizes = []
         for width, height in [(320, 800), (390, 844), (768, 1024), (1024, 900), (1440, 1100)]:
@@ -68,12 +71,12 @@ def main():
             if width < 520:
                 assert dimensions["galleryColumns"] == 2, dimensions
                 assert dimensions["galleryHeight"] <= 380, dimensions
-            for name in ["mode-digits", "mode-letters", "classify", "clear", "export"]:
-                assert page.locator("#" + name).bounding_box()["height"] >= 40
+            for control_id in ["mode-digits", "mode-letters", "classify", "clear", "export"]:
+                assert page.locator("#" + control_id).bounding_box()["height"] >= 40
             sizes.append(dimensions)
             if width in [390, 1440]:
                 page.evaluate("window.scrollTo({top: 0, behavior: 'instant'})")
-                page.screenshot(path=str(screenshots / f"{prefix}-{width}.png"), full_page=True)
+                page.screenshot(path=str(captures[str(width)]), full_page=True)
         report["checks"]["responsive_layout_and_controls"] = {"status": "PASS", "viewports": sizes}
         contrasts = page.evaluate("""() => {
           const rgb = text => text.match(/[\\d.]+/g).slice(0, 3).map(Number);
@@ -98,8 +101,8 @@ def main():
         assert not errors, errors
         report["checks"]["reduced_motion_and_script_errors"] = {"status": "PASS", "page_errors": errors}
         browser.close()
-    name = "public-design-qa.json" if args.public else "design-qa.json"
-    write_json(ROOT / "reports" / name, report)
+    report["status"] = "PASS"
+    write_json(destination, report)
     print(json.dumps({"status": "PASS", "groups": len(report["checks"]), "report": name}), flush=True)
 
 

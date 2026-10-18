@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 import hashlib
 import json
 from pathlib import Path
+import re
 import shutil
 import zipfile
 
@@ -13,7 +14,6 @@ import torch
 from .train import ROOT, write_json
 
 NAME = "self-trained-submission-v1"
-DEFAULT_OUTPUT = ROOT / "artifacts" / NAME / "site"
 SPECS = {
     "mnist": {"folder": "model", "checkpoint": "artifacts/best.pt", "report": "training.json",
               "scope": "Required course model: trained from random initialization on MNIST only, with training-only augmentation.", "dataset": "MNIST"},
@@ -92,23 +92,30 @@ def provenance():
             "limitation": "Historical official results are follow-ups after prior exposure; no fresh CAPTCHA inference in this build"}
 
 
-def build(output=DEFAULT_OUTPUT):
-    output = Path(output).resolve()
+def build(output=None, name=NAME):
+    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9-]*", name):
+        raise ValueError("Use a package name containing letters, digits and hyphens")
+    output = Path(output or ROOT / "artifacts" / name / "site").resolve()
     source = ROOT / "dist"
     if output.exists() or output == ROOT or source == output or source in output.parents or output in ROOT.parents:
         raise ValueError("Use a new separate output directory; preserve the active app")
+    zip_path = output.parent / (name + ".zip")
+    destination = ROOT / "reports" / (name + "-build.json")
+    for path in (zip_path, destination):
+        if path.exists():
+            raise FileExistsError(f"Preserve existing submission evidence: {path}")
     audit = provenance()
     preserved = {str(p.relative_to(ROOT)): digest(p) for p in source.rglob("*") if p.is_file() and p.suffix in (".js", ".html", ".css", ".bin", ".json")}
     output.mkdir(parents=True)
-    for name in ("index.html", "submission.js", "submission.css"):
-        shutil.copy2(ROOT / "submission" / name, output / name)
-    for name in ("inference.js", "preprocess.js", "residual.js", "canvas-tools.js"):
+    for asset in ("index.html", "submission.js", "submission.css"):
+        shutil.copy2(ROOT / "submission" / asset, output / asset)
+    for asset in ("inference.js", "preprocess.js", "residual.js", "canvas-tools.js", "browser-utils.js"):
         (output / "v3").mkdir(exist_ok=True)
-        shutil.copy2(source / "v3" / name, output / "v3" / name)
+        shutil.copy2(source / "v3" / asset, output / "v3" / asset)
     previous = json.loads((ROOT / "reports/selectable-models-challenge-followup-v1-comparison.json").read_text())
-    evaluation = {"scope": "Recorded evaluations only; no new test or official inference performed by this builder",
+    evaluation = {"package_name": name, "scope": "Recorded evaluations only; no new test or official inference performed by this builder",
                   "professor_requirement": "Exactly 10/10 correct and every original score strictly >90%; currently unmet", "models": {}}
-    for name, spec in SPECS.items():
+    for model_name, spec in SPECS.items():
         folder = output / spec["folder"]
         folder.mkdir(parents=True, exist_ok=True)
         for asset in ("manifest.json", "weights.bin", "parity.json"):
@@ -116,32 +123,26 @@ def build(output=DEFAULT_OUTPUT):
         manifest = json.loads((folder / "manifest.json").read_text())
         test = manifest["training"]["test"]
         official = None
-        if name != "letters":
-            recorded = previous["models"][name]
+        if model_name != "letters":
+            recorded = previous["models"][model_name]
             official = {"correct": recorded["correct"], "correct_above_90": sum(r["correct"] and r["expected_class_score"] > .9 for r in recorded["cases"]),
                         "scope": "Historical frozen follow-up; not a fresh blind test", "source_report_sha256": digest(ROOT / "reports/selectable-models-challenge-followup-v1-comparison.json")}
-        evaluation["models"][name] = {"scope": spec["scope"], "dataset": spec["dataset"], "clean_accuracy": test["accuracy"],
+        evaluation["models"][model_name] = {"scope": spec["scope"], "dataset": spec["dataset"], "clean_accuracy": test["accuracy"],
                                       "clean_count": test["count"], "official": official, "model_sha256": manifest["sha256"]}
     write_json(output / "provenance.json", audit)
     write_json(output / "evaluation.json", evaluation)
     (output / ".nojekyll").touch()
     files = {p.relative_to(output).as_posix(): digest(p) for p in output.rglob("*") if p.is_file()}
-    zip_path = output.parent / (NAME + ".zip")
-    if zip_path.exists():
-        raise FileExistsError("Preserve existing submission archive")
     with zipfile.ZipFile(zip_path, "x", zipfile.ZIP_DEFLATED) as bundle:
-        for name in files:
-            bundle.write(output / name, name)
+        for relative in files:
+            bundle.write(output / relative, relative)
     if any(digest(ROOT / name) != value for name,value in preserved.items()):
         raise ValueError("Active assets changed during build")
-    report = {"status": "PASS", "name": NAME, "built_utc": datetime.now(timezone.utc).isoformat(),
+    report = {"status": "PASS", "name": evaluation["package_name"], "built_utc": datetime.now(timezone.utc).isoformat(),
               "output": str(output), "archive": str(zip_path), "archive_sha256": digest(zip_path), "files_sha256": files,
               "provenance": audit, "active_assets_preserved": preserved,
               "excluded": ["pretrained digit readers", "pretrained word readers", "external model runtimes", "ROMs", "credentials", "datasets", "training checkpoints"],
               "browser_qa": "NOT RUN", "official_evaluation": "NOT RUN", "deployment": "NOT RUN"}
-    destination = ROOT / "reports" / (NAME + "-build.json")
-    if destination.exists():
-        raise FileExistsError("Preserve existing build receipt")
     write_json(destination, report)
     print("PASS: four locally trained models, verified ancestry/exports; separate site and ZIP:", zip_path)
     return report
@@ -149,6 +150,7 @@ def build(output=DEFAULT_OUTPUT):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument("--output", type=Path, help="New site directory (default: artifacts/<name>/site)")
+    parser.add_argument("--name", default=NAME, help="New package identity; existing receipts/archives are preserved")
     args = parser.parse_args()
-    build(args.output)
+    build(args.output, args.name)

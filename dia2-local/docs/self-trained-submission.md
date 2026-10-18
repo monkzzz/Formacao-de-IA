@@ -8,6 +8,13 @@ historical experiments without deploying anything.
 
 ## Deliverable
 
+The v1 deliverable below remains frozen. Maintained source templates now support
+readable shared browser utilities and model-load recovery. For a new local package,
+use a distinct `--name`, a matching QA `--build` receipt and fresh screenshot/report
+destinations; see [the release workflow](deployment.md). The default historical
+name deliberately refuses an existing v1 artifact. Editing templates does not
+update either public site.
+
 The prepared local archive is
 `artifacts/self-trained-submission-v1/self-trained-submission-v1.zip`.
 The extracted/static site is `artifacts/self-trained-submission-v1/site/`.

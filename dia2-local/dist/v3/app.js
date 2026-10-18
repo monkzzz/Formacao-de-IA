@@ -1,14 +1,14 @@
 import {loadModel, predict} from "./inference.js?v=dataset-1";
 import {prepareCanvas, PREPROCESS_VERSION} from "./preprocess.js?v=3.6.0";
-import {createWordsWorkspace} from "./words.js?v=3.2.0";
-import {createDrawingTools} from "./canvas-tools.js?v=3.2.0";
+import {createWordsWorkspace} from "./words.js?v=3.11.1";
+import {createDrawingTools} from "./canvas-tools.js?v=3.11.1";
 import {createDigitReader, DIGIT_READERS} from "./digit-readers.js?v=3";
 import {CNN_MODELS} from "./cnn-models.js?v=1";
+import {imageCanvas, imagePreview, downloadBlob} from "./browser-utils.js?v=3.11.1";
 
 const $ = id => document.getElementById(id);
 const state = {model: null, models: {}, mode: "digits", digitExperiment: "mnist", uploads: [], busy: false, loading: false, ready: false};
-const canvas = $("drawing"), ctx = canvas.getContext("2d", {willReadFrequently: true});
-let drawing = false, previousPoint = null;
+const canvas = $("drawing");
 const APPLICATION_VERSION = $("app-version").textContent.trim().slice(1);
 const words = createWordsWorkspace(APPLICATION_VERSION);
 const digitReader = createDigitReader(message => status(message));
@@ -53,7 +53,11 @@ for (const id of ["digit-reader", "digit-quality"]) $(id).addEventListener("chan
 });
 $("digit-cancel").addEventListener("click", () => {cancelled = true; digitReader.stop();});
 const drawingTools = createDrawingTools(canvas, {prefix: "drawing", background: "#14251d", penWidth: 20, eraserWidth: 36,
-  onRestore: () => {drawing = false; previousPoint = null; resetOutput(); status("Drawing restored. Read it again when ready.");}});
+  onDraw: brush => {
+    resetOutput();
+    status(brush.eraser ? "Erase unwanted marks, then read the drawing again." : "Drawing updated. Read it when ready.");
+  },
+  onRestore: () => {resetOutput(); status("Drawing restored. Read it again when ready.");}});
 const MODES = ["digits", "letters", "words"];
 
 function displayMode(mode) {
@@ -62,9 +66,6 @@ function displayMode(mode) {
   $("words-workspace").hidden = !wordMode;
   for (const id of ["character-workspace", "mode-hint", "status", "network", "model"]) $(id).hidden = wordMode;
   $("uploads-section").hidden = wordMode || !state.uploads.length;
-  const modelLink = document.querySelector("nav a:last-child");
-  modelLink.href = wordMode ? "#word-about" : "#network";
-  modelLink.textContent = wordMode ? "About the word reader" : "Inside the model";
   words.activate(wordMode);
   readerViews();
 }
@@ -174,11 +175,6 @@ async function activateMode(mode, digitExperiment = state.digitExperiment) {
 for (const mode of MODES) $("mode-" + mode).addEventListener("click", () => activateMode(mode));
 $("cnn-model").addEventListener("change", () => activateMode("digits", $("cnn-model").value));
 
-function resetDrawing() {
-  drawing = false; previousPoint = null;
-  drawingTools.clear();
-}
-
 function showPrediction(result, input, title, elapsed, model = state.model) {
   $("prediction").classList.remove("is-empty");
   $("predicted").textContent = result.label;
@@ -229,30 +225,6 @@ function run(input) {
   return {result, elapsed: performance.now() - start};
 }
 
-function point(event) {
-  const rect = canvas.getBoundingClientRect();
-  return [(event.clientX - rect.left) * canvas.width / rect.width,
-    (event.clientY - rect.top) * canvas.height / rect.height];
-}
-canvas.addEventListener("pointerdown", event => {
-  if (!state.ready || state.busy || state.loading) return;
-  drawingTools.snapshot(); resetOutput();
-  event.preventDefault(); canvas.setPointerCapture(event.pointerId);
-  drawing = true; previousPoint = point(event);
-  const brush = drawingTools.brush;
-  status(brush.eraser ? "Erase unwanted marks, then read the drawing again." : "Drawing updated. Read it when ready.");
-  ctx.fillStyle = brush.color;
-  if (brush.eraser) ctx.fillRect(previousPoint[0] - brush.width / 2, previousPoint[1] - brush.width / 2, brush.width, brush.width);
-  else {ctx.beginPath(); ctx.arc(...previousPoint, brush.width / 2, 0, Math.PI * 2); ctx.fill();}
-});
-canvas.addEventListener("pointermove", event => {
-  if (!drawing) return;
-  const current = point(event);
-  const brush = drawingTools.brush;
-  ctx.strokeStyle = brush.color; ctx.lineWidth = brush.width; ctx.lineCap = brush.eraser ? "square" : "round"; ctx.lineJoin = "round";
-  ctx.beginPath(); ctx.moveTo(...previousPoint); ctx.lineTo(...current); ctx.stroke(); previousPoint = current;
-});
-for (const name of ["pointerup", "pointercancel", "lostpointercapture"]) canvas.addEventListener(name, () => {drawing = false; previousPoint = null;});
 function resetOutput() {
   $("digit-raw").textContent = "No transcription yet.";
   $("digit-ocr-preview").hidden = true; $("digit-ocr-preview").removeAttribute("src");
@@ -270,7 +242,7 @@ function resetOutput() {
   for (const card of $("uploads").children) card.classList.remove("active");
 }
 $("clear").addEventListener("click", () => {
-  resetDrawing(); resetOutput();
+  drawingTools.clear(); resetOutput();
   status(`Canvas cleared. Draw one ${state.mode === "letters" ? "letter" : "digit"} or choose local images.`);
 });
 $("classify").addEventListener("click", async () => {
@@ -322,18 +294,12 @@ async function uploadFile(file, batch) {
   const name = document.createElement("strong"); name.textContent = file.name;
   const summary = document.createElement("span"); summary.textContent = "Processing…";
   card.append(name, summary); $("uploads").append(card);
-  let previewURL;
   try {
-    if (file.size > 30 * 1024 * 1024) throw new Error("Image exceeds the 30 MB limit.");
-    if (file.type && !["image/png", "image/jpeg", "image/webp"].includes(file.type)) throw new Error("Use PNG, JPEG, or WebP images.");
+    const image = await imageCanvas(file);
     const bytes = await file.arrayBuffer(); record.file_sha256 = await sha256(bytes);
-    const bitmap = await createImageBitmap(file);
-    if (bitmap.width * bitmap.height > 16000000) {bitmap.close(); throw new Error("Image exceeds 16 million pixels.");}
-    const imageCanvas = document.createElement("canvas"); imageCanvas.width = bitmap.width; imageCanvas.height = bitmap.height;
-    imageCanvas.getContext("2d").drawImage(bitmap, 0, 0); bitmap.close();
     if (cancelled) throw new Error("Digit reading cancelled.");
-    const {input, result, elapsed} = await readSource(imageCanvas);
-    record.width = imageCanvas.width; record.height = imageCanvas.height;
+    const {input, result, elapsed} = await readSource(image);
+    record.width = image.width; record.height = image.height;
     if (result.ocr) {
       record.raw_text = result.rawText; record.accepted = result.accepted;
       record.prepared_width = input.width; record.prepared_height = input.height;
@@ -343,9 +309,7 @@ async function uploadFile(file, batch) {
     record.predicted_label = result.ocr && !result.accepted ? null : result.label; record.class_index = result.digit;
     record.scores = result.scores; record.logits = result.logits;
     record.inference_ms = elapsed;
-    previewURL = URL.createObjectURL(file);
-    const preview = document.createElement("img"); preview.src = previewURL; preview.alt = `Uploaded image: ${file.name}`;
-    preview.onload = () => URL.revokeObjectURL(previewURL); card.prepend(preview);
+    card.prepend(imagePreview(file, `Uploaded image: ${file.name}`));
     summary.textContent = result.ocr ? `${result.accepted ? result.label : "No single digit"} · ${DIGIT_READERS[reader].name} · ${DIGIT_READERS[reader].engine === "ddddocr" ? "FP32" : profile}`
       : `${result.label} · ${(result.scores[result.digit] * 100).toFixed(2)}% model score · ${mode}`;
     const select = async (automatic = false) => {
@@ -359,7 +323,6 @@ async function uploadFile(file, batch) {
     };
     card.addEventListener("click", () => select()); await select(true);
   } catch (error) {
-    if (previewURL) URL.revokeObjectURL(previewURL);
     record.error = error.message; summary.textContent = error.message; summary.classList.add("error"); card.disabled = true;
   }
   state.uploads.push(record);
@@ -394,9 +357,8 @@ $("files").addEventListener("change", async event => {
   finally {state.busy = false; setControls(); event.target.value = "";}
 });
 $("export").addEventListener("click", () => {
-  const url = URL.createObjectURL(new Blob([JSON.stringify(exportRecord(), null, 2)], {type: "application/json"}));
-  const link = document.createElement("a"); link.href = url; link.download = `digitlab-predictions-${Date.now()}.json`; link.click();
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
+  downloadBlob(new Blob([JSON.stringify(exportRecord(), null, 2)], {type: "application/json"}),
+    `digitlab-predictions-${Date.now()}.json`);
 });
 
 initializeViews(); drawingTools.reset();

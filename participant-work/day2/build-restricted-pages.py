@@ -8,7 +8,7 @@ import subprocess
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[2]
-RECEIPT = ROOT / "dia2-local/reports/self-trained-submission-v1-build.json"
+RECEIPT = ROOT / "dia2-local/reports/self-trained-submission-cleanup-v4-build.json"
 
 
 def sha(blob):

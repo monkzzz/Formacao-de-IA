@@ -17,6 +17,7 @@ from .letters import LetterCNN
 from .model import DigitCNN
 from .preprocess import prepare
 from .qa import open_browser
+from .qa_outputs import qa_outputs
 from .residual import ResidualCNN
 from .self_trained_submission import NAME, SPECS, digest
 from .train import ROOT, write_json
@@ -31,16 +32,16 @@ def wait(page, expression, arg=None):
         page.wait_for_timeout(100)
 
 
-def main(destination):
-    if destination.exists():
-        raise FileExistsError("Preserve completed browser verification")
-    build = json.loads((ROOT / "reports" / (NAME + "-build.json")).read_text())
+def main(destination, receipt=None, screenshot_prefix=None):
+    receipt = Path(receipt) if receipt is not None else ROOT / "reports" / (NAME + "-build.json")
+    build = json.loads(receipt.read_text(encoding="utf-8"))
+    destination, captures = qa_outputs(destination, screenshot_prefix or build["name"])
     output = Path(build["output"])
     if any(digest(output / p) != value for p,value in build["files_sha256"].items()):
         raise ValueError("Frozen submission files changed")
     if digest(Path(build["archive"])) != build["archive_sha256"]:
         raise ValueError("Frozen submission ZIP changed")
-    report = {"status": "FAIL", "build_sha256": digest(ROOT / "reports" / (NAME + "-build.json")),
+    report = {"status": "FAIL", "build_sha256": digest(receipt),
               "checks": {}, "official_captcha_inference": "NOT RUN", "deployment": "NOT RUN"}
     torch.set_num_threads(2)
 
@@ -135,11 +136,48 @@ def main(destination):
             except Exception as error:
                 assert 'Unsupported submission model' in str(error)
             report['checks']['pretrained_mode_refused']='PASS'
-            folder=ROOT/'reports/screenshots';folder.mkdir(exist_ok=True)
-            page.screenshot(path=str(folder/(NAME+'-desktop.png')),full_page=True)
+            if 'v3/browser-utils.js' in build['files_sha256']:
+                retry = browser.new_page()
+                retry.route('**/*', route)
+                retry.on('request', lambda r: requests.append({'url':r.url,'method':r.method}))
+                retry.on('pageerror', lambda e: errors.append(str(e)))
+                retry.route('**/evaluation.json', lambda r: r.fulfill(status=503, body='unavailable'))
+                retry.goto(url)
+                wait(retry, 'Boolean(window.submission)&&!submission.state.busy')
+                assert not retry.evaluate('submission.state.ready')
+                assert retry.locator('#retry').is_visible()
+                assert retry.locator('#read').is_disabled()
+                retry.unroute('**/evaluation.json')
+                retry.locator('#retry').click()
+                wait(retry, 'submission.state.ready&&!submission.state.busy')
+                retry.locator('#files').set_input_files(str(ROOT/'reports/mnist-fixtures/digit-1.png'))
+                wait(retry, 'submission.state.records.length===1&&!submission.state.busy')
+                original_records = retry.evaluate('submission.exportRecord().predictions')
+                original_hash = retry.evaluate('submission.state.model.manifest.sha256')
+                pending = []
+                retry.route('**/model/mnist-supplementary-v1/digits/manifest.json*', lambda r: pending.append(r))
+                retry.locator('#dataset').select_option('mnist-supplementary-v1')
+                wait(retry, 'submission.state.busy')
+                assert retry.locator('#export').is_disabled()
+                assert retry.locator('#uploads button').first.is_disabled()
+                deadline = time.monotonic() + 10
+                while not pending:
+                    if time.monotonic() > deadline:
+                        raise TimeoutError('Expected model request was not made')
+                    retry.wait_for_timeout(50)
+                pending[0].fulfill(status=503, body='unavailable')
+                wait(retry, '!submission.state.busy')
+                assert retry.evaluate('submission.state.ready')
+                assert retry.locator('#dataset').input_value() == 'mnist'
+                assert retry.evaluate('submission.state.model.manifest.sha256') == original_hash
+                assert retry.evaluate('submission.exportRecord().predictions') == original_records
+                assert retry.locator('#export').is_enabled()
+                retry.close()
+                report['checks']['metadata_retry_model_failure_recovery_and_busy_controls']='PASS'
+            page.screenshot(path=str(captures['desktop']),full_page=True)
             page.set_viewport_size({'width':390,'height':844})
             assert page.evaluate('document.documentElement.scrollWidth<=innerWidth')
-            page.screenshot(path=str(folder/(NAME+'-mobile.png')),full_page=True)
+            page.screenshot(path=str(captures['mobile']),full_page=True)
             assert not blocked and not errors and all(r['method']=='GET' and r['url'].startswith((url,'blob:','data:')) for r in requests)
             assert all(digest(ROOT / p)==value for p,value in build['active_assets_preserved'].items())
             report.update(status='PASS',requests=requests,blocked_external_requests=blocked,page_errors=errors,
@@ -155,4 +193,7 @@ def main(destination):
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--report',type=Path,default=ROOT/'reports'/(NAME+'-browser.json'))
-    main(parser.parse_args().report)
+    parser.add_argument('--build',type=Path,help='Build receipt for a separately named package')
+    parser.add_argument('--screenshot-prefix')
+    args=parser.parse_args()
+    main(args.report,args.build,args.screenshot_prefix)

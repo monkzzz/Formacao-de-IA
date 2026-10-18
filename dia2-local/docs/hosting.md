@@ -1,5 +1,9 @@
 # Website Hosting
 
+Current source/package boundaries and new-release steps: [deployment map](deployment.md).
+For repeatable local checks and fresh evidence paths, use [browser QA](browser-qa.md).
+The dated deployment records below retain their original versions and scope.
+
 ## Current GitHub Pages submission — 2026-10-18
 
 [Pages now serves the participant-trained package](self-trained-pages.md), without pretrained digit/word readers. Its deployment, all 22 asset hashes and four-model browser checks passed. The separate existing website below remains unchanged; older sections retain their release history.

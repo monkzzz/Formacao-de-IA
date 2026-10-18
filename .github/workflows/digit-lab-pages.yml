@@ -23,13 +23,13 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
         run: >-
-          gh release download self-trained-submission-v1
-          --pattern self-trained-submission-v1.zip
+          gh release download self-trained-submission-cleanup-v4
+          --pattern self-trained-submission-cleanup-v4.zip
           --dir "$RUNNER_TEMP/submission-download"
       - name: Verify frozen archive, every asset and participant-trained model hashes
         run: >-
           python participant-work/day2/build-restricted-pages.py
-          --archive "$RUNNER_TEMP/submission-download/self-trained-submission-v1.zip"
+          --archive "$RUNNER_TEMP/submission-download/self-trained-submission-cleanup-v4.zip"
           --output "$RUNNER_TEMP/digit-lab-pages"
       - uses: actions/upload-pages-artifact@v3
         with:

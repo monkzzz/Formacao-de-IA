@@ -18,7 +18,8 @@ ROOT = Path(__file__).resolve().parents[1]
 def deployment_order(path):
     """Transfer shared runtimes before their entry modules, and HTML last."""
     relative = path.relative_to(ROOT / "dist").as_posix()
-    priority = {"preprocess.js": 1, "inference.js": 2, "helper.js": 2, "app.js": 3}
+    priority = {"preprocess.js": 1, "words.js": 1, "inference.js": 2,
+                "digit-readers.js": 2, "helper.js": 2, "app.js": 3}
     return (relative == "index.html", priority.get(path.name, 0), relative)
 
 
@@ -77,6 +78,8 @@ def main():
                         help="Deployment report filename under reports")
     parser.add_argument("--files", nargs="+", help="Upload only these relative dist paths, dependencies before index.html")
     args = parser.parse_args()
+    if args.upload and (ROOT / "reports" / args.report).exists():
+        raise FileExistsError("Preserve existing deployment evidence; use a new --report")
     config = json.loads((ROOT / "ftp.local.json").read_text(encoding="utf-8-sig"))
     if not all(config.get(key) for key in ["host", "username", "password"]):
         raise SystemExit("Fill in host, username and password in ftp.local.json")
