@@ -56,6 +56,9 @@ jobs:
           sudo apt-get install -y xvfb python3-tk
       - name: Prepare pinned open-font fixtures
         run: python setup_course.py --fonts
+      - name: Restore reviewed ignored model weights for clean-checkout tests
+        working-directory: dia2-local
+        run: python -m digitlab.browser_ci --prepare-only --prefix ci-${{ github.run_id }}-${{ github.run_attempt }}-${{ runner.os }}-weights --report ci-${{ github.run_id }}-${{ github.run_attempt }}-${{ runner.os }}-weights.json
       - name: Day 2 unit checks
         working-directory: dia2-local
         run: python -m unittest discover -s tests -v

@@ -76,6 +76,27 @@ def native_model(site, name):
     return model.eval(), manifest
 
 
+def prepare_weights(payloads, root=ROOT):
+    """Restore missing ignored binaries only; preserve current checkout manifests."""
+    restored = []
+    for folder in MODELS.values():
+        name = folder + "/weights.bin"
+        payload = payloads[name]
+        checksum = hashlib.sha256(payload).hexdigest()
+        manifest = json.loads((root / "dist" / folder / "manifest.json").read_text())
+        if checksum != manifest["sha256"] or len(payload) != manifest["bytes"]:
+            raise ValueError("Reviewed weights differ from checkout manifest: " + folder)
+        path = root / "dist" / name
+        if path.exists():
+            if hashlib.sha256(path.read_bytes()).hexdigest() != checksum:
+                raise ValueError("Preserve differing existing weights: " + folder)
+        else:
+            with path.open("xb") as stream:
+                stream.write(payload)
+            restored.append(name)
+    return restored
+
+
 class Handler(SimpleHTTPRequestHandler):
     def log_message(self, *args):
         pass
@@ -93,6 +114,7 @@ def main():
     parser.add_argument("--archive", type=Path, help="Use a local reviewed ZIP instead of downloading its release")
     parser.add_argument("--report", default="browser-ci.json")
     parser.add_argument("--prefix", default="browser-ci")
+    parser.add_argument("--prepare-only", action="store_true", help="Restore missing reviewed binaries before clean-checkout unit tests")
     args = parser.parse_args()
     destination, captures = qa_outputs(args.report, args.prefix, ("full", "submission"))
     # Preflight subprocess destinations as well: failed CI evidence is never replaced.
@@ -115,6 +137,9 @@ def main():
             with urlopen(url, timeout=120) as response, archive.open("xb") as stream:
                 shutil.copyfileobj(response, stream)
         payloads = reviewed_payloads(archive, receipt)
+        if args.prepare_only:
+            report["checks"]["reviewed_weights"] = {"status": "PASS", "restored": prepare_weights(payloads)}
+            return
         full, submission = work / "full", work / "submission"
         shutil.copytree(ROOT / "dist", full, ignore=shutil.ignore_patterns("model", "roms"))
         for name, data in payloads.items():
