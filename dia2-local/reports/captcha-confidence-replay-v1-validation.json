@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "selected_epoch": null,
+  "training_epochs": 4,
+  "test_gate_returncode": 1,
+  "reserved_data_opened": false,
+  "baseline_and_recorded_evidence_preserved": true,
+  "source_font_and_data_hashes": "PASS",
+  "official_challenge_inference": "NOT RUN",
+  "deployment": "NOT RUN"
+}
