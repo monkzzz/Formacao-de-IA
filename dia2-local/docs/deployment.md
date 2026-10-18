@@ -60,3 +60,39 @@ Subsequent tooling changes add an explicit upload allowlist, verified temporary
 remote files and incremental recovery receipts. Package QA/assembly now supports
 relocated artifacts and caller-selected receipts. See
 [operational reliability](operational-reliability.md) before the next deployment.
+
+## Local FTPS deployment after CI
+
+GitHub Actions runs tests only. Production FTP uploads run locally using the
+ignored `ftp.local.json`; no FTP credentials are stored in GitHub or supplied to
+hosted jobs. Deploy the exact commit that passed Windows and Linux CI, from a
+clean checkout, using the portable runtime.
+
+```text
+<python> -m digitlab.deployment_assets --restore --report <identity>-prepare.json
+<python> -m digitlab.browser_ci --prepare-only --prefix <identity>-weights --report <identity>-weights.json
+<python> -m digitlab.ftp_deploy --upload --report <identity>-deployment.json
+<python> -m digitlab.deployment_assets --verify-http --report <identity>-https.json
+<python> -m digitlab.deployment_public_qa --report <identity>-browser.json --screenshot-prefix <identity>
+```
+
+Run these steps sequentially and stop on any failure. Restore/check assets and
+prepare reviewed activation fixtures before connecting to FTP. The restore command
+checks all eight historical/current weight exports against committed manifest
+sizes and SHA-256 values, downloading missing exports from the public site only.
+A future model release needs its matching reviewed export separately available;
+this maintenance workflow never trains models or evaluates official CAPTCHAs.
+
+The uploader backs up every replaced file, verifies a unique temporary upload,
+then publishes by rename. After publication, compare all 61 public files over
+HTTPS. Browser checks cover four models, actual activation parity, synthetic
+upload scores against native tensors, prediction export and mobile layout. These
+checks require reviewed activation fixtures, not training checkpoints or datasets.
+
+Keep local backups under the ignored `artifacts/ftp-backup-*` directory and preserve
+fresh reports/screenshots for every attempt, including failures. Failed publication
+is not automatically rolled back: inspect the journal and restore the recorded
+backup for affected files, preserving the failed evidence. The staged replacement
+is per file rather than an atomic whole-site release.
+
+GitHub Pages retains its separate manual workflow and pinned restricted package.

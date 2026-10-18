@@ -1,0 +1,28 @@
+{
+  "url": "https://naoquerosaber.pt/AI/",
+  "checks": {
+    "mnist": {
+      "status": "PASS",
+      "activation_error": 3.814697265625e-06,
+      "upload_score_error": 1.5999073932349006e-07
+    },
+    "mnist-supplementary-v1": {
+      "status": "PASS",
+      "activation_error": 3.814697265625e-06,
+      "upload_score_error": 6.30831070713711e-08
+    },
+    "captcha-v3": {
+      "status": "PASS",
+      "activation_error": 7.62939453125e-06,
+      "upload_score_error": 7.4029543384313e-08
+    },
+    "letters": {
+      "status": "PASS",
+      "activation_error": 9.5367431640625e-06,
+      "upload_score_error": 1.487752879780757e-07
+    },
+    "export_mobile_script_errors": "PASS"
+  },
+  "official_challenge": "NOT RUN",
+  "status": "PASS"
+}

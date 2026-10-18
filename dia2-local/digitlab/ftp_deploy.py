@@ -81,7 +81,7 @@ def deployment_files(manifest=None, selected=None):
     if metadata.get("schema") != 1 or not names or len(names) != len(set(names)):
         raise ValueError("Require a nonempty, unique reviewed deployment allowlist")
     files = []
-    suffixes = {".html", ".js", ".mjs", ".css", ".json", ".bin", ".png", ".jpg", ".jpeg", ".svg", ".webp", ".ico", ".woff", ".woff2", ".ttf"}
+    suffixes = {".html", ".js", ".mjs", ".css", ".json", ".bin", ".png", ".jpg", ".jpeg", ".svg", ".webp", ".ico", ".woff", ".woff2", ".ttf", ".txt"}
     for name in names:
         relative = PurePosixPath(name)
         path = ROOT / "dist" / name

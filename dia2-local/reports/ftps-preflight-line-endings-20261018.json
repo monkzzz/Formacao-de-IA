@@ -1,0 +1,312 @@
+{
+  "files": [
+    {
+      "file": "app.js",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "assets/65474617.jpg",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "assets/ddddocr-LICENSE.txt",
+      "matches": false,
+      "line_endings_only": true
+    },
+    {
+      "file": "assets/konami-congratulations.svg",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "assets/scopedog.jpg",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "evaluation/digits-captcha-v2-original.json",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "evaluation/digits-captcha-v2.json",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "evaluation/digits-captcha-v3-preserved.json",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "evaluation/digits-captcha-v3.json",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "evaluation/digits-captcha.json",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "evaluation/digits-mnist-supplementary-v1.json",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "evaluation/digits-mnist.json",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "evaluation/independent-captcha-benchmark.json",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "evaluation/words-1000.json",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "index.html",
+      "matches": false,
+      "line_endings_only": true
+    },
+    {
+      "file": "inference.js",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "model/captcha-v1/digits/manifest.json",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "model/captcha-v1/digits/weights.bin",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "model/captcha-v2/digits/manifest.json",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "model/captcha-v2/digits/weights.bin",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "model/captcha-v3/digits/manifest.json",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "model/captcha-v3/digits/weights.bin",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "model/letters/manifest.json",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "model/letters/weights.bin",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "model/manifest.json",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "model/mnist-supplementary-v1/digits/manifest.json",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "model/mnist-supplementary-v1/digits/weights.bin",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "model/robust/digits/manifest.json",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "model/robust/digits/weights.bin",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "model/robust/letters/manifest.json",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "model/robust/letters/weights.bin",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "model/weights.bin",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "preprocess.js",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "style.css",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v2/app.js",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v2/inference.js",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v2/preprocess.js",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v2/style.css",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v3/app.js",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v3/browser-utils.js",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v3/canvas-tools.js",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v3/cnn-models.js",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v3/ctc-digits.js",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v3/ddddocr-charsets.json",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v3/digit-reader-worker.js",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v3/digit-readers.js",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v3/helper-knowledge.js",
+      "matches": false,
+      "line_endings_only": true
+    },
+    {
+      "file": "v3/helper.css",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v3/helper.js",
+      "matches": false,
+      "line_endings_only": true
+    },
+    {
+      "file": "v3/inference.js",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v3/konami.css",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v3/konami.js",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v3/preprocess.js",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v3/residual.js",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v3/snes.css",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v3/snes.html",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v3/snes.js",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v3/style.css",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v3/words-worker.js",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v3/words.css",
+      "matches": true,
+      "line_endings_only": false
+    },
+    {
+      "file": "v3/words.js",
+      "matches": true,
+      "line_endings_only": false
+    }
+  ],
+  "exact_matches": 57,
+  "line_endings_only": 4,
+  "other_differences": []
+}

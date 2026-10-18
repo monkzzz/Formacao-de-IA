@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "reviewed_weights": {
+      "status": "PASS",
+      "restored": []
+    }
+  },
+  "scope": "Current checkout UI with four reviewed participant-trained exports; no training, official images, external OCR downloads or deployment",
+  "status": "PASS"
+}

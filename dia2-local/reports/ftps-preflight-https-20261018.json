@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "allowlisted_files": 61
+  },
+  "public_url": "https://naoquerosaber.pt/AI/",
+  "status": "FAIL",
+  "failure": {
+    "type": "ValueError",
+    "message": "Public asset hash mismatch: assets/ddddocr-LICENSE.txt"
+  }
+}
