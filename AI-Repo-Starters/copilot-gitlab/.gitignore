@@ -1,0 +1,20 @@
+# Local environments and credentials; preserve useful safe configuration examples.
+.venv/
+venv/
+node_modules/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.local.json
+.DS_Store
+Thumbs.db
+# Keep assistant-specific local settings and credentials out of Git.
+.claude/settings.local.json
+.codex/auth.json
+.codex/sessions/
+.codex/log/
+# Configure stack-specific build outputs after bootstrap.
+CLAUDE.local.md

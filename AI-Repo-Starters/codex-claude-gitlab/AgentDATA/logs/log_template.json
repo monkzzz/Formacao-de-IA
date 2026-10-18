@@ -1,0 +1,14 @@
+{
+  "template": true,
+  "timestamp": null,
+  "assistant": null,
+  "eventType": null,
+  "status": "NOT RUN",
+  "command": null,
+  "workingDirectory": null,
+  "os": null,
+  "exitCode": null,
+  "durationMs": null,
+  "context": {},
+  "error": null
+}

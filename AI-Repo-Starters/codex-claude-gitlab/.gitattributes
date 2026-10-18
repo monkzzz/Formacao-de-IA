@@ -1,0 +1,9 @@
+# Narrow rules for starter documents; merge with an existing project's policy.
+AGENTS.md text eol=lf
+CLAUDE.md text eol=lf
+START-HERE.md text eol=lf
+AgentDATA/**/*.md text eol=lf
+.agents/**/*.md text eol=lf
+.claude/**/*.md text eol=lf
+.github/**/*.md text eol=lf
+.gitlab/**/*.md text eol=lf
