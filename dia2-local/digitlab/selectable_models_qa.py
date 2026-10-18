@@ -2,7 +2,6 @@
 
 import argparse
 import json
-from pathlib import Path
 from urllib.parse import urlparse
 
 import numpy as np

@@ -1,6 +1,5 @@
 """Verify the selected fixed-weight preparation in an isolated browser harness."""
 
-import hashlib
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 import json
 from functools import partial

@@ -9,7 +9,7 @@ import sys
 import numpy as np
 from PIL import Image
 
-from .balanced_color import DIRECTORY, NAME, POLICY, REPORT, gates, read, verify
+from .balanced_color import DIRECTORY, NAME, REPORT, gates, verify
 from .captcha_extension import digest
 from .color_preprocess import prepare_color
 from .color_study import metrics

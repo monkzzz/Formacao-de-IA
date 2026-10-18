@@ -6,7 +6,7 @@ from pathlib import Path
 from urllib.error import URLError
 from urllib.request import Request, urlopen
 
-# This module lives in machine_learning/apoio. Keep the existing repository
+# This module lives in modulo1/apoio. Keep the existing repository
 # cache when reorganizing code, so offline lessons reuse downloaded datasets.
 CACHE_DIRECTORY = Path(__file__).resolve().parents[2] / ".cache" / "datasets"
 

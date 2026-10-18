@@ -6,7 +6,6 @@ from datetime import datetime, timezone
 import hashlib
 import io
 import json
-from pathlib import Path
 
 from .platform_support import font_root, resolve_fonts
 

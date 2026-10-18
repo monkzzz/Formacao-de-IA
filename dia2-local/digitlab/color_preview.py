@@ -5,7 +5,6 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 import json
 import shutil
 import threading
-import time
 
 import numpy as np
 from PIL import Image

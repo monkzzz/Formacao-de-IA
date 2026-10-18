@@ -3,7 +3,6 @@
 import argparse
 import json
 import tempfile
-from pathlib import Path
 
 import numpy as np
 import torch

@@ -12,6 +12,10 @@ from urllib.request import urlopen
 import venv
 
 ROOT = Path(__file__).resolve().parent
+COMPONENT_REQUIREMENTS = {
+    "day1": "Dia1/Exercicios-GSS/requirements.txt",
+    "day2": "dia2-local/requirements.txt",
+}
 FONT_REVISION = "47d54ca1ebb14fd864695f1d39dc734f39017c33"
 FONT_FILES = {
     "train": {
@@ -27,9 +31,9 @@ FONT_FILES = {
 def download_fonts(destination):
     """Fetch open fonts and licenses; preserve every existing file and manifest."""
     manifest_path = destination / "font-groups.json"
-    expected = json.loads((ROOT / "dia2-local/docs/confidence-fonts.json").read_text())
+    expected = json.loads((ROOT / "dia2-local/docs/confidence-fonts.json").read_text(encoding="utf-8"))
     if manifest_path.exists():
-        manifest = json.loads(manifest_path.read_text())
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         if manifest["sha256"] != expected["sha256"] or manifest["groups"] != expected["groups"]:
             raise ValueError("Existing bundle differs from the pinned font manifest")
         for name, checksum in manifest["sha256"].items():
@@ -72,35 +76,37 @@ def download_fonts(destination):
     print(f"Prepared font bundle with licenses and hashes: {destination}")
 
 
-def main():
+def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--component", choices=("day1", "day2"), default="day2")
+    parser.add_argument("--component", choices=tuple(COMPONENT_REQUIREMENTS), default="day2")
     parser.add_argument("--install", action="store_true", help="Create a venv and install component requirements")
     parser.add_argument("--browser", action="store_true", help="Install Playwright Chromium for Day 2")
     parser.add_argument("--confidence", action="store_true", help="Include Day 2 confidence-suite plotting dependencies")
     parser.add_argument("--fonts", action="store_true", help="Download the open-font confidence-experiment bundle")
     parser.add_argument("--venv", type=Path, help="Override the platform-specific environment directory")
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     if args.confidence and (args.component != "day2" or not args.install):
         parser.error("--confidence requires --component day2 --install")
+    if args.browser and args.component != "day2":
+        parser.error("--browser requires --component day2")
     if sys.version_info < (3, 12):
         parser.error("Use Python 3.12 or later")
     directory = args.venv or ROOT / ".runtime" / ("windows" if os.name == "nt" else "linux") / args.component
     python = directory / ("Scripts/python.exe" if os.name == "nt" else "bin/python")
+    if args.browser and not args.install and not python.is_file():
+        parser.error("--browser requires an installed Day 2 environment")
     if args.install:
         if not python.exists():
             venv.EnvBuilder(with_pip=True).create(directory)
-        requirements = ROOT / ("Dia1/Exercicios-GSS/requirements.txt" if args.component == "day1" else "dia2-local/requirements.txt")
+        requirements = ROOT / COMPONENT_REQUIREMENTS[args.component]
         if args.confidence:
             requirements = ROOT / "dia2-local/requirements-confidence.txt"
-        command = [str(python), "-m", "pip", "install", "-r", str(requirements)]
+        pip_install = [str(python), "-m", "pip", "install"]
         # The course uses CPU training; avoid downloading unnecessary CUDA packages.
-        if args.component in ("day1", "day2"):
-            subprocess.run([str(python), "-m", "pip", "install", "torch==2.14.1", "--index-url", "https://download.pytorch.org/whl/cpu"], check=True)
-        subprocess.run(command, check=True)
+        subprocess.run(pip_install + ["torch==2.14.1", "--index-url",
+                                     "https://download.pytorch.org/whl/cpu"], check=True)
+        subprocess.run(pip_install + ["-r", str(requirements)], check=True)
     if args.browser:
-        if args.component != "day2" or not python.exists():
-            parser.error("--browser requires an installed Day 2 environment")
         subprocess.run([str(python), "-m", "playwright", "install", "chromium"], check=True)
     if args.fonts:
         download_fonts(ROOT / "dia2-local/data/open-fonts")

@@ -5,7 +5,6 @@ import json
 import re
 import runpy
 import subprocess
-from pathlib import Path
 from urllib.parse import unquote
 
 from .confidence import digest

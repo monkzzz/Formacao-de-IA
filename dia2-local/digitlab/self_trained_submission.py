@@ -8,7 +8,6 @@ from pathlib import Path
 import shutil
 import zipfile
 
-import numpy as np
 import torch
 
 from .train import ROOT, write_json

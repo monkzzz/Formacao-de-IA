@@ -3,10 +3,8 @@
 import argparse
 import base64
 import hashlib
-import io
 import json
 import time
-from pathlib import Path
 
 from .platform_support import font_root, resolve_fonts
 from urllib.request import urlopen
