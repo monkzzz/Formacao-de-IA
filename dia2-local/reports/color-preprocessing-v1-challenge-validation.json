@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "cases": 10,
+  "prepared_input_parity": "PASS",
+  "maximum_score_error": 1.7757612180702154e-07,
+  "prediction_parity": "PASS",
+  "freeze_archive_and_active_assets": "PASS",
+  "raw_sha256": "092380699551d08c1ac213fbd34ced0ab5f3b67004160e6a1cafeaae0ef4580f",
+  "strict_correct": 10,
+  "strict_correct_above_90": 6,
+  "accepted": false,
+  "reserved_independent_test": "NOT RUN",
+  "scope": "Explicit user-requested early official follow-up despite failed development confident-error gate; reserved independent test NOT RUN; historical exposure; never training, tuning or model selection"
+}

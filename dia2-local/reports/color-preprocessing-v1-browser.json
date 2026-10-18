@@ -1,0 +1,126 @@
+{
+  "status": "PASS",
+  "model_sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+  "preprocessing": "border-rgb-rms-bilinear-com-64-v1",
+  "study_sha256": "7722dec7569501c3732a64fd3499a66e276e3769dcb98edaf2ce320c98b803f9",
+  "scope": "Isolated browser uploads; active interface untouched",
+  "reserved_or_official_inputs_used": false,
+  "upload_indices": [
+    0,
+    60,
+    120,
+    180,
+    240,
+    300,
+    360,
+    420,
+    480,
+    540,
+    600,
+    660,
+    720,
+    780,
+    840,
+    900,
+    960,
+    1020,
+    1080,
+    1140,
+    1200,
+    1215,
+    1230,
+    1245,
+    1260,
+    1275,
+    1290,
+    1305,
+    1320,
+    1335,
+    1350,
+    1365,
+    1380,
+    1395,
+    1410,
+    1425,
+    1440,
+    1455,
+    1470,
+    1485,
+    1500,
+    1515,
+    1530,
+    1545,
+    1560,
+    1575,
+    1590,
+    1605,
+    1620,
+    1635,
+    1650,
+    1665,
+    1680,
+    1695,
+    1710,
+    1725,
+    1740,
+    1755,
+    1770,
+    1785
+  ],
+  "upload_count": 60,
+  "maximum_input_error": 0.0,
+  "maximum_score_error": 1.4815805948753535e-07,
+  "activation_errors": [
+    {
+      "logits": 1.9073486328125e-06,
+      "first": 7.152557373046875e-07,
+      "second": 1.430511474609375e-06,
+      "hidden": 9.5367431640625e-07
+    },
+    {
+      "logits": 1.9073486328125e-06,
+      "first": 7.152557373046875e-07,
+      "second": 1.430511474609375e-06,
+      "hidden": 1.430511474609375e-06
+    },
+    {
+      "logits": 5.7220458984375e-06,
+      "first": 7.152557373046875e-07,
+      "second": 9.5367431640625e-07,
+      "hidden": 2.1457672119140625e-06
+    }
+  ],
+  "alpha_and_input_size_cases": 2,
+  "blank_rejection": "PASS",
+  "p95_ms": 65.83500000014898,
+  "browser_version": "155.0.8059.84",
+  "page_errors": [],
+  "requests": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:35763/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:35763/v3/inference.js?v=color-preview"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:35763/v3/preprocess.js?v=3.6.0"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:35763/v3/residual.js?v=1"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:35763/model/captcha-v3/digits/manifest.json?v=captcha-3"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:35763/model/captcha-v3/digits/weights.bin?sha256=d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c"
+    }
+  ],
+  "preserved_app_and_models": "PASS",
+  "frozen_preview_unchanged": true
+}

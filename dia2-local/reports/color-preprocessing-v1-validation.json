@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "checks": {
+    "frozen_sources_fonts_datasets_and_active_assets": true,
+    "source_files_unchanged": true,
+    "fixture_hashes": true,
+    "unit_suite": true,
+    "browser_same_study": true,
+    "gates_reproduced": true,
+    "selection_matches_gates": true,
+    "source_split_disjoint": true,
+    "handwritten_sources_validation_only": true,
+    "legacy_balanced_classes_and_sources": true,
+    "color_balanced_classes_and_sources": true,
+    "current_raw_metrics": true,
+    "current_clean_metrics": true,
+    "rgb_raw_metrics": true,
+    "rgb_clean_metrics": true
+  },
+  "tests_run": 65,
+  "independent_human_readability_review": "NOT RUN",
+  "official_and_reserved_evaluation": "NOT RUN",
+  "active_app_replacement": "NOT RUN",
+  "failed_gates": [
+    "confident_errors"
+  ]
+}

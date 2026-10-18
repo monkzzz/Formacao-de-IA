@@ -1,0 +1,16 @@
+{
+  "indices": [
+    0,
+    11,
+    22,
+    33,
+    1200,
+    1211,
+    1223,
+    1234,
+    1246,
+    1257
+  ],
+  "selection": "Fixed class/source/palette spread, independent of errors",
+  "human_review": "NOT RUN"
+}

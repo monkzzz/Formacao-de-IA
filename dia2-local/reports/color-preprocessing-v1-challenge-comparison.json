@@ -1,0 +1,87 @@
+{
+  "policy": {
+    "name": "professor-official-captcha-strict-v1",
+    "source": "Participant's explicit report of professor requirements in the conversation",
+    "required_cases": 10,
+    "required_correct": 10,
+    "minimum_score_exclusive": 0.9,
+    "score_comparison": ">",
+    "score_basis": "Unrounded original model score for the correct class; no display rescaling",
+    "supplementary_training": "Acceptable as a separate, correctly documented extension",
+    "mnist_only_model": "Preserve the required course model and its evidence separately",
+    "official_inputs_for_training_or_selection": false
+  },
+  "count": 10,
+  "correct": 10,
+  "correct_above_90": 6,
+  "accepted": false,
+  "cases": [
+    {
+      "file": "caso_01.png",
+      "correct": true,
+      "correct_class_score": 0.9929307298148128,
+      "passes": true
+    },
+    {
+      "file": "caso_02.png",
+      "correct": true,
+      "correct_class_score": 0.9550053102997045,
+      "passes": true
+    },
+    {
+      "file": "caso_03.png",
+      "correct": true,
+      "correct_class_score": 0.9976068817938492,
+      "passes": true
+    },
+    {
+      "file": "caso_04.png",
+      "correct": true,
+      "correct_class_score": 0.730887652681294,
+      "passes": false
+    },
+    {
+      "file": "caso_05.png",
+      "correct": true,
+      "correct_class_score": 0.5992842120805483,
+      "passes": false
+    },
+    {
+      "file": "caso_06.png",
+      "correct": true,
+      "correct_class_score": 0.9976971065230875,
+      "passes": true
+    },
+    {
+      "file": "caso_07.png",
+      "correct": true,
+      "correct_class_score": 0.8503178645997754,
+      "passes": false
+    },
+    {
+      "file": "caso_08.png",
+      "correct": true,
+      "correct_class_score": 0.9473230950121453,
+      "passes": true
+    },
+    {
+      "file": "caso_09.png",
+      "correct": true,
+      "correct_class_score": 0.9536588685940935,
+      "passes": true
+    },
+    {
+      "file": "caso_10.png",
+      "correct": true,
+      "correct_class_score": 0.5420093253532089,
+      "passes": false
+    }
+  ],
+  "scope": "Explicit user-requested early official follow-up despite failed development confident-error gate; reserved independent test NOT RUN; historical exposure; never training, tuning or model selection",
+  "raw_sha256": "092380699551d08c1ac213fbd34ced0ab5f3b67004160e6a1cafeaae0ef4580f",
+  "reference_sha256": "b4bcdb0d85d35e1a34ff0c941db89e5063e27f89be5ae449524179d7e891aa4f",
+  "freeze_sha256": "4ac13c0ff53ce4933aabb5f1aa80752360703fe96ab19426ac58ff814ba08999",
+  "model_sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c",
+  "preprocessing": "border-rgb-rms-bilinear-com-64-v1",
+  "frozen_runtime_and_active_app_unchanged": true
+}

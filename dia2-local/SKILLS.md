@@ -1,5 +1,7 @@
 # Digit Lab task workflows
 
+The separate [color-aware preprocessing study](docs/color-preprocessing.md) is complete; [results](reports/color-preprocessing-v1-summary.md) show useful color recovery but one additional confidently wrong prediction. Keep active grayscale preprocessing and all weights unchanged. Use `digitlab.color_study`, `digitlab.color_preview` and `digitlab.color_audit` for this preserved development workflow; do not overwrite completed destinations.
+
 The separate 64px training extension has [completed results](reports/captcha-training-extension-v1-summary.md) and a [gated evaluation workflow](docs/captcha-training-extension-evaluation.md). It passed browser parity but failed the independent legacy-renderer preservation gate. Preserve the baseline and frozen candidate; do not rerun its reserved test or open an official follow-up for the rejected candidate.
 
 The new fixed-weight preprocessing phase uses `digitlab.preprocessing_study`,

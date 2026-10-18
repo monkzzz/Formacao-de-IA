@@ -1,5 +1,9 @@
 # Digit Lab — Local Desafio Project
 
+**Color-aware preprocessing experiment:** RGB foreground extraction recovered low-grayscale-contrast colored glyphs. On the deliberately color-stressed development set, accuracy rose from 76.278% to 98.278%; legacy-style accuracy (98.083%) and clean MNIST validation accuracy (99.30%) were unchanged. Confident mistakes rose from 2 to 3, so the candidate failed its declared gate and active preprocessing stays unchanged. All 65 unit tests and 60 browser uploads passed. See [results and limitations](reports/color-preprocessing-v1-summary.md) and [fixed protocol](docs/color-preprocessing.md).
+
+**Subsequent requested RGB official follow-up:** the frozen color-aware candidate scored **10/10 correct**, with **6/10 correct and score strictly >90%**, matching the preserved baseline counts. The professor's target remains unmet. This early follow-up ran despite the failed development gate; reserved independent testing is still NOT RUN and the active app is unchanged. See [per-case scores and frozen evidence](reports/color-preprocessing-v1-challenge-summary.md).
+
 **Separate 64px training extension:** completed four CPU epochs and isolated browser verification. On the independent synthetic test, accuracy remained 99.056% and correct predictions with scores strictly >90% rose from 95.111% to 96.111%. The candidate failed the legacy-renderer preservation gate (98.833% → 98.542%), so the baseline is retained and the official follow-up was refused before opening images. The professor's target remains unmet. See [results and limitations](reports/captcha-training-extension-v1-summary.md) and [evaluation commands](docs/captcha-training-extension-evaluation.md).
 
 

@@ -1,0 +1,13 @@
+{
+  "reviewer": "coding agent",
+  "contact_sheet": "screenshots/color-preprocessing-v1-inputs.png",
+  "sample_record": "color-preprocessing-v1-visual-sample.json",
+  "status": "INSPECTED",
+  "observations": [
+    "RGB recovers the fixed equal-luminance glyph examples rejected by grayscale.",
+    "Crossing lines and speckles remain in the RGB prepared inputs.",
+    "No blank or erased foreground seen in the ten displayed RGB samples."
+  ],
+  "independent_human_readability_review": "NOT RUN",
+  "selection_based_on_errors": false
+}
