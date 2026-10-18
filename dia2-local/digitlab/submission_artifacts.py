@@ -9,7 +9,7 @@ from .train import ROOT
 def portable_path(path):
     path = Path(path).resolve()
     try:
-        return path.relative_to(ROOT).as_posix()
+        return path.relative_to(ROOT.resolve()).as_posix()
     except ValueError:
         return str(path)
 
