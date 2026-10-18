@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "source_commit": "54ae276a9cee421de4ad8dbefcef9fdab3c9790d",
+  "ci_run": "https://github.com/monkzzz/Formacao-de-IA/actions/runs/39170323509",
+  "ci_per_os": {
+    "day2_tests_run": 103,
+    "day2_passed": 102,
+    "day2_skipped": 1,
+    "skipped_reason": "Optional official EMNIST dataset unavailable",
+    "day1_tests_run": 125,
+    "day1_passed": 125,
+    "browser_checks": "PASS"
+  },
+  "deployment": {
+    "execution": "Local machine only; no GitHub FTP workflow or credentials",
+    "files_published": [
+      "assets/ddddocr-LICENSE.txt",
+      "v3/helper-knowledge.js",
+      "v3/helper.js",
+      "index.html"
+    ],
+    "remote_staged_rename": "PASS",
+    "backup_directory": "artifacts/ftp-backup-20261018T220840-98571524",
+    "public_sha256_verified": 61
+  },
+  "browser": {
+    "cnn_models": 4,
+    "activation_and_native_upload_parity": "PASS",
+    "export_mobile": "PASS",
+    "helper_groups": 6,
+    "mobile_screenshot_manual_review": "PASS"
+  },
+  "model_changes": "NONE",
+  "official_captcha_evaluation": "NOT RUN",
+  "local_cleanup": {
+    "content_changes": "None; only line endings normalized to committed bytes",
+    "backup": "/tmp/digitlab-before-main-54ae276.tar.gz"
+  },
+  "evidence": {
+    "ci": "local-ftps-20261018-ci.json",
+    "deployment": "local-ftps-20261018-deployment.json",
+    "https": "local-ftps-20261018-https.json",
+    "browser": "local-ftps-20261018-browser.json",
+    "helper": "local-ftps-20261018-helper-qa.json"
+  }
+}

@@ -96,3 +96,27 @@ backup for affected files, preserving the failed evidence. The staged replacemen
 is per file rather than an atomic whole-site release.
 
 GitHub Pages retains its separate manual workflow and pinned restricted package.
+
+## Verified local publication on 2026-10-18
+
+The maintenance branch and local deployment tools were merged into `main` at
+`54ae276`. Its [platform CI run](https://github.com/monkzzz/Formacao-de-IA/actions/runs/39170323509)
+passed on Windows and Linux: each OS ran 103 Day 2 tests (one optional EMNIST
+dataset check skipped), all 125 Day 1 tests, and both frontend browser suites.
+
+Publication ran locally with the existing ignored configuration. No FTP secret
+was stored in GitHub, and no hosted FTP workflow was added. Only the four files
+whose line endings differed from the clean checkout were uploaded:
+`assets/ddddocr-LICENSE.txt`, `v3/helper-knowledge.js`, `v3/helper.js` and
+`index.html`. Every replacement used a verified temporary upload and remote
+rename, with previous bytes preserved in the local backup directory recorded in
+the [deployment journal](../reports/local-ftps-20261018-deployment.json).
+
+[HTTPS verification](../reports/local-ftps-20261018-https.json) matched all 61
+public asset hashes. [Public browser checks](../reports/local-ftps-20261018-browser.json)
+passed for four models, actual intermediate activations, synthetic upload scores
+against native inference, export and mobile layout. The
+[helper checks](../reports/local-ftps-20261018-helper-qa.json) passed all six groups.
+The mobile screenshot was inspected manually. No weights, application behavior
+or restricted Pages package changed; no official CAPTCHA evaluation was run.
+See the [completion record](../reports/local-ftps-20261018-completion.json).

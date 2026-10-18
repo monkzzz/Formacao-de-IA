@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-10-18T22:08:40.163478+00:00",
+  "files": [
+    {
+      "file": "assets/ddddocr-LICENSE.txt",
+      "bytes": 1185,
+      "sha256": "a30e42fa97d365b3943d5b02e8c88c1474f872f3e672e7965fae2943b654e140"
+    },
+    {
+      "file": "v3/helper-knowledge.js",
+      "bytes": 18822,
+      "sha256": "ac4fac75ee0195e634bf3d761983b15008db1a8319f3c5205808d0025acce9d5"
+    },
+    {
+      "file": "v3/helper.js",
+      "bytes": 5266,
+      "sha256": "91ae5f8bafb7fa96e2c8125399d3fcbd12f960479306ff14dc4740fe116368e8"
+    },
+    {
+      "file": "index.html",
+      "bytes": 22402,
+      "sha256": "19aa606f23f04cd94a902463b2b019c70b570a8ecf532df43da9ed406f5ca893"
+    }
+  ],
+  "plan": [
+    "assets/ddddocr-LICENSE.txt",
+    "v3/helper-knowledge.js",
+    "v3/helper.js",
+    "index.html"
+  ],
+  "scope": "Reviewed allowlist; per-file staged publication, not an atomic whole-site switch",
+  "destination": "/",
+  "tls": true,
+  "backup_directory": "artifacts/ftp-backup-20261018T220840-98571524",
+  "manifest_sha256": "b46d486060f5a585d8000b597d4f88b4e4cba26472c6095855a4f085b431861d",
+  "current_file": {
+    "file": "index.html",
+    "bytes": 22402,
+    "sha256": "19aa606f23f04cd94a902463b2b019c70b570a8ecf532df43da9ed406f5ca893",
+    "phase": "PUBLISHED_AND_VERIFIED",
+    "temporary_remote_file": ".index.html.upload-5a0ceb657c72462499a2ec4b616c2cad",
+    "previous_sha256": "cd836d2f03763cc80d35f8acbedcd69be1b96490b5edd3696ad6ed212f9abaa5"
+  },
+  "completed_utc": "2026-10-18T22:08:49.297481+00:00"
+}

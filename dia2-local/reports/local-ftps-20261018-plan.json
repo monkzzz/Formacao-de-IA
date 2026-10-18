@@ -1,0 +1,18 @@
+{
+  "source_commit": "54ae276a9cee421de4ad8dbefcef9fdab3c9790d",
+  "local_only_ftp": true,
+  "github_ftp_credentials_stored": false,
+  "working_tree_content_before_deployment": "clean",
+  "normalization": "99 files differed only in line endings; original dirty files preserved in local backup",
+  "backup": "/tmp/digitlab-before-main-54ae276.tar.gz",
+  "planned_files": [
+    "assets/ddddocr-LICENSE.txt",
+    "v3/helper-knowledge.js",
+    "v3/helper.js",
+    "index.html"
+  ],
+  "public_preflight": "Four models/activation/upload/export/mobile PASS; 57 exact public assets plus four with line-ending-only differences",
+  "ci_run": 39170323509,
+  "ci_status": "PENDING",
+  "publication_status": "NOT RUN"
+}
