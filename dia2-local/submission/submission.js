@@ -4,7 +4,7 @@ import {createDrawingTools} from "./v3/canvas-tools.js?v=3.11.1";
 import {imageCanvas, imagePreview, downloadBlob} from "./v3/browser-utils.js?v=3.11.1";
 
 const $ = id => document.getElementById(id);
-const datasets = ["mnist", "mnist-supplementary-v1", "captcha-v3"];
+const datasets = ["mnist", "captcha-v3"];
 const state = {mode: "digits", dataset: "mnist", model: null, ready: false,
   busy: false, records: [], current: null};
 const canvas = $("drawing");

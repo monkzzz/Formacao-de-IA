@@ -18,8 +18,6 @@ NAME = "self-trained-submission-v1"
 SPECS = {
     "mnist": {"folder": "model", "checkpoint": "artifacts/best.pt", "report": "training.json",
               "scope": "Required course model: trained from random initialization on MNIST only, with training-only augmentation.", "dataset": "MNIST"},
-    "mnist-supplementary-v1": {"folder": "model/mnist-supplementary-v1/digits", "checkpoint": "artifacts/mnist-supplementary-v1/best.pt", "report": "mnist-supplementary-v1.json",
-              "scope": "Optional extension: our MNIST model further trained on MNIST, EMNIST Digits and independently generated synthetic digits.", "dataset": "MNIST"},
     "captcha-v3": {"folder": "model/captcha-v3/digits", "checkpoint": "artifacts/captcha-v3/best.pt", "report": "captcha-v3.json",
               "scope": "Optional residual extension: our original MNIST model, followed by local robustness, synthetic CAPTCHA and 64px residual training.", "dataset": "MNIST"},
     "letters": {"folder": "model/robust/letters", "checkpoint": "artifacts/robust/letters/best.pt", "report": "robust-letters.json",
@@ -145,7 +143,7 @@ def build(output=None, name=NAME):
               "excluded": ["pretrained digit readers", "pretrained word readers", "external model runtimes", "ROMs", "credentials", "datasets", "training checkpoints"],
               "browser_qa": "NOT RUN", "official_evaluation": "NOT RUN", "deployment": "NOT RUN"}
     write_json(destination, report)
-    print("PASS: four locally trained models, verified ancestry/exports; separate site and ZIP:", zip_path)
+    print("PASS: three locally trained models, verified ancestry/exports; separate site and ZIP:", zip_path)
     return report
 
 

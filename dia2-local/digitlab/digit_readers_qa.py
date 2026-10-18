@@ -21,7 +21,7 @@ self.onmessage = ({data}) => {
       scores:Array.from({length:10},(_,i)=>i===7?.91:.01),elapsed:12}),300);
     return;
   }
-  const text = data.reader === 'handwritten' ? '<b>7</b>' : data.profile === 'precise' ? 'O' : '7';
+  const text = data.reader === 'ddddocr-old' ? '<b>7</b>' : '7';
   setTimeout(() => self.postMessage({id:data.id,type:'result',text,elapsed:12}), 300);
 };
 """
@@ -45,9 +45,9 @@ def main():
     parser.add_argument("--url", default="http://127.0.0.1:8782/")
     parser.add_argument("--report", required=True)
     parser.add_argument("--screenshot-prefix")
-    parser.add_argument("--digit-experiment", default="mnist", choices=["mnist", "mnist-supplementary-v1", "captcha-v3"],
+    parser.add_argument("--digit-experiment", default="mnist", choices=["mnist", "captcha-v3"],
                         help="Digit fixture folder matching the active release")
-    parser.add_argument("--live", action="store_true", help="Download and execute both actual Standard OCR models")
+    parser.add_argument("--live", action="store_true", help="Download and execute the remaining CAPTCHA readers")
     args = parser.parse_args()
     destination, captures = qa_outputs(args.report, args.screenshot_prefix or Path(args.report).stem)
     checks = {}
@@ -63,6 +63,9 @@ def main():
         page.goto(args.url)
         page.wait_for_function("window.digitLab?.state.ready")
         assert page.locator("#digit-reader").input_value() == "local"
+        assert page.locator("#digit-reader option").evaluate_all("options=>options.map(o=>o.value)") == ["local", "captcha-digits", "ddddocr", "ddddocr-old"]
+        assert page.locator("#cnn-model option").evaluate_all("options=>options.map(o=>o.value)") == ["mnist", "captcha-v3"]
+        checks["weak_digit_options_removed_words_and_letters_preserved"] = "PASS"
         assert page.locator("#network").is_visible()
         for mode in ("digits", "letters"):
             page.evaluate("mode => digitLab.activateMode(mode)", mode)
@@ -78,7 +81,7 @@ def main():
             assert delta <= .0001, delta
             checks[mode + "_unchanged_activation_parity"] = {"status": "PASS", "max_delta": delta}
         page.locator("#mode-digits").click()
-        page.locator("#digit-reader").select_option("printed")
+        page.locator("#digit-reader").select_option("ddddocr")
         assert page.locator("#network").is_hidden() and page.locator("#model").is_hidden()
         assert page.locator("#scores").is_hidden()
         page.locator("#classify").click()
@@ -96,7 +99,7 @@ def main():
         assert page.locator("#digit-ocr-preview").is_visible()
         checks["drawing_uses_selected_ocr_reader"] = "PASS"
         acceptance = page.evaluate("""async () => {
-          const {digitResult} = await import('./v3/digit-readers.js?v=3');
+          const {digitResult} = await import('./v3/digit-readers.js?v=4');
           return ['0','9','O','12','7.',' 7','7 ',''].map(text=>digitResult(text).accepted);
         }""")
         assert acceptance == [True, True, False, False, False, False, False, False]
@@ -105,24 +108,18 @@ def main():
         wait_idle(page)
         record = page.evaluate("digitLab.exportRecord().predictions.at(-1)")
         assert record["predicted"] == 7 and record["raw_text"] == "7"
-        assert record["model"] == "Xenova/trocr-small-printed" and record["model_sha256"] is None
+        assert record["model"] == "sml2h3/ddddocr/common.onnx" and len(record["model_sha256"]) == 64
         assert record["scores"] is None and record["input_side"] is None
         assert page.locator("#digit-raw").inner_text() == "7"
-        checks["printed_upload_and_model_provenance"] = "PASS"
-        page.locator("#digit-quality").select_option("precise")
-        page.locator("#files").set_input_files(fixture())
-        wait_idle(page)
-        record = page.evaluate("digitLab.exportRecord().predictions.at(-1)")
-        assert record["raw_text"] == "O" and record["predicted"] is None and not record["accepted"]
-        assert record["precision"] == "float32"
-        page.locator("#digit-reader").select_option("handwritten")
+        checks["captcha_upload_and_model_provenance"] = "PASS"
+        page.locator("#digit-reader").select_option("ddddocr-old")
         page.locator("#files").set_input_files(fixture())
         wait_idle(page)
         assert page.locator("#digit-raw").inner_text() == "<b>7</b>"
         assert page.locator("#digit-raw b").count() == 0
-        checks["precision_switch_strict_acceptance_and_safe_text"] = "PASS"
+        checks["strict_acceptance_and_safe_text"] = "PASS"
         page.locator("#uploads .upload-result").nth(0).click()
-        assert page.locator("#digit-reader").input_value() == "printed"
+        assert page.locator("#digit-reader").input_value() == "ddddocr"
         assert page.locator("#digit-quality").input_value() == "standard"
         assert page.locator("#predicted").inner_text() == "7"
         checks["gallery_restores_reader_and_quality"] = "PASS"
@@ -132,7 +129,7 @@ def main():
         assert "cancelled" in page.locator("#status").inner_text().lower()
         assert page.locator("#classify").is_enabled()
         page.route("**/digit-reader-worker.js*", lambda route: route.fulfill(body="self.onmessage=({data})=>self.postMessage({id:data.id,type:'error',message:'Test download failure'});", content_type="text/javascript"))
-        page.locator("#digit-quality").select_option("precise")
+        page.locator("#digit-reader").select_option("ddddocr-old")
         page.locator("#files").set_input_files(fixture())
         wait_idle(page)
         assert page.evaluate("digitLab.exportRecord().predictions.at(-1).error") == "Test download failure"
@@ -140,9 +137,9 @@ def main():
         checks["batch_cancellation_and_download_error_recovery"] = "PASS"
         page.route("**/digit-reader-worker.js*", lambda route: route.fulfill(body="self.onmessage=()=>{};", content_type="text/javascript"))
         timeout_message = page.evaluate("""async () => {
-          const {createDigitReader} = await import('./v3/digit-readers.js?v=3');
+          const {createDigitReader} = await import('./v3/digit-readers.js?v=4');
           const reader=createDigitReader(()=>{},20);
-          try {await reader.read(document.getElementById('drawing'),'printed','standard');}
+          try {await reader.read(document.getElementById('drawing'),'ddddocr','standard');}
           catch(error) {return error.message;}
         }""")
         assert "timed out" in timeout_message
@@ -153,7 +150,7 @@ def main():
         wait_idle(page)
         assert page.evaluate("digitLab.exportRecord().predictions.at(-1).mode") == "letters"
         page.locator("#uploads .upload-result").nth(0).click()
-        assert page.locator("#digit-reader").input_value() == "printed"
+        assert page.locator("#digit-reader").input_value() == "ddddocr"
         assert page.locator("#scores").is_hidden()
         page.locator("#mode-words").click()
         assert page.locator("#digit-reader-options").is_hidden() and page.locator("#digit-reader-about").is_hidden()
@@ -174,7 +171,7 @@ def main():
             page.locator("#files").set_input_files(fixture())
             wait_idle(page)
             record = page.evaluate("digitLab.exportRecord().predictions.at(-1)")
-            assert record["predicted"] == 7 and record["precision"] == "float32"
+            assert record["predicted"] == (7 if reader == "ddddocr" else None) and record["precision"] == "float32"
             assert len(record["model_sha256"]) == 64 and record["architecture"] == "captcha-ctc"
             assert record["preprocessing"] == "ddddocr-browser64-v1"
             assert record["decoding"] == "greedy-full-charset-ctc" and record["scores"] is None
@@ -204,7 +201,7 @@ def main():
             live.goto(args.url)
             live.wait_for_function("window.digitLab?.state.ready")
             results = []
-            for reader in ("printed", "handwritten"):
+            for reader in ("ddddocr", "ddddocr-old", "captcha-digits"):
                 live.locator("#digit-reader").select_option(reader)
                 live.locator("#files").set_input_files(fixture())
                 live.wait_for_function("!digitLab.state.busy", timeout=300000)

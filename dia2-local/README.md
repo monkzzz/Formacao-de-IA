@@ -46,6 +46,10 @@ runs in the browser. If release weights are missing, `serve.py --download-models
 can restore matching published exports after hash verification. The optional
 supplementary model requires its own local artifact; see
 [selectable models](docs/selectable-models.md). No training runs automatically.
+The current selectors retain MNIST-only and the preserved residual digit CNN;
+the supplementary experiment remains archived. TrOCR is available in Words,
+while digit mode retains the DdddOCR CAPTCHA readers. Single letters remain
+available in both interfaces. See [the 3.12.0 changes](docs/release-3.12.0.md).
 For the restricted site, use [the submission guide](docs/self-trained-submission.md)
 and [the new-release workflow](docs/deployment.md).
 

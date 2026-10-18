@@ -29,7 +29,7 @@ from .self_trained_pages_qa import wait
 from .train import ROOT
 
 DEFAULT_RECEIPT = ROOT / "reports/self-trained-submission-cleanup-v4-build.json"
-MODELS = {"mnist": "model", "mnist-supplementary-v1": "model/mnist-supplementary-v1/digits",
+MODELS = {"mnist": "model",
           "captcha-v3": "model/captcha-v3/digits", "letters": "model/robust/letters"}
 
 
@@ -127,7 +127,7 @@ def main():
         names = ("390", "1440") if suffix == "design" else ("desktop", "mobile")
         qa_outputs(args.prefix + "-" + suffix + ".json", args.prefix + "-" + suffix, names)
     qa_outputs(args.prefix + "-helper-qa.json", args.prefix + "-helper")
-    report = {"checks": {}, "scope": "Current checkout UI with four reviewed participant-trained exports; no training, official images, external OCR downloads or deployment"}
+    report = {"checks": {}, "scope": "Current checkout UI with three active reviewed participant-trained exports; no training, official images, external OCR downloads or deployment"}
     torch.set_num_threads(2)
     with qa_report(destination, report), tempfile.TemporaryDirectory(prefix="digitlab-ci-") as temporary:
         work = Path(temporary)

@@ -1,0 +1,68 @@
+{
+  "url": "http://127.0.0.1:45507/",
+  "checks": {
+    "mascot_keyboard_open_and_input_focus": "PASS",
+    "knowledge_routing_and_honest_fallback": {
+      "status": "PASS",
+      "cases": [
+        [
+          "How does the network work?",
+          "pipeline"
+        ],
+        [
+          "What is convolution?",
+          "architecture"
+        ],
+        [
+          "How can I upload a picture?",
+          "upload"
+        ],
+        [
+          "What does confidence mean?",
+          "scores"
+        ],
+        [
+          "How is the model trained?",
+          "training"
+        ],
+        [
+          "Tell me about MNIST",
+          "datasets"
+        ],
+        [
+          "Are my images sent to a server?",
+          "privacy"
+        ],
+        [
+          "What about the Desafio?",
+          "challenge"
+        ],
+        [
+          "What is tomorrow's weather?",
+          "fallback"
+        ]
+      ]
+    },
+    "typed_questions_context_and_safe_text_rendering": "PASS",
+    "prediction_context_navigation_and_model_unchanged": "PASS",
+    "mobile_portrait_and_landscape": {
+      "status": "PASS",
+      "viewports": [
+        [
+          320,
+          568
+        ],
+        [
+          390,
+          844
+        ],
+        [
+          844,
+          390
+        ]
+      ]
+    },
+    "no_chat_api_requests_or_script_errors": "PASS"
+  },
+  "status": "PASS"
+}

@@ -158,8 +158,8 @@ def main(destination, receipt=None, screenshot_prefix=None, site=None, archive=N
                     original_records = retry.evaluate('submission.exportRecord().predictions')
                     original_hash = retry.evaluate('submission.state.model.manifest.sha256')
                     pending = []
-                    retry.route('**/model/mnist-supplementary-v1/digits/manifest.json*', lambda r: pending.append(r))
-                    retry.locator('#dataset').select_option('mnist-supplementary-v1')
+                    retry.route('**/model/captcha-v3/digits/manifest.json*', lambda r: pending.append(r))
+                    retry.locator('#dataset').select_option('captcha-v3')
                     wait(retry, 'submission.state.busy')
                     assert retry.locator('#export').is_disabled()
                     assert retry.locator('#uploads button').first.is_disabled()
@@ -189,7 +189,7 @@ def main(destination, receipt=None, screenshot_prefix=None, site=None, archive=N
                 browser.close()
         finally:
             server.shutdown();server.server_close()
-        print('PASS: four models, 40 uploads, activations, drawing/export/mobile and no external network requests')
+        print('PASS: three models, 30 uploads, activations, drawing/export/mobile and no external network requests')
 
 
 if __name__=='__main__':

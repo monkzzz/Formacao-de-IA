@@ -15,10 +15,6 @@ export const DIGIT_READERS = {
     revision: "c40f56f95412e10bcb9bd0bd24411e92f896d238", download_mb: 14,
     sha256: "b8f2ad9cbc1f2e3922a6cb9459e30824e7e2467f3fb4fd61420640e34ea0bf68",
     preprocessing: "ddddocr-browser64-v1", decoding: "greedy-full-charset-ctc", trained_by_project: false},
-  printed: {name: "TrOCR Small · printed", model: "Xenova/trocr-small-printed",
-    revision: "56c1626ea0b4aab378f3228235be2e824d4256bd", trained_by_project: false},
-  handwritten: {name: "TrOCR Small · handwritten", model: "Xenova/trocr-small-handwritten",
-    revision: "2432e24d184b1d964d07ed04f5d9e21d31a59141", trained_by_project: false},
 };
 
 // Preserve the full CAPTCHA; this model learns to handle interference itself.

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "unit_tests": {
+    "run": 103,
+    "skipped": 0,
+    "failed": 0
+  },
+  "preserved_weight_exports": 8,
+  "browser_ci": "weak-digits-v1-ci.json",
+  "submission_build": "self-trained-submission-numbers-v5-build.json",
+  "submission_browser": "self-trained-submission-numbers-v5-browser.json",
+  "legacy_cleanup_v4_assembler": "PASS: 23 assets and four models",
+  "new_numbers_v5_assembler": "PASS: 20 assets and three models",
+  "visual_review": {
+    "words_mobile": "PASS",
+    "submission_mobile": "PASS"
+  },
+  "official_challenge": "NOT RUN",
+  "new_training": "NOT RUN",
+  "publication": "NOT RUN"
+}

@@ -2,8 +2,8 @@ import {loadModel, predict} from "./inference.js?v=dataset-1";
 import {prepareCanvas, PREPROCESS_VERSION} from "./preprocess.js?v=3.6.0";
 import {createWordsWorkspace} from "./words.js?v=3.11.1";
 import {createDrawingTools} from "./canvas-tools.js?v=3.11.1";
-import {createDigitReader, DIGIT_READERS} from "./digit-readers.js?v=3";
-import {CNN_MODELS} from "./cnn-models.js?v=1";
+import {createDigitReader, DIGIT_READERS} from "./digit-readers.js?v=4";
+import {CNN_MODELS} from "./cnn-models.js?v=2";
 import {imageCanvas, imagePreview, downloadBlob} from "./browser-utils.js?v=3.11.1";
 
 const $ = id => document.getElementById(id);

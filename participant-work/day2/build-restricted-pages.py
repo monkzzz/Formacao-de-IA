@@ -38,7 +38,9 @@ def build(archive, output, receipt_path=RECEIPT):
             if sha(blob) != value:
                 raise ValueError("Submission asset identity mismatch: " + name)
             payloads[name] = blob
-    for folder in ("model", "model/mnist-supplementary-v1/digits", "model/captcha-v3/digits", "model/robust/letters"):
+    for model in receipt["provenance"]["models"].values():
+        folder = next(name.removesuffix("/manifest.json") for name in expected
+                      if name.endswith("/manifest.json") and json.loads(payloads[name])["sha256"] == model["exported_weights_sha256"])
         manifest = json.loads(payloads[folder + "/manifest.json"])
         weights = payloads[folder + "/weights.bin"]
         if sha(weights) != manifest["sha256"] or len(weights) != manifest["bytes"]:
@@ -54,7 +56,7 @@ def build(archive, output, receipt_path=RECEIPT):
              "source_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
              "official_captcha_inference": "NOT RUN", "original_external_website_modified": False}
     (output / "pages-build.json").write_text(json.dumps(build, indent=2) + "\n")
-    print(f"PASS: {len(expected)} frozen assets and four participant-trained weight exports verified")
+    print(f"PASS: {len(expected)} frozen assets and {len(receipt['provenance']['models'])} participant-trained weight exports verified")
 
 
 if __name__ == "__main__":

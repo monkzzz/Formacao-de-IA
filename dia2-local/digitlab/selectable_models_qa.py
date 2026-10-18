@@ -29,7 +29,7 @@ def main():
     report = {"status": "FAIL", "url": args.url, "checks": checks,
               "official_challenge": "NOT RUN", "public_deployment": "NOT RUN"}
     with qa_report(output, report):
-        folders = {"mnist": ROOT / "dist/model", NAME: ROOT / "dist/model" / NAME / "digits",
+        folders = {"mnist": ROOT / "dist/model",
                    "captcha-v3": ROOT / "dist/model/captcha-v3/digits"}
         manifests = {key: json.loads((path / "manifest.json").read_text()) for key, path in folders.items()}
         paths = sorted((ROOT / "artifacts" / NAME / "fixtures").glob("sample-*.png"))[:10]
@@ -123,16 +123,16 @@ def main():
             assert page.locator("#cnn-model-options").is_visible()
             checks["pretrained_readers_remain_separate"] = {"status": "PASS"}
             # Drop cache and reject one actual model fetch. Working MNIST must survive.
-            page.evaluate("key => delete digitLab.state.models['digits:' + key]", NAME)
-            page.route("**/model/" + NAME + "/digits/manifest.json*", lambda route: route.fulfill(status=503, body="unavailable"))
-            page.locator("#cnn-model").select_option(NAME)
+            page.evaluate("key => delete digitLab.state.models['digits:' + key]", "captcha-v3")
+            page.route("**/model/captcha-v3/digits/manifest.json*", lambda route: route.fulfill(status=503, body="unavailable"))
+            page.locator("#cnn-model").select_option("captcha-v3")
             page.wait_for_function("!digitLab.state.loading")
             assert page.locator("#status").evaluate("el => el.classList.contains('error')")
             assert page.locator("#cnn-model").input_value() == "mnist"
             assert page.evaluate("digitLab.state.model.manifest.sha256") == manifests["mnist"]["sha256"]
-            page.unroute("**/model/" + NAME + "/digits/manifest.json*")
-            page.locator("#cnn-model").select_option(NAME)
-            page.wait_for_function("key => digitLab.state.digitExperiment === key && !digitLab.state.loading", arg=NAME)
+            page.unroute("**/model/captcha-v3/digits/manifest.json*")
+            page.locator("#cnn-model").select_option("captcha-v3")
+            page.wait_for_function("key => digitLab.state.digitExperiment === key && !digitLab.state.loading", arg="captcha-v3")
             checks["failed_load_keeps_previous_model_and_retry_works"] = {"status": "PASS"}
             page.evaluate("""() => {const c=document.getElementById('drawing'),ctx=c.getContext('2d');
               ctx.fillStyle='white';ctx.fillRect(0,0,c.width,c.height);ctx.fillStyle='black';

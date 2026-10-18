@@ -139,7 +139,7 @@ def main(destination, url, receipt=None, screenshot_prefix=None, site=None, arch
                           active_assets_preserved=True,browser_version=browser.version,
                           visual_manual_review='NOT RUN; screenshots captured')
             browser.close()
-        print('PASS: four models, 40 uploads, activations, drawing/export/mobile and no external network requests')
+        print('PASS: three models, 30 uploads, activations, drawing/export/mobile and no external network requests')
 
 
 if __name__=='__main__':
