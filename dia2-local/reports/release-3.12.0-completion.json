@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "source_commit_tested_by_platform_ci": "10dbe2c5ec59d735c7eafb2b9da1392943e8802f",
+  "platform_ci": "https://github.com/monkzzz/Formacao-de-IA/actions/runs/39172005359",
+  "local_unit_tests": {
+    "run": 103,
+    "passed": 103,
+    "skipped": 0
+  },
+  "removed_from_digit_choices": [
+    "TrOCR Handwritten",
+    "TrOCR Printed",
+    "MNIST supplementary CNN"
+  ],
+  "retained": [
+    "MNIST-only course default",
+    "preserved residual digit CNN",
+    "EMNIST single letters",
+    "full-site Words",
+    "full-site CAPTCHA Digits",
+    "full-site general DdddOCR and Legacy"
+  ],
+  "full_site": {
+    "url": "https://naoquerosaber.pt/AI/",
+    "version": "3.12.0",
+    "publication": "Local verified FTPS only",
+    "files_uploaded": 6,
+    "additional_index_wording_correction": true,
+    "public_assets_verified": 61,
+    "final_options_check": "PASS",
+    "cnn_models_verified": 3,
+    "backup_directory": "artifacts/ftp-backup-20261018T223043-55d4bfb3",
+    "wording_backup_directory": "artifacts/ftp-backup-20261018T223342-135df710"
+  },
+  "pages": {
+    "url": "https://monkzzz.github.io/Formacao-de-IA/",
+    "package": "self-trained-submission-numbers-v5",
+    "reviewed_files_verified": 20,
+    "models": 3,
+    "browser_uploads": 30,
+    "workflow": "https://github.com/monkzzz/Formacao-de-IA/actions/runs/39172547980"
+  },
+  "visual_review": "PASS: full-site digit reader, Words and restricted Pages mobile screenshots",
+  "model_weights_changed": false,
+  "training": "NOT RUN",
+  "official_captcha_evaluation": "NOT RUN",
+  "new_real_pretrained_ocr_smoke": "NOT RUN; explicit worker doubles used for OCR integration; existing weights and preprocessing unchanged",
+  "evidence": [
+    "release-3.12.0-ftp-deployment.json",
+    "release-3.12.0-hint-ftp.json",
+    "release-3.12.0-final-https.json",
+    "release-3.12.0-final-options.json",
+    "release-3.12.0-pages-assets.json",
+    "release-3.12.0-pages-browser.json",
+    "release-3.12.0-public-cnn.json",
+    "release-3.12.0-public-readers.json",
+    "release-3.12.0-public-words.json"
+  ]
+}

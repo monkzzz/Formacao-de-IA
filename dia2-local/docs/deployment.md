@@ -6,7 +6,7 @@ independent inputs, evidence and delivery processes.
 | Target | Source and artifact | Publication route | Preserved evidence |
 | --- | --- | --- | --- |
 | `naoquerosaber.pt/AI/` | Full `dist/` site, including optional pretrained readers | Verified FTPS process in [hosting](hosting.md#check-and-deploy) | Versioned release/deployment reports |
-| GitHub Pages | `submission/` templates, selected shared `dist/v3/` modules and four verified participant-trained exports, assembled as a ZIP | Manual Pages workflow downloads a pinned reviewed archive | [Cleanup v4 receipt](../reports/self-trained-submission-cleanup-v4-build.json); [preserved v1 verification](self-trained-pages.md) |
+| GitHub Pages | `submission/` templates, selected shared `dist/v3/` modules and four verified participant-trained exports, assembled as a ZIP | Manual Pages workflow downloads a pinned reviewed archive | [Numbers v5 receipt](../reports/self-trained-submission-numbers-v5-build.json); [preserved v1 verification](self-trained-pages.md) |
 
 Both interfaces use browser inference. Copying `dist/` to Pages would include
 optional pretrained readers and would cross the restricted submission boundary.
@@ -43,7 +43,7 @@ deployed hashes and browser behavior. Keep local credential files ignored. New
 them. Do not publish the restricted site over the full site accidentally.
 
 For Pages, the manual workflow and restricted assembler are now pinned to the
-reviewed `self-trained-submission-cleanup-v4` archive and its receipt. The original
+reviewed `self-trained-submission-numbers-v5` archive and its receipt. The original
 v1 release remains preserved. A source push alone does not deploy the package.
 Each future release needs a separate reviewed ZIP and build/QA evidence, followed
 by updating the pinned release asset and receipt together. The restricted

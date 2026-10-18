@@ -1,0 +1,253 @@
+{
+  "checks": {
+    "allowlisted_files": 61,
+    "public_assets": [
+      {
+        "file": "assets/65474617.jpg",
+        "sha256": "20408bf697201912289abc7aa92ea4177908d492965131f58c6c2796bfcf83af"
+      },
+      {
+        "file": "assets/ddddocr-LICENSE.txt",
+        "sha256": "a30e42fa97d365b3943d5b02e8c88c1474f872f3e672e7965fae2943b654e140"
+      },
+      {
+        "file": "assets/konami-congratulations.svg",
+        "sha256": "c60ca44891d54c80de9ce4e35c3fd2348f5d1951899c4d028e76333f39277071"
+      },
+      {
+        "file": "assets/scopedog.jpg",
+        "sha256": "9caaffdfbdc25c550c601d1fe07d24b9bb7d3ce331e6f97fdb8a2b6e0ce7a179"
+      },
+      {
+        "file": "evaluation/digits-captcha-v2-original.json",
+        "sha256": "e8403ec95a3e5962086683c6c9590c8efe068885a514ae1c7092ea41417a82f6"
+      },
+      {
+        "file": "evaluation/digits-captcha-v2.json",
+        "sha256": "859a9aecdd5437666502488f16b1bbeab678e690b8ad9e34f5f8ecc55f50445d"
+      },
+      {
+        "file": "evaluation/digits-captcha-v3-preserved.json",
+        "sha256": "4838b65cbe121784a3c25a026a1724f6f36068a3a3e85a34da007e77d5fb3423"
+      },
+      {
+        "file": "evaluation/digits-captcha-v3.json",
+        "sha256": "09a7ece64849bd6e25f3483fbdf7b72cd0cfd1f584214befe19c647bcafe2374"
+      },
+      {
+        "file": "evaluation/digits-captcha.json",
+        "sha256": "d204fcfc111ed534f1c8d7cd55609e15fa7ba07655c343e29ac58a987a46d73d"
+      },
+      {
+        "file": "evaluation/digits-mnist-supplementary-v1.json",
+        "sha256": "b6ab6f2d25bf3630feae17adbffc034f3eb4ad9c8fa6e20b511e1ad5dd210d80"
+      },
+      {
+        "file": "evaluation/digits-mnist.json",
+        "sha256": "6bc5b6079d5b17d9061519484f38a76aa478633b79ef57e51a3cd38a45e3e7bf"
+      },
+      {
+        "file": "evaluation/independent-captcha-benchmark.json",
+        "sha256": "8c58c97ee30996fff6da77dee0939ac3264adb4a24331b1c3ed8b5d5462fad02"
+      },
+      {
+        "file": "evaluation/words-1000.json",
+        "sha256": "4b641719dbec554d0accb35e6483ed22058b591f826c35b0891305cd5054fe2b"
+      },
+      {
+        "file": "model/captcha-v1/digits/manifest.json",
+        "sha256": "324bfb26a18922af88f3f0dad6eaa6561e966ec22b5a80ba98e085d167ae02fb"
+      },
+      {
+        "file": "model/captcha-v1/digits/weights.bin",
+        "sha256": "9531ae35882aa8ba348911f41e506bc00bb359d8110116ce98a2c6c1f8e04b13"
+      },
+      {
+        "file": "model/captcha-v2/digits/manifest.json",
+        "sha256": "744021d3d9a4cc9301f7a5754d9ed4fcaffec2dfa57b840c7e90de9e9dd0d9df"
+      },
+      {
+        "file": "model/captcha-v2/digits/weights.bin",
+        "sha256": "c415bceb885677c1f57c800f22feaf1659ea184f7cf39c2bca462cde4e1f5c9c"
+      },
+      {
+        "file": "model/captcha-v3/digits/manifest.json",
+        "sha256": "549f44ecf1fcf01a763917bbff3db1624f455aa4ae3bd908472efc2f648ac99f"
+      },
+      {
+        "file": "model/captcha-v3/digits/weights.bin",
+        "sha256": "d962c7f1aefd4f86cf9fcc621e30a1e8fbbce092c5a47ab3dd88e0f64573b42c"
+      },
+      {
+        "file": "model/letters/manifest.json",
+        "sha256": "5ec7f6c41bec294eb83d61be815fb0b476bb32ec65f824f3c28f0c8567b6bd0c"
+      },
+      {
+        "file": "model/letters/weights.bin",
+        "sha256": "c35d6fece31dbbacb37d684d3c256fbf634bf90751195fff8238f28e884f0ad5"
+      },
+      {
+        "file": "model/manifest.json",
+        "sha256": "71247af8e6e04330462d64f210f588c6652f68033802ab0598bfcfd2993ebaa6"
+      },
+      {
+        "file": "model/mnist-supplementary-v1/digits/manifest.json",
+        "sha256": "9c6ca06f7fb90672eb8047bb71322762cded0c3859357090483b0013b83f4dfe"
+      },
+      {
+        "file": "model/mnist-supplementary-v1/digits/weights.bin",
+        "sha256": "2f2a7aaf69845caeacd5cbab02ba56f95956f5ab8657d203b747a83004852c89"
+      },
+      {
+        "file": "model/robust/digits/manifest.json",
+        "sha256": "4028c77a64ee4174895bb6da1403712459427e9d49e981432f01e76168f81fff"
+      },
+      {
+        "file": "model/robust/digits/weights.bin",
+        "sha256": "d2b9a1430a98fda5df41e27ca214ab1b57ef83508926f9eeb84967757300eb62"
+      },
+      {
+        "file": "model/robust/letters/manifest.json",
+        "sha256": "7b3e6995d90bb03549605059fb80a5c68d3dd09fa8fca822f7cd11820ff7ca95"
+      },
+      {
+        "file": "model/robust/letters/weights.bin",
+        "sha256": "0fef4b3155457eb1be91547590b48ebc61823c68b79fd414b406835cbfe1b101"
+      },
+      {
+        "file": "model/weights.bin",
+        "sha256": "8e9021e5ba3cb33a66e3dc8b8580a7388802a6938dd78162ebcee4c396e84338"
+      },
+      {
+        "file": "style.css",
+        "sha256": "82d862ccce0f259cdbfd2769195f3ccd832e22119610da10a94a4d911c7bff39"
+      },
+      {
+        "file": "v2/style.css",
+        "sha256": "b554914a88d30baa558d7063e15805d6c713fed74ca26f1c42f7e5937d55e319"
+      },
+      {
+        "file": "v3/browser-utils.js",
+        "sha256": "0f4f5ee52996d78425040c72265131b0cdf8e11c803099ab7a30e71ca5200926"
+      },
+      {
+        "file": "v3/canvas-tools.js",
+        "sha256": "265e0d2b894621313268a4fb2432eaddf35f5fabd09f42f838d0749a31abe05a"
+      },
+      {
+        "file": "v3/cnn-models.js",
+        "sha256": "b1a4b0d00e1febef5626243a8340d21dbaa89e87f1a23796c5bccaf77aed0610"
+      },
+      {
+        "file": "v3/ctc-digits.js",
+        "sha256": "e41806b449025f2fac8dfe87b092d1bf98f491626be1f8556bccc12b709ed99e"
+      },
+      {
+        "file": "v3/ddddocr-charsets.json",
+        "sha256": "049048ece5811aa2cdc5a55300f60f357c096ae12d35dd46f4d67c425c8adfd3"
+      },
+      {
+        "file": "v3/digit-reader-worker.js",
+        "sha256": "966afab855833df9b1849649086ba0c0e88343f717d535f8fb1507365011fdef"
+      },
+      {
+        "file": "v3/helper-knowledge.js",
+        "sha256": "12145693c0e2fd7ae01d612ad0d38c62fd0b999a97990e5c0bff9515ca5433f9"
+      },
+      {
+        "file": "v3/helper.css",
+        "sha256": "3ee870b102fc425df898c3b50b9aef9f0a7ea56476744f702a5cefad0482f99d"
+      },
+      {
+        "file": "v3/konami.css",
+        "sha256": "7150d0da026b16c6b82c31745c0283b20e6fe22d360eb6df219f2e80a3c77c95"
+      },
+      {
+        "file": "v3/konami.js",
+        "sha256": "0b8d48b711b85c3b2687064514c48e4731cdaf9d0b2aaf8461003cfb10ad35b5"
+      },
+      {
+        "file": "v3/residual.js",
+        "sha256": "1b454e6acd7b97d7a8f1904ea97c4f382f0b97a6b9d924981e459a8bd972353a"
+      },
+      {
+        "file": "v3/snes.css",
+        "sha256": "411fca619c6fb167b9dbab616c5688ab57474968f02ebad0a15bd618aab43d12"
+      },
+      {
+        "file": "v3/snes.html",
+        "sha256": "7519acc6656f208b23adea653ef6350025f58a134ede9085108bbedc4219eff2"
+      },
+      {
+        "file": "v3/snes.js",
+        "sha256": "dcb4e58382d349ea98acd7a29d7ac8be537f2dd496b895f1d16d0f1e9a0f8fb2"
+      },
+      {
+        "file": "v3/style.css",
+        "sha256": "9262b3256e0b8db585492b45216acb2799c4f0a41dd18987d5a92500ec06a17f"
+      },
+      {
+        "file": "v3/words-worker.js",
+        "sha256": "289712ffd1bb65c517def0c9b53fe0d2713775bf0db409b3f39cafbe495245c0"
+      },
+      {
+        "file": "v3/words.css",
+        "sha256": "f2411b623df2dbd0a1b04086eb8093ef788efc1f9e993d04c8564451178be926"
+      },
+      {
+        "file": "preprocess.js",
+        "sha256": "eaa43a89d27d90b1d08e49ab62baee982c0c108f044b2b71a19a68a9e133d988"
+      },
+      {
+        "file": "v2/preprocess.js",
+        "sha256": "eaa43a89d27d90b1d08e49ab62baee982c0c108f044b2b71a19a68a9e133d988"
+      },
+      {
+        "file": "v3/preprocess.js",
+        "sha256": "170ad3280aa835bb0ad0efd5d65cd2ea507c1c3cd680b092cfc0e95537db3e3c"
+      },
+      {
+        "file": "v3/words.js",
+        "sha256": "3076346f5e2b8a753d4d1edaa329009330a48fadb1d43eab0192b3e92c5d5195"
+      },
+      {
+        "file": "inference.js",
+        "sha256": "12a41ae50ad566417652be21baeb96278e558d46c4b310bc70c97323b6bcb6ab"
+      },
+      {
+        "file": "v2/inference.js",
+        "sha256": "d43c67ba415ff594fed329ddd06392a704ad15dace033d4fe2d9044c38bbae38"
+      },
+      {
+        "file": "v3/digit-readers.js",
+        "sha256": "4ceb61455b879fd93c5bec911567d1c713487a92c111c39ae92b0ef8a4d75c28"
+      },
+      {
+        "file": "v3/helper.js",
+        "sha256": "9cf2e107e5ae3e86a959e8c4372f0681caff0de665f5340e0367e78497fc70c0"
+      },
+      {
+        "file": "v3/inference.js",
+        "sha256": "540ec962500ed162ce1871c716cc82b77b630a53e651caffd3a3f27935091690"
+      },
+      {
+        "file": "app.js",
+        "sha256": "3a5d231eeab5ba244fbc6a3a1521c525cb35bdfc34263c2dfbf06639459bc309"
+      },
+      {
+        "file": "v2/app.js",
+        "sha256": "2122258114ea61f867523b0f5260510904534c899f7e35bbda20369225197b67"
+      },
+      {
+        "file": "v3/app.js",
+        "sha256": "66e3cf00346e9c8b448cf09b9ffccb35d66de6ed26b08aa1097b002402d6ff4f"
+      },
+      {
+        "file": "index.html",
+        "sha256": "6a843a7959cefa789fe4db57189502b846cc75b8533de2fd6ffdb060591ef81c"
+      }
+    ]
+  },
+  "public_url": "https://naoquerosaber.pt/AI/",
+  "status": "PASS"
+}

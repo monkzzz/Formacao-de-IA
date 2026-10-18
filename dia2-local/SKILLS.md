@@ -15,13 +15,12 @@ Follow [the predeclared protocol](docs/preprocessing-study.md) and preserve the
 The selected small-component cleanup passed development and isolated browser
 checks only; it is not part of the active application or a verified official result.
 
-Published v3.11.1 separates a default MNIST-only course model from the supplementary
-experiment and preserved residual model. Follow
-[the selectable-model workflow](docs/selectable-models.md) and run
-`digitlab.selectable_models_qa` for the current dataset selector. Historical QA
-commands below assume their named default model and matching preserved interface;
-use the current selector collector for all three CNNs. The
-[3.11.1 release record](docs/release-3.11.1.md) covers both deployed sites.
+Published v3.12.0 retains MNIST-only and the preserved residual digit CNN in the
+current selectors. Supplementary digits and TrOCR digit readers remain archived;
+Words and EMNIST single letters remain available. Use
+`digitlab.selectable_models_qa` for both current digit CNNs; historical commands
+below retain their named release scope. The
+[3.12.0 release record](docs/release-3.12.0.md) covers both deployed sites.
 
 For Windows/Linux setup, interpreter selection, fonts and browser discovery, use
 the [shared runtime guide](../PORTABILITY.md). The current portable confidence

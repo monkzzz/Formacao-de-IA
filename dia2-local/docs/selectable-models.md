@@ -1,5 +1,10 @@
 # Selectable training datasets
 
+Current release: [3.12.0](release-3.12.0.md) retains MNIST-only digits, the
+preserved residual digit CNN and EMNIST single letters. The supplementary digit
+choice is archived. The sections below preserve their historical experiment and
+package scope; GitHub Pages now serves the three-model numbers-v5 package.
+
 Current project acceptance is now clarified by the participant: **10/10 correct
 and every score strictly >90%**. Supplementary training is acceptable as a
 separately documented extension. See [the professor criterion and next-study

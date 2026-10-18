@@ -1,5 +1,10 @@
 # Submission containing only participant-trained models
 
+Current release: [3.12.0](release-3.12.0.md) retains MNIST-only digits, the
+preserved residual digit CNN and EMNIST single letters. The supplementary digit
+choice is archived. The sections below preserve their historical experiment and
+package scope; GitHub Pages now serves the three-model numbers-v5 package.
+
 The participant clarified that the professor does not accept downloaded pretrained
 models. Supplementary training data remain acceptable as separately documented
 extensions. This package therefore excludes all pretrained digit and word readers,

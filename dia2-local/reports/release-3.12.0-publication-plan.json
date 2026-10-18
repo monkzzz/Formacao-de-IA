@@ -1,0 +1,28 @@
+{
+  "source_commit": "10dbe2c5ec59d735c7eafb2b9da1392943e8802f",
+  "files": [
+    "index.html",
+    "v3/app.js",
+    "v3/cnn-models.js",
+    "v3/digit-readers.js",
+    "v3/helper-knowledge.js",
+    "v3/helper.js"
+  ],
+  "local_ftp_only": true,
+  "github_ci": 39172005359,
+  "status": "PREPARED",
+  "models_removed": [
+    "TrOCR Printed in digit mode",
+    "TrOCR Handwritten in digit mode",
+    "supplementary digit CNN"
+  ],
+  "preserved": [
+    "Words",
+    "EMNIST Letters",
+    "MNIST-only course default",
+    "residual CNN",
+    "CAPTCHA Digits",
+    "general DdddOCR/Legacy"
+  ],
+  "weights_changed": false
+}

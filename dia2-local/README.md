@@ -8,14 +8,14 @@ retains optional pretrained OCR experiments, Words and Scopedog.
 
 | Variant | Source | Delivery | Current scope |
 | --- | --- | --- | --- |
-| Full site | `dist/`, current UI in `dist/v3/` | `naoquerosaber.pt/AI/` via verified FTPS | Published 3.11.1; MNIST-only course default |
-| Participant-trained submission | `submission/` plus selected shared modules and verified local weights | GitHub Pages from a separately built ZIP | Published cleanup v4 package; original v1 remains frozen |
+| Full site | `dist/`, current UI in `dist/v3/` | `naoquerosaber.pt/AI/` via verified FTPS | Published 3.12.0; MNIST-only course default |
+| Participant-trained submission | `submission/` plus selected shared modules and verified local weights | GitHub Pages from a separately built ZIP | Published numbers v5 package; previous packages remain frozen |
 
 The [deployment map](docs/deployment.md) explains source, artifact and hosting
 boundaries. The [release history](docs/release-history.md) preserves earlier
 releases and results. Neither live site changes when local files change.
-The [3.11.1 release record](docs/release-3.11.1.md) records both deployments and
-their public verification results.
+The [3.12.0 release record](docs/release-3.12.0.md) records the current model
+choices and public verification; earlier releases remain preserved.
 
 ## Setup on Linux or Windows
 

@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-10-18T22:30:42.758060+00:00",
+  "files": [
+    {
+      "file": "v3/cnn-models.js",
+      "bytes": 653,
+      "sha256": "b1a4b0d00e1febef5626243a8340d21dbaa89e87f1a23796c5bccaf77aed0610"
+    },
+    {
+      "file": "v3/helper-knowledge.js",
+      "bytes": 18485,
+      "sha256": "12145693c0e2fd7ae01d612ad0d38c62fd0b999a97990e5c0bff9515ca5433f9"
+    },
+    {
+      "file": "v3/digit-readers.js",
+      "bytes": 5791,
+      "sha256": "4ceb61455b879fd93c5bec911567d1c713487a92c111c39ae92b0ef8a4d75c28"
+    },
+    {
+      "file": "v3/helper.js",
+      "bytes": 5266,
+      "sha256": "9cf2e107e5ae3e86a959e8c4372f0681caff0de665f5340e0367e78497fc70c0"
+    },
+    {
+      "file": "v3/app.js",
+      "bytes": 23168,
+      "sha256": "66e3cf00346e9c8b448cf09b9ffccb35d66de6ed26b08aa1097b002402d6ff4f"
+    },
+    {
+      "file": "index.html",
+      "bytes": 21560,
+      "sha256": "6a843a7959cefa789fe4db57189502b846cc75b8533de2fd6ffdb060591ef81c"
+    }
+  ],
+  "plan": [
+    "v3/cnn-models.js",
+    "v3/helper-knowledge.js",
+    "v3/digit-readers.js",
+    "v3/helper.js",
+    "v3/app.js",
+    "index.html"
+  ],
+  "scope": "Reviewed allowlist; per-file staged publication, not an atomic whole-site switch",
+  "destination": "/",
+  "tls": true,
+  "backup_directory": "artifacts/ftp-backup-20261018T223043-55d4bfb3",
+  "manifest_sha256": "b46d486060f5a585d8000b597d4f88b4e4cba26472c6095855a4f085b431861d",
+  "current_file": {
+    "file": "index.html",
+    "bytes": 21560,
+    "sha256": "6a843a7959cefa789fe4db57189502b846cc75b8533de2fd6ffdb060591ef81c",
+    "phase": "PUBLISHED_AND_VERIFIED",
+    "temporary_remote_file": ".index.html.upload-9c32aefda8f349648282a7401b2609ef",
+    "previous_sha256": "19aa606f23f04cd94a902463b2b019c70b570a8ecf532df43da9ed406f5ca893"
+  },
+  "completed_utc": "2026-10-18T22:30:56.094968+00:00"
+}

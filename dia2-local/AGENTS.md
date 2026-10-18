@@ -8,12 +8,12 @@ The course requirements are in [the official challenge](../Dia2/Desafio/README.m
 
 ## Project map
 
-Published v3.11.1 includes the training-data selector: original MNIST-only weights are the
-course default, `mnist-supplementary-v1` is a separate optional extension, and
-the previous residual default remains selectable with unchanged weights.
-See [the dataset boundary and workflow](docs/selectable-models.md).
-The full site and separate restricted Pages cleanup-v4 package are deployed;
-see [the release record](docs/release-3.11.1.md). Historical evidence remains preserved.
+Published v3.12.0 retains the original MNIST-only course default and preserved
+residual digit CNN. The supplementary digit CNN and TrOCR digit readers are
+archived; Words retains its separate TrOCR handwriting reader, and single letters
+retain the EMNIST Letters CNN. The full site and separate restricted Pages
+numbers-v5 package are deployed; see [the release record](docs/release-3.12.0.md).
+Historical experiments, model exports and evidence remain preserved.
 
 - `digitlab/`: dataset loading, preprocessing, CNN training/export, browser verification, reporting and deployment utilities.
 - `dist/`: static application; `v3/` contains the current interface. Retain earlier assets for cached releases.

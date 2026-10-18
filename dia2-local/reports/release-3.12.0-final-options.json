@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "words_and_both_precision_options": "PASS",
+    "single_letters": "PASS",
+    "removed_digit_options_and_updated_hint": "PASS"
+  },
+  "status": "PASS",
+  "digit_cnn": [
+    "mnist",
+    "captcha-v3"
+  ],
+  "digit_readers": [
+    "local",
+    "captcha-digits",
+    "ddddocr",
+    "ddddocr-old"
+  ]
+}

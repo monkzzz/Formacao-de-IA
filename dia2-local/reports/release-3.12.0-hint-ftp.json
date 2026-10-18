@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-10-18T22:33:41.402108+00:00",
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 21550,
+      "sha256": "171d9113e6b56dbb033645bd3bc41b8cf3348a8c115f89395044836a30e0cbe8"
+    }
+  ],
+  "plan": [
+    "index.html"
+  ],
+  "scope": "Reviewed allowlist; per-file staged publication, not an atomic whole-site switch",
+  "destination": "/",
+  "tls": true,
+  "backup_directory": "artifacts/ftp-backup-20261018T223342-135df710",
+  "manifest_sha256": "b46d486060f5a585d8000b597d4f88b4e4cba26472c6095855a4f085b431861d",
+  "current_file": {
+    "file": "index.html",
+    "bytes": 21550,
+    "sha256": "171d9113e6b56dbb033645bd3bc41b8cf3348a8c115f89395044836a30e0cbe8",
+    "phase": "PUBLISHED_AND_VERIFIED",
+    "temporary_remote_file": ".index.html.upload-0fc24c95dbf74387bfe977455741747b",
+    "previous_sha256": "6a843a7959cefa789fe4db57189502b846cc75b8533de2fd6ffdb060591ef81c"
+  },
+  "completed_utc": "2026-10-18T22:33:44.559446+00:00"
+}
