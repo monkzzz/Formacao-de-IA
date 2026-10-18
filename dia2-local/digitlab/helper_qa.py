@@ -7,8 +7,8 @@ import json
 from playwright.sync_api import sync_playwright
 
 from .qa import open_browser
-from .qa_outputs import qa_outputs
-from .train import ROOT, write_json
+from .qa_outputs import qa_outputs, qa_report
+from .train import ROOT
 
 
 def main():
@@ -21,11 +21,11 @@ def main():
     destination, captures = qa_outputs(name + "-qa.json", name)
     report = {"url": args.url, "checks": {}}
     original = ROOT / "scopedog-asset.jpg"
-    asset = ROOT / "dist/assets/scopedog.jpg"
-    assert asset.is_file()
-    if original.exists():
-        assert hashlib.sha256(original.read_bytes()).digest() == hashlib.sha256(asset.read_bytes()).digest()
-    with sync_playwright() as playwright:
+    with qa_report(destination, report), sync_playwright() as playwright:
+        asset = ROOT / "dist/assets/scopedog.jpg"
+        assert asset.is_file()
+        if original.exists():
+            assert hashlib.sha256(original.read_bytes()).digest() == hashlib.sha256(asset.read_bytes()).digest()
         browser = open_browser(playwright)
         page = browser.new_page(viewport={"width": 1440, "height": 1100})
         errors, requests = [], []
@@ -111,7 +111,6 @@ def main():
         report["checks"]["no_chat_api_requests_or_script_errors"] = "PASS"
         browser.close()
     report["status"] = "PASS"
-    write_json(destination, report)
     print(json.dumps({"status": "PASS", "groups": len(report["checks"]), "report": name + "-qa.json"}))
 
 

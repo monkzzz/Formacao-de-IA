@@ -63,6 +63,9 @@ prerequisites, worker doubles and limitations. Unit tests do not replace browser
 checks. [Frontend maintenance](docs/frontend-cleanup.md) records the first phase;
 the [completed maintenance cleanup](docs/maintenance-cleanup.md) records the shared
 utilities, submission recovery, documentation and final package verification.
+The subsequent [reliability work](docs/operational-reliability.md) adds browser CI,
+portable receipts, failure evidence and staged deployment. The
+[confidence replay study](docs/confidence-replay.md) records its separate outcome.
 
 ## Project structure
 

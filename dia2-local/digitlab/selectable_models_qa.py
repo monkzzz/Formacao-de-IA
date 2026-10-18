@@ -11,10 +11,10 @@ import torch
 
 from .preprocess import prepare
 from .qa import open_browser
-from .qa_outputs import qa_outputs
+from .qa_outputs import qa_outputs, qa_report
 from .residual import ResidualCNN
 from .supplementary import NAME, original_model
-from .train import ROOT, write_json
+from .train import ROOT
 
 
 def main():
@@ -28,12 +28,12 @@ def main():
     checks, errors, requests = {}, [], []
     report = {"status": "FAIL", "url": args.url, "checks": checks,
               "official_challenge": "NOT RUN", "public_deployment": "NOT RUN"}
-    folders = {"mnist": ROOT / "dist/model", NAME: ROOT / "dist/model" / NAME / "digits",
-               "captcha-v3": ROOT / "dist/model/captcha-v3/digits"}
-    manifests = {key: json.loads((path / "manifest.json").read_text()) for key, path in folders.items()}
-    paths = sorted((ROOT / "artifacts" / NAME / "fixtures").glob("sample-*.png"))[:10]
-    assert len(paths) == 10
-    try:
+    with qa_report(output, report):
+        folders = {"mnist": ROOT / "dist/model", NAME: ROOT / "dist/model" / NAME / "digits",
+                   "captcha-v3": ROOT / "dist/model/captcha-v3/digits"}
+        manifests = {key: json.loads((path / "manifest.json").read_text()) for key, path in folders.items()}
+        paths = sorted((ROOT / "artifacts" / NAME / "fixtures").glob("sample-*.png"))[:10]
+        assert len(paths) == 10
         with sync_playwright() as playwright:
             browser = open_browser(playwright)
             page = browser.new_page(viewport={"width": 1440, "height": 1100})
@@ -156,11 +156,6 @@ def main():
             checks["browser_only_static_requests"] = {"status": "PASS", "requests": len(requests), "page_errors": errors}
             report["status"] = "PASS"
             browser.close()
-    except Exception as error:
-        report["error"] = repr(error)
-        raise
-    finally:
-        write_json(output, report)
     print(output)
 
 

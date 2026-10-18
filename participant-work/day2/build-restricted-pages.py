@@ -15,8 +15,9 @@ def sha(blob):
     return hashlib.sha256(blob).hexdigest()
 
 
-def build(archive, output):
-    receipt = json.loads(RECEIPT.read_text())
+def build(archive, output, receipt_path=RECEIPT):
+    receipt_path = Path(receipt_path)
+    receipt = json.loads(receipt_path.read_text())
     archive, output = Path(archive).resolve(), Path(output).resolve()
     if output.exists() or output == ROOT or output in ROOT.parents or ROOT / "dia2-local/dist" in output.parents:
         raise ValueError("Use a new separate artifact directory")
@@ -49,7 +50,7 @@ def build(archive, output):
         target.write_bytes(blob)
     build = {"scope": "Reviewed participant-trained submission only; no pretrained readers, datasets, credentials or ROMs",
              "submission": receipt["name"], "archive_sha256": receipt["archive_sha256"],
-             "receipt_sha256": sha(RECEIPT.read_bytes()), "asset_sha256": expected,
+             "receipt_sha256": sha(receipt_path.read_bytes()), "asset_sha256": expected,
              "source_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
              "official_captcha_inference": "NOT RUN", "original_external_website_modified": False}
     (output / "pages-build.json").write_text(json.dumps(build, indent=2) + "\n")
@@ -60,5 +61,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--archive", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--receipt", type=Path, default=RECEIPT)
     args = parser.parse_args()
-    build(args.archive, args.output)
+    build(args.archive, args.output, args.receipt)

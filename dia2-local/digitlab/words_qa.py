@@ -9,8 +9,8 @@ from PIL import Image
 from playwright.sync_api import sync_playwright
 
 from .qa import open_browser
-from .qa_outputs import qa_outputs
-from .train import ROOT, write_json
+from .qa_outputs import qa_outputs, qa_report
+from .train import ROOT
 
 
 STUB_WORKER = """
@@ -123,7 +123,7 @@ def main():
     report_path, captures = qa_outputs(args.report, args.screenshot_prefix, names)
     checks = {}
     report = {"url": args.url, "status": "FAIL", "checks": checks}
-    with sync_playwright() as playwright:
+    with qa_report(report_path, report), sync_playwright() as playwright:
         browser = open_browser(playwright)
         context = browser.new_context(viewport={"width": 1440, "height": 1100},
                                       permissions=["clipboard-read", "clipboard-write"])
@@ -326,7 +326,6 @@ def main():
         checks["page_errors"] = {"status": "PASS", "errors": errors}
         browser.close()
     report["status"] = "PASS"
-    write_json(report_path, report)
     print(json.dumps({"status": report["status"], "groups": len(checks), "report": str(report_path)}))
 
 

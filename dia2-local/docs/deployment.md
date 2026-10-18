@@ -55,3 +55,8 @@ Cleanup validation and publication are separate phases. The subsequent requested
 release is documented in [the release record](release-3.11.1.md). Existing v1 and
 historical measurements keep their scope. For maintenance verification, use
 [fresh browser QA outputs](browser-qa.md).
+
+Subsequent tooling changes add an explicit upload allowlist, verified temporary
+remote files and incremental recovery receipts. Package QA/assembly now supports
+relocated artifacts and caller-selected receipts. See
+[operational reliability](operational-reliability.md) before the next deployment.

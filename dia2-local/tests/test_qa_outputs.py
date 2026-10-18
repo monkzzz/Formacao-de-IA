@@ -1,13 +1,32 @@
 """Maintenance collectors must preserve reports and screenshots independently."""
 
 from pathlib import Path
+import json
 import tempfile
 import unittest
 
-from digitlab.qa_outputs import qa_outputs
+from digitlab.qa_outputs import qa_outputs, qa_report
 
 
 class QaOutputTests(unittest.TestCase):
+    def test_failure_saves_completed_checks_and_preserves_existing_evidence(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            destination = Path(temporary) / "failed.json"
+            report = {"checks": {}}
+            with self.assertRaisesRegex(RuntimeError, "injected"):
+                with qa_report(destination, report):
+                    report["checks"]["upload"] = "PASS"
+                    raise RuntimeError("injected failure")
+            saved = json.loads(destination.read_text())
+            self.assertEqual(saved["status"], "FAIL")
+            self.assertEqual(saved["checks"], {"upload": "PASS"})
+            self.assertEqual(saved["failure"]["type"], "RuntimeError")
+            original = destination.read_bytes()
+            with self.assertRaises(FileExistsError):
+                with qa_report(destination, {}):
+                    pass
+            self.assertEqual(destination.read_bytes(), original)
+
     def test_existing_report_or_screenshot_is_preserved(self):
         for existing in ("reports/run.json", "reports/screenshots/run-mobile.png"):
             with self.subTest(existing=existing), tempfile.TemporaryDirectory() as temporary:

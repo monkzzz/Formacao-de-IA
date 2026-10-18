@@ -4,7 +4,7 @@ import hashlib
 import io
 import json
 
-from .ftp_deploy import ROOT, connect, enter_directory
+from .ftp_deploy import ROOT, connect, deployment_files, enter_directory
 
 
 def main():
@@ -13,9 +13,7 @@ def main():
     try:
         target = enter_directory(client, config["remote_dir"], allow_root=config.get("allow_ftp_root", False))
         results = []
-        for path in sorted((ROOT / "dist").rglob("*")):
-            if not path.is_file() or path.name == "parity.json":
-                continue
+        for path in deployment_files():
             relative = path.relative_to(ROOT / "dist").as_posix()
             remote = io.BytesIO()
             client.retrbinary("RETR " + relative, remote.write)

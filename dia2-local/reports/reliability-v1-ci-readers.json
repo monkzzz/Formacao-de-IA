@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "url": "http://127.0.0.1:34315/",
+  "digit_experiment": "mnist",
+  "checks": {
+    "digits_unchanged_activation_parity": {
+      "status": "PASS",
+      "max_delta": 3.814697265625e-06
+    },
+    "letters_unchanged_activation_parity": {
+      "status": "PASS",
+      "max_delta": 9.5367431640625e-06
+    },
+    "lazy_download_blank_rejection_and_honest_views": "PASS",
+    "drawing_uses_selected_ocr_reader": "PASS",
+    "no_silent_digit_substitutions_or_text_stripping": "PASS",
+    "printed_upload_and_model_provenance": "PASS",
+    "precision_switch_strict_acceptance_and_safe_text": "PASS",
+    "gallery_restores_reader_and_quality": "PASS",
+    "batch_cancellation_and_download_error_recovery": "PASS",
+    "worker_timeout": "PASS",
+    "mixed_gallery_letters_and_words_navigation": "PASS",
+    "cnn_upload_after_ocr": "PASS",
+    "captcha_reader_choices_fixed_precision_metadata_and_gallery": "PASS",
+    "single_digit_classifier_is_separate_from_unrestricted_transcription": "PASS",
+    "desktop_mobile_no_horizontal_overflow": "PASS",
+    "no_page_errors_or_upload_requests": "PASS"
+  },
+  "live": "NOT RUN",
+  "captcha_accuracy": "NOT RUN"
+}

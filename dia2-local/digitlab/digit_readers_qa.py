@@ -9,7 +9,8 @@ from PIL import Image, ImageDraw
 from playwright.sync_api import sync_playwright
 
 from .qa import open_browser
-from .train import ROOT, write_json
+from .qa_outputs import qa_outputs, qa_report
+from .train import ROOT
 
 
 STUB = """
@@ -43,17 +44,16 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--url", default="http://127.0.0.1:8782/")
     parser.add_argument("--report", required=True)
+    parser.add_argument("--screenshot-prefix")
     parser.add_argument("--digit-experiment", default="mnist", choices=["mnist", "mnist-supplementary-v1", "captcha-v3"],
                         help="Digit fixture folder matching the active release")
     parser.add_argument("--live", action="store_true", help="Download and execute both actual Standard OCR models")
     args = parser.parse_args()
-    destination = ROOT / "reports" / args.report
-    if destination.exists():
-        raise SystemExit("Refusing to overwrite existing evidence")
+    destination, captures = qa_outputs(args.report, args.screenshot_prefix or Path(args.report).stem)
     checks = {}
     report = {"status": "FAIL", "url": args.url, "digit_experiment": args.digit_experiment,
               "checks": checks, "live": "NOT RUN", "captcha_accuracy": "NOT RUN"}
-    with sync_playwright() as playwright:
+    with qa_report(destination, report), sync_playwright() as playwright:
         browser = open_browser(playwright)
         page = browser.new_page(viewport={"width": 1440, "height": 1100})
         errors, requests = [], []
@@ -191,13 +191,10 @@ def main():
         assert "conditional digit score" in page.locator("#confidence").inner_text()
         assert page.locator("#digit-raw").inner_text() == "X" and page.locator("#network").is_hidden()
         checks["single_digit_classifier_is_separate_from_unrestricted_transcription"] = "PASS"
-        screenshots = ROOT / "reports/screenshots"
-        screenshots.mkdir(exist_ok=True)
-        prefix = Path(args.report).stem
-        page.screenshot(path=str(screenshots / (prefix + "-desktop.png")), full_page=True)
+        page.screenshot(path=str(captures["desktop"]), full_page=True)
         page.set_viewport_size({"width": 390, "height": 844})
         assert page.evaluate("document.documentElement.scrollWidth <= innerWidth")
-        page.screenshot(path=str(screenshots / (prefix + "-mobile.png")), full_page=True)
+        page.screenshot(path=str(captures["mobile"]), full_page=True)
         checks["desktop_mobile_no_horizontal_overflow"] = "PASS"
         assert not errors, errors
         assert all(method == "GET" for method, _ in requests)
@@ -218,7 +215,6 @@ def main():
             report["live"] = {"status": "PASS", "synthetic_smoke_only": True, "results": results}
         report["status"] = "PASS"
         browser.close()
-    write_json(destination, report)
     print(json.dumps(report, indent=2))
 
 

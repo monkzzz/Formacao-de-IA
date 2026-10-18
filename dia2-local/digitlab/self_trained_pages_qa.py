@@ -14,10 +14,11 @@ from .letters import LetterCNN
 from .model import DigitCNN
 from .preprocess import prepare
 from .qa import open_browser
-from .qa_outputs import qa_outputs
+from .qa_outputs import qa_outputs, qa_report
+from .submission_artifacts import resolve_artifacts
 from .residual import ResidualCNN
 from .self_trained_submission import NAME, SPECS, digest
-from .train import ROOT, write_json
+from .train import ROOT
 
 
 def wait(page, expression, arg=None):
@@ -29,20 +30,21 @@ def wait(page, expression, arg=None):
         page.wait_for_timeout(100)
 
 
-def main(destination, url, receipt=None, screenshot_prefix=None):
+def main(destination, url, receipt=None, screenshot_prefix=None, site=None, archive=None, artifact_root=None):
     receipt = Path(receipt) if receipt is not None else ROOT / "reports" / (NAME + "-build.json")
     build = json.loads(receipt.read_text(encoding="utf-8"))
     destination, captures = qa_outputs(destination, screenshot_prefix or build['name']+'-pages')
-    output = Path(build["output"])
-    if any(digest(output / p) != value for p,value in build["files_sha256"].items()):
-        raise ValueError("Frozen submission files changed")
-    if digest(Path(build["archive"])) != build["archive_sha256"]:
-        raise ValueError("Frozen submission ZIP changed")
+    output, archive = resolve_artifacts(build, site=site, archive=archive, artifact_root=artifact_root)
     report = {"status": "FAIL", "build_sha256": digest(receipt),
+              "artifacts": {"site": str(output), "archive": str(archive)},
               "checks": {}, "official_captcha_inference": "NOT RUN", "scope": "Public deployment verification with non-challenge fixtures"}
-    torch.set_num_threads(2)
+    with qa_report(destination, report):
+        if any(digest(output / p) != value for p,value in build["files_sha256"].items()):
+            raise ValueError("Frozen submission files changed")
+        if digest(archive) != build["archive_sha256"]:
+            raise ValueError("Frozen submission ZIP changed")
+        torch.set_num_threads(2)
 
-    try:
         with sync_playwright() as playwright:
             browser = open_browser(playwright)
             page = browser.new_page(viewport={"width": 1440, "height": 1100})
@@ -137,9 +139,7 @@ def main(destination, url, receipt=None, screenshot_prefix=None):
                           active_assets_preserved=True,browser_version=browser.version,
                           visual_manual_review='NOT RUN; screenshots captured')
             browser.close()
-    finally:
-        write_json(destination,report)
-    print('PASS: four models, 40 uploads, activations, drawing/export/mobile and no external network requests')
+        print('PASS: four models, 40 uploads, activations, drawing/export/mobile and no external network requests')
 
 
 if __name__=='__main__':
@@ -148,5 +148,8 @@ if __name__=='__main__':
     parser.add_argument('--url',default='https://monkzzz.github.io/Formacao-de-IA/')
     parser.add_argument('--build',type=Path)
     parser.add_argument('--screenshot-prefix')
+    parser.add_argument('--site', type=Path)
+    parser.add_argument('--archive', type=Path)
+    parser.add_argument('--artifact-root', type=Path)
     args=parser.parse_args()
-    main(args.report,args.url,args.build,args.screenshot_prefix)
+    main(args.report,args.url,args.build,args.screenshot_prefix,args.site,args.archive,args.artifact_root)

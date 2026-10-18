@@ -12,6 +12,7 @@ import zipfile
 import torch
 
 from .train import ROOT, write_json
+from .submission_artifacts import portable_path
 
 NAME = "self-trained-submission-v1"
 SPECS = {
@@ -139,7 +140,7 @@ def build(output=None, name=NAME):
     if any(digest(ROOT / name) != value for name,value in preserved.items()):
         raise ValueError("Active assets changed during build")
     report = {"status": "PASS", "name": evaluation["package_name"], "built_utc": datetime.now(timezone.utc).isoformat(),
-              "output": str(output), "archive": str(zip_path), "archive_sha256": digest(zip_path), "files_sha256": files,
+              "output": portable_path(output), "archive": portable_path(zip_path), "archive_sha256": digest(zip_path), "files_sha256": files,
               "provenance": audit, "active_assets_preserved": preserved,
               "excluded": ["pretrained digit readers", "pretrained word readers", "external model runtimes", "ROMs", "credentials", "datasets", "training checkpoints"],
               "browser_qa": "NOT RUN", "official_evaluation": "NOT RUN", "deployment": "NOT RUN"}

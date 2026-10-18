@@ -6,6 +6,7 @@ from functools import partial
 import hashlib
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 import json
+import re
 from pathlib import Path
 import shutil
 import threading
@@ -15,10 +16,19 @@ from playwright.sync_api import sync_playwright
 from .acceptance import evaluate
 from .qa import open_browser
 from .self_trained_pages_qa import wait
+from .submission_artifacts import portable_path, resolve_artifacts
 from .train import ROOT
 
 
 NAME = "release-3.11.1-all-captcha-followup-v1"
+REPORT_ROOT = ROOT / "reports"
+SNAPSHOT_ROOT = ROOT / "artifacts"
+BUILD = ROOT / "reports/self-trained-submission-cleanup-v4-build.json"
+REFERENCE = ROOT / "reports/captcha-v3-challenge-comparison.json"
+FULL_SITE = ROOT / "dist"
+ARTIFACT_OPTIONS = {}
+RELEASE_CHECKS = {"full": ROOT / "reports/release-cleanup-3.11.1-public-assets.json",
+                  "submission": ROOT / "reports/self-trained-pages-cleanup-v4-public-assets.json"}
 SCOPE = "Explicit user-requested official follow-up after prior exposure; no training, tuning, default changes or model selection"
 MODELS = {"mnist": "model", "mnist-supplementary-v1": "model/mnist-supplementary-v1/digits",
           "captcha-v3": "model/captcha-v3/digits"}
@@ -37,7 +47,7 @@ def digest(path):
 
 
 def output(suffix):
-    return ROOT / "reports" / (NAME + suffix)
+    return REPORT_ROOT / (NAME + suffix)
 
 
 def create(path, value):
@@ -51,27 +61,28 @@ def verify(freeze):
             raise ValueError("Frozen source/evidence changed: " + name)
     for site, files in freeze["sites"].items():
         for name, checksum in files.items():
-            if digest(ROOT / "artifacts" / NAME / site / name) != checksum:
+            if digest(SNAPSHOT_ROOT / NAME / site / name) != checksum:
                 raise ValueError("Frozen snapshot changed: " + site + "/" + name)
 
 
 def freeze_runtime():
     destinations = [output(s) for s in ("-freeze.json", "-comparison.json", "-summary.md")]
     destinations += [output("-" + c["id"] + "-raw.json") for c in CONFIGURATIONS]
-    destinations += [ROOT / "reports/screenshots" / (NAME + "-" + c["id"] + ".png") for c in CONFIGURATIONS]
-    directory = ROOT / "artifacts" / NAME
+    destinations += [REPORT_ROOT / "screenshots" / (NAME + "-" + c["id"] + ".png") for c in CONFIGURATIONS]
+    directory = SNAPSHOT_ROOT / NAME
     if directory.exists() or any(p.exists() for p in destinations):
         raise FileExistsError("Preserve prior follow-up; do not reuse its identity")
-    receipt_path = ROOT / "reports/self-trained-submission-cleanup-v4-build.json"
+    receipt_path = BUILD
     receipt = json.loads(receipt_path.read_text())
-    if receipt["status"] != "PASS" or digest(Path(receipt["archive"])) != receipt["archive_sha256"]:
+    package_site, package_archive = resolve_artifacts(receipt, **ARTIFACT_OPTIONS)
+    if receipt["status"] != "PASS" or digest(package_archive) != receipt["archive_sha256"]:
         raise ValueError("Require intact reviewed submission archive")
     preserved = {receipt_path, Path(__file__), ROOT / "digitlab/acceptance.py",
                  ROOT / "digitlab/confidence_suite_browser.py", ROOT / "digitlab/qa.py"}
     # Preserve historical official evidence without consulting its labels for inference.
     preserved.update(p for p in (ROOT / "reports").glob("*challenge*.json") if not p.name.startswith(NAME))
     sites = {}
-    for site, source in (("full", ROOT / "dist"), ("submission", Path(receipt["output"]))):
+    for site, source in (("full", FULL_SITE), ("submission", package_site)):
         files = {p.relative_to(source).as_posix(): digest(p) for p in source.rglob("*")
                  if p.is_file() and p.suffix.lower() not in (".sfc", ".smc")}
         if site == "submission" and files != receipt["files_sha256"]:
@@ -87,18 +98,16 @@ def freeze_runtime():
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(path, target)
         sites[site] = files
-    for name in ("release-cleanup-3.11.1-public-assets.json", "self-trained-pages-cleanup-v4-public-assets.json"):
-        path = ROOT / "reports" / name
+    for site, path in RELEASE_CHECKS.items():
         checked = json.loads(path.read_text())
         if checked["status"] != "PASS":
             raise ValueError("Require completed public release identity checks")
-        site = "full" if name.startswith("release-") else "submission"
         if any(sites[site].get(row["file"]) != row["sha256"] for row in checked["files"]):
             raise ValueError("Snapshot differs from publicly verified release")
         preserved.add(path)
     freeze = {"frozen_utc": datetime.now(timezone.utc).isoformat(), "scope": SCOPE,
               "configurations": CONFIGURATIONS, "sites": sites,
-              "preserved_sha256": {str(p.relative_to(ROOT)): digest(p) for p in sorted(preserved)},
+              "preserved_sha256": {portable_path(p): digest(p) for p in sorted(preserved)},
               "official_images_used_before_freeze": False, "labels_consulted_for_inference": False,
               "execution": "Real local browser UI, frozen copies of both publicly verified release artifacts; external pretrained model downloads allowed, image uploads forbidden",
               "coverage": "All current digit options and both TrOCR precision profiles; letter models and Words transcription are outside the single-digit task"}
@@ -128,7 +137,7 @@ def record():
                     raise ValueError("Preserve failed/mismatched attempt; do not retry official search")
                 continue
             print("START " + config["id"], flush=True)
-            source = ROOT / "artifacts" / NAME / config["site"]
+            source = SNAPSHOT_ROOT / NAME / config["site"]
             server = ThreadingHTTPServer(("127.0.0.1", 0), partial(QuietHandler, directory=str(source)))
             threading.Thread(target=server.serve_forever, daemon=True).start()
             url = f"http://127.0.0.1:{server.server_port}/"
@@ -188,7 +197,7 @@ def record():
                 if errors or blocked or any(r.get("error") for r in rows):
                     raise ValueError("Page/network/inference failure; inspect raw evidence")
                 verify(freeze)
-                page.screenshot(path=str(ROOT / "reports/screenshots" / (NAME + "-" + config["id"] + ".png")), full_page=True)
+                page.screenshot(path=str(REPORT_ROOT / "screenshots" / (NAME + "-" + config["id"] + ".png")), full_page=True)
                 raw.update(status="PASS", recorded_utc=datetime.now(timezone.utc).isoformat())
             finally:
                 raw.update(requests=requests, blocked_requests=blocked, page_errors=errors)
@@ -235,7 +244,7 @@ def compare():
             raise ValueError("Official input changed")
         raws[config["id"]] = (path, raw)
     # References are read only after all 130 raw predictions are saved durably.
-    reference = ROOT / "reports/captcha-v3-challenge-comparison.json"
+    reference = REFERENCE
     expected = {r["file"]: r["expected"] for r in json.loads(reference.read_text())["cases"]}
     results = {}
     for config in CONFIGURATIONS:
@@ -286,7 +295,26 @@ def compare():
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--stage", choices=("freeze", "record", "compare"), required=True)
+    parser.add_argument("--name", default=NAME, help="Fresh evaluation identity; completed destinations are never reused")
+    parser.add_argument("--build", type=Path, default=BUILD)
+    parser.add_argument("--site", type=Path)
+    parser.add_argument("--archive", type=Path)
+    parser.add_argument("--artifact-root", type=Path)
+    parser.add_argument("--full-site", type=Path, default=FULL_SITE)
+    parser.add_argument("--report-root", type=Path, default=REPORT_ROOT)
+    parser.add_argument("--snapshot-root", type=Path, default=SNAPSHOT_ROOT)
+    parser.add_argument("--reference", type=Path, default=REFERENCE)
+    parser.add_argument("--full-verification", type=Path, default=RELEASE_CHECKS["full"])
+    parser.add_argument("--submission-verification", type=Path, default=RELEASE_CHECKS["submission"])
     args = parser.parse_args()
+    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9-]*", args.name):
+        parser.error("Use a simple evaluation name without directories")
+    globals().update(NAME=args.name, BUILD=args.build, FULL_SITE=args.full_site, REPORT_ROOT=args.report_root,
+                     SNAPSHOT_ROOT=args.snapshot_root, REFERENCE=args.reference,
+                     ARTIFACT_OPTIONS={"site": args.site, "archive": args.archive, "artifact_root": args.artifact_root},
+                     RELEASE_CHECKS={"full": args.full_verification, "submission": args.submission_verification})
+    REPORT_ROOT.mkdir(parents=True, exist_ok=True)
+    (REPORT_ROOT / "screenshots").mkdir(exist_ok=True)
     {"freeze": freeze_runtime, "record": record, "compare": compare}[args.stage]()
 
 

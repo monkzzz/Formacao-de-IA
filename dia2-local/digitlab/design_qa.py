@@ -6,8 +6,8 @@ import json
 from playwright.sync_api import sync_playwright
 
 from .qa import open_browser
-from .qa_outputs import qa_outputs
-from .train import ROOT, write_json
+from .qa_outputs import qa_outputs, qa_report
+from .train import ROOT
 
 
 def main():
@@ -21,7 +21,7 @@ def main():
     name = args.report or ("public-design-qa.json" if args.public else "design-qa.json")
     destination, captures = qa_outputs(name, prefix, ("390", "1440"))
     report = {"url": args.url, "status": "FAIL", "checks": {}}
-    with sync_playwright() as p:
+    with qa_report(destination, report), sync_playwright() as p:
         browser = open_browser(p)
         page = browser.new_page(viewport={"width": 1440, "height": 1100})
         errors = []
@@ -102,7 +102,6 @@ def main():
         report["checks"]["reduced_motion_and_script_errors"] = {"status": "PASS", "page_errors": errors}
         browser.close()
     report["status"] = "PASS"
-    write_json(destination, report)
     print(json.dumps({"status": "PASS", "groups": len(report["checks"]), "report": name}), flush=True)
 
 

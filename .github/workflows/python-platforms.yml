@@ -2,11 +2,31 @@ name: Python Windows and Linux
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'setup_course.py'
+      - 'dia2-local/digitlab/**'
+      - 'dia2-local/tests/**'
+      - 'dia2-local/dist/**'
+      - 'dia2-local/submission/**'
+      - 'dia2-local/requirements*.txt'
+      - 'dia2-local/reports/self-trained-submission-*-build.json'
+      - 'dia2-local/deployment-files.json'
+      - 'participant-work/day2/build-restricted-pages.py'
+      - 'Dia1/Exercicios-GSS/**'
+      - '.github/workflows/python-platforms.yml'
   pull_request:
     paths:
       - 'setup_course.py'
       - 'dia2-local/digitlab/**'
       - 'dia2-local/tests/**'
+      - 'dia2-local/dist/**'
+      - 'dia2-local/submission/**'
+      - 'dia2-local/requirements*.txt'
+      - 'dia2-local/reports/self-trained-submission-*-build.json'
+      - 'dia2-local/deployment-files.json'
+      - 'participant-work/day2/build-restricted-pages.py'
       - 'Dia1/Exercicios-GSS/**'
       - '.github/workflows/python-platforms.yml'
 
@@ -39,6 +59,20 @@ jobs:
       - name: Day 2 unit checks
         working-directory: dia2-local
         run: python -m unittest discover -s tests -v
+      - name: Install Chromium for browser verification
+        run: python -m playwright install --with-deps chromium
+      - name: Verify both current frontends with reviewed weights
+        working-directory: dia2-local
+        run: python -m digitlab.browser_ci --prefix ci-${{ github.run_id }}-${{ github.run_attempt }}-${{ runner.os }} --report ci-${{ github.run_id }}-${{ github.run_attempt }}-${{ runner.os }}.json
+      - name: Preserve browser reports and screenshots including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-qa-${{ runner.os }}
+          path: |
+            dia2-local/reports/ci-*.json
+            dia2-local/reports/screenshots/ci-*.png
+          if-no-files-found: ignore
       - name: Day 1 offline checks (Windows)
         if: runner.os == 'Windows'
         working-directory: Dia1/Exercicios-GSS

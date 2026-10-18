@@ -10,7 +10,10 @@ import re
 import socket
 import ssl
 from datetime import datetime, timezone
-from pathlib import Path
+from pathlib import Path, PurePosixPath
+from uuid import uuid4
+
+from .qa_outputs import atomic_json
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -71,92 +74,145 @@ def enter_directory(client, directory, create=False, allow_root=False):
     return client.pwd()
 
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--upload", action="store_true")
-    parser.add_argument("--report", default="ftp-deployment.json",
-                        help="Deployment report filename under reports")
-    parser.add_argument("--files", nargs="+", help="Upload only these relative dist paths, dependencies before index.html")
-    args = parser.parse_args()
-    if args.upload and (ROOT / "reports" / args.report).exists():
-        raise FileExistsError("Preserve existing deployment evidence; use a new --report")
-    config = json.loads((ROOT / "ftp.local.json").read_text(encoding="utf-8-sig"))
-    if not all(config.get(key) for key in ["host", "username", "password"]):
-        raise SystemExit("Fill in host, username and password in ftp.local.json")
-    client = None
+def deployment_files(manifest=None, selected=None):
+    manifest = Path(manifest) if manifest is not None else ROOT / "deployment-files.json"
+    metadata = json.loads(manifest.read_text(encoding="utf-8"))
+    names = metadata["files"]
+    if metadata.get("schema") != 1 or not names or len(names) != len(set(names)):
+        raise ValueError("Require a nonempty, unique reviewed deployment allowlist")
+    files = []
+    suffixes = {".html", ".js", ".mjs", ".css", ".json", ".bin", ".png", ".jpg", ".jpeg", ".svg", ".webp", ".ico", ".woff", ".woff2", ".ttf"}
+    for name in names:
+        relative = PurePosixPath(name)
+        path = ROOT / "dist" / name
+        if (relative.is_absolute() or ".." in relative.parts or "\\" in name or ":" in name
+                or any(part.startswith(".") for part in relative.parts)
+                or relative.as_posix() != name or relative.suffix.lower() not in suffixes
+                or relative.name in ("parity.json", "ftp.local.json")
+                or (relative.suffix.lower() == ".bin" and (relative.parts[0] != "model" or relative.name != "weights.bin"))
+                or not path.is_file() or path.is_symlink()
+                or not path.resolve().is_relative_to((ROOT / "dist").resolve())):
+            raise ValueError("Unsafe or missing deployment allowlist entry: " + name)
+        files.append(path)
+    if selected is not None:
+        if not selected or not set(selected) <= set(names):
+            raise ValueError("Selected files must be in the reviewed deployment allowlist")
+        files = [p for p in files if p.relative_to(ROOT / "dist").as_posix() in selected]
+    return sorted(files, key=deployment_order)
+
+
+def upload_file(client, path, backup, report, persist):
+    """Verify a unique temporary remote file before publishing it with RNFR/RNTO."""
+    relative = path.relative_to(ROOT / "dist").as_posix()
+    payload = path.read_bytes()
+    checksum = hashlib.sha256(payload).hexdigest()
+    name = path.name
+    temporary = "." + name + ".upload-" + uuid4().hex
+    current = {"file": relative, "bytes": len(payload), "sha256": checksum,
+               "phase": "BACKUP", "temporary_remote_file": temporary}
+    report["current_file"] = current
+    persist()
+    previous = io.BytesIO()
     try:
+        client.retrbinary("RETR " + name, previous.write)
+    except ftplib.error_perm as error:
+        if not str(error).startswith("550"):
+            raise
+        # 550 can also mean permission denied: never treat a visible file as absent.
+        if name in {posixpath.basename(item) for item in client.nlst()}:
+            raise
+        current["previous_file"] = "ABSENT"
+    else:
+        saved = backup / relative
+        saved.parent.mkdir(parents=True, exist_ok=True)
+        saved.write_bytes(previous.getvalue())
+        current["previous_sha256"] = hashlib.sha256(previous.getvalue()).hexdigest()
+    try:
+        current["phase"] = "UPLOADING_TEMPORARY"
+        persist()
+        client.storbinary("STOR " + temporary, io.BytesIO(payload))
+        received = io.BytesIO()
+        client.retrbinary("RETR " + temporary, received.write)
+        if hashlib.sha256(received.getvalue()).hexdigest() != checksum:
+            raise RuntimeError("Temporary uploaded asset integrity check failed")
+        current["phase"] = "PUBLISHING_VERIFIED_TEMPORARY"
+        persist()
+        # Refuse unsupported replacement rather than deleting a working remote file.
+        client.rename(temporary, name)
+        current["phase"] = "PUBLISHED; VERIFYING"
+        persist()
+        received = io.BytesIO()
+        client.retrbinary("RETR " + name, received.write)
+        if hashlib.sha256(received.getvalue()).hexdigest() != checksum:
+            raise RuntimeError("Published asset integrity check failed")
+        current["phase"] = "PUBLISHED_AND_VERIFIED"
+        report["files"].append({"file": relative, "bytes": len(payload), "sha256": checksum})
+        persist()
+    except BaseException:
+        try:
+            client.delete(temporary)
+            current["temporary_cleanup"] = "REMOVED"
+        except Exception:
+            current["temporary_cleanup"] = "NOT CONFIRMED; inspect remote temporary file"
+        persist()
+        raise
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--upload", action="store_true")
+    parser.add_argument("--report", default="ftp-deployment.json")
+    parser.add_argument("--files", nargs="+", help="Reviewed relative dist paths, dependencies before index.html")
+    parser.add_argument("--manifest", type=Path, default=ROOT / "deployment-files.json")
+    args = parser.parse_args()
+    report_path = ROOT / "reports" / args.report
+    if args.upload and report_path.exists():
+        raise FileExistsError("Preserve existing deployment evidence; use a new --report")
+    files = deployment_files(args.manifest, args.files) if args.upload else []
+    client, report = None, None
+    if args.upload:
+        report_path.parent.mkdir(parents=True, exist_ok=True)
+        report = {"status": "RUNNING", "started_utc": datetime.now(timezone.utc).isoformat(),
+                  "files": [], "plan": [p.relative_to(ROOT / "dist").as_posix() for p in files],
+                  "scope": "Reviewed allowlist; per-file staged publication, not an atomic whole-site switch"}
+        with report_path.open("x", encoding="utf-8") as stream:
+            json.dump(report, stream, indent=2)
+    def persist():
+        atomic_json(report_path, report)
+    try:
+        config = json.loads((ROOT / "ftp.local.json").read_text(encoding="utf-8-sig"))
+        if not all(config.get(key) for key in ("host", "username", "password")):
+            raise ValueError("Missing deployment credentials")
         client = connect(config)
-        home = client.pwd()
-        print(json.dumps({"connected": True, "tls": config.get("tls", True),
-                          "login_directory": home, "entries": listing(client)}), flush=True)
-        destination = config.get("remote_dir", "")
-        if not destination:
-            print("Connection checked. Set remote_dir after identifying the website root.")
-            return
+        target = enter_directory(client, config.get("remote_dir", ""), create=args.upload,
+                                 allow_root=config.get("allow_ftp_root", False))
         if not args.upload:
-            try:
-                target = enter_directory(client, destination, allow_root=config.get("allow_ftp_root", False))
-                print(json.dumps({"destination": target, "entries": listing(client)}), flush=True)
-            except ftplib.error_perm:
-                print(json.dumps({"destination": destination, "status": "not accessible or not yet created"}), flush=True)
+            print(json.dumps({"connected": True, "tls": config.get("tls", True), "destination": target,
+                              "entries": listing(client)}), flush=True)
             return
-        target = enter_directory(client, destination, create=True, allow_root=config.get("allow_ftp_root", False))
-        # Upload versioned dependencies and model assets before switching the entry page.
-        # Original root assets remain compatible with an already cached v1 page.
-        files = sorted((path for path in (ROOT / "dist").rglob("*") if path.is_file() and path.name != "parity.json"),
-                       key=deployment_order)
-        if args.files:
-            selected = set(args.files)
-            known = {path.relative_to(ROOT / "dist").as_posix() for path in files}
-            if not selected <= known:
-                raise ValueError("Requested files must be existing relative static asset paths")
-            files = [path for path in files if path.relative_to(ROOT / "dist").as_posix() in selected]
-        # Existing remote files are downloaded before replacement; no remote files are deleted.
-        backup = ROOT / "artifacts" / ("ftp-backup-" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ"))
+        backup = ROOT / "artifacts" / ("ftp-backup-" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S") + "-" + uuid4().hex[:8])
         backup.mkdir(parents=True, exist_ok=False)
-        uploaded = []
+        report.update(destination=target, tls=config.get("tls", True), backup_directory=str(backup.relative_to(ROOT)),
+                      manifest_sha256=hashlib.sha256(args.manifest.read_bytes()).hexdigest())
+        persist()
         for path in files:
-            relative = path.relative_to(ROOT / "dist").as_posix()
             client.cwd(target)
-            parent = posixpath.dirname(relative)
+            parent = posixpath.dirname(path.relative_to(ROOT / "dist").as_posix())
             if parent:
                 enter_directory(client, parent, create=True)
-            name = posixpath.basename(relative)
-            old = io.BytesIO()
-            try:
-                client.retrbinary("RETR " + name, old.write)
-            except ftplib.error_perm as error:
-                if not str(error).startswith("550"):
-                    raise
-            else:
-                previous = backup / relative
-                previous.parent.mkdir(parents=True, exist_ok=True)
-                previous.write_bytes(old.getvalue())
-            with path.open("rb") as source:
-                client.storbinary("STOR " + name, source)
-            verify = io.BytesIO()
-            client.retrbinary("RETR " + name, verify.write)
-            digest = hashlib.sha256(path.read_bytes()).hexdigest()
-            if hashlib.sha256(verify.getvalue()).hexdigest() != digest:
-                raise RuntimeError("Uploaded asset integrity check failed")
-            uploaded.append({"file": relative, "bytes": path.stat().st_size, "sha256": digest})
-            print(json.dumps({"verified_upload": relative, "bytes": path.stat().st_size}), flush=True)
-        report = {"uploaded_at": datetime.now(timezone.utc).isoformat(), "destination": target,
-                  "tls": config.get("tls", True), "files": uploaded,
-                  "backup_directory": str(backup.relative_to(ROOT))}
-        version = re.search(r'id="app-version"[^>]*>v([^<]+)',
-                            (ROOT / "dist/index.html").read_text(encoding="utf-8"))
-        report["application_version"] = version.group(1) if version else None
-        report["scope"] = "selected-files" if args.files else "all-static-assets"
-        (ROOT / "reports" / args.report).write_text(json.dumps(report, indent=2), encoding="utf-8")
-    except Exception as error:
-        # Server text can echo authentication data; print only its category/code.
+            upload_file(client, path, backup, report, persist)
+            print(json.dumps({"verified_upload": report["files"][-1]["file"]}), flush=True)
+        report.update(status="PASS", completed_utc=datetime.now(timezone.utc).isoformat())
+        persist()
+    except BaseException as error:
+        # FTP messages can echo authentication data; retain category/code only.
         code = str(error)[:3] if isinstance(error, ftplib.Error) else ""
-        print(json.dumps({"status": "failed", "error_type": type(error).__name__, "ftp_code": code}), flush=True)
-        if isinstance(error, ssl.SSLCertVerificationError):
-            print(json.dumps({"certificate_verification_code": error.verify_code,
-                              "certificate_verification_message": error.verify_message}), flush=True)
-        raise SystemExit(1)
+        failure = {"error_type": type(error).__name__, "ftp_code": code if code.isdigit() else ""}
+        if report is not None:
+            report.update(status="FAIL", failure=failure)
+            persist()
+        print(json.dumps({"status": "FAIL", **failure}), flush=True)
+        raise SystemExit(1) from None
     finally:
         if client is not None:
             try:

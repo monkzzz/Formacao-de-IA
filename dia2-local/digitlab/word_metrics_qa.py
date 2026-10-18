@@ -7,7 +7,8 @@ import json
 from playwright.sync_api import sync_playwright
 
 from .qa import open_browser
-from .train import ROOT, write_json
+from .qa_outputs import qa_outputs, qa_report
+from .train import ROOT
 
 
 def main():
@@ -16,18 +17,16 @@ def main():
     parser.add_argument("--report", required=True)
     parser.add_argument("--screenshot-prefix", default="word-metrics")
     args = parser.parse_args()
-    destination = ROOT / "reports" / args.report
-    if destination.exists():
-        raise SystemExit("Refusing to overwrite existing evidence")
-    measured = json.loads((ROOT / "reports/words-1000-evaluation.json").read_text(encoding="utf-8"))
-    protocol = json.loads((ROOT / "reports/words-1000-protocol.json").read_text(encoding="utf-8"))
-    assert measured["status"] == "PASS" and measured["lines"] == 1000
-    assert abs(measured["word_accuracy"] - (1 - measured["word_edits"] / measured["reference_words"])) < 1e-12
-    for path, expected in protocol["source_sha256"].items():
-        assert hashlib.sha256((ROOT / path).read_bytes()).hexdigest() == expected
+    destination, captures = qa_outputs(args.report, args.screenshot_prefix)
     report = {"url": args.url, "status": "FAIL", "evaluation": "words-1000-evaluation.json", "checks": {}}
     checks = report["checks"]
-    with sync_playwright() as playwright:
+    with qa_report(destination, report), sync_playwright() as playwright:
+        measured = json.loads((ROOT / "reports/words-1000-evaluation.json").read_text(encoding="utf-8"))
+        protocol = json.loads((ROOT / "reports/words-1000-protocol.json").read_text(encoding="utf-8"))
+        assert measured["status"] == "PASS" and measured["lines"] == 1000
+        assert abs(measured["word_accuracy"] - (1 - measured["word_edits"] / measured["reference_words"])) < 1e-12
+        for path, expected in protocol["source_sha256"].items():
+            assert hashlib.sha256((ROOT / path).read_bytes()).hexdigest() == expected
         browser = open_browser(playwright)
         page = browser.new_page(viewport={"width": 1440, "height": 1100})
         errors, requests = [], []
@@ -81,16 +80,14 @@ def main():
             assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), width
             box = page.locator("#benchmark-words").bounding_box()
             assert box["x"] >= 0 and box["x"] + box["width"] <= width
-        screenshots = ROOT / "reports/screenshots"
-        screenshots.mkdir(exist_ok=True)
         page.locator("#mode-digits").click()
         page.wait_for_function("digitLab.state.ready")
         details.evaluate("el => {el.open=false;}")
         page.evaluate("() => {document.activeElement.blur();scrollTo(0,0);}")
         page.set_viewport_size({"width": 1440, "height": 1100})
-        page.screenshot(path=str(screenshots / (args.screenshot_prefix + "-desktop.png")), full_page=True)
+        page.screenshot(path=str(captures["desktop"]), full_page=True)
         page.set_viewport_size({"width": 390, "height": 844})
-        page.screenshot(path=str(screenshots / (args.screenshot_prefix + "-mobile.png")), full_page=True)
+        page.screenshot(path=str(captures["mobile"]), full_page=True)
         checks["desktop_mobile_and_landscape_layouts"] = {"status": "PASS"}
         assert not errors, errors
         assert not any("huggingface.co" in url or "jsdelivr.net" in url for _, url in requests)
@@ -109,7 +106,6 @@ def main():
         checks["downloadable_summary_matches_evaluation"] = {"status": "PASS"}
         browser.close()
     report["status"] = "PASS"
-    write_json(destination, report)
     print(json.dumps({"status": "PASS", "groups": len(checks), "report": args.report}))
 
 

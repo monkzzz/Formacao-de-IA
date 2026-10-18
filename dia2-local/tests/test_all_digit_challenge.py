@@ -1,9 +1,29 @@
 import unittest
+from pathlib import Path
+import sys
+import tempfile
+from unittest.mock import patch
 
 from digitlab.all_digit_challenge import compare_rows
+from digitlab import all_digit_challenge
 
 
 class ChallengeComparisonTests(unittest.TestCase):
+    def test_cli_selects_release_and_relocated_artifacts_without_recording(self):
+        with tempfile.TemporaryDirectory() as temporary, patch.dict(all_digit_challenge.__dict__, {}):
+            root = Path(temporary)
+            arguments = ["all_digit_challenge", "--stage", "freeze", "--name", "new-release",
+                         "--build", str(root / "receipt.json"), "--site", str(root / "site"),
+                         "--archive", str(root / "archive.zip"), "--report-root", str(root / "reports"),
+                         "--snapshot-root", str(root / "snapshots")]
+            with patch.object(sys, "argv", arguments), patch.object(all_digit_challenge, "freeze_runtime") as freeze:
+                all_digit_challenge.main()
+                freeze.assert_called_once()
+                self.assertEqual(all_digit_challenge.NAME, "new-release")
+                self.assertEqual(all_digit_challenge.BUILD, root / "receipt.json")
+                self.assertEqual(all_digit_challenge.ARTIFACT_OPTIONS["site"], root / "site")
+                self.assertEqual(all_digit_challenge.SNAPSHOT_ROOT, root / "snapshots")
+
     def setUp(self):
         self.expected = {f"case-{i}": i for i in range(10)}
 

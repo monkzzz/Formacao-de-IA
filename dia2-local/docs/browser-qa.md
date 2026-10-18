@@ -54,3 +54,8 @@ OCR models; without it, reader UI checks use an identified worker double. Use a
 fresh required `--report` filename. See the
 [3.11.1 public verification](release-3.11.1.md) for executed commands' scope,
 real-model smoke results and preserved unsuccessful attempts.
+
+Maintained collectors now retain partial FAIL reports on exceptions and reject
+existing screenshot destinations before starting. See
+[operational reliability](operational-reliability.md) for the shared failure
+contract, the Linux/Windows CI harness and relocated package verification.
